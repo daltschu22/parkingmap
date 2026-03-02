@@ -13,8 +13,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 // Layer groups for streets
 let allStreetsLayer = null;
 let searchResultsLayer = null;
-let hoveredLayer = null;
-let hoveredBaseStyle = null;
+let hoveredStreetName = null;
 let selectedStreetName = null;
 
 // Color scheme based on parking access without resident pass
@@ -118,21 +117,31 @@ function selectStreet(streetName) {
 }
 
 function resetHover() {
-    if (hoveredLayer && hoveredBaseStyle) {
-        hoveredLayer.setStyle(hoveredBaseStyle);
-    }
-    hoveredLayer = null;
-    hoveredBaseStyle = null;
+    if (!hoveredStreetName) return;
+    const streetKey = hoveredStreetName;
+    hoveredStreetName = null;
+    forEachStreetLayer((layer) => {
+        if (getStreetKey(layer.feature) === streetKey) {
+            applyLayerRestStyle(layer);
+        }
+    });
 }
 
-function applyHover(layer, baseStyle) {
-    if (hoveredLayer && hoveredLayer !== layer && hoveredBaseStyle) {
-        hoveredLayer.setStyle(hoveredBaseStyle);
+function applyHoverStreet(streetName) {
+    const streetKey = String(streetName || '').trim().toUpperCase();
+    if (!streetKey) return;
+
+    if (hoveredStreetName && hoveredStreetName !== streetKey) {
+        resetHover();
     }
-    hoveredLayer = layer;
-    hoveredBaseStyle = baseStyle;
-    layer.setStyle(hoverStyle);
-    layer.bringToFront();
+
+    hoveredStreetName = streetKey;
+    forEachStreetLayer((layer) => {
+        if (getStreetKey(layer.feature) === streetKey) {
+            layer.setStyle(hoverStyle);
+            layer.bringToFront();
+        }
+    });
 }
 
 // Format property labels for display
@@ -240,14 +249,11 @@ function onEachFeature(feature, layer) {
 
     layer.on({
         mouseover: function(e) {
-            applyHover(e.target, isLayerSelected(e.target) ? selectedStyle : getLayerBaseStyle(e.target));
+            applyHoverStreet(getStreetKey(e.target.feature));
         },
         mouseout: function(e) {
-            // Always return to default style after hover
-            if (hoveredLayer === e.target) {
+            if (hoveredStreetName === getStreetKey(e.target.feature)) {
                 resetHover();
-            } else {
-                applyLayerRestStyle(e.target);
             }
         },
         click: function(e) {
@@ -268,14 +274,11 @@ function onEachSearchFeature(feature, layer) {
 
     layer.on({
         mouseover: function(e) {
-            applyHover(e.target, isLayerSelected(e.target) ? selectedStyle : getLayerBaseStyle(e.target));
+            applyHoverStreet(getStreetKey(e.target.feature));
         },
         mouseout: function(e) {
-            // Keep highlight style for search results
-            if (hoveredLayer === e.target) {
+            if (hoveredStreetName === getStreetKey(e.target.feature)) {
                 resetHover();
-            } else {
-                applyLayerRestStyle(e.target);
             }
         },
         click: function(e) {

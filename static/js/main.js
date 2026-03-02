@@ -141,25 +141,31 @@ function createPopup(properties) {
 
 // Add interactivity to each feature
 function onEachFeature(feature, layer) {
+    const baseStyle = getStreetStyle(feature);
+
     layer.on({
         mouseover: function(e) {
             e.target.setStyle(hoverStyle);
             e.target.bringToFront();
         },
         mouseout: function(e) {
-            // Reset to appropriate style
-            e.target.setStyle(getStreetStyle(feature));
+            // Always return to default style after hover
+            e.target.setStyle(baseStyle);
         },
         click: function(e) {
             const props = feature.properties;
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
+            // Prevent hover color from sticking after click/popup interactions
+            e.target.setStyle(baseStyle);
         }
     });
 }
 
 // Special handler for search results - keeps highlight style
 function onEachSearchFeature(feature, layer) {
+    const baseStyle = highlightStyle;
+
     layer.on({
         mouseover: function(e) {
             e.target.setStyle(hoverStyle);
@@ -167,12 +173,14 @@ function onEachSearchFeature(feature, layer) {
         },
         mouseout: function(e) {
             // Keep highlight style for search results
-            e.target.setStyle(highlightStyle);
+            e.target.setStyle(baseStyle);
         },
         click: function(e) {
             const props = feature.properties;
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
+            // Keep highlighted search color after click
+            e.target.setStyle(baseStyle);
         }
     });
 }

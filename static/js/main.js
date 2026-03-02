@@ -13,6 +13,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 // Layer groups for streets
 let allStreetsLayer = null;
 let searchResultsLayer = null;
+let hoveredLayer = null;
+let hoveredBaseStyle = null;
 
 // Color scheme based on parking permit requirements
 // Since 2010: ALL public streets require permits
@@ -56,6 +58,24 @@ const hoverStyle = {
     weight: 5,
     opacity: 1
 };
+
+function resetHover() {
+    if (hoveredLayer && hoveredBaseStyle) {
+        hoveredLayer.setStyle(hoveredBaseStyle);
+    }
+    hoveredLayer = null;
+    hoveredBaseStyle = null;
+}
+
+function applyHover(layer, baseStyle) {
+    if (hoveredLayer && hoveredLayer !== layer && hoveredBaseStyle) {
+        hoveredLayer.setStyle(hoveredBaseStyle);
+    }
+    hoveredLayer = layer;
+    hoveredBaseStyle = baseStyle;
+    layer.setStyle(hoverStyle);
+    layer.bringToFront();
+}
 
 // Format property labels for display
 function formatLabel(key) {
@@ -145,18 +165,22 @@ function onEachFeature(feature, layer) {
 
     layer.on({
         mouseover: function(e) {
-            e.target.setStyle(hoverStyle);
-            e.target.bringToFront();
+            applyHover(e.target, baseStyle);
         },
         mouseout: function(e) {
             // Always return to default style after hover
-            e.target.setStyle(baseStyle);
+            if (hoveredLayer === e.target) {
+                resetHover();
+            } else {
+                e.target.setStyle(baseStyle);
+            }
         },
         click: function(e) {
             const props = feature.properties;
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
             // Prevent hover color from sticking after click/popup interactions
+            resetHover();
             e.target.setStyle(baseStyle);
         }
     });
@@ -164,22 +188,26 @@ function onEachFeature(feature, layer) {
 
 // Special handler for search results - keeps highlight style
 function onEachSearchFeature(feature, layer) {
-    const baseStyle = highlightStyle;
+    const baseStyle = { ...highlightStyle };
 
     layer.on({
         mouseover: function(e) {
-            e.target.setStyle(hoverStyle);
-            e.target.bringToFront();
+            applyHover(e.target, baseStyle);
         },
         mouseout: function(e) {
             // Keep highlight style for search results
-            e.target.setStyle(baseStyle);
+            if (hoveredLayer === e.target) {
+                resetHover();
+            } else {
+                e.target.setStyle(baseStyle);
+            }
         },
         click: function(e) {
             const props = feature.properties;
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
             // Keep highlighted search color after click
+            resetHover();
             e.target.setStyle(baseStyle);
         }
     });
@@ -188,6 +216,7 @@ function onEachSearchFeature(feature, layer) {
 // Load and display all streets
 async function loadStreets() {
     try {
+        resetHover();
         const response = await fetch('/api/streets');
         const data = await response.json();
         
@@ -214,6 +243,7 @@ async function loadStreets() {
 // Search streets by name
 async function searchStreets(query) {
     try {
+        resetHover();
         const response = await fetch(`/api/streets/search?q=${encodeURIComponent(query)}`);
         const data = await response.json();
         
@@ -280,6 +310,7 @@ async function loadStats() {
 
 // Clear search results
 function clearSearch() {
+    resetHover();
     if (searchResultsLayer) {
         map.removeLayer(searchResultsLayer);
         searchResultsLayer = null;
@@ -314,3 +345,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadStreets();
     loadStats();
 });
+
+map.on('mouseout', resetHover);

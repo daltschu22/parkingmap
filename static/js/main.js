@@ -27,14 +27,22 @@ const COLORS = {
     hover: '#3b82f6'              // Blue - hover
 };
 
+function normalizeOwnership(rawOwnership) {
+    const value = String(rawOwnership || '').trim().toLowerCase();
+    if (!value) return 'unknown';
+    if (value.includes('private')) return 'private';
+    if (value.includes('public') || value.includes('state')) return 'public';
+    return 'unknown';
+}
+
 // Get style based on street ownership
 function getStreetStyle(feature) {
-    const ownership = feature.properties?.OWNERSHIP;
+    const ownership = normalizeOwnership(feature.properties?.OWNERSHIP);
     let color = COLORS.unknown;
     
-    if (ownership === 'Public' || ownership === 'State land') {
+    if (ownership === 'public') {
         color = COLORS.permitRequired;
-    } else if (ownership === 'Private') {
+    } else if (ownership === 'private') {
         color = COLORS.noPermitNeeded;
     }
     
@@ -94,9 +102,10 @@ function formatLabel(key) {
 
 // Get permit status text based on ownership
 function getPermitStatus(ownership) {
-    if (ownership === 'Public' || ownership === 'State land') {
+    const normalized = normalizeOwnership(ownership);
+    if (normalized === 'public') {
         return 'Permit Required';
-    } else if (ownership === 'Private') {
+    } else if (normalized === 'private') {
         return 'No Permit Needed';
     }
     return 'Unknown';
@@ -118,10 +127,11 @@ function showStreetDetails(properties) {
     
     // Add permit status as first item
     const permitStatus = getPermitStatus(properties.OWNERSHIP);
+    const normalizedOwnership = normalizeOwnership(properties.OWNERSHIP);
     let statusColor = COLORS.unknown;
-    if (properties.OWNERSHIP === 'Private') {
+    if (normalizedOwnership === 'private') {
         statusColor = COLORS.noPermitNeeded;
-    } else if (properties.OWNERSHIP === 'Public' || properties.OWNERSHIP === 'State land') {
+    } else if (normalizedOwnership === 'public') {
         statusColor = COLORS.permitRequired;
     }
     

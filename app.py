@@ -11,6 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Somerville Parking Map")
+APP_VERSION = "2026-03-02-parking-access-v2"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -199,7 +200,16 @@ def get_enriched_streets():
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     """Render the main map page."""
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(
+        "index.html",
+        {"request": request, "app_version": APP_VERSION},
+    )
+
+
+@app.get("/api/version")
+async def get_version():
+    """Return running application version for deployment verification."""
+    return JSONResponse(content={"app_version": APP_VERSION})
 
 
 @app.get("/api/streets")

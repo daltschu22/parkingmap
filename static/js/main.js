@@ -15,6 +15,7 @@ let allStreetsLayer = null;
 let searchResultsLayer = null;
 let hoveredStreetName = null;
 let selectedStreetName = null;
+let hoverResetTimer = null;
 
 // Color scheme based on parking access without resident pass
 const COLORS = {
@@ -117,6 +118,10 @@ function selectStreet(streetName) {
 }
 
 function resetHover() {
+    if (hoverResetTimer) {
+        clearTimeout(hoverResetTimer);
+        hoverResetTimer = null;
+    }
     if (!hoveredStreetName) return;
     const streetKey = hoveredStreetName;
     hoveredStreetName = null;
@@ -128,8 +133,14 @@ function resetHover() {
 }
 
 function applyHoverStreet(streetName) {
+    if (hoverResetTimer) {
+        clearTimeout(hoverResetTimer);
+        hoverResetTimer = null;
+    }
+
     const streetKey = String(streetName || '').trim().toUpperCase();
     if (!streetKey) return;
+    if (hoveredStreetName === streetKey) return;
 
     if (hoveredStreetName && hoveredStreetName !== streetKey) {
         resetHover();
@@ -139,9 +150,23 @@ function applyHoverStreet(streetName) {
     forEachStreetLayer((layer) => {
         if (getStreetKey(layer.feature) === streetKey) {
             layer.setStyle(hoverStyle);
-            layer.bringToFront();
         }
     });
+}
+
+function scheduleHoverReset(streetName) {
+    const streetKey = String(streetName || '').trim().toUpperCase();
+    if (!streetKey || hoveredStreetName !== streetKey) return;
+    if (hoverResetTimer) {
+        clearTimeout(hoverResetTimer);
+    }
+    // Avoid flicker / lost clicks while moving across adjacent segments.
+    hoverResetTimer = setTimeout(() => {
+        hoverResetTimer = null;
+        if (hoveredStreetName === streetKey) {
+            resetHover();
+        }
+    }, 40);
 }
 
 // Format property labels for display
@@ -252,9 +277,7 @@ function onEachFeature(feature, layer) {
             applyHoverStreet(getStreetKey(e.target.feature));
         },
         mouseout: function(e) {
-            if (hoveredStreetName === getStreetKey(e.target.feature)) {
-                resetHover();
-            }
+            scheduleHoverReset(getStreetKey(e.target.feature));
         },
         click: function(e) {
             const props = feature.properties;
@@ -277,9 +300,7 @@ function onEachSearchFeature(feature, layer) {
             applyHoverStreet(getStreetKey(e.target.feature));
         },
         mouseout: function(e) {
-            if (hoveredStreetName === getStreetKey(e.target.feature)) {
-                resetHover();
-            }
+            scheduleHoverReset(getStreetKey(e.target.feature));
         },
         click: function(e) {
             const props = feature.properties;

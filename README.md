@@ -20,6 +20,21 @@ uv run parkingmap
 
 Then open http://localhost:8000 in your browser.
 
+Without `uv`:
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+python -m parkingmap
+```
+
+## Coolify
+
+- Build command: `pip install -r requirements.txt`
+- Start command: `python -m parkingmap`
+- The app binds to `0.0.0.0` and reads `PORT` from the environment.
+
 ## Data Sources
 
 - **Street Centerlines**: City of Somerville GIS via [data.somervillema.gov](https://data.somervillema.gov)
@@ -33,6 +48,8 @@ Then open http://localhost:8000 in your browser.
 ```
 parkingmap/
 ├── app.py              # FastAPI application
+├── parkingmap.py       # Module entrypoint for `python -m parkingmap`
+├── requirements.txt    # Pip dependencies (for non-uv deploys)
 ├── pyproject.toml      # Project metadata and dependencies
 ├── uv.lock             # Locked dependency versions
 ├── data/

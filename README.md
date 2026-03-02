@@ -43,6 +43,16 @@ python -m parkingmap
   - Schedule D: Parking prohibitions
   - Schedule F: Metered parking zones
 
+## Parking Classification Logic
+
+- Public streets default to **Resident Permit Required** (Schedule E removed citywide as of January 4, 2010).
+- Streets matched in **Schedule F** are marked **Metered (No Resident Pass)**.
+- Streets with time-limited entries parsed from **Schedule D** are marked **Time Limited (No Resident Pass)**.
+- Private streets are marked **Private Street Rules Apply**.
+
+Current limitation:
+- Matching is by street name, not exact block segment geometry from the regulation tables, so some streets may be over-inclusive.
+
 ## Project Structure
 
 ```

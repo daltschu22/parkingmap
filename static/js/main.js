@@ -16,34 +16,30 @@ let searchResultsLayer = null;
 let hoveredLayer = null;
 let hoveredBaseStyle = null;
 
-// Color scheme based on parking permit requirements
-// Since 2010: ALL public streets require permits
-// Private streets are NOT under city jurisdiction = no permit needed
+// Color scheme based on parking access without resident pass
 const COLORS = {
-    permitRequired: '#ef4444',    // Red - public streets (permit required)
-    noPermitNeeded: '#22c55e',    // Green - private streets (no permit)
-    unknown: '#6b7280',           // Gray - unknown ownership
+    meteredNoPass: '#0ea5e9',     // Blue - metered parking
+    timeLimitedNoPass: '#22c55e', // Green - timed parking, no resident pass
+    residentPermitRequired: '#ef4444', // Red - resident permit required
+    privateRules: '#a855f7',      // Purple - private street rules
+    unknown: '#6b7280',           // Gray - unknown
     highlight: '#f59e0b',         // Orange - search results
     hover: '#3b82f6'              // Blue - hover
 };
 
-function normalizeOwnership(rawOwnership) {
-    const value = String(rawOwnership || '').trim().toLowerCase();
-    if (!value) return 'unknown';
-    if (value.includes('private')) return 'private';
-    if (value.includes('public') || value.includes('state')) return 'public';
-    return 'unknown';
-}
-
 // Get style based on street ownership
 function getStreetStyle(feature) {
-    const ownership = normalizeOwnership(feature.properties?.OWNERSHIP);
+    const access = feature.properties?.PARKING_ACCESS;
     let color = COLORS.unknown;
     
-    if (ownership === 'public') {
-        color = COLORS.permitRequired;
-    } else if (ownership === 'private') {
-        color = COLORS.noPermitNeeded;
+    if (access === 'metered_no_pass') {
+        color = COLORS.meteredNoPass;
+    } else if (access === 'time_limited_no_pass') {
+        color = COLORS.timeLimitedNoPass;
+    } else if (access === 'resident_permit_required') {
+        color = COLORS.residentPermitRequired;
+    } else if (access === 'private_rules_apply') {
+        color = COLORS.privateRules;
     }
     
     return {
@@ -95,20 +91,34 @@ function formatLabel(key) {
         'MATERIAL': 'Material',
         'ROW_WIDTH': 'ROW Width',
         'PAVE_WIDTH': 'Pave Width',
-        'PERMIT_STATUS': 'Permit Status'
+        'PARKING_ACCESS': 'Parking Access',
+        'PARKING_NOTE': 'Parking Note'
     };
     return labels[key] || key;
 }
 
-// Get permit status text based on ownership
-function getPermitStatus(ownership) {
-    const normalized = normalizeOwnership(ownership);
-    if (normalized === 'public') {
-        return 'Permit Required';
-    } else if (normalized === 'private') {
-        return 'No Permit Needed';
-    }
+function getParkingAccessText(access) {
+    if (access === 'metered_no_pass') return 'Metered (No Resident Pass)';
+    if (access === 'time_limited_no_pass') return 'Time Limited (No Resident Pass)';
+    if (access === 'resident_permit_required') return 'Resident Permit Required';
+    if (access === 'private_rules_apply') return 'Private Street Rules Apply';
     return 'Unknown';
+}
+
+function getParkingAccessColor(access) {
+    if (access === 'metered_no_pass') return COLORS.meteredNoPass;
+    if (access === 'time_limited_no_pass') return COLORS.timeLimitedNoPass;
+    if (access === 'resident_permit_required') return COLORS.residentPermitRequired;
+    if (access === 'private_rules_apply') return COLORS.privateRules;
+    return COLORS.unknown;
+}
+
+function getOwnershipText(rawOwnership) {
+    const ownership = String(rawOwnership || '').trim();
+    if (!ownership) {
+        return 'Unknown';
+    }
+    return ownership;
 }
 
 // Format one-way value
@@ -125,20 +135,19 @@ function showStreetDetails(properties) {
     
     if (hint) hint.style.display = 'none';
     
-    // Add permit status as first item
-    const permitStatus = getPermitStatus(properties.OWNERSHIP);
-    const normalizedOwnership = normalizeOwnership(properties.OWNERSHIP);
-    let statusColor = COLORS.unknown;
-    if (normalizedOwnership === 'private') {
-        statusColor = COLORS.noPermitNeeded;
-    } else if (normalizedOwnership === 'public') {
-        statusColor = COLORS.permitRequired;
-    }
+    const parkingAccess = properties.PARKING_ACCESS || 'unknown';
+    const accessText = getParkingAccessText(parkingAccess);
+    const statusColor = getParkingAccessColor(parkingAccess);
+    const parkingNote = properties.PARKING_NOTE || 'No additional parking rule note available.';
     
     let html = `
         <div class="detail-row permit-status">
-            <span class="detail-label">${formatLabel('PERMIT_STATUS')}</span>
-            <span class="detail-value" style="color: ${statusColor}; font-weight: bold;">${permitStatus}</span>
+            <span class="detail-label">${formatLabel('PARKING_ACCESS')}</span>
+            <span class="detail-value" style="color: ${statusColor}; font-weight: bold;">${accessText}</span>
+        </div>
+        <div class="detail-row">
+            <span class="detail-label">${formatLabel('PARKING_NOTE')}</span>
+            <span class="detail-value">${parkingNote}</span>
         </div>
     `;
     
@@ -148,6 +157,8 @@ function showStreetDetails(properties) {
         let value = properties[key];
         if (key === 'ONEWAY') {
             value = formatOneway(value);
+        } else if (key === 'OWNERSHIP') {
+            value = getOwnershipText(value);
         }
         if (value) {
             html += `
@@ -165,8 +176,8 @@ function showStreetDetails(properties) {
 // Create popup content
 function createPopup(properties) {
     const name = properties.STNAME || 'Unknown Street';
-    const ownership = properties.OWNERSHIP || 'Unknown';
-    return `<strong>${name}</strong><br>Ownership: ${ownership}`;
+    const access = getParkingAccessText(properties.PARKING_ACCESS);
+    return `<strong>${name}</strong><br>${access}`;
 }
 
 // Add interactivity to each feature
@@ -303,6 +314,10 @@ async function loadStats() {
         const stats = await response.json();
         
         const container = document.getElementById('stats-content');
+        const metered = stats.parking_access?.metered_no_pass || 0;
+        const timeLimited = stats.parking_access?.time_limited_no_pass || 0;
+        const permitRequired = stats.parking_access?.resident_permit_required || 0;
+
         container.innerHTML = `
             <div class="stat-item">
                 <span class="stat-label">Total Segments</span>
@@ -311,6 +326,18 @@ async function loadStats() {
             <div class="stat-item">
                 <span class="stat-label">Unique Streets</span>
                 <span class="stat-value">${stats.unique_streets.toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Metered (No Pass)</span>
+                <span class="stat-value">${metered.toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Time Limited (No Pass)</span>
+                <span class="stat-value">${timeLimited.toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Permit Required</span>
+                <span class="stat-value">${permitRequired.toLocaleString()}</span>
             </div>
         `;
     } catch (error) {

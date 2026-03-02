@@ -15,6 +15,7 @@ let allStreetsLayer = null;
 let searchResultsLayer = null;
 let hoveredLayer = null;
 let hoveredBaseStyle = null;
+let selectedStreetName = null;
 
 // Color scheme based on parking access without resident pass
 const COLORS = {
@@ -62,6 +63,59 @@ const hoverStyle = {
     weight: 5,
     opacity: 1
 };
+
+const selectedStyle = {
+    color: '#fde047',
+    weight: 6,
+    opacity: 1
+};
+
+function getStreetKey(feature) {
+    return String(feature?.properties?.STNAME || '').trim().toUpperCase();
+}
+
+function getLayerBaseStyle(layer) {
+    if (layer._isSearchResult) {
+        return { ...highlightStyle };
+    }
+    return getStreetStyle(layer.feature);
+}
+
+function isLayerSelected(layer) {
+    if (!selectedStreetName) return false;
+    return getStreetKey(layer.feature) === selectedStreetName;
+}
+
+function forEachStreetLayer(callback) {
+    for (const group of [allStreetsLayer, searchResultsLayer]) {
+        if (!group) continue;
+        group.eachLayer((layer) => {
+            if (layer?.feature) {
+                callback(layer);
+            }
+        });
+    }
+}
+
+function applyLayerRestStyle(layer) {
+    if (isLayerSelected(layer)) {
+        layer.setStyle(selectedStyle);
+    } else {
+        layer.setStyle(getLayerBaseStyle(layer));
+    }
+}
+
+function refreshSelectionStyles() {
+    forEachStreetLayer((layer) => {
+        applyLayerRestStyle(layer);
+    });
+}
+
+function selectStreet(streetName) {
+    selectedStreetName = String(streetName || '').trim().toUpperCase() || null;
+    resetHover();
+    refreshSelectionStyles();
+}
 
 function resetHover() {
     if (hoveredLayer && hoveredBaseStyle) {
@@ -182,54 +236,56 @@ function createPopup(properties) {
 
 // Add interactivity to each feature
 function onEachFeature(feature, layer) {
-    const baseStyle = getStreetStyle(feature);
+    layer._isSearchResult = false;
 
     layer.on({
         mouseover: function(e) {
-            applyHover(e.target, baseStyle);
+            applyHover(e.target, isLayerSelected(e.target) ? selectedStyle : getLayerBaseStyle(e.target));
         },
         mouseout: function(e) {
             // Always return to default style after hover
             if (hoveredLayer === e.target) {
                 resetHover();
             } else {
-                e.target.setStyle(baseStyle);
+                applyLayerRestStyle(e.target);
             }
         },
         click: function(e) {
             const props = feature.properties;
+            selectStreet(props?.STNAME);
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
             // Prevent hover color from sticking after click/popup interactions
             resetHover();
-            e.target.setStyle(baseStyle);
+            applyLayerRestStyle(e.target);
         }
     });
 }
 
 // Special handler for search results - keeps highlight style
 function onEachSearchFeature(feature, layer) {
-    const baseStyle = { ...highlightStyle };
+    layer._isSearchResult = true;
 
     layer.on({
         mouseover: function(e) {
-            applyHover(e.target, baseStyle);
+            applyHover(e.target, isLayerSelected(e.target) ? selectedStyle : getLayerBaseStyle(e.target));
         },
         mouseout: function(e) {
             // Keep highlight style for search results
             if (hoveredLayer === e.target) {
                 resetHover();
             } else {
-                e.target.setStyle(baseStyle);
+                applyLayerRestStyle(e.target);
             }
         },
         click: function(e) {
             const props = feature.properties;
+            selectStreet(props?.STNAME);
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
             // Keep highlighted search color after click
             resetHover();
-            e.target.setStyle(baseStyle);
+            applyLayerRestStyle(e.target);
         }
     });
 }
@@ -249,6 +305,7 @@ async function loadStreets() {
             style: getStreetStyle,
             onEachFeature: onEachFeature
         }).addTo(map);
+        refreshSelectionStyles();
         
         // Fit map to data bounds
         if (data.features && data.features.length > 0) {
@@ -280,6 +337,7 @@ async function searchStreets(query) {
                 style: highlightStyle,
                 onEachFeature: onEachSearchFeature
             }).addTo(map);
+            refreshSelectionStyles();
             
             // Fit map to search results
             map.fitBounds(searchResultsLayer.getBounds(), { padding: [50, 50] });
@@ -352,6 +410,7 @@ function clearSearch() {
         map.removeLayer(searchResultsLayer);
         searchResultsLayer = null;
     }
+    refreshSelectionStyles();
     document.getElementById('search-input').value = '';
     if (allStreetsLayer) {
         map.fitBounds(allStreetsLayer.getBounds(), { padding: [20, 20] });

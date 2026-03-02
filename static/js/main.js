@@ -33,9 +33,9 @@ function getStreetStyle(feature) {
     const access = feature.properties?.PARKING_ACCESS;
     let color = COLORS.unknown;
     
-    if (access === 'metered_no_pass') {
+    if (access === 'permit_with_metered_segments') {
         color = COLORS.meteredNoPass;
-    } else if (access === 'time_limited_no_pass') {
+    } else if (access === 'permit_with_time_limited_segments') {
         color = COLORS.timeLimitedNoPass;
     } else if (access === 'resident_permit_required') {
         color = COLORS.residentPermitRequired;
@@ -186,16 +186,16 @@ function formatLabel(key) {
 }
 
 function getParkingAccessText(access) {
-    if (access === 'metered_no_pass') return 'Metered (No Resident Pass)';
-    if (access === 'time_limited_no_pass') return 'Time Limited (No Resident Pass)';
+    if (access === 'permit_with_metered_segments') return 'Permit Street (Has Metered Segments)';
+    if (access === 'permit_with_time_limited_segments') return 'Permit Street (Has Time-Limited Segments)';
     if (access === 'resident_permit_required') return 'Resident Permit Required';
     if (access === 'private_rules_apply') return 'Private Street Rules Apply';
     return 'Unknown';
 }
 
 function getParkingAccessColor(access) {
-    if (access === 'metered_no_pass') return COLORS.meteredNoPass;
-    if (access === 'time_limited_no_pass') return COLORS.timeLimitedNoPass;
+    if (access === 'permit_with_metered_segments') return COLORS.meteredNoPass;
+    if (access === 'permit_with_time_limited_segments') return COLORS.timeLimitedNoPass;
     if (access === 'resident_permit_required') return COLORS.residentPermitRequired;
     if (access === 'private_rules_apply') return COLORS.privateRules;
     return COLORS.unknown;
@@ -227,6 +227,8 @@ function showStreetDetails(properties) {
     const accessText = getParkingAccessText(parkingAccess);
     const statusColor = getParkingAccessColor(parkingAccess);
     const parkingNote = properties.PARKING_NOTE || 'No additional parking rule note available.';
+    const meterCount = properties.PARKING_METER_COUNT_ESTIMATE;
+    const meterConfidence = properties.PARKING_METER_COUNT_CONFIDENCE || 'none';
     
     let html = `
         <div class="detail-row permit-status">
@@ -238,6 +240,15 @@ function showStreetDetails(properties) {
             <span class="detail-value">${parkingNote}</span>
         </div>
     `;
+
+    if (meterCount !== null && meterCount !== undefined) {
+        html += `
+            <div class="detail-row">
+                <span class="detail-label">Meter Count Estimate</span>
+                <span class="detail-value">${meterCount} (${meterConfidence})</span>
+            </div>
+        `;
+    }
     
     const displayProps = ['STNAME', 'OWNERSHIP', 'FUNC_CLASS', 'ONEWAY', 'MATERIAL'];
     
@@ -396,8 +407,8 @@ async function loadStats() {
         const stats = await response.json();
         
         const container = document.getElementById('stats-content');
-        const metered = stats.parking_access?.metered_no_pass || 0;
-        const timeLimited = stats.parking_access?.time_limited_no_pass || 0;
+        const metered = stats.parking_access?.permit_with_metered_segments || 0;
+        const timeLimited = stats.parking_access?.permit_with_time_limited_segments || 0;
         const permitRequired = stats.parking_access?.resident_permit_required || 0;
 
         container.innerHTML = `
@@ -410,11 +421,11 @@ async function loadStats() {
                 <span class="stat-value">${stats.unique_streets.toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Metered (No Pass)</span>
+                <span class="stat-label">Permit + Metered Segments</span>
                 <span class="stat-value">${metered.toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Time Limited (No Pass)</span>
+                <span class="stat-label">Permit + Time-Limited Segments</span>
                 <span class="stat-value">${timeLimited.toLocaleString()}</span>
             </div>
             <div class="stat-item">

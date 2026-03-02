@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Somerville Parking Map")
-APP_VERSION = "2026-03-02-parking-access-v5"
+APP_VERSION = "2026-03-02-parking-access-v6"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -24,6 +24,7 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 # Cache for street data
 _streets_cache = None
 _parking_rules_cache = None
+PARKING_RULES_PATH = DATA_DIR / "parking_rules_by_street.json"
 
 
 def _normalize_street_name(value: str | None) -> str:
@@ -68,91 +69,35 @@ def _normalize_street_name(value: str | None) -> str:
     return " ".join(tokens)
 
 
-def _find_header_index(lines: list[str], header: str) -> int:
-    pattern = re.compile(rf"^\s*{re.escape(header)}\s*$", re.IGNORECASE)
-    for i, line in enumerate(lines):
-        if pattern.match(line):
-            return i
-    return -1
-
-
-def _extract_schedule_lines(start_header: str, end_header: str) -> list[str]:
-    text_file = DATA_DIR / "pdf_text.txt"
-    if not text_file.exists():
-        return []
-
-    lines = text_file.read_text(errors="ignore").splitlines()
-    start = _find_header_index(lines, start_header)
-    end = _find_header_index(lines, end_header) if end_header else -1
-    if start == -1:
-        return []
-    if end == -1 or end <= start:
-        end = len(lines)
-    return [line.strip() for line in lines[start + 1:end] if line.strip()]
-
-
-def _line_is_likely_limited_parking(line: str) -> bool:
-    upper = line.upper()
-    if re.search(r"\b\d+\s*(HR|HOUR|MIN|MINUTE)\b", upper):
-        return True
-    if "2HR" in upper or "2 HOUR" in upper or "15 MINUTE" in upper:
-        return True
-    return False
-
-
-def _build_parking_rules(streets_geojson: dict) -> dict:
-    street_names = {
-        _normalize_street_name((f.get("properties", {}).get("STNAME") or "").strip())
-        for f in streets_geojson.get("features", [])
-    }
-    street_names.discard("")
-    candidates = sorted(street_names, key=len, reverse=True)
-
-    schedule_d_lines = _extract_schedule_lines("Schedule D", "Schedule E")
-    schedule_f_lines = _extract_schedule_lines("Schedule F", "Schedule G")
-
-    metered_no_pass = set()
-    limited_no_pass = set()
-
-    def find_street_prefix(line: str) -> str | None:
-        normalized_line = _normalize_street_name(line)
-        for name in candidates:
-            if normalized_line == name or normalized_line.startswith(f"{name} "):
-                return name
-        return None
-
-    for line in schedule_f_lines:
-        name = find_street_prefix(line)
-        if name:
-            metered_no_pass.add(name)
-
-    for line in schedule_d_lines:
-        name = find_street_prefix(line)
-        if not name:
-            continue
-        if _line_is_likely_limited_parking(line):
-            limited_no_pass.add(name)
-
-    return {
-        "metered_no_pass": metered_no_pass,
-        "limited_no_pass": limited_no_pass,
-    }
-
-
 def _classify_parking_access(properties: dict, rules: dict) -> tuple[str, str]:
     ownership_raw = properties.get("OWNERSHIP")
     ownership = str(ownership_raw or "").strip().lower()
     street_name = _normalize_street_name(properties.get("STNAME"))
+    street_rule = rules.get(street_name, {})
+    has_metered_segment = bool(street_rule.get("has_metered_segment"))
+    has_time_limited_segment = bool(street_rule.get("has_time_limited_segment"))
+    meter_count = street_rule.get("meter_count_estimate")
 
-    if street_name and street_name in rules["metered_no_pass"]:
-        return "metered_no_pass", "Metered parking available (resident pass not required)."
-    if street_name and street_name in rules["limited_no_pass"]:
-        return "time_limited_no_pass", "Time-limited parking available (resident pass not required)."
+    if ownership in {"public", "state land"}:
+        if has_metered_segment:
+            if meter_count is not None:
+                return (
+                    "permit_with_metered_segments",
+                    f"Resident permit required by default; this street has metered segments (~{meter_count} meter spaces listed).",
+                )
+            return (
+                "permit_with_metered_segments",
+                "Resident permit required by default; this street has metered segments.",
+            )
+        if has_time_limited_segment:
+            return (
+                "permit_with_time_limited_segments",
+                "Resident permit required by default; this street has time-limited parking segments.",
+            )
+        return "resident_permit_required", "Resident permit required unless otherwise posted."
 
     if ownership == "private":
         return "private_rules_apply", "Private street; parking rules are set by owner/signage."
-    if ownership in {"public", "state land"}:
-        return "resident_permit_required", "Resident permit required unless otherwise posted."
     return "unknown", "Parking access could not be determined from available data."
 
 
@@ -170,10 +115,14 @@ def load_streets():
 
 
 def load_parking_rules():
-    """Build and cache rules derived from Schedule D/F text."""
+    """Load and cache per-street rules derived from Schedule D/F parsing."""
     global _parking_rules_cache
     if _parking_rules_cache is None:
-        _parking_rules_cache = _build_parking_rules(load_streets())
+        if PARKING_RULES_PATH.exists():
+            content = json.loads(PARKING_RULES_PATH.read_text())
+            _parking_rules_cache = content.get("streets", {})
+        else:
+            _parking_rules_cache = {}
     return _parking_rules_cache
 
 
@@ -184,9 +133,15 @@ def get_enriched_streets():
     features = []
     for feature in streets.get("features", []):
         props = dict(feature.get("properties", {}))
+        street_key = _normalize_street_name(props.get("STNAME"))
+        rule = rules.get(street_key, {})
         category, note = _classify_parking_access(props, rules)
         props["PARKING_ACCESS"] = category
         props["PARKING_NOTE"] = note
+        props["PARKING_METER_COUNT_ESTIMATE"] = rule.get("meter_count_estimate")
+        props["PARKING_METER_COUNT_CONFIDENCE"] = rule.get("meter_count_confidence", "none")
+        props["PARKING_HAS_METERED_SEGMENT"] = bool(rule.get("has_metered_segment"))
+        props["PARKING_HAS_TIME_LIMITED_SEGMENT"] = bool(rule.get("has_time_limited_segment"))
         updated_feature = dict(feature)
         updated_feature["properties"] = props
         features.append(updated_feature)

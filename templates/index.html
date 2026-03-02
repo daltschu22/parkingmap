@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somerville Parking Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <header class="sidebar-header">
+                <h1>Somerville Parking Map</h1>
+                <p class="subtitle">Interactive street visualization</p>
+            </header>
+            
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search streets..." autocomplete="off">
+                <button id="search-btn" aria-label="Search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.3-4.3"></path>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="legend">
+                <h3>Parking Permit Status</h3>
+                <div class="legend-item">
+                    <span class="legend-line" style="background: #ef4444;"></span>
+                    <span>Permit Required (Public)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-line" style="background: #22c55e;"></span>
+                    <span>No Permit (Private)</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-line" style="background: #6b7280;"></span>
+                    <span>Unknown</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-line" style="background: #f59e0b;"></span>
+                    <span>Search Results</span>
+                </div>
+                <p class="legend-note">Since 2010, all public streets require resident permits. Private streets are not city-regulated.</p>
+            </div>
+            
+            <div class="stats-container">
+                <h3>Statistics</h3>
+                <div id="stats-content">
+                    <div class="stat-item">
+                        <span class="stat-label">Loading...</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-panel" id="street-info">
+                <h3>Street Info</h3>
+                <p class="info-hint">Click on a street to see details</p>
+                <div id="street-details"></div>
+            </div>
+            
+            <footer class="sidebar-footer">
+                <p>Data: City of Somerville GIS</p>
+            </footer>
+        </aside>
+        
+        <main class="map-container">
+            <div id="map"></div>
+        </main>
+    </div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" 
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

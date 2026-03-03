@@ -1,7 +1,9 @@
 // Somerville Parking Map - Main JavaScript
 
 // Initialize map centered on Somerville, MA
-const map = L.map('map').setView([42.3876, -71.0995], 14);
+const map = L.map('map', { preferCanvas: true }).setView([42.3876, -71.0995], 14);
+// Canvas renderer tolerance expands hit area without changing visible stroke width.
+const hitRenderer = L.canvas({ tolerance: 8 });
 
 // Add dark tile layer
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
@@ -279,6 +281,50 @@ function createPopup(properties) {
     return `<strong>${name}</strong><br>${access}`;
 }
 
+function focusStreetFromSearch(query, data) {
+    if (!data?.features?.length || !searchResultsLayer) return;
+
+    const q = String(query || '').trim().toUpperCase();
+    const byName = new Map();
+    for (const feature of data.features) {
+        const name = String(feature?.properties?.STNAME || '').trim().toUpperCase();
+        if (!name) continue;
+        if (!byName.has(name)) {
+            byName.set(name, feature);
+        }
+    }
+    if (byName.size === 0) return;
+
+    let targetFeature = null;
+    for (const [name, feature] of byName.entries()) {
+        if (name === q) {
+            targetFeature = feature;
+            break;
+        }
+    }
+    if (!targetFeature) {
+        targetFeature = byName.values().next().value;
+    }
+
+    const streetName = targetFeature?.properties?.STNAME;
+    if (!streetName) return;
+
+    selectStreet(streetName);
+    showStreetDetails(targetFeature.properties);
+
+    let popupLayer = null;
+    searchResultsLayer.eachLayer((layer) => {
+        if (popupLayer) return;
+        const layerName = String(layer?.feature?.properties?.STNAME || '').trim().toUpperCase();
+        if (layerName === String(streetName).trim().toUpperCase()) {
+            popupLayer = layer;
+        }
+    });
+    if (popupLayer) {
+        popupLayer.bindPopup(createPopup(targetFeature.properties)).openPopup();
+    }
+}
+
 // Add interactivity to each feature
 function onEachFeature(feature, layer) {
     layer._isSearchResult = false;
@@ -338,6 +384,7 @@ async function loadStreets() {
         
         allStreetsLayer = L.geoJSON(data, {
             style: getStreetStyle,
+            renderer: hitRenderer,
             onEachFeature: onEachFeature
         }).addTo(map);
         refreshSelectionStyles();
@@ -370,12 +417,14 @@ async function searchStreets(query) {
             // Create search results layer with highlight style
             searchResultsLayer = L.geoJSON(data, {
                 style: highlightStyle,
+                renderer: hitRenderer,
                 onEachFeature: onEachSearchFeature
             }).addTo(map);
             refreshSelectionStyles();
             
             // Fit map to search results
             map.fitBounds(searchResultsLayer.getBounds(), { padding: [50, 50] });
+            focusStreetFromSearch(query, data);
             
             // Update stats to show search results
             const uniqueNames = new Set(data.features.map(f => f.properties?.STNAME).filter(Boolean));

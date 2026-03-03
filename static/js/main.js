@@ -309,9 +309,6 @@ function focusStreetFromSearch(query, data) {
     const streetName = targetFeature?.properties?.STNAME;
     if (!streetName) return;
 
-    selectStreet(streetName);
-    showStreetDetails(targetFeature.properties);
-
     let popupLayer = null;
     searchResultsLayer.eachLayer((layer) => {
         if (popupLayer) return;
@@ -321,7 +318,12 @@ function focusStreetFromSearch(query, data) {
         }
     });
     if (popupLayer) {
-        popupLayer.bindPopup(createPopup(targetFeature.properties)).openPopup();
+        // Reuse the exact click code path so selection, popup and sidebar stay consistent.
+        popupLayer.fire('click', { target: popupLayer });
+    } else {
+        // Fallback if a matching layer is unexpectedly missing.
+        selectStreet(streetName);
+        showStreetDetails(targetFeature.properties);
     }
 }
 

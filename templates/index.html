@@ -6,7 +6,7 @@
     <title>Parking Map</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" 
           integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/style.css?v={{ app_version }}">
 </head>
 <body>
     <div class="app-container">
@@ -24,6 +24,11 @@
                         <path d="m21 21-4.3-4.3"></path>
                     </svg>
                 </button>
+            </div>
+
+            <div class="map-mode" aria-label="Map style">
+                <button type="button" class="map-mode-btn active" data-base-layer="dark">Dark</button>
+                <button type="button" class="map-mode-btn" data-base-layer="satellite">Satellite</button>
             </div>
             
             <div class="legend">

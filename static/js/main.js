@@ -24,7 +24,7 @@ L.control.layers({
     'Satellite': satelliteBaseLayer
 }, null, {
     position: 'topright',
-    collapsed: false
+    collapsed: true
 }).addTo(map);
 
 // Layer groups for streets
@@ -35,6 +35,24 @@ let accessibleEvidenceLayer = null;
 let hoveredStreetName = null;
 let selectedStreetName = null;
 let hoverResetTimer = null;
+
+function setBaseLayer(layerName) {
+    const useSatellite = layerName === 'satellite';
+    const nextLayer = useSatellite ? satelliteBaseLayer : darkBaseLayer;
+    const previousLayer = useSatellite ? darkBaseLayer : satelliteBaseLayer;
+
+    if (map.hasLayer(previousLayer)) {
+        map.removeLayer(previousLayer);
+    }
+    if (!map.hasLayer(nextLayer)) {
+        nextLayer.addTo(map);
+        nextLayer.bringToBack();
+    }
+
+    document.querySelectorAll('.map-mode-btn').forEach((button) => {
+        button.classList.toggle('active', button.dataset.baseLayer === layerName);
+    });
+}
 
 // Color scheme based on parking access without resident pass
 const COLORS = {
@@ -662,6 +680,19 @@ document.getElementById('search-input').addEventListener('keydown', (e) => {
     } else if (e.key === 'Escape') {
         clearSearch();
     }
+});
+
+document.querySelectorAll('.map-mode-btn').forEach((button) => {
+    button.addEventListener('click', () => {
+        setBaseLayer(button.dataset.baseLayer || 'dark');
+    });
+});
+
+map.on('baselayerchange', (event) => {
+    const layerName = String(event.name || 'dark').toLowerCase();
+    document.querySelectorAll('.map-mode-btn').forEach((button) => {
+        button.classList.toggle('active', button.dataset.baseLayer === layerName);
+    });
 });
 
 // Initialize

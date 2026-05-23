@@ -1,7 +1,7 @@
 // Parking Map - Main JavaScript
 
-// Initialize map centered between Somerville and Medford, MA
-const map = L.map('map', { preferCanvas: true }).setView([42.4025, -71.1010], 13);
+// Initialize map centered across Somerville, Medford, and Cambridge, MA
+const map = L.map('map', { preferCanvas: true }).setView([42.3925, -71.1090], 13);
 // Canvas renderer tolerance expands hit area without changing visible stroke width.
 const hitRenderer = L.canvas({ tolerance: 8 });
 
@@ -15,6 +15,8 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
 // Layer groups for streets
 let allStreetsLayer = null;
 let searchResultsLayer = null;
+let meterEvidenceLayer = null;
+let accessibleEvidenceLayer = null;
 let hoveredStreetName = null;
 let selectedStreetName = null;
 let hoverResetTimer = null;
@@ -42,7 +44,7 @@ function getStreetStyle(feature) {
         color = COLORS.timeLimitedNoPass;
     } else if (access === 'resident_permit_required') {
         color = COLORS.residentPermitRequired;
-    } else if (access === 'resident_permit_segment_rules_known') {
+    } else if (access === 'resident_permit_segment_rules_known' || access === 'metered_segments_known' || access === 'parking_special_spaces_known') {
         color = COLORS.segmentRulesKnown;
     } else if (access === 'private_rules_apply') {
         color = COLORS.privateRules;
@@ -195,6 +197,12 @@ function formatLabel(key) {
         'PARKING_MEDFORD_RULE_COUNT': 'Medford Rule Rows',
         'PARKING_MEDFORD_PARTIAL_RULE_COUNT': 'Partial Rule Rows',
         'PARKING_MEDFORD_RULE_SUMMARY': 'Medford Rule Summary',
+        'PARKING_CAMBRIDGE_METER_COUNT_ESTIMATE': 'Cambridge Meter Spaces',
+        'PARKING_CAMBRIDGE_ACTIVE_METER_COUNT_ESTIMATE': 'Active Meter Spaces',
+        'PARKING_CAMBRIDGE_ACCESSIBLE_SPACE_COUNT': 'Accessible Spaces',
+        'PARKING_CAMBRIDGE_METER_HOURS': 'Meter Hours',
+        'PARKING_CAMBRIDGE_METER_MAX_TIMES': 'Meter Max Times',
+        'PARKING_CAMBRIDGE_METER_RATES': 'Meter Rates',
         'FROM_STREET': 'From Street',
         'TO_STREET': 'To Street',
         'ROAD_TYPE': 'Road Type'
@@ -204,9 +212,11 @@ function formatLabel(key) {
 
 function getParkingAccessText(access) {
     if (access === 'permit_with_metered_segments') return 'Permit Street (Has Metered Segments)';
+    if (access === 'metered_segments_known') return 'Metered Segments Known';
     if (access === 'permit_with_time_limited_segments') return 'Permit Street (Has Time-Limited Segments)';
     if (access === 'resident_permit_required') return 'Resident Permit Required';
     if (access === 'resident_permit_segment_rules_known') return 'Segment-Specific Permit Rules Known';
+    if (access === 'parking_special_spaces_known') return 'Special Parking Spaces Known';
     if (access === 'private_rules_apply') return 'Private Street Rules Apply';
     return 'Unknown';
 }
@@ -215,7 +225,7 @@ function getParkingAccessColor(access) {
     if (access === 'permit_with_metered_segments') return COLORS.meteredNoPass;
     if (access === 'permit_with_time_limited_segments') return COLORS.timeLimitedNoPass;
     if (access === 'resident_permit_required') return COLORS.residentPermitRequired;
-    if (access === 'resident_permit_segment_rules_known') return COLORS.segmentRulesKnown;
+    if (access === 'resident_permit_segment_rules_known' || access === 'metered_segments_known' || access === 'parking_special_spaces_known') return COLORS.segmentRulesKnown;
     if (access === 'private_rules_apply') return COLORS.privateRules;
     return COLORS.unknown;
 }
@@ -282,7 +292,13 @@ function showStreetDetails(properties) {
         'PARKING_RULE_MATCH_LEVEL',
         'PARKING_MEDFORD_RULE_COUNT',
         'PARKING_MEDFORD_PARTIAL_RULE_COUNT',
-        'PARKING_MEDFORD_RULE_SUMMARY'
+        'PARKING_MEDFORD_RULE_SUMMARY',
+        'PARKING_CAMBRIDGE_METER_COUNT_ESTIMATE',
+        'PARKING_CAMBRIDGE_ACTIVE_METER_COUNT_ESTIMATE',
+        'PARKING_CAMBRIDGE_ACCESSIBLE_SPACE_COUNT',
+        'PARKING_CAMBRIDGE_METER_HOURS',
+        'PARKING_CAMBRIDGE_METER_MAX_TIMES',
+        'PARKING_CAMBRIDGE_METER_RATES'
     ];
     
     for (const key of displayProps) {
@@ -311,6 +327,20 @@ function createPopup(properties) {
     const municipality = properties.MUNICIPALITY || 'Unknown';
     const access = getParkingAccessText(properties.PARKING_ACCESS);
     return `<strong>${name}</strong><br>${municipality}<br>${access}`;
+}
+
+function createMeterEvidencePopup(properties) {
+    const status = properties.STATUS || 'Unknown status';
+    const hours = properties.OPERATION_HOURS || 'Hours unknown';
+    const maxTime = properties.MAX_TIME || 'Max time unknown';
+    const rate = properties.RATE || 'Rate unknown';
+    return `<strong>Cambridge meter space</strong><br>${status}<br>${hours}<br>${maxTime}<br>${rate}`;
+}
+
+function createAccessibleEvidencePopup(properties) {
+    const street = properties.STNAME || 'Unknown street';
+    const side = properties.SIDE_OF_STREET || 'Side unknown';
+    return `<strong>Cambridge accessible space</strong><br>${street}<br>${side}`;
 }
 
 function focusStreetFromSearch(query, data) {
@@ -435,6 +465,56 @@ async function loadStreets() {
     }
 }
 
+async function loadParkingEvidence() {
+    try {
+        const [meterResponse, accessibleResponse] = await Promise.all([
+            fetch('/api/parking-evidence/cambridge/meters'),
+            fetch('/api/parking-evidence/cambridge/accessible')
+        ]);
+        const [meters, accessible] = await Promise.all([
+            meterResponse.json(),
+            accessibleResponse.json()
+        ]);
+
+        if (meterEvidenceLayer) {
+            map.removeLayer(meterEvidenceLayer);
+        }
+        if (accessibleEvidenceLayer) {
+            map.removeLayer(accessibleEvidenceLayer);
+        }
+
+        meterEvidenceLayer = L.geoJSON(meters, {
+            style: {
+                color: COLORS.meteredNoPass,
+                weight: 1,
+                opacity: 0.9,
+                fillColor: COLORS.meteredNoPass,
+                fillOpacity: 0.45
+            },
+            onEachFeature: (feature, layer) => {
+                layer.bindPopup(createMeterEvidencePopup(feature.properties || {}));
+            }
+        }).addTo(map);
+
+        accessibleEvidenceLayer = L.geoJSON(accessible, {
+            pointToLayer: (feature, latlng) => L.circleMarker(latlng, {
+                radius: 4,
+                color: '#fde047',
+                weight: 2,
+                fillColor: '#facc15',
+                fillOpacity: 0.95
+            }),
+            onEachFeature: (feature, layer) => {
+                layer.bindPopup(createAccessibleEvidencePopup(feature.properties || {}));
+            }
+        }).addTo(map);
+
+        console.log(`Loaded ${meters.features?.length || 0} Cambridge meter spaces and ${accessible.features?.length || 0} accessible spaces`);
+    } catch (error) {
+        console.error('Error loading parking evidence:', error);
+    }
+}
+
 // Search streets by name
 async function searchStreets(query) {
     try {
@@ -492,9 +572,11 @@ async function loadStats() {
         
         const container = document.getElementById('stats-content');
         const metered = stats.parking_access?.permit_with_metered_segments || 0;
+        const knownMetered = stats.parking_access?.metered_segments_known || 0;
         const timeLimited = stats.parking_access?.permit_with_time_limited_segments || 0;
         const permitRequired = stats.parking_access?.resident_permit_required || 0;
         const segmentRules = stats.parking_access?.resident_permit_segment_rules_known || 0;
+        const specialSpaces = stats.parking_access?.parking_special_spaces_known || 0;
         const municipalities = Object.entries(stats.municipalities || {})
             .map(([name, count]) => `${name}: ${count.toLocaleString()}`)
             .join(' / ');
@@ -513,8 +595,8 @@ async function loadStats() {
                 <span class="stat-value">${municipalities}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Permit + Metered Segments</span>
-                <span class="stat-value">${metered.toLocaleString()}</span>
+                <span class="stat-label">Metered Segments Known</span>
+                <span class="stat-value">${(metered + knownMetered).toLocaleString()}</span>
             </div>
             <div class="stat-item">
                 <span class="stat-label">Permit + Time-Limited Segments</span>
@@ -526,7 +608,7 @@ async function loadStats() {
             </div>
             <div class="stat-item">
                 <span class="stat-label">Segment Rules Known</span>
-                <span class="stat-value">${segmentRules.toLocaleString()}</span>
+                <span class="stat-value">${(segmentRules + specialSpaces).toLocaleString()}</span>
             </div>
         `;
     } catch (error) {
@@ -570,6 +652,7 @@ document.getElementById('search-input').addEventListener('keydown', (e) => {
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     loadStreets();
+    loadParkingEvidence();
     loadStats();
 });
 

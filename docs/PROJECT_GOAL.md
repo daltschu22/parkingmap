@@ -6,7 +6,7 @@ The core user question is:
 
 > Can I park on this street or block, right now or at a chosen time, and what rule makes that true?
 
-The initial implemented coverage includes Somerville and a Medford seed layer. The intended coverage area includes Boston, Cambridge, Somerville, Medford, and other nearby municipalities as data becomes available.
+The initial implemented coverage includes Somerville, Medford, and Cambridge seed layers. The intended coverage area includes Boston, Cambridge, Somerville, Medford, and other nearby municipalities as data becomes available.
 
 ## Product Scope
 
@@ -32,11 +32,11 @@ The map should show parking availability and restrictions at street or block lev
 
 ## Current Prototype
 
-The current app uses Somerville street centerlines, Medford street geometry from MassGIS/MassDOT Roads, a parser for Somerville traffic regulations, and a Medford resident-permit street-list parser. It enriches street GeoJSON features with parking categories derived from those sources.
+The current app uses Somerville street centerlines, Medford street geometry from MassGIS/MassDOT Roads, Cambridge GIS street centerlines, a parser for Somerville traffic regulations, a Medford resident-permit street-list parser, and Cambridge GIS meter/accessibility summaries. It enriches street GeoJSON features with parking categories derived from those sources.
 
 Current limitation:
 
-- Parking-rule matching is by normalized street name. This can overstate a restriction when only part of a street is affected.
+- Parking-rule matching is by normalized street name or nearest street centerline. This can overstate a restriction when only part of a street is affected, so partial rows and Cambridge meter matches are exposed as segment evidence rather than whole-street truth.
 
 ## Target User Experience
 

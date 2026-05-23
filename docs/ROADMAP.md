@@ -13,6 +13,7 @@ This roadmap keeps the repo aligned with the larger goal: accurate interactive p
 - Preserve Medford resident-permit rows as segment candidates instead of whole-street labels.
 - Establish curb segments as the target data model before adding more street-level classifications.
 - Serve Medford streets in the app while clearly flagging segment-specific permit rows.
+- Serve Cambridge streets and GIS meter/accessibility evidence while clearly flagging nearest-street meter matches as segment evidence.
 
 ## Phase 2: Segment-Level Somerville
 
@@ -27,11 +28,12 @@ This roadmap keeps the repo aligned with the larger goal: accurate interactive p
 - Add a shared rule schema for Boston, Cambridge, Somerville, and Medford.
 - Add source metadata for each municipality.
 - Update map bounds, search, and filters to work across municipalities.
+- Keep municipality-specific builders for sources whose formats differ, such as Medford PDFs and Cambridge GIS layers.
 
 ## Phase 4: Boston-Area Coverage
 
 - Import Boston curb, meter, resident-parking, and street-regulation sources.
-- Import Cambridge parking and curb-regulation sources.
+- Expand Cambridge parking and curb-regulation sources beyond the initial GIS meter/accessibility layers.
 - Import Medford parking and street-regulation sources.
 - Add confidence badges and source links in the UI.
 

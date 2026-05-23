@@ -1,25 +1,27 @@
 # Parking Map
 
-Interactive web application for visualizing street-level parking rules in Boston and surrounding communities, starting with Somerville, MA.
+Interactive web application for visualizing street-level parking rules in Boston and surrounding communities, starting with Somerville, Medford, and Cambridge, MA.
 
 The long-term goal is to answer a practical curbside question: for a specific street or block, can a driver legally park there, and under what conditions? The app should distinguish resident-permit restrictions, meters, time limits, no-parking rules, private streets, and other posted constraints as accurately as the available municipal data allows.
 
-See [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md), [docs/CURB_SEGMENT_STRATEGY.md](docs/CURB_SEGMENT_STRATEGY.md), [docs/DATA_PIPELINE.md](docs/DATA_PIPELINE.md), [docs/MEDFORD_SOURCES.md](docs/MEDFORD_SOURCES.md), and [docs/ROADMAP.md](docs/ROADMAP.md) for the product scope and implementation direction.
+See [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md), [docs/CURB_SEGMENT_STRATEGY.md](docs/CURB_SEGMENT_STRATEGY.md), [docs/DATA_PIPELINE.md](docs/DATA_PIPELINE.md), [docs/MEDFORD_SOURCES.md](docs/MEDFORD_SOURCES.md), [docs/CAMBRIDGE_SOURCES.md](docs/CAMBRIDGE_SOURCES.md), and [docs/ROADMAP.md](docs/ROADMAP.md) for the product scope and implementation direction.
 
 ## Current Status
 
-This repo currently implements a Somerville and Medford prototype:
+This repo currently implements a Somerville, Medford, and Cambridge prototype:
 
 - Somerville street centerlines are loaded from `data/streets.geojson`.
 - Somerville parking rules are derived from the local traffic regulations PDF.
 - Medford street geometry is loaded from MassGIS/MassDOT Roads.
 - Medford resident-permit rules are derived from the official resident permit street PDF.
+- Cambridge street geometry, metered parking spaces, and public accessible parking spaces are loaded from Cambridge GIS.
+- Cambridge metered-space polygons are shown as their own evidence layer and nearest-matched to street centerlines for summaries, not whole-street status.
 - Matching is street-name based, not exact block-segment based.
-- Boston, Cambridge, and other surrounding communities are target future coverage areas.
+- Boston and other surrounding communities are target future coverage areas.
 
 ## Features
 
-- Interactive map with Somerville and Medford streets
+- Interactive map with Somerville, Medford, and Cambridge streets
 - Search streets by name
 - Click streets to see details, including current parking-rule classification
 - Dark theme with modern UI
@@ -46,6 +48,14 @@ python3 build_medford_rules_seed.py
 
 The Medford seed output keeps restriction rows separate and flags partial block/range rules so they are not accidentally treated as whole-street rules.
 
+To rebuild Cambridge GIS-derived data:
+
+```bash
+python3 build_cambridge_data.py
+```
+
+The Cambridge output keeps meter polygons as their own evidence layer plus approximate nearest-street summaries. A street with one matched meter is not treated as fully metered.
+
 Without `uv`:
 
 ```bash
@@ -70,6 +80,9 @@ python -m parkingmap
   - Schedule E: Permit Parking streets
   - Schedule D: Parking prohibitions
   - Schedule F: Metered parking zones
+- **Cambridge GIS Street Centerlines**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Trans/Street_Centerlines)
+- **Cambridge GIS Metered Parking Spaces**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Traffic/Metered_Parking_Spaces)
+- **Cambridge GIS Public Handicap Parking Spaces**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Traffic/Public_Handicap_Parking_Spaces)
 
 ## Parking Classification Logic
 
@@ -79,6 +92,7 @@ python -m parkingmap
 - If a public street has Schedule D time-limited rows, it is labeled **Permit Street with Time-Limited Segments**.
 - Private streets are labeled **Private Street Rules Apply**.
 - Medford sources are tracked in `data/source_manifest.json`; `build_medford_rules_seed.py` emits row-level resident-permit records under `data/processed/medford/`.
+- Cambridge sources are tracked in `data/source_manifest.json`; `build_cambridge_data.py` emits normalized street geometry and parking summaries under `data/processed/cambridge/`.
 
 Current limitation:
 - Matching is by street name, not exact block segment geometry from regulation tables. This can over-include streets with only partial exceptions.
@@ -91,6 +105,7 @@ parkingmap/
 ├── build_parking_rules.py # Build structured rules from the city PDF
 ├── build_medford_rules_seed.py # Build first-pass Medford row-level permit rules
 ├── build_medford_streets.py # Download Medford street geometry from MassGIS/MassDOT
+├── build_cambridge_data.py # Download Cambridge GIS streets and parking summaries
 ├── scripts/
 │   └── fetch_public_sources.py # Download official source files from manifest
 ├── parkingmap.py       # Module entrypoint for `python -m parkingmap`
@@ -102,6 +117,7 @@ parkingmap/
 │   ├── CURB_SEGMENT_STRATEGY.md # Foot-by-foot curb accuracy plan
 │   ├── DATA_PIPELINE.md # Data ingestion and rule-model direction
 │   ├── MEDFORD_SOURCES.md # Official Medford source inventory
+│   ├── CAMBRIDGE_SOURCES.md # Official Cambridge source inventory
 │   └── ROADMAP.md      # Multi-city implementation phases
 ├── data/
 │   └── source_manifest.json # Public source registry and download targets

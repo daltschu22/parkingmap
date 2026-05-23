@@ -156,8 +156,9 @@ def get_enriched_streets():
 async def index(request: Request):
     """Render the main map page."""
     return templates.TemplateResponse(
-        "index.html",
-        {"request": request, "app_version": APP_VERSION},
+        request=request,
+        name="index.html",
+        context={"request": request, "app_version": APP_VERSION},
     )
 
 

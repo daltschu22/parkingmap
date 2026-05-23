@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
-APP_VERSION = "2026-03-02-parking-access-v6"
+APP_VERSION = "2026-05-23-medford-v1"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -24,7 +24,11 @@ templates = Jinja2Templates(directory=TEMPLATES_DIR)
 # Cache for street data
 _streets_cache = None
 _parking_rules_cache = None
+_medford_streets_cache = None
+_medford_rules_cache = None
 PARKING_RULES_PATH = DATA_DIR / "parking_rules_by_street.json"
+MEDFORD_STREETS_PATH = DATA_DIR / "processed" / "medford" / "streets.geojson"
+MEDFORD_RULES_PATH = DATA_DIR / "processed" / "medford" / "resident_permit_parking_rules.json"
 
 
 def _normalize_street_name(value: str | None) -> str:
@@ -101,6 +105,45 @@ def _classify_parking_access(properties: dict, rules: dict) -> tuple[str, str]:
     return "unknown", "Parking access could not be determined from available data."
 
 
+def _classify_medford_parking_access(properties: dict, rules: dict) -> tuple[str, str]:
+    ownership = str(properties.get("OWNERSHIP") or "").strip().lower()
+    if ownership == "private":
+        return "private_rules_apply", "Private street; parking rules are set by owner/signage."
+
+    street_key = _normalize_street_name(properties.get("STNAME"))
+    rows = rules.get(street_key, [])
+    if not rows:
+        return (
+            "unknown",
+            "No Medford resident-permit row matched this street in the current seed data; other posted rules may apply.",
+        )
+
+    partial_rows = [row for row in rows if row.get("scope") == "partial_or_segment_specific"]
+    permit_types = sorted(
+        {
+            row.get("permit_type")
+            for row in rows
+            if row.get("permit_type")
+        }
+    )
+    permit_text = ", ".join(permit_types) if permit_types else "Resident"
+
+    if partial_rows:
+        return (
+            "resident_permit_segment_rules_known",
+            (
+                f"Medford resident-permit source has {len(rows)} row(s) for this street, "
+                f"including {len(partial_rows)} partial/segment-specific row(s). "
+                "Do not treat the whole street as one parking status yet."
+            ),
+        )
+
+    return (
+        "resident_permit_required",
+        f"Medford resident-permit source lists this as {permit_text} permit parking. Confirm posted signs.",
+    )
+
+
 def load_streets():
     """Load and cache the streets GeoJSON data."""
     global _streets_cache
@@ -112,6 +155,17 @@ def load_streets():
         else:
             _streets_cache = {"type": "FeatureCollection", "features": []}
     return _streets_cache
+
+
+def load_medford_streets():
+    """Load and cache Medford street GeoJSON data."""
+    global _medford_streets_cache
+    if _medford_streets_cache is None:
+        if MEDFORD_STREETS_PATH.exists():
+            _medford_streets_cache = json.loads(MEDFORD_STREETS_PATH.read_text())
+        else:
+            _medford_streets_cache = {"type": "FeatureCollection", "features": []}
+    return _medford_streets_cache
 
 
 def load_parking_rules():
@@ -126,6 +180,23 @@ def load_parking_rules():
     return _parking_rules_cache
 
 
+def load_medford_rules():
+    """Load and cache Medford resident-permit rows keyed by normalized street name."""
+    global _medford_rules_cache
+    if _medford_rules_cache is None:
+        if not MEDFORD_RULES_PATH.exists():
+            _medford_rules_cache = {}
+        else:
+            content = json.loads(MEDFORD_RULES_PATH.read_text())
+            rows_by_street = {}
+            for row in content.get("rows", []):
+                key = _normalize_street_name(row.get("street_name"))
+                if key:
+                    rows_by_street.setdefault(key, []).append(row)
+            _medford_rules_cache = rows_by_street
+    return _medford_rules_cache
+
+
 def get_enriched_streets():
     streets = load_streets()
     rules = load_parking_rules()
@@ -133,6 +204,8 @@ def get_enriched_streets():
     features = []
     for feature in streets.get("features", []):
         props = dict(feature.get("properties", {}))
+        props["MUNICIPALITY"] = "Somerville"
+        props["DATA_SOURCE"] = props.get("DATA_SOURCE") or "somerville_streets_geojson"
         street_key = _normalize_street_name(props.get("STNAME"))
         rule = rules.get(street_key, {})
         category, note = _classify_parking_access(props, rules)
@@ -142,6 +215,30 @@ def get_enriched_streets():
         props["PARKING_METER_COUNT_CONFIDENCE"] = rule.get("meter_count_confidence", "none")
         props["PARKING_HAS_METERED_SEGMENT"] = bool(rule.get("has_metered_segment"))
         props["PARKING_HAS_TIME_LIMITED_SEGMENT"] = bool(rule.get("has_time_limited_segment"))
+        updated_feature = dict(feature)
+        updated_feature["properties"] = props
+        features.append(updated_feature)
+
+    medford_rules = load_medford_rules()
+    medford_streets = load_medford_streets()
+    for feature in medford_streets.get("features", []):
+        props = dict(feature.get("properties", {}))
+        street_key = _normalize_street_name(props.get("STNAME"))
+        rows = medford_rules.get(street_key, [])
+        partial_rows = [row for row in rows if row.get("scope") == "partial_or_segment_specific"]
+        category, note = _classify_medford_parking_access(props, medford_rules)
+        props["PARKING_ACCESS"] = category
+        props["PARKING_NOTE"] = note
+        props["PARKING_RULE_SOURCE"] = "Medford Resident Permit Parking Streets"
+        props["PARKING_RULE_MATCH_LEVEL"] = (
+            "street_name_partial_rows" if partial_rows else "street_name"
+        ) if rows else "none"
+        props["PARKING_MEDFORD_RULE_COUNT"] = len(rows)
+        props["PARKING_MEDFORD_PARTIAL_RULE_COUNT"] = len(partial_rows)
+        props["PARKING_MEDFORD_RULE_SUMMARY"] = " | ".join(
+            row.get("restriction_text") or row.get("permit_type") or "Resident"
+            for row in rows[:3]
+        )
         updated_feature = dict(feature)
         updated_feature["properties"] = props
         features.append(updated_feature)
@@ -185,6 +282,7 @@ async def search_streets(q: str = ""):
     filtered_features = [
         f for f in streets.get("features", [])
         if q_lower in (f.get("properties", {}).get("STNAME", "") or "").lower()
+        or q_lower in (f.get("properties", {}).get("MUNICIPALITY", "") or "").lower()
     ]
     
     return JSONResponse(content={
@@ -201,14 +299,17 @@ async def get_stats():
     
     # Count unique street names
     street_names = set()
+    municipality_counts = {}
     ownership_counts = {}
     func_class_counts = {}
     
     for f in features:
         props = f.get("properties", {})
         name = props.get("STNAME")
+        municipality = props.get("MUNICIPALITY", "Unknown")
         if name:
-            street_names.add(name)
+            street_names.add((municipality, name))
+        municipality_counts[municipality] = municipality_counts.get(municipality, 0) + 1
         
         ownership = props.get("OWNERSHIP", "Unknown")
         ownership_counts[ownership] = ownership_counts.get(ownership, 0) + 1
@@ -226,6 +327,7 @@ async def get_stats():
     return JSONResponse(content={
         "total_segments": len(features),
         "unique_streets": len(street_names),
+        "municipalities": municipality_counts,
         "ownership": ownership_counts,
         "functional_class": func_class_counts,
         "parking_access": parking_access_counts,

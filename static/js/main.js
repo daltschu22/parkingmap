@@ -1,7 +1,7 @@
 // Parking Map - Main JavaScript
 
-// Initialize map centered on Somerville, MA
-const map = L.map('map', { preferCanvas: true }).setView([42.3876, -71.0995], 14);
+// Initialize map centered between Somerville and Medford, MA
+const map = L.map('map', { preferCanvas: true }).setView([42.4025, -71.1010], 13);
 // Canvas renderer tolerance expands hit area without changing visible stroke width.
 const hitRenderer = L.canvas({ tolerance: 8 });
 
@@ -24,6 +24,7 @@ const COLORS = {
     meteredNoPass: '#0ea5e9',     // Blue - metered parking
     timeLimitedNoPass: '#22c55e', // Green - timed parking, no resident pass
     residentPermitRequired: '#ef4444', // Red - resident permit required
+    segmentRulesKnown: '#f97316',  // Orange - partial/segment rules known
     privateRules: '#a855f7',      // Purple - private street rules
     unknown: '#6b7280',           // Gray - unknown
     highlight: '#f59e0b',         // Orange - search results
@@ -41,6 +42,8 @@ function getStreetStyle(feature) {
         color = COLORS.timeLimitedNoPass;
     } else if (access === 'resident_permit_required') {
         color = COLORS.residentPermitRequired;
+    } else if (access === 'resident_permit_segment_rules_known') {
+        color = COLORS.segmentRulesKnown;
     } else if (access === 'private_rules_apply') {
         color = COLORS.privateRules;
     }
@@ -73,7 +76,11 @@ const selectedStyle = {
 };
 
 function getStreetKey(feature) {
-    return String(feature?.properties?.STNAME || '').trim().toUpperCase();
+    const props = feature?.properties || {};
+    const municipality = String(props.MUNICIPALITY || '').trim().toUpperCase();
+    const street = String(props.STNAME || '').trim().toUpperCase();
+    if (!street) return '';
+    return `${municipality}:${street}`;
 }
 
 function getLayerBaseStyle(layer) {
@@ -174,6 +181,7 @@ function scheduleHoverReset(streetName) {
 // Format property labels for display
 function formatLabel(key) {
     const labels = {
+        'MUNICIPALITY': 'Municipality',
         'STNAME': 'Street Name',
         'ONEWAY': 'One Way',
         'OWNERSHIP': 'Ownership',
@@ -182,7 +190,14 @@ function formatLabel(key) {
         'ROW_WIDTH': 'ROW Width',
         'PAVE_WIDTH': 'Pave Width',
         'PARKING_ACCESS': 'Parking Access',
-        'PARKING_NOTE': 'Parking Note'
+        'PARKING_NOTE': 'Parking Note',
+        'PARKING_RULE_MATCH_LEVEL': 'Rule Match',
+        'PARKING_MEDFORD_RULE_COUNT': 'Medford Rule Rows',
+        'PARKING_MEDFORD_PARTIAL_RULE_COUNT': 'Partial Rule Rows',
+        'PARKING_MEDFORD_RULE_SUMMARY': 'Medford Rule Summary',
+        'FROM_STREET': 'From Street',
+        'TO_STREET': 'To Street',
+        'ROAD_TYPE': 'Road Type'
     };
     return labels[key] || key;
 }
@@ -191,6 +206,7 @@ function getParkingAccessText(access) {
     if (access === 'permit_with_metered_segments') return 'Permit Street (Has Metered Segments)';
     if (access === 'permit_with_time_limited_segments') return 'Permit Street (Has Time-Limited Segments)';
     if (access === 'resident_permit_required') return 'Resident Permit Required';
+    if (access === 'resident_permit_segment_rules_known') return 'Segment-Specific Permit Rules Known';
     if (access === 'private_rules_apply') return 'Private Street Rules Apply';
     return 'Unknown';
 }
@@ -199,6 +215,7 @@ function getParkingAccessColor(access) {
     if (access === 'permit_with_metered_segments') return COLORS.meteredNoPass;
     if (access === 'permit_with_time_limited_segments') return COLORS.timeLimitedNoPass;
     if (access === 'resident_permit_required') return COLORS.residentPermitRequired;
+    if (access === 'resident_permit_segment_rules_known') return COLORS.segmentRulesKnown;
     if (access === 'private_rules_apply') return COLORS.privateRules;
     return COLORS.unknown;
 }
@@ -252,7 +269,21 @@ function showStreetDetails(properties) {
         `;
     }
     
-    const displayProps = ['STNAME', 'OWNERSHIP', 'FUNC_CLASS', 'ONEWAY', 'MATERIAL'];
+    const displayProps = [
+        'MUNICIPALITY',
+        'STNAME',
+        'OWNERSHIP',
+        'FUNC_CLASS',
+        'ROAD_TYPE',
+        'FROM_STREET',
+        'TO_STREET',
+        'ONEWAY',
+        'MATERIAL',
+        'PARKING_RULE_MATCH_LEVEL',
+        'PARKING_MEDFORD_RULE_COUNT',
+        'PARKING_MEDFORD_PARTIAL_RULE_COUNT',
+        'PARKING_MEDFORD_RULE_SUMMARY'
+    ];
     
     for (const key of displayProps) {
         let value = properties[key];
@@ -277,8 +308,9 @@ function showStreetDetails(properties) {
 // Create popup content
 function createPopup(properties) {
     const name = properties.STNAME || 'Unknown Street';
+    const municipality = properties.MUNICIPALITY || 'Unknown';
     const access = getParkingAccessText(properties.PARKING_ACCESS);
-    return `<strong>${name}</strong><br>${access}`;
+    return `<strong>${name}</strong><br>${municipality}<br>${access}`;
 }
 
 function focusStreetFromSearch(query, data) {
@@ -289,15 +321,17 @@ function focusStreetFromSearch(query, data) {
     for (const feature of data.features) {
         const name = String(feature?.properties?.STNAME || '').trim().toUpperCase();
         if (!name) continue;
-        if (!byName.has(name)) {
-            byName.set(name, feature);
+        const municipality = String(feature?.properties?.MUNICIPALITY || '').trim().toUpperCase();
+        const key = `${municipality}:${name}`;
+        if (!byName.has(key)) {
+            byName.set(key, feature);
         }
     }
     if (byName.size === 0) return;
 
     let targetFeature = null;
-    for (const [name, feature] of byName.entries()) {
-        if (name === q) {
+    for (const [key, feature] of byName.entries()) {
+        if (key.endsWith(`:${q}`) || key === q) {
             targetFeature = feature;
             break;
         }
@@ -306,14 +340,13 @@ function focusStreetFromSearch(query, data) {
         targetFeature = byName.values().next().value;
     }
 
-    const streetName = targetFeature?.properties?.STNAME;
-    if (!streetName) return;
+    const targetKey = getStreetKey(targetFeature);
+    if (!targetKey) return;
 
     let popupLayer = null;
     searchResultsLayer.eachLayer((layer) => {
         if (popupLayer) return;
-        const layerName = String(layer?.feature?.properties?.STNAME || '').trim().toUpperCase();
-        if (layerName === String(streetName).trim().toUpperCase()) {
+        if (getStreetKey(layer?.feature) === targetKey) {
             popupLayer = layer;
         }
     });
@@ -322,7 +355,7 @@ function focusStreetFromSearch(query, data) {
         popupLayer.fire('click', { target: popupLayer });
     } else {
         // Fallback if a matching layer is unexpectedly missing.
-        selectStreet(streetName);
+        selectStreet(targetKey);
         showStreetDetails(targetFeature.properties);
     }
 }
@@ -340,7 +373,7 @@ function onEachFeature(feature, layer) {
         },
         click: function(e) {
             const props = feature.properties;
-            selectStreet(props?.STNAME);
+            selectStreet(getStreetKey(feature));
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
             // Prevent hover color from sticking after click/popup interactions
@@ -363,7 +396,7 @@ function onEachSearchFeature(feature, layer) {
         },
         click: function(e) {
             const props = feature.properties;
-            selectStreet(props?.STNAME);
+            selectStreet(getStreetKey(feature));
             showStreetDetails(props);
             e.target.bindPopup(createPopup(props)).openPopup();
             // Keep highlighted search color after click
@@ -429,7 +462,7 @@ async function searchStreets(query) {
             focusStreetFromSearch(query, data);
             
             // Update stats to show search results
-            const uniqueNames = new Set(data.features.map(f => f.properties?.STNAME).filter(Boolean));
+            const uniqueNames = new Set(data.features.map(f => `${f.properties?.MUNICIPALITY || ''}:${f.properties?.STNAME || ''}`).filter(Boolean));
             document.getElementById('stats-content').innerHTML = `
                 <div class="stat-item">
                     <span class="stat-label">Search Results</span>
@@ -461,6 +494,10 @@ async function loadStats() {
         const metered = stats.parking_access?.permit_with_metered_segments || 0;
         const timeLimited = stats.parking_access?.permit_with_time_limited_segments || 0;
         const permitRequired = stats.parking_access?.resident_permit_required || 0;
+        const segmentRules = stats.parking_access?.resident_permit_segment_rules_known || 0;
+        const municipalities = Object.entries(stats.municipalities || {})
+            .map(([name, count]) => `${name}: ${count.toLocaleString()}`)
+            .join(' / ');
 
         container.innerHTML = `
             <div class="stat-item">
@@ -470,6 +507,10 @@ async function loadStats() {
             <div class="stat-item">
                 <span class="stat-label">Unique Streets</span>
                 <span class="stat-value">${stats.unique_streets.toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Municipalities</span>
+                <span class="stat-value">${municipalities}</span>
             </div>
             <div class="stat-item">
                 <span class="stat-label">Permit + Metered Segments</span>
@@ -482,6 +523,10 @@ async function loadStats() {
             <div class="stat-item">
                 <span class="stat-label">Permit Required</span>
                 <span class="stat-value">${permitRequired.toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Segment Rules Known</span>
+                <span class="stat-value">${segmentRules.toLocaleString()}</span>
             </div>
         `;
     } catch (error) {

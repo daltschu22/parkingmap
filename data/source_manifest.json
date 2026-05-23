@@ -2,6 +2,17 @@
   "schema_version": 1,
   "sources": [
     {
+      "id": "massgis_massdot_roads_medford",
+      "municipality": "medford",
+      "title": "MassGIS/MassDOT Roads FeatureServer - Medford extract",
+      "url": "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/MassDOTRoads_gdb/FeatureServer/0",
+      "destination": "data/processed/medford/streets.geojson",
+      "type": "arcgis_featureserver",
+      "category": "street_network",
+      "enabled": false,
+      "notes": "Built by build_medford_streets.py using MGIS_TOWN='MEDFORD' and GeoJSON output."
+    },
+    {
       "id": "somerville_traffic_regulations_pdf",
       "municipality": "somerville",
       "title": "Traffic Commission Regulations PDF",

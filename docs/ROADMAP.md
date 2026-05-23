@@ -12,6 +12,7 @@ This roadmap keeps the repo aligned with the larger goal: accurate interactive p
 - Keep Medford public sources reproducible through `data/source_manifest.json`.
 - Preserve Medford resident-permit rows as segment candidates instead of whole-street labels.
 - Establish curb segments as the target data model before adding more street-level classifications.
+- Serve Medford streets in the app while clearly flagging segment-specific permit rows.
 
 ## Phase 2: Segment-Level Somerville
 

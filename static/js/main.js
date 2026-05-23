@@ -1,4 +1,4 @@
-// Somerville Parking Map - Main JavaScript
+// Parking Map - Main JavaScript
 
 // Initialize map centered on Somerville, MA
 const map = L.map('map', { preferCanvas: true }).setView([42.3876, -71.0995], 14);

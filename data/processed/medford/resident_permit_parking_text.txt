@@ -1,0 +1,226 @@
+Street Name           Restriction(s), If Any                                                                 Permit Type   Zone
+Abbott Street                                                                                                Resident
+Adams Street          Boston Avenue to Somerville Line                                                       Resident
+Albion Street         #71 - 91                                                                               Resident      G
+Albion Street         Between Alfred St. and William St.                                                     Resident      G
+                      From William Street to Bow Street, Monday to Saturday; Sundays and Holidays
+Albion Street         excluded                                                                               Resident      G
+Alexander Avenue      Pierce Avenue to Mystic Avenue: in front of homes only, 107-135                        Resident
+Alexander Avenue      Willis Ave to Pierce Ave 5PM-8AM, Mon-Fri; Sat, Sun & Holidays excluded                Resident
+                                                                                                             Resident or
+Alexander Avenue      North side from Mystic Ave. to Pierce Ave.                                             Business
+Alfred Street                                                                                                Resident      G
+Alfred Terrace                                                                                               Resident      G
+Allston Street        High Street to Prescott Street                                                         Resident
+Amaranth Avenue                                                                                              Resident
+Arlington Street      From Monument Street to Boston Avenue                                                  Resident
+Ashland Street        West side of street only                                                               Resident
+Bellevue Street                                                                                              Resident      G
+Benham Street                                                                                                Resident      G
+Bennett Street                                                                                               Resident
+Benton Road                                                                                                  Resident      G
+Berwick Road                                                                                                 Resident      G
+Billings Avenue                                                                                              Resident
+Bonner Avenue                                                                                                Resident
+                                                                                                             Resident or
+Bonner Avenue         South side from Pierce Avenue to Mystic Venue                                          Business
+                                                                                                             Resident or
+Bonner Avenue         North side, from 40' W of Mystic Ave., extending 140' westerly                         Business
+Boston Avenue         High Street to Harvard Avenue: 7am - 11am Monday - Friday;                             Resident
+Boston Avenue         #61 - 86: 7am - 11am Monday - Friday                                                   Resident
+                      Somerville/Medford city line to Winthrop Street;
+                      Alongside non-residential uses = 2 hour parking,
+                      8am-8pm, except by permit, excluding Sundays
+                      & Holidays; Along all residential uses = Resident
+                      Permit Parking Only, excluding Sundays &                                               Resident or
+Boston Avenue         Holidays                                                                               Business      G
+Bow Street                                                                                                   Resident      G
+Bowdoin Street                                                                                               Resident      G
+Bowen Avenue          Main Street to Mystic Avenue                                                           Resident
+Bower Street          7am - 12pm Monday - Friday                                                             Resident
+Boynton Road          Lower End Monday - Friday                                                              Resident
+Brackett Street       Memorial Day to Labor Day only                                                         Resident
+Bradford Avenue                                                                                              Resident      G
+Braemore Road                                                                                                Resident      G
+Bristol Road                                                                                                 Resident      G
+                      George Street to Railroad Tracks: 7am - 7pm Monday - Friday. Saturday, Sunday &
+Brookings Street      Holidays excluded                                                                      Resident      G
+Brooks Street         High Street to Irving Street: 7am - 12pm Monday - Friday, Holidays Excluded            Resident
+Burget Avenue                                                                                                Resident      G
+Canal Street          #15 to Railroad Tracks: 7am - 7pm                                                      Resident
+Capen Street                                                                                                 Resident
+Carolina Street       Riverside Avenue to Cushing Street intersection (approx. around #39 Carolina Street)   Resident
+Cedar Cliff Terrace   11 PM to 7 AM                                                                          Resident
+                   From Yeomans Avenue to Linwood Street northerly for a distance of 393 feet 11PM to 7AM
+Central Avenue     both sides of street                                                                     Resident
+Charlton Street                                                                                             Resident   G
+Charnwood Road     7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded                          Resident   G
+Cherry Street                                                                                               Resident
+Chester Avenue     Sundays & holidays excluded                                                              Resident   G
+Circuit Street     7am - 12pm Monday - Friday, Holidays excluded                                            Resident
+Clayton Avenue                                                                                              Resident   G
+Colby Street       Sundays & Holidays excluded                                                              Resident   G
+College Avenue     Boston Avenue to George Street                                                           Resident   G
+Cottage Street                                                                                              Resident
+Dartmouth Street                                                                                            Resident   G
+Dearborn Street    Sunday and Holidays excluded                                                             Resident
+Dexter Street      Bow Street to Broadway, in front of homes only                                           Resident
+Edward Street                                                                                               Resident
+Ellis Avenue                                                                                                Resident
+Emerson Street                                                                                              Resident
+Emery Street       Winthrop Street to Hillsdale Road                                                        Resident
+Everett Street     24/7                                                                                     Resident
+Fairmount Street                                                                                            Resident   G
+                   Two hour or permit parking from north driveway of Schoolhouse Condos to Hall
+Forest Street      Avenue                                                                                   Resident
+Franklin Street                                                                                             Resident
+Frederick Avenue                                                                                            Resident   G
+Frye Road                                                                                                   Resident
+Garden Street      8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded                        Resident
+                   Memorial Day to Labor Day only; #56 and up.
+                   Public Street from Taft Street to Fulton St
+Gaston Street      ONLY                                                                                     Resident
+George Street      Main Street to College Avenue: 6am - 6pm (odd side)                                      Resident
+George Street      Spencer Road/Clark Street to Winthrop Street                                             Resident
+Glenwood Avenue                                                                                             Resident
+Golden Avenue                                                                                               Resident
+Goldsmith Avenue   Monday - Friday only                                                                     Resident
+Gorham Road        7am - 12pm Monday - Friday, Holidays excluded                                            Resident
+                   Resident parking full street with exception along the park- 3 hour parking 8am-10pm.
+Gourley Road       Permit parking 10pm-8am Sundays & holidays excluded                                  Resident
+Governors Avenue   Lawrence Road to South Border Road                                                   Resident
+Grandview Avenue                                                                                            Resident
+Grant Avenue       24/7 On Grant Ave from Salem Street to Hooker Street                                     Resident
+Granville Avenue                                                                                            Resident   G
+Greenleaf Avenue                                                                                            Resident   G
+Hadley Place                                                                                                Resident
+Haines Street      Memorial Day to Labor Day only                                                           Resident
+Hale Avenue                                                                                                 Resident
+Hamilton Street                                                                                             Resident
+Hancock Avenue                                                                                              Resident
+Harold Street                                                                                               Resident
+Harris Road                                                                                                 Resident
+Harvard Avenue     From Bower St. to Boston Ave                                                             Resident
+                  Main Street to Winchester Street; Alongside nonresidential uses = 2 hour parking,
+                  8am-8pm,except by permit, excluding Sundays & Holidays; Along all residential uses =
+                  Resident Permit Parking Only, excluding Sundays &
+Harvard Street    Holidays 8am-8pm or with permit.                                                     Resident       G
+Henry Street                                                                                              Resident
+Higgins Avenue                                                                                            Resident
+Hillsdale Road                                                                                            Resident
+Hillside Avenue                                                                                           Resident
+Hinsdale Street                                                                                           Resident    G
+Holton Street     Sharon Street to Boston Avenue                                                          Resident
+Holton Street     Boston Avenue to Bower Street: 7am - 12pm Monday - Friday. Holidays excluded            Resident
+Hume Avenue                                                                                               Resident    G
+Hunewell Avenue                                                                                           Resident
+Irving Street                                                                                             Resident
+Johnson Avenue    7am - 12pm Monday - Friday, Holidays excluded                                           Resident
+Joseph Street                                                                                             Resident
+Kilsyth Road                                                                                              Resident    G
+Knollwood Road    Sundays & Holidays excluded                                                             Resident
+Lapham Street                                                                                             Resident
+Larkin Road       From Fellsway to end of Larkin                                                          Resident
+Leyden Street                                                                                             Resident
+Linden Street                                                                                             Resident
+                  RESIDENT PARKING: From Central Avenue westerly for a distance of 382 feet, 11 PM to 7
+Linwood Street    AM on both sides of street                                                              Resident
+Madison Street    7am - 12pm Monday - Friday, Holidays excluded                                           Resident
+Marine Street     One house only - 3 Marine Street                                                        Resident
+Marion Street                                                                                             Resident    G
+Marshall Street   Winthrop Street to Mason Street; Sundays and Holidays excluded                          Resident
+                  From Summer Street easterly for a distance of 580 feet, 11 PM to 7 AM both sides of
+Marston Street    street                                                                                  Resident
+Martin Street     24/6 Sundays excluded                                                                   Resident
+Mason Street                                                                                              Resident
+Mayberry Avenue   5pm - 8am                                                                               Resident
+Maynard Street    5pm - 9am                                                                               Resident
+                  Somerville/Medford city line to Main Street: Odd side only. Alongside non-residential
+                  uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays;
+                  Along all residential uses = Resident Permit Parking Only,                            Resident or
+Medford Street    excluding Sundays & Holidays8am-8pm or with permit.                                   Business      G
+Metcalf Street    Sunday and Holidays excluded                                                            Resident
+Monument Street   7am - 12pm Monday - Friday                                                              Resident
+                  Resident Parking full street with exception along the Park - 3 hour parking 8am-10pm
+Morton Avenue     Permit Parking 10PM - 8AM Sundays & holidays excluded.                               Resident       G
+Mystic Avenue     10pm-6am, excluding Sundays & Holidays                                               Resident
+Mystic Street     High Street to Wyman Avenue                                                             Resident
+Newbern Avenue                                                                                            Resident    G
+Newcomb Street                                                                                            Resident
+                  Boston Avenue to 120 North Street only. Two hour parking allowed Monday - Friday
+North Street      from Eastman Street to Boston Avenue                                                    Resident
+Oakland Street    8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded                       Resident
+Orchard Street                                                                                            Resident
+Pearl Street                                                                                              Resident    G
+Piggott Road
+Pinkham Rd.                                                                                               Resident
+Playstead Road      11pm - 7am                                                                            Resident
+Porter Road         In fron of 12, 14, & 16 Porter Road only                                              Resident
+                    Excluding businesses. Public Road Canal Street to Mystic Street: Pricate way Mystic
+Prescott Street     Street easterly                                                                       Resident
+Princeton Street                                                                                          Resident   G
+Quincy Street                                                                                             Resident
+Radcliffe Street    Bowdoin to Yale. Sundays & Holidays excluded                                          Resident   G
+Ravine Road         Sagamore Avenue to Mystic Valley Parkway: Memorial Day to Labor Day only              Resident
+Renfrew Street                                                                                            Resident   G
+Revere Place        Monday - Saturday                                                                     Resident
+Rice Avenue                                                                                               Resident
+Rockwell Avenue                                                                                           Resident
+
+
+Ross Street         Sundays excluded                                                                      Resident
+                    #6 - 31 Sagamore: 7am - 12pm Monday - Friday, Holidays excluded : PUBLIC High St to
+Sagamore Avenue     Ravine PRIVATE WAY Ravine to Mystic Valley Parkway                                  Resident
+Sagamore Park       7am - 12pm Monday - Friday, Holidays excluded                                       Resident
+Seventh Street      Private Way east of #21 to Craddock Avenue                                            Resident
+Shapley Avenue                                                                                            Resident
+Ship Avenue                                                                                               Resident
+Smith Street                                                                                              Resident
+Sprague Court                                                                                             Resident
+St. Clements Road   Permit parking in front of homes. Church services or permit only on church side       Resident   G
+St. Mary Street     Both sides enforced and permitted by Medford                                          Resident
+St. James Road      Fellsway to Riverside Avenue                                                          Resident
+Stanley Avenue                                                                                            Resident   G
+Stearns Avenue                                                                                            Resident   G
+Sterling Street                                                                                           Resident   G
+Stoughton Street                                                                                          Resident
+Strathmore Road                                                                                           Resident   G
+Sturges Street      Memorial Day to Labor Day only, Fulton St to Elm St                                   Resident
+                    From Gourley Road to Marston Street for a distance of 252 feet southeasterly, 11 PM
+Summer Street       to 7 AM both sides of street                                                          Resident
+Sunset Avenue       Sundays & Holidays excluded                                                           Resident   G
+Tainter Street      Everett Street to Fulton Street: 8pm - 8am                                            Resident
+Temple Street                                                                                             Resident
+Tesla Avenue                                                                                              Resident
+Thomas Street                                                                                             Resident
+Traincroft          Private Way from NW from 118 Traincroft to Badger RD                                  Resident
+Trout Avenue                                                                                              Resident
+Tyler Avenue        7am - 12pm Monday - Friday, Holidays excluded                                         Resident
+Usher Road          7am - 12pm Monday - Friday, Holidays excluded                                         Resident
+Vassar Street                                                                                             Resident   G
+Vine Street                                                                                               Resident
+Wareham Street      Sundays & Holidays excluded                                                           Resident   G
+Warner Street       24/7. Sundays excluded in front of 57, 63, and 71 Warner Street only.                 Resident   G
+Warren Street                                                                                             Resident
+Wedgemere Road      Sundays & Holidays excluded                                                           Resident
+Wellesley Street    Main Street to Dartmouth Street, 7pm - 7am                                            Resident   G
+Wellington Road                                                                                           Resident
+Wheeler Avenue                                                                                            Resident
+Whittemore Street                                                                                          Resident
+Willard Avenue      5pm - 8am, 24/7                                                                        Resident
+William Street                                                                                             Resident   G
+Willis Avenue       Golden Avenue to Harvard Street                                                        Resident
+                    Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit,
+                    excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking
+Winchester Street   Only, excluding Sundays & Holidays                                                     Resident   G
+Windsor Road                                                                                               Resident   G
+Winslow Avenue      From Fulton Street easterly for a distance of 500 feet 11PM to 7AM, both sides         Resident
+Winter Hill Road    Sundays & Holidays excluded                                                            Resident   G
+Winthrop Street     Tesla Avenue to Capen Street                                                           Resident   G
+Wolcott Street      #2 - 36 Wolcott Street only PRIVATE WAY Wyman St to Woburn St                          Resident
+Woodbine Road       Sundays & Holidays excluded                                                            Resident
+Woods Road          7am - 12pm Monday - Friday. Saturday, Sunday and Holidays excluded                     Resident
+Wright Avenue                                                                                              Resident
+Yale Street                                                                                                Resident   G
+Yeomans Avenue      11PM-7AM: both sides of street from Central Ave, easterly for a distance of 382 feet   Resident
+

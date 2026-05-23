@@ -1,0 +1,4959 @@
+{
+  "generated_at_utc": "2026-05-23T09:56:29.810820+00:00",
+  "municipality": "medford",
+  "source_id": "medford_resident_permit_streets_pdf",
+  "source_file": "data/raw/medford/resident-permit-parking-streets.pdf",
+  "parser_note": "First-pass text extraction from the Medford resident-permit PDF. Rows with partial_or_segment_specific scope must not be applied to an entire street.",
+  "row_count": 191,
+  "street_count": 181,
+  "rows": [
+    {
+      "street_name": "Abbott Street",
+      "raw_text": "Abbott Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Adams Street",
+      "raw_text": "Adams Street Boston Avenue to Somerville Line Resident",
+      "restriction_text": "Boston Avenue to Somerville Line",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Albion Street",
+      "raw_text": "Albion Street #71 - 91 Resident G",
+      "restriction_text": "#71 - 91",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Albion Street",
+      "raw_text": "Albion Street Between Alfred St. and William St. Resident G",
+      "restriction_text": "Between Alfred St. and William St.",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Albion Street",
+      "raw_text": "Albion Street From William Street to Bow Street, Monday to Saturday; Sundays and Holidays excluded Resident G",
+      "restriction_text": "From William Street to Bow Street, Monday to Saturday; Sundays and Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Alexander Avenue",
+      "raw_text": "Alexander Avenue Pierce Avenue to Mystic Avenue: in front of homes only, 107-135 Resident",
+      "restriction_text": "Pierce Avenue to Mystic Avenue: in front of homes only, 107-135",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Alexander Avenue",
+      "raw_text": "Alexander Avenue Willis Ave to Pierce Ave 5PM-8AM, Mon-Fri; Sat, Sun & Holidays excluded Resident",
+      "restriction_text": "Willis Ave to Pierce Ave 5PM-8AM, Mon-Fri; Sat, Sun & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Alexander Avenue",
+      "raw_text": "Alexander Avenue North side from Mystic Ave. to Pierce Ave. Resident or Business",
+      "restriction_text": "North side from Mystic Ave. to Pierce Ave.",
+      "permit_type": "Resident or Business",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Alfred Street",
+      "raw_text": "Alfred Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Alfred Terrace",
+      "raw_text": "Alfred Terrace Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Allston Street",
+      "raw_text": "Allston Street High Street to Prescott Street Resident",
+      "restriction_text": "High Street to Prescott Street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Amaranth Avenue",
+      "raw_text": "Amaranth Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Arlington Street",
+      "raw_text": "Arlington Street From Monument Street to Boston Avenue Resident",
+      "restriction_text": "From Monument Street to Boston Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Ashland Street",
+      "raw_text": "Ashland Street West side of street only Resident",
+      "restriction_text": "West side of street only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bellevue Street",
+      "raw_text": "Bellevue Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Benham Street",
+      "raw_text": "Benham Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bennett Street",
+      "raw_text": "Bennett Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Benton Road",
+      "raw_text": "Benton Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Berwick Road",
+      "raw_text": "Berwick Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Billings Avenue",
+      "raw_text": "Billings Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bonner Avenue",
+      "raw_text": "Bonner Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bonner Avenue",
+      "raw_text": "Bonner Avenue South side from Pierce Avenue to Mystic Venue Resident or Business",
+      "restriction_text": "South side from Pierce Avenue to Mystic Venue",
+      "permit_type": "Resident or Business",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bonner Avenue",
+      "raw_text": "Bonner Avenue North side, from 40' W of Mystic Ave., extending 140' westerly Resident or Business",
+      "restriction_text": "North side, from 40' W of Mystic Ave., extending 140' westerly",
+      "permit_type": "Resident or Business",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Boston Avenue",
+      "raw_text": "Boston Avenue High Street to Harvard Avenue: 7am - 11am Monday - Friday; Resident",
+      "restriction_text": "High Street to Harvard Avenue: 7am - 11am Monday - Friday;",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Boston Avenue",
+      "raw_text": "Boston Avenue #61 - 86: 7am - 11am Monday - Friday Resident",
+      "restriction_text": "#61 - 86: 7am - 11am Monday - Friday",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Boston Avenue",
+      "raw_text": "Boston Avenue Somerville/Medford city line to Winthrop Street; Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays Resident or Business G",
+      "restriction_text": "Somerville/Medford city line to Winthrop Street; Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays",
+      "permit_type": "Resident or Business",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bow Street",
+      "raw_text": "Bow Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bowdoin Street",
+      "raw_text": "Bowdoin Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bowen Avenue",
+      "raw_text": "Bowen Avenue Main Street to Mystic Avenue Resident",
+      "restriction_text": "Main Street to Mystic Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bower Street",
+      "raw_text": "Bower Street 7am - 12pm Monday - Friday Resident",
+      "restriction_text": "7am - 12pm Monday - Friday",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Boynton Road",
+      "raw_text": "Boynton Road Lower End Monday - Friday Resident",
+      "restriction_text": "Lower End Monday - Friday",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Brackett Street",
+      "raw_text": "Brackett Street Memorial Day to Labor Day only Resident",
+      "restriction_text": "Memorial Day to Labor Day only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bradford Avenue",
+      "raw_text": "Bradford Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Braemore Road",
+      "raw_text": "Braemore Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Bristol Road",
+      "raw_text": "Bristol Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Brookings Street",
+      "raw_text": "Brookings Street George Street to Railroad Tracks: 7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded Resident G",
+      "restriction_text": "George Street to Railroad Tracks: 7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Brooks Street",
+      "raw_text": "Brooks Street High Street to Irving Street: 7am - 12pm Monday - Friday, Holidays Excluded Resident",
+      "restriction_text": "High Street to Irving Street: 7am - 12pm Monday - Friday, Holidays Excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Burget Avenue",
+      "raw_text": "Burget Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Canal Street",
+      "raw_text": "Canal Street #15 to Railroad Tracks: 7am - 7pm Resident",
+      "restriction_text": "#15 to Railroad Tracks: 7am - 7pm",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Capen Street",
+      "raw_text": "Capen Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Carolina Street",
+      "raw_text": "Carolina Street Riverside Avenue to Cushing Street intersection (approx. around #39 Carolina Street) Resident",
+      "restriction_text": "Riverside Avenue to Cushing Street intersection (approx. around #39 Carolina Street)",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Cedar Cliff Terrace",
+      "raw_text": "Cedar Cliff Terrace 11 PM to 7 AM Resident",
+      "restriction_text": "11 PM to 7 AM",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Central Avenue",
+      "raw_text": "Central Avenue From Yeomans Avenue to Linwood Street northerly for a distance of 393 feet 11PM to 7AM both sides of street Resident",
+      "restriction_text": "From Yeomans Avenue to Linwood Street northerly for a distance of 393 feet 11PM to 7AM both sides of street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Charlton Street",
+      "raw_text": "Charlton Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Charnwood Road",
+      "raw_text": "Charnwood Road 7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded Resident G",
+      "restriction_text": "7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Cherry Street",
+      "raw_text": "Cherry Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Chester Avenue",
+      "raw_text": "Chester Avenue Sundays & holidays excluded Resident G",
+      "restriction_text": "Sundays & holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Circuit Street",
+      "raw_text": "Circuit Street 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Clayton Avenue",
+      "raw_text": "Clayton Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Colby Street",
+      "raw_text": "Colby Street Sundays & Holidays excluded Resident G",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "College Avenue",
+      "raw_text": "College Avenue Boston Avenue to George Street Resident G",
+      "restriction_text": "Boston Avenue to George Street",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Cottage Street",
+      "raw_text": "Cottage Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Dartmouth Street",
+      "raw_text": "Dartmouth Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Dearborn Street",
+      "raw_text": "Dearborn Street Sunday and Holidays excluded Resident",
+      "restriction_text": "Sunday and Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Dexter Street",
+      "raw_text": "Dexter Street Bow Street to Broadway, in front of homes only Resident",
+      "restriction_text": "Bow Street to Broadway, in front of homes only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Edward Street",
+      "raw_text": "Edward Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Ellis Avenue",
+      "raw_text": "Ellis Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Emerson Street",
+      "raw_text": "Emerson Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Emery Street",
+      "raw_text": "Emery Street Winthrop Street to Hillsdale Road Resident",
+      "restriction_text": "Winthrop Street to Hillsdale Road",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Everett Street",
+      "raw_text": "Everett Street 24/7 Resident",
+      "restriction_text": "24/7",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Fairmount Street",
+      "raw_text": "Fairmount Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Forest Street",
+      "raw_text": "Forest Street Two hour or permit parking from north driveway of Schoolhouse Condos to Hall Avenue Resident",
+      "restriction_text": "Two hour or permit parking from north driveway of Schoolhouse Condos to Hall Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Franklin Street",
+      "raw_text": "Franklin Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Frederick Avenue",
+      "raw_text": "Frederick Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Frye Road",
+      "raw_text": "Frye Road Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Garden Street",
+      "raw_text": "Garden Street 8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded Resident",
+      "restriction_text": "8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Gaston Street",
+      "raw_text": "Gaston Street Memorial Day to Labor Day only; #56 and up. Public Street from Taft Street to Fulton St ONLY Resident",
+      "restriction_text": "Memorial Day to Labor Day only; #56 and up. Public Street from Taft Street to Fulton St ONLY",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "George Street",
+      "raw_text": "George Street Main Street to College Avenue: 6am - 6pm (odd side) Resident",
+      "restriction_text": "Main Street to College Avenue: 6am - 6pm (odd side)",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "George Street",
+      "raw_text": "George Street Spencer Road/Clark Street to Winthrop Street Resident",
+      "restriction_text": "Spencer Road/Clark Street to Winthrop Street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Glenwood Avenue",
+      "raw_text": "Glenwood Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Golden Avenue",
+      "raw_text": "Golden Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Goldsmith Avenue",
+      "raw_text": "Goldsmith Avenue Monday - Friday only Resident",
+      "restriction_text": "Monday - Friday only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Gorham Road",
+      "raw_text": "Gorham Road 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Gourley Road",
+      "raw_text": "Gourley Road Resident parking full street with exception along the park- 3 hour parking 8am-10pm. Permit parking 10pm-8am Sundays & holidays excluded Resident",
+      "restriction_text": "Resident parking full street with exception along the park- 3 hour parking 8am-10pm. Permit parking 10pm-8am Sundays & holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Governors Avenue",
+      "raw_text": "Governors Avenue Lawrence Road to South Border Road Resident",
+      "restriction_text": "Lawrence Road to South Border Road",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Grandview Avenue",
+      "raw_text": "Grandview Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Grant Avenue",
+      "raw_text": "Grant Avenue 24/7 On Grant Ave from Salem Street to Hooker Street Resident",
+      "restriction_text": "24/7 On Grant Ave from Salem Street to Hooker Street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Granville Avenue",
+      "raw_text": "Granville Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Greenleaf Avenue",
+      "raw_text": "Greenleaf Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hadley Place",
+      "raw_text": "Hadley Place Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Haines Street",
+      "raw_text": "Haines Street Memorial Day to Labor Day only Resident",
+      "restriction_text": "Memorial Day to Labor Day only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hale Avenue",
+      "raw_text": "Hale Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hamilton Street",
+      "raw_text": "Hamilton Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hancock Avenue",
+      "raw_text": "Hancock Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Harold Street",
+      "raw_text": "Harold Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Harris Road",
+      "raw_text": "Harris Road Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Harvard Avenue",
+      "raw_text": "Harvard Avenue From Bower St. to Boston Ave Resident",
+      "restriction_text": "From Bower St. to Boston Ave",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Harvard Street",
+      "raw_text": "Harvard Street Main Street to Winchester Street; Alongside nonresidential uses = 2 hour parking, 8am-8pm,except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays 8am-8pm or with permit. Resident G",
+      "restriction_text": "Main Street to Winchester Street; Alongside nonresidential uses = 2 hour parking, 8am-8pm,except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays 8am-8pm or with permit.",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Henry Street",
+      "raw_text": "Henry Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Higgins Avenue",
+      "raw_text": "Higgins Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hillsdale Road",
+      "raw_text": "Hillsdale Road Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hillside Avenue",
+      "raw_text": "Hillside Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hinsdale Street",
+      "raw_text": "Hinsdale Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Holton Street",
+      "raw_text": "Holton Street Sharon Street to Boston Avenue Resident",
+      "restriction_text": "Sharon Street to Boston Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Holton Street",
+      "raw_text": "Holton Street Boston Avenue to Bower Street: 7am - 12pm Monday - Friday. Holidays excluded Resident",
+      "restriction_text": "Boston Avenue to Bower Street: 7am - 12pm Monday - Friday. Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hume Avenue",
+      "raw_text": "Hume Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Hunewell Avenue",
+      "raw_text": "Hunewell Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Irving Street",
+      "raw_text": "Irving Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Johnson Avenue",
+      "raw_text": "Johnson Avenue 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Joseph Street",
+      "raw_text": "Joseph Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Kilsyth Road",
+      "raw_text": "Kilsyth Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Knollwood Road",
+      "raw_text": "Knollwood Road Sundays & Holidays excluded Resident",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Lapham Street",
+      "raw_text": "Lapham Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Larkin Road",
+      "raw_text": "Larkin Road From Fellsway to end of Larkin Resident",
+      "restriction_text": "From Fellsway to end of Larkin",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Leyden Street",
+      "raw_text": "Leyden Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Linden Street",
+      "raw_text": "Linden Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Linwood Street",
+      "raw_text": "Linwood Street RESIDENT PARKING: From Central Avenue westerly for a distance of 382 feet, 11 PM to 7 AM on both sides of street Resident",
+      "restriction_text": "RESIDENT PARKING: From Central Avenue westerly for a distance of 382 feet, 11 PM to 7 AM on both sides of street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Madison Street",
+      "raw_text": "Madison Street 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Marine Street",
+      "raw_text": "Marine Street One house only - 3 Marine Street Resident",
+      "restriction_text": "One house only - 3 Marine Street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Marion Street",
+      "raw_text": "Marion Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Marshall Street",
+      "raw_text": "Marshall Street Winthrop Street to Mason Street; Sundays and Holidays excluded Resident",
+      "restriction_text": "Winthrop Street to Mason Street; Sundays and Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Marston Street",
+      "raw_text": "Marston Street From Summer Street easterly for a distance of 580 feet, 11 PM to 7 AM both sides of street Resident",
+      "restriction_text": "From Summer Street easterly for a distance of 580 feet, 11 PM to 7 AM both sides of street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Martin Street",
+      "raw_text": "Martin Street 24/6 Sundays excluded Resident",
+      "restriction_text": "24/6 Sundays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Mason Street",
+      "raw_text": "Mason Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Mayberry Avenue",
+      "raw_text": "Mayberry Avenue 5pm - 8am Resident",
+      "restriction_text": "5pm - 8am",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Maynard Street",
+      "raw_text": "Maynard Street 5pm - 9am Resident",
+      "restriction_text": "5pm - 9am",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Medford Street",
+      "raw_text": "Medford Street Somerville/Medford city line to Main Street: Odd side only. Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays8am-8pm or with permit. Resident or Business G",
+      "restriction_text": "Somerville/Medford city line to Main Street: Odd side only. Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays8am-8pm or with permit.",
+      "permit_type": "Resident or Business",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Metcalf Street",
+      "raw_text": "Metcalf Street Sunday and Holidays excluded Resident",
+      "restriction_text": "Sunday and Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Monument Street",
+      "raw_text": "Monument Street 7am - 12pm Monday - Friday Resident",
+      "restriction_text": "7am - 12pm Monday - Friday",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Morton Avenue",
+      "raw_text": "Morton Avenue Resident Parking full street with exception along the Park - 3 hour parking 8am-10pm Permit Parking 10PM - 8AM Sundays & holidays excluded. Resident G",
+      "restriction_text": "Resident Parking full street with exception along the Park - 3 hour parking 8am-10pm Permit Parking 10PM - 8AM Sundays & holidays excluded.",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Mystic Avenue",
+      "raw_text": "Mystic Avenue 10pm-6am, excluding Sundays & Holidays Resident",
+      "restriction_text": "10pm-6am, excluding Sundays & Holidays",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Mystic Street",
+      "raw_text": "Mystic Street High Street to Wyman Avenue Resident",
+      "restriction_text": "High Street to Wyman Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Newbern Avenue",
+      "raw_text": "Newbern Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Newcomb Street",
+      "raw_text": "Newcomb Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "North Street",
+      "raw_text": "North Street Boston Avenue to 120 North Street only. Two hour parking allowed Monday - Friday from Eastman Street to Boston Avenue Resident",
+      "restriction_text": "Boston Avenue to 120 North Street only. Two hour parking allowed Monday - Friday from Eastman Street to Boston Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Oakland Street",
+      "raw_text": "Oakland Street 8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded Resident",
+      "restriction_text": "8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Orchard Street",
+      "raw_text": "Orchard Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Pearl Street",
+      "raw_text": "Pearl Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Piggott Road",
+      "raw_text": "Piggott Road",
+      "restriction_text": "",
+      "permit_type": null,
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Pinkham Rd.",
+      "raw_text": "Pinkham Rd. Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Playstead Road",
+      "raw_text": "Playstead Road 11pm - 7am Resident",
+      "restriction_text": "11pm - 7am",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Porter Road",
+      "raw_text": "Porter Road In fron of 12, 14, & 16 Porter Road only Resident",
+      "restriction_text": "In fron of 12, 14, & 16 Porter Road only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Prescott Street",
+      "raw_text": "Prescott Street Excluding businesses. Public Road Canal Street to Mystic Street: Pricate way Mystic Street easterly Resident",
+      "restriction_text": "Excluding businesses. Public Road Canal Street to Mystic Street: Pricate way Mystic Street easterly",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Princeton Street",
+      "raw_text": "Princeton Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Quincy Street",
+      "raw_text": "Quincy Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Radcliffe Street",
+      "raw_text": "Radcliffe Street Bowdoin to Yale. Sundays & Holidays excluded Resident G",
+      "restriction_text": "Bowdoin to Yale. Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Ravine Road",
+      "raw_text": "Ravine Road Sagamore Avenue to Mystic Valley Parkway: Memorial Day to Labor Day only Resident",
+      "restriction_text": "Sagamore Avenue to Mystic Valley Parkway: Memorial Day to Labor Day only",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Renfrew Street",
+      "raw_text": "Renfrew Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Revere Place",
+      "raw_text": "Revere Place Monday - Saturday Resident",
+      "restriction_text": "Monday - Saturday",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Rice Avenue",
+      "raw_text": "Rice Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Rockwell Avenue",
+      "raw_text": "Rockwell Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Ross Street",
+      "raw_text": "Ross Street Sundays excluded Resident",
+      "restriction_text": "Sundays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Sagamore Avenue",
+      "raw_text": "Sagamore Avenue #6 - 31 Sagamore: 7am - 12pm Monday - Friday, Holidays excluded : PUBLIC High St to Ravine PRIVATE WAY Ravine to Mystic Valley Parkway Resident",
+      "restriction_text": "#6 - 31 Sagamore: 7am - 12pm Monday - Friday, Holidays excluded : PUBLIC High St to Ravine PRIVATE WAY Ravine to Mystic Valley Parkway",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Sagamore Park",
+      "raw_text": "Sagamore Park 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Seventh Street",
+      "raw_text": "Seventh Street Private Way east of #21 to Craddock Avenue Resident",
+      "restriction_text": "Private Way east of #21 to Craddock Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Shapley Avenue",
+      "raw_text": "Shapley Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Ship Avenue",
+      "raw_text": "Ship Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Smith Street",
+      "raw_text": "Smith Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Sprague Court",
+      "raw_text": "Sprague Court Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "St. Clements Road",
+      "raw_text": "St. Clements Road Permit parking in front of homes. Church services or permit only on church side Resident G",
+      "restriction_text": "Permit parking in front of homes. Church services or permit only on church side",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "St. Mary Street",
+      "raw_text": "St. Mary Street Both sides enforced and permitted by Medford Resident",
+      "restriction_text": "Both sides enforced and permitted by Medford",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "St. James Road",
+      "raw_text": "St. James Road Fellsway to Riverside Avenue Resident",
+      "restriction_text": "Fellsway to Riverside Avenue",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Stanley Avenue",
+      "raw_text": "Stanley Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Stearns Avenue",
+      "raw_text": "Stearns Avenue Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Sterling Street",
+      "raw_text": "Sterling Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Stoughton Street",
+      "raw_text": "Stoughton Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Strathmore Road",
+      "raw_text": "Strathmore Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Sturges Street",
+      "raw_text": "Sturges Street Memorial Day to Labor Day only, Fulton St to Elm St Resident",
+      "restriction_text": "Memorial Day to Labor Day only, Fulton St to Elm St",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Summer Street",
+      "raw_text": "Summer Street From Gourley Road to Marston Street for a distance of 252 feet southeasterly, 11 PM to 7 AM both sides of street Resident",
+      "restriction_text": "From Gourley Road to Marston Street for a distance of 252 feet southeasterly, 11 PM to 7 AM both sides of street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Sunset Avenue",
+      "raw_text": "Sunset Avenue Sundays & Holidays excluded Resident G",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Tainter Street",
+      "raw_text": "Tainter Street Everett Street to Fulton Street: 8pm - 8am Resident",
+      "restriction_text": "Everett Street to Fulton Street: 8pm - 8am",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Temple Street",
+      "raw_text": "Temple Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Tesla Avenue",
+      "raw_text": "Tesla Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Thomas Street",
+      "raw_text": "Thomas Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Trout Avenue",
+      "raw_text": "Trout Avenue Traincroft Private Way from NW from 118 Traincroft to Badger RD Resident Resident",
+      "restriction_text": "Traincroft Private Way from NW from 118 Traincroft to Badger RD",
+      "permit_type": "Resident Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Tyler Avenue",
+      "raw_text": "Tyler Avenue 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Usher Road",
+      "raw_text": "Usher Road 7am - 12pm Monday - Friday, Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Vassar Street",
+      "raw_text": "Vassar Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Vine Street",
+      "raw_text": "Vine Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wareham Street",
+      "raw_text": "Wareham Street Sundays & Holidays excluded Resident G",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Warner Street",
+      "raw_text": "Warner Street 24/7. Sundays excluded in front of 57, 63, and 71 Warner Street only. Resident G",
+      "restriction_text": "24/7. Sundays excluded in front of 57, 63, and 71 Warner Street only.",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Warren Street",
+      "raw_text": "Warren Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wedgemere Road",
+      "raw_text": "Wedgemere Road Sundays & Holidays excluded Resident",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wellesley Street",
+      "raw_text": "Wellesley Street Main Street to Dartmouth Street, 7pm - 7am Resident G",
+      "restriction_text": "Main Street to Dartmouth Street, 7pm - 7am",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wellington Road",
+      "raw_text": "Wellington Road Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wheeler Avenue",
+      "raw_text": "Wheeler Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Whittemore Street",
+      "raw_text": "Whittemore Street Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Willard Avenue",
+      "raw_text": "Willard Avenue 5pm - 8am, 24/7 Resident",
+      "restriction_text": "5pm - 8am, 24/7",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "William Street",
+      "raw_text": "William Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Willis Avenue",
+      "raw_text": "Willis Avenue Golden Avenue to Harvard Street Resident",
+      "restriction_text": "Golden Avenue to Harvard Street",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Winchester Street",
+      "raw_text": "Winchester Street Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays Resident G",
+      "restriction_text": "Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Windsor Road",
+      "raw_text": "Windsor Road Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Winslow Avenue",
+      "raw_text": "Winslow Avenue From Fulton Street easterly for a distance of 500 feet 11PM to 7AM, both sides Resident",
+      "restriction_text": "From Fulton Street easterly for a distance of 500 feet 11PM to 7AM, both sides",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Winter Hill Road",
+      "raw_text": "Winter Hill Road Sundays & Holidays excluded Resident G",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Winthrop Street",
+      "raw_text": "Winthrop Street Tesla Avenue to Capen Street Resident G",
+      "restriction_text": "Tesla Avenue to Capen Street",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wolcott Street",
+      "raw_text": "Wolcott Street #2 - 36 Wolcott Street only PRIVATE WAY Wyman St to Woburn St Resident",
+      "restriction_text": "#2 - 36 Wolcott Street only PRIVATE WAY Wyman St to Woburn St",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Woodbine Road",
+      "raw_text": "Woodbine Road Sundays & Holidays excluded Resident",
+      "restriction_text": "Sundays & Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Woods Road",
+      "raw_text": "Woods Road 7am - 12pm Monday - Friday. Saturday, Sunday and Holidays excluded Resident",
+      "restriction_text": "7am - 12pm Monday - Friday. Saturday, Sunday and Holidays excluded",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Wright Avenue",
+      "raw_text": "Wright Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Yale Street",
+      "raw_text": "Yale Street Resident G",
+      "restriction_text": "",
+      "permit_type": "Resident",
+      "zone": "G",
+      "has_segment_clues": false,
+      "has_time_clues": false,
+      "scope": "likely_full_street",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Yeomans Avenue",
+      "raw_text": "Yeomans Avenue 11PM-7AM: both sides of street from Central Ave, easterly for a distance of 382 feet Resident",
+      "restriction_text": "11PM-7AM: both sides of street from Central Ave, easterly for a distance of 382 feet",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": true,
+      "scope": "partial_or_segment_specific",
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    }
+  ],
+  "streets": {
+    "ABBOTT STREET": [
+      {
+        "street_name": "Abbott Street",
+        "raw_text": "Abbott Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ADAMS STREET": [
+      {
+        "street_name": "Adams Street",
+        "raw_text": "Adams Street Boston Avenue to Somerville Line Resident",
+        "restriction_text": "Boston Avenue to Somerville Line",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ALBION STREET": [
+      {
+        "street_name": "Albion Street",
+        "raw_text": "Albion Street #71 - 91 Resident G",
+        "restriction_text": "#71 - 91",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Albion Street",
+        "raw_text": "Albion Street Between Alfred St. and William St. Resident G",
+        "restriction_text": "Between Alfred St. and William St.",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Albion Street",
+        "raw_text": "Albion Street From William Street to Bow Street, Monday to Saturday; Sundays and Holidays excluded Resident G",
+        "restriction_text": "From William Street to Bow Street, Monday to Saturday; Sundays and Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ALEXANDER AVENUE": [
+      {
+        "street_name": "Alexander Avenue",
+        "raw_text": "Alexander Avenue Pierce Avenue to Mystic Avenue: in front of homes only, 107-135 Resident",
+        "restriction_text": "Pierce Avenue to Mystic Avenue: in front of homes only, 107-135",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Alexander Avenue",
+        "raw_text": "Alexander Avenue Willis Ave to Pierce Ave 5PM-8AM, Mon-Fri; Sat, Sun & Holidays excluded Resident",
+        "restriction_text": "Willis Ave to Pierce Ave 5PM-8AM, Mon-Fri; Sat, Sun & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Alexander Avenue",
+        "raw_text": "Alexander Avenue North side from Mystic Ave. to Pierce Ave. Resident or Business",
+        "restriction_text": "North side from Mystic Ave. to Pierce Ave.",
+        "permit_type": "Resident or Business",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ALFRED STREET": [
+      {
+        "street_name": "Alfred Street",
+        "raw_text": "Alfred Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ALFRED TERRACE": [
+      {
+        "street_name": "Alfred Terrace",
+        "raw_text": "Alfred Terrace Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ALLSTON STREET": [
+      {
+        "street_name": "Allston Street",
+        "raw_text": "Allston Street High Street to Prescott Street Resident",
+        "restriction_text": "High Street to Prescott Street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "AMARANTH AVENUE": [
+      {
+        "street_name": "Amaranth Avenue",
+        "raw_text": "Amaranth Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ARLINGTON STREET": [
+      {
+        "street_name": "Arlington Street",
+        "raw_text": "Arlington Street From Monument Street to Boston Avenue Resident",
+        "restriction_text": "From Monument Street to Boston Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ASHLAND STREET": [
+      {
+        "street_name": "Ashland Street",
+        "raw_text": "Ashland Street West side of street only Resident",
+        "restriction_text": "West side of street only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BELLEVUE STREET": [
+      {
+        "street_name": "Bellevue Street",
+        "raw_text": "Bellevue Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BENHAM STREET": [
+      {
+        "street_name": "Benham Street",
+        "raw_text": "Benham Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BENNETT STREET": [
+      {
+        "street_name": "Bennett Street",
+        "raw_text": "Bennett Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BENTON ROAD": [
+      {
+        "street_name": "Benton Road",
+        "raw_text": "Benton Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BERWICK ROAD": [
+      {
+        "street_name": "Berwick Road",
+        "raw_text": "Berwick Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BILLINGS AVENUE": [
+      {
+        "street_name": "Billings Avenue",
+        "raw_text": "Billings Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BONNER AVENUE": [
+      {
+        "street_name": "Bonner Avenue",
+        "raw_text": "Bonner Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Bonner Avenue",
+        "raw_text": "Bonner Avenue South side from Pierce Avenue to Mystic Venue Resident or Business",
+        "restriction_text": "South side from Pierce Avenue to Mystic Venue",
+        "permit_type": "Resident or Business",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Bonner Avenue",
+        "raw_text": "Bonner Avenue North side, from 40' W of Mystic Ave., extending 140' westerly Resident or Business",
+        "restriction_text": "North side, from 40' W of Mystic Ave., extending 140' westerly",
+        "permit_type": "Resident or Business",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BOSTON AVENUE": [
+      {
+        "street_name": "Boston Avenue",
+        "raw_text": "Boston Avenue High Street to Harvard Avenue: 7am - 11am Monday - Friday; Resident",
+        "restriction_text": "High Street to Harvard Avenue: 7am - 11am Monday - Friday;",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Boston Avenue",
+        "raw_text": "Boston Avenue #61 - 86: 7am - 11am Monday - Friday Resident",
+        "restriction_text": "#61 - 86: 7am - 11am Monday - Friday",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Boston Avenue",
+        "raw_text": "Boston Avenue Somerville/Medford city line to Winthrop Street; Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays Resident or Business G",
+        "restriction_text": "Somerville/Medford city line to Winthrop Street; Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays",
+        "permit_type": "Resident or Business",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BOW STREET": [
+      {
+        "street_name": "Bow Street",
+        "raw_text": "Bow Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BOWDOIN STREET": [
+      {
+        "street_name": "Bowdoin Street",
+        "raw_text": "Bowdoin Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BOWEN AVENUE": [
+      {
+        "street_name": "Bowen Avenue",
+        "raw_text": "Bowen Avenue Main Street to Mystic Avenue Resident",
+        "restriction_text": "Main Street to Mystic Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BOWER STREET": [
+      {
+        "street_name": "Bower Street",
+        "raw_text": "Bower Street 7am - 12pm Monday - Friday Resident",
+        "restriction_text": "7am - 12pm Monday - Friday",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BOYNTON ROAD": [
+      {
+        "street_name": "Boynton Road",
+        "raw_text": "Boynton Road Lower End Monday - Friday Resident",
+        "restriction_text": "Lower End Monday - Friday",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BRACKETT STREET": [
+      {
+        "street_name": "Brackett Street",
+        "raw_text": "Brackett Street Memorial Day to Labor Day only Resident",
+        "restriction_text": "Memorial Day to Labor Day only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BRADFORD AVENUE": [
+      {
+        "street_name": "Bradford Avenue",
+        "raw_text": "Bradford Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BRAEMORE ROAD": [
+      {
+        "street_name": "Braemore Road",
+        "raw_text": "Braemore Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BRISTOL ROAD": [
+      {
+        "street_name": "Bristol Road",
+        "raw_text": "Bristol Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BROOKINGS STREET": [
+      {
+        "street_name": "Brookings Street",
+        "raw_text": "Brookings Street George Street to Railroad Tracks: 7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded Resident G",
+        "restriction_text": "George Street to Railroad Tracks: 7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BROOKS STREET": [
+      {
+        "street_name": "Brooks Street",
+        "raw_text": "Brooks Street High Street to Irving Street: 7am - 12pm Monday - Friday, Holidays Excluded Resident",
+        "restriction_text": "High Street to Irving Street: 7am - 12pm Monday - Friday, Holidays Excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "BURGET AVENUE": [
+      {
+        "street_name": "Burget Avenue",
+        "raw_text": "Burget Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CANAL STREET": [
+      {
+        "street_name": "Canal Street",
+        "raw_text": "Canal Street #15 to Railroad Tracks: 7am - 7pm Resident",
+        "restriction_text": "#15 to Railroad Tracks: 7am - 7pm",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CAPEN STREET": [
+      {
+        "street_name": "Capen Street",
+        "raw_text": "Capen Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CAROLINA STREET": [
+      {
+        "street_name": "Carolina Street",
+        "raw_text": "Carolina Street Riverside Avenue to Cushing Street intersection (approx. around #39 Carolina Street) Resident",
+        "restriction_text": "Riverside Avenue to Cushing Street intersection (approx. around #39 Carolina Street)",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CEDAR CLIFF TERRACE": [
+      {
+        "street_name": "Cedar Cliff Terrace",
+        "raw_text": "Cedar Cliff Terrace 11 PM to 7 AM Resident",
+        "restriction_text": "11 PM to 7 AM",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CENTRAL AVENUE": [
+      {
+        "street_name": "Central Avenue",
+        "raw_text": "Central Avenue From Yeomans Avenue to Linwood Street northerly for a distance of 393 feet 11PM to 7AM both sides of street Resident",
+        "restriction_text": "From Yeomans Avenue to Linwood Street northerly for a distance of 393 feet 11PM to 7AM both sides of street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CHARLTON STREET": [
+      {
+        "street_name": "Charlton Street",
+        "raw_text": "Charlton Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CHARNWOOD ROAD": [
+      {
+        "street_name": "Charnwood Road",
+        "raw_text": "Charnwood Road 7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded Resident G",
+        "restriction_text": "7am - 7pm Monday - Friday. Saturday, Sunday & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CHERRY STREET": [
+      {
+        "street_name": "Cherry Street",
+        "raw_text": "Cherry Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CHESTER AVENUE": [
+      {
+        "street_name": "Chester Avenue",
+        "raw_text": "Chester Avenue Sundays & holidays excluded Resident G",
+        "restriction_text": "Sundays & holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CIRCUIT STREET": [
+      {
+        "street_name": "Circuit Street",
+        "raw_text": "Circuit Street 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "CLAYTON AVENUE": [
+      {
+        "street_name": "Clayton Avenue",
+        "raw_text": "Clayton Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "COLBY STREET": [
+      {
+        "street_name": "Colby Street",
+        "raw_text": "Colby Street Sundays & Holidays excluded Resident G",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "COLLEGE AVENUE": [
+      {
+        "street_name": "College Avenue",
+        "raw_text": "College Avenue Boston Avenue to George Street Resident G",
+        "restriction_text": "Boston Avenue to George Street",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "COTTAGE STREET": [
+      {
+        "street_name": "Cottage Street",
+        "raw_text": "Cottage Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "DARTMOUTH STREET": [
+      {
+        "street_name": "Dartmouth Street",
+        "raw_text": "Dartmouth Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "DEARBORN STREET": [
+      {
+        "street_name": "Dearborn Street",
+        "raw_text": "Dearborn Street Sunday and Holidays excluded Resident",
+        "restriction_text": "Sunday and Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "DEXTER STREET": [
+      {
+        "street_name": "Dexter Street",
+        "raw_text": "Dexter Street Bow Street to Broadway, in front of homes only Resident",
+        "restriction_text": "Bow Street to Broadway, in front of homes only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "EDWARD STREET": [
+      {
+        "street_name": "Edward Street",
+        "raw_text": "Edward Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ELLIS AVENUE": [
+      {
+        "street_name": "Ellis Avenue",
+        "raw_text": "Ellis Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "EMERSON STREET": [
+      {
+        "street_name": "Emerson Street",
+        "raw_text": "Emerson Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "EMERY STREET": [
+      {
+        "street_name": "Emery Street",
+        "raw_text": "Emery Street Winthrop Street to Hillsdale Road Resident",
+        "restriction_text": "Winthrop Street to Hillsdale Road",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "EVERETT STREET": [
+      {
+        "street_name": "Everett Street",
+        "raw_text": "Everett Street 24/7 Resident",
+        "restriction_text": "24/7",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "FAIRMOUNT STREET": [
+      {
+        "street_name": "Fairmount Street",
+        "raw_text": "Fairmount Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "FOREST STREET": [
+      {
+        "street_name": "Forest Street",
+        "raw_text": "Forest Street Two hour or permit parking from north driveway of Schoolhouse Condos to Hall Avenue Resident",
+        "restriction_text": "Two hour or permit parking from north driveway of Schoolhouse Condos to Hall Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "FRANKLIN STREET": [
+      {
+        "street_name": "Franklin Street",
+        "raw_text": "Franklin Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "FREDERICK AVENUE": [
+      {
+        "street_name": "Frederick Avenue",
+        "raw_text": "Frederick Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "FRYE ROAD": [
+      {
+        "street_name": "Frye Road",
+        "raw_text": "Frye Road Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GARDEN STREET": [
+      {
+        "street_name": "Garden Street",
+        "raw_text": "Garden Street 8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded Resident",
+        "restriction_text": "8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GASTON STREET": [
+      {
+        "street_name": "Gaston Street",
+        "raw_text": "Gaston Street Memorial Day to Labor Day only; #56 and up. Public Street from Taft Street to Fulton St ONLY Resident",
+        "restriction_text": "Memorial Day to Labor Day only; #56 and up. Public Street from Taft Street to Fulton St ONLY",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GEORGE STREET": [
+      {
+        "street_name": "George Street",
+        "raw_text": "George Street Main Street to College Avenue: 6am - 6pm (odd side) Resident",
+        "restriction_text": "Main Street to College Avenue: 6am - 6pm (odd side)",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "George Street",
+        "raw_text": "George Street Spencer Road/Clark Street to Winthrop Street Resident",
+        "restriction_text": "Spencer Road/Clark Street to Winthrop Street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GLENWOOD AVENUE": [
+      {
+        "street_name": "Glenwood Avenue",
+        "raw_text": "Glenwood Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GOLDEN AVENUE": [
+      {
+        "street_name": "Golden Avenue",
+        "raw_text": "Golden Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GOLDSMITH AVENUE": [
+      {
+        "street_name": "Goldsmith Avenue",
+        "raw_text": "Goldsmith Avenue Monday - Friday only Resident",
+        "restriction_text": "Monday - Friday only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GORHAM ROAD": [
+      {
+        "street_name": "Gorham Road",
+        "raw_text": "Gorham Road 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GOURLEY ROAD": [
+      {
+        "street_name": "Gourley Road",
+        "raw_text": "Gourley Road Resident parking full street with exception along the park- 3 hour parking 8am-10pm. Permit parking 10pm-8am Sundays & holidays excluded Resident",
+        "restriction_text": "Resident parking full street with exception along the park- 3 hour parking 8am-10pm. Permit parking 10pm-8am Sundays & holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GOVERNORS AVENUE": [
+      {
+        "street_name": "Governors Avenue",
+        "raw_text": "Governors Avenue Lawrence Road to South Border Road Resident",
+        "restriction_text": "Lawrence Road to South Border Road",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GRANDVIEW AVENUE": [
+      {
+        "street_name": "Grandview Avenue",
+        "raw_text": "Grandview Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GRANT AVENUE": [
+      {
+        "street_name": "Grant Avenue",
+        "raw_text": "Grant Avenue 24/7 On Grant Ave from Salem Street to Hooker Street Resident",
+        "restriction_text": "24/7 On Grant Ave from Salem Street to Hooker Street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GRANVILLE AVENUE": [
+      {
+        "street_name": "Granville Avenue",
+        "raw_text": "Granville Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "GREENLEAF AVENUE": [
+      {
+        "street_name": "Greenleaf Avenue",
+        "raw_text": "Greenleaf Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HADLEY PLACE": [
+      {
+        "street_name": "Hadley Place",
+        "raw_text": "Hadley Place Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HAINES STREET": [
+      {
+        "street_name": "Haines Street",
+        "raw_text": "Haines Street Memorial Day to Labor Day only Resident",
+        "restriction_text": "Memorial Day to Labor Day only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HALE AVENUE": [
+      {
+        "street_name": "Hale Avenue",
+        "raw_text": "Hale Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HAMILTON STREET": [
+      {
+        "street_name": "Hamilton Street",
+        "raw_text": "Hamilton Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HANCOCK AVENUE": [
+      {
+        "street_name": "Hancock Avenue",
+        "raw_text": "Hancock Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HAROLD STREET": [
+      {
+        "street_name": "Harold Street",
+        "raw_text": "Harold Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HARRIS ROAD": [
+      {
+        "street_name": "Harris Road",
+        "raw_text": "Harris Road Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HARVARD AVENUE": [
+      {
+        "street_name": "Harvard Avenue",
+        "raw_text": "Harvard Avenue From Bower St. to Boston Ave Resident",
+        "restriction_text": "From Bower St. to Boston Ave",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HARVARD STREET": [
+      {
+        "street_name": "Harvard Street",
+        "raw_text": "Harvard Street Main Street to Winchester Street; Alongside nonresidential uses = 2 hour parking, 8am-8pm,except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays 8am-8pm or with permit. Resident G",
+        "restriction_text": "Main Street to Winchester Street; Alongside nonresidential uses = 2 hour parking, 8am-8pm,except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays 8am-8pm or with permit.",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HENRY STREET": [
+      {
+        "street_name": "Henry Street",
+        "raw_text": "Henry Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HIGGINS AVENUE": [
+      {
+        "street_name": "Higgins Avenue",
+        "raw_text": "Higgins Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HILLSDALE ROAD": [
+      {
+        "street_name": "Hillsdale Road",
+        "raw_text": "Hillsdale Road Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HILLSIDE AVENUE": [
+      {
+        "street_name": "Hillside Avenue",
+        "raw_text": "Hillside Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HINSDALE STREET": [
+      {
+        "street_name": "Hinsdale Street",
+        "raw_text": "Hinsdale Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HOLTON STREET": [
+      {
+        "street_name": "Holton Street",
+        "raw_text": "Holton Street Sharon Street to Boston Avenue Resident",
+        "restriction_text": "Sharon Street to Boston Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      },
+      {
+        "street_name": "Holton Street",
+        "raw_text": "Holton Street Boston Avenue to Bower Street: 7am - 12pm Monday - Friday. Holidays excluded Resident",
+        "restriction_text": "Boston Avenue to Bower Street: 7am - 12pm Monday - Friday. Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HUME AVENUE": [
+      {
+        "street_name": "Hume Avenue",
+        "raw_text": "Hume Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "HUNEWELL AVENUE": [
+      {
+        "street_name": "Hunewell Avenue",
+        "raw_text": "Hunewell Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "IRVING STREET": [
+      {
+        "street_name": "Irving Street",
+        "raw_text": "Irving Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "JOHNSON AVENUE": [
+      {
+        "street_name": "Johnson Avenue",
+        "raw_text": "Johnson Avenue 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "JOSEPH STREET": [
+      {
+        "street_name": "Joseph Street",
+        "raw_text": "Joseph Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "KILSYTH ROAD": [
+      {
+        "street_name": "Kilsyth Road",
+        "raw_text": "Kilsyth Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "KNOLLWOOD ROAD": [
+      {
+        "street_name": "Knollwood Road",
+        "raw_text": "Knollwood Road Sundays & Holidays excluded Resident",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "LAPHAM STREET": [
+      {
+        "street_name": "Lapham Street",
+        "raw_text": "Lapham Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "LARKIN ROAD": [
+      {
+        "street_name": "Larkin Road",
+        "raw_text": "Larkin Road From Fellsway to end of Larkin Resident",
+        "restriction_text": "From Fellsway to end of Larkin",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "LEYDEN STREET": [
+      {
+        "street_name": "Leyden Street",
+        "raw_text": "Leyden Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "LINDEN STREET": [
+      {
+        "street_name": "Linden Street",
+        "raw_text": "Linden Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "LINWOOD STREET": [
+      {
+        "street_name": "Linwood Street",
+        "raw_text": "Linwood Street RESIDENT PARKING: From Central Avenue westerly for a distance of 382 feet, 11 PM to 7 AM on both sides of street Resident",
+        "restriction_text": "RESIDENT PARKING: From Central Avenue westerly for a distance of 382 feet, 11 PM to 7 AM on both sides of street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MADISON STREET": [
+      {
+        "street_name": "Madison Street",
+        "raw_text": "Madison Street 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MARINE STREET": [
+      {
+        "street_name": "Marine Street",
+        "raw_text": "Marine Street One house only - 3 Marine Street Resident",
+        "restriction_text": "One house only - 3 Marine Street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MARION STREET": [
+      {
+        "street_name": "Marion Street",
+        "raw_text": "Marion Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MARSHALL STREET": [
+      {
+        "street_name": "Marshall Street",
+        "raw_text": "Marshall Street Winthrop Street to Mason Street; Sundays and Holidays excluded Resident",
+        "restriction_text": "Winthrop Street to Mason Street; Sundays and Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MARSTON STREET": [
+      {
+        "street_name": "Marston Street",
+        "raw_text": "Marston Street From Summer Street easterly for a distance of 580 feet, 11 PM to 7 AM both sides of street Resident",
+        "restriction_text": "From Summer Street easterly for a distance of 580 feet, 11 PM to 7 AM both sides of street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MARTIN STREET": [
+      {
+        "street_name": "Martin Street",
+        "raw_text": "Martin Street 24/6 Sundays excluded Resident",
+        "restriction_text": "24/6 Sundays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MASON STREET": [
+      {
+        "street_name": "Mason Street",
+        "raw_text": "Mason Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MAYBERRY AVENUE": [
+      {
+        "street_name": "Mayberry Avenue",
+        "raw_text": "Mayberry Avenue 5pm - 8am Resident",
+        "restriction_text": "5pm - 8am",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MAYNARD STREET": [
+      {
+        "street_name": "Maynard Street",
+        "raw_text": "Maynard Street 5pm - 9am Resident",
+        "restriction_text": "5pm - 9am",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MEDFORD STREET": [
+      {
+        "street_name": "Medford Street",
+        "raw_text": "Medford Street Somerville/Medford city line to Main Street: Odd side only. Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays8am-8pm or with permit. Resident or Business G",
+        "restriction_text": "Somerville/Medford city line to Main Street: Odd side only. Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays8am-8pm or with permit.",
+        "permit_type": "Resident or Business",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "METCALF STREET": [
+      {
+        "street_name": "Metcalf Street",
+        "raw_text": "Metcalf Street Sunday and Holidays excluded Resident",
+        "restriction_text": "Sunday and Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MONUMENT STREET": [
+      {
+        "street_name": "Monument Street",
+        "raw_text": "Monument Street 7am - 12pm Monday - Friday Resident",
+        "restriction_text": "7am - 12pm Monday - Friday",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MORTON AVENUE": [
+      {
+        "street_name": "Morton Avenue",
+        "raw_text": "Morton Avenue Resident Parking full street with exception along the Park - 3 hour parking 8am-10pm Permit Parking 10PM - 8AM Sundays & holidays excluded. Resident G",
+        "restriction_text": "Resident Parking full street with exception along the Park - 3 hour parking 8am-10pm Permit Parking 10PM - 8AM Sundays & holidays excluded.",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MYSTIC AVENUE": [
+      {
+        "street_name": "Mystic Avenue",
+        "raw_text": "Mystic Avenue 10pm-6am, excluding Sundays & Holidays Resident",
+        "restriction_text": "10pm-6am, excluding Sundays & Holidays",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "MYSTIC STREET": [
+      {
+        "street_name": "Mystic Street",
+        "raw_text": "Mystic Street High Street to Wyman Avenue Resident",
+        "restriction_text": "High Street to Wyman Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "NEWBERN AVENUE": [
+      {
+        "street_name": "Newbern Avenue",
+        "raw_text": "Newbern Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "NEWCOMB STREET": [
+      {
+        "street_name": "Newcomb Street",
+        "raw_text": "Newcomb Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "NORTH STREET": [
+      {
+        "street_name": "North Street",
+        "raw_text": "North Street Boston Avenue to 120 North Street only. Two hour parking allowed Monday - Friday from Eastman Street to Boston Avenue Resident",
+        "restriction_text": "Boston Avenue to 120 North Street only. Two hour parking allowed Monday - Friday from Eastman Street to Boston Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "OAKLAND STREET": [
+      {
+        "street_name": "Oakland Street",
+        "raw_text": "Oakland Street 8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded Resident",
+        "restriction_text": "8am - 12pm, Monday - Friday. Saturday, Sunday & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ORCHARD STREET": [
+      {
+        "street_name": "Orchard Street",
+        "raw_text": "Orchard Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PEARL STREET": [
+      {
+        "street_name": "Pearl Street",
+        "raw_text": "Pearl Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PIGGOTT ROAD": [
+      {
+        "street_name": "Piggott Road",
+        "raw_text": "Piggott Road",
+        "restriction_text": "",
+        "permit_type": null,
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PINKHAM RD.": [
+      {
+        "street_name": "Pinkham Rd.",
+        "raw_text": "Pinkham Rd. Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PLAYSTEAD ROAD": [
+      {
+        "street_name": "Playstead Road",
+        "raw_text": "Playstead Road 11pm - 7am Resident",
+        "restriction_text": "11pm - 7am",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PORTER ROAD": [
+      {
+        "street_name": "Porter Road",
+        "raw_text": "Porter Road In fron of 12, 14, & 16 Porter Road only Resident",
+        "restriction_text": "In fron of 12, 14, & 16 Porter Road only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PRESCOTT STREET": [
+      {
+        "street_name": "Prescott Street",
+        "raw_text": "Prescott Street Excluding businesses. Public Road Canal Street to Mystic Street: Pricate way Mystic Street easterly Resident",
+        "restriction_text": "Excluding businesses. Public Road Canal Street to Mystic Street: Pricate way Mystic Street easterly",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "PRINCETON STREET": [
+      {
+        "street_name": "Princeton Street",
+        "raw_text": "Princeton Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "QUINCY STREET": [
+      {
+        "street_name": "Quincy Street",
+        "raw_text": "Quincy Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "RADCLIFFE STREET": [
+      {
+        "street_name": "Radcliffe Street",
+        "raw_text": "Radcliffe Street Bowdoin to Yale. Sundays & Holidays excluded Resident G",
+        "restriction_text": "Bowdoin to Yale. Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "RAVINE ROAD": [
+      {
+        "street_name": "Ravine Road",
+        "raw_text": "Ravine Road Sagamore Avenue to Mystic Valley Parkway: Memorial Day to Labor Day only Resident",
+        "restriction_text": "Sagamore Avenue to Mystic Valley Parkway: Memorial Day to Labor Day only",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "RENFREW STREET": [
+      {
+        "street_name": "Renfrew Street",
+        "raw_text": "Renfrew Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "REVERE PLACE": [
+      {
+        "street_name": "Revere Place",
+        "raw_text": "Revere Place Monday - Saturday Resident",
+        "restriction_text": "Monday - Saturday",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "RICE AVENUE": [
+      {
+        "street_name": "Rice Avenue",
+        "raw_text": "Rice Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ROCKWELL AVENUE": [
+      {
+        "street_name": "Rockwell Avenue",
+        "raw_text": "Rockwell Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ROSS STREET": [
+      {
+        "street_name": "Ross Street",
+        "raw_text": "Ross Street Sundays excluded Resident",
+        "restriction_text": "Sundays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SAGAMORE AVENUE": [
+      {
+        "street_name": "Sagamore Avenue",
+        "raw_text": "Sagamore Avenue #6 - 31 Sagamore: 7am - 12pm Monday - Friday, Holidays excluded : PUBLIC High St to Ravine PRIVATE WAY Ravine to Mystic Valley Parkway Resident",
+        "restriction_text": "#6 - 31 Sagamore: 7am - 12pm Monday - Friday, Holidays excluded : PUBLIC High St to Ravine PRIVATE WAY Ravine to Mystic Valley Parkway",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SAGAMORE PARK": [
+      {
+        "street_name": "Sagamore Park",
+        "raw_text": "Sagamore Park 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SEVENTH STREET": [
+      {
+        "street_name": "Seventh Street",
+        "raw_text": "Seventh Street Private Way east of #21 to Craddock Avenue Resident",
+        "restriction_text": "Private Way east of #21 to Craddock Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SHAPLEY AVENUE": [
+      {
+        "street_name": "Shapley Avenue",
+        "raw_text": "Shapley Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SHIP AVENUE": [
+      {
+        "street_name": "Ship Avenue",
+        "raw_text": "Ship Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SMITH STREET": [
+      {
+        "street_name": "Smith Street",
+        "raw_text": "Smith Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SPRAGUE COURT": [
+      {
+        "street_name": "Sprague Court",
+        "raw_text": "Sprague Court Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ST. CLEMENTS ROAD": [
+      {
+        "street_name": "St. Clements Road",
+        "raw_text": "St. Clements Road Permit parking in front of homes. Church services or permit only on church side Resident G",
+        "restriction_text": "Permit parking in front of homes. Church services or permit only on church side",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ST. MARY STREET": [
+      {
+        "street_name": "St. Mary Street",
+        "raw_text": "St. Mary Street Both sides enforced and permitted by Medford Resident",
+        "restriction_text": "Both sides enforced and permitted by Medford",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "ST. JAMES ROAD": [
+      {
+        "street_name": "St. James Road",
+        "raw_text": "St. James Road Fellsway to Riverside Avenue Resident",
+        "restriction_text": "Fellsway to Riverside Avenue",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "STANLEY AVENUE": [
+      {
+        "street_name": "Stanley Avenue",
+        "raw_text": "Stanley Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "STEARNS AVENUE": [
+      {
+        "street_name": "Stearns Avenue",
+        "raw_text": "Stearns Avenue Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "STERLING STREET": [
+      {
+        "street_name": "Sterling Street",
+        "raw_text": "Sterling Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "STOUGHTON STREET": [
+      {
+        "street_name": "Stoughton Street",
+        "raw_text": "Stoughton Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "STRATHMORE ROAD": [
+      {
+        "street_name": "Strathmore Road",
+        "raw_text": "Strathmore Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "STURGES STREET": [
+      {
+        "street_name": "Sturges Street",
+        "raw_text": "Sturges Street Memorial Day to Labor Day only, Fulton St to Elm St Resident",
+        "restriction_text": "Memorial Day to Labor Day only, Fulton St to Elm St",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SUMMER STREET": [
+      {
+        "street_name": "Summer Street",
+        "raw_text": "Summer Street From Gourley Road to Marston Street for a distance of 252 feet southeasterly, 11 PM to 7 AM both sides of street Resident",
+        "restriction_text": "From Gourley Road to Marston Street for a distance of 252 feet southeasterly, 11 PM to 7 AM both sides of street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "SUNSET AVENUE": [
+      {
+        "street_name": "Sunset Avenue",
+        "raw_text": "Sunset Avenue Sundays & Holidays excluded Resident G",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "TAINTER STREET": [
+      {
+        "street_name": "Tainter Street",
+        "raw_text": "Tainter Street Everett Street to Fulton Street: 8pm - 8am Resident",
+        "restriction_text": "Everett Street to Fulton Street: 8pm - 8am",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "TEMPLE STREET": [
+      {
+        "street_name": "Temple Street",
+        "raw_text": "Temple Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "TESLA AVENUE": [
+      {
+        "street_name": "Tesla Avenue",
+        "raw_text": "Tesla Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "THOMAS STREET": [
+      {
+        "street_name": "Thomas Street",
+        "raw_text": "Thomas Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "TROUT AVENUE": [
+      {
+        "street_name": "Trout Avenue",
+        "raw_text": "Trout Avenue Traincroft Private Way from NW from 118 Traincroft to Badger RD Resident Resident",
+        "restriction_text": "Traincroft Private Way from NW from 118 Traincroft to Badger RD",
+        "permit_type": "Resident Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "TYLER AVENUE": [
+      {
+        "street_name": "Tyler Avenue",
+        "raw_text": "Tyler Avenue 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "USHER ROAD": [
+      {
+        "street_name": "Usher Road",
+        "raw_text": "Usher Road 7am - 12pm Monday - Friday, Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday, Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "VASSAR STREET": [
+      {
+        "street_name": "Vassar Street",
+        "raw_text": "Vassar Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "VINE STREET": [
+      {
+        "street_name": "Vine Street",
+        "raw_text": "Vine Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WAREHAM STREET": [
+      {
+        "street_name": "Wareham Street",
+        "raw_text": "Wareham Street Sundays & Holidays excluded Resident G",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WARNER STREET": [
+      {
+        "street_name": "Warner Street",
+        "raw_text": "Warner Street 24/7. Sundays excluded in front of 57, 63, and 71 Warner Street only. Resident G",
+        "restriction_text": "24/7. Sundays excluded in front of 57, 63, and 71 Warner Street only.",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WARREN STREET": [
+      {
+        "street_name": "Warren Street",
+        "raw_text": "Warren Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WEDGEMERE ROAD": [
+      {
+        "street_name": "Wedgemere Road",
+        "raw_text": "Wedgemere Road Sundays & Holidays excluded Resident",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WELLESLEY STREET": [
+      {
+        "street_name": "Wellesley Street",
+        "raw_text": "Wellesley Street Main Street to Dartmouth Street, 7pm - 7am Resident G",
+        "restriction_text": "Main Street to Dartmouth Street, 7pm - 7am",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WELLINGTON ROAD": [
+      {
+        "street_name": "Wellington Road",
+        "raw_text": "Wellington Road Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WHEELER AVENUE": [
+      {
+        "street_name": "Wheeler Avenue",
+        "raw_text": "Wheeler Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WHITTEMORE STREET": [
+      {
+        "street_name": "Whittemore Street",
+        "raw_text": "Whittemore Street Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WILLARD AVENUE": [
+      {
+        "street_name": "Willard Avenue",
+        "raw_text": "Willard Avenue 5pm - 8am, 24/7 Resident",
+        "restriction_text": "5pm - 8am, 24/7",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WILLIAM STREET": [
+      {
+        "street_name": "William Street",
+        "raw_text": "William Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WILLIS AVENUE": [
+      {
+        "street_name": "Willis Avenue",
+        "raw_text": "Willis Avenue Golden Avenue to Harvard Street Resident",
+        "restriction_text": "Golden Avenue to Harvard Street",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WINCHESTER STREET": [
+      {
+        "street_name": "Winchester Street",
+        "raw_text": "Winchester Street Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays Resident G",
+        "restriction_text": "Alongside non-residential uses = 2 hour parking, 8am-8pm, except by permit, excluding Sundays & Holidays; Along all residential uses = Resident Permit Parking Only, excluding Sundays & Holidays",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WINDSOR ROAD": [
+      {
+        "street_name": "Windsor Road",
+        "raw_text": "Windsor Road Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WINSLOW AVENUE": [
+      {
+        "street_name": "Winslow Avenue",
+        "raw_text": "Winslow Avenue From Fulton Street easterly for a distance of 500 feet 11PM to 7AM, both sides Resident",
+        "restriction_text": "From Fulton Street easterly for a distance of 500 feet 11PM to 7AM, both sides",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WINTER HILL ROAD": [
+      {
+        "street_name": "Winter Hill Road",
+        "raw_text": "Winter Hill Road Sundays & Holidays excluded Resident G",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WINTHROP STREET": [
+      {
+        "street_name": "Winthrop Street",
+        "raw_text": "Winthrop Street Tesla Avenue to Capen Street Resident G",
+        "restriction_text": "Tesla Avenue to Capen Street",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WOLCOTT STREET": [
+      {
+        "street_name": "Wolcott Street",
+        "raw_text": "Wolcott Street #2 - 36 Wolcott Street only PRIVATE WAY Wyman St to Woburn St Resident",
+        "restriction_text": "#2 - 36 Wolcott Street only PRIVATE WAY Wyman St to Woburn St",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WOODBINE ROAD": [
+      {
+        "street_name": "Woodbine Road",
+        "raw_text": "Woodbine Road Sundays & Holidays excluded Resident",
+        "restriction_text": "Sundays & Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WOODS ROAD": [
+      {
+        "street_name": "Woods Road",
+        "raw_text": "Woods Road 7am - 12pm Monday - Friday. Saturday, Sunday and Holidays excluded Resident",
+        "restriction_text": "7am - 12pm Monday - Friday. Saturday, Sunday and Holidays excluded",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "WRIGHT AVENUE": [
+      {
+        "street_name": "Wright Avenue",
+        "raw_text": "Wright Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "YALE STREET": [
+      {
+        "street_name": "Yale Street",
+        "raw_text": "Yale Street Resident G",
+        "restriction_text": "",
+        "permit_type": "Resident",
+        "zone": "G",
+        "has_segment_clues": false,
+        "has_time_clues": false,
+        "scope": "likely_full_street",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "YEOMANS AVENUE": [
+      {
+        "street_name": "Yeomans Avenue",
+        "raw_text": "Yeomans Avenue 11PM-7AM: both sides of street from Central Ave, easterly for a distance of 382 feet Resident",
+        "restriction_text": "11PM-7AM: both sides of street from Central Ave, easterly for a distance of 382 feet",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": true,
+        "scope": "partial_or_segment_specific",
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "medford_city_hall_lot_map",
+  "title": "City Hall parking lot map",
+  "municipality": "medford",
+  "category": "business_municipal_commuter_map",
+  "url": "https://www.medfordma.org/fs/resource-manager/view/8ad99a98-8da4-47b5-9fbb-aae56f7f6b30",
+  "downloaded_at_utc": "2026-05-23T09:54:17.351755+00:00",
+  "http_status": 200,
+  "content_type": "image/jpeg",
+  "bytes": 178328
+}

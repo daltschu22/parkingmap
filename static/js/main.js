@@ -5,11 +5,26 @@ const map = L.map('map', { preferCanvas: true }).setView([42.3925, -71.1090], 13
 // Canvas renderer tolerance expands hit area without changing visible stroke width.
 const hitRenderer = L.canvas({ tolerance: 8 });
 
-// Add dark tile layer
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+// Base map layers
+const darkBaseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
     subdomains: 'abcd',
     maxZoom: 19
+});
+
+const satelliteBaseLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+    attribution: 'Tiles &copy; Esri',
+    maxZoom: 19
+});
+
+darkBaseLayer.addTo(map);
+
+L.control.layers({
+    'Dark': darkBaseLayer,
+    'Satellite': satelliteBaseLayer
+}, null, {
+    position: 'topright',
+    collapsed: false
 }).addTo(map);
 
 // Layer groups for streets

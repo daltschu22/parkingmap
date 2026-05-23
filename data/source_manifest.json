@@ -24,6 +24,39 @@
       "notes": "Existing prototype source; current copy is data/traffic-regulations.pdf."
     },
     {
+      "id": "cambridge_gis_street_centerlines",
+      "municipality": "cambridge",
+      "title": "Cambridge GIS Street Centerlines",
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
+      "destination": "data/processed/cambridge/streets.geojson",
+      "type": "geojson",
+      "category": "street_network",
+      "enabled": false,
+      "notes": "Built by build_cambridge_data.py into the app street schema."
+    },
+    {
+      "id": "cambridge_gis_metered_parking_spaces",
+      "municipality": "cambridge",
+      "title": "Cambridge GIS Metered Parking Spaces",
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Metered_Parking_Spaces/TRAFFIC_MeteredParkingSpaces.geojson",
+      "destination": "data/processed/cambridge/metered_spaces.geojson",
+      "type": "geojson",
+      "category": "metered_parking",
+      "enabled": false,
+      "notes": "Built by build_cambridge_data.py. Meter polygons are also summarized in data/processed/cambridge/parking_rules.json by nearest street and retained as segment evidence, not whole-street classification."
+    },
+    {
+      "id": "cambridge_gis_public_handicap_parking_spaces",
+      "municipality": "cambridge",
+      "title": "Cambridge GIS Public Handicap Parking Spaces",
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
+      "destination": "data/processed/cambridge/accessible_spaces.geojson",
+      "type": "geojson",
+      "category": "accessible_parking",
+      "enabled": false,
+      "notes": "Built by build_cambridge_data.py. Accessible points are also summarized in data/processed/cambridge/parking_rules.json by street name."
+    },
+    {
       "id": "medford_parking_department_page",
       "municipality": "medford",
       "title": "Parking Department page",

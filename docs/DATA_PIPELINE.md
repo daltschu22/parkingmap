@@ -46,6 +46,14 @@ Public source files are tracked in `data/source_manifest.json`. Fetch them with:
 python3 scripts/fetch_public_sources.py --municipality medford
 ```
 
+Cambridge GIS sources are currently downloaded directly by:
+
+```bash
+python3 build_cambridge_data.py
+```
+
+That builder emits normalized street geometry, meter-space geometry, accessible-space geometry, and street-level summaries under `data/processed/cambridge/`.
+
 ## Desired Rule Model
 
 Derived parking records should eventually support:
@@ -75,6 +83,8 @@ Use the strongest match available:
 Any UI or API response should expose the match confidence so users know whether a rule is block-specific or approximate.
 
 Never collapse a partial source row into a whole-street rule. If a row mentions an address range, street side, from/to block, distance, intersection, business frontage, private/public split, exception, or similar segment clue, the derived record must stay `partial_or_segment_specific` until geometry matching exists.
+
+Likewise, do not collapse point or polygon evidence into a whole-street status. Cambridge meter polygons are rendered as their own evidence layer and also summarized as `metered_segments_known` street evidence, with `nearest_street_approx` confidence, until curb-side matching exists.
 
 ## Rebuild Expectations
 

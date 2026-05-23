@@ -1,0 +1,3400 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "municipality": "Cambridge",
+    "source_id": "cambridge_gis",
+    "accessible_spaces_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
+    "generated_at_utc": "2026-05-23T10:35:34.767445+00:00",
+    "feature_count": 154
+  },
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1021283268507,
+          42.357570563431075
+        ]
+      },
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Albany St",
+        "STREET_NUMBER": "270",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "332' N of Erie St",
+        "TO_STREET": "350' N of Erie St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09842480136288,
+          42.35986003290904
+        ]
+      },
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Albany St",
+        "STREET_NUMBER": "167",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "140' S of Mass Ave",
+        "TO_STREET": "160' S of Mass Ave",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10070156998225,
+          42.358864638460005
+        ]
+      },
+      "type": "Feature",
+      "id": 3,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Albany St",
+        "STREET_NUMBER": "235",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "140' S of Pacific St.",
+        "TO_STREET": "158' S of Pacific St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09291246614019,
+          42.36215649462872
+        ]
+      },
+      "type": "Feature",
+      "id": 4,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Albany St (opp. #200 Tech Square)",
+        "STREET_NUMBER": "32",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "165' W of Main St.",
+        "TO_STREET": "180' W of Main St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09066251045301,
+          42.36007353858502
+        ]
+      },
+      "type": "Feature",
+      "id": 5,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Ames St",
+        "STREET_NUMBER": "21",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "250' N of Amherst St.",
+        "TO_STREET": "290' N of Amherst St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08788165785455,
+          42.36097821961726
+        ]
+      },
+      "type": "Feature",
+      "id": 6,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Ames St",
+        "STREET_NUMBER": "20",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "25' S of Broadway",
+        "TO_STREET": "46' S of Broadway",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08818259565894,
+          42.36154313295779
+        ]
+      },
+      "type": "Feature",
+      "id": 7,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Ames St",
+        "STREET_NUMBER": "40-50",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "600' N of Amherest St.",
+        "TO_STREET": "670' N of Amherest St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08478816614208,
+          42.36105769538961
+        ]
+      },
+      "type": "Feature",
+      "id": 8,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Amherst St",
+        "STREET_NUMBER": "1",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "68' W of Wadsworth St.",
+        "TO_STREET": "128' W of Wadsworth St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09630240843705,
+          42.35714768443014
+        ]
+      },
+      "type": "Feature",
+      "id": 9,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Amherst St (MIT Street)",
+        "STREET_NUMBER": "1",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "64' S of Mass Ave",
+        "TO_STREET": "94' S of Mass Ave",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11543464193713,
+          42.37154497814787
+        ]
+      },
+      "type": "Feature",
+      "id": 10,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Arrow St",
+        "STREET_NUMBER": "23",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "353' W of Mass Ave.",
+        "TO_STREET": "378' W of Mass Ave.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12566617261093,
+          42.3738833875578
+        ]
+      },
+      "type": "Feature",
+      "id": 11,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Ash St",
+        "STREET_NUMBER": "32",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "70' N of Memorial Dr",
+        "TO_STREET": "90' N of Memorial Dr",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07928226680015,
+          42.3637294620625
+        ]
+      },
+      "type": "Feature",
+      "id": 12,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Athenaeum St (For 245 First St)",
+        "STREET_NUMBER": "1",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "54' W of First St.",
+        "TO_STREET": "30' W of First St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08032457165689,
+          42.36399461923299
+        ]
+      },
+      "type": "Feature",
+      "id": 13,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Athenaeum St (For 245 First St)",
+        "STREET_NUMBER": "21",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "148' N of First St.",
+        "TO_STREET": "124' W of First St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15218137405869,
+          42.37507884510971
+        ]
+      },
+      "type": "Feature",
+      "id": 14,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Belmont St",
+        "STREET_NUMBER": "51",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "",
+        "TO_STREET": "30' W of Holworthy",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1227415105816,
+          42.37503828768957
+        ]
+      },
+      "type": "Feature",
+      "id": 15,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Brattle St",
+        "STREET_NUMBER": "64",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "16' N of Hilliard St.",
+        "TO_STREET": "42' North of Brattle St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12154082888516,
+          42.373712559166925
+        ]
+      },
+      "type": "Feature",
+      "id": 16,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Brattle St",
+        "STREET_NUMBER": "42",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "206' N of Brattle St.",
+        "TO_STREET": "250' N of Brattle Sq.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12114777910054,
+          42.373723547047085
+        ]
+      },
+      "type": "Feature",
+      "id": 17,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Brattle St (For # 60 Church St)",
+        "STREET_NUMBER": "73",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "48' S of Church St.",
+        "TO_STREET": "28' S of Church St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1033823541983,
+          42.370081573369646
+        ]
+      },
+      "type": "Feature",
+      "id": 18,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Broadway",
+        "STREET_NUMBER": "344",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "60' W of Inman St.",
+        "TO_STREET": "80' W of Inman St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1033823541983,
+          42.370081573369646
+        ]
+      },
+      "type": "Feature",
+      "id": 19,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Broadway",
+        "STREET_NUMBER": "344",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "20' W of Inman St.",
+        "TO_STREET": "60' W of Inman St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0840138515747,
+          42.36272988243813
+        ]
+      },
+      "type": "Feature",
+      "id": 20,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Broadway",
+        "STREET_NUMBER": "1",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "63' E of Third St",
+        "TO_STREET": "84' E of Third St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11419635659284,
+          42.37488907088552
+        ]
+      },
+      "type": "Feature",
+      "id": 21,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Broadway",
+        "STREET_NUMBER": "485",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "22' E of Prescott St.",
+        "TO_STREET": "44' E of Prescott St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13063474103056,
+          42.38769745280476
+        ]
+      },
+      "type": "Feature",
+      "id": 22,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cadbury Rd",
+        "STREET_NUMBER": "5",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "160' W of Wood St.",
+        "TO_STREET": "184' W of Wood St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09696846699818,
+          42.37333344987777
+        ]
+      },
+      "type": "Feature",
+      "id": 23,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "1176",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "16' E of Tremont St.",
+        "TO_STREET": "38' E of Tremont St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09818953913931,
+          42.37347327665752
+        ]
+      },
+      "type": "Feature",
+      "id": 24,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "1237",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "169' W of Sumner Rd.",
+        "TO_STREET": "199' W of Sumner Rd.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09950706069249,
+          42.37364929905712
+        ]
+      },
+      "type": "Feature",
+      "id": 25,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "1309",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "16' E of Oak St.",
+        "TO_STREET": "44' E of Oak St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08071761297359,
+          42.371231445291976
+        ]
+      },
+      "type": "Feature",
+      "id": 26,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "291",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "276' W of Third St.",
+        "TO_STREET": "246' W of Third St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09471483897244,
+          42.37283668398428
+        ]
+      },
+      "type": "Feature",
+      "id": 27,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "1046",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "32' W of Columbia St.",
+        "TO_STREET": "58' W of Columbia St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0997592645967,
+          42.37349326159141
+        ]
+      },
+      "type": "Feature",
+      "id": 28,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "1334",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "38' E of E curb line Ext-Oak St.",
+        "TO_STREET": "to 58' E of curbline ext Oak",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09032933159892,
+          42.3721949299961
+        ]
+      },
+      "type": "Feature",
+      "id": 29,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "826",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "82' W of Berkshire St.",
+        "TO_STREET": "120' W of Berkshire St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10443633452432,
+          42.37441678209248
+        ]
+      },
+      "type": "Feature",
+      "id": 30,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St",
+        "STREET_NUMBER": "1493",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "136' W of Line St.",
+        "TO_STREET": "200' W of Line St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10932413326769,
+          42.37469029093966
+        ]
+      },
+      "type": "Feature",
+      "id": 31,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St (@ War Memorial)",
+        "STREET_NUMBER": "1640",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "36' E of Ecl Ext. Of Trowbridge St.",
+        "TO_STREET": "12' W of Ecl Ext pf Trowbridge St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0792412349098,
+          42.37078808999253
+        ]
+      },
+      "type": "Feature",
+      "id": 32,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cambridge St (Front of court house)",
+        "STREET_NUMBER": "208",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "132' E of Third St.",
+        "TO_STREET": "171' E of Third St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07817213103188,
+          42.36719201307736
+        ]
+      },
+      "type": "Feature",
+      "id": 33,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Charles St",
+        "STREET_NUMBER": "2",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "22' W of First St.",
+        "TO_STREET": "49' W of First St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12366966923415,
+          42.379287304378025
+        ]
+      },
+      "type": "Feature",
+      "id": 34,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Chauncy St (For #29 Garden St)",
+        "STREET_NUMBER": "29",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "20' N of Garden St.",
+        "TO_STREET": "40' N of Garden St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12120715807009,
+          42.373981000634444
+        ]
+      },
+      "type": "Feature",
+      "id": 35,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Church St",
+        "STREET_NUMBER": "134",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "95' W of Palmer St.",
+        "TO_STREET": "134' W of Palmer St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12007538696037,
+          42.374452041317056
+        ]
+      },
+      "type": "Feature",
+      "id": 36,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Church St",
+        "STREET_NUMBER": "27",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "21' N of Palmer St",
+        "TO_STREET": "21' N of Palmer St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12051066929362,
+          42.37426484783755
+        ]
+      },
+      "type": "Feature",
+      "id": 37,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Church St",
+        "STREET_NUMBER": "42",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "57' S of Palmer St",
+        "TO_STREET": "97' S of Palmer St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13219588746261,
+          42.4004415155734
+        ]
+      },
+      "type": "Feature",
+      "id": 38,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Churchill Ave",
+        "STREET_NUMBER": "50",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "118' E of ECL Muller",
+        "TO_STREET": "138' E of ECL Muller Ave.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13074067541154,
+          42.38216679766436
+        ]
+      },
+      "type": "Feature",
+      "id": 39,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Concord Ave",
+        "STREET_NUMBER": "186",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "78' E of Huron Ave.",
+        "TO_STREET": "98' E of Huron Ave.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1385435117382,
+          42.38594558286414
+        ]
+      },
+      "type": "Feature",
+      "id": 40,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Concord Ave (opp. 415 in front of ballfield)",
+        "STREET_NUMBER": "419",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "20' E of Fern St.",
+        "TO_STREET": "41' E of Fern St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15272942061837,
+          42.37941513188529
+        ]
+      },
+      "type": "Feature",
+      "id": 41,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Cushing St",
+        "STREET_NUMBER": "166",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "43' N of Locust St",
+        "TO_STREET": "23' N of Locust St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11889177449179,
+          42.372826606666855
+        ]
+      },
+      "type": "Feature",
+      "id": 42,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Dunster St",
+        "STREET_NUMBER": "16",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "142' S of Mass Ave.",
+        "TO_STREET": "184' S of Mass Ave.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07076777019034,
+          42.369846501348114
+        ]
+      },
+      "type": "Feature",
+      "id": 43,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Education St",
+        "STREET_NUMBER": "176",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "198' S of North Point Blvd",
+        "TO_STREET": "238' S of North Point Blvd",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11795694277892,
+          42.38000510493649
+        ]
+      },
+      "type": "Feature",
+      "id": 44,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Everett St",
+        "STREET_NUMBER": "23",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "396' W of Oxford St.",
+        "TO_STREET": "416' W of Oxford St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12112295710574,
+          42.374790771164925
+        ]
+      },
+      "type": "Feature",
+      "id": 45,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Farwell Pl. (For 51 Brattle)",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "120' N of Brattle St.",
+        "TO_STREET": "139' n of brattle St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.14996831443948,
+          42.39360228467288
+        ]
+      },
+      "type": "Feature",
+      "id": 46,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Fawcett St",
+        "STREET_NUMBER": "201",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "86' N of Concord Ave",
+        "TO_STREET": "126' N of Concord Ave",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11243630048268,
+          42.374273640331886
+        ]
+      },
+      "type": "Feature",
+      "id": 47,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Felton St",
+        "STREET_NUMBER": "2",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "100' S of Cambridge St.",
+        "TO_STREET": "120' S of Cambridge St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08363317556766,
+          42.36756172776987
+        ]
+      },
+      "type": "Feature",
+      "id": 48,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Fifth St (For 195 Binney St)",
+        "STREET_NUMBER": "218",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "65' N of Binney St",
+        "TO_STREET": "86' N of Binney St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07854373793833,
+          42.36420635265882
+        ]
+      },
+      "type": "Feature",
+      "id": 49,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "First St",
+        "STREET_NUMBER": "215",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "40'N of Cambridgeside Pl",
+        "TO_STREET": "57'N of Cambridgeside Pl",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11234472245312,
+          42.380368581401896
+        ]
+      },
+      "type": "Feature",
+      "id": 50,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Francis Ave",
+        "STREET_NUMBER": "44",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "40' E of Curve",
+        "TO_STREET": "60'E of Curve",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11297852978076,
+          42.38056817805956
+        ]
+      },
+      "type": "Feature",
+      "id": 51,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Francis Ave",
+        "STREET_NUMBER": "47",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "40' E of Curve",
+        "TO_STREET": "60'E of Curve",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10423647011753,
+          42.364100768146834
+        ]
+      },
+      "type": "Feature",
+      "id": 52,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Franklin St (Public Library)",
+        "STREET_NUMBER": "1201",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "58' W of Pearl St",
+        "TO_STREET": "101' W of Pearl St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09744714422118,
+          42.36199161675694
+        ]
+      },
+      "type": "Feature",
+      "id": 53,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Front St (For 265 Mass Ave)",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "180' E of Mass Ave.",
+        "TO_STREET": "150' E of Mass Ave.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12228726553406,
+          42.37611870879631
+        ]
+      },
+      "type": "Feature",
+      "id": 54,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Garden St",
+        "STREET_NUMBER": "10",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "137' W of Mason St",
+        "TO_STREET": "159' W of Mason St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1226809632525,
+          42.37672426040636
+        ]
+      },
+      "type": "Feature",
+      "id": 55,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Garden St",
+        "STREET_NUMBER": "11",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "91' W of Mason St",
+        "TO_STREET": "131' W of Mason St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12336758835549,
+          42.377717693778095
+        ]
+      },
+      "type": "Feature",
+      "id": 56,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Garden St",
+        "STREET_NUMBER": "20",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "94' N of Berkeley St.",
+        "TO_STREET": "124' N of Berkeley St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12197550260156,
+          42.37587004996729
+        ]
+      },
+      "type": "Feature",
+      "id": 57,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Garden St (For H.U.)",
+        "STREET_NUMBER": "8",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "194' E of Appian St.",
+        "TO_STREET": "236' E of Appian Way",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12189012764448,
+          42.37582438697587
+        ]
+      },
+      "type": "Feature",
+      "id": 58,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Garden St (For H.U.)",
+        "STREET_NUMBER": "6",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "30' W of Appian Way",
+        "TO_STREET": "50' W of Appian Way",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1226809632525,
+          42.37672426040636
+        ]
+      },
+      "type": "Feature",
+      "id": 59,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Garden St (For H.U.)",
+        "STREET_NUMBER": "11",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "58' North of Mason St",
+        "TO_STREET": "118' North of Mason St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.111669563163,
+          42.355868066616566
+        ]
+      },
+      "type": "Feature",
+      "id": 60,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Granite St (Front of School)",
+        "STREET_NUMBER": "25",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "35' E of Pearl St.",
+        "TO_STREET": "55' E of Pearl St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10548746030841,
+          42.36546814803676
+        ]
+      },
+      "type": "Feature",
+      "id": 61,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Green St",
+        "STREET_NUMBER": "1306",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "58' W of Western Ave",
+        "TO_STREET": "78' W of Western Ave",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10766496184796,
+          42.366734787412476
+        ]
+      },
+      "type": "Feature",
+      "id": 62,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Green St (For 806 Mass Ave)",
+        "STREET_NUMBER": "450",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "101' E of Seller St.",
+        "TO_STREET": "121' E of Seller St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1067572278187,
+          42.36634160962271
+        ]
+      },
+      "type": "Feature",
+      "id": 63,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Green St (For 806 Mass Ave)",
+        "STREET_NUMBER": "438",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "121' E of Seller St.",
+        "TO_STREET": "160' E of Seller St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09769591713858,
+          42.37132733090499
+        ]
+      },
+      "type": "Feature",
+      "id": 64,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Hampshire St",
+        "STREET_NUMBER": "147",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "73' N of Norfolk St.",
+        "TO_STREET": "93' N of Norfolk St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10621613784137,
+          42.369740173677386
+        ]
+      },
+      "type": "Feature",
+      "id": 65,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Harvard St",
+        "STREET_NUMBER": "304",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "16' E of Prescott St",
+        "TO_STREET": "35' E of Prescott St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10134975451534,
+          42.368075210132154
+        ]
+      },
+      "type": "Feature",
+      "id": 66,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Harvard St (For church on Norfolk St)",
+        "STREET_NUMBER": "222",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "124' W of Norfolk St",
+        "TO_STREET": "164' W of Norfolk St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10767599760713,
+          42.376306232197656
+        ]
+      },
+      "type": "Feature",
+      "id": 67,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Hovey Ave (For 1585 Cambridge St)",
+        "STREET_NUMBER": "311",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "364' S of Magnolia St.",
+        "TO_STREET": "398' S of Magnolia Ave.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13829945596186,
+          42.38133240631128
+        ]
+      },
+      "type": "Feature",
+      "id": 68,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Huron Ave",
+        "STREET_NUMBER": "353",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "26' W of Chilton St.",
+        "TO_STREET": "46' W of Chilton St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15508970459358,
+          42.380992470941976
+        ]
+      },
+      "type": "Feature",
+      "id": 69,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Huron Ave",
+        "STREET_NUMBER": "700",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "526' W of Cushing St.",
+        "TO_STREET": "562' W of Cushing St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1543028652168,
+          42.38036299938317
+        ]
+      },
+      "type": "Feature",
+      "id": 70,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Huron Ave (For VFW)",
+        "STREET_NUMBER": "688",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "314' W of Cushing St.",
+        "TO_STREET": "346' W of Cushing St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10336083406081,
+          42.36956275257361
+        ]
+      },
+      "type": "Feature",
+      "id": 71,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Inman St",
+        "STREET_NUMBER": "51",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "44' S of Inman Pl.",
+        "TO_STREET": "84' S of Inman St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08671854011821,
+          42.36234890706552
+        ]
+      },
+      "type": "Feature",
+      "id": 72,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Inman St",
+        "STREET_NUMBER": "326",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "44' S of Inman Pl.",
+        "TO_STREET": "84' S of Inman St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12073245330578,
+          42.37202965703505
+        ]
+      },
+      "type": "Feature",
+      "id": 73,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "JFK St",
+        "STREET_NUMBER": "57",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "68' S of Winthrop St",
+        "TO_STREET": "22' S of Winthrop St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1171715921011,
+          42.37693095003213
+        ]
+      },
+      "type": "Feature",
+      "id": 74,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Kirkland St (For 45 Quincy St)",
+        "STREET_NUMBER": "2",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "333' W of Quincy St.",
+        "TO_STREET": "374' W of Quincy St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08022609825996,
+          42.36495882510682
+        ]
+      },
+      "type": "Feature",
+      "id": 75,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Linsky Way (For 215 First St)",
+        "STREET_NUMBER": "1",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "168' W of First St.",
+        "TO_STREET": "221' W of First St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08498908705116,
+          42.36219361155923
+        ]
+      },
+      "type": "Feature",
+      "id": 76,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Main St",
+        "STREET_NUMBER": "250",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "38' E of Hayward St",
+        "TO_STREET": "58' E of Hayward St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10237560446636,
+          42.36442126133568
+        ]
+      },
+      "type": "Feature",
+      "id": 77,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Mass Ave",
+        "STREET_NUMBER": "550",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "48' E of Pearl St",
+        "TO_STREET": "70' E of Pearl St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11969905806646,
+          42.383839890125316
+        ]
+      },
+      "type": "Feature",
+      "id": 78,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1720-1722",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "295' S of Linnaen St.",
+        "TO_STREET": "334' S of Linnaean St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09866899478607,
+          42.36259950999051
+        ]
+      },
+      "type": "Feature",
+      "id": 79,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "321",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "50' W of Village St.",
+        "TO_STREET": "72' W of Village St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10028285690107,
+          42.3631218951946
+        ]
+      },
+      "type": "Feature",
+      "id": 80,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "402",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "170' E of Douglass St.",
+        "TO_STREET": "190' E of Douglass St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10143396527991,
+          42.36384987496683
+        ]
+      },
+      "type": "Feature",
+      "id": 81,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "480",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "113' E of Brookline St.",
+        "TO_STREET": "134' E of Brookline St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10489927354507,
+          42.366292889362725
+        ]
+      },
+      "type": "Feature",
+      "id": 82,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "727",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "20' W of Temple St.",
+        "TO_STREET": "40' W of Temple St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1062206245494,
+          42.36674376835019
+        ]
+      },
+      "type": "Feature",
+      "id": 83,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "806",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "271' W of Pleasant St.",
+        "TO_STREET": "295' W of Pleasant St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10707876717663,
+          42.367330651295646
+        ]
+      },
+      "type": "Feature",
+      "id": 84,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "844",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "106' W of Sellers St.",
+        "TO_STREET": "58' E of Sellers St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10575229248748,
+          42.3670366216374
+        ]
+      },
+      "type": "Feature",
+      "id": 85,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "795",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "100' W of Inman St.",
+        "TO_STREET": "121' W of Inman St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10048156909373,
+          42.36366424536309
+        ]
+      },
+      "type": "Feature",
+      "id": 86,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "425",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "160' W of Albany St",
+        "TO_STREET": "180' W of Albany St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11134059895579,
+          42.36947840793639
+        ]
+      },
+      "type": "Feature",
+      "id": 87,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1001",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "172' W of Dana St.",
+        "TO_STREET": "192' W of Dana St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10826362954961,
+          42.36801386145089
+        ]
+      },
+      "type": "Feature",
+      "id": 88,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "896",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "174' E of Hancock St.",
+        "TO_STREET": "194' of Hancock St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12046550814306,
+          42.39006551975562
+        ]
+      },
+      "type": "Feature",
+      "id": 89,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1967",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "20' N of Allen St.",
+        "TO_STREET": "36' N of Allen St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12026411259744,
+          42.389902373465134
+        ]
+      },
+      "type": "Feature",
+      "id": 90,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1957",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "20' S of Allen St.",
+        "TO_STREET": "42' S of Allen St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12357317243385,
+          42.391726146246945
+        ]
+      },
+      "type": "Feature",
+      "id": 91,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "2103",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "20' S of Russell St.",
+        "TO_STREET": "44' S of Russell St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09842376704154,
+          42.36210002514739
+        ]
+      },
+      "type": "Feature",
+      "id": 92,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "302",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "233' E of Blanche St.",
+        "TO_STREET": "252' E of Blanche St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10665636478923,
+          42.367028854930545
+        ]
+      },
+      "type": "Feature",
+      "id": 93,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "830",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "24' E of Sellers St.",
+        "TO_STREET": "44' E of Sellers St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12832914937043,
+          42.39547666158447
+        ]
+      },
+      "type": "Feature",
+      "id": 94,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "2310",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "29' N of Rice St.",
+        "TO_STREET": "47' N of Rice St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12832914937043,
+          42.39547666158447
+        ]
+      },
+      "type": "Feature",
+      "id": 95,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "2310",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "30' N of Rice St",
+        "TO_STREET": "50' N of Rice St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1006520877889,
+          42.36339911052269
+        ]
+      },
+      "type": "Feature",
+      "id": 96,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "424",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "37' S of Day St",
+        "TO_STREET": "56' S of Day St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10646142193232,
+          42.36721119562814
+        ]
+      },
+      "type": "Feature",
+      "id": 97,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "831",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "37' W of Bigelow St.",
+        "TO_STREET": "54' W of Bigelow St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09333942496951,
+          42.35912825475981
+        ]
+      },
+      "type": "Feature",
+      "id": 98,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "77",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "388' E of Vassar St",
+        "TO_STREET": "388' E of Vassar St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11678396403201,
+          42.37268312538646
+        ]
+      },
+      "type": "Feature",
+      "id": 99,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1280",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "40' W of Plympton St.",
+        "TO_STREET": "86' W of Plympton St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11394122121317,
+          42.37073979407344
+        ]
+      },
+      "type": "Feature",
+      "id": 100,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1120",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "44' E of Arrow St.",
+        "TO_STREET": "62' E of Arrow St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09333942496951,
+          42.35912825475981
+        ]
+      },
+      "type": "Feature",
+      "id": 101,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "77",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "470' W of Memorial Dr.",
+        "TO_STREET": "512' W of Memorial Dr.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11984078595573,
+          42.3824239873228
+        ]
+      },
+      "type": "Feature",
+      "id": 102,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "1680",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "61' N of Hudson St.",
+        "TO_STREET": "85' N of Hudson St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12292284147203,
+          42.39104550695737
+        ]
+      },
+      "type": "Feature",
+      "id": 103,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Massachusetts Ave",
+        "STREET_NUMBER": "2050",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "82' S of Walden St.",
+        "TO_STREET": "124' S of Walden St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10360615325223,
+          42.362829919908215
+        ]
+      },
+      "type": "Feature",
+      "id": 104,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Mt. Auburn St",
+        "STREET_NUMBER": "119",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "110' W  of Miifflin Pl.",
+        "TO_STREET": "148' W of Mifflin Pl.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13589414699483,
+          42.37461021560776
+        ]
+      },
+      "type": "Feature",
+      "id": 105,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Mt. Auburn St",
+        "STREET_NUMBER": "330",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "174' E ECL Longfellow",
+        "TO_STREET": "194' E of of Ecl Longfellow",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12264208482033,
+          42.37312467039332
+        ]
+      },
+      "type": "Feature",
+      "id": 106,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Mt. Auburn St",
+        "STREET_NUMBER": "122",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "25' E of University Rd",
+        "TO_STREET": "65' E of University Rd.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11955303306858,
+          42.372417903842326
+        ]
+      },
+      "type": "Feature",
+      "id": 107,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Mt. Auburn St",
+        "STREET_NUMBER": "81",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "36' W of Dunster St.",
+        "TO_STREET": "77' W of Dunster St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11912949105135,
+          42.37207454531368
+        ]
+      },
+      "type": "Feature",
+      "id": 108,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Mt. Auburn St (For Holyoke Center)",
+        "STREET_NUMBER": "78",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "20'E of Dunster St",
+        "TO_STREET": "60'E of Dunster St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09959468872728,
+          42.3677809457691
+        ]
+      },
+      "type": "Feature",
+      "id": 109,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Norfolk St",
+        "STREET_NUMBER": "146",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "24' S of Hampshire St.",
+        "TO_STREET": "44' S of Hampshire St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.06896185306186,
+          42.369143453907476
+        ]
+      },
+      "type": "Feature",
+      "id": 110,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "North Point Blvd",
+        "STREET_NUMBER": "1",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "100' E of Education St",
+        "TO_STREET": "120' E of Education",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08194046795705,
+          42.37048509378273
+        ]
+      },
+      "type": "Feature",
+      "id": 111,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Otis St",
+        "STREET_NUMBER": "86",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "60' W of Sciarappa St",
+        "TO_STREET": "80' W of Sciarappa St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11592357044925,
+          42.3772596196586
+        ]
+      },
+      "type": "Feature",
+      "id": 112,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Oxford St (For Harvard Buildings)",
+        "STREET_NUMBER": "12",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "355' N of Kirkland St",
+        "TO_STREET": "373' N of Kirkland St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10246237220476,
+          42.36023922048949
+        ]
+      },
+      "type": "Feature",
+      "id": 113,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Pacific St",
+        "STREET_NUMBER": "70",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "82' W of Sidney St",
+        "TO_STREET": "102' W of Sidney St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10371214257798,
+          42.36123425356549
+        ]
+      },
+      "type": "Feature",
+      "id": 114,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Pacific St (For #235 Albany St)",
+        "STREET_NUMBER": "119",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "68' W of Albany St.",
+        "TO_STREET": "83' W of Albany St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10608786485354,
+          42.36571408002177
+        ]
+      },
+      "type": "Feature",
+      "id": 115,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Pleasant St",
+        "STREET_NUMBER": "10",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "20' S of Green St.",
+        "TO_STREET": "40' S of Green St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10842510883029,
+          42.3637288150256
+        ]
+      },
+      "type": "Feature",
+      "id": 116,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Pleasant St",
+        "STREET_NUMBER": "46",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "40' N of Pleasant Place",
+        "TO_STREET": "60' N of Pleasant St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09306192424589,
+          42.363069006252445
+        ]
+      },
+      "type": "Feature",
+      "id": 117,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Portland St (Opp. Washington St)",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "260' N of Main St.",
+        "TO_STREET": "278' N of Main St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0927839228145,
+          42.36389431365688
+        ]
+      },
+      "type": "Feature",
+      "id": 118,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Portland St (Opp. Washington St)",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "350' N of Main St.",
+        "TO_STREET": "370' N of Main St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1144437713799,
+          42.37417822369611
+        ]
+      },
+      "type": "Feature",
+      "id": 119,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Quincy St (Opp Fogg Musuem)",
+        "STREET_NUMBER": "32",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "216' S of Broadway",
+        "TO_STREET": "256' S of Broadway",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11734041828234,
+          42.38244918060004
+        ]
+      },
+      "type": "Feature",
+      "id": 120,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Sacramento St (For Baldwin School)",
+        "STREET_NUMBER": "24",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "81' W of Oxford St.",
+        "TO_STREET": "111' W of Oxford St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0791321366573,
+          42.37008950112437
+        ]
+      },
+      "type": "Feature",
+      "id": 121,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Second St",
+        "STREET_NUMBER": "41",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "338' S of Cambridge St.",
+        "TO_STREET": "357' S of Cambridge St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07923340518373,
+          42.36962773347652
+        ]
+      },
+      "type": "Feature",
+      "id": 122,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Second St (For 43 Thorndike St)",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "126' N of Thorndike St.",
+        "TO_STREET": "145' N of Thorndike St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13155680850181,
+          42.387510040221144
+        ]
+      },
+      "type": "Feature",
+      "id": 123,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Sherman St",
+        "STREET_NUMBER": "66",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "14' N of Cadbury Rd.",
+        "TO_STREET": "34' N of Cadbury Rd.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13248058264647,
+          42.38821650562796
+        ]
+      },
+      "type": "Feature",
+      "id": 124,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Sherman St",
+        "STREET_NUMBER": "85",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "inside the lot for",
+        "TO_STREET": "Danehy Park",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08597151223842,
+          42.367217899559506
+        ]
+      },
+      "type": "Feature",
+      "id": 125,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Sixth St",
+        "STREET_NUMBER": "125",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "20' N of Bent St",
+        "TO_STREET": "40' N of Bent St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15018862987317,
+          42.393973950555534
+        ]
+      },
+      "type": "Feature",
+      "id": 126,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Smith Pl",
+        "STREET_NUMBER": "575",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "103' N of Fawcett St",
+        "TO_STREET": "124' N of Fawcett St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.15036114180316,
+          42.39320547732222
+        ]
+      },
+      "type": "Feature",
+      "id": 127,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Smith Pl",
+        "STREET_NUMBER": "100",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "55' S of Fawcett St",
+        "TO_STREET": "75' S of Fawcett St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13046820833846,
+          42.378783620815575
+        ]
+      },
+      "type": "Feature",
+      "id": 128,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Sparks St (For 145 Brattle St - Church)",
+        "STREET_NUMBER": "62",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "185' S of Brewster St.",
+        "TO_STREET": "210' S of Brewster St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08209456611341,
+          42.365940250323696
+        ]
+      },
+      "type": "Feature",
+      "id": 129,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Third St",
+        "STREET_NUMBER": "602",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "73' S of Linsky Way",
+        "TO_STREET": "28' S of Linsky Way",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0826784981129,
+          42.36492608584376
+        ]
+      },
+      "type": "Feature",
+      "id": 130,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Third St",
+        "STREET_NUMBER": "604",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "40' N of Broadway",
+        "TO_STREET": "90' N of Broadway",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0829778270222,
+          42.36496961379734
+        ]
+      },
+      "type": "Feature",
+      "id": 131,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Third St",
+        "STREET_NUMBER": "opp. #285",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "73' S of Linsky Way",
+        "TO_STREET": "28' S of Linsky Way",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08343551715804,
+          42.36361011142957
+        ]
+      },
+      "type": "Feature",
+      "id": 132,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Third St  (For One Broadway)",
+        "STREET_NUMBER": "385",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "25' N of Broadway",
+        "TO_STREET": "73' N of Broadway",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07956232005142,
+          42.36947905995971
+        ]
+      },
+      "type": "Feature",
+      "id": 133,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Thorndike St",
+        "STREET_NUMBER": "40",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "20' E of Third St.",
+        "TO_STREET": "40' E of Third St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10569515505374,
+          42.35493391982803
+        ]
+      },
+      "type": "Feature",
+      "id": 134,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Vassar St",
+        "STREET_NUMBER": "635",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "22' W of Amesbury St",
+        "TO_STREET": "43' W of Amesbury St",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09693503679462,
+          42.35925098990259
+        ]
+      },
+      "type": "Feature",
+      "id": 135,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Vassar St",
+        "STREET_NUMBER": "125",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "68' W of exit of Parking Lot",
+        "TO_STREET": "90' W of exit of parking Lot",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12458934906566,
+          42.38254544420877
+        ]
+      },
+      "type": "Feature",
+      "id": 136,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Walker St (For Peabody School)",
+        "STREET_NUMBER": "169",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "213' E of Linnaean St.",
+        "TO_STREET": "224' E of Linnaean St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12164251101345,
+          42.377873719537774
+        ]
+      },
+      "type": "Feature",
+      "id": 137,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Waterhouse St @ Follen St",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "13' W of Follen St.",
+        "TO_STREET": "33' W of Follen St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10368662393724,
+          42.36943066199331
+        ]
+      },
+      "type": "Feature",
+      "id": 138,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "West St (For 47-51 Inman St)",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "23' W of Inman St.",
+        "TO_STREET": "43' W of Inman St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.11056440579661,
+          42.36486034217704
+        ]
+      },
+      "type": "Feature",
+      "id": 139,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Western Ave",
+        "STREET_NUMBER": "201-207",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "20' E of Howard St.",
+        "TO_STREET": "40' E of Howard St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10480208677906,
+          42.35417796774982
+        ]
+      },
+      "type": "Feature",
+      "id": 140,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Amesbury St",
+        "STREET_NUMBER": "15",
+        "SIDE_OF_STREET": "W",
+        "FROM_STREET": "171' N of Memorial Dr.",
+        "TO_STREET": "209' N of Memorial Dr.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12282986213134,
+          42.37270761097386
+        ]
+      },
+      "type": "Feature",
+      "id": 141,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Bennett St",
+        "STREET_NUMBER": "51",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "50' W of MBTA Busway",
+        "TO_STREET": "74' W of MBTA Busway",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10548658167977,
+          42.367336500776446
+        ]
+      },
+      "type": "Feature",
+      "id": 142,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Dorthy Dottie Doyle Way",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "92' E of Bigelow St.",
+        "TO_STREET": "132' E of Bigelow St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0939697071106,
+          42.37250659891188
+        ]
+      },
+      "type": "Feature",
+      "id": 143,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Lot #11, Cambridge St",
+        "STREET_NUMBER": "Lot #11",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "21' S of Cambridge St.",
+        "TO_STREET": "45' S of Cambridge St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08829196026086,
+          42.37251928999884
+        ]
+      },
+      "type": "Feature",
+      "id": 144,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Macarelli Way",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "11' W of Warren St.",
+        "TO_STREET": "32' W of Warren St.",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10029473453615,
+          42.374166303248806
+        ]
+      },
+      "type": "Feature",
+      "id": 145,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Lot #14 Springfield St\r\nLot # 14 Springfield St\r\nLot # 14 Springfield St",
+        "STREET_NUMBER": "Lot #14",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "10' E of Springfield St.",
+        "TO_STREET": "34' E of Springfield St.",
+        "LAST_EDITED_DATE": "2024-03-15"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1018412867495,
+          42.36515277416459
+        ]
+      },
+      "type": "Feature",
+      "id": 146,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Lot #5, Bishop Allen Dr",
+        "STREET_NUMBER": "Lot #5",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "by walkway to Mass Ave.",
+        "TO_STREET": "",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12112987926302,
+          42.37187376078631
+        ]
+      },
+      "type": "Feature",
+      "id": 147,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Lot #2, Harvard Square",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "",
+        "FROM_STREET": "two spaces - one at each entrance",
+        "TO_STREET": "",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10009946260581,
+          42.364166552589104
+        ]
+      },
+      "type": "Feature",
+      "id": 148,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Lot #6, Bishop Allen Dr",
+        "STREET_NUMBER": "Lot #6",
+        "SIDE_OF_STREET": "E",
+        "FROM_STREET": "Eastern Traffic Island 78' W of Bishop Allen Dr.",
+        "TO_STREET": "Bishop Allen Drive to 120' S of Bishop Allen Drive",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10699313541829,
+          42.366187633262314
+        ]
+      },
+      "type": "Feature",
+      "id": 149,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Lot #8 Pleasant St",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "N",
+        "FROM_STREET": "90' E of Pleasant St.",
+        "TO_STREET": "114' E of Pleasant St.",
+        "LAST_EDITED_DATE": "2024-03-15"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09159943588422,
+          42.36274765119683
+        ]
+      },
+      "type": "Feature",
+      "id": 150,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "Main St, Opp 300 Tech Square",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "107' E of Albany St",
+        "TO_STREET": "87' E of Albany St",
+        "LAST_EDITED_DATE": "2024-03-15"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13302816510546,
+          42.38758717810069
+        ]
+      },
+      "type": "Feature",
+      "id": 151,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "St Peter's Field Lot",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "",
+        "FROM_STREET": "132' E of Garden St.",
+        "TO_STREET": "",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13284685556629,
+          42.38762889038389
+        ]
+      },
+      "type": "Feature",
+      "id": 152,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "St Peter's Field Lot",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "",
+        "FROM_STREET": "28' W of Sherman St",
+        "TO_STREET": "",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13271765577487,
+          42.3876670919861
+        ]
+      },
+      "type": "Feature",
+      "id": 153,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "St Peter's Field Lot",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "",
+        "FROM_STREET": "214' W of Sherman St.",
+        "TO_STREET": "",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09824313115162,
+          42.37153994364919
+        ]
+      },
+      "type": "Feature",
+      "id": 154,
+      "properties": {
+        "MUNICIPALITY": "Cambridge",
+        "DATA_SOURCE": "cambridge_gis",
+        "PARKING_EVIDENCE": "accessible_space",
+        "STNAME": "",
+        "STREET_NUMBER": "",
+        "SIDE_OF_STREET": "S",
+        "FROM_STREET": "",
+        "TO_STREET": "",
+        "LAST_EDITED_DATE": "2024-03-14"
+      }
+    }
+  ]
+}

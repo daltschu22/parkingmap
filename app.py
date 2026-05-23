@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
-APP_VERSION = "2026-05-23-medford-v1"
+APP_VERSION = "2026-05-23-cambridge-v1"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -26,9 +26,17 @@ _streets_cache = None
 _parking_rules_cache = None
 _medford_streets_cache = None
 _medford_rules_cache = None
+_cambridge_streets_cache = None
+_cambridge_rules_cache = None
+_cambridge_meter_spaces_cache = None
+_cambridge_accessible_spaces_cache = None
 PARKING_RULES_PATH = DATA_DIR / "parking_rules_by_street.json"
 MEDFORD_STREETS_PATH = DATA_DIR / "processed" / "medford" / "streets.geojson"
 MEDFORD_RULES_PATH = DATA_DIR / "processed" / "medford" / "resident_permit_parking_rules.json"
+CAMBRIDGE_STREETS_PATH = DATA_DIR / "processed" / "cambridge" / "streets.geojson"
+CAMBRIDGE_RULES_PATH = DATA_DIR / "processed" / "cambridge" / "parking_rules.json"
+CAMBRIDGE_METER_SPACES_PATH = DATA_DIR / "processed" / "cambridge" / "metered_spaces.geojson"
+CAMBRIDGE_ACCESSIBLE_SPACES_PATH = DATA_DIR / "processed" / "cambridge" / "accessible_spaces.geojson"
 
 
 def _normalize_street_name(value: str | None) -> str:
@@ -144,6 +152,48 @@ def _classify_medford_parking_access(properties: dict, rules: dict) -> tuple[str
     )
 
 
+def _classify_cambridge_parking_access(properties: dict, rules: dict) -> tuple[str, str]:
+    ownership = str(properties.get("OWNERSHIP") or "").strip().lower()
+    if ownership == "private":
+        return "private_rules_apply", "Private street; parking rules are set by owner/signage."
+
+    street_key = _normalize_street_name(properties.get("STNAME"))
+    rule = rules.get(street_key, {})
+    meter_count = int(rule.get("active_meter_count_estimate") or rule.get("meter_count_estimate") or 0)
+    accessible_count = int(rule.get("accessible_space_count") or 0)
+
+    if meter_count > 0:
+        return (
+            "metered_segments_known",
+            (
+                f"Cambridge GIS has {meter_count} active/known metered parking space(s) "
+                "matched to this street by nearest centerline. Treat this as segment evidence, not whole-street status."
+            ),
+        )
+    if accessible_count > 0:
+        return (
+            "parking_special_spaces_known",
+            (
+                f"Cambridge GIS lists {accessible_count} public accessible parking space(s) on this street. "
+                "Other posted rules still need curb-level matching."
+            ),
+        )
+    return (
+        "unknown",
+        "No Cambridge meter or accessible-space record matched this street yet; posted rules may still apply.",
+    )
+
+
+def _format_count_values(values: list[dict], limit: int = 3) -> str:
+    parts = []
+    for item in values[:limit]:
+        value = item.get("value")
+        count = item.get("count")
+        if value and count:
+            parts.append(f"{value} ({count})")
+    return " | ".join(parts)
+
+
 def load_streets():
     """Load and cache the streets GeoJSON data."""
     global _streets_cache
@@ -166,6 +216,39 @@ def load_medford_streets():
         else:
             _medford_streets_cache = {"type": "FeatureCollection", "features": []}
     return _medford_streets_cache
+
+
+def load_cambridge_streets():
+    """Load and cache Cambridge street GeoJSON data."""
+    global _cambridge_streets_cache
+    if _cambridge_streets_cache is None:
+        if CAMBRIDGE_STREETS_PATH.exists():
+            _cambridge_streets_cache = json.loads(CAMBRIDGE_STREETS_PATH.read_text())
+        else:
+            _cambridge_streets_cache = {"type": "FeatureCollection", "features": []}
+    return _cambridge_streets_cache
+
+
+def load_cambridge_meter_spaces():
+    """Load and cache Cambridge metered-space evidence geometry."""
+    global _cambridge_meter_spaces_cache
+    if _cambridge_meter_spaces_cache is None:
+        if CAMBRIDGE_METER_SPACES_PATH.exists():
+            _cambridge_meter_spaces_cache = json.loads(CAMBRIDGE_METER_SPACES_PATH.read_text())
+        else:
+            _cambridge_meter_spaces_cache = {"type": "FeatureCollection", "features": []}
+    return _cambridge_meter_spaces_cache
+
+
+def load_cambridge_accessible_spaces():
+    """Load and cache Cambridge accessible-space evidence geometry."""
+    global _cambridge_accessible_spaces_cache
+    if _cambridge_accessible_spaces_cache is None:
+        if CAMBRIDGE_ACCESSIBLE_SPACES_PATH.exists():
+            _cambridge_accessible_spaces_cache = json.loads(CAMBRIDGE_ACCESSIBLE_SPACES_PATH.read_text())
+        else:
+            _cambridge_accessible_spaces_cache = {"type": "FeatureCollection", "features": []}
+    return _cambridge_accessible_spaces_cache
 
 
 def load_parking_rules():
@@ -195,6 +278,22 @@ def load_medford_rules():
                     rows_by_street.setdefault(key, []).append(row)
             _medford_rules_cache = rows_by_street
     return _medford_rules_cache
+
+
+def load_cambridge_rules():
+    """Load and cache Cambridge parking summaries keyed by normalized street name."""
+    global _cambridge_rules_cache
+    if _cambridge_rules_cache is None:
+        if not CAMBRIDGE_RULES_PATH.exists():
+            _cambridge_rules_cache = {}
+        else:
+            content = json.loads(CAMBRIDGE_RULES_PATH.read_text())
+            _cambridge_rules_cache = {
+                _normalize_street_name(key): value
+                for key, value in content.get("streets", {}).items()
+                if _normalize_street_name(key)
+            }
+    return _cambridge_rules_cache
 
 
 def get_enriched_streets():
@@ -243,6 +342,42 @@ def get_enriched_streets():
         updated_feature["properties"] = props
         features.append(updated_feature)
 
+    cambridge_rules = load_cambridge_rules()
+    cambridge_streets = load_cambridge_streets()
+    for feature in cambridge_streets.get("features", []):
+        props = dict(feature.get("properties", {}))
+        street_key = _normalize_street_name(props.get("STNAME"))
+        rule = cambridge_rules.get(street_key, {})
+        category, note = _classify_cambridge_parking_access(props, cambridge_rules)
+        meter_count = rule.get("meter_count_estimate", 0)
+        active_meter_count = rule.get("active_meter_count_estimate", 0)
+        accessible_count = rule.get("accessible_space_count", 0)
+        if meter_count:
+            match_level = rule.get("meter_match_confidence", "nearest_street_approx")
+        elif accessible_count:
+            match_level = "street_name_accessible_space"
+        else:
+            match_level = "none"
+        props["PARKING_ACCESS"] = category
+        props["PARKING_NOTE"] = note
+        props["PARKING_RULE_SOURCE"] = "Cambridge GIS parking layers"
+        props["PARKING_RULE_MATCH_LEVEL"] = match_level
+        props["PARKING_CAMBRIDGE_METER_COUNT_ESTIMATE"] = meter_count
+        props["PARKING_CAMBRIDGE_ACTIVE_METER_COUNT_ESTIMATE"] = active_meter_count
+        props["PARKING_CAMBRIDGE_ACCESSIBLE_SPACE_COUNT"] = accessible_count
+        props["PARKING_CAMBRIDGE_METER_HOURS"] = _format_count_values(
+            rule.get("meter_operation_hours", [])
+        )
+        props["PARKING_CAMBRIDGE_METER_MAX_TIMES"] = _format_count_values(
+            rule.get("meter_max_times", [])
+        )
+        props["PARKING_CAMBRIDGE_METER_RATES"] = _format_count_values(
+            rule.get("meter_rates", [])
+        )
+        updated_feature = dict(feature)
+        updated_feature["properties"] = props
+        features.append(updated_feature)
+
     return {
         "type": "FeatureCollection",
         "features": features,
@@ -269,6 +404,18 @@ async def get_version():
 async def get_streets():
     """Return all streets as GeoJSON."""
     return JSONResponse(content=get_enriched_streets())
+
+
+@app.get("/api/parking-evidence/cambridge/meters")
+async def get_cambridge_meter_spaces():
+    """Return Cambridge metered-space evidence geometry as GeoJSON."""
+    return JSONResponse(content=load_cambridge_meter_spaces())
+
+
+@app.get("/api/parking-evidence/cambridge/accessible")
+async def get_cambridge_accessible_spaces():
+    """Return Cambridge accessible-space evidence geometry as GeoJSON."""
+    return JSONResponse(content=load_cambridge_accessible_spaces())
 
 
 @app.get("/api/streets/search")

@@ -8,16 +8,18 @@ See [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md), [docs/CURB_SEGMENT_STRATEGY.md
 
 ## Current Status
 
-This repo currently implements a Somerville-focused prototype:
+This repo currently implements a Somerville and Medford prototype:
 
 - Somerville street centerlines are loaded from `data/streets.geojson`.
 - Somerville parking rules are derived from the local traffic regulations PDF.
+- Medford street geometry is loaded from MassGIS/MassDOT Roads.
+- Medford resident-permit rules are derived from the official resident permit street PDF.
 - Matching is street-name based, not exact block-segment based.
-- Boston, Cambridge, Medford, and other surrounding communities are target future coverage areas.
+- Boston, Cambridge, and other surrounding communities are target future coverage areas.
 
 ## Features
 
-- Interactive map with Somerville streets
+- Interactive map with Somerville and Medford streets
 - Search streets by name
 - Click streets to see details, including current parking-rule classification
 - Dark theme with modern UI
@@ -38,6 +40,7 @@ To fetch raw public source files for Medford:
 
 ```bash
 python3 scripts/fetch_public_sources.py --municipality medford
+python3 build_medford_streets.py
 python3 build_medford_rules_seed.py
 ```
 
@@ -87,6 +90,7 @@ parkingmap/
 ├── app.py              # FastAPI application
 ├── build_parking_rules.py # Build structured rules from the city PDF
 ├── build_medford_rules_seed.py # Build first-pass Medford row-level permit rules
+├── build_medford_streets.py # Download Medford street geometry from MassGIS/MassDOT
 ├── scripts/
 │   └── fetch_public_sources.py # Download official source files from manifest
 ├── parkingmap.py       # Module entrypoint for `python -m parkingmap`

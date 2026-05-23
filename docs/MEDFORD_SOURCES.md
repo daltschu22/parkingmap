@@ -17,6 +17,7 @@ python3 scripts/fetch_public_sources.py --municipality medford
 - Snow policy page: `data/raw/medford/snow-policies.html`
 - Private-way parking page: `data/raw/medford/parking-on-private-ways.html`
 - Business, municipal, and commuter parking maps: `data/raw/medford/maps/`
+- MassGIS/MassDOT Roads FeatureServer extract: `data/processed/medford/streets.geojson`
 
 ## Derived Data
 
@@ -24,6 +25,10 @@ python3 scripts/fetch_public_sources.py --municipality medford
 
 - `data/processed/medford/resident_permit_parking_text.txt`
 - `data/processed/medford/resident_permit_parking_rules.json`
+
+`build_medford_streets.py` emits:
+
+- `data/processed/medford/streets.geojson`
 
 The JSON output preserves resident-permit rows and marks rows as:
 
@@ -38,5 +43,4 @@ Rows marked `partial_or_segment_specific` must not be painted as whole-street pa
 - Parse public/private ways into a street ownership dataset.
 - Georeference or digitize the G Zone map.
 - Extract pay-to-park and business-permit spans from the Medford parking maps.
-- Add a Medford street centerline source, likely MassGIS Base Streets if no city open centerline export is available.
 - Match resident-permit rows to curb spans using address ranges, cross streets, side-of-street phrases, and distance text.

@@ -4,7 +4,15 @@
 
 `parkingmap` is a FastAPI web app for visualizing street and parking-rule data on an interactive map.
 
-The long-term goal is accurate curb-level parking status for Boston-area municipalities. Current implemented coverage starts with Somerville, with Medford source ingestion and row-level permit parsing in progress.
+The goal is an accurate interactive parking map for Boston and surrounding municipalities such as Cambridge, Somerville, Medford, and nearby towns.
+
+The app should answer the practical question: can someone park at a specific curb location, and under what rule? Whole-street labels are not accurate enough. If a street has one meter, one loading zone, one resident-only side, or one partial restriction, do not mark the whole street with that status.
+
+Each city may be its own ingestion challenge. Expect city-specific data sources, PDF formats, maps, ordinances, GIS exports, and parser quirks. Build shared output models and confidence fields, but keep city-specific extraction logic where needed.
+
+Official public data comes first. Download and preserve PDFs, maps, HTML pages, GIS files, and other source artifacts when they are needed to reproduce parsing. Some sources will require PDF text extraction; some may require OCR or manual georeferencing. Street-level imagery, sign recognition, meter detection, or DGX-backed image processing can be considered later when official sources are missing or need verification, but imagery should not replace official rules without confidence/source notes.
+
+Current implemented coverage starts with Somerville, with Medford source ingestion and row-level permit parsing in progress.
 
 ## Commands
 
@@ -23,5 +31,7 @@ The app serves on `0.0.0.0` and reads `PORT` from the environment.
 - Medford source files are tracked in `data/source_manifest.json`; downloaded files live under `data/raw/medford/`.
 - Parking-rule matching is currently street-name based, not block-segment precise.
 - Do not collapse partial, side-specific, address-range, or from/to-block rules into whole-street statuses.
+- Preserve source attribution, source file paths, raw extracted text, and parser confidence wherever practical.
+- Prefer curb segments as the long-term unit of truth: side of street, start anchor, end anchor, rule, active time, source, and confidence.
 - Keep changes focused on the app, parser, and local data files already in this repo.
 - Avoid broad rewrites unless they are needed for the requested behavior.

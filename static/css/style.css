@@ -101,6 +101,35 @@ html, body {
     background: var(--primary-dark);
 }
 
+.map-mode {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.375rem;
+    padding: 0 1.5rem 1rem;
+}
+
+.map-mode-btn {
+    min-height: 2.5rem;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: var(--bg-darker);
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.map-mode-btn.active {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: white;
+}
+
+.map-mode-btn:focus-visible {
+    outline: 2px solid var(--warning);
+    outline-offset: 2px;
+}
+
 /* Legend */
 .legend {
     padding: 1rem 1.5rem;
@@ -252,6 +281,16 @@ html, body {
     font-family: inherit;
 }
 
+.leaflet-control-layers {
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+}
+
+.leaflet-control-layers-toggle {
+    background-color: var(--text-primary);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .app-container {
@@ -268,5 +307,9 @@ html, body {
     .map-container {
         flex: 1;
         min-height: 60vh;
+    }
+
+    .leaflet-control-layers {
+        display: none;
     }
 }

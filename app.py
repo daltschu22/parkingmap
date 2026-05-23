@@ -11,7 +11,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
-APP_VERSION = "2026-05-23-cambridge-v1"
+APP_VERSION = "2026-05-23-satellite-v2"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"

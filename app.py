@@ -1,5 +1,5 @@
 """
-Somerville Parking Map - Interactive street parking visualization
+Parking Map - Interactive street parking-rule visualization.
 """
 import json
 import os
@@ -10,7 +10,7 @@ from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
-app = FastAPI(title="Somerville Parking Map")
+app = FastAPI(title="Parking Map")
 APP_VERSION = "2026-03-02-parking-access-v6"
 
 BASE_DIR = Path(__file__).parent

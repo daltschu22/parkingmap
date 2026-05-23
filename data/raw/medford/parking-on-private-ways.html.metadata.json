@@ -1,0 +1,11 @@
+{
+  "id": "medford_private_way_parking_page",
+  "title": "Parking on Private Ways page",
+  "municipality": "medford",
+  "category": "private_way",
+  "url": "https://www.medfordma.org/departments/parking/parking-on-private-ways",
+  "downloaded_at_utc": "2026-05-23T09:54:16.686072+00:00",
+  "http_status": 200,
+  "content_type": "text/html; charset=utf-8",
+  "bytes": 75499
+}

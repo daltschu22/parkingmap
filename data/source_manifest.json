@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "somerville_traffic_regulations_pdf",
+      "municipality": "somerville",
+      "title": "Traffic Commission Regulations PDF",
+      "url": "https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-regulations_1.pdf",
+      "destination": "data/raw/somerville/traffic-commission-regulations.pdf",
+      "type": "pdf",
+      "category": "traffic_regulations",
+      "enabled": false,
+      "notes": "Existing prototype source; current copy is data/traffic-regulations.pdf."
+    },
+    {
+      "id": "medford_parking_department_page",
+      "municipality": "medford",
+      "title": "Parking Department page",
+      "url": "https://www.medfordma.org/departments/parking",
+      "destination": "data/raw/medford/parking_department.html",
+      "type": "html",
+      "category": "source_index",
+      "enabled": true,
+      "notes": "Official page linking permit lists, maps, private/public ways, meter info, snow policy, and related parking rules."
+    },
+    {
+      "id": "medford_resident_permit_streets_pdf",
+      "municipality": "medford",
+      "title": "Resident Permit Parking Streets",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/c2132e77-d61f-40b1-9aa8-1add88772e3d",
+      "destination": "data/raw/medford/resident-permit-parking-streets.pdf",
+      "type": "pdf",
+      "category": "resident_permit",
+      "enabled": true,
+      "notes": "Street list with restrictions, partial ranges, time windows, permit type, and G Zone markers."
+    },
+    {
+      "id": "medford_public_private_ways_pdf",
+      "municipality": "medford",
+      "title": "List of public roads and private ways",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/3f8a4be0-0e79-46b8-9c72-c7241deab7db",
+      "destination": "data/raw/medford/public-roads-private-ways.pdf",
+      "type": "pdf",
+      "category": "street_ownership",
+      "enabled": true,
+      "notes": "Official public/private way list for classifying private-street parking caveats."
+    },
+    {
+      "id": "medford_commercial_overnight_rule_image",
+      "municipality": "medford",
+      "title": "Commercial Overnight Parking Prohibited",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/8c352261-50aa-4a26-b74e-72de15060207",
+      "destination": "data/raw/medford/commercial-overnight-parking-prohibited.png",
+      "type": "image",
+      "category": "citywide_rule",
+      "enabled": true,
+      "notes": "Traffic Commission Rules and Regulations Article V9 Section 12."
+    },
+    {
+      "id": "medford_green_line_zone_page",
+      "municipality": "medford",
+      "title": "Green Line Zone page",
+      "url": "https://www.medfordma.org/departments/parking/green-line-zone",
+      "destination": "data/raw/medford/green-line-zone.html",
+      "type": "html",
+      "category": "resident_permit_zone",
+      "enabled": true,
+      "notes": "Official description of G Zone policy and enforcement notes."
+    },
+    {
+      "id": "medford_green_line_zone_map",
+      "municipality": "medford",
+      "title": "GL Transit District Pilot Permit Parking Program map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/809c574b-8dfd-4592-af4a-5b05bbe85571",
+      "destination": "data/raw/medford/green-line-zone-map.png",
+      "type": "image",
+      "category": "resident_permit_zone",
+      "enabled": true,
+      "notes": "Map distinguishes public streets with resident permit parking, pay-to-park streets, private streets, and zone boundary."
+    },
+    {
+      "id": "medford_snow_policy_page",
+      "municipality": "medford",
+      "title": "Snow Policies page",
+      "url": "https://www.medfordma.org/for-residents/snow",
+      "destination": "data/raw/medford/snow-policies.html",
+      "type": "html",
+      "category": "temporary_rule",
+      "enabled": true,
+      "notes": "Snow emergency parking rules."
+    },
+    {
+      "id": "medford_private_way_parking_page",
+      "municipality": "medford",
+      "title": "Parking on Private Ways page",
+      "url": "https://www.medfordma.org/departments/parking/parking-on-private-ways",
+      "destination": "data/raw/medford/parking-on-private-ways.html",
+      "type": "html",
+      "category": "private_way",
+      "enabled": true,
+      "notes": "Private way signage and towing requirements."
+    },
+    {
+      "id": "medford_alfred_street_parking_map",
+      "municipality": "medford",
+      "title": "Alfred Street parking map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/35ffeb43-351c-4144-aad7-c235a6942cd7",
+      "destination": "data/raw/medford/maps/alfred-street-parking-map.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_bonner_alexander_parking_map",
+      "municipality": "medford",
+      "title": "Bonner Ave. and Alexander Ave. parking map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/1e2edd7b-d553-4b80-9ecf-d4f48a3f8213",
+      "destination": "data/raw/medford/maps/bonner-alexander-parking-map.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_city_hall_lot_map",
+      "municipality": "medford",
+      "title": "City Hall parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/8ad99a98-8da4-47b5-9fbb-aae56f7f6b30",
+      "destination": "data/raw/medford/maps/city-hall-parking-lot.jpg",
+      "type": "image",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_clippership_drive_lot_map",
+      "municipality": "medford",
+      "title": "Clippership Drive parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/1755a5e6-66c7-4f52-8660-b464035c503c",
+      "destination": "data/raw/medford/maps/clippership-drive-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_governors_avenue_lot_map",
+      "municipality": "medford",
+      "title": "Governors Avenue parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/89080ffd-97bf-47a3-90aa-7cf4fc5e88be",
+      "destination": "data/raw/medford/maps/governors-avenue-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_governors_avenue_parking_map",
+      "municipality": "medford",
+      "title": "Governors Avenue parking map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/f513d9af-7b80-451c-aae6-fdc40d93b11f",
+      "destination": "data/raw/medford/maps/governors-avenue-parking-map.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_lambert_street_lot_map",
+      "municipality": "medford",
+      "title": "Lambert Street parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/4ccf7600-19f5-4615-8cdb-58998895b1c7",
+      "destination": "data/raw/medford/maps/lambert-street-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_morton_avenue_lot_map",
+      "municipality": "medford",
+      "title": "Morton Avenue parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/3f739b07-aae9-4492-9d02-1f1334c939ca",
+      "destination": "data/raw/medford/maps/morton-avenue-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_playstead_road_commuter_map",
+      "municipality": "medford",
+      "title": "Playstead Road commuter parking map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/c5b080bc-dbbb-42fa-9cdc-526953f85149",
+      "destination": "data/raw/medford/maps/playstead-road-commuter-parking-map.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_salem_street_lot_map",
+      "municipality": "medford",
+      "title": "Salem Street parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/3c92f619-adc7-4843-a711-0b5b71e8a8be",
+      "destination": "data/raw/medford/maps/salem-street-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_west_medford_lot_map",
+      "municipality": "medford",
+      "title": "West Medford parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/dd6de10c-0a48-407a-9df3-680b1a50f433",
+      "destination": "data/raw/medford/maps/west-medford-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_winthrop_street_lot_map",
+      "municipality": "medford",
+      "title": "Winthrop Street parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/85a545cf-b6f9-4fad-9376-8066d0847cde",
+      "destination": "data/raw/medford/maps/winthrop-street-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_yale_street_lot_map",
+      "municipality": "medford",
+      "title": "Yale Street parking lot map",
+      "url": "https://www.medfordma.org/fs/resource-manager/view/4f346969-fbba-4806-aa85-89ad87466fd6",
+      "destination": "data/raw/medford/maps/yale-street-parking-lot.pdf",
+      "type": "pdf",
+      "category": "business_municipal_commuter_map",
+      "enabled": true,
+      "notes": "Official business, municipal, and commuter parking map."
+    }
+  ]
+}

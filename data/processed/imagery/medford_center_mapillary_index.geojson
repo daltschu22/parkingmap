@@ -1,0 +1,1368 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "generated_at_utc": "2026-05-23T16:55:06.534450+00:00",
+    "provider": "mapillary",
+    "provider_api": "https://graph.mapillary.com/images",
+    "municipalities": [
+      "medford"
+    ],
+    "sample_count": 60,
+    "image_metadata_count": 51,
+    "radius_meters": 45,
+    "sample_bbox": null,
+    "sample_center": [
+      42.4184,
+      -71.1062
+    ],
+    "sample_radius_meters": 700,
+    "photos_per_sample": 2,
+    "errors": [
+      {
+        "sample_index": 24,
+        "municipality": "Medford",
+        "street_name": "RIVER STREET",
+        "lat": 42.4178815955856,
+        "lng": -71.108100776598,
+        "error": "HTTPError: HTTP Error 500: Internal Server Error"
+      },
+      {
+        "sample_index": 42,
+        "municipality": "Medford",
+        "street_name": "FOREST STREET",
+        "lat": 42.4184082685095,
+        "lng": -71.1094467209898,
+        "error": "HTTPError: HTTP Error 500: Internal Server Error"
+      }
+    ],
+    "note": "Metadata index only. Image URLs are source evidence for later review/inference; do not treat image detections as legal parking rules without confidence and source notes."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107174146093,
+          42.418638748714
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2605472429757684",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972779800,
+        "HEADING": 264.53799311278,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-7xbuGv8YSyZDDO0SEhcRHHEmjAdIykZjgp2eNdU6HPo6sCYsQn62ytuSLURx-HCkrxzSNfMPHKQRSa_-8TJaMCrKr2k70_7rOK0QzsllPqDOs88XiLYnyPmT1TLTyQpswvmNmeYKKLXQLOxxu_A?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Z0I3_iCZAeUm3vFzJ5-wKA&_nc_oc=Adp6Ys3fRTL3KxXd2dCPuOwGBoH8RNOAe2bcGGqq6QhUiBeEQuiZ3FBmpKM18avB6YM&ccb=10-5&oh=00_Af5IYhCmrQV7Y-NaDbFE6i5ZfZjtEprtmLZLwiV3X87Tsg&oe=6A39492C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-7xbuGv8YSyZDDO0SEhcRHHEmjAdIykZjgp2eNdU6HPo6sCYsQn62ytuSLURx-HCkrxzSNfMPHKQRSa_-8TJaMCrKr2k70_7rOK0QzsllPqDOs88XiLYnyPmT1TLTyQpswvmNmeYKKLXQLOxxu_A?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Z0I3_iCZAeUm3vFzJ5-wKA&_nc_oc=Adp6Ys3fRTL3KxXd2dCPuOwGBoH8RNOAe2bcGGqq6QhUiBeEQuiZ3FBmpKM18avB6YM&ccb=10-5&oh=00_Af710n6auebXCXQcFbGULBpn03beV5QWl4e53cl5Ic2Yaw&oe=6A39492C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-7xbuGv8YSyZDDO0SEhcRHHEmjAdIykZjgp2eNdU6HPo6sCYsQn62ytuSLURx-HCkrxzSNfMPHKQRSa_-8TJaMCrKr2k70_7rOK0QzsllPqDOs88XiLYnyPmT1TLTyQpswvmNmeYKKLXQLOxxu_A?edm=AOnQwmMEAAAA&_nc_gid=Z0I3_iCZAeUm3vFzJ5-wKA&_nc_oc=Adp6Ys3fRTL3KxXd2dCPuOwGBoH8RNOAe2bcGGqq6QhUiBeEQuiZ3FBmpKM18avB6YM&ccb=10-5&oh=00_Af5O1HpJ6P8lv-z__TK0jpkdf5KnQD-Wnoc8Q5i5ThBKLQ&oe=6A39492C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2605472429757684",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 364089,
+        "SAMPLE_LAT": 42.4185797161006,
+        "SAMPLE_LNG": -71.1064387661216
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107005140809,
+          42.418555798878
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "230208002196071",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972777600,
+        "HEADING": 256.25638571712,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-FJngBr9C-1GJUAJyjPechpACpXsf8GRyb7xJYvLnepvKGXmA0jdfLqmAQBHip4I8fnHtQZ_8Rd58S6912InIutUpcWP5lR9aPkYvG3Gg2c1nEU3lItBLpzyvdWgfyLSCLHYqzJJshncAywbYQtz0?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Z0I3_iCZAeUm3vFzJ5-wKA&_nc_oc=AdpIktQy08GS-sw1d1Ly7PKOWIk28nRjxm5Ifgn-vBugq8xJuRDXijXnWXD41Y88qt0&ccb=10-5&oh=00_Af4HCcOI2I1ErpfaWp-EgA3ntEXqjiCTUUOAF1GukqHVuQ&oe=6A395974&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-FJngBr9C-1GJUAJyjPechpACpXsf8GRyb7xJYvLnepvKGXmA0jdfLqmAQBHip4I8fnHtQZ_8Rd58S6912InIutUpcWP5lR9aPkYvG3Gg2c1nEU3lItBLpzyvdWgfyLSCLHYqzJJshncAywbYQtz0?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Z0I3_iCZAeUm3vFzJ5-wKA&_nc_oc=AdpIktQy08GS-sw1d1Ly7PKOWIk28nRjxm5Ifgn-vBugq8xJuRDXijXnWXD41Y88qt0&ccb=10-5&oh=00_Af5tWLuZ7Zh-woQ5q9zWZbD4XBMKYxt1qnZAjwheTadT9w&oe=6A395974&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-FJngBr9C-1GJUAJyjPechpACpXsf8GRyb7xJYvLnepvKGXmA0jdfLqmAQBHip4I8fnHtQZ_8Rd58S6912InIutUpcWP5lR9aPkYvG3Gg2c1nEU3lItBLpzyvdWgfyLSCLHYqzJJshncAywbYQtz0?edm=AOnQwmMEAAAA&_nc_gid=Z0I3_iCZAeUm3vFzJ5-wKA&_nc_oc=AdpIktQy08GS-sw1d1Ly7PKOWIk28nRjxm5Ifgn-vBugq8xJuRDXijXnWXD41Y88qt0&ccb=10-5&oh=00_Af5SjahUVdjqrodEgpzvS9Tq5fr8oGd6D20qy-GGbbKC4Q&oe=6A395974&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=230208002196071",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 364089,
+        "SAMPLE_LAT": 42.4185797161006,
+        "SAMPLE_LNG": -71.1064387661216
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106098223503,
+          42.418736754521
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "168914158486850",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972742600,
+        "HEADING": 225.23725023799,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=YbbvOtlHPxJ7eUo9LXiOWg&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af6MN_4XUsYgIkN5rIgPneTKWx8Y3c5aDDveHgOR0NRGAw&oe=6A393074&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=YbbvOtlHPxJ7eUo9LXiOWg&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af4YhmPGjNLK3iuQr6huRxUsANxNtm3C6miLSvJW3A_Eqw&oe=6A393074&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?edm=AOnQwmMEAAAA&_nc_gid=YbbvOtlHPxJ7eUo9LXiOWg&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af7tEj0yEB-C40xmMTJPmNyt2hV7gdtR4ASMD3qDaUX1CA&oe=6A393074&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=168914158486850",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 394338,
+        "SAMPLE_LAT": 42.4186743486471,
+        "SAMPLE_LNG": -71.1060794988291
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10624743083,
+          42.418669233743
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1024324898099042",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972745900,
+        "HEADING": 233.03707564508,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AvkuzOG3YEdSVTm9tpSgOZ_nShZvN-FEke11wqwFCvZp9rfy0OBfHKepae_hqrrc0pEPAYT_A647TOSB1vLmOZUj0BeUztjz78GDmnnem5reKoE8S8EeznVpXDd_driNCOYRmLQkXIe1yfsPZ_A?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=YbbvOtlHPxJ7eUo9LXiOWg&_nc_oc=AdqYCLA0WM9TPzfNEFJL8ocQOoty-GBBvE7vqQZPgUxpomijRsnAdoDKF_CYaYM8H_o&ccb=10-5&oh=00_Af7Qtl5b9RaN9ooTeGTokk32X4Ysdvl2U_ru5Csin-SQ5Q&oe=6A394170&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AvkuzOG3YEdSVTm9tpSgOZ_nShZvN-FEke11wqwFCvZp9rfy0OBfHKepae_hqrrc0pEPAYT_A647TOSB1vLmOZUj0BeUztjz78GDmnnem5reKoE8S8EeznVpXDd_driNCOYRmLQkXIe1yfsPZ_A?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=YbbvOtlHPxJ7eUo9LXiOWg&_nc_oc=AdqYCLA0WM9TPzfNEFJL8ocQOoty-GBBvE7vqQZPgUxpomijRsnAdoDKF_CYaYM8H_o&ccb=10-5&oh=00_Af6GxOPu_7HKXgOEv8L61_uDJ_gpUGo5ykeSE0HzoDGapg&oe=6A394170&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AvkuzOG3YEdSVTm9tpSgOZ_nShZvN-FEke11wqwFCvZp9rfy0OBfHKepae_hqrrc0pEPAYT_A647TOSB1vLmOZUj0BeUztjz78GDmnnem5reKoE8S8EeznVpXDd_driNCOYRmLQkXIe1yfsPZ_A?edm=AOnQwmMEAAAA&_nc_gid=YbbvOtlHPxJ7eUo9LXiOWg&_nc_oc=AdqYCLA0WM9TPzfNEFJL8ocQOoty-GBBvE7vqQZPgUxpomijRsnAdoDKF_CYaYM8H_o&ccb=10-5&oh=00_Af4QCGffIedzIUylNCl2vC3A8wJLJQ1yd1fLhGgutcz37g&oe=6A394170&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1024324898099042",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 394338,
+        "SAMPLE_LAT": 42.4186743486471,
+        "SAMPLE_LNG": -71.1060794988291
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106163809568,
+          42.418704706643
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "131478235599267",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972743700,
+        "HEADING": 227.64344836146,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9-ivi7l3-RnfaQCs08mpkHRGUttb--SEbizSJFPENzhJ_DqfStAd7Ud8R9kkbH1A35lV7Wvd3F8U0L58sgSpL5BFexgdsAlnrbhgK3VAFnVDrgOs2Nb9-1wOAjo6UGjQ62oJPMoaD8qcQ4hk4VXc8?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=enpkR3gQRllXEDllKpRE6w&_nc_oc=AdpNpjYOzjH71a_x6fi7NXipKSp_Ve05LJN67GsSIA5sLWN1U-cz7S8qhbKi3j08AW4&ccb=10-5&oh=00_Af7CTC9WeMl3epAdzcpR_imP4ck8eQSRIGv7nCB4xUCCig&oe=6A3966B0&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9-ivi7l3-RnfaQCs08mpkHRGUttb--SEbizSJFPENzhJ_DqfStAd7Ud8R9kkbH1A35lV7Wvd3F8U0L58sgSpL5BFexgdsAlnrbhgK3VAFnVDrgOs2Nb9-1wOAjo6UGjQ62oJPMoaD8qcQ4hk4VXc8?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=enpkR3gQRllXEDllKpRE6w&_nc_oc=AdpNpjYOzjH71a_x6fi7NXipKSp_Ve05LJN67GsSIA5sLWN1U-cz7S8qhbKi3j08AW4&ccb=10-5&oh=00_Af79kwdIB5rwxyjPlTC7totusJfGsYKrTD0e33A84e9wRQ&oe=6A3966B0&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9-ivi7l3-RnfaQCs08mpkHRGUttb--SEbizSJFPENzhJ_DqfStAd7Ud8R9kkbH1A35lV7Wvd3F8U0L58sgSpL5BFexgdsAlnrbhgK3VAFnVDrgOs2Nb9-1wOAjo6UGjQ62oJPMoaD8qcQ4hk4VXc8?edm=AOnQwmMEAAAA&_nc_gid=enpkR3gQRllXEDllKpRE6w&_nc_oc=AdpNpjYOzjH71a_x6fi7NXipKSp_Ve05LJN67GsSIA5sLWN1U-cz7S8qhbKi3j08AW4&ccb=10-5&oh=00_Af61WHYO62ffLeHQFBX5AxD5t6IbRRjmKNGzfU8YSAq4rQ&oe=6A3966B0&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=131478235599267",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "GEORGE P. HASSETT DRIVE",
+        "SAMPLE_SEGMENT_ID": 401408,
+        "SAMPLE_LAT": 42.4186218737774,
+        "SAMPLE_LNG": -71.1059223187616
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106262410201,
+          42.418663431729
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1352447538469991",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972749000,
+        "HEADING": 257.27799634199,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_X8wXiAAfkooB-u1t2aRcz7CmSiPRJOUVIiOfYqrHVXsFzkXciJEYLTe2pjRi_hAa7LTAGK8aBMAm4XzbHpJziB2khxSYkmJ95IxyramG4JQDyvB_8TiizoGQjfcmZPCU9EHN6yG7bUOnUVdUFcA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=enpkR3gQRllXEDllKpRE6w&_nc_oc=AdqJMRNYQ_YVahNlFH1KtradSffLZGxdDkrR8jyvpv2Wjq8C4TCN02JsbGc4WRyFcEc&ccb=10-5&oh=00_Af456CFuU6n4aak0d8eKNG8l7BErYMMOqgqa7YM9hjh20g&oe=6A395D2A&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_X8wXiAAfkooB-u1t2aRcz7CmSiPRJOUVIiOfYqrHVXsFzkXciJEYLTe2pjRi_hAa7LTAGK8aBMAm4XzbHpJziB2khxSYkmJ95IxyramG4JQDyvB_8TiizoGQjfcmZPCU9EHN6yG7bUOnUVdUFcA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=enpkR3gQRllXEDllKpRE6w&_nc_oc=AdqJMRNYQ_YVahNlFH1KtradSffLZGxdDkrR8jyvpv2Wjq8C4TCN02JsbGc4WRyFcEc&ccb=10-5&oh=00_Af7stJ2T_680UtQDhwnM_-rnfHnaZ27SJEjijYFn1VuCUw&oe=6A395D2A&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_X8wXiAAfkooB-u1t2aRcz7CmSiPRJOUVIiOfYqrHVXsFzkXciJEYLTe2pjRi_hAa7LTAGK8aBMAm4XzbHpJziB2khxSYkmJ95IxyramG4JQDyvB_8TiizoGQjfcmZPCU9EHN6yG7bUOnUVdUFcA?edm=AOnQwmMEAAAA&_nc_gid=enpkR3gQRllXEDllKpRE6w&_nc_oc=AdqJMRNYQ_YVahNlFH1KtradSffLZGxdDkrR8jyvpv2Wjq8C4TCN02JsbGc4WRyFcEc&ccb=10-5&oh=00_Af58JloZ_PDbJv_kloZTuwZtqp5nloTDvh9HC-NuG69EsQ&oe=6A395D2A&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1352447538469991",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "GEORGE P. HASSETT DRIVE",
+        "SAMPLE_SEGMENT_ID": 401408,
+        "SAMPLE_LAT": 42.4186218737774,
+        "SAMPLE_LNG": -71.1059223187616
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106143198585,
+          42.418714342326
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2071680319637650",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972743300,
+        "HEADING": 227.64334621465,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Xfzo_3iFwHAK86oZyNMHF9auBVgrHQI-bCMvSdzSpJfMxf0scFDyJvIx4zLcQUvol0ELvfWjbxBhu3wK2-Z9dF5RxvRcOZ6R6jD6ZUhJA32qE6xXUK5MAcznVBd8kCD2Jirs43wlLZuMP_fpt1A?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=MMU0nmnZnUp08nrItqcWTg&_nc_oc=AdpsZWveWTIHUZDqydeesPjoJVelCRCdKEs2ka5eAxl_fVGN0XHZ4qtcqvpBUOHuwSg&ccb=10-5&oh=00_Af6nLrW3UpWjhCsO1tWZ5mSRrhBldzdbQS28UEk2Yx2H7Q&oe=6A394A96&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Xfzo_3iFwHAK86oZyNMHF9auBVgrHQI-bCMvSdzSpJfMxf0scFDyJvIx4zLcQUvol0ELvfWjbxBhu3wK2-Z9dF5RxvRcOZ6R6jD6ZUhJA32qE6xXUK5MAcznVBd8kCD2Jirs43wlLZuMP_fpt1A?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=MMU0nmnZnUp08nrItqcWTg&_nc_oc=AdpsZWveWTIHUZDqydeesPjoJVelCRCdKEs2ka5eAxl_fVGN0XHZ4qtcqvpBUOHuwSg&ccb=10-5&oh=00_Af5XX0Eyn1wJbis9T0M61_PqShTYwPo4y9PXiQfx7nBcmw&oe=6A394A96&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Xfzo_3iFwHAK86oZyNMHF9auBVgrHQI-bCMvSdzSpJfMxf0scFDyJvIx4zLcQUvol0ELvfWjbxBhu3wK2-Z9dF5RxvRcOZ6R6jD6ZUhJA32qE6xXUK5MAcznVBd8kCD2Jirs43wlLZuMP_fpt1A?edm=AOnQwmMEAAAA&_nc_gid=MMU0nmnZnUp08nrItqcWTg&_nc_oc=AdpsZWveWTIHUZDqydeesPjoJVelCRCdKEs2ka5eAxl_fVGN0XHZ4qtcqvpBUOHuwSg&ccb=10-5&oh=00_Af7v2NYAx3p-HlKgY1g4OExJ-99gHyXQDi2QdOUksBCe6Q&oe=6A394A96&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2071680319637650",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "OAKLAND STREET",
+        "SAMPLE_SEGMENT_ID": 152340,
+        "SAMPLE_LAT": 42.4187142254366,
+        "SAMPLE_LNG": -71.10640375565
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106154627328,
+          42.418708903205
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1139586649840740",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972743500,
+        "HEADING": 227.64335158427,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-v2PXneSZyUYA_u7X2qh8dOnDG92xv4Thtuz3MD1Xs7Nm95Z1w6vWK09_Gq6TCFlNSmQqZSeLF-2PnChFmUMMxpBYIf9LWKgdMHum5WvD0jdHsMjTT77TjZkRV6LsyNcKgEY_YZsuT5scG2MjiPA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=MMU0nmnZnUp08nrItqcWTg&_nc_oc=AdoVmtv957LsRilB60d6_cs5_IyifzJRe4f9Dh_kJTaTkZkfo6kaR792F94MERQcg3M&ccb=10-5&oh=00_Af6fIllxAlCnGll54fHzbdrV4jeI84a03FQ1PuwxU4D08w&oe=6A3963F0&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-v2PXneSZyUYA_u7X2qh8dOnDG92xv4Thtuz3MD1Xs7Nm95Z1w6vWK09_Gq6TCFlNSmQqZSeLF-2PnChFmUMMxpBYIf9LWKgdMHum5WvD0jdHsMjTT77TjZkRV6LsyNcKgEY_YZsuT5scG2MjiPA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=MMU0nmnZnUp08nrItqcWTg&_nc_oc=AdoVmtv957LsRilB60d6_cs5_IyifzJRe4f9Dh_kJTaTkZkfo6kaR792F94MERQcg3M&ccb=10-5&oh=00_Af58FaaqFB6Wa6GCnWSIvHVEhLWAujbb2nNKA-nVn-xjKA&oe=6A3963F0&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-v2PXneSZyUYA_u7X2qh8dOnDG92xv4Thtuz3MD1Xs7Nm95Z1w6vWK09_Gq6TCFlNSmQqZSeLF-2PnChFmUMMxpBYIf9LWKgdMHum5WvD0jdHsMjTT77TjZkRV6LsyNcKgEY_YZsuT5scG2MjiPA?edm=AOnQwmMEAAAA&_nc_gid=MMU0nmnZnUp08nrItqcWTg&_nc_oc=AdoVmtv957LsRilB60d6_cs5_IyifzJRe4f9Dh_kJTaTkZkfo6kaR792F94MERQcg3M&ccb=10-5&oh=00_Af5jo_EUN06mNASEJUk54hQ4CqClNqTMORRDD2h4lByesA&oe=6A3963F0&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1139586649840740",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "OAKLAND STREET",
+        "SAMPLE_SEGMENT_ID": 152340,
+        "SAMPLE_LAT": 42.4187142254366,
+        "SAMPLE_LNG": -71.10640375565
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10624743083,
+          42.418669233743
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1024324898099042",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972745900,
+        "HEADING": 233.03707564508,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AvkuzOG3YEdSVTm9tpSgOZ_nShZvN-FEke11wqwFCvZp9rfy0OBfHKepae_hqrrc0pEPAYT_A647TOSB1vLmOZUj0BeUztjz78GDmnnem5reKoE8S8EeznVpXDd_driNCOYRmLQkXIe1yfsPZ_A?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Rw5d7yc7deYAIqEJw_geOA&_nc_oc=AdqYCLA0WM9TPzfNEFJL8ocQOoty-GBBvE7vqQZPgUxpomijRsnAdoDKF_CYaYM8H_o&ccb=10-5&oh=00_Af5bKMGadCf3h7a3KXAcAOdva-XJ1x48YIoSOQ5uuKSX7A&oe=6A394170&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AvkuzOG3YEdSVTm9tpSgOZ_nShZvN-FEke11wqwFCvZp9rfy0OBfHKepae_hqrrc0pEPAYT_A647TOSB1vLmOZUj0BeUztjz78GDmnnem5reKoE8S8EeznVpXDd_driNCOYRmLQkXIe1yfsPZ_A?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Rw5d7yc7deYAIqEJw_geOA&_nc_oc=AdqYCLA0WM9TPzfNEFJL8ocQOoty-GBBvE7vqQZPgUxpomijRsnAdoDKF_CYaYM8H_o&ccb=10-5&oh=00_Af5UafVQkR5fMGrmvaKE7iaF_uB9pn-tFWENmnM51Kzq0w&oe=6A394170&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AvkuzOG3YEdSVTm9tpSgOZ_nShZvN-FEke11wqwFCvZp9rfy0OBfHKepae_hqrrc0pEPAYT_A647TOSB1vLmOZUj0BeUztjz78GDmnnem5reKoE8S8EeznVpXDd_driNCOYRmLQkXIe1yfsPZ_A?edm=AOnQwmMEAAAA&_nc_gid=Rw5d7yc7deYAIqEJw_geOA&_nc_oc=AdqYCLA0WM9TPzfNEFJL8ocQOoty-GBBvE7vqQZPgUxpomijRsnAdoDKF_CYaYM8H_o&ccb=10-5&oh=00_Af5N61xL0gaVkPAG9Sv4B0aIkkvQkFCkEZH7Fx6CG44HUg&oe=6A394170&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1024324898099042",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 394339,
+        "SAMPLE_LAT": 42.4188673505481,
+        "SAMPLE_LNG": -71.105750999969
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106098223503,
+          42.418736754521
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "168914158486850",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972742600,
+        "HEADING": 225.23725023799,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Rw5d7yc7deYAIqEJw_geOA&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af467D8qATeomjqcK-N2t5KkW2uxk8dhzJdHX_rMCDpP1w&oe=6A393074&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Rw5d7yc7deYAIqEJw_geOA&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af5X9Sel6uNXBqJG1hjT3ycVWuPPc9zssW08IzxtlRtxfg&oe=6A393074&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?edm=AOnQwmMEAAAA&_nc_gid=Rw5d7yc7deYAIqEJw_geOA&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af4JXvizT6teHJ1hkemGwqsbwFu0hz10x9mFz8IKRG_VTQ&oe=6A393074&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=168914158486850",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 394339,
+        "SAMPLE_LAT": 42.4188673505481,
+        "SAMPLE_LNG": -71.105750999969
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106098223503,
+          42.418736754521
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "168914158486850",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972742600,
+        "HEADING": 225.23725023799,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=vlgujTDjYBMQhI1GdJ5MqA&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af4BzhIpEIHZNEbXuPsOfDYdMwD8dLnsTgoNFR1Xw4zXsA&oe=6A393074&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=vlgujTDjYBMQhI1GdJ5MqA&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af7HUsVrVDCDqZFe800wnRrUVZuRVcaA4L54PVN0QR2w1w&oe=6A393074&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8kweI09sv0nXVt8EerKoDakeDLs7jqwAIBbyWuQ8M3q7NTsDRBy3F5z4Ad7cMERj63B5J6Ue1BuYk2jG4erNyzP3D8wT0r1z1FycJSW29ia39njnyAe0715NcJw2lrtVKpZnaA3bThpXQxb-E9vQ?edm=AOnQwmMEAAAA&_nc_gid=vlgujTDjYBMQhI1GdJ5MqA&_nc_oc=AdoEDkgHPXTagUEEU4xoOjgAAC2TaMcfQNDWE8Gpo4Unus7aC99xHgotGWYKWiNeuZU&ccb=10-5&oh=00_Af4At_y0N1pH5KbYpGP49Zytj7_-587SG25D0AdIPca9bg&oe=6A393074&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=168914158486850",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "OAKLAND STREET",
+        "SAMPLE_SEGMENT_ID": 152342,
+        "SAMPLE_LAT": 42.4190912428739,
+        "SAMPLE_LNG": -71.1062310575609
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106163809568,
+          42.418704706643
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "131478235599267",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972743700,
+        "HEADING": 227.64344836146,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9-ivi7l3-RnfaQCs08mpkHRGUttb--SEbizSJFPENzhJ_DqfStAd7Ud8R9kkbH1A35lV7Wvd3F8U0L58sgSpL5BFexgdsAlnrbhgK3VAFnVDrgOs2Nb9-1wOAjo6UGjQ62oJPMoaD8qcQ4hk4VXc8?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=jPUAtcKr83jeZcgyb6Mfgg&_nc_oc=AdpNpjYOzjH71a_x6fi7NXipKSp_Ve05LJN67GsSIA5sLWN1U-cz7S8qhbKi3j08AW4&ccb=10-5&oh=00_Af4rCqlgcWQqDenb1TwHaHb8y80-_8M_cwFso8ld9wi9eA&oe=6A3966B0&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9-ivi7l3-RnfaQCs08mpkHRGUttb--SEbizSJFPENzhJ_DqfStAd7Ud8R9kkbH1A35lV7Wvd3F8U0L58sgSpL5BFexgdsAlnrbhgK3VAFnVDrgOs2Nb9-1wOAjo6UGjQ62oJPMoaD8qcQ4hk4VXc8?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=jPUAtcKr83jeZcgyb6Mfgg&_nc_oc=AdpNpjYOzjH71a_x6fi7NXipKSp_Ve05LJN67GsSIA5sLWN1U-cz7S8qhbKi3j08AW4&ccb=10-5&oh=00_Af4GR6gM6ivvxFFiDc4pYHTNHzQ3hmJrMTU1khvQhuFkZg&oe=6A3966B0&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9-ivi7l3-RnfaQCs08mpkHRGUttb--SEbizSJFPENzhJ_DqfStAd7Ud8R9kkbH1A35lV7Wvd3F8U0L58sgSpL5BFexgdsAlnrbhgK3VAFnVDrgOs2Nb9-1wOAjo6UGjQ62oJPMoaD8qcQ4hk4VXc8?edm=AOnQwmMEAAAA&_nc_gid=jPUAtcKr83jeZcgyb6Mfgg&_nc_oc=AdpNpjYOzjH71a_x6fi7NXipKSp_Ve05LJN67GsSIA5sLWN1U-cz7S8qhbKi3j08AW4&ccb=10-5&oh=00_Af64zZlyCcMMEArZdsoSR6LPuDh2yiQRBvs0Moz-c-Dahg&oe=6A3966B0&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=131478235599267",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "GARDEN STREET",
+        "SAMPLE_SEGMENT_ID": 98940,
+        "SAMPLE_LAT": 42.4191100681544,
+        "SAMPLE_LNG": -71.1062209441161
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106154627328,
+          42.418708903205
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1139586649840740",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972743500,
+        "HEADING": 227.64335158427,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-v2PXneSZyUYA_u7X2qh8dOnDG92xv4Thtuz3MD1Xs7Nm95Z1w6vWK09_Gq6TCFlNSmQqZSeLF-2PnChFmUMMxpBYIf9LWKgdMHum5WvD0jdHsMjTT77TjZkRV6LsyNcKgEY_YZsuT5scG2MjiPA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=XElN-D-VIBZ_fIWC7K-82g&_nc_oc=AdoVmtv957LsRilB60d6_cs5_IyifzJRe4f9Dh_kJTaTkZkfo6kaR792F94MERQcg3M&ccb=10-5&oh=00_Af4clMCNIQd1sajALfO9Bjxz58RVy9TBzH74C6x5GAN1jA&oe=6A3963F0&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-v2PXneSZyUYA_u7X2qh8dOnDG92xv4Thtuz3MD1Xs7Nm95Z1w6vWK09_Gq6TCFlNSmQqZSeLF-2PnChFmUMMxpBYIf9LWKgdMHum5WvD0jdHsMjTT77TjZkRV6LsyNcKgEY_YZsuT5scG2MjiPA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=XElN-D-VIBZ_fIWC7K-82g&_nc_oc=AdoVmtv957LsRilB60d6_cs5_IyifzJRe4f9Dh_kJTaTkZkfo6kaR792F94MERQcg3M&ccb=10-5&oh=00_Af7aLVD5RYniQx1aEk_cZONsk1JSJXH14eZ9TlHgMGq28A&oe=6A3963F0&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-v2PXneSZyUYA_u7X2qh8dOnDG92xv4Thtuz3MD1Xs7Nm95Z1w6vWK09_Gq6TCFlNSmQqZSeLF-2PnChFmUMMxpBYIf9LWKgdMHum5WvD0jdHsMjTT77TjZkRV6LsyNcKgEY_YZsuT5scG2MjiPA?edm=AOnQwmMEAAAA&_nc_gid=XElN-D-VIBZ_fIWC7K-82g&_nc_oc=AdoVmtv957LsRilB60d6_cs5_IyifzJRe4f9Dh_kJTaTkZkfo6kaR792F94MERQcg3M&ccb=10-5&oh=00_Af7nq69Zan_asA2s69J-bSia0uqfiWH0lH1u16z4ZlQURg&oe=6A3963F0&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1139586649840740",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 364090,
+        "SAMPLE_LAT": 42.4191903111907,
+        "SAMPLE_LNG": -71.105421300116
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106425626374,
+          42.417165652497
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "160812312650713",
+        "SEQUENCE_ID": "wmeew7dcbdjni6i2uulxyx",
+        "CAPTURED_AT": 1590000434219,
+        "HEADING": 119.97351495467,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_UP1A9pcFDRaveFi98JZV9014ioPLxEmVR9Ta9vKs-VRW2oq9mlrMQxmxojhPMA44qsqX8kS7CxC9pMwfh8KERayiuUQkELPJiK0lbFL0nRAWvlk9nHSXm-JbDG1o8vDgJEYOshNBtq8Z0ABI39w?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=BjukKPIt5sqQx9N5WWF_Zg&_nc_oc=Adqcn4U16rNURQTLk2XL4nNhXaWMgFAzM9KAtS9vPU7KaPITJ05vNc0dnjfvLx8AYTs&ccb=10-5&oh=00_Af7H4qg5NR9H32Y7Yy30a9fCS08-x_zprwgd3y0s6Mncng&oe=6A395D3C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_UP1A9pcFDRaveFi98JZV9014ioPLxEmVR9Ta9vKs-VRW2oq9mlrMQxmxojhPMA44qsqX8kS7CxC9pMwfh8KERayiuUQkELPJiK0lbFL0nRAWvlk9nHSXm-JbDG1o8vDgJEYOshNBtq8Z0ABI39w?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=BjukKPIt5sqQx9N5WWF_Zg&_nc_oc=Adqcn4U16rNURQTLk2XL4nNhXaWMgFAzM9KAtS9vPU7KaPITJ05vNc0dnjfvLx8AYTs&ccb=10-5&oh=00_Af458XyM8zejaPpCdfDaDmDizqkelmI11af-Y3kXJs48kg&oe=6A395D3C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_UP1A9pcFDRaveFi98JZV9014ioPLxEmVR9Ta9vKs-VRW2oq9mlrMQxmxojhPMA44qsqX8kS7CxC9pMwfh8KERayiuUQkELPJiK0lbFL0nRAWvlk9nHSXm-JbDG1o8vDgJEYOshNBtq8Z0ABI39w?edm=AOnQwmMEAAAA&_nc_gid=BjukKPIt5sqQx9N5WWF_Zg&_nc_oc=Adqcn4U16rNURQTLk2XL4nNhXaWMgFAzM9KAtS9vPU7KaPITJ05vNc0dnjfvLx8AYTs&ccb=10-5&oh=00_Af46vsQRq7DyOKRgbGQFXhzvjTRPuSYeMviuYSncdsZ6VA&oe=6A395D3C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=160812312650713",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "CITY HALL MALL",
+        "SAMPLE_SEGMENT_ID": 358008,
+        "SAMPLE_LAT": 42.4173847800551,
+        "SAMPLE_LNG": -71.1066392477665
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.105932389858,
+          42.416991733115
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "295870345564628",
+        "SEQUENCE_ID": "wmeew7dcbdjni6i2uulxyx",
+        "CAPTURED_AT": 1590000446188,
+        "HEADING": 117.21975935722,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An83sbG0J9Sfak3NKybNP6ifr3XeQchzYzNImDV9-ZNfQruYc-4C8ZAgiwrIO_Jufytvh58WkMuhtB-k3M3wF7AcZi6u73_r4GmQIVonA-qE_ksoc7aGXFsuvobl-qbGMYEj7GUwFWwe3f9C9cQHfA?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=vPZrr0bWZGtSJytSQ-eVTw&_nc_oc=Ado1ZoFWVE5neSfuXc4U2grEkDs3cR52Nc7urDdUBik_30XIhiZ43pwgS6AihbxxLgQ&ccb=10-5&oh=00_Af7TB2Vdemxs7xIVHJTJfN4HlPvybgDIYLseacwDxUY4Pg&oe=6A393900&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An83sbG0J9Sfak3NKybNP6ifr3XeQchzYzNImDV9-ZNfQruYc-4C8ZAgiwrIO_Jufytvh58WkMuhtB-k3M3wF7AcZi6u73_r4GmQIVonA-qE_ksoc7aGXFsuvobl-qbGMYEj7GUwFWwe3f9C9cQHfA?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=vPZrr0bWZGtSJytSQ-eVTw&_nc_oc=Ado1ZoFWVE5neSfuXc4U2grEkDs3cR52Nc7urDdUBik_30XIhiZ43pwgS6AihbxxLgQ&ccb=10-5&oh=00_Af4W4q1aouH3scHmuxibg6oyYBfnKb5_YBIp0pFLiuKC9A&oe=6A393900&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An83sbG0J9Sfak3NKybNP6ifr3XeQchzYzNImDV9-ZNfQruYc-4C8ZAgiwrIO_Jufytvh58WkMuhtB-k3M3wF7AcZi6u73_r4GmQIVonA-qE_ksoc7aGXFsuvobl-qbGMYEj7GUwFWwe3f9C9cQHfA?edm=AOnQwmMEAAAA&_nc_gid=vPZrr0bWZGtSJytSQ-eVTw&_nc_oc=Ado1ZoFWVE5neSfuXc4U2grEkDs3cR52Nc7urDdUBik_30XIhiZ43pwgS6AihbxxLgQ&ccb=10-5&oh=00_Af5f3QwhullWGs-jg5ks81Wr12dUdbFtGBOYaESo3j8KLA&oe=6A393900&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=295870345564628",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "CITY HALL MALL",
+        "SAMPLE_SEGMENT_ID": 250022,
+        "SAMPLE_LAT": 42.4173173673075,
+        "SAMPLE_LNG": -71.106486446358
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106138232063,
+          42.417064164291
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1437478276618379",
+        "SEQUENCE_ID": "wmeew7dcbdjni6i2uulxyx",
+        "CAPTURED_AT": 1590000443321,
+        "HEADING": 112.49871072262,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_kalYtnGnV8CaA-6XjJ5H2NcKH0Y6hG4wFGqXJGYEweskb3rtNRuzTvM6LAGy4CCfXAssq4Wwztr0k0cjR07Gz4C2jQzkwbmhoQl_aPtBeM_lGyIKWx1hxn5EPmLHlFpV8IlT5XUEbXx21UbJgjC0?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=vPZrr0bWZGtSJytSQ-eVTw&_nc_oc=Adpm5RAwhuizs6edeLlLP6PToeIPiOYhKjEva1qKeldPV-m3dOwmNo9CvToDgZ_l41E&ccb=10-5&oh=00_Af78q_7qt1TMffBcGDzDZ2BW9wVDC8JzigOYXZvQvfpXrQ&oe=6A39679B&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_kalYtnGnV8CaA-6XjJ5H2NcKH0Y6hG4wFGqXJGYEweskb3rtNRuzTvM6LAGy4CCfXAssq4Wwztr0k0cjR07Gz4C2jQzkwbmhoQl_aPtBeM_lGyIKWx1hxn5EPmLHlFpV8IlT5XUEbXx21UbJgjC0?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=vPZrr0bWZGtSJytSQ-eVTw&_nc_oc=Adpm5RAwhuizs6edeLlLP6PToeIPiOYhKjEva1qKeldPV-m3dOwmNo9CvToDgZ_l41E&ccb=10-5&oh=00_Af5-bKtW62F85yeIAionLm_aPY4WtHBEltFEUDf5CDwSKQ&oe=6A39679B&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_kalYtnGnV8CaA-6XjJ5H2NcKH0Y6hG4wFGqXJGYEweskb3rtNRuzTvM6LAGy4CCfXAssq4Wwztr0k0cjR07Gz4C2jQzkwbmhoQl_aPtBeM_lGyIKWx1hxn5EPmLHlFpV8IlT5XUEbXx21UbJgjC0?edm=AOnQwmMEAAAA&_nc_gid=vPZrr0bWZGtSJytSQ-eVTw&_nc_oc=Adpm5RAwhuizs6edeLlLP6PToeIPiOYhKjEva1qKeldPV-m3dOwmNo9CvToDgZ_l41E&ccb=10-5&oh=00_Af5dAsqUdrWu6zJVvDCsG7Bfk7SQHAMx4oBAdObOj8ISQQ&oe=6A39679B&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1437478276618379",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "CITY HALL MALL",
+        "SAMPLE_SEGMENT_ID": 250022,
+        "SAMPLE_LAT": 42.4173173673075,
+        "SAMPLE_LNG": -71.106486446358
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107661138425,
+          42.418509980544
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "313810410199591",
+        "SEQUENCE_ID": "wmeew7dcbdjni6i2uulxyx",
+        "CAPTURED_AT": 1590000400214,
+        "HEADING": 261.76918730933,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_xe2FUyTAG4lIStpCjMZUERRoPo7ubHMaTbzNj361FHMQXFTHgozzb_htwKv1ZI5oVTX6vGrNwG31YTJAZCrcLwGlgN6nmI6dGgFv4us2hHPK95Q0R5bomc9oroaGgFD2LDa4e7I7GZ6pgg2IonA?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=t_7x9Xul5Lx6I2xXfQSCeg&_nc_oc=Adqw2ocJmi_ywYmrxlZycgUUH72JuaSv8PiEJJB9f_JbNbR4vQhvsCUOBGvkOS3HYvo&ccb=10-5&oh=00_Af5H1koDAbzlzotun0bL7Nz2PZURPoHtL5BXseu3oxwCUw&oe=6A393098&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_xe2FUyTAG4lIStpCjMZUERRoPo7ubHMaTbzNj361FHMQXFTHgozzb_htwKv1ZI5oVTX6vGrNwG31YTJAZCrcLwGlgN6nmI6dGgFv4us2hHPK95Q0R5bomc9oroaGgFD2LDa4e7I7GZ6pgg2IonA?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=t_7x9Xul5Lx6I2xXfQSCeg&_nc_oc=Adqw2ocJmi_ywYmrxlZycgUUH72JuaSv8PiEJJB9f_JbNbR4vQhvsCUOBGvkOS3HYvo&ccb=10-5&oh=00_Af4HNfkTCk9842fuOQlDqbEwudsoMa3Bn2jufGJRIlPizw&oe=6A393098&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_xe2FUyTAG4lIStpCjMZUERRoPo7ubHMaTbzNj361FHMQXFTHgozzb_htwKv1ZI5oVTX6vGrNwG31YTJAZCrcLwGlgN6nmI6dGgFv4us2hHPK95Q0R5bomc9oroaGgFD2LDa4e7I7GZ6pgg2IonA?edm=AOnQwmMEAAAA&_nc_gid=t_7x9Xul5Lx6I2xXfQSCeg&_nc_oc=Adqw2ocJmi_ywYmrxlZycgUUH72JuaSv8PiEJJB9f_JbNbR4vQhvsCUOBGvkOS3HYvo&ccb=10-5&oh=00_Af4XJSpYMLdRfufVBwJlQV4GnZ08UT6OblYZHb8658osfg&oe=6A393098&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=313810410199591",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 358481,
+        "SAMPLE_LAT": 42.4185359404135,
+        "SAMPLE_LNG": -71.107729960702
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107661484485,
+          42.418605671159
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "305735734487510",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972782600,
+        "HEADING": 267.52458161467,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8xhcTpiq9dn1hSOjQmj8rZEOxcWJeGIoachYvjXXH6iZjcDmeWUBElF6falgPQSxbmOhcAg4B9c6sLKsRTXXLg5XRnU-XCEeDnUNQhaVLJh8qEvfL8NXquAfng2ipwJfoDKWDy9VNMJBIvIDcvIbM?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=t_7x9Xul5Lx6I2xXfQSCeg&_nc_oc=AdrDCPhD3WrOocGVjbBM0eflvAsp99rlUERUYNweAeebdMjpZ5Cbe17IuIrm8IZqqow&ccb=10-5&oh=00_Af5LfJ707bdV5nXZ68Cr62LVXoTQyse5bzlyAMUPnesINA&oe=6A3937DA&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8xhcTpiq9dn1hSOjQmj8rZEOxcWJeGIoachYvjXXH6iZjcDmeWUBElF6falgPQSxbmOhcAg4B9c6sLKsRTXXLg5XRnU-XCEeDnUNQhaVLJh8qEvfL8NXquAfng2ipwJfoDKWDy9VNMJBIvIDcvIbM?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=t_7x9Xul5Lx6I2xXfQSCeg&_nc_oc=AdrDCPhD3WrOocGVjbBM0eflvAsp99rlUERUYNweAeebdMjpZ5Cbe17IuIrm8IZqqow&ccb=10-5&oh=00_Af4HrmBVhY9VxlU6PPcW0wCWYCvMoB0k-vO0PNEBdGjTbQ&oe=6A3937DA&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8xhcTpiq9dn1hSOjQmj8rZEOxcWJeGIoachYvjXXH6iZjcDmeWUBElF6falgPQSxbmOhcAg4B9c6sLKsRTXXLg5XRnU-XCEeDnUNQhaVLJh8qEvfL8NXquAfng2ipwJfoDKWDy9VNMJBIvIDcvIbM?edm=AOnQwmMEAAAA&_nc_gid=t_7x9Xul5Lx6I2xXfQSCeg&_nc_oc=AdrDCPhD3WrOocGVjbBM0eflvAsp99rlUERUYNweAeebdMjpZ5Cbe17IuIrm8IZqqow&ccb=10-5&oh=00_Af7qdiXKK36fHkU0MqR11jx-2cxWCqjII1gMS411gHWvqg&oe=6A3937DA&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=305735734487510",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 358481,
+        "SAMPLE_LAT": 42.4185359404135,
+        "SAMPLE_LNG": -71.107729960702
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10661321648,
+          42.417391709369
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "497053838012861",
+        "SEQUENCE_ID": "fn4pqwb0sbof38sefipgi4",
+        "CAPTURED_AT": 1589995127813,
+        "HEADING": 0,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9DT2sI7uYpF3WJKTuQYiKOfyGiNqghn-5COPxf41G--dWVzZvqyHIWgVeYAT_j-uu-BEvQv64ArsZa-oJLq4fejs1zdaNUA5z3eHuVJl5IUGvXRCVGnFblHbadofHc8eSE_seNtPwMZixM_qDkf3o?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=CxVdhZZv_9arzmqTOeq-Dw&_nc_oc=AdqwLQXzoFKq4T8kxEQsFEDDT8DXqu-ZNeHGqxSqFjliCYbLz3thaxJ_DjIDQvNm7XI&ccb=10-5&oh=00_Af6j0DCYSmCKyzjBKu2LCpJzpsyHVYmXng5f1-KAovNiFQ&oe=6A39395A&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9DT2sI7uYpF3WJKTuQYiKOfyGiNqghn-5COPxf41G--dWVzZvqyHIWgVeYAT_j-uu-BEvQv64ArsZa-oJLq4fejs1zdaNUA5z3eHuVJl5IUGvXRCVGnFblHbadofHc8eSE_seNtPwMZixM_qDkf3o?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=CxVdhZZv_9arzmqTOeq-Dw&_nc_oc=AdqwLQXzoFKq4T8kxEQsFEDDT8DXqu-ZNeHGqxSqFjliCYbLz3thaxJ_DjIDQvNm7XI&ccb=10-5&oh=00_Af5HddE3nvQ55vr9yXEJTPDs19bqwz_riuLEJRY10adrbA&oe=6A39395A&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9DT2sI7uYpF3WJKTuQYiKOfyGiNqghn-5COPxf41G--dWVzZvqyHIWgVeYAT_j-uu-BEvQv64ArsZa-oJLq4fejs1zdaNUA5z3eHuVJl5IUGvXRCVGnFblHbadofHc8eSE_seNtPwMZixM_qDkf3o?edm=AOnQwmMEAAAA&_nc_gid=CxVdhZZv_9arzmqTOeq-Dw&_nc_oc=AdqwLQXzoFKq4T8kxEQsFEDDT8DXqu-ZNeHGqxSqFjliCYbLz3thaxJ_DjIDQvNm7XI&ccb=10-5&oh=00_Af5QmuqTYKr-lT_dRJ44tX_uSguGKWNzANk24BH_UEL5eQ&oe=6A39395A&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=497053838012861",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "RIVERSIDE AVENUE",
+        "SAMPLE_SEGMENT_ID": 387438,
+        "SAMPLE_LAT": 42.4174672446909,
+        "SAMPLE_LNG": -71.1071304590211
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.106566087296,
+          42.417216173903
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "738703623478432",
+        "SEQUENCE_ID": "wmeew7dcbdjni6i2uulxyx",
+        "CAPTURED_AT": 1590000432215,
+        "HEADING": 118.22567881778,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9b_Lb0aL2JZCdKInh7zeJz-0WQ2fPTNpIDmq-M77_D_17EG4_p7--fctrs7g-_TKEV5BMPbGif5UNAIzOXcXkalW7-O6pvdl-cHBczK7InDmNf1d5z2_VhuHkg3axA3LfVUQP1puA_urTCTOz4xRs?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=gcMevZs6dK9wjdAU6V08nw&_nc_oc=AdqT7bDBlpvOaJs95SZ_3gxtepUnPFVQDQY7yFjDe30FylNOeagpegTxy6hjSNqgZm8&ccb=10-5&oh=00_Af7CTEni8EaJUhf6KEPrwVIgFRJZ2qlXQyiP6eZcoBrQqQ&oe=6A3965AA&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9b_Lb0aL2JZCdKInh7zeJz-0WQ2fPTNpIDmq-M77_D_17EG4_p7--fctrs7g-_TKEV5BMPbGif5UNAIzOXcXkalW7-O6pvdl-cHBczK7InDmNf1d5z2_VhuHkg3axA3LfVUQP1puA_urTCTOz4xRs?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=gcMevZs6dK9wjdAU6V08nw&_nc_oc=AdqT7bDBlpvOaJs95SZ_3gxtepUnPFVQDQY7yFjDe30FylNOeagpegTxy6hjSNqgZm8&ccb=10-5&oh=00_Af5fIhRJsdIvKqt8v5LS8rpwWYYOvdwlzxUgSx9bNlttDw&oe=6A3965AA&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9b_Lb0aL2JZCdKInh7zeJz-0WQ2fPTNpIDmq-M77_D_17EG4_p7--fctrs7g-_TKEV5BMPbGif5UNAIzOXcXkalW7-O6pvdl-cHBczK7InDmNf1d5z2_VhuHkg3axA3LfVUQP1puA_urTCTOz4xRs?edm=AOnQwmMEAAAA&_nc_gid=gcMevZs6dK9wjdAU6V08nw&_nc_oc=AdqT7bDBlpvOaJs95SZ_3gxtepUnPFVQDQY7yFjDe30FylNOeagpegTxy6hjSNqgZm8&ccb=10-5&oh=00_Af5WpVlzs9R--4H0ydcDFj8kqidcS-49DPtOLYkvq6js8Q&oe=6A3965AA&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=738703623478432",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "RIVERSIDE AVENUE",
+        "SAMPLE_SEGMENT_ID": 250021,
+        "SAMPLE_LAT": 42.4171795023706,
+        "SAMPLE_LNG": -71.1063186450342
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.104157911765,
+          42.419526234065
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1162425377605956",
+        "SEQUENCE_ID": "5z7ojtvtrsr2ijucfakebd",
+        "CAPTURED_AT": 1534771370552,
+        "HEADING": 185.07730102539,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-z3Mf7HSZMZcb8ola0Tt_vBSc3DM3H-Oa6QETIS-xdMS7cxzgQtaZ3KY2dKXfOuXZjwd93I7NLWPVi9iJ6uqjRb8PG2nhxIKBiIG1O1jn_pWAYfSlBrs0p7KVyg66Om1_ktOIN3YB2Cnu5Bzhs8g?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=LrKM0E9YTSMhuZRij1qX_A&_nc_oc=AdpTpbNTJ_rXTgMyFATWyzrDUV5pEIdLth0Vs8k95lglMNw9ORGyNB3YCipA29L-cOw&ccb=10-5&oh=00_Af4956uZBBs0ZJGNEHRyNU4WFYvewFphYyjaWhgILAkMPg&oe=6A393E98&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-z3Mf7HSZMZcb8ola0Tt_vBSc3DM3H-Oa6QETIS-xdMS7cxzgQtaZ3KY2dKXfOuXZjwd93I7NLWPVi9iJ6uqjRb8PG2nhxIKBiIG1O1jn_pWAYfSlBrs0p7KVyg66Om1_ktOIN3YB2Cnu5Bzhs8g?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=LrKM0E9YTSMhuZRij1qX_A&_nc_oc=AdpTpbNTJ_rXTgMyFATWyzrDUV5pEIdLth0Vs8k95lglMNw9ORGyNB3YCipA29L-cOw&ccb=10-5&oh=00_Af5JHOHezlJVLNbK0nHpj3zGoKDDckr6_dUepz0DLmQxyA&oe=6A393E98&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-z3Mf7HSZMZcb8ola0Tt_vBSc3DM3H-Oa6QETIS-xdMS7cxzgQtaZ3KY2dKXfOuXZjwd93I7NLWPVi9iJ6uqjRb8PG2nhxIKBiIG1O1jn_pWAYfSlBrs0p7KVyg66Om1_ktOIN3YB2Cnu5Bzhs8g?edm=AOnQwmMEAAAA&_nc_gid=LrKM0E9YTSMhuZRij1qX_A&_nc_oc=AdpTpbNTJ_rXTgMyFATWyzrDUV5pEIdLth0Vs8k95lglMNw9ORGyNB3YCipA29L-cOw&ccb=10-5&oh=00_Af6_VxRTDQ7lt3Xz9LQyGv85uLBLu7MwVT1AE0fRjv4F9g&oe=6A393E98&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1162425377605956",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 394135,
+        "SAMPLE_LAT": 42.4189169607254,
+        "SAMPLE_LNG": -71.1046551631047
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10413205371,
+          42.418966066373
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1023086755639902",
+        "SEQUENCE_ID": "ZloVK0G3qDi19gSp8OzWkf",
+        "CAPTURED_AT": 1679777854300,
+        "HEADING": 183.585,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9rq-Hp8qrSILv6s9aVSTgYOMrXyZjh6Xt190W4xy8KfxVJq7kUaI8Sxqyq1gbhWmVBYzlgYsYBVcEMDaGOiNKvw5suSHos8voD7YFq0uGO3umLJcop4QQtmB5XpfRA0Beyv3L4T_NpHjzVsaLqJA?stp=s256x128&edm=AOnQwmMEAAAA&_nc_gid=LrKM0E9YTSMhuZRij1qX_A&_nc_oc=AdqjXT3k6iF94RSguHBdqUT57PEy9P-yl1eIaE8Y7-JcYvTvXILTG74F6ztL8_rKpHE&ccb=10-5&oh=00_Af7SGWd1eH2WVe0DlnbQhAzcinTZY4UF5djpC0Hr69rMiQ&oe=6A394460&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9rq-Hp8qrSILv6s9aVSTgYOMrXyZjh6Xt190W4xy8KfxVJq7kUaI8Sxqyq1gbhWmVBYzlgYsYBVcEMDaGOiNKvw5suSHos8voD7YFq0uGO3umLJcop4QQtmB5XpfRA0Beyv3L4T_NpHjzVsaLqJA?stp=s1024x512&edm=AOnQwmMEAAAA&_nc_gid=LrKM0E9YTSMhuZRij1qX_A&_nc_oc=AdqjXT3k6iF94RSguHBdqUT57PEy9P-yl1eIaE8Y7-JcYvTvXILTG74F6ztL8_rKpHE&ccb=10-5&oh=00_Af5brT2I9P6JZvHxhb_Lixl5EV21p7OSAFM1sQUjVa_6BQ&oe=6A394460&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9rq-Hp8qrSILv6s9aVSTgYOMrXyZjh6Xt190W4xy8KfxVJq7kUaI8Sxqyq1gbhWmVBYzlgYsYBVcEMDaGOiNKvw5suSHos8voD7YFq0uGO3umLJcop4QQtmB5XpfRA0Beyv3L4T_NpHjzVsaLqJA?edm=AOnQwmMEAAAA&_nc_gid=LrKM0E9YTSMhuZRij1qX_A&_nc_oc=AdqjXT3k6iF94RSguHBdqUT57PEy9P-yl1eIaE8Y7-JcYvTvXILTG74F6ztL8_rKpHE&ccb=10-5&oh=00_Af6A5m_epao1Bz11M66IBAI9ezT30c3LQ_VJArOeMCjWJg&oe=6A394460&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1023086755639902",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 394135,
+        "SAMPLE_LAT": 42.4189169607254,
+        "SAMPLE_LNG": -71.1046551631047
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.108169013495,
+          42.418553329069
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "321455986122381",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972785400,
+        "HEADING": 267.67293930978,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8XYIVP_ck8lRgkQBBhx0t15IjdFF-CEPauiA3OBSoJnKITnyaTE3rayrHpVMn3atQdaE0a7F8XUlxrLhFduxZuKy3Msrg6OYSt8jq_CYp_z7ZJwXW1HpcPMfNpxnlOzJFRu-A92y-hJYJbvYvo-A?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=xJZtVV26u3n2TLugoXuDdA&_nc_oc=AdrD0woquuYBR0ILpwHP-IdAcPb_xuVFZxWGYTEQxNSUMnQhye-bWHiIWw9SO3mFzEc&ccb=10-5&oh=00_Af7x02SIMouOjXv4AN9gJO7QW4sG1Ths6ohyP_9a0yXscg&oe=6A395C61&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8XYIVP_ck8lRgkQBBhx0t15IjdFF-CEPauiA3OBSoJnKITnyaTE3rayrHpVMn3atQdaE0a7F8XUlxrLhFduxZuKy3Msrg6OYSt8jq_CYp_z7ZJwXW1HpcPMfNpxnlOzJFRu-A92y-hJYJbvYvo-A?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=xJZtVV26u3n2TLugoXuDdA&_nc_oc=AdrD0woquuYBR0ILpwHP-IdAcPb_xuVFZxWGYTEQxNSUMnQhye-bWHiIWw9SO3mFzEc&ccb=10-5&oh=00_Af7lum5sOV6blR3G5wNNsXyKzqwaiKMVudu-Leftik5Yzg&oe=6A395C61&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8XYIVP_ck8lRgkQBBhx0t15IjdFF-CEPauiA3OBSoJnKITnyaTE3rayrHpVMn3atQdaE0a7F8XUlxrLhFduxZuKy3Msrg6OYSt8jq_CYp_z7ZJwXW1HpcPMfNpxnlOzJFRu-A92y-hJYJbvYvo-A?edm=AOnQwmMEAAAA&_nc_gid=xJZtVV26u3n2TLugoXuDdA&_nc_oc=AdrD0woquuYBR0ILpwHP-IdAcPb_xuVFZxWGYTEQxNSUMnQhye-bWHiIWw9SO3mFzEc&ccb=10-5&oh=00_Af7m0FQf5Mi14YIcJL3TJwWcCEUiz4tT1hfXtzr7rrY-sw&oe=6A395C61&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=321455986122381",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 358482,
+        "SAMPLE_LAT": 42.4185183131643,
+        "SAMPLE_LNG": -71.1081714652626
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107891334219,
+          42.418518238901
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1385227398544729",
+        "SEQUENCE_ID": "27ZH1q7NlN4c2vnsVDEreA",
+        "CAPTURED_AT": 1520716431292,
+        "HEADING": 266.82345581055,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Q-pP0fzLdYlgkuju4JZQAcneN7FSShEI66e_t0ADPC7-CYT1RXSeXjuBcsLDdJFlAEr535GMqj-xMWOv_ADdjddbYWPOwbN1e8BQt8aAj6kNS7ckLD1HNzNILYpttPLVR05fYU04gE0cifraIRw?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=xJZtVV26u3n2TLugoXuDdA&_nc_oc=Adr_XuO4PppycsTH2cZTjLs2jZSa6l3UXzjzLJ7lQCcAxE07FwKz24PRIoH1EkvrDEg&ccb=10-5&oh=00_Af7lSjumvf92im3uLFvtlFb0KJkwQolHn-4PxDBfCWVzpg&oe=6A393648&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Q-pP0fzLdYlgkuju4JZQAcneN7FSShEI66e_t0ADPC7-CYT1RXSeXjuBcsLDdJFlAEr535GMqj-xMWOv_ADdjddbYWPOwbN1e8BQt8aAj6kNS7ckLD1HNzNILYpttPLVR05fYU04gE0cifraIRw?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=xJZtVV26u3n2TLugoXuDdA&_nc_oc=Adr_XuO4PppycsTH2cZTjLs2jZSa6l3UXzjzLJ7lQCcAxE07FwKz24PRIoH1EkvrDEg&ccb=10-5&oh=00_Af7RXvSeizApZ9xbHDGZgPsE_dgegT6rpafIQ6b7D_ZOjg&oe=6A393648&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Q-pP0fzLdYlgkuju4JZQAcneN7FSShEI66e_t0ADPC7-CYT1RXSeXjuBcsLDdJFlAEr535GMqj-xMWOv_ADdjddbYWPOwbN1e8BQt8aAj6kNS7ckLD1HNzNILYpttPLVR05fYU04gE0cifraIRw?edm=AOnQwmMEAAAA&_nc_gid=xJZtVV26u3n2TLugoXuDdA&_nc_oc=Adr_XuO4PppycsTH2cZTjLs2jZSa6l3UXzjzLJ7lQCcAxE07FwKz24PRIoH1EkvrDEg&ccb=10-5&oh=00_Af60xBto_ghBCMSzyMYzEmgdeKICiHxj1OVLeMqhO0hWBw&oe=6A393648&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1385227398544729",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 358482,
+        "SAMPLE_LAT": 42.4185183131643,
+        "SAMPLE_LNG": -71.1081714652626
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.103993709127,
+          42.418829224323
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1087490818407377",
+        "SEQUENCE_ID": "1ddyzufbwo3ky6klfagmnj",
+        "CAPTURED_AT": 1532024169642,
+        "HEADING": 1.1804182529449,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_VXy12cQAptVdTpChErPE2kAyc72NElPnK0DGr08tPr_8yK0xURD_hQG8TdhcaN77jPc47TQHy_mXmEyFXjfq1nHZ43rzV6WMlHD5EjGmyKgXpakA9GW1_pdkbC-MGiqdGs4Bbo2pB1CDQq-Fesg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=uNgv7VZOZ5vTehHcpdVM7w&_nc_oc=AdpxM5B613R2JHnlpWcn-FzXM2q-3mMM4pI-QC17mTXjFxuFmiCMzc41XmfoJzvq9Kc&ccb=10-5&oh=00_Af6HnVmF6Ll6BbWm-XTQxUqMdw5jI6RZCOBVl3Lnc0WTbw&oe=6A39565C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_VXy12cQAptVdTpChErPE2kAyc72NElPnK0DGr08tPr_8yK0xURD_hQG8TdhcaN77jPc47TQHy_mXmEyFXjfq1nHZ43rzV6WMlHD5EjGmyKgXpakA9GW1_pdkbC-MGiqdGs4Bbo2pB1CDQq-Fesg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=uNgv7VZOZ5vTehHcpdVM7w&_nc_oc=AdpxM5B613R2JHnlpWcn-FzXM2q-3mMM4pI-QC17mTXjFxuFmiCMzc41XmfoJzvq9Kc&ccb=10-5&oh=00_Af4zRM5yR9lnGTgF0eyneuKZmiPNGg1BUHEmPMUHT0bUMw&oe=6A39565C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_VXy12cQAptVdTpChErPE2kAyc72NElPnK0DGr08tPr_8yK0xURD_hQG8TdhcaN77jPc47TQHy_mXmEyFXjfq1nHZ43rzV6WMlHD5EjGmyKgXpakA9GW1_pdkbC-MGiqdGs4Bbo2pB1CDQq-Fesg?edm=AOnQwmMEAAAA&_nc_gid=uNgv7VZOZ5vTehHcpdVM7w&_nc_oc=AdpxM5B613R2JHnlpWcn-FzXM2q-3mMM4pI-QC17mTXjFxuFmiCMzc41XmfoJzvq9Kc&ccb=10-5&oh=00_Af7IFF1sJ7sD3eqp-n7M8SqHDcKs0_r82mNPR30MRBb-Ig&oe=6A39565C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1087490818407377",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 394136,
+        "SAMPLE_LAT": 42.4187321425628,
+        "SAMPLE_LNG": -71.104078704916
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.104007402751,
+          42.418534894823
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1171923136589898",
+        "SEQUENCE_ID": "1ddyzufbwo3ky6klfagmnj",
+        "CAPTURED_AT": 1532024168042,
+        "HEADING": 0.42207038402557,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_JhfqV1QurV9NydrjGSG7FQXRic0lhFAgO0zQEQF7sarTDht15g1SB_4vH9EQmirJyEGAhkVMsKH78AWmISso1KWQKRYFHLFNK_sWO9Q7qg0GkS5Dma2s8jAtVTHVjwWr_13voaVTQzsx1lDGyBA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=uNgv7VZOZ5vTehHcpdVM7w&_nc_oc=AdoFiJ8wQActeBkDRkQymXAk7rxFeXegf6Bdjpyijwu_MKyFvfsH5igbTh0MOcdlUpc&ccb=10-5&oh=00_Af7cZpw0xtogSutfD8GTPaJH7HwwydI4C2hX6TaxM4vZRw&oe=6A396544&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_JhfqV1QurV9NydrjGSG7FQXRic0lhFAgO0zQEQF7sarTDht15g1SB_4vH9EQmirJyEGAhkVMsKH78AWmISso1KWQKRYFHLFNK_sWO9Q7qg0GkS5Dma2s8jAtVTHVjwWr_13voaVTQzsx1lDGyBA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=uNgv7VZOZ5vTehHcpdVM7w&_nc_oc=AdoFiJ8wQActeBkDRkQymXAk7rxFeXegf6Bdjpyijwu_MKyFvfsH5igbTh0MOcdlUpc&ccb=10-5&oh=00_Af7hXKeBsyZ28o8SGInol2VGC6WpTzB_eCMOorrLUUh9dQ&oe=6A396544&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_JhfqV1QurV9NydrjGSG7FQXRic0lhFAgO0zQEQF7sarTDht15g1SB_4vH9EQmirJyEGAhkVMsKH78AWmISso1KWQKRYFHLFNK_sWO9Q7qg0GkS5Dma2s8jAtVTHVjwWr_13voaVTQzsx1lDGyBA?edm=AOnQwmMEAAAA&_nc_gid=uNgv7VZOZ5vTehHcpdVM7w&_nc_oc=AdoFiJ8wQActeBkDRkQymXAk7rxFeXegf6Bdjpyijwu_MKyFvfsH5igbTh0MOcdlUpc&ccb=10-5&oh=00_Af4bV5lbpFOzQHzjOJblAhET6WlI1tFJtq0xL7_EDnmhuA&oe=6A396544&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1171923136589898",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 394136,
+        "SAMPLE_LAT": 42.4187321425628,
+        "SAMPLE_LNG": -71.104078704916
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.105655460449,
+          42.417076895075
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "307454140787086",
+        "SEQUENCE_ID": "dmrjph964kvpo1jr0jun6h",
+        "CAPTURED_AT": 1426334361000,
+        "HEADING": 298.505,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9dapprBW55w80NvtRE1CxDO5VuzE19fjdfXzSqZLF4sd0wdcw6i3AiOQwt7KFvruepSxO95MJE9i0O3Dzz8umlQQs_dYt_C9P6zPiMCfh2Xy9JPYCtsQP28f9GhKo1JQaey3bIRYfLegXY_gduEug?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=nL6wn_kRMEgj5jMk4beVtw&_nc_oc=Adr692g2677lEIcaabjB2pPDjjt3Nnq7MVWozevblAkdyBzTFmqXKvOjcZ_CV0XngfI&ccb=10-5&oh=00_Af4zw67MZZspi6T3_7oa7njdIkbBI2_mw0wmk0agY0Wouw&oe=6A394B6F&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9dapprBW55w80NvtRE1CxDO5VuzE19fjdfXzSqZLF4sd0wdcw6i3AiOQwt7KFvruepSxO95MJE9i0O3Dzz8umlQQs_dYt_C9P6zPiMCfh2Xy9JPYCtsQP28f9GhKo1JQaey3bIRYfLegXY_gduEug?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=nL6wn_kRMEgj5jMk4beVtw&_nc_oc=Adr692g2677lEIcaabjB2pPDjjt3Nnq7MVWozevblAkdyBzTFmqXKvOjcZ_CV0XngfI&ccb=10-5&oh=00_Af4VxsCb_zxN3ACxN7kfGc6oD8HXdJWgPcAoSHQu1ZIuwQ&oe=6A394B6F&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9dapprBW55w80NvtRE1CxDO5VuzE19fjdfXzSqZLF4sd0wdcw6i3AiOQwt7KFvruepSxO95MJE9i0O3Dzz8umlQQs_dYt_C9P6zPiMCfh2Xy9JPYCtsQP28f9GhKo1JQaey3bIRYfLegXY_gduEug?edm=AOnQwmMEAAAA&_nc_gid=nL6wn_kRMEgj5jMk4beVtw&_nc_oc=Adr692g2677lEIcaabjB2pPDjjt3Nnq7MVWozevblAkdyBzTFmqXKvOjcZ_CV0XngfI&ccb=10-5&oh=00_Af6VEF9s7Vq9iYwB1QvA8rTGRH3r82p7rbxZ53B5RewD-Q&oe=6A394B6F&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=307454140787086",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "RIVERSIDE AVENUE",
+        "SAMPLE_SEGMENT_ID": 260582,
+        "SAMPLE_LAT": 42.4167888381591,
+        "SAMPLE_LNG": -71.1052599238338
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.109717226765,
+          42.41820499696
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1019541835291492",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972796100,
+        "HEADING": 251.73918356741,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Hr-3P8Re0XWoa6uG4YLSXLPVBJ9wcXoEHR5ouBigJskNsjDGX8nLvKc9jbXR_JQuKmu4-LDv0KWp_y-KRX9gjKpxakV5icZyeCYrbJtfvaJ1fR-ZM49Wwk4I9Cc0vEjZQ9B_1qTlseVV3kqr3tw?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=NoRggBWFkTAYyQIN5QEa7A&_nc_oc=Adqc2uh9uVUanNuK4PkFMnteSEfyb6NQCxQVO5De8_5NXezqgvsC37RbLG3H7yxvvhw&ccb=10-5&oh=00_Af5lTeaRfHjNFHZpFeK9mIpfXzGls2z84g_AxYkB_md4dA&oe=6A394FD7&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Hr-3P8Re0XWoa6uG4YLSXLPVBJ9wcXoEHR5ouBigJskNsjDGX8nLvKc9jbXR_JQuKmu4-LDv0KWp_y-KRX9gjKpxakV5icZyeCYrbJtfvaJ1fR-ZM49Wwk4I9Cc0vEjZQ9B_1qTlseVV3kqr3tw?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=NoRggBWFkTAYyQIN5QEa7A&_nc_oc=Adqc2uh9uVUanNuK4PkFMnteSEfyb6NQCxQVO5De8_5NXezqgvsC37RbLG3H7yxvvhw&ccb=10-5&oh=00_Af6ovFfZPMy9cwUyl4_AErkCq9oSHXB-xCouY8nPvZKfHw&oe=6A394FD7&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Hr-3P8Re0XWoa6uG4YLSXLPVBJ9wcXoEHR5ouBigJskNsjDGX8nLvKc9jbXR_JQuKmu4-LDv0KWp_y-KRX9gjKpxakV5icZyeCYrbJtfvaJ1fR-ZM49Wwk4I9Cc0vEjZQ9B_1qTlseVV3kqr3tw?edm=AOnQwmMEAAAA&_nc_gid=NoRggBWFkTAYyQIN5QEa7A&_nc_oc=Adqc2uh9uVUanNuK4PkFMnteSEfyb6NQCxQVO5De8_5NXezqgvsC37RbLG3H7yxvvhw&ccb=10-5&oh=00_Af6-JOIU9UfMCpQyv7wwQJKbVvMz7wH-HH0T0NjFD__SYA&oe=6A394FD7&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1019541835291492",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 358483,
+        "SAMPLE_LAT": 42.4183813713606,
+        "SAMPLE_LNG": -71.109097247096
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.109184360152,
+          42.419022786916
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "580118586644841",
+        "SEQUENCE_ID": "W9t3L0Pv6CAlyKvDTThgIw",
+        "CAPTURED_AT": 1426090251000,
+        "HEADING": 21.59753,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AiNZZzldeY1G-TKKpbYxpYo2R5vQkOk1l8WpdZN27S9pUJWQ7XMOqHmcOBfDW_Wid7F3hu2mVMDzbIj86vo3-zLDVgIfDHyCIP9q4vHCu0sI6da7dTo5W7HiPksBvJ5IT_-1MpNx7BTS44aXU1M8?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=QigLoo59EN0_j_WVYzKnuQ&_nc_oc=AdoWXw20VvXx1ZO_vnxOBrvVqXplnK77B7U2dCDWY7-jxI8dP64aKIWVMqe8mSrRd1U&ccb=10-5&oh=00_Af7j-8Cohxe5LZU0YOBR9XNv_0ODSLIKLWsWUZeq6gHacg&oe=6A3941B0&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AiNZZzldeY1G-TKKpbYxpYo2R5vQkOk1l8WpdZN27S9pUJWQ7XMOqHmcOBfDW_Wid7F3hu2mVMDzbIj86vo3-zLDVgIfDHyCIP9q4vHCu0sI6da7dTo5W7HiPksBvJ5IT_-1MpNx7BTS44aXU1M8?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=QigLoo59EN0_j_WVYzKnuQ&_nc_oc=AdoWXw20VvXx1ZO_vnxOBrvVqXplnK77B7U2dCDWY7-jxI8dP64aKIWVMqe8mSrRd1U&ccb=10-5&oh=00_Af71WrlnI3s4S-YM3Jj4oU5Uk8PW4k8ihrXP1LyfyT9ckA&oe=6A3941B0&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-AiNZZzldeY1G-TKKpbYxpYo2R5vQkOk1l8WpdZN27S9pUJWQ7XMOqHmcOBfDW_Wid7F3hu2mVMDzbIj86vo3-zLDVgIfDHyCIP9q4vHCu0sI6da7dTo5W7HiPksBvJ5IT_-1MpNx7BTS44aXU1M8?edm=AOnQwmMEAAAA&_nc_gid=QigLoo59EN0_j_WVYzKnuQ&_nc_oc=AdoWXw20VvXx1ZO_vnxOBrvVqXplnK77B7U2dCDWY7-jxI8dP64aKIWVMqe8mSrRd1U&ccb=10-5&oh=00_Af7jDOKb9ep_GrpSv7LRZPxkntoqoZxUVQEsNw4-Iy_uyA&oe=6A3941B0&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=580118586644841",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "FOREST STREET",
+        "SAMPLE_SEGMENT_ID": 278439,
+        "SAMPLE_LAT": 42.4193089383769,
+        "SAMPLE_LNG": -71.109020514738
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.102528925887,
+          42.419468890245
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "165662992153685",
+        "SEQUENCE_ID": "QzvFPzShD8-Hm6PEJBP7rQ",
+        "CAPTURED_AT": 1506972705300,
+        "HEADING": 297.38118131385,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8vNUUcdrZarSTCqnNZcz0EOOoOJj95JuU3tOfNBi1Z3QPqaOwuAvc3wDjrGQKoX2cwq30aX4_8bv4RbXov14HO9vNAUlnKcTx-PyyuV98FNEEIzDTRiSrOrbPR3euf6rz7c9_4tofwZVhhmDgFBfc?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=OIgDuhRVCN_VD-1nx_xWHw&_nc_oc=AdqZnMkkZGSPvxGEoVRDQ9NIYmQm2-1FyyaZTCW0C5VuWqDBi2-rE5rvx_A2G4o0nS4&ccb=10-5&oh=00_Af7oNHcR1Rh3VtKyWgR0mfNIG0rX6TjgNKJZUL1dnHWNrw&oe=6A3965FD&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8vNUUcdrZarSTCqnNZcz0EOOoOJj95JuU3tOfNBi1Z3QPqaOwuAvc3wDjrGQKoX2cwq30aX4_8bv4RbXov14HO9vNAUlnKcTx-PyyuV98FNEEIzDTRiSrOrbPR3euf6rz7c9_4tofwZVhhmDgFBfc?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=OIgDuhRVCN_VD-1nx_xWHw&_nc_oc=AdqZnMkkZGSPvxGEoVRDQ9NIYmQm2-1FyyaZTCW0C5VuWqDBi2-rE5rvx_A2G4o0nS4&ccb=10-5&oh=00_Af77qBB-ydr6I5bIJRBxj_fSJqgWgkhp_MTa72u9XYfr9Q&oe=6A3965FD&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8vNUUcdrZarSTCqnNZcz0EOOoOJj95JuU3tOfNBi1Z3QPqaOwuAvc3wDjrGQKoX2cwq30aX4_8bv4RbXov14HO9vNAUlnKcTx-PyyuV98FNEEIzDTRiSrOrbPR3euf6rz7c9_4tofwZVhhmDgFBfc?edm=AOnQwmMEAAAA&_nc_gid=OIgDuhRVCN_VD-1nx_xWHw&_nc_oc=AdqZnMkkZGSPvxGEoVRDQ9NIYmQm2-1FyyaZTCW0C5VuWqDBi2-rE5rvx_A2G4o0nS4&ccb=10-5&oh=00_Af67-s5syTL9QMXXVvkLes0bOgq6mSI3LEYUVTbwW4IdrQ&oe=6A3965FD&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=165662992153685",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 394137,
+        "SAMPLE_LAT": 42.4190532308684,
+        "SAMPLE_LNG": -71.1032068076796
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.104695302067,
+          42.419107648145
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "213462810415144",
+        "SEQUENCE_ID": "tiuXlnJLi8CZcHPd65K-Lw",
+        "CAPTURED_AT": 1507117541264,
+        "HEADING": 293.25048828125,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Wz7QIPp1gk-Kyax2rXpdiB2iK31rGjd_DSyCMY935IGqe18VAT23bPXH6-yHmTPx1Iuatpzy_8H7U3dOEYf4cIDGn4W7vBwGKmwvuPin-54Nu9oxdNlxA9zKR_W-fXzzQXu2N15fZB3k6mokmqQ?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=OIgDuhRVCN_VD-1nx_xWHw&_nc_oc=AdpA63fzGYeLLix9n2ONbIMGeS5v5aZZPHWwwungbcixFnUWwMRVlBhnZraQzUg33YE&ccb=10-5&oh=00_Af64RyCjD5xaaPk0LqJeT3FBQg_JnkahMN3abtVSDq2EbQ&oe=6A3961FC&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Wz7QIPp1gk-Kyax2rXpdiB2iK31rGjd_DSyCMY935IGqe18VAT23bPXH6-yHmTPx1Iuatpzy_8H7U3dOEYf4cIDGn4W7vBwGKmwvuPin-54Nu9oxdNlxA9zKR_W-fXzzQXu2N15fZB3k6mokmqQ?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=OIgDuhRVCN_VD-1nx_xWHw&_nc_oc=AdpA63fzGYeLLix9n2ONbIMGeS5v5aZZPHWwwungbcixFnUWwMRVlBhnZraQzUg33YE&ccb=10-5&oh=00_Af74J8TD7ymZXiYaGzDjrTb7ue-Bn1pVbVUIRH8fDyYLNw&oe=6A3961FC&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Wz7QIPp1gk-Kyax2rXpdiB2iK31rGjd_DSyCMY935IGqe18VAT23bPXH6-yHmTPx1Iuatpzy_8H7U3dOEYf4cIDGn4W7vBwGKmwvuPin-54Nu9oxdNlxA9zKR_W-fXzzQXu2N15fZB3k6mokmqQ?edm=AOnQwmMEAAAA&_nc_gid=OIgDuhRVCN_VD-1nx_xWHw&_nc_oc=AdpA63fzGYeLLix9n2ONbIMGeS5v5aZZPHWwwungbcixFnUWwMRVlBhnZraQzUg33YE&ccb=10-5&oh=00_Af4_AY4Yj3XQ7ZaVzVc6TR0zxarGXrEfvGONenTtQqBR6w&oe=6A3961FC&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=213462810415144",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 394137,
+        "SAMPLE_LAT": 42.4190532308684,
+        "SAMPLE_LNG": -71.1032068076796
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.103576155162,
+          42.420066408244
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "179099180654095",
+        "SEQUENCE_ID": "QzvFPzShD8-Hm6PEJBP7rQ",
+        "CAPTURED_AT": 1506972719400,
+        "HEADING": 315.93490451015,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9FpXcce4RqPqMNsyZu7bvJzGIJNzFe6AxMA7TOPgn66vFbCnBkaKasCo_geDu93YXKpkZZYryq7zHP1SlfU3exDrxgBQeoVk66DWITHdHZWWyuFs18gYShzPhNyzMUfr2XV7a3T_1Px6uFLQwb-Q?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=6OyQ_FC7jvfdbByGZZAoXw&_nc_oc=Adr1HdMsdz4au0g21WEbcWGH0fAKxHNwp4BOVsIymAztq4ui4igiHbJ4XBACow9I_o0&ccb=10-5&oh=00_Af4sBaO672AB2vHo_Jr6sz3Ler9eyimSRHBo6l8IRTZBAw&oe=6A39603E&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9FpXcce4RqPqMNsyZu7bvJzGIJNzFe6AxMA7TOPgn66vFbCnBkaKasCo_geDu93YXKpkZZYryq7zHP1SlfU3exDrxgBQeoVk66DWITHdHZWWyuFs18gYShzPhNyzMUfr2XV7a3T_1Px6uFLQwb-Q?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=6OyQ_FC7jvfdbByGZZAoXw&_nc_oc=Adr1HdMsdz4au0g21WEbcWGH0fAKxHNwp4BOVsIymAztq4ui4igiHbJ4XBACow9I_o0&ccb=10-5&oh=00_Af4NPuk0F611znmxrTwJ6Ijn54K5aDFG9YbslGR9hbNsDw&oe=6A39603E&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9FpXcce4RqPqMNsyZu7bvJzGIJNzFe6AxMA7TOPgn66vFbCnBkaKasCo_geDu93YXKpkZZYryq7zHP1SlfU3exDrxgBQeoVk66DWITHdHZWWyuFs18gYShzPhNyzMUfr2XV7a3T_1Px6uFLQwb-Q?edm=AOnQwmMEAAAA&_nc_gid=6OyQ_FC7jvfdbByGZZAoXw&_nc_oc=Adr1HdMsdz4au0g21WEbcWGH0fAKxHNwp4BOVsIymAztq4ui4igiHbJ4XBACow9I_o0&ccb=10-5&oh=00_Af5gAMvIFAFMyw-5OfxRli3uN1XxnDsdTPsMUeY8TzN1NQ&oe=6A39603E&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=179099180654095",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 355879,
+        "SAMPLE_LAT": 42.4200928173034,
+        "SAMPLE_LNG": -71.1039260853221
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.103794309019,
+          42.419795774497
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1001281557376849",
+        "SEQUENCE_ID": "X7sFBPu8PCJF1PCcnqzdvQ",
+        "CAPTURED_AT": 1506975725700,
+        "HEADING": 5.785570444795,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Ok7llvB17spIHkPSXpy1B5rmwFKSf9IxF0n8rWRjejJpbqUCNFGrxOESB8Wr4TOPYQSjZJ3QLPFw2tsPAaoCt2M-Lqs-CVmtedW98JTSxHG0qRNZ4NUsPBLnE7pF4H2ePpzCFrslMNH-n9Itnzg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=6OyQ_FC7jvfdbByGZZAoXw&_nc_oc=AdoMSy050rX9_Izd39quD5fqvqfSy01pa0g28x3cUgql0fhBAX6zwKe_FIAv-YR8Z8E&ccb=10-5&oh=00_Af6E2z9Gi78i9Rnu63tp_FbknoGXaitQYF10sa9oK_ttIw&oe=6A395DD9&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Ok7llvB17spIHkPSXpy1B5rmwFKSf9IxF0n8rWRjejJpbqUCNFGrxOESB8Wr4TOPYQSjZJ3QLPFw2tsPAaoCt2M-Lqs-CVmtedW98JTSxHG0qRNZ4NUsPBLnE7pF4H2ePpzCFrslMNH-n9Itnzg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=6OyQ_FC7jvfdbByGZZAoXw&_nc_oc=AdoMSy050rX9_Izd39quD5fqvqfSy01pa0g28x3cUgql0fhBAX6zwKe_FIAv-YR8Z8E&ccb=10-5&oh=00_Af7lCXrTbsMwDAW4A_AhPfDkjpi60vHJ6fj6gNpNSwpvNw&oe=6A395DD9&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Ok7llvB17spIHkPSXpy1B5rmwFKSf9IxF0n8rWRjejJpbqUCNFGrxOESB8Wr4TOPYQSjZJ3QLPFw2tsPAaoCt2M-Lqs-CVmtedW98JTSxHG0qRNZ4NUsPBLnE7pF4H2ePpzCFrslMNH-n9Itnzg?edm=AOnQwmMEAAAA&_nc_gid=6OyQ_FC7jvfdbByGZZAoXw&_nc_oc=AdoMSy050rX9_Izd39quD5fqvqfSy01pa0g28x3cUgql0fhBAX6zwKe_FIAv-YR8Z8E&ccb=10-5&oh=00_Af6Wz0mYlO9tLDzTUIJjTtOese2470__uOqEcPjSpfAQog&oe=6A395DD9&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1001281557376849",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET CIRCLE",
+        "SAMPLE_SEGMENT_ID": 355879,
+        "SAMPLE_LAT": 42.4200928173034,
+        "SAMPLE_LNG": -71.1039260853221
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10377824452,
+          42.416377342594
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1168199297029633",
+        "SEQUENCE_ID": "ktqeeukpyrgvd08b22lw7r",
+        "CAPTURED_AT": 1534783446556,
+        "HEADING": 357.890625,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_LdVGcnwF7uW4jJNBYSsrEdQvAvy_6j6BJ0-Nrd8KsaAFZEbaHNUHTp0V6z450Nuc91SCYbdzydNd343bPhkm2IGJVM5vYAQFxkZBkEkFlRxFQ6yX6o9h0slYM6kh-KWtbPRkTpVxJhphu4IfIAg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=QJawI1ZkuTS9KbeNCWREWg&_nc_oc=AdpGHVhuyeQ4NaigR5M3A7qF7VDbxKTmMaDkGW_app0gXDhwVekF9Qj3M3seVJHOKDE&ccb=10-5&oh=00_Af4_wlZSGO57q8zPnw5bLEYwK2GNmaJGqiVexmZrzTZ__w&oe=6A3933FF&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_LdVGcnwF7uW4jJNBYSsrEdQvAvy_6j6BJ0-Nrd8KsaAFZEbaHNUHTp0V6z450Nuc91SCYbdzydNd343bPhkm2IGJVM5vYAQFxkZBkEkFlRxFQ6yX6o9h0slYM6kh-KWtbPRkTpVxJhphu4IfIAg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=QJawI1ZkuTS9KbeNCWREWg&_nc_oc=AdpGHVhuyeQ4NaigR5M3A7qF7VDbxKTmMaDkGW_app0gXDhwVekF9Qj3M3seVJHOKDE&ccb=10-5&oh=00_Af7Cja6JGIeB4s3AKkulFenzPyR6tvKaib7QJHJDZaSh-Q&oe=6A3933FF&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_LdVGcnwF7uW4jJNBYSsrEdQvAvy_6j6BJ0-Nrd8KsaAFZEbaHNUHTp0V6z450Nuc91SCYbdzydNd343bPhkm2IGJVM5vYAQFxkZBkEkFlRxFQ6yX6o9h0slYM6kh-KWtbPRkTpVxJhphu4IfIAg?edm=AOnQwmMEAAAA&_nc_gid=QJawI1ZkuTS9KbeNCWREWg&_nc_oc=AdpGHVhuyeQ4NaigR5M3A7qF7VDbxKTmMaDkGW_app0gXDhwVekF9Qj3M3seVJHOKDE&ccb=10-5&oh=00_Af42D_hiVQYynvvYBL4oCbXkkv4qbVNXZ0DgjDmOSV-FZw&oe=6A3933FF&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1168199297029633",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "DANIELS STREET",
+        "SAMPLE_SEGMENT_ID": 119109,
+        "SAMPLE_LAT": 42.4171499722579,
+        "SAMPLE_LNG": -71.1034292818691
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.103923598753,
+          42.417320033298
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1090487428140352",
+        "SEQUENCE_ID": "gqe3hzp5cqxbtdfo7v1siq",
+        "CAPTURED_AT": 1532031076165,
+        "HEADING": 357.46505737305,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_KwSgJZf6nqpslsr033IrPmJ40CVLSwWsV5j4PcgOFdRYbGWZ8WIjX80dTCmPipt12CGEe2NLYqzdhdwUs2OnXhaqWakj3THJnaOcqegud2yqq8JgyEFGdL1JTMlqVFvFAdcUrcVCph17cI4O9WA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=QJawI1ZkuTS9KbeNCWREWg&_nc_oc=AdqcZSCNtjwI_qi600HEjQrN3_oA0cv--FmDiLnoXyCEfkP6ocoSiRtD0XuCh7Sgauw&ccb=10-5&oh=00_Af6UpucdJK5uCwYMTX2zK5_Z8JivZD0dToC5PztbT8a4Xg&oe=6A395E52&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_KwSgJZf6nqpslsr033IrPmJ40CVLSwWsV5j4PcgOFdRYbGWZ8WIjX80dTCmPipt12CGEe2NLYqzdhdwUs2OnXhaqWakj3THJnaOcqegud2yqq8JgyEFGdL1JTMlqVFvFAdcUrcVCph17cI4O9WA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=QJawI1ZkuTS9KbeNCWREWg&_nc_oc=AdqcZSCNtjwI_qi600HEjQrN3_oA0cv--FmDiLnoXyCEfkP6ocoSiRtD0XuCh7Sgauw&ccb=10-5&oh=00_Af6Rxky4riOh_Jgh9H5nkk606HQZZ0YC1kLUiAgh13htxg&oe=6A395E52&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_KwSgJZf6nqpslsr033IrPmJ40CVLSwWsV5j4PcgOFdRYbGWZ8WIjX80dTCmPipt12CGEe2NLYqzdhdwUs2OnXhaqWakj3THJnaOcqegud2yqq8JgyEFGdL1JTMlqVFvFAdcUrcVCph17cI4O9WA?edm=AOnQwmMEAAAA&_nc_gid=QJawI1ZkuTS9KbeNCWREWg&_nc_oc=AdqcZSCNtjwI_qi600HEjQrN3_oA0cv--FmDiLnoXyCEfkP6ocoSiRtD0XuCh7Sgauw&ccb=10-5&oh=00_Af7zO8doi_LI-Lmiainb0NWOc70-8kLd3e52hnEJytH0YQ&oe=6A395E52&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1090487428140352",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "DANIELS STREET",
+        "SAMPLE_SEGMENT_ID": 119109,
+        "SAMPLE_LAT": 42.4171499722579,
+        "SAMPLE_LNG": -71.1034292818691
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.109385923625,
+          42.418622388166
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "184962210119808",
+        "SEQUENCE_ID": "W9t3L0Pv6CAlyKvDTThgIw",
+        "CAPTURED_AT": 1426090245000,
+        "HEADING": 3.481079,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Uak9ocLhWrPRvSRHmygiSMb4r5CmpoD-iR-shIiT38gV1jrJKY9nhImTEprW5YjrDfb2S4CdeeADo_S9bCHqmx7Dn_wQNl7TQO7jxgAEU0pHiInp9Tij1vUM9ut9VJeCnyC5z_T4qK8LLXrxN5w?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=FqqLBO1Cs43_nZ7ib5iLDg&_nc_oc=Adon-yPo7H4M1QCWUPl0PJVu-a6A5vREVgQradhMo1yH5ynlpTy7nnl1w-jGb0lUhs0&ccb=10-5&oh=00_Af48wgjXvoM_DOrqLFupIM_2_PFPRhZF1NJgWlTuk-EQLA&oe=6A3943F0&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Uak9ocLhWrPRvSRHmygiSMb4r5CmpoD-iR-shIiT38gV1jrJKY9nhImTEprW5YjrDfb2S4CdeeADo_S9bCHqmx7Dn_wQNl7TQO7jxgAEU0pHiInp9Tij1vUM9ut9VJeCnyC5z_T4qK8LLXrxN5w?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=FqqLBO1Cs43_nZ7ib5iLDg&_nc_oc=Adon-yPo7H4M1QCWUPl0PJVu-a6A5vREVgQradhMo1yH5ynlpTy7nnl1w-jGb0lUhs0&ccb=10-5&oh=00_Af7bY_15Ic-AxHm5R1MEx1s5v5y2l5d9VnRs9p7JlFHQEA&oe=6A3943F0&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Uak9ocLhWrPRvSRHmygiSMb4r5CmpoD-iR-shIiT38gV1jrJKY9nhImTEprW5YjrDfb2S4CdeeADo_S9bCHqmx7Dn_wQNl7TQO7jxgAEU0pHiInp9Tij1vUM9ut9VJeCnyC5z_T4qK8LLXrxN5w?edm=AOnQwmMEAAAA&_nc_gid=FqqLBO1Cs43_nZ7ib5iLDg&_nc_oc=Adon-yPo7H4M1QCWUPl0PJVu-a6A5vREVgQradhMo1yH5ynlpTy7nnl1w-jGb0lUhs0&ccb=10-5&oh=00_Af76HqTPo8flFifNAQJogJ5bsWob3gcWAO6LU5Ze0c8PgQ&oe=6A3943F0&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=184962210119808",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "FOREST STREET",
+        "SAMPLE_SEGMENT_ID": 278443,
+        "SAMPLE_LAT": 42.4183516819676,
+        "SAMPLE_LNG": -71.1095930452839
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.110231601643,
+          42.418464862484
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1480569958958472",
+        "SEQUENCE_ID": "W9t3L0Pv6CAlyKvDTThgIw",
+        "CAPTURED_AT": 1426090509000,
+        "HEADING": 280.4386,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_frze5lKdShxxoQ8X5e_vAw3xqQZPrXsu1yE3aNYWc9kEKfDZ4K395LiLcGuoX9Q9QL92-z8t3Hlx53TMzAQ1coSuSrFkfZSTXMVDH4TzQelpmhVqoA67_7DR3sTCR4h0dP6pqhyBG0VKBIpnnfg?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=aY4nfCMEkrzDVXDNljqZ0A&_nc_oc=Adq7e3kAowUulow5ToJmvpgvGeWFPJIzx8w6Zu1ieBueF-Vnykq-wSOrR20u_EPt5M8&ccb=10-5&oh=00_Af5tW1Sgkvf0FkgO-KZbdHa1jOri1-JNyIeOzI60y-ZZTg&oe=6A3949E2&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_frze5lKdShxxoQ8X5e_vAw3xqQZPrXsu1yE3aNYWc9kEKfDZ4K395LiLcGuoX9Q9QL92-z8t3Hlx53TMzAQ1coSuSrFkfZSTXMVDH4TzQelpmhVqoA67_7DR3sTCR4h0dP6pqhyBG0VKBIpnnfg?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=aY4nfCMEkrzDVXDNljqZ0A&_nc_oc=Adq7e3kAowUulow5ToJmvpgvGeWFPJIzx8w6Zu1ieBueF-Vnykq-wSOrR20u_EPt5M8&ccb=10-5&oh=00_Af4i_bdK0i9X9a8LB3I84J_Ih5mDiLA6xtj8Mfcj2E5Tow&oe=6A3949E2&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_frze5lKdShxxoQ8X5e_vAw3xqQZPrXsu1yE3aNYWc9kEKfDZ4K395LiLcGuoX9Q9QL92-z8t3Hlx53TMzAQ1coSuSrFkfZSTXMVDH4TzQelpmhVqoA67_7DR3sTCR4h0dP6pqhyBG0VKBIpnnfg?edm=AOnQwmMEAAAA&_nc_gid=aY4nfCMEkrzDVXDNljqZ0A&_nc_oc=Adq7e3kAowUulow5ToJmvpgvGeWFPJIzx8w6Zu1ieBueF-Vnykq-wSOrR20u_EPt5M8&ccb=10-5&oh=00_Af5dpqIcbDkjOXL89qarmSJtYdxHgwo6fY1unGnWiiktQw&oe=6A3949E2&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1480569958958472",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "MAIN STREET",
+        "SAMPLE_SEGMENT_ID": 251469,
+        "SAMPLE_LAT": 42.4181312859771,
+        "SAMPLE_LNG": -71.109689033953
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.110014694184,
+          42.41832582621
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "732309884105538",
+        "SEQUENCE_ID": "W9t3L0Pv6CAlyKvDTThgIw",
+        "CAPTURED_AT": 1426090811000,
+        "HEADING": 108.7382,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-xkxEdiWD6zTiE9rVIevO7uQd1cSTN7YXhUmLAkh27xS3NlsUV5bIeCaBboomhEdsHCCr5C6CHPEuk-IeikTHXRHvGl4AAobWwmtWCkpvlIY2-yQjzQsVjYYkhHlaapJFy6rJNgVjH_kmcey2fXw?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=aY4nfCMEkrzDVXDNljqZ0A&_nc_oc=AdpDIG7TQARs9kqTuSzgR1F6KPLhtx4BDVB4KDJAPV4YgfhhZPUl1QKBLZJykstWgOU&ccb=10-5&oh=00_Af4tDhRf0Kai75OagQoCKkOW-823WvBrH8XisDvTFpj02A&oe=6A3944E9&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-xkxEdiWD6zTiE9rVIevO7uQd1cSTN7YXhUmLAkh27xS3NlsUV5bIeCaBboomhEdsHCCr5C6CHPEuk-IeikTHXRHvGl4AAobWwmtWCkpvlIY2-yQjzQsVjYYkhHlaapJFy6rJNgVjH_kmcey2fXw?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=aY4nfCMEkrzDVXDNljqZ0A&_nc_oc=AdpDIG7TQARs9kqTuSzgR1F6KPLhtx4BDVB4KDJAPV4YgfhhZPUl1QKBLZJykstWgOU&ccb=10-5&oh=00_Af4qxmY5Ag07voybZsnVltUf5Vz_CgBSTrs1sWLrcIX00A&oe=6A3944E9&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-xkxEdiWD6zTiE9rVIevO7uQd1cSTN7YXhUmLAkh27xS3NlsUV5bIeCaBboomhEdsHCCr5C6CHPEuk-IeikTHXRHvGl4AAobWwmtWCkpvlIY2-yQjzQsVjYYkhHlaapJFy6rJNgVjH_kmcey2fXw?edm=AOnQwmMEAAAA&_nc_gid=aY4nfCMEkrzDVXDNljqZ0A&_nc_oc=AdpDIG7TQARs9kqTuSzgR1F6KPLhtx4BDVB4KDJAPV4YgfhhZPUl1QKBLZJykstWgOU&ccb=10-5&oh=00_Af7K1ukHarh5IifnZ5Itx3tUvkeVZXa6bzyPih0SrljAMg&oe=6A3944E9&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=732309884105538",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "MAIN STREET",
+        "SAMPLE_SEGMENT_ID": 251469,
+        "SAMPLE_LAT": 42.4181312859771,
+        "SAMPLE_LNG": -71.109689033953
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.102515742682,
+          42.419466142275
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "140356848020102",
+        "SEQUENCE_ID": "QzvFPzShD8-Hm6PEJBP7rQ",
+        "CAPTURED_AT": 1506972704300,
+        "HEADING": 279.41781822014,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Q3I1BgylTeXJsXfCObh_PFuI3Qbd7IPaZSu8-Lc5QqbhfHyQwRnQdcSOQcTSzJ4IoqWSxFIL7b3h25sOxY3dGAE36_RWOIPWeBQVnOL4iJF7RiY2sBM0JyKpyh1LAAZWg3RdafDLb9dgtffRpKwg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=P6IgILwuYaJRt8FUSm8DUw&_nc_oc=AdrwyH4s2-OI1YCjJym-LJ9QbNy_2HRsviBap6PlA8CPRmTXGfAvGhBGLKsVy5AZVcE&ccb=10-5&oh=00_Af54QYG0pEhefXO7jU1Gqveea-ifmje_6-qA3iWDByDg7Q&oe=6A395973&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Q3I1BgylTeXJsXfCObh_PFuI3Qbd7IPaZSu8-Lc5QqbhfHyQwRnQdcSOQcTSzJ4IoqWSxFIL7b3h25sOxY3dGAE36_RWOIPWeBQVnOL4iJF7RiY2sBM0JyKpyh1LAAZWg3RdafDLb9dgtffRpKwg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=P6IgILwuYaJRt8FUSm8DUw&_nc_oc=AdrwyH4s2-OI1YCjJym-LJ9QbNy_2HRsviBap6PlA8CPRmTXGfAvGhBGLKsVy5AZVcE&ccb=10-5&oh=00_Af7Y3kAKGjBPtFXD8SvviuFqsPlx-9QsR2BoLmVpIaC98A&oe=6A395973&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Q3I1BgylTeXJsXfCObh_PFuI3Qbd7IPaZSu8-Lc5QqbhfHyQwRnQdcSOQcTSzJ4IoqWSxFIL7b3h25sOxY3dGAE36_RWOIPWeBQVnOL4iJF7RiY2sBM0JyKpyh1LAAZWg3RdafDLb9dgtffRpKwg?edm=AOnQwmMEAAAA&_nc_gid=P6IgILwuYaJRt8FUSm8DUw&_nc_oc=AdrwyH4s2-OI1YCjJym-LJ9QbNy_2HRsviBap6PlA8CPRmTXGfAvGhBGLKsVy5AZVcE&ccb=10-5&oh=00_Af5QzUwvztaDGerQLmrUpmmtBG02FLUyvdnOFwTQLkaXLA&oe=6A395973&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=140356848020102",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 394138,
+        "SAMPLE_LAT": 42.419234980524,
+        "SAMPLE_LNG": -71.1028364035119
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.102519251235,
+          42.419466815985
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "287053103146475",
+        "SEQUENCE_ID": "QzvFPzShD8-Hm6PEJBP7rQ",
+        "CAPTURED_AT": 1506972704500,
+        "HEADING": 279.41810679647,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9HlBXrywEuuNwZGlTLz6f3F0E7sVSL-qbBWLtiSVRQIJcQt0XO54mKz3oAw4ekOd6u_jysiZoXOB4qiFJJCJC76f9hh4kkyCDz2ARBzI_YLj2kJaUTS_b_LIQ9ri6_ICP_dDqMp1hpPs8HHcgpQ4c?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=P6IgILwuYaJRt8FUSm8DUw&_nc_oc=Adq9TbRnjpvqinvWbWU4AMDz8D-d7nRYx7lABLu_CgE2NtuopLXFJrQIETQS8Dwepn8&ccb=10-5&oh=00_Af7PEY-RIkgE38AIfEs_EEZP1qyHOp8jKdV6lRDhEbhhvA&oe=6A39674F&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9HlBXrywEuuNwZGlTLz6f3F0E7sVSL-qbBWLtiSVRQIJcQt0XO54mKz3oAw4ekOd6u_jysiZoXOB4qiFJJCJC76f9hh4kkyCDz2ARBzI_YLj2kJaUTS_b_LIQ9ri6_ICP_dDqMp1hpPs8HHcgpQ4c?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=P6IgILwuYaJRt8FUSm8DUw&_nc_oc=Adq9TbRnjpvqinvWbWU4AMDz8D-d7nRYx7lABLu_CgE2NtuopLXFJrQIETQS8Dwepn8&ccb=10-5&oh=00_Af7kGTAnGQsWee2h2zdiLwNutpzodLshvEj9KQzMst7TKQ&oe=6A39674F&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9HlBXrywEuuNwZGlTLz6f3F0E7sVSL-qbBWLtiSVRQIJcQt0XO54mKz3oAw4ekOd6u_jysiZoXOB4qiFJJCJC76f9hh4kkyCDz2ARBzI_YLj2kJaUTS_b_LIQ9ri6_ICP_dDqMp1hpPs8HHcgpQ4c?edm=AOnQwmMEAAAA&_nc_gid=P6IgILwuYaJRt8FUSm8DUw&_nc_oc=Adq9TbRnjpvqinvWbWU4AMDz8D-d7nRYx7lABLu_CgE2NtuopLXFJrQIETQS8Dwepn8&ccb=10-5&oh=00_Af4oz2DuZNnXPQHBsvtmNji0rIrAzlehTmgjD_iNN6DObA&oe=6A39674F&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=287053103146475",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 394138,
+        "SAMPLE_LAT": 42.419234980524,
+        "SAMPLE_LNG": -71.1028364035119
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.110139210547,
+          42.418362910817
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "197880475334648",
+        "SEQUENCE_ID": "W9t3L0Pv6CAlyKvDTThgIw",
+        "CAPTURED_AT": 1426090809000,
+        "HEADING": 109.7633,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-xsOFcbTAaIYBRVmXsQK1fXyCXSwbeDe3bBrizcxy2THpz-dzc8PD6x-nOU5n9E6IR8r-vG6bnEZe3A4cyZmrnAFcic8Y-kZ3ugptYUW5SeDBRnQJJ7B5fK1rU2rUlVZmi43mofcp_VEfa1O8ZMw?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=YM5IX_3yiq7v3zV5LOtD4g&_nc_oc=Adp5rhfrEIAgoOldVTJNun3L3mQUktAAACHMjlm4w2Njm9iLzh4nDApBHrgn7DAOPxs&ccb=10-5&oh=00_Af7O6aNhnLmfLDGsmj3CtuJi7Z_YofO8pVq6zeRPf7vlzQ&oe=6A3948B9&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-xsOFcbTAaIYBRVmXsQK1fXyCXSwbeDe3bBrizcxy2THpz-dzc8PD6x-nOU5n9E6IR8r-vG6bnEZe3A4cyZmrnAFcic8Y-kZ3ugptYUW5SeDBRnQJJ7B5fK1rU2rUlVZmi43mofcp_VEfa1O8ZMw?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=YM5IX_3yiq7v3zV5LOtD4g&_nc_oc=Adp5rhfrEIAgoOldVTJNun3L3mQUktAAACHMjlm4w2Njm9iLzh4nDApBHrgn7DAOPxs&ccb=10-5&oh=00_Af4GBj-GPtFJqdopcgpBVgwERQrrZ2hpCogxCMmyVH_igA&oe=6A3948B9&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-xsOFcbTAaIYBRVmXsQK1fXyCXSwbeDe3bBrizcxy2THpz-dzc8PD6x-nOU5n9E6IR8r-vG6bnEZe3A4cyZmrnAFcic8Y-kZ3ugptYUW5SeDBRnQJJ7B5fK1rU2rUlVZmi43mofcp_VEfa1O8ZMw?edm=AOnQwmMEAAAA&_nc_gid=YM5IX_3yiq7v3zV5LOtD4g&_nc_oc=Adp5rhfrEIAgoOldVTJNun3L3mQUktAAACHMjlm4w2Njm9iLzh4nDApBHrgn7DAOPxs&ccb=10-5&oh=00_Af6pCFxD1R9x5KSzBwvj1Ww72EYKf-ZBUk12xRCwUeVVBw&oe=6A3948B9&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=197880475334648",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "HIGH STREET",
+        "SAMPLE_SEGMENT_ID": 395195,
+        "SAMPLE_LAT": 42.41831933914,
+        "SAMPLE_LNG": -71.1098000329162
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.109844469017,
+          42.418127618032
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "219530072943379",
+        "SEQUENCE_ID": "27ZH1q7NlN4c2vnsVDEreA",
+        "CAPTURED_AT": 1520716491192,
+        "HEADING": 214.88563537598,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_HQe1YsGKwM9B3nWVXGTpf2pk8GtuhcOWtU6N2dkw1vKt6ALs2gTEtt75Ob4RhGJBzsnFhe2kiZmuUq30czz0ytposGw1KzT9mhF0_ErzdDu9PYdlhDD5ckbGeWv1Qb68PxwMiVrXYI3tU7p35dh4?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=YM5IX_3yiq7v3zV5LOtD4g&_nc_oc=AdrJbHrnTiYONjTXEA_8nOtGIOmkv5OMWUQCtCebfhmX8THrjysXxk_IeciaRGNgBqc&ccb=10-5&oh=00_Af7pxXIh_V11C_afAiAYcg9_Srw86SF8XQtwLi8UQVvzGg&oe=6A394460&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_HQe1YsGKwM9B3nWVXGTpf2pk8GtuhcOWtU6N2dkw1vKt6ALs2gTEtt75Ob4RhGJBzsnFhe2kiZmuUq30czz0ytposGw1KzT9mhF0_ErzdDu9PYdlhDD5ckbGeWv1Qb68PxwMiVrXYI3tU7p35dh4?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=YM5IX_3yiq7v3zV5LOtD4g&_nc_oc=AdrJbHrnTiYONjTXEA_8nOtGIOmkv5OMWUQCtCebfhmX8THrjysXxk_IeciaRGNgBqc&ccb=10-5&oh=00_Af5MndfkLUCM8rNBNeNYDHhuq5beBUG10vlIfxKUNKqf1Q&oe=6A394460&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_HQe1YsGKwM9B3nWVXGTpf2pk8GtuhcOWtU6N2dkw1vKt6ALs2gTEtt75Ob4RhGJBzsnFhe2kiZmuUq30czz0ytposGw1KzT9mhF0_ErzdDu9PYdlhDD5ckbGeWv1Qb68PxwMiVrXYI3tU7p35dh4?edm=AOnQwmMEAAAA&_nc_gid=YM5IX_3yiq7v3zV5LOtD4g&_nc_oc=AdrJbHrnTiYONjTXEA_8nOtGIOmkv5OMWUQCtCebfhmX8THrjysXxk_IeciaRGNgBqc&ccb=10-5&oh=00_Af5w-zuzX7Vf23_VmVLOhd-bGosnZzmDYie13aRXeRP0Pw&oe=6A394460&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=219530072943379",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "HIGH STREET",
+        "SAMPLE_SEGMENT_ID": 395195,
+        "SAMPLE_LAT": 42.41831933914,
+        "SAMPLE_LNG": -71.1098000329162
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.110047423006,
+          42.417829294822
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1249599038828015",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972800300,
+        "HEADING": 221.20498222898,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_wUjyfmz7vIosVY07o5xtlIOGc7uLcYcDg3NfndkhOcGT8iQ1Um3IEz40ofqeLm9D2pfvpBq640nQAwPb4mCDbjVO0Yt0xmdgs3Mr9Zawin2OCJpPzT6TIef0KMz7oF4UJcgTXpAFIAsvDy150KQ?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Tyk0ji6J4LaT6deW7s70oA&_nc_oc=Adq-dJL_LBu_-tqbp7FSbQHpaLfTNl2Iwc5uZoLkC5fesS2VN5ZJOaz-3amES17M-Bk&ccb=10-5&oh=00_Af6GVVLvso3tC-272Rocfo3NLlBOW2R_DiipQUuJk7fOew&oe=6A394AA2&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_wUjyfmz7vIosVY07o5xtlIOGc7uLcYcDg3NfndkhOcGT8iQ1Um3IEz40ofqeLm9D2pfvpBq640nQAwPb4mCDbjVO0Yt0xmdgs3Mr9Zawin2OCJpPzT6TIef0KMz7oF4UJcgTXpAFIAsvDy150KQ?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Tyk0ji6J4LaT6deW7s70oA&_nc_oc=Adq-dJL_LBu_-tqbp7FSbQHpaLfTNl2Iwc5uZoLkC5fesS2VN5ZJOaz-3amES17M-Bk&ccb=10-5&oh=00_Af4GR0F7HL0qnaxpMha7e5mXWW-ZIgRbpmgHLN2pbjyeHA&oe=6A394AA2&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_wUjyfmz7vIosVY07o5xtlIOGc7uLcYcDg3NfndkhOcGT8iQ1Um3IEz40ofqeLm9D2pfvpBq640nQAwPb4mCDbjVO0Yt0xmdgs3Mr9Zawin2OCJpPzT6TIef0KMz7oF4UJcgTXpAFIAsvDy150KQ?edm=AOnQwmMEAAAA&_nc_gid=Tyk0ji6J4LaT6deW7s70oA&_nc_oc=Adq-dJL_LBu_-tqbp7FSbQHpaLfTNl2Iwc5uZoLkC5fesS2VN5ZJOaz-3amES17M-Bk&ccb=10-5&oh=00_Af6MoTLRG118ociac4Vt9rUKP5kZd3hbnR4knpDqvFhpqQ&oe=6A394AA2&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1249599038828015",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "HIGH STREET",
+        "SAMPLE_SEGMENT_ID": 386975,
+        "SAMPLE_LAT": 42.4182473650956,
+        "SAMPLE_LNG": -71.1098410238982
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.109739176148,
+          42.418154964181
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1079894539086102",
+        "SEQUENCE_ID": "fn4pqwb0sbof38sefipgi4",
+        "CAPTURED_AT": 1589995094233,
+        "HEADING": 0,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8X-LSpCYhK0fPotJOSKxtglS1wPgPR0uZrEJZAZvaHtcbvBoEKrgL7jcPYekt-5DR7RDDKHN3dBDJ3FsFXRd6JDyl981KODnzbgc2vEZpCX7u8UWy_TfpDnuvpPqIWcSF-mQ6GBf6oG5wTqWdbBg?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=xt62Q3C0QHqs_VwRs-zTng&_nc_oc=AdrJ_7IBYSlUSOyVZMHN1-A8MWSoqeAm78U5CI8Oegqqox5exLC385tVlzPsUGpFrIM&ccb=10-5&oh=00_Af6sSD6QbrYPuIW7JsAW1Ib3PQF1UzPgrpraOaxtBaJUDw&oe=6A395DA5&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8X-LSpCYhK0fPotJOSKxtglS1wPgPR0uZrEJZAZvaHtcbvBoEKrgL7jcPYekt-5DR7RDDKHN3dBDJ3FsFXRd6JDyl981KODnzbgc2vEZpCX7u8UWy_TfpDnuvpPqIWcSF-mQ6GBf6oG5wTqWdbBg?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=xt62Q3C0QHqs_VwRs-zTng&_nc_oc=AdrJ_7IBYSlUSOyVZMHN1-A8MWSoqeAm78U5CI8Oegqqox5exLC385tVlzPsUGpFrIM&ccb=10-5&oh=00_Af6wpHjVKD4_RYn7pKs1-A8xPxror99j52vj1kKpNWhnQw&oe=6A395DA5&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8X-LSpCYhK0fPotJOSKxtglS1wPgPR0uZrEJZAZvaHtcbvBoEKrgL7jcPYekt-5DR7RDDKHN3dBDJ3FsFXRd6JDyl981KODnzbgc2vEZpCX7u8UWy_TfpDnuvpPqIWcSF-mQ6GBf6oG5wTqWdbBg?edm=AOnQwmMEAAAA&_nc_gid=xt62Q3C0QHqs_VwRs-zTng&_nc_oc=AdrJ_7IBYSlUSOyVZMHN1-A8MWSoqeAm78U5CI8Oegqqox5exLC385tVlzPsUGpFrIM&ccb=10-5&oh=00_Af4E_8UNAq3K3C5GfgQ36WlrogJEzO5yHuxE51Odb1hR4Q&oe=6A395DA5&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1079894539086102",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "MAIN STREET",
+        "SAMPLE_SEGMENT_ID": 251470,
+        "SAMPLE_LAT": 42.4180029741066,
+        "SAMPLE_LNG": -71.1098305610093
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.109717226765,
+          42.41820499696
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1019541835291492",
+        "SEQUENCE_ID": "-HUCkmCr5e84kG2F8fKFMQ",
+        "CAPTURED_AT": 1506972796100,
+        "HEADING": 251.73918356741,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Hr-3P8Re0XWoa6uG4YLSXLPVBJ9wcXoEHR5ouBigJskNsjDGX8nLvKc9jbXR_JQuKmu4-LDv0KWp_y-KRX9gjKpxakV5icZyeCYrbJtfvaJ1fR-ZM49Wwk4I9Cc0vEjZQ9B_1qTlseVV3kqr3tw?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=xt62Q3C0QHqs_VwRs-zTng&_nc_oc=Adqc2uh9uVUanNuK4PkFMnteSEfyb6NQCxQVO5De8_5NXezqgvsC37RbLG3H7yxvvhw&ccb=10-5&oh=00_Af7Xmw7Cc4z8xmH0rty26qJk30vFq1RO7Hw8UYNPAPAnbw&oe=6A394FD7&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Hr-3P8Re0XWoa6uG4YLSXLPVBJ9wcXoEHR5ouBigJskNsjDGX8nLvKc9jbXR_JQuKmu4-LDv0KWp_y-KRX9gjKpxakV5icZyeCYrbJtfvaJ1fR-ZM49Wwk4I9Cc0vEjZQ9B_1qTlseVV3kqr3tw?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=xt62Q3C0QHqs_VwRs-zTng&_nc_oc=Adqc2uh9uVUanNuK4PkFMnteSEfyb6NQCxQVO5De8_5NXezqgvsC37RbLG3H7yxvvhw&ccb=10-5&oh=00_Af5rrbl5YkYOt7EFKaTqTICkWYyPa6Eix5vjt80ImAYtgw&oe=6A394FD7&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-Hr-3P8Re0XWoa6uG4YLSXLPVBJ9wcXoEHR5ouBigJskNsjDGX8nLvKc9jbXR_JQuKmu4-LDv0KWp_y-KRX9gjKpxakV5icZyeCYrbJtfvaJ1fR-ZM49Wwk4I9Cc0vEjZQ9B_1qTlseVV3kqr3tw?edm=AOnQwmMEAAAA&_nc_gid=xt62Q3C0QHqs_VwRs-zTng&_nc_oc=Adqc2uh9uVUanNuK4PkFMnteSEfyb6NQCxQVO5De8_5NXezqgvsC37RbLG3H7yxvvhw&ccb=10-5&oh=00_Af6UrN5z1JyX5hREFQ1exYE69gDK48Pg5uG6y4SyriWwlg&oe=6A394FD7&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1019541835291492",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "MAIN STREET",
+        "SAMPLE_SEGMENT_ID": 251470,
+        "SAMPLE_LAT": 42.4180029741066,
+        "SAMPLE_LNG": -71.1098305610093
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.110318368987,
+          42.418418006491
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "489985432246655",
+        "SEQUENCE_ID": "W9t3L0Pv6CAlyKvDTThgIw",
+        "CAPTURED_AT": 1426090803000,
+        "HEADING": 118.1979,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_uTEWEyXR9RHKlEIToPa64EbvESpEKgG6p0SdT8bWtmixPeYMKgfmmLir4-6O00TpC07ltXfdDORXJEN9roLrO42yew2-qMJCwBxAWer5hpKVk39XFA40peHI7HibItVmLXTJq7d9tgbp-8zujVA?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=aC-NkvNN-UkcYrZ3Zrz3gA&_nc_oc=AdrWr1dU7YzrGM67xLwl0rHXdoyvuTLbMxSvp6UTsLqFH86dMgS6HsT0cZ5tRyShKfk&ccb=10-5&oh=00_Af6maj5DsaMO-zHBr1LG7jWhz6e2IPtYVVybyRCAuLRziw&oe=6A396169&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_uTEWEyXR9RHKlEIToPa64EbvESpEKgG6p0SdT8bWtmixPeYMKgfmmLir4-6O00TpC07ltXfdDORXJEN9roLrO42yew2-qMJCwBxAWer5hpKVk39XFA40peHI7HibItVmLXTJq7d9tgbp-8zujVA?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=aC-NkvNN-UkcYrZ3Zrz3gA&_nc_oc=AdrWr1dU7YzrGM67xLwl0rHXdoyvuTLbMxSvp6UTsLqFH86dMgS6HsT0cZ5tRyShKfk&ccb=10-5&oh=00_Af40gDh9CmyrLNcc6ylRGEVTTSr8mFTfC8dWhJ18bdgHfQ&oe=6A396169&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_uTEWEyXR9RHKlEIToPa64EbvESpEKgG6p0SdT8bWtmixPeYMKgfmmLir4-6O00TpC07ltXfdDORXJEN9roLrO42yew2-qMJCwBxAWer5hpKVk39XFA40peHI7HibItVmLXTJq7d9tgbp-8zujVA?edm=AOnQwmMEAAAA&_nc_gid=aC-NkvNN-UkcYrZ3Zrz3gA&_nc_oc=AdrWr1dU7YzrGM67xLwl0rHXdoyvuTLbMxSvp6UTsLqFH86dMgS6HsT0cZ5tRyShKfk&ccb=10-5&oh=00_Af6oUdnwA1V2p2sKMaIvGQL_KAEOqtEXn0TfrHRIyagEXA&oe=6A396169&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=489985432246655",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "MAIN STREET",
+        "SAMPLE_SEGMENT_ID": 260573,
+        "SAMPLE_LAT": 42.4180879112469,
+        "SAMPLE_LNG": -71.1098958288929
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.102256567241,
+          42.419452305165
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "307811530715660",
+        "SEQUENCE_ID": "QzvFPzShD8-Hm6PEJBP7rQ",
+        "CAPTURED_AT": 1506972700300,
+        "HEADING": 250.64931119435,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9zzKDqA3FbsA3WPZHhJGFpC6wqvjiBKQ8eg512a8aacOwWefSojH9nXvc-vXXz82KfIeBSgtoczgnCUiTvE-KSAQ-FFzgR3DZ3vO_aTqwkJn2-2Odcfv2urvvkWQteKWqiiBGLNPBQ4_pxzxAlcw?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Il2dyIsOrahM5XzJZLfczQ&_nc_oc=Adqtcz_P4ly-PQmMYx4NN9j0rNSnbWtpyk7zziIIloq_9bNw-PAewELC2en8CYtnnAA&ccb=10-5&oh=00_Af61shWjwnMaHtDunZMzQv5AwdEiV2jZB6OEyxB8p2Ew5A&oe=6A39632E&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9zzKDqA3FbsA3WPZHhJGFpC6wqvjiBKQ8eg512a8aacOwWefSojH9nXvc-vXXz82KfIeBSgtoczgnCUiTvE-KSAQ-FFzgR3DZ3vO_aTqwkJn2-2Odcfv2urvvkWQteKWqiiBGLNPBQ4_pxzxAlcw?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Il2dyIsOrahM5XzJZLfczQ&_nc_oc=Adqtcz_P4ly-PQmMYx4NN9j0rNSnbWtpyk7zziIIloq_9bNw-PAewELC2en8CYtnnAA&ccb=10-5&oh=00_Af4BZkNgUGrndUreIBVYtCnQ-fsb8Lfe_nhloRZwoyor3w&oe=6A39632E&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9zzKDqA3FbsA3WPZHhJGFpC6wqvjiBKQ8eg512a8aacOwWefSojH9nXvc-vXXz82KfIeBSgtoczgnCUiTvE-KSAQ-FFzgR3DZ3vO_aTqwkJn2-2Odcfv2urvvkWQteKWqiiBGLNPBQ4_pxzxAlcw?edm=AOnQwmMEAAAA&_nc_gid=Il2dyIsOrahM5XzJZLfczQ&_nc_oc=Adqtcz_P4ly-PQmMYx4NN9j0rNSnbWtpyk7zziIIloq_9bNw-PAewELC2en8CYtnnAA&ccb=10-5&oh=00_Af7Cs357rY0KxCPTJFypYlG8bhXnzMwuqu6yZ2bLSNwDlQ&oe=6A39632E&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=307811530715660",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 360952,
+        "SAMPLE_LAT": 42.4194160122579,
+        "SAMPLE_LNG": -71.1027019750473
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.103094216905,
+          42.419292917762
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "501549281015883",
+        "SEQUENCE_ID": "27ZH1q7NlN4c2vnsVDEreA",
+        "CAPTURED_AT": 1520716378313,
+        "HEADING": 3.9374694824219,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_h2i_9eXuRSOfRCq71b7G7gawD2jDczAtXFfV5ME4wivml6VANfGlBUAQzzjfhieB0SH0EHRp67-_MWXW1VhspLvNb6eOvWQTzbaJsFCZChsCUquGoT9Js-nFrOfFxbCruBdGW1VtDcv2gSU_FHg?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=Il2dyIsOrahM5XzJZLfczQ&_nc_oc=Adp3beTPR6uTgNw_YWhGxJAliHJQJzVRsaVj4P8QTFDnDnWWmPK5q8YLWAKIcL9Tfl4&ccb=10-5&oh=00_Af5m8MWw2FpJdtz_fKTr-LfVDZyRJYPPzBBF3DfIKMVs6Q&oe=6A39390B&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_h2i_9eXuRSOfRCq71b7G7gawD2jDczAtXFfV5ME4wivml6VANfGlBUAQzzjfhieB0SH0EHRp67-_MWXW1VhspLvNb6eOvWQTzbaJsFCZChsCUquGoT9Js-nFrOfFxbCruBdGW1VtDcv2gSU_FHg?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=Il2dyIsOrahM5XzJZLfczQ&_nc_oc=Adp3beTPR6uTgNw_YWhGxJAliHJQJzVRsaVj4P8QTFDnDnWWmPK5q8YLWAKIcL9Tfl4&ccb=10-5&oh=00_Af4m9md8rHaZsdKVxzDCvSC0supXBCMAc1eg37FIosIgag&oe=6A39390B&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_h2i_9eXuRSOfRCq71b7G7gawD2jDczAtXFfV5ME4wivml6VANfGlBUAQzzjfhieB0SH0EHRp67-_MWXW1VhspLvNb6eOvWQTzbaJsFCZChsCUquGoT9Js-nFrOfFxbCruBdGW1VtDcv2gSU_FHg?edm=AOnQwmMEAAAA&_nc_gid=Il2dyIsOrahM5XzJZLfczQ&_nc_oc=Adp3beTPR6uTgNw_YWhGxJAliHJQJzVRsaVj4P8QTFDnDnWWmPK5q8YLWAKIcL9Tfl4&ccb=10-5&oh=00_Af7ER3_9ozGfsva1zaoeI1yHjQNj-Ihl41ViNStt2On4HA&oe=6A39390B&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=501549281015883",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "SALEM STREET",
+        "SAMPLE_SEGMENT_ID": 360952,
+        "SAMPLE_LAT": 42.4194160122579,
+        "SAMPLE_LNG": -71.1027019750473
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.103896727833,
+          42.416578561073
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1183313215453610",
+        "SEQUENCE_ID": "azf2vq4li1rjjjqaxlsv07",
+        "CAPTURED_AT": 1545070937063,
+        "HEADING": 357.36199951172,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Y1X--VqhPAbQz9SPKGriszM3itO_SK7PPXN3hUqtb6jDxrHuma5HnnZlXEfgn2BLiT2SEVku5bLuBiH490QlvDg6iRkRRPlnPrfcJf5UBLWnP42XBpE7qiJIS48D-Nv_WegABv_D60Gkp8mpryQ?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=_R180PINxmOQoZXJL1tnhg&_nc_oc=AdoDcUezAXo3JVtFTj6UPpPhUZT1VAUbtf7jffWB8f6AxrEgCVT5VDs9wJcEBq63Tv8&ccb=10-5&oh=00_Af6KpnMxcf-o4nEu3jYXwrUoR2Qjxx_PrFi-cd2CsUj3HQ&oe=6A395B9F&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Y1X--VqhPAbQz9SPKGriszM3itO_SK7PPXN3hUqtb6jDxrHuma5HnnZlXEfgn2BLiT2SEVku5bLuBiH490QlvDg6iRkRRPlnPrfcJf5UBLWnP42XBpE7qiJIS48D-Nv_WegABv_D60Gkp8mpryQ?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=_R180PINxmOQoZXJL1tnhg&_nc_oc=AdoDcUezAXo3JVtFTj6UPpPhUZT1VAUbtf7jffWB8f6AxrEgCVT5VDs9wJcEBq63Tv8&ccb=10-5&oh=00_Af4Ghbwys7jkUkKpk7i3uIY0D8uKdRntIHLcMW_0_Jqsgg&oe=6A395B9F&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8Y1X--VqhPAbQz9SPKGriszM3itO_SK7PPXN3hUqtb6jDxrHuma5HnnZlXEfgn2BLiT2SEVku5bLuBiH490QlvDg6iRkRRPlnPrfcJf5UBLWnP42XBpE7qiJIS48D-Nv_WegABv_D60Gkp8mpryQ?edm=AOnQwmMEAAAA&_nc_gid=_R180PINxmOQoZXJL1tnhg&_nc_oc=AdoDcUezAXo3JVtFTj6UPpPhUZT1VAUbtf7jffWB8f6AxrEgCVT5VDs9wJcEBq63Tv8&ccb=10-5&oh=00_Af4hsG_9xf2YYGscdIMcPvDPCpo6yrH3J8V7iB7isWymbg&oe=6A395B9F&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1183313215453610",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "RIVERSIDE AVENUE",
+        "SAMPLE_SEGMENT_ID": 260585,
+        "SAMPLE_LAT": 42.4162460678817,
+        "SAMPLE_LNG": -71.1037895633783
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.108311551483,
+          42.41612271909
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "168549311751775",
+        "SEQUENCE_ID": "9qsskye0hicp6k9c09z6gl",
+        "CAPTURED_AT": 1507315783063,
+        "HEADING": 311.77020263672,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-obSZfWidMLRBJg3g7fbqT0Ze3LpkJdFzSWEQOv8IqdBdF_YO8fJKosrha60Rsvvv0HBz1UWKr6LozIILTHFqBFtycQiX50Vjffp1R6dmK-rmi5_Qo6p8NKYGoeOm1IA4I8D5dJ_Ol_0BRq4AifQ?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=E4xKTY5hdsttNEAuaZJN7g&_nc_oc=AdrofsCrQQT5byxYI_60DdA7MTritY0AVG3lmr2dnMi6PgJcn5PJSF1ZpZKic1M1DiE&ccb=10-5&oh=00_Af6fKIB8CkSZFL1XCJPVBu18_4-h_OjxKd7QI3E2nsRA1w&oe=6A39621C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-obSZfWidMLRBJg3g7fbqT0Ze3LpkJdFzSWEQOv8IqdBdF_YO8fJKosrha60Rsvvv0HBz1UWKr6LozIILTHFqBFtycQiX50Vjffp1R6dmK-rmi5_Qo6p8NKYGoeOm1IA4I8D5dJ_Ol_0BRq4AifQ?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=E4xKTY5hdsttNEAuaZJN7g&_nc_oc=AdrofsCrQQT5byxYI_60DdA7MTritY0AVG3lmr2dnMi6PgJcn5PJSF1ZpZKic1M1DiE&ccb=10-5&oh=00_Af44oY3etPFejRhuzmeemMnVrVOjxbHoq_fAHHNkrrbeSg&oe=6A39621C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-obSZfWidMLRBJg3g7fbqT0Ze3LpkJdFzSWEQOv8IqdBdF_YO8fJKosrha60Rsvvv0HBz1UWKr6LozIILTHFqBFtycQiX50Vjffp1R6dmK-rmi5_Qo6p8NKYGoeOm1IA4I8D5dJ_Ol_0BRq4AifQ?edm=AOnQwmMEAAAA&_nc_gid=E4xKTY5hdsttNEAuaZJN7g&_nc_oc=AdrofsCrQQT5byxYI_60DdA7MTritY0AVG3lmr2dnMi6PgJcn5PJSF1ZpZKic1M1DiE&ccb=10-5&oh=00_Af7I1WrCVRknaS47eBvKQ_ErsbIk0SlhUqlxSbPlmhNCkA&oe=6A39621C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=168549311751775",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "CONNECTOR MYSTIC VALLEY PARKWAY",
+        "SAMPLE_SEGMENT_ID": 333478,
+        "SAMPLE_LAT": 42.4159414869393,
+        "SAMPLE_LNG": -71.1080322071644
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107949538181,
+          42.415880813223
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "133964268780661",
+        "SEQUENCE_ID": "9qsskye0hicp6k9c09z6gl",
+        "CAPTURED_AT": 1507315756123,
+        "HEADING": 307.15289306641,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8v8W4zerTCuBKV2hUqBtMK0bSpQloHO3syYJamCTooQQseUpMYzEvIRqydmMsv5VCYG8MBb7B3pCV7eUF23lQicgdpHmw0_j2qBJU6cuawsgra2F2WSd71WoodS39IeM8z2lbRXABIcY08Qbar0g?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=E4xKTY5hdsttNEAuaZJN7g&_nc_oc=AdqFEvgj4SkyAlXafYltwGz3XzV8qxCckTG17vAGqRruMip1Aa5KIA078WbkmKin1Mg&ccb=10-5&oh=00_Af7pMPVKS63K-zOO5QbQwST5tOE0Aqisdh6vFBX4hi1WhQ&oe=6A3932DF&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8v8W4zerTCuBKV2hUqBtMK0bSpQloHO3syYJamCTooQQseUpMYzEvIRqydmMsv5VCYG8MBb7B3pCV7eUF23lQicgdpHmw0_j2qBJU6cuawsgra2F2WSd71WoodS39IeM8z2lbRXABIcY08Qbar0g?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=E4xKTY5hdsttNEAuaZJN7g&_nc_oc=AdqFEvgj4SkyAlXafYltwGz3XzV8qxCckTG17vAGqRruMip1Aa5KIA078WbkmKin1Mg&ccb=10-5&oh=00_Af69-BV8sSBmW3xYtk58opl-h1dVb4e3ndwCgXXLeYqpBg&oe=6A3932DF&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8v8W4zerTCuBKV2hUqBtMK0bSpQloHO3syYJamCTooQQseUpMYzEvIRqydmMsv5VCYG8MBb7B3pCV7eUF23lQicgdpHmw0_j2qBJU6cuawsgra2F2WSd71WoodS39IeM8z2lbRXABIcY08Qbar0g?edm=AOnQwmMEAAAA&_nc_gid=E4xKTY5hdsttNEAuaZJN7g&_nc_oc=AdqFEvgj4SkyAlXafYltwGz3XzV8qxCckTG17vAGqRruMip1Aa5KIA078WbkmKin1Mg&ccb=10-5&oh=00_Af7XDxUpY3Tb6zsQwwPehP8guafNGBdpQyhYqHrXeNIxnw&oe=6A3932DF&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=133964268780661",
+        "SAMPLE_MUNICIPALITY": "Medford",
+        "SAMPLE_STREET_NAME": "CONNECTOR MYSTIC VALLEY PARKWAY",
+        "SAMPLE_SEGMENT_ID": 333478,
+        "SAMPLE_LAT": 42.4159414869393,
+        "SAMPLE_LNG": -71.1080322071644
+      }
+    }
+  ]
+}

@@ -4,7 +4,7 @@
     "municipality": "Cambridge",
     "source_id": "cambridge_gis",
     "street_centerlines_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
-    "generated_at_utc": "2026-05-23T10:35:34.767445+00:00",
+    "generated_at_utc": "2026-07-20T20:56:13.669454+00:00",
     "feature_count": 2643
   },
   "features": [
@@ -16620,7 +16620,7 @@
         "CAMBRIDGE_SEGMENT_ID": "Sacrame_St_2",
         "L_FROM": 35,
         "L_TO": 59,
-        "R_FROM": 38,
+        "R_FROM": 34,
         "R_TO": 58
       }
     },
@@ -49308,7 +49308,7 @@
         "TO_STREET": "",
         "CAMBRIDGE_STREET_ID": 422.0,
         "CAMBRIDGE_SEGMENT_ID": "Huron_Ave_20",
-        "L_FROM": 234,
+        "L_FROM": 230,
         "L_TO": 252,
         "R_FROM": 233,
         "R_TO": 249
@@ -81855,7 +81855,7 @@
         "L_FROM": -1,
         "L_TO": -1,
         "R_FROM": 41,
-        "R_TO": 49
+        "R_TO": 55
       }
     },
     {
@@ -100727,7 +100727,7 @@
         "CAMBRIDGE_STREET_ID": 557.0,
         "CAMBRIDGE_SEGMENT_ID": "Museum_St_1",
         "L_FROM": 45,
-        "L_TO": 89,
+        "L_TO": 95,
         "R_FROM": 64,
         "R_TO": 64
       }
@@ -102212,7 +102212,7 @@
         "CAMBRIDGE_SEGMENT_ID": "Dover_St_1",
         "L_FROM": 7,
         "L_TO": 49,
-        "R_FROM": 8,
+        "R_FROM": 4,
         "R_TO": 48
       }
     },
@@ -102762,7 +102762,7 @@
         "CAMBRIDGE_SEGMENT_ID": "Eighth_St_1",
         "L_FROM": 38,
         "L_TO": 58,
-        "R_FROM": 47,
+        "R_FROM": 53,
         "R_TO": 57
       }
     },
@@ -109436,7 +109436,7 @@
         "TO_STREET": "",
         "CAMBRIDGE_STREET_ID": 888.0,
         "CAMBRIDGE_SEGMENT_ID": "Broad_Canal_Way_1",
-        "L_FROM": 5,
+        "L_FROM": 3,
         "L_TO": 15,
         "R_FROM": 2,
         "R_TO": 10

@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# Local secrets
+.env
+
+# Large, reproducible imagery downloads and model-review artifacts
+data/processed/imagery/assets/
+data/processed/imagery/spark_runs/

@@ -1,0 +1,461 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "generated_at_utc": "2026-05-23T16:46:21.556237+00:00",
+    "provider": "mapillary",
+    "provider_api": "https://graph.mapillary.com/images",
+    "municipalities": [
+      "somerville"
+    ],
+    "sample_count": 25,
+    "image_metadata_count": 17,
+    "radius_meters": 35,
+    "photos_per_sample": 2,
+    "errors": [],
+    "note": "Metadata index only. Image URLs are source evidence for later review/inference; do not treat image detections as legal parking rules without confidence and source notes."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.128231959336,
+          42.41738485387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "223655515853416",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030370400,
+        "HEADING": 52.762451171875,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9cZms191O4MOIovGcPOTN2C23KG6pc8gTvEDTjpLlffYEz7HlN2OJFAp4kP6mp3V9D5JJOTIZ0vX8xMuMjnbpRG9B6umdDHMM8fluGgnuphj31mNGZfwRVx9sJruzSUuuV0SzE0omNP8Y3LLnXPA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=PpUvIykQAZ1HwZWbXCkmyg&_nc_oc=Adrjy-jnwDyBqR1q2PuL548el0u5SlQXcFbkYkpVtDcw67cUqrJ1yxh70dr2XgpUTCo&ccb=10-5&oh=00_Af4q4ldEEemvbqDw8RJtjplK5gpX1mlaNvC05FXUAqy8_A&oe=6A394E62&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9cZms191O4MOIovGcPOTN2C23KG6pc8gTvEDTjpLlffYEz7HlN2OJFAp4kP6mp3V9D5JJOTIZ0vX8xMuMjnbpRG9B6umdDHMM8fluGgnuphj31mNGZfwRVx9sJruzSUuuV0SzE0omNP8Y3LLnXPA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=PpUvIykQAZ1HwZWbXCkmyg&_nc_oc=Adrjy-jnwDyBqR1q2PuL548el0u5SlQXcFbkYkpVtDcw67cUqrJ1yxh70dr2XgpUTCo&ccb=10-5&oh=00_Af4CwS7F4TvTm7pUDjFlZ02-xaQ5-IE0EqyP5LNonGqAfw&oe=6A394E62&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9cZms191O4MOIovGcPOTN2C23KG6pc8gTvEDTjpLlffYEz7HlN2OJFAp4kP6mp3V9D5JJOTIZ0vX8xMuMjnbpRG9B6umdDHMM8fluGgnuphj31mNGZfwRVx9sJruzSUuuV0SzE0omNP8Y3LLnXPA?edm=AOnQwmMEAAAA&_nc_gid=PpUvIykQAZ1HwZWbXCkmyg&_nc_oc=Adrjy-jnwDyBqR1q2PuL548el0u5SlQXcFbkYkpVtDcw67cUqrJ1yxh70dr2XgpUTCo&ccb=10-5&oh=00_Af7k1YVZOZ0XJnT_Fm88AyMqvEWngTux3Aca2tJgnqJA4g&oe=6A394E62&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=223655515853416",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "MYSTIC VALLEY PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.4175376717912,
+        "SAMPLE_LNG": -71.12798042441646
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.128264,
+          42.417403
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "176936257675799",
+        "SEQUENCE_ID": "rva5icbvdewi1tqbes1ptk",
+        "CAPTURED_AT": 1426096594000,
+        "HEADING": 52.32202,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9zqKJRqtzJrmq0JZ1mCT_QEH-GeyroutICeKaECsqk5h3F1NPF4oPxlgQY-t20UGb93AQYs0Ip2_63VWmezCJyLJnRqacTJ8GDg_dol6znKOejRgqKKsDXsAMbF5MtPiPycstL4xoTYylvyz9JJw?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=PpUvIykQAZ1HwZWbXCkmyg&_nc_oc=Adq2hcHQ9g8bVgTJVoKvh0PnOErXQbXPSKIMoY8CvYE7rvJ1iy2jlSAuwfFXspzcFjc&ccb=10-5&oh=00_Af41umv7W2nWhEOlgmEb3mIawqkpI0V_eDY0rDdEhaEr0w&oe=6A3956C1&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9zqKJRqtzJrmq0JZ1mCT_QEH-GeyroutICeKaECsqk5h3F1NPF4oPxlgQY-t20UGb93AQYs0Ip2_63VWmezCJyLJnRqacTJ8GDg_dol6znKOejRgqKKsDXsAMbF5MtPiPycstL4xoTYylvyz9JJw?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=PpUvIykQAZ1HwZWbXCkmyg&_nc_oc=Adq2hcHQ9g8bVgTJVoKvh0PnOErXQbXPSKIMoY8CvYE7rvJ1iy2jlSAuwfFXspzcFjc&ccb=10-5&oh=00_Af6t8do44czyuN8yyb1GXYWnK413-lAUAoiKUX_XSC4H3g&oe=6A3956C1&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9zqKJRqtzJrmq0JZ1mCT_QEH-GeyroutICeKaECsqk5h3F1NPF4oPxlgQY-t20UGb93AQYs0Ip2_63VWmezCJyLJnRqacTJ8GDg_dol6znKOejRgqKKsDXsAMbF5MtPiPycstL4xoTYylvyz9JJw?edm=AOnQwmMEAAAA&_nc_gid=PpUvIykQAZ1HwZWbXCkmyg&_nc_oc=Adq2hcHQ9g8bVgTJVoKvh0PnOErXQbXPSKIMoY8CvYE7rvJ1iy2jlSAuwfFXspzcFjc&ccb=10-5&oh=00_Af53pUccjXb4-kUEwv280JsRZ6oIQOSXykXgCqLzsF8eVg&oe=6A3956C1&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=176936257675799",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "MYSTIC VALLEY PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.4175376717912,
+        "SAMPLE_LNG": -71.12798042441646
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.129318390194,
+          42.41662729399
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "136611415173763",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030361969,
+        "HEADING": 42.874881744385,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_YuWjS42GNSGWqgLJ4Zj7kQgfdD66pQ5hXQo-1Nzf8YNuijspYJQ9X3sr5h2fqS2_7wmHC9PgsSoMI9-SttjXSm_KcU0GTTznyZhVZ-mzxBVhkse1WP5ZNPz4k30RTmZM2IXf2oJ1QSTdOIa9QLWY?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=_VxuZQt_NLorJnfFLxLoRw&_nc_oc=AdruMIfV87Ow3doI0ojHt4G-D7a3iovmxFsyLlsIEsmMAhokLZO00Rfg0kdKsSECc0U&ccb=10-5&oh=00_Af6CMP1lphPQnUbkrIQ4Uwsb1cI3YXSbbW_ot0B9vhiNxg&oe=6A39444C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_YuWjS42GNSGWqgLJ4Zj7kQgfdD66pQ5hXQo-1Nzf8YNuijspYJQ9X3sr5h2fqS2_7wmHC9PgsSoMI9-SttjXSm_KcU0GTTznyZhVZ-mzxBVhkse1WP5ZNPz4k30RTmZM2IXf2oJ1QSTdOIa9QLWY?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=_VxuZQt_NLorJnfFLxLoRw&_nc_oc=AdruMIfV87Ow3doI0ojHt4G-D7a3iovmxFsyLlsIEsmMAhokLZO00Rfg0kdKsSECc0U&ccb=10-5&oh=00_Af5zhLjI-mqB9Ay2UWU1IguwIOP7262R2kLMkLZbBvY1Zw&oe=6A39444C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_YuWjS42GNSGWqgLJ4Zj7kQgfdD66pQ5hXQo-1Nzf8YNuijspYJQ9X3sr5h2fqS2_7wmHC9PgsSoMI9-SttjXSm_KcU0GTTznyZhVZ-mzxBVhkse1WP5ZNPz4k30RTmZM2IXf2oJ1QSTdOIa9QLWY?edm=AOnQwmMEAAAA&_nc_gid=_VxuZQt_NLorJnfFLxLoRw&_nc_oc=AdruMIfV87Ow3doI0ojHt4G-D7a3iovmxFsyLlsIEsmMAhokLZO00Rfg0kdKsSECc0U&ccb=10-5&oh=00_Af6nCH2W7i0sGSus2CZmJH1U9cJlGIOEPdoWKoMsv5iaYQ&oe=6A39444C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=136611415173763",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "MYSTIC VALLEY PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41636663922981,
+        "SAMPLE_LNG": -71.12967856339648
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12971245439,
+          42.416294440437
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1221586234926583",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030356900,
+        "HEADING": 60.09801864624,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-PpTYG3fgKms8oMuaFWYOlTmermH9glWN-SDT6v_PTvKFza9R_unbrUYy5VthykcUCZlb7rombX9n0IhDDUnWi6eHzx_VhrLV2oGdk1RujuX5Yh4Pvytz718lqYZzEKqFlPApS-xDr1h6LD_WBxg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=_VxuZQt_NLorJnfFLxLoRw&_nc_oc=AdqianunkeAPdycs3cyNH0BREhKG_jUlzf7Lwve9wBEznF6qTNOkdJOnAmG-AixlVcg&ccb=10-5&oh=00_Af5wM4yt1VJOleR9NIchK13PeR8fESjAAUj9SbDDFAbREw&oe=6A39434E&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-PpTYG3fgKms8oMuaFWYOlTmermH9glWN-SDT6v_PTvKFza9R_unbrUYy5VthykcUCZlb7rombX9n0IhDDUnWi6eHzx_VhrLV2oGdk1RujuX5Yh4Pvytz718lqYZzEKqFlPApS-xDr1h6LD_WBxg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=_VxuZQt_NLorJnfFLxLoRw&_nc_oc=AdqianunkeAPdycs3cyNH0BREhKG_jUlzf7Lwve9wBEznF6qTNOkdJOnAmG-AixlVcg&ccb=10-5&oh=00_Af5lkv6U7KLJlU7PljoGn3lyuV7WAnx8g91DHA4psKTYNg&oe=6A39434E&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-PpTYG3fgKms8oMuaFWYOlTmermH9glWN-SDT6v_PTvKFza9R_unbrUYy5VthykcUCZlb7rombX9n0IhDDUnWi6eHzx_VhrLV2oGdk1RujuX5Yh4Pvytz718lqYZzEKqFlPApS-xDr1h6LD_WBxg?edm=AOnQwmMEAAAA&_nc_gid=_VxuZQt_NLorJnfFLxLoRw&_nc_oc=AdqianunkeAPdycs3cyNH0BREhKG_jUlzf7Lwve9wBEznF6qTNOkdJOnAmG-AixlVcg&ccb=10-5&oh=00_Af71TjX_oiUvaBhu4YyBYFQT82c1SLLwt6X6MIJDjbQsKQ&oe=6A39434E&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1221586234926583",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "MYSTIC VALLEY PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41636663922981,
+        "SAMPLE_LNG": -71.12967856339648
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.129574126001,
+          42.416418124598
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1120692018437089",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030358642,
+        "HEADING": 73.086112976074,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9OxTiRXHXkvtEzt9w83dYYd2Ps4dwmrvFdfaGqqp11r8FC6yRj9sAoYYVEw_NgFUVtZisI8wIwkcawpYNZO4cxJkF_XWU4s2QT0VvgcnDszH5Yk3I8WH_2dDmaTFRSm8H9YdvdStcYLXnqSyv1Gw?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=1L-PSj4Q1Cno8vaCwLfnEQ&_nc_oc=AdpEZ5xr9Cldno3rA0CRYa7JSH-PjAnel9LOTDPCE1KNY_g6Vx3BnYM_5pTEHLBOM_U&ccb=10-5&oh=00_Af59gnjqPif0mlW9m89f516VrNJspdYOyNMRkN8ohD4O8w&oe=6A3953F2&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9OxTiRXHXkvtEzt9w83dYYd2Ps4dwmrvFdfaGqqp11r8FC6yRj9sAoYYVEw_NgFUVtZisI8wIwkcawpYNZO4cxJkF_XWU4s2QT0VvgcnDszH5Yk3I8WH_2dDmaTFRSm8H9YdvdStcYLXnqSyv1Gw?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=1L-PSj4Q1Cno8vaCwLfnEQ&_nc_oc=AdpEZ5xr9Cldno3rA0CRYa7JSH-PjAnel9LOTDPCE1KNY_g6Vx3BnYM_5pTEHLBOM_U&ccb=10-5&oh=00_Af4cpyB2_t8elWFO3-ywewTLY19O7_tqqUDtR7ymooWoKA&oe=6A3953F2&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9OxTiRXHXkvtEzt9w83dYYd2Ps4dwmrvFdfaGqqp11r8FC6yRj9sAoYYVEw_NgFUVtZisI8wIwkcawpYNZO4cxJkF_XWU4s2QT0VvgcnDszH5Yk3I8WH_2dDmaTFRSm8H9YdvdStcYLXnqSyv1Gw?edm=AOnQwmMEAAAA&_nc_gid=1L-PSj4Q1Cno8vaCwLfnEQ&_nc_oc=AdpEZ5xr9Cldno3rA0CRYa7JSH-PjAnel9LOTDPCE1KNY_g6Vx3BnYM_5pTEHLBOM_U&ccb=10-5&oh=00_Af6-7gXrBpodLMKUEUyFgFPlBFAgNhvTKQoqTR2qgCAUuQ&oe=6A3953F2&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1120692018437089",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "BOSTON AVE",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41641921014291,
+        "SAMPLE_LNG": -71.12917414436801
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.129160804861,
+          42.416509463161
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "475697123697036",
+        "SEQUENCE_ID": "3Spqx2Ms-wdT4Fty2GifNA",
+        "CAPTURED_AT": 1507069362777,
+        "HEADING": 164.70694255236,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8xp81PwjK7z8cRPg_ZoFafGm0pRzMYp6TB6L_83L6iGU6JXo6VIpe7wyZINqNEWtlyZiYSHg1u5c6ptAxH7qkZJljAskAFdGf9TzKeHdjqCHXNs5AhqjsBmXl2uuwmr1AWOVxRQ6oJ8bf_p9HTlA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=AgSKjuZmC70tbWBpqed8Eg&_nc_oc=Adq4pcT_CO3lsaRIw11WVopVnVRgnH3zFXJWuTpFbKqsRfrnTrWahqTiIdhw939BgLU&ccb=10-5&oh=00_Af7WezBMuvRP92EvkSF7d2SKE5iM6grUEvVA2exnaM6HFA&oe=6A394F9C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8xp81PwjK7z8cRPg_ZoFafGm0pRzMYp6TB6L_83L6iGU6JXo6VIpe7wyZINqNEWtlyZiYSHg1u5c6ptAxH7qkZJljAskAFdGf9TzKeHdjqCHXNs5AhqjsBmXl2uuwmr1AWOVxRQ6oJ8bf_p9HTlA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=AgSKjuZmC70tbWBpqed8Eg&_nc_oc=Adq4pcT_CO3lsaRIw11WVopVnVRgnH3zFXJWuTpFbKqsRfrnTrWahqTiIdhw939BgLU&ccb=10-5&oh=00_Af5a3SG145knwscUNgulB5LS49hf8VWOCjSqBZZsvcNdsw&oe=6A394F9C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8xp81PwjK7z8cRPg_ZoFafGm0pRzMYp6TB6L_83L6iGU6JXo6VIpe7wyZINqNEWtlyZiYSHg1u5c6ptAxH7qkZJljAskAFdGf9TzKeHdjqCHXNs5AhqjsBmXl2uuwmr1AWOVxRQ6oJ8bf_p9HTlA?edm=AOnQwmMEAAAA&_nc_gid=AgSKjuZmC70tbWBpqed8Eg&_nc_oc=Adq4pcT_CO3lsaRIw11WVopVnVRgnH3zFXJWuTpFbKqsRfrnTrWahqTiIdhw939BgLU&ccb=10-5&oh=00_Af6QFhe3PfZvu0AHkEkLihyDlbAsAZuYizZCPr806_LNKg&oe=6A394F9C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=475697123697036",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "BOSTON AVE",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41558712505907,
+        "SAMPLE_LNG": -71.12791297977041
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.129236325263,
+          42.416562035186
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "559352548802139",
+        "SEQUENCE_ID": "3Spqx2Ms-wdT4Fty2GifNA",
+        "CAPTURED_AT": 1507069362444,
+        "HEADING": 164.70718871257,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-zSXWKPr-2alYIuKVVhdI42vBimk_cjJtuBSk0fXO5g_4K12kezrwbdhfN4DocgNBIHaUSUTzG9tliaWcrqYVkx7z_nrMhMHADNwFUMkXHtRCE2TLkyGEmjZ2Dv-SN18C6Z-TNS053zRHdByJxtw?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=AgSKjuZmC70tbWBpqed8Eg&_nc_oc=AdrgvEC_HuFHcjC0mVLZvIMBw-bRDYCHD6_FbxOLXxwe6baTNaUFE6NaoB_XK1EBE9A&ccb=10-5&oh=00_Af49EqV8BPDHFOlRHI7Omjrf4pz19PTnrVeMn8XeazV7dA&oe=6A3947DB&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-zSXWKPr-2alYIuKVVhdI42vBimk_cjJtuBSk0fXO5g_4K12kezrwbdhfN4DocgNBIHaUSUTzG9tliaWcrqYVkx7z_nrMhMHADNwFUMkXHtRCE2TLkyGEmjZ2Dv-SN18C6Z-TNS053zRHdByJxtw?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=AgSKjuZmC70tbWBpqed8Eg&_nc_oc=AdrgvEC_HuFHcjC0mVLZvIMBw-bRDYCHD6_FbxOLXxwe6baTNaUFE6NaoB_XK1EBE9A&ccb=10-5&oh=00_Af4y-uD_6c5J6pCZUmKkeS7HfZV44WK-p76dhHzICKOiPg&oe=6A3947DB&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-zSXWKPr-2alYIuKVVhdI42vBimk_cjJtuBSk0fXO5g_4K12kezrwbdhfN4DocgNBIHaUSUTzG9tliaWcrqYVkx7z_nrMhMHADNwFUMkXHtRCE2TLkyGEmjZ2Dv-SN18C6Z-TNS053zRHdByJxtw?edm=AOnQwmMEAAAA&_nc_gid=AgSKjuZmC70tbWBpqed8Eg&_nc_oc=AdrgvEC_HuFHcjC0mVLZvIMBw-bRDYCHD6_FbxOLXxwe6baTNaUFE6NaoB_XK1EBE9A&ccb=10-5&oh=00_Af5e_8M81gYybD3jeBZJt6zwf63MId8tFwXOofda3vlcfA&oe=6A3947DB&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=559352548802139",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "BOSTON AVE",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41558712505907,
+        "SAMPLE_LNG": -71.12791297977041
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.130201385816,
+          42.415789067873
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "134413832071915",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030352102,
+        "HEADING": 33.557792663574,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_6nLGdb_SawqTTqVnuLnKcS43V4kBZ06IfRRbSnngYZK_OvVgD69qtBWvI1_JoOYH_pMTLi7194AYJ3PkuydMFHeF7Vy5_uUCQi2D4l_tDhktxQ5-wbeVP0pqGHZiOUaqavqKNj9LBdz23SZNauEM?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=FmA3tkzbL5zSzH7gMo3p5w&_nc_oc=AdqR5D8xMgb0xhdqHprCJPs_xuhV6GAmKo0O_w3mKCm0806-KAWGrjAfOzks00_K5Xw&ccb=10-5&oh=00_Af4FVGwrQyJBOvW3-HbP1Wsel0iDaEdbdvviwhQFEjcxtw&oe=6A39481B&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_6nLGdb_SawqTTqVnuLnKcS43V4kBZ06IfRRbSnngYZK_OvVgD69qtBWvI1_JoOYH_pMTLi7194AYJ3PkuydMFHeF7Vy5_uUCQi2D4l_tDhktxQ5-wbeVP0pqGHZiOUaqavqKNj9LBdz23SZNauEM?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=FmA3tkzbL5zSzH7gMo3p5w&_nc_oc=AdqR5D8xMgb0xhdqHprCJPs_xuhV6GAmKo0O_w3mKCm0806-KAWGrjAfOzks00_K5Xw&ccb=10-5&oh=00_Af6QfCu5OqLNEyVZhHz4IkVGngcLdJhcUNL3sg0BeNTmxg&oe=6A39481B&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_6nLGdb_SawqTTqVnuLnKcS43V4kBZ06IfRRbSnngYZK_OvVgD69qtBWvI1_JoOYH_pMTLi7194AYJ3PkuydMFHeF7Vy5_uUCQi2D4l_tDhktxQ5-wbeVP0pqGHZiOUaqavqKNj9LBdz23SZNauEM?edm=AOnQwmMEAAAA&_nc_gid=FmA3tkzbL5zSzH7gMo3p5w&_nc_oc=AdqR5D8xMgb0xhdqHprCJPs_xuhV6GAmKo0O_w3mKCm0806-KAWGrjAfOzks00_K5Xw&ccb=10-5&oh=00_Af4yRv5eXW4a98_3x_YoVZnaexP2xGBEOXROo0KK19MHhQ&oe=6A39481B&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=134413832071915",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "MYSTIC VALLEY PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.415792958313546,
+        "SAMPLE_LNG": -71.13023208322944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.130040189011,
+          42.416121633815
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "560037345014738",
+        "SEQUENCE_ID": "82Hksbd4FQtT9EXBJ6afhr",
+        "CAPTURED_AT": 1626882748544,
+        "HEADING": 214.34118899507,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-DfkrFkGhBH92wU5R2OghQbrEUMR3u_VHApFkH2kWrCul8EHo4Z-6yHrsemOX8QM4fdA7e3O1EHnNmcEBS9gInjCSgqcqIQ9y_vOJ5dVIHJRbVjqVbe2UJtZxuyUFBEu80OlaYXBcuaT9N-cLD8Q?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=FmA3tkzbL5zSzH7gMo3p5w&_nc_oc=AdpAoMm-HOYwKKW2cS89CYg4L_Rmax86Ufk_69xv8mtOwt65yT6szuzgUWDbz3TH5AI&ccb=10-5&oh=00_Af5IjauW0igZcD-xgvnSKf9ydbNZYrEKWFaV1Kc7tS__vg&oe=6A39316C&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-DfkrFkGhBH92wU5R2OghQbrEUMR3u_VHApFkH2kWrCul8EHo4Z-6yHrsemOX8QM4fdA7e3O1EHnNmcEBS9gInjCSgqcqIQ9y_vOJ5dVIHJRbVjqVbe2UJtZxuyUFBEu80OlaYXBcuaT9N-cLD8Q?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=FmA3tkzbL5zSzH7gMo3p5w&_nc_oc=AdpAoMm-HOYwKKW2cS89CYg4L_Rmax86Ufk_69xv8mtOwt65yT6szuzgUWDbz3TH5AI&ccb=10-5&oh=00_Af7QCnRwsvYgBcRqhDs7i9K38qTr_n1JtNUWTWE50bU5HA&oe=6A39316C&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-DfkrFkGhBH92wU5R2OghQbrEUMR3u_VHApFkH2kWrCul8EHo4Z-6yHrsemOX8QM4fdA7e3O1EHnNmcEBS9gInjCSgqcqIQ9y_vOJ5dVIHJRbVjqVbe2UJtZxuyUFBEu80OlaYXBcuaT9N-cLD8Q?edm=AOnQwmMEAAAA&_nc_gid=FmA3tkzbL5zSzH7gMo3p5w&_nc_oc=AdpAoMm-HOYwKKW2cS89CYg4L_Rmax86Ufk_69xv8mtOwt65yT6szuzgUWDbz3TH5AI&ccb=10-5&oh=00_Af7bX_70PjmfPgAgxXFq5e-XsTq4daRnc4yGSxs0MHOS7w&oe=6A39316C&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=560037345014738",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "MYSTIC VALLEY PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.415792958313546,
+        "SAMPLE_LNG": -71.13023208322944
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.131195671357,
+          42.413698082882
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2955835971400779",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030332732,
+        "HEADING": 83.526992797852,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9baKUUku2Mm78q3iFj3OyW96roZ1GkdvTL6VkQcslPs_-Wr87PpYYClBuIilG-igFMLzlVn-iAc6prHVNXArkkM3vewSds-w8dXXDuwQw5N488OVW468kgeFWNbTbCTKOH0sUt9eW_pdC2zNEDCQ?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=DS4t-GkRnJuh78_KG7zHqQ&_nc_oc=Adp2Bue8NmQ5lWTlSi7TgHQjyegx6KoEwc5ERbBmFJYShyUKK8I3gTAvtR_JcfVHoGA&ccb=10-5&oh=00_Af4qX0TNpZrX7WH2oHUGIchaqVTGFcFpdtL0-3b2wtI7bQ&oe=6A395D81&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9baKUUku2Mm78q3iFj3OyW96roZ1GkdvTL6VkQcslPs_-Wr87PpYYClBuIilG-igFMLzlVn-iAc6prHVNXArkkM3vewSds-w8dXXDuwQw5N488OVW468kgeFWNbTbCTKOH0sUt9eW_pdC2zNEDCQ?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=DS4t-GkRnJuh78_KG7zHqQ&_nc_oc=Adp2Bue8NmQ5lWTlSi7TgHQjyegx6KoEwc5ERbBmFJYShyUKK8I3gTAvtR_JcfVHoGA&ccb=10-5&oh=00_Af4qCZlzvXAzaS9URFYOWKsCSJk5yXmvGhaKEuXL72kD-g&oe=6A395D81&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9baKUUku2Mm78q3iFj3OyW96roZ1GkdvTL6VkQcslPs_-Wr87PpYYClBuIilG-igFMLzlVn-iAc6prHVNXArkkM3vewSds-w8dXXDuwQw5N488OVW468kgeFWNbTbCTKOH0sUt9eW_pdC2zNEDCQ?edm=AOnQwmMEAAAA&_nc_gid=DS4t-GkRnJuh78_KG7zHqQ&_nc_oc=Adp2Bue8NmQ5lWTlSi7TgHQjyegx6KoEwc5ERbBmFJYShyUKK8I3gTAvtR_JcfVHoGA&ccb=10-5&oh=00_Af7inVI9via4mknGhwbP9j5ihnkHMe81bZx62OrLjJHFHw&oe=6A395D81&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2955835971400779",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "ALEWIFE BROOK PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41344930082475,
+        "SAMPLE_LNG": -71.1312576781153
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.131204126308,
+          42.4141070669
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "319000223121737",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030335494,
+        "HEADING": 67.941566467285,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_xj3nbfy1tKbKMF3oJ8mHnAlbNcs2P68MebyPPX89R1kSsB76xManl3FuZLfNikbYv-fSQ8vf9etmoOjPFcwsFMUeDoTHoHHxQCx6m1yy647oTaqyuChS4rvzsQ5ryH4kNd0pHDRwyhS2e4jGBkg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=Ce3DeQtteEGWs_AdMHebbg&_nc_oc=AdrDbl-vVqm4szx8pU1kAoWLNYASyu6KvSzRGKCzAIkutjiYsJX2UVtOpPi2EOzJnbQ&ccb=10-5&oh=00_Af6WtREpNDv_hL5oUtDZ1GZKlGJSMFkyoX5F1HMGlAwQFw&oe=6A394242&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_xj3nbfy1tKbKMF3oJ8mHnAlbNcs2P68MebyPPX89R1kSsB76xManl3FuZLfNikbYv-fSQ8vf9etmoOjPFcwsFMUeDoTHoHHxQCx6m1yy647oTaqyuChS4rvzsQ5ryH4kNd0pHDRwyhS2e4jGBkg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=Ce3DeQtteEGWs_AdMHebbg&_nc_oc=AdrDbl-vVqm4szx8pU1kAoWLNYASyu6KvSzRGKCzAIkutjiYsJX2UVtOpPi2EOzJnbQ&ccb=10-5&oh=00_Af4e8mLHKnIuDB472zniwLBxB10wp90_g0OjSIDVy0K_hg&oe=6A394242&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An_xj3nbfy1tKbKMF3oJ8mHnAlbNcs2P68MebyPPX89R1kSsB76xManl3FuZLfNikbYv-fSQ8vf9etmoOjPFcwsFMUeDoTHoHHxQCx6m1yy647oTaqyuChS4rvzsQ5ryH4kNd0pHDRwyhS2e4jGBkg?edm=AOnQwmMEAAAA&_nc_gid=Ce3DeQtteEGWs_AdMHebbg&_nc_oc=AdrDbl-vVqm4szx8pU1kAoWLNYASyu6KvSzRGKCzAIkutjiYsJX2UVtOpPi2EOzJnbQ&ccb=10-5&oh=00_Af6IKJlgEXQdnsgPHShrGEuBub19SFj0-41iBBW3KcTLyA&oe=6A394242&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=319000223121737",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "GORDON ST",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41394119871138,
+        "SAMPLE_LNG": -71.13105229222231
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.131157904294,
+          42.41321587963
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "213302840388696",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030329308,
+        "HEADING": 222.38188171387,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9paTRyJjmYJgWKSHYU5VjEmai-UdtyLV2ZxvVsVvRq7pjXjpgDongQaTRkcGWjgCsg3tC2kHwKiH_Xt4LzEJ6WYCN46gG1vZ3R7rvlYW6uckRgyOvckUBD4u8rB4vqtEm2wpbQLmOocwrKU1ujpA?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=sI3JAZ9sJqLIFLSTtbhl_A&_nc_oc=Adpvyg6y8Hf-o8kubh9_M37KiGpRjyL3RV32bTOaD46VXF46C5dutnjnHMFCjeQ_aEE&ccb=10-5&oh=00_Af5nsOuH2_S8tSFHRM_SWxsd8YAZncSPnjtHf5BE-rdJdg&oe=6A3951AB&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9paTRyJjmYJgWKSHYU5VjEmai-UdtyLV2ZxvVsVvRq7pjXjpgDongQaTRkcGWjgCsg3tC2kHwKiH_Xt4LzEJ6WYCN46gG1vZ3R7rvlYW6uckRgyOvckUBD4u8rB4vqtEm2wpbQLmOocwrKU1ujpA?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=sI3JAZ9sJqLIFLSTtbhl_A&_nc_oc=Adpvyg6y8Hf-o8kubh9_M37KiGpRjyL3RV32bTOaD46VXF46C5dutnjnHMFCjeQ_aEE&ccb=10-5&oh=00_Af6zZX7tMUP5bMol7m46x0KF7B5Vg_hPkZtgnpix6DMRNw&oe=6A3951AB&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9paTRyJjmYJgWKSHYU5VjEmai-UdtyLV2ZxvVsVvRq7pjXjpgDongQaTRkcGWjgCsg3tC2kHwKiH_Xt4LzEJ6WYCN46gG1vZ3R7rvlYW6uckRgyOvckUBD4u8rB4vqtEm2wpbQLmOocwrKU1ujpA?edm=AOnQwmMEAAAA&_nc_gid=sI3JAZ9sJqLIFLSTtbhl_A&_nc_oc=Adpvyg6y8Hf-o8kubh9_M37KiGpRjyL3RV32bTOaD46VXF46C5dutnjnHMFCjeQ_aEE&ccb=10-5&oh=00_Af5oobhW_nwLe2os0K7kLQt107mv7xPEvwWd44bjej2kPw&oe=6A3951AB&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=213302840388696",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "ALEWIFE BROOK PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.413032903859566,
+        "SAMPLE_LNG": -71.13116939129628
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.131171963039,
+          42.41328809559
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "196169112326053",
+        "SEQUENCE_ID": "1quufcgt5us24ucl59zwnh",
+        "CAPTURED_AT": 1532030329833,
+        "HEADING": 353.5950012207,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-vqaTdqUiJnKd3wSpgpmt9yz1sA6lmxr96BJWlT6t3zur8jUvzwZr-35OAtPmkClRRs43yfR7PLVTY0ar6WI9zcNn4BwvlpBNqGMH9QFbQTdedl-Bo9ATWGRaRi-Qs4wsHyIsABegMOPEQVn9sJg?stp=s256x144&edm=AOnQwmMEAAAA&_nc_gid=sI3JAZ9sJqLIFLSTtbhl_A&_nc_oc=AdoMTMQYZsfOSGWMrz8M-f9473sbWxTwX44ihF9VwYfpQC5ltSftrd2wdefg6CT4e4w&ccb=10-5&oh=00_Af7f3IevWtue1kJpnpsIRp7Nea4eNnDOdlN9nRsK6csRrQ&oe=6A394643&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-vqaTdqUiJnKd3wSpgpmt9yz1sA6lmxr96BJWlT6t3zur8jUvzwZr-35OAtPmkClRRs43yfR7PLVTY0ar6WI9zcNn4BwvlpBNqGMH9QFbQTdedl-Bo9ATWGRaRi-Qs4wsHyIsABegMOPEQVn9sJg?stp=s1024x576&edm=AOnQwmMEAAAA&_nc_gid=sI3JAZ9sJqLIFLSTtbhl_A&_nc_oc=AdoMTMQYZsfOSGWMrz8M-f9473sbWxTwX44ihF9VwYfpQC5ltSftrd2wdefg6CT4e4w&ccb=10-5&oh=00_Af5oEVGqsMkYbWYROmMfrVti5gvNl7bFSA_eGMvuStg7BA&oe=6A394643&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An-vqaTdqUiJnKd3wSpgpmt9yz1sA6lmxr96BJWlT6t3zur8jUvzwZr-35OAtPmkClRRs43yfR7PLVTY0ar6WI9zcNn4BwvlpBNqGMH9QFbQTdedl-Bo9ATWGRaRi-Qs4wsHyIsABegMOPEQVn9sJg?edm=AOnQwmMEAAAA&_nc_gid=sI3JAZ9sJqLIFLSTtbhl_A&_nc_oc=AdoMTMQYZsfOSGWMrz8M-f9473sbWxTwX44ihF9VwYfpQC5ltSftrd2wdefg6CT4e4w&ccb=10-5&oh=00_Af5jXw9FCRp94G_7gzrkfIyznsYUy4ufX9S3GY7eAizdKA&oe=6A394643&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=196169112326053",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "ALEWIFE BROOK PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.413032903859566,
+        "SAMPLE_LNG": -71.13116939129628
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.130932,
+          42.41229
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "214647653422394",
+        "SEQUENCE_ID": "vhGS19Nc570pWF0-WDwuzA",
+        "CAPTURED_AT": 1448996170243,
+        "HEADING": 358.0146,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8r8TXTW37ddblwfuB7iDhfFswNgP29MBx-JDLrGW4qr5qu33dTZv6UYlItNiCFoqdSkmpPApqfkMjnN5kAc32lWs-JJqt_9BXYpkQmKfdQBsL1qfmScEiXaTAdNp34ILPOBrDXC66FiptzRh8vE7s?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=Mg6-_U-Htde9Iukdd_v72Q&_nc_oc=Adpf8nPo4Uask1latW69vR91mJ8U5w0ApepPWG9I6bKbDysYUGmgeXJy25zdwaFhMYk&ccb=10-5&oh=00_Af5yxRfepLhurUcnQKF-nLdyEdcwFnoRSm6z_ytQfmSwqg&oe=6A396162&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8r8TXTW37ddblwfuB7iDhfFswNgP29MBx-JDLrGW4qr5qu33dTZv6UYlItNiCFoqdSkmpPApqfkMjnN5kAc32lWs-JJqt_9BXYpkQmKfdQBsL1qfmScEiXaTAdNp34ILPOBrDXC66FiptzRh8vE7s?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=Mg6-_U-Htde9Iukdd_v72Q&_nc_oc=Adpf8nPo4Uask1latW69vR91mJ8U5w0ApepPWG9I6bKbDysYUGmgeXJy25zdwaFhMYk&ccb=10-5&oh=00_Af6zs-ZrN3o0tUU4AujjV5xg7GXsm8tDO36wrv9Y_mFnOw&oe=6A396162&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An8r8TXTW37ddblwfuB7iDhfFswNgP29MBx-JDLrGW4qr5qu33dTZv6UYlItNiCFoqdSkmpPApqfkMjnN5kAc32lWs-JJqt_9BXYpkQmKfdQBsL1qfmScEiXaTAdNp34ILPOBrDXC66FiptzRh8vE7s?edm=AOnQwmMEAAAA&_nc_gid=Mg6-_U-Htde9Iukdd_v72Q&_nc_oc=Adpf8nPo4Uask1latW69vR91mJ8U5w0ApepPWG9I6bKbDysYUGmgeXJy25zdwaFhMYk&ccb=10-5&oh=00_Af4rv3McZL6NVmv0N2gf7AkNcwQfikjxNjyxYCCl29cxfg&oe=6A396162&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=214647653422394",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "ALEWIFE BROOK PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.412225836573086,
+        "SAMPLE_LNG": -71.13092860454934
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.131228133471,
+          42.411217875697
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1423622281321830",
+        "SEQUENCE_ID": "119yu0ktfzajm6ngy5p63m",
+        "CAPTURED_AT": 1609353725058,
+        "HEADING": 0,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9e86guh-wP1w_TKNbR142331_NRuyrRCw3ZMSsp5NXzHW1sZabalxPexEcuJ58LMtmanBwaul_OBoiKQxSUaWXWlDHk0xbqQuwBhOwie0rWFgdlN102o6V1JKvUPNqaYLDKu0SwXensJuG8Q0qDL0?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=CiKNRsAb4CiNCgTTf3GmFg&_nc_oc=AdqVSDaY4jMWT1LW0Ot5-w_XSzjuwtGcf1cYEpfV350PUlfWVqI5rwQlmMkDRxzPxvU&ccb=10-5&oh=00_Af5Sp591S4c7gdc72Z8EzmRdDvRex3GFYaLpV7xeguts0g&oe=6A393BEB&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9e86guh-wP1w_TKNbR142331_NRuyrRCw3ZMSsp5NXzHW1sZabalxPexEcuJ58LMtmanBwaul_OBoiKQxSUaWXWlDHk0xbqQuwBhOwie0rWFgdlN102o6V1JKvUPNqaYLDKu0SwXensJuG8Q0qDL0?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=CiKNRsAb4CiNCgTTf3GmFg&_nc_oc=AdqVSDaY4jMWT1LW0Ot5-w_XSzjuwtGcf1cYEpfV350PUlfWVqI5rwQlmMkDRxzPxvU&ccb=10-5&oh=00_Af5iNWpHVIRkr-u6Vw0IOhdSgePW-d62NifrTBX__KVioA&oe=6A393BEB&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9e86guh-wP1w_TKNbR142331_NRuyrRCw3ZMSsp5NXzHW1sZabalxPexEcuJ58LMtmanBwaul_OBoiKQxSUaWXWlDHk0xbqQuwBhOwie0rWFgdlN102o6V1JKvUPNqaYLDKu0SwXensJuG8Q0qDL0?edm=AOnQwmMEAAAA&_nc_gid=CiKNRsAb4CiNCgTTf3GmFg&_nc_oc=AdqVSDaY4jMWT1LW0Ot5-w_XSzjuwtGcf1cYEpfV350PUlfWVqI5rwQlmMkDRxzPxvU&ccb=10-5&oh=00_Af5O-4jXn59Tg9EufqpHE4HCEcDTocMfjANq0QgJo8L2Nw&oe=6A393BEB&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1423622281321830",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "ALEWIFE BROOK PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41110699827996,
+        "SAMPLE_LNG": -71.13095682514758
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.130946397712,
+          42.411058217624
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2115014388641759",
+        "SEQUENCE_ID": "nnhdoe5zay839yups9daqq",
+        "CAPTURED_AT": 1507922249234,
+        "HEADING": 353.67785644531,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Zw9sCiE16v7rM01TcOe9RGcJWAQ3YjXfN46SH2eP9J5-diaphtX03uqjpEkNdCom7Mx7aDBsY4-zIqlOp4JG9mxvcxaHH4ZaTpQ4woZmlTNOj9De3Fegjr5uC45oFL-T9_syBd2C6_4co1Z-zbqc?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=CiKNRsAb4CiNCgTTf3GmFg&_nc_oc=Adr0VXRVdJGtqGJ-n8ngPNJserREjMAPfIjvESurRwt2tBIGtX83VDFGVyv6WUwiOUI&ccb=10-5&oh=00_Af4YRdgn4e_mIwrEA31ymBLMdUAYbT0gabUKqtYcm_O1xQ&oe=6A39516E&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Zw9sCiE16v7rM01TcOe9RGcJWAQ3YjXfN46SH2eP9J5-diaphtX03uqjpEkNdCom7Mx7aDBsY4-zIqlOp4JG9mxvcxaHH4ZaTpQ4woZmlTNOj9De3Fegjr5uC45oFL-T9_syBd2C6_4co1Z-zbqc?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=CiKNRsAb4CiNCgTTf3GmFg&_nc_oc=Adr0VXRVdJGtqGJ-n8ngPNJserREjMAPfIjvESurRwt2tBIGtX83VDFGVyv6WUwiOUI&ccb=10-5&oh=00_Af5n6qr4JcN4GUp-1ASBWMBzuiJD6WVXkKee30AUY5RCYQ&oe=6A39516E&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9Zw9sCiE16v7rM01TcOe9RGcJWAQ3YjXfN46SH2eP9J5-diaphtX03uqjpEkNdCom7Mx7aDBsY4-zIqlOp4JG9mxvcxaHH4ZaTpQ4woZmlTNOj9De3Fegjr5uC45oFL-T9_syBd2C6_4co1Z-zbqc?edm=AOnQwmMEAAAA&_nc_gid=CiKNRsAb4CiNCgTTf3GmFg&_nc_oc=Adr0VXRVdJGtqGJ-n8ngPNJserREjMAPfIjvESurRwt2tBIGtX83VDFGVyv6WUwiOUI&ccb=10-5&oh=00_Af7WzTYMt7-0tVm19c4ApTyv9otqVCnOwONbG-dL3Lon8A&oe=6A39516E&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2115014388641759",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "ALEWIFE BROOK PKWY",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41110699827996,
+        "SAMPLE_LNG": -71.13095682514758
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.13122997284,
+          42.411895039447
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1391613114538372",
+        "SEQUENCE_ID": "119yu0ktfzajm6ngy5p63m",
+        "CAPTURED_AT": 1609353745184,
+        "HEADING": 359.91757940566,
+        "IMAGE_THUMB_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9b5z0UliuQtlUgqJBxlRyBvTB3xxT8ZXCzYhFzidDaPPGFwwY4VSY_Oxcb5j-K1cmCQhTZ5fNgoITpBBAGSYTOiI3a0dKNB_TQj4Rb3j71AHKU38TLusGoLAjc6BfzVAWDBlPqiYUGNz1SWD3riA?stp=s256x192&edm=AOnQwmMEAAAA&_nc_gid=rUjlGyLHKDruE7aN84436A&_nc_oc=Adoel3MFqoW-L-ZgiIMSU0eH7sJbV8KCM9bnrzbb5zLXdkCHJyc-5QQQMESRAziO6lw&ccb=10-5&oh=00_Af7lIvr48mWSqgtWBxmZVAXQCtXviX-O0qAc4rwRVZkG0Q&oe=6A39491D&_nc_sid=201bca",
+        "IMAGE_PREVIEW_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9b5z0UliuQtlUgqJBxlRyBvTB3xxT8ZXCzYhFzidDaPPGFwwY4VSY_Oxcb5j-K1cmCQhTZ5fNgoITpBBAGSYTOiI3a0dKNB_TQj4Rb3j71AHKU38TLusGoLAjc6BfzVAWDBlPqiYUGNz1SWD3riA?stp=s1024x768&edm=AOnQwmMEAAAA&_nc_gid=rUjlGyLHKDruE7aN84436A&_nc_oc=Adoel3MFqoW-L-ZgiIMSU0eH7sJbV8KCM9bnrzbb5zLXdkCHJyc-5QQQMESRAziO6lw&ccb=10-5&oh=00_Af7_Aczumkj08K-UCSG4ENBEo0AyAuWT79snBh5cMqPEQQ&oe=6A39491D&_nc_sid=201bca",
+        "IMAGE_ORIGINAL_URL": "https://scontent-bos5-1.xx.fbcdn.net/m1/v/t6/An9b5z0UliuQtlUgqJBxlRyBvTB3xxT8ZXCzYhFzidDaPPGFwwY4VSY_Oxcb5j-K1cmCQhTZ5fNgoITpBBAGSYTOiI3a0dKNB_TQj4Rb3j71AHKU38TLusGoLAjc6BfzVAWDBlPqiYUGNz1SWD3riA?edm=AOnQwmMEAAAA&_nc_gid=rUjlGyLHKDruE7aN84436A&_nc_oc=Adoel3MFqoW-L-ZgiIMSU0eH7sJbV8KCM9bnrzbb5zLXdkCHJyc-5QQQMESRAziO6lw&ccb=10-5&oh=00_Af5N1W3mLRY0UcT8bTn6Gr1KhxDofN8SC19CnLArTgljjg&oe=6A39491D&_nc_sid=201bca",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1391613114538372",
+        "SAMPLE_MUNICIPALITY": "Somerville",
+        "SAMPLE_STREET_NAME": "STERLING ST",
+        "SAMPLE_SEGMENT_ID": null,
+        "SAMPLE_LAT": 42.41170029515275,
+        "SAMPLE_LNG": -71.13079049360653
+      }
+    }
+  ]
+}

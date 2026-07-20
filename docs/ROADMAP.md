@@ -36,6 +36,7 @@ This roadmap keeps the repo aligned with the larger goal: accurate interactive p
 - Expand Cambridge parking and curb-regulation sources beyond the initial GIS meter/accessibility layers.
 - Import Medford parking and street-regulation sources.
 - Add confidence badges and source links in the UI.
+- Run DGX Spark image batches for sign, meter, and curb evidence after source imagery is indexed. See `docs/SPARK_IMAGE_WORKLOAD.md`.
 
 ## Phase 5: Time-Aware Parking Answers
 

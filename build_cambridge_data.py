@@ -1,4 +1,5 @@
 """Build Cambridge street geometry and first-pass parking rule summaries."""
+
 from __future__ import annotations
 
 import json
@@ -30,6 +31,11 @@ ACCESSIBLE_SPACES_URL = (
 
 SOURCE_ID = "cambridge_gis"
 METER_MATCH_THRESHOLD_METERS = 45
+
+
+def is_active_meter_status(value: object) -> bool:
+    """Return True only for meters that the source explicitly marks in service."""
+    return clean_text(value).casefold() == "in service"
 
 
 def fetch_json(url: str) -> dict:
@@ -176,7 +182,9 @@ def point_coordinates(geometry: dict) -> tuple[float, float] | None:
     return None
 
 
-def to_local_meters(point: tuple[float, float], origin_lat: float) -> tuple[float, float]:
+def to_local_meters(
+    point: tuple[float, float], origin_lat: float
+) -> tuple[float, float]:
     lon, lat = point
     x = lon * 111_320 * math.cos(math.radians(origin_lat))
     y = lat * 110_540
@@ -210,18 +218,24 @@ def build_street_index(features: list[dict]) -> list[dict]:
         coords = coordinates_for_feature(feature)
         if len(coords) < 2:
             continue
-        local_coords = [to_local_meters((point[0], point[1]), origin_lat) for point in coords]
+        local_coords = [
+            to_local_meters((point[0], point[1]), origin_lat) for point in coords
+        ]
         index.append(
             {
                 "street_name": feature["properties"].get("STNAME"),
-                "street_key": normalize_street_name(feature["properties"].get("STNAME")),
+                "street_key": normalize_street_name(
+                    feature["properties"].get("STNAME")
+                ),
                 "segments": list(zip(local_coords, local_coords[1:])),
             }
         )
     return index
 
 
-def nearest_street(point: tuple[float, float], street_index: list[dict], origin_lat: float) -> tuple[str, float]:
+def nearest_street(
+    point: tuple[float, float], street_index: list[dict], origin_lat: float
+) -> tuple[str, float]:
     local_point = to_local_meters(point, origin_lat)
     best_key = ""
     best_distance = float("inf")
@@ -266,7 +280,7 @@ def summarize_metered_spaces(meters: dict, street_features: list[dict]) -> dict:
         props = feature.get("properties") or {}
         summary = summaries[street_key]
         summary["meter_count_estimate"] += 1
-        if clean_text(props.get("Status")).lower() != "out of service":
+        if is_active_meter_status(props.get("Status")):
             summary["active_meter_count_estimate"] += 1
         summary["meter_operation_hours"][clean_text(props.get("OperationHours"))] += 1
         summary["meter_max_times"][clean_text(props.get("MaxTime"))] += 1
@@ -344,7 +358,9 @@ def build() -> tuple[dict, dict, dict, dict]:
         record["meter_count_estimate"] = summary["meter_count_estimate"]
         record["active_meter_count_estimate"] = summary["active_meter_count_estimate"]
         record["meter_match_confidence"] = summary["meter_match_confidence"]
-        record["meter_operation_hours"] = counter_to_list(summary["meter_operation_hours"])
+        record["meter_operation_hours"] = counter_to_list(
+            summary["meter_operation_hours"]
+        )
         record["meter_max_times"] = counter_to_list(summary["meter_max_times"])
         record["meter_rates"] = counter_to_list(summary["meter_rates"])
 

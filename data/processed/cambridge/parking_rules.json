@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-23T10:35:34.767445+00:00",
+  "generated_at_utc": "2026-07-20T20:56:13.669454+00:00",
   "municipality": "cambridge",
   "source_id": "cambridge_gis",
   "street_centerlines_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
@@ -13,7 +13,7 @@
     "CAMBRIDGE ST": {
       "street_name": "Cambridge St",
       "meter_count_estimate": 306,
-      "active_meter_count_estimate": 269,
+      "active_meter_count_estimate": 225,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -78,7 +78,7 @@
     "HAMPSHIRE ST": {
       "street_name": "Hampshire St",
       "meter_count_estimate": 85,
-      "active_meter_count_estimate": 78,
+      "active_meter_count_estimate": 26,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -179,8 +179,8 @@
     },
     "BROADWAY": {
       "street_name": "Broadway",
-      "meter_count_estimate": 80,
-      "active_meter_count_estimate": 73,
+      "meter_count_estimate": 87,
+      "active_meter_count_estimate": 28,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -189,15 +189,15 @@
         },
         {
           "value": "8:00AM-6:00PM",
-          "count": 20
-        },
-        {
-          "value": "8:00AM-6:00PM (Mon-Fri)",
-          "count": 12
+          "count": 22
         },
         {
           "value": "9:00AM - 5:00PM Mon - Sat",
           "count": 11
+        },
+        {
+          "value": "8:00AM-6:00PM (Mon-Fri)",
+          "count": 10
         },
         {
           "value": "11:00AM-6:00PM",
@@ -215,17 +215,17 @@
         },
         {
           "value": "2 Hours",
-          "count": 11
+          "count": 13
         },
         {
           "value": "30 minute",
-          "count": 5
+          "count": 3
         }
       ],
       "meter_rates": [
         {
           "value": "1.25",
-          "count": 53
+          "count": 55
         },
         {
           "value": "$1.25",
@@ -237,7 +237,7 @@
         },
         {
           "value": "1.50",
-          "count": 5
+          "count": 3
         }
       ],
       "accessible_space_count": 4
@@ -339,7 +339,7 @@
     "PLEASANT ST": {
       "street_name": "Pleasant St",
       "meter_count_estimate": 10,
-      "active_meter_count_estimate": 10,
+      "active_meter_count_estimate": 9,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -368,7 +368,7 @@
     "MAGAZINE ST": {
       "street_name": "Magazine St",
       "meter_count_estimate": 6,
-      "active_meter_count_estimate": 6,
+      "active_meter_count_estimate": 0,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [],
       "meter_max_times": [],
@@ -438,7 +438,7 @@
     "BISHOP ALLEN DR": {
       "street_name": "Bishop Allen Dr",
       "meter_count_estimate": 92,
-      "active_meter_count_estimate": 92,
+      "active_meter_count_estimate": 90,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -521,7 +521,7 @@
     "GREEN ST": {
       "street_name": "Green St",
       "meter_count_estimate": 19,
-      "active_meter_count_estimate": 19,
+      "active_meter_count_estimate": 18,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -558,7 +558,7 @@
     "MASSACHUSETTS AVE": {
       "street_name": "Massachusetts Ave",
       "meter_count_estimate": 598,
-      "active_meter_count_estimate": 512,
+      "active_meter_count_estimate": 410,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -728,7 +728,7 @@
     "RIVER ST": {
       "street_name": "River St",
       "meter_count_estimate": 13,
-      "active_meter_count_estimate": 13,
+      "active_meter_count_estimate": 10,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -803,7 +803,7 @@
     "INMAN ST": {
       "street_name": "Inman St",
       "meter_count_estimate": 15,
-      "active_meter_count_estimate": 14,
+      "active_meter_count_estimate": 13,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -854,7 +854,7 @@
     "TEMPLE ST": {
       "street_name": "Temple St",
       "meter_count_estimate": 8,
-      "active_meter_count_estimate": 8,
+      "active_meter_count_estimate": 3,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -879,7 +879,7 @@
     "FRANKLIN ST": {
       "street_name": "Franklin St",
       "meter_count_estimate": 10,
-      "active_meter_count_estimate": 10,
+      "active_meter_count_estimate": 4,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -989,7 +989,7 @@
     "SPRING ST": {
       "street_name": "Spring St",
       "meter_count_estimate": 13,
-      "active_meter_count_estimate": 12,
+      "active_meter_count_estimate": 10,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1014,7 +1014,7 @@
     "THORNDIKE ST": {
       "street_name": "Thorndike St",
       "meter_count_estimate": 39,
-      "active_meter_count_estimate": 39,
+      "active_meter_count_estimate": 38,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1068,7 +1068,7 @@
     "NORFOLK ST": {
       "street_name": "Norfolk St",
       "meter_count_estimate": 14,
-      "active_meter_count_estimate": 14,
+      "active_meter_count_estimate": 10,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1353,7 +1353,7 @@
     "PORTLAND ST": {
       "street_name": "Portland St",
       "meter_count_estimate": 20,
-      "active_meter_count_estimate": 20,
+      "active_meter_count_estimate": 19,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1412,7 +1412,7 @@
     "AMHERST ST": {
       "street_name": "Amherst St",
       "meter_count_estimate": 22,
-      "active_meter_count_estimate": 12,
+      "active_meter_count_estimate": 10,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1437,7 +1437,7 @@
     "AMES ST": {
       "street_name": "Ames St",
       "meter_count_estimate": 21,
-      "active_meter_count_estimate": 21,
+      "active_meter_count_estimate": 5,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1474,7 +1474,7 @@
     "ALBANY ST": {
       "street_name": "Albany St",
       "meter_count_estimate": 94,
-      "active_meter_count_estimate": 83,
+      "active_meter_count_estimate": 82,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1538,7 +1538,7 @@
     "SECOND ST": {
       "street_name": "Second St",
       "meter_count_estimate": 48,
-      "active_meter_count_estimate": 48,
+      "active_meter_count_estimate": 44,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1666,7 +1666,7 @@
     "WENDELL ST": {
       "street_name": "Wendell St",
       "meter_count_estimate": 4,
-      "active_meter_count_estimate": 4,
+      "active_meter_count_estimate": 0,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -1971,7 +1971,7 @@
     "THIRD ST": {
       "street_name": "Third St",
       "meter_count_estimate": 58,
-      "active_meter_count_estimate": 56,
+      "active_meter_count_estimate": 53,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2024,7 +2024,7 @@
     "MT AUBURN ST": {
       "street_name": "Mt Auburn St",
       "meter_count_estimate": 117,
-      "active_meter_count_estimate": 116,
+      "active_meter_count_estimate": 89,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2179,7 +2179,7 @@
     "ROGERS ST": {
       "street_name": "Rogers St",
       "meter_count_estimate": 50,
-      "active_meter_count_estimate": 47,
+      "active_meter_count_estimate": 45,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2237,7 +2237,7 @@
     "FIRST ST": {
       "street_name": "First St",
       "meter_count_estimate": 50,
-      "active_meter_count_estimate": 49,
+      "active_meter_count_estimate": 48,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2270,7 +2270,7 @@
     "VASSAR ST": {
       "street_name": "Vassar St",
       "meter_count_estimate": 144,
-      "active_meter_count_estimate": 121,
+      "active_meter_count_estimate": 101,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2375,7 +2375,7 @@
     "UNIVERSITY RD": {
       "street_name": "University Rd",
       "meter_count_estimate": 5,
-      "active_meter_count_estimate": 5,
+      "active_meter_count_estimate": 4,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2469,7 +2469,7 @@
     "BRATTLE ST": {
       "street_name": "Brattle St",
       "meter_count_estimate": 64,
-      "active_meter_count_estimate": 64,
+      "active_meter_count_estimate": 61,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2494,7 +2494,7 @@
     "DUNSTER ST": {
       "street_name": "Dunster St",
       "meter_count_estimate": 22,
-      "active_meter_count_estimate": 22,
+      "active_meter_count_estimate": 9,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2562,7 +2562,7 @@
     "ELIOT ST": {
       "street_name": "Eliot St",
       "meter_count_estimate": 1,
-      "active_meter_count_estimate": 1,
+      "active_meter_count_estimate": 0,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -2832,7 +2832,7 @@
     "OXFORD ST": {
       "street_name": "Oxford St",
       "meter_count_estimate": 38,
-      "active_meter_count_estimate": 38,
+      "active_meter_count_estimate": 32,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -3080,7 +3080,7 @@
     "BOW ST": {
       "street_name": "Bow St",
       "meter_count_estimate": 38,
-      "active_meter_count_estimate": 38,
+      "active_meter_count_estimate": 34,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -3138,7 +3138,7 @@
     "PLYMPTON ST": {
       "street_name": "Plympton St",
       "meter_count_estimate": 58,
-      "active_meter_count_estimate": 56,
+      "active_meter_count_estimate": 47,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -4657,7 +4657,7 @@
     "CAMERON AVE": {
       "street_name": "Cameron Ave",
       "meter_count_estimate": 5,
-      "active_meter_count_estimate": 5,
+      "active_meter_count_estimate": 4,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -4850,7 +4850,7 @@
     "SIDNEY ST": {
       "street_name": "Sidney St",
       "meter_count_estimate": 57,
-      "active_meter_count_estimate": 57,
+      "active_meter_count_estimate": 56,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -5763,7 +5763,7 @@
     "MAIN ST": {
       "street_name": "Main St",
       "meter_count_estimate": 153,
-      "active_meter_count_estimate": 148,
+      "active_meter_count_estimate": 87,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -6977,7 +6977,7 @@
     "CHURCH ST": {
       "street_name": "Church St",
       "meter_count_estimate": 20,
-      "active_meter_count_estimate": 17,
+      "active_meter_count_estimate": 13,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -7779,7 +7779,7 @@
     "LINSKEY WAY": {
       "street_name": "Linskey Way",
       "meter_count_estimate": 12,
-      "active_meter_count_estimate": 12,
+      "active_meter_count_estimate": 11,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -8517,7 +8517,7 @@
     "JFK ST": {
       "street_name": "JFK St",
       "meter_count_estimate": 31,
-      "active_meter_count_estimate": 30,
+      "active_meter_count_estimate": 28,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -8741,7 +8741,7 @@
     "SPRINGFIELD ST": {
       "street_name": "Springfield St",
       "meter_count_estimate": 4,
-      "active_meter_count_estimate": 3,
+      "active_meter_count_estimate": 2,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -9324,7 +9324,7 @@
     "DUDLEY ST": {
       "street_name": "Dudley St",
       "meter_count_estimate": 3,
-      "active_meter_count_estimate": 3,
+      "active_meter_count_estimate": 0,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {
@@ -9358,7 +9358,7 @@
     },
     "ELLERY ST": {
       "street_name": "Ellery St",
-      "meter_count_estimate": 2,
+      "meter_count_estimate": 3,
       "active_meter_count_estimate": 2,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
@@ -9919,7 +9919,7 @@
     "TYLER CT": {
       "street_name": "Tyler Ct",
       "meter_count_estimate": 1,
-      "active_meter_count_estimate": 1,
+      "active_meter_count_estimate": 0,
       "meter_match_confidence": "nearest_street_approx",
       "meter_operation_hours": [
         {

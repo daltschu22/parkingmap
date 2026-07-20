@@ -1,0 +1,4700 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "generated_at_utc": "2026-05-23T17:17:45.709015+00:00",
+    "source_manifest": "/home/altschud/parkingmap-imagery/jobs/medford_salem_street_20260523T171618Z/manifest.json",
+    "model": "yolov8s-world.pt",
+    "classes": [
+      "parking sign",
+      "no parking sign",
+      "resident permit parking sign",
+      "street cleaning sign",
+      "loading zone sign",
+      "bus stop sign",
+      "accessible parking sign",
+      "parking meter",
+      "pay station",
+      "fire hydrant",
+      "red curb",
+      "yellow curb",
+      "white curb",
+      "driveway"
+    ],
+    "confidence": 0.08,
+    "iou": 0.5,
+    "image_count": 289,
+    "detection_count": 203,
+    "error_count": 0
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "216610136620165",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_216610136620165.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=216610136620165",
+        "CAPTURED_AT": 1506972779600,
+        "HEADING": 264.5382944901,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.28070685267448425,
+        "BBOX_XYXY": [
+          90.90666961669922,
+          248.78526306152344,
+          126.0219955444336,
+          285.4501037597656
+        ],
+        "CROP_PATH": "crops/216610136620165_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "216610136620165",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_216610136620165.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=216610136620165",
+        "CAPTURED_AT": 1506972779600,
+        "HEADING": 264.5382944901,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.15175655484199524,
+        "BBOX_XYXY": [
+          93.1706771850586,
+          205.2036590576172,
+          143.2569580078125,
+          252.5797882080078
+        ],
+        "CROP_PATH": "crops/216610136620165_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "216610136620165",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_216610136620165.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=216610136620165",
+        "CAPTURED_AT": 1506972779600,
+        "HEADING": 264.5382944901,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.10683692246675491,
+        "BBOX_XYXY": [
+          680.7499389648438,
+          377.432861328125,
+          692.07763671875,
+          404.2208557128906
+        ],
+        "CROP_PATH": "crops/216610136620165_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "133677705463332",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_133677705463332.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=133677705463332",
+        "CAPTURED_AT": 1506972791100,
+        "HEADING": 259.81331886193,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10639854520559311,
+        "BBOX_XYXY": [
+          263.3129577636719,
+          268.9983825683594,
+          282.33648681640625,
+          299.52813720703125
+        ],
+        "CROP_PATH": "crops/133677705463332_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1101886903629248",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1101886903629248.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1101886903629248",
+        "CAPTURED_AT": 1506972791700,
+        "HEADING": 259.81344879882,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08123088628053665,
+        "BBOX_XYXY": [
+          870.1819458007812,
+          331.0450134277344,
+          930.3352661132812,
+          352.505859375
+        ],
+        "CROP_PATH": "crops/1101886903629248_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "178985354080354",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_178985354080354.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=178985354080354",
+        "CAPTURED_AT": 1426090235000,
+        "HEADING": 283.2596,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2861963212490082,
+        "BBOX_XYXY": [
+          824.8392944335938,
+          470.63360595703125,
+          862.0822143554688,
+          515.9244384765625
+        ],
+        "CROP_PATH": "crops/178985354080354_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2832602070313210",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2832602070313210.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2832602070313210",
+        "CAPTURED_AT": 1589995106289,
+        "HEADING": 110.58136636182,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.30293112993240356,
+        "BBOX_XYXY": [
+          184.7468719482422,
+          230.9302520751953,
+          208.0085906982422,
+          268.6151123046875
+        ],
+        "CROP_PATH": "crops/2832602070313210_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2832602070313210",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2832602070313210.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2832602070313210",
+        "CAPTURED_AT": 1589995106289,
+        "HEADING": 110.58136636182,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.1509736329317093,
+        "BBOX_XYXY": [
+          761.7748413085938,
+          381.970703125,
+          782.2396850585938,
+          405.76641845703125
+        ],
+        "CROP_PATH": "crops/2832602070313210_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2832602070313210",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2832602070313210.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2832602070313210",
+        "CAPTURED_AT": 1589995106289,
+        "HEADING": 110.58136636182,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10833607614040375,
+        "BBOX_XYXY": [
+          179.6228485107422,
+          228.4879913330078,
+          208.85400390625,
+          460.8492126464844
+        ],
+        "CROP_PATH": "crops/2832602070313210_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "289662412783726",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_289662412783726.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=289662412783726",
+        "CAPTURED_AT": 1520716430159,
+        "HEADING": 263.11187744141,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1137411817908287,
+        "BBOX_XYXY": [
+          963.1904296875,
+          517.5543212890625,
+          1017.6814575195312,
+          572.400390625
+        ],
+        "CROP_PATH": "crops/289662412783726_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1392277331139225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1392277331139225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1392277331139225",
+        "CAPTURED_AT": 1426090233000,
+        "HEADING": 282.2258,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.18923722207546234,
+        "BBOX_XYXY": [
+          794.4034423828125,
+          479.81353759765625,
+          814.93603515625,
+          511.8437194824219
+        ],
+        "CROP_PATH": "crops/1392277331139225_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1392277331139225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1392277331139225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1392277331139225",
+        "CAPTURED_AT": 1426090233000,
+        "HEADING": 282.2258,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1892274171113968,
+        "BBOX_XYXY": [
+          871.0773315429688,
+          471.0625915527344,
+          897.9488525390625,
+          508.82159423828125
+        ],
+        "CROP_PATH": "crops/1392277331139225_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1392277331139225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1392277331139225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1392277331139225",
+        "CAPTURED_AT": 1426090233000,
+        "HEADING": 282.2258,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1867944747209549,
+        "BBOX_XYXY": [
+          0.0,
+          327.0805358886719,
+          401.568359375,
+          729.9700927734375
+        ],
+        "CROP_PATH": "crops/1392277331139225_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1740555402784035",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1740555402784035.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1740555402784035",
+        "CAPTURED_AT": 1506972791900,
+        "HEADING": 259.81332165582,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.13535648584365845,
+        "BBOX_XYXY": [
+          919.0402221679688,
+          332.3601989746094,
+          979.2015991210938,
+          352.8216857910156
+        ],
+        "CROP_PATH": "crops/1740555402784035_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1740555402784035",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1740555402784035.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1740555402784035",
+        "CAPTURED_AT": 1506972791900,
+        "HEADING": 259.81332165582,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.08463235199451447,
+        "BBOX_XYXY": [
+          757.756103515625,
+          394.6783142089844,
+          773.9390258789062,
+          412.8724670410156
+        ],
+        "CROP_PATH": "crops/1740555402784035_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1220918788367832",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1220918788367832.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1220918788367832",
+        "CAPTURED_AT": 1506972790300,
+        "HEADING": 259.26204147285,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.11975514143705368,
+        "BBOX_XYXY": [
+          831.8104858398438,
+          397.7303771972656,
+          844.0354614257812,
+          416.7946472167969
+        ],
+        "CROP_PATH": "crops/1220918788367832_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1220918788367832",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1220918788367832.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1220918788367832",
+        "CAPTURED_AT": 1506972790300,
+        "HEADING": 259.26204147285,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.0983595922589302,
+        "BBOX_XYXY": [
+          968.8782348632812,
+          298.7035827636719,
+          997.5390014648438,
+          355.05328369140625
+        ],
+        "CROP_PATH": "crops/1220918788367832_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1220918788367832",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1220918788367832.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1220918788367832",
+        "CAPTURED_AT": 1506972790300,
+        "HEADING": 259.26204147285,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.09561409801244736,
+        "BBOX_XYXY": [
+          968.6444702148438,
+          298.8089904785156,
+          997.4171142578125,
+          357.4667053222656
+        ],
+        "CROP_PATH": "crops/1220918788367832_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2950411475248046",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2950411475248046.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2950411475248046",
+        "CAPTURED_AT": 1589995104262,
+        "HEADING": 110.63930662105,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10742101818323135,
+        "BBOX_XYXY": [
+          969.9888916015625,
+          321.74200439453125,
+          1005.0935668945312,
+          341.48858642578125
+        ],
+        "CROP_PATH": "crops/2950411475248046_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1647136092147619",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1647136092147619.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1647136092147619",
+        "CAPTURED_AT": 1506972699300,
+        "HEADING": 249.65008220425,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.3387394845485687,
+        "BBOX_XYXY": [
+          945.9527587890625,
+          292.236328125,
+          1011.984375,
+          325.7826232910156
+        ],
+        "CROP_PATH": "crops/1647136092147619_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1647136092147619",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1647136092147619.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1647136092147619",
+        "CAPTURED_AT": 1506972699300,
+        "HEADING": 249.65008220425,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2799105644226074,
+        "BBOX_XYXY": [
+          943.7723999023438,
+          248.053466796875,
+          1011.6653442382812,
+          325.5009460449219
+        ],
+        "CROP_PATH": "crops/1647136092147619_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1647136092147619",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1647136092147619.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1647136092147619",
+        "CAPTURED_AT": 1506972699300,
+        "HEADING": 249.65008220425,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.18672175705432892,
+        "BBOX_XYXY": [
+          940.7201538085938,
+          245.2756805419922,
+          1010.6693725585938,
+          325.87481689453125
+        ],
+        "CROP_PATH": "crops/1647136092147619_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "307811530715660",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_307811530715660.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=307811530715660",
+        "CAPTURED_AT": 1506972700300,
+        "HEADING": 250.64931119435,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.43111538887023926,
+        "BBOX_XYXY": [
+          790.7177124023438,
+          234.61001586914062,
+          853.64208984375,
+          300.87799072265625
+        ],
+        "CROP_PATH": "crops/307811530715660_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "307811530715660",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_307811530715660.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=307811530715660",
+        "CAPTURED_AT": 1506972700300,
+        "HEADING": 250.64931119435,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.30524149537086487,
+        "BBOX_XYXY": [
+          804.7998046875,
+          300.81884765625,
+          845.1043090820312,
+          321.6725769042969
+        ],
+        "CROP_PATH": "crops/307811530715660_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "307811530715660",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_307811530715660.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=307811530715660",
+        "CAPTURED_AT": 1506972700300,
+        "HEADING": 250.64931119435,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.08072895556688309,
+        "BBOX_XYXY": [
+          790.39208984375,
+          233.80078125,
+          853.84814453125,
+          301.42462158203125
+        ],
+        "CROP_PATH": "crops/307811530715660_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2861078894131547",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2861078894131547.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2861078894131547",
+        "CAPTURED_AT": 1506972698300,
+        "HEADING": 247.00704731811,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09831620752811432,
+        "BBOX_XYXY": [
+          638.5690307617188,
+          328.9309997558594,
+          655.65185546875,
+          353.3920593261719
+        ],
+        "CROP_PATH": "crops/2861078894131547_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2985021011726412",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2985021011726412.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2985021011726412",
+        "CAPTURED_AT": 1506972701500,
+        "HEADING": 253.34981903347,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10014789551496506,
+        "BBOX_XYXY": [
+          369.4296875,
+          345.432373046875,
+          404.7188415527344,
+          382.7055358886719
+        ],
+        "CROP_PATH": "crops/2985021011726412_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "152108873542018",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_152108873542018.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=152108873542018",
+        "CAPTURED_AT": 1506972700000,
+        "HEADING": 250.64912911036,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.12408287823200226,
+        "BBOX_XYXY": [
+          745.0892333984375,
+          316.1494445800781,
+          776.475830078125,
+          334.6529235839844
+        ],
+        "CROP_PATH": "crops/152108873542018_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "152108873542018",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_152108873542018.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=152108873542018",
+        "CAPTURED_AT": 1506972700000,
+        "HEADING": 250.64912911036,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.09720553457736969,
+        "BBOX_XYXY": [
+          736.54736328125,
+          267.1900329589844,
+          782.9278564453125,
+          318.2167053222656
+        ],
+        "CROP_PATH": "crops/152108873542018_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1078176156003370",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1078176156003370.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1078176156003370",
+        "CAPTURED_AT": 1506972698200,
+        "HEADING": 247.00678185848,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.13718892633914948,
+        "BBOX_XYXY": [
+          635.7601318359375,
+          330.0809631347656,
+          651.8471069335938,
+          354.7861022949219
+        ],
+        "CROP_PATH": "crops/1078176156003370_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "167651085180379",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_167651085180379.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=167651085180379",
+        "CAPTURED_AT": 1506972699100,
+        "HEADING": 249.65017821971,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.3751058578491211,
+        "BBOX_XYXY": [
+          829.1978759765625,
+          279.0982360839844,
+          875.4252319335938,
+          338.62158203125
+        ],
+        "CROP_PATH": "crops/167651085180379_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "167651085180379",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_167651085180379.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=167651085180379",
+        "CAPTURED_AT": 1506972699100,
+        "HEADING": 249.65017821971,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10328947007656097,
+        "BBOX_XYXY": [
+          829.123046875,
+          278.377685546875,
+          875.5406494140625,
+          338.95172119140625
+        ],
+        "CROP_PATH": "crops/167651085180379_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "178279090738428",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_178279090738428.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=178279090738428",
+        "CAPTURED_AT": 1506972701800,
+        "HEADING": 253.34985523885,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.0898052379488945,
+        "BBOX_XYXY": [
+          309.0085754394531,
+          342.7486877441406,
+          367.2013854980469,
+          367.805908203125
+        ],
+        "CROP_PATH": "crops/178279090738428_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "4322736647758464",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_4322736647758464.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=4322736647758464",
+        "CAPTURED_AT": 1506972700700,
+        "HEADING": 250.64931522683,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.40094107389450073,
+        "BBOX_XYXY": [
+          985.4266967773438,
+          255.8374481201172,
+          1024.0,
+          290.7259216308594
+        ],
+        "CROP_PATH": "crops/4322736647758464_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "4322736647758464",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_4322736647758464.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=4322736647758464",
+        "CAPTURED_AT": 1506972700700,
+        "HEADING": 250.64931522683,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.17050516605377197,
+        "BBOX_XYXY": [
+          950.1140747070312,
+          142.0432586669922,
+          1024.0,
+          257.92578125
+        ],
+        "CROP_PATH": "crops/4322736647758464_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "4322736647758464",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_4322736647758464.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=4322736647758464",
+        "CAPTURED_AT": 1506972700700,
+        "HEADING": 250.64931522683,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1468641310930252,
+        "BBOX_XYXY": [
+          986.6146850585938,
+          256.0502014160156,
+          1024.0,
+          292.3373107910156
+        ],
+        "CROP_PATH": "crops/4322736647758464_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "4322736647758464",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_4322736647758464.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=4322736647758464",
+        "CAPTURED_AT": 1506972700700,
+        "HEADING": 250.64931522683,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.14454792439937592,
+        "BBOX_XYXY": [
+          949.4908447265625,
+          141.79766845703125,
+          1024.0,
+          258.36083984375
+        ],
+        "CROP_PATH": "crops/4322736647758464_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1126293297847870",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1126293297847870.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1126293297847870",
+        "CAPTURED_AT": 1506972780800,
+        "HEADING": 265.59893189012,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.09870452433824539,
+        "BBOX_XYXY": [
+          686.521484375,
+          343.10009765625,
+          714.5346069335938,
+          359.0934753417969
+        ],
+        "CROP_PATH": "crops/1126293297847870_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1061898134302996",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1061898134302996.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1061898134302996",
+        "CAPTURED_AT": 1426090211000,
+        "HEADING": 333.3171,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.6591735482215881,
+        "BBOX_XYXY": [
+          891.8058471679688,
+          415.3849792480469,
+          960.2023315429688,
+          499.1382751464844
+        ],
+        "CROP_PATH": "crops/1061898134302996_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1061898134302996",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1061898134302996.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1061898134302996",
+        "CAPTURED_AT": 1426090211000,
+        "HEADING": 333.3171,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.4751800298690796,
+        "BBOX_XYXY": [
+          891.65283203125,
+          415.92901611328125,
+          959.6005249023438,
+          499.39013671875
+        ],
+        "CROP_PATH": "crops/1061898134302996_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1061898134302996",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1061898134302996.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1061898134302996",
+        "CAPTURED_AT": 1426090211000,
+        "HEADING": 333.3171,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.17516905069351196,
+        "BBOX_XYXY": [
+          573.2423706054688,
+          491.57232666015625,
+          613.1115112304688,
+          551.6784057617188
+        ],
+        "CROP_PATH": "crops/1061898134302996_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1061898134302996",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1061898134302996.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1061898134302996",
+        "CAPTURED_AT": 1426090211000,
+        "HEADING": 333.3171,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.11680551618337631,
+        "BBOX_XYXY": [
+          483.46026611328125,
+          533.362060546875,
+          498.2858581542969,
+          560.694091796875
+        ],
+        "CROP_PATH": "crops/1061898134302996_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1061898134302996",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1061898134302996.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1061898134302996",
+        "CAPTURED_AT": 1426090211000,
+        "HEADING": 333.3171,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1100505068898201,
+        "BBOX_XYXY": [
+          572.8016357421875,
+          491.3927917480469,
+          612.8742065429688,
+          551.3855590820312
+        ],
+        "CROP_PATH": "crops/1061898134302996_0_4.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1202366136858780",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1202366136858780.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1202366136858780",
+        "CAPTURED_AT": 1426090181000,
+        "HEADING": 3.086548,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.24843019247055054,
+        "BBOX_XYXY": [
+          133.5348358154297,
+          452.87554931640625,
+          161.47386169433594,
+          488.5594177246094
+        ],
+        "CROP_PATH": "crops/1202366136858780_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1202366136858780",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1202366136858780.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1202366136858780",
+        "CAPTURED_AT": 1426090181000,
+        "HEADING": 3.086548,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.08251124620437622,
+        "BBOX_XYXY": [
+          134.11692810058594,
+          283.3865051269531,
+          212.3646240234375,
+          638.6873168945312
+        ],
+        "CROP_PATH": "crops/1202366136858780_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1147261269020703",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1147261269020703.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1147261269020703",
+        "CAPTURED_AT": 1506972747800,
+        "HEADING": 243.3571751466,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2672417461872101,
+        "BBOX_XYXY": [
+          801.2440795898438,
+          262.35626220703125,
+          894.4475708007812,
+          331.2984313964844
+        ],
+        "CROP_PATH": "crops/1147261269020703_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1147261269020703",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1147261269020703.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1147261269020703",
+        "CAPTURED_AT": 1506972747800,
+        "HEADING": 243.3571751466,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.1507495790719986,
+        "BBOX_XYXY": [
+          801.4872436523438,
+          258.8724060058594,
+          895.1783447265625,
+          334.3135681152344
+        ],
+        "CROP_PATH": "crops/1147261269020703_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "169867281686213",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_169867281686213.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=169867281686213",
+        "CAPTURED_AT": 1426090217000,
+        "HEADING": 296.1288,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2684113085269928,
+        "BBOX_XYXY": [
+          922.1076049804688,
+          461.9483337402344,
+          961.0966796875,
+          510.1510925292969
+        ],
+        "CROP_PATH": "crops/169867281686213_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1848940455267587",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1848940455267587.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1848940455267587",
+        "CAPTURED_AT": 1506972747200,
+        "HEADING": 243.35698008039,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2812582850456238,
+        "BBOX_XYXY": [
+          801.0380859375,
+          262.2616882324219,
+          891.5441284179688,
+          332.7718200683594
+        ],
+        "CROP_PATH": "crops/1848940455267587_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1848940455267587",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1848940455267587.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1848940455267587",
+        "CAPTURED_AT": 1506972747200,
+        "HEADING": 243.35698008039,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.2088993638753891,
+        "BBOX_XYXY": [
+          800.6947631835938,
+          258.988037109375,
+          892.5556640625,
+          334.779541015625
+        ],
+        "CROP_PATH": "crops/1848940455267587_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1024324898099042",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1024324898099042.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1024324898099042",
+        "CAPTURED_AT": 1506972745900,
+        "HEADING": 233.03707564508,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.22925572097301483,
+        "BBOX_XYXY": [
+          785.39501953125,
+          265.4002990722656,
+          865.9532470703125,
+          329.6695251464844
+        ],
+        "CROP_PATH": "crops/1024324898099042_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1024324898099042",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1024324898099042.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1024324898099042",
+        "CAPTURED_AT": 1506972745900,
+        "HEADING": 233.03707564508,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.14705650508403778,
+        "BBOX_XYXY": [
+          786.7390747070312,
+          266.87481689453125,
+          866.2872924804688,
+          330.6449279785156
+        ],
+        "CROP_PATH": "crops/1024324898099042_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "510494976644218",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_510494976644218.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=510494976644218",
+        "CAPTURED_AT": 1520716414192,
+        "HEADING": 231.52156066895,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09138067811727524,
+        "BBOX_XYXY": [
+          352.74102783203125,
+          512.6707763671875,
+          373.2998046875,
+          540.4656982421875
+        ],
+        "CROP_PATH": "crops/510494976644218_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "217606439830700",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_217606439830700.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=217606439830700",
+        "CAPTURED_AT": 1506972746100,
+        "HEADING": 247.37399974364,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.25686219334602356,
+        "BBOX_XYXY": [
+          787.48095703125,
+          264.2978210449219,
+          868.3532104492188,
+          330.7901916503906
+        ],
+        "CROP_PATH": "crops/217606439830700_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "217606439830700",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_217606439830700.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=217606439830700",
+        "CAPTURED_AT": 1506972746100,
+        "HEADING": 247.37399974364,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.150411456823349,
+        "BBOX_XYXY": [
+          789.0020751953125,
+          266.7281188964844,
+          868.81787109375,
+          331.54962158203125
+        ],
+        "CROP_PATH": "crops/217606439830700_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "217606439830700",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_217606439830700.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=217606439830700",
+        "CAPTURED_AT": 1506972746100,
+        "HEADING": 247.37399974364,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10477044433355331,
+        "BBOX_XYXY": [
+          93.25148010253906,
+          290.54473876953125,
+          117.74010467529297,
+          313.6161193847656
+        ],
+        "CROP_PATH": "crops/217606439830700_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1483684341962706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1483684341962706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1483684341962706",
+        "CAPTURED_AT": 1506972747000,
+        "HEADING": 243.35750335547,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2556598484516144,
+        "BBOX_XYXY": [
+          800.1586303710938,
+          264.0551452636719,
+          889.0478515625,
+          332.17340087890625
+        ],
+        "CROP_PATH": "crops/1483684341962706_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1483684341962706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1483684341962706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1483684341962706",
+        "CAPTURED_AT": 1506972747000,
+        "HEADING": 243.35750335547,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.12866856157779694,
+        "BBOX_XYXY": [
+          799.0009765625,
+          259.6351623535156,
+          889.1691284179688,
+          334.67999267578125
+        ],
+        "CROP_PATH": "crops/1483684341962706_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1483684341962706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1483684341962706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1483684341962706",
+        "CAPTURED_AT": 1506972747000,
+        "HEADING": 243.35750335547,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08269039541482925,
+        "BBOX_XYXY": [
+          69.9779052734375,
+          285.1684265136719,
+          95.2625961303711,
+          309.7281799316406
+        ],
+        "CROP_PATH": "crops/1483684341962706_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "524194631941061",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_524194631941061.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=524194631941061",
+        "CAPTURED_AT": 1506972747600,
+        "HEADING": 243.35724482443,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2790782153606415,
+        "BBOX_XYXY": [
+          801.3116455078125,
+          263.2115783691406,
+          894.3973999023438,
+          331.9374694824219
+        ],
+        "CROP_PATH": "crops/524194631941061_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "524194631941061",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_524194631941061.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=524194631941061",
+        "CAPTURED_AT": 1506972747600,
+        "HEADING": 243.35724482443,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.15942025184631348,
+        "BBOX_XYXY": [
+          801.2130737304688,
+          259.859130859375,
+          894.9044799804688,
+          334.8251647949219
+        ],
+        "CROP_PATH": "crops/524194631941061_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "524194631941061",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_524194631941061.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=524194631941061",
+        "CAPTURED_AT": 1506972747600,
+        "HEADING": 243.35724482443,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10764451324939728,
+        "BBOX_XYXY": [
+          65.98735809326172,
+          285.3904113769531,
+          92.17290496826172,
+          309.1388854980469
+        ],
+        "CROP_PATH": "crops/524194631941061_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "466682791231446",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_466682791231446.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=466682791231446",
+        "CAPTURED_AT": 1426334414000,
+        "HEADING": 37.06799,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1084936261177063,
+        "BBOX_XYXY": [
+          835.3785400390625,
+          216.04727172851562,
+          877.078125,
+          449.3395080566406
+        ],
+        "CROP_PATH": "crops/466682791231446_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1199416210529303",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1199416210529303.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1199416210529303",
+        "CAPTURED_AT": 1506972746800,
+        "HEADING": 247.37363465325,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2880603075027466,
+        "BBOX_XYXY": [
+          796.6920166015625,
+          263.2463073730469,
+          886.337890625,
+          332.2646179199219
+        ],
+        "CROP_PATH": "crops/1199416210529303_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1199416210529303",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1199416210529303.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1199416210529303",
+        "CAPTURED_AT": 1506972746800,
+        "HEADING": 247.37363465325,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.21063944697380066,
+        "BBOX_XYXY": [
+          796.9412231445312,
+          259.877685546875,
+          887.7117309570312,
+          333.87701416015625
+        ],
+        "CROP_PATH": "crops/1199416210529303_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1031009923972123",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1031009923972123.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1031009923972123",
+        "CAPTURED_AT": 1506972746700,
+        "HEADING": 247.37428627327,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2289484739303589,
+        "BBOX_XYXY": [
+          795.1334228515625,
+          262.1558532714844,
+          884.3099975585938,
+          332.6000671386719
+        ],
+        "CROP_PATH": "crops/1031009923972123_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1031009923972123",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1031009923972123.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1031009923972123",
+        "CAPTURED_AT": 1506972746700,
+        "HEADING": 247.37428627327,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.16696609556674957,
+        "BBOX_XYXY": [
+          795.5697631835938,
+          259.3787536621094,
+          885.4683837890625,
+          334.0613098144531
+        ],
+        "CROP_PATH": "crops/1031009923972123_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "500834714451519",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_500834714451519.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=500834714451519",
+        "CAPTURED_AT": 1506972746900,
+        "HEADING": 247.3738312387,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.30240052938461304,
+        "BBOX_XYXY": [
+          799.911376953125,
+          264.0086975097656,
+          887.4921875,
+          331.5357360839844
+        ],
+        "CROP_PATH": "crops/500834714451519_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "500834714451519",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_500834714451519.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=500834714451519",
+        "CAPTURED_AT": 1506972746900,
+        "HEADING": 247.3738312387,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.1279037892818451,
+        "BBOX_XYXY": [
+          797.6840209960938,
+          260.809814453125,
+          888.994140625,
+          334.1300354003906
+        ],
+        "CROP_PATH": "crops/500834714451519_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2888547161357566",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2888547161357566.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2888547161357566",
+        "CAPTURED_AT": 1506972746400,
+        "HEADING": 247.37363212218,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.22072868049144745,
+        "BBOX_XYXY": [
+          792.7360229492188,
+          261.9377136230469,
+          877.4729614257812,
+          330.7991027832031
+        ],
+        "CROP_PATH": "crops/2888547161357566_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2888547161357566",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2888547161357566.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2888547161357566",
+        "CAPTURED_AT": 1506972746400,
+        "HEADING": 247.37363212218,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.15779148042201996,
+        "BBOX_XYXY": [
+          789.8539428710938,
+          260.5028991699219,
+          877.9613647460938,
+          333.6576843261719
+        ],
+        "CROP_PATH": "crops/2888547161357566_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1107443423078544",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1107443423078544.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1107443423078544",
+        "CAPTURED_AT": 1506972746600,
+        "HEADING": 247.37391599108,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.27600470185279846,
+        "BBOX_XYXY": [
+          794.82958984375,
+          262.669189453125,
+          881.5809936523438,
+          332.3551330566406
+        ],
+        "CROP_PATH": "crops/1107443423078544_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1107443423078544",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1107443423078544.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1107443423078544",
+        "CAPTURED_AT": 1506972746600,
+        "HEADING": 247.37391599108,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.2117757350206375,
+        "BBOX_XYXY": [
+          794.0465698242188,
+          259.9052429199219,
+          882.8952026367188,
+          333.9430236816406
+        ],
+        "CROP_PATH": "crops/1107443423078544_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1624643137727779",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1624643137727779.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1624643137727779",
+        "CAPTURED_AT": 1506972747400,
+        "HEADING": 243.35750588464,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.3263200521469116,
+        "BBOX_XYXY": [
+          801.1117553710938,
+          264.0173034667969,
+          893.3082275390625,
+          332.4049987792969
+        ],
+        "CROP_PATH": "crops/1624643137727779_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1624643137727779",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1624643137727779.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1624643137727779",
+        "CAPTURED_AT": 1506972747400,
+        "HEADING": 243.35750588464,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.2109403908252716,
+        "BBOX_XYXY": [
+          801.3143920898438,
+          260.291259765625,
+          894.2108764648438,
+          334.3285827636719
+        ],
+        "CROP_PATH": "crops/1624643137727779_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "122596519857518",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_122596519857518.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=122596519857518",
+        "CAPTURED_AT": 1506972739400,
+        "HEADING": 225.1141852724,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1378009021282196,
+        "BBOX_XYXY": [
+          753.0460815429688,
+          288.8235778808594,
+          777.6392822265625,
+          323.4054260253906
+        ],
+        "CROP_PATH": "crops/122596519857518_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "122596519857518",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_122596519857518.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=122596519857518",
+        "CAPTURED_AT": 1506972739400,
+        "HEADING": 225.1141852724,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08647900074720383,
+        "BBOX_XYXY": [
+          754.5477905273438,
+          320.6371154785156,
+          779.5841674804688,
+          347.9869079589844
+        ],
+        "CROP_PATH": "crops/122596519857518_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "302597358132629",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_302597358132629.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=302597358132629",
+        "CAPTURED_AT": 1506972746500,
+        "HEADING": 247.37391553628,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.25491052865982056,
+        "BBOX_XYXY": [
+          793.5520629882812,
+          263.1737365722656,
+          879.24560546875,
+          331.6164245605469
+        ],
+        "CROP_PATH": "crops/302597358132629_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "302597358132629",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_302597358132629.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=302597358132629",
+        "CAPTURED_AT": 1506972746500,
+        "HEADING": 247.37391553628,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.17458873987197876,
+        "BBOX_XYXY": [
+          790.9271850585938,
+          259.95758056640625,
+          881.43359375,
+          333.8206481933594
+        ],
+        "CROP_PATH": "crops/302597358132629_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "302597358132629",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_302597358132629.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=302597358132629",
+        "CAPTURED_AT": 1506972746500,
+        "HEADING": 247.37391553628,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08576885610818863,
+        "BBOX_XYXY": [
+          852.1759643554688,
+          329.9857482910156,
+          887.8458862304688,
+          343.65802001953125
+        ],
+        "CROP_PATH": "crops/302597358132629_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1212484799167915",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1212484799167915.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1212484799167915",
+        "CAPTURED_AT": 1506972563400,
+        "HEADING": 254.65804146503,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.3561653792858124,
+        "BBOX_XYXY": [
+          764.7107543945312,
+          286.3409118652344,
+          801.2628784179688,
+          322.759765625
+        ],
+        "CROP_PATH": "crops/1212484799167915_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1212484799167915",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1212484799167915.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1212484799167915",
+        "CAPTURED_AT": 1506972563400,
+        "HEADING": 254.65804146503,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.13496731221675873,
+        "BBOX_XYXY": [
+          99.06983947753906,
+          296.9948425292969,
+          133.63619995117188,
+          318.84326171875
+        ],
+        "CROP_PATH": "crops/1212484799167915_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1212484799167915",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1212484799167915.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1212484799167915",
+        "CAPTURED_AT": 1506972563400,
+        "HEADING": 254.65804146503,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.08816473931074142,
+        "BBOX_XYXY": [
+          99.97270965576172,
+          297.3914489746094,
+          133.7781219482422,
+          310.130126953125
+        ],
+        "CROP_PATH": "crops/1212484799167915_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1212484799167915",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1212484799167915.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1212484799167915",
+        "CAPTURED_AT": 1506972563400,
+        "HEADING": 254.65804146503,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.0869683101773262,
+        "BBOX_XYXY": [
+          881.3637084960938,
+          327.404296875,
+          911.9691772460938,
+          365.21417236328125
+        ],
+        "CROP_PATH": "crops/1212484799167915_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "574923513471113",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_574923513471113.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=574923513471113",
+        "CAPTURED_AT": 1506972560700,
+        "HEADING": 255.95891766345,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.13526877760887146,
+        "BBOX_XYXY": [
+          755.1995239257812,
+          314.3041687011719,
+          820.3649291992188,
+          338.61956787109375
+        ],
+        "CROP_PATH": "crops/574923513471113_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1078911265972996",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1078911265972996.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1078911265972996",
+        "CAPTURED_AT": 1506972559400,
+        "HEADING": 258.3244065161,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10570120066404343,
+        "BBOX_XYXY": [
+          153.5248565673828,
+          237.58164978027344,
+          218.1559600830078,
+          276.35430908203125
+        ],
+        "CROP_PATH": "crops/1078911265972996_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "159429606119670",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_159429606119670.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=159429606119670",
+        "CAPTURED_AT": 1506972563800,
+        "HEADING": 254.6578608291,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.3595220148563385,
+        "BBOX_XYXY": [
+          45.95901107788086,
+          306.5622253417969,
+          93.6989517211914,
+          377.6398620605469
+        ],
+        "CROP_PATH": "crops/159429606119670_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "159429606119670",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_159429606119670.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=159429606119670",
+        "CAPTURED_AT": 1506972563800,
+        "HEADING": 254.6578608291,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1530536562204361,
+        "BBOX_XYXY": [
+          17.859411239624023,
+          281.1745300292969,
+          61.9905891418457,
+          363.4298095703125
+        ],
+        "CROP_PATH": "crops/159429606119670_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "3923074577807635",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_3923074577807635.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=3923074577807635",
+        "CAPTURED_AT": 1506972554100,
+        "HEADING": 253.0489813245,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09480472654104233,
+        "BBOX_XYXY": [
+          46.4334602355957,
+          288.41339111328125,
+          103.83550262451172,
+          311.388671875
+        ],
+        "CROP_PATH": "crops/3923074577807635_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "865170530729798",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_865170530729798.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=865170530729798",
+        "CAPTURED_AT": 1506972563000,
+        "HEADING": 254.65803899539,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2700658440589905,
+        "BBOX_XYXY": [
+          676.4840087890625,
+          314.8260803222656,
+          698.9826049804688,
+          348.89453125
+        ],
+        "CROP_PATH": "crops/865170530729798_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "865170530729798",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_865170530729798.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=865170530729798",
+        "CAPTURED_AT": 1506972563000,
+        "HEADING": 254.65803899539,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.18654601275920868,
+        "BBOX_XYXY": [
+          960.5538940429688,
+          196.4242706298828,
+          1024.0,
+          520.8161010742188
+        ],
+        "CROP_PATH": "crops/865170530729798_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "865170530729798",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_865170530729798.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=865170530729798",
+        "CAPTURED_AT": 1506972563000,
+        "HEADING": 254.65803899539,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09353212267160416,
+        "BBOX_XYXY": [
+          999.48974609375,
+          218.90835571289062,
+          1023.9700317382812,
+          269.9743347167969
+        ],
+        "CROP_PATH": "crops/865170530729798_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1153065248544490",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1153065248544490.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1153065248544490",
+        "CAPTURED_AT": 1506972561300,
+        "HEADING": 256.06991180338,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1295246034860611,
+        "BBOX_XYXY": [
+          180.32115173339844,
+          293.0299377441406,
+          215.0227508544922,
+          371.9584655761719
+        ],
+        "CROP_PATH": "crops/1153065248544490_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "585728262819636",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_585728262819636.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=585728262819636",
+        "CAPTURED_AT": 1506972563500,
+        "HEADING": 254.65767585772,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.5511679649353027,
+        "BBOX_XYXY": [
+          81.98693084716797,
+          293.7709655761719,
+          117.41637420654297,
+          354.9051208496094
+        ],
+        "CROP_PATH": "crops/585728262819636_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "585728262819636",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_585728262819636.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=585728262819636",
+        "CAPTURED_AT": 1506972563500,
+        "HEADING": 254.65767585772,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2787099778652191,
+        "BBOX_XYXY": [
+          805.92578125,
+          312.4354553222656,
+          847.4595947265625,
+          333.236328125
+        ],
+        "CROP_PATH": "crops/585728262819636_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "585728262819636",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_585728262819636.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=585728262819636",
+        "CAPTURED_AT": 1506972563500,
+        "HEADING": 254.65767585772,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.22874517738819122,
+        "BBOX_XYXY": [
+          805.0054931640625,
+          274.40869140625,
+          846.8482666015625,
+          331.36279296875
+        ],
+        "CROP_PATH": "crops/585728262819636_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "585728262819636",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_585728262819636.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=585728262819636",
+        "CAPTURED_AT": 1506972563500,
+        "HEADING": 254.65767585772,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.13079479336738586,
+        "BBOX_XYXY": [
+          5.035485744476318,
+          248.1970672607422,
+          87.7162857055664,
+          372.9296875
+        ],
+        "CROP_PATH": "crops/585728262819636_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "174069207841966",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_174069207841966.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=174069207841966",
+        "CAPTURED_AT": 1506972562900,
+        "HEADING": 255.03101996555,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.4260962903499603,
+        "BBOX_XYXY": [
+          662.5904541015625,
+          318.8909912109375,
+          685.0125122070312,
+          349.5537414550781
+        ],
+        "CROP_PATH": "crops/174069207841966_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1167848137057828",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1167848137057828.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1167848137057828",
+        "CAPTURED_AT": 1506972511200,
+        "HEADING": 229.53734016309,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.09836720675230026,
+        "BBOX_XYXY": [
+          334.0011291503906,
+          354.2449645996094,
+          346.8139343261719,
+          373.4640197753906
+        ],
+        "CROP_PATH": "crops/1167848137057828_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1568609593329796",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1568609593329796.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1568609593329796",
+        "CAPTURED_AT": 1506972502900,
+        "HEADING": 225.76363530611,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2367146909236908,
+        "BBOX_XYXY": [
+          779.5411376953125,
+          289.8591003417969,
+          811.2828979492188,
+          319.7767028808594
+        ],
+        "CROP_PATH": "crops/1568609593329796_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1568609593329796",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1568609593329796.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1568609593329796",
+        "CAPTURED_AT": 1506972502900,
+        "HEADING": 225.76363530611,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.15641848742961884,
+        "BBOX_XYXY": [
+          795.43212890625,
+          260.43927001953125,
+          843.6266479492188,
+          313.9273376464844
+        ],
+        "CROP_PATH": "crops/1568609593329796_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1568609593329796",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1568609593329796.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1568609593329796",
+        "CAPTURED_AT": 1506972502900,
+        "HEADING": 225.76363530611,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09394141286611557,
+        "BBOX_XYXY": [
+          777.9095458984375,
+          335.5372314453125,
+          814.8202514648438,
+          383.5262451171875
+        ],
+        "CROP_PATH": "crops/1568609593329796_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "3925783617502704",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_3925783617502704.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=3925783617502704",
+        "CAPTURED_AT": 1506972503200,
+        "HEADING": 226.41004656765,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.4107421636581421,
+        "BBOX_XYXY": [
+          869.2009887695312,
+          231.530029296875,
+          922.8212890625,
+          290.61285400390625
+        ],
+        "CROP_PATH": "crops/3925783617502704_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "3925783617502704",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_3925783617502704.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=3925783617502704",
+        "CAPTURED_AT": 1506972503200,
+        "HEADING": 226.41004656765,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.24455465376377106,
+        "BBOX_XYXY": [
+          817.2179565429688,
+          270.2839050292969,
+          887.5927734375,
+          311.8526306152344
+        ],
+        "CROP_PATH": "crops/3925783617502704_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "3925783617502704",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_3925783617502704.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=3925783617502704",
+        "CAPTURED_AT": 1506972503200,
+        "HEADING": 226.41004656765,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.18846528232097626,
+        "BBOX_XYXY": [
+          761.5026245117188,
+          390.39337158203125,
+          806.1210327148438,
+          451.5599670410156
+        ],
+        "CROP_PATH": "crops/3925783617502704_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "147073187372240",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_147073187372240.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=147073187372240",
+        "CAPTURED_AT": 1506972509200,
+        "HEADING": 233.89112321488,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.22453680634498596,
+        "BBOX_XYXY": [
+          733.460205078125,
+          270.14605712890625,
+          762.7487182617188,
+          340.0008850097656
+        ],
+        "CROP_PATH": "crops/147073187372240_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "147073187372240",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_147073187372240.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=147073187372240",
+        "CAPTURED_AT": 1506972509200,
+        "HEADING": 233.89112321488,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.16793636977672577,
+        "BBOX_XYXY": [
+          735.4686889648438,
+          304.4252624511719,
+          763.1397705078125,
+          340.52386474609375
+        ],
+        "CROP_PATH": "crops/147073187372240_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "147073187372240",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_147073187372240.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=147073187372240",
+        "CAPTURED_AT": 1506972509200,
+        "HEADING": 233.89112321488,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.12663859128952026,
+        "BBOX_XYXY": [
+          733.4262084960938,
+          269.8556823730469,
+          760.5382690429688,
+          299.3241271972656
+        ],
+        "CROP_PATH": "crops/147073187372240_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "147073187372240",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_147073187372240.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=147073187372240",
+        "CAPTURED_AT": 1506972509200,
+        "HEADING": 233.89112321488,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.08612976968288422,
+        "BBOX_XYXY": [
+          865.25732421875,
+          251.93994140625,
+          937.9911499023438,
+          312.9325256347656
+        ],
+        "CROP_PATH": "crops/147073187372240_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "465965271352086",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_465965271352086.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=465965271352086",
+        "CAPTURED_AT": 1506972629700,
+        "HEADING": 238.63419758302,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.1297294795513153,
+        "BBOX_XYXY": [
+          78.33013153076172,
+          223.3291473388672,
+          135.3790740966797,
+          355.9881286621094
+        ],
+        "CROP_PATH": "crops/465965271352086_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "369522297810496",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_369522297810496.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=369522297810496",
+        "CAPTURED_AT": 1506972626000,
+        "HEADING": 222.25701190953,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.13701078295707703,
+        "BBOX_XYXY": [
+          815.5416259765625,
+          215.0622100830078,
+          861.4193725585938,
+          488.6875915527344
+        ],
+        "CROP_PATH": "crops/369522297810496_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1201050607003738",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1201050607003738.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1201050607003738",
+        "CAPTURED_AT": 1506972629200,
+        "HEADING": 238.63397929572,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.12210999429225922,
+        "BBOX_XYXY": [
+          140.7219696044922,
+          245.4139862060547,
+          190.94358825683594,
+          363.2038269042969
+        ],
+        "CROP_PATH": "crops/1201050607003738_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1201050607003738",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1201050607003738.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1201050607003738",
+        "CAPTURED_AT": 1506972629200,
+        "HEADING": 238.63397929572,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.08328580856323242,
+        "BBOX_XYXY": [
+          139.540283203125,
+          245.1567840576172,
+          191.37168884277344,
+          363.88824462890625
+        ],
+        "CROP_PATH": "crops/1201050607003738_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1153475681824423",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1153475681824423.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1153475681824423",
+        "CAPTURED_AT": 1506972678900,
+        "HEADING": 240.75522205815,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.2537688910961151,
+        "BBOX_XYXY": [
+          180.2150115966797,
+          393.8731384277344,
+          198.3412322998047,
+          422.20684814453125
+        ],
+        "CROP_PATH": "crops/1153475681824423_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2882280635344702",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2882280635344702.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2882280635344702",
+        "CAPTURED_AT": 1506972679200,
+        "HEADING": 240.4259795523,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.4747767448425293,
+        "BBOX_XYXY": [
+          35.657447814941406,
+          401.2764587402344,
+          63.2636604309082,
+          444.22589111328125
+        ],
+        "CROP_PATH": "crops/2882280635344702_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "464481904618967",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_464481904618967.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=464481904618967",
+        "CAPTURED_AT": 1506972678800,
+        "HEADING": 240.75490316941,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.4410204589366913,
+        "BBOX_XYXY": [
+          211.6560821533203,
+          390.9799499511719,
+          227.1256103515625,
+          418.9519958496094
+        ],
+        "CROP_PATH": "crops/464481904618967_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "169480125078642",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_169480125078642.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=169480125078642",
+        "CAPTURED_AT": 1426334218000,
+        "HEADING": 49.2251,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.13354846835136414,
+        "BBOX_XYXY": [
+          697.25244140625,
+          320.8785095214844,
+          739.2164916992188,
+          367.7401123046875
+        ],
+        "CROP_PATH": "crops/169480125078642_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "169480125078642",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_169480125078642.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=169480125078642",
+        "CAPTURED_AT": 1426334218000,
+        "HEADING": 49.2251,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10406848043203354,
+        "BBOX_XYXY": [
+          694.4005737304688,
+          290.8724670410156,
+          754.5435791015625,
+          422.3693542480469
+        ],
+        "CROP_PATH": "crops/169480125078642_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "169480125078642",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_169480125078642.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=169480125078642",
+        "CAPTURED_AT": 1426334218000,
+        "HEADING": 49.2251,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.08521709591150284,
+        "BBOX_XYXY": [
+          696.6557006835938,
+          320.35552978515625,
+          739.1873168945312,
+          368.196533203125
+        ],
+        "CROP_PATH": "crops/169480125078642_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "5795258010546825",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_5795258010546825.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=5795258010546825",
+        "CAPTURED_AT": 1506972678400,
+        "HEADING": 240.75489509901,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.2817860543727875,
+        "BBOX_XYXY": [
+          292.75146484375,
+          381.1522521972656,
+          304.91802978515625,
+          404.6546936035156
+        ],
+        "CROP_PATH": "crops/5795258010546825_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1185872038539662",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1185872038539662.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1185872038539662",
+        "CAPTURED_AT": 1506972688400,
+        "HEADING": 240.55856849165,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.3869442045688629,
+        "BBOX_XYXY": [
+          794.564453125,
+          310.8041076660156,
+          818.7814331054688,
+          339.6025390625
+        ],
+        "CROP_PATH": "crops/1185872038539662_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1185872038539662",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1185872038539662.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1185872038539662",
+        "CAPTURED_AT": 1506972688400,
+        "HEADING": 240.55856849165,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.2035629153251648,
+        "BBOX_XYXY": [
+          8.363174438476562,
+          389.4557800292969,
+          37.43019485473633,
+          449.29248046875
+        ],
+        "CROP_PATH": "crops/1185872038539662_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "336548677889449",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_336548677889449.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=336548677889449",
+        "CAPTURED_AT": 1506972687900,
+        "HEADING": 239.63917914964,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.3921049237251282,
+        "BBOX_XYXY": [
+          215.905517578125,
+          384.0887756347656,
+          230.36489868164062,
+          416.1283264160156
+        ],
+        "CROP_PATH": "crops/336548677889449_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "336548677889449",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_336548677889449.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=336548677889449",
+        "CAPTURED_AT": 1506972687900,
+        "HEADING": 239.63917914964,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.1397162228822708,
+        "BBOX_XYXY": [
+          965.7199096679688,
+          511.91168212890625,
+          1023.83984375,
+          575.2838745117188
+        ],
+        "CROP_PATH": "crops/336548677889449_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "219020883003455",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_219020883003455.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=219020883003455",
+        "CAPTURED_AT": 1506972681900,
+        "HEADING": 239.20370708795,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1642608791589737,
+        "BBOX_XYXY": [
+          852.1417846679688,
+          286.8766784667969,
+          904.9871215820312,
+          302.8763732910156
+        ],
+        "CROP_PATH": "crops/219020883003455_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "219020883003455",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_219020883003455.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=219020883003455",
+        "CAPTURED_AT": 1506972681900,
+        "HEADING": 239.20370708795,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.09935170412063599,
+        "BBOX_XYXY": [
+          836.7548217773438,
+          301.16973876953125,
+          899.1838989257812,
+          441.2240295410156
+        ],
+        "CROP_PATH": "crops/219020883003455_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "301490948289810",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_301490948289810.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=301490948289810",
+        "CAPTURED_AT": 1506972688000,
+        "HEADING": 240.55869697019,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.36735448241233826,
+        "BBOX_XYXY": [
+          190.08438110351562,
+          385.7413635253906,
+          204.90481567382812,
+          420.8162536621094
+        ],
+        "CROP_PATH": "crops/301490948289810_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "259906112526024",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_259906112526024.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=259906112526024",
+        "CAPTURED_AT": 1506972682600,
+        "HEADING": 238.78359365426,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.5237900018692017,
+        "BBOX_XYXY": [
+          874.3187866210938,
+          251.50222778320312,
+          923.62890625,
+          309.1634216308594
+        ],
+        "CROP_PATH": "crops/259906112526024_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "259906112526024",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_259906112526024.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=259906112526024",
+        "CAPTURED_AT": 1506972682600,
+        "HEADING": 238.78359365426,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.0989508405327797,
+        "BBOX_XYXY": [
+          874.5785522460938,
+          250.5702362060547,
+          923.8546752929688,
+          310.86126708984375
+        ],
+        "CROP_PATH": "crops/259906112526024_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2957111781277587",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2957111781277587.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2957111781277587",
+        "CAPTURED_AT": 1506972682400,
+        "HEADING": 238.78358908957,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.40259554982185364,
+        "BBOX_XYXY": [
+          765.4439086914062,
+          291.2989807128906,
+          796.277587890625,
+          329.49176025390625
+        ],
+        "CROP_PATH": "crops/2957111781277587_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2900833176837184",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2900833176837184.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2900833176837184",
+        "CAPTURED_AT": 1506972682300,
+        "HEADING": 238.78358676896,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.16378790140151978,
+        "BBOX_XYXY": [
+          730.671142578125,
+          302.6559753417969,
+          758.2891235351562,
+          336.48956298828125
+        ],
+        "CROP_PATH": "crops/2900833176837184_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "296301678616895",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_296301678616895.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=296301678616895",
+        "CAPTURED_AT": 1506972688600,
+        "HEADING": 240.55865188519,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.28505173325538635,
+        "BBOX_XYXY": [
+          849.5189819335938,
+          294.86553955078125,
+          882.1818237304688,
+          332.164794921875
+        ],
+        "CROP_PATH": "crops/296301678616895_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "225939768865294",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_225939768865294.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=225939768865294",
+        "CAPTURED_AT": 1506972687500,
+        "HEADING": 239.63917065878,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.20839689671993256,
+        "BBOX_XYXY": [
+          821.43115234375,
+          157.41673278808594,
+          906.2946166992188,
+          220.0346221923828
+        ],
+        "CROP_PATH": "crops/225939768865294_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1447135338958716",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1447135338958716.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1447135338958716",
+        "CAPTURED_AT": 1506972689900,
+        "HEADING": 239.3978546081,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.1331307739019394,
+        "BBOX_XYXY": [
+          681.29150390625,
+          376.2310791015625,
+          704.6612548828125,
+          416.6744079589844
+        ],
+        "CROP_PATH": "crops/1447135338958716_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1769351233264170",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1769351233264170.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1769351233264170",
+        "CAPTURED_AT": 1506972689100,
+        "HEADING": 239.39783807428,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.08257776498794556,
+        "BBOX_XYXY": [
+          714.0922241210938,
+          382.5648498535156,
+          740.3171997070312,
+          428.57208251953125
+        ],
+        "CROP_PATH": "crops/1769351233264170_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "261834222346978",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_261834222346978.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=261834222346978",
+        "CAPTURED_AT": 1506972690600,
+        "HEADING": 238.67550421649,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.22113296389579773,
+        "BBOX_XYXY": [
+          906.0640869140625,
+          382.2991638183594,
+          958.6179809570312,
+          474.5716247558594
+        ],
+        "CROP_PATH": "crops/261834222346978_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "261834222346978",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_261834222346978.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=261834222346978",
+        "CAPTURED_AT": 1506972690600,
+        "HEADING": 238.67550421649,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.21869608759880066,
+        "BBOX_XYXY": [
+          883.6349487304688,
+          224.97463989257812,
+          915.291015625,
+          367.8995056152344
+        ],
+        "CROP_PATH": "crops/261834222346978_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "261834222346978",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_261834222346978.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=261834222346978",
+        "CAPTURED_AT": 1506972690600,
+        "HEADING": 238.67550421649,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.21271584928035736,
+        "BBOX_XYXY": [
+          906.4002075195312,
+          382.2635803222656,
+          958.5541381835938,
+          474.7305603027344
+        ],
+        "CROP_PATH": "crops/261834222346978_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "261834222346978",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_261834222346978.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=261834222346978",
+        "CAPTURED_AT": 1506972690600,
+        "HEADING": 238.67550421649,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.20705074071884155,
+        "BBOX_XYXY": [
+          883.0805053710938,
+          219.2478485107422,
+          914.9812622070312,
+          373.1740417480469
+        ],
+        "CROP_PATH": "crops/261834222346978_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "290856542576670",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_290856542576670.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=290856542576670",
+        "CAPTURED_AT": 1506972690400,
+        "HEADING": 238.67563683119,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.17332851886749268,
+        "BBOX_XYXY": [
+          801.5009765625,
+          378.8486328125,
+          840.3425903320312,
+          447.5335998535156
+        ],
+        "CROP_PATH": "crops/290856542576670_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "290856542576670",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_290856542576670.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=290856542576670",
+        "CAPTURED_AT": 1506972690400,
+        "HEADING": 238.67563683119,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.09472022205591202,
+        "BBOX_XYXY": [
+          819.7351684570312,
+          246.6873016357422,
+          844.5951538085938,
+          368.993408203125
+        ],
+        "CROP_PATH": "crops/290856542576670_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "290856542576670",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_290856542576670.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=290856542576670",
+        "CAPTURED_AT": 1506972690400,
+        "HEADING": 238.67563683119,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08547863364219666,
+        "BBOX_XYXY": [
+          820.1278686523438,
+          245.262939453125,
+          844.82080078125,
+          369.8798522949219
+        ],
+        "CROP_PATH": "crops/290856542576670_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "251062926810407",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_251062926810407.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=251062926810407",
+        "CAPTURED_AT": 1506972689300,
+        "HEADING": 239.39797720817,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.12700092792510986,
+        "BBOX_XYXY": [
+          763.8793334960938,
+          385.75787353515625,
+          794.8809204101562,
+          439.8227233886719
+        ],
+        "CROP_PATH": "crops/251062926810407_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2320154921449963",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2320154921449963.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2320154921449963",
+        "CAPTURED_AT": 1506972689700,
+        "HEADING": 239.39804435799,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.3234153687953949,
+        "BBOX_XYXY": [
+          982.0496215820312,
+          395.5850524902344,
+          1023.9996337890625,
+          504.5768737792969
+        ],
+        "CROP_PATH": "crops/2320154921449963_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "320347912942343",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_320347912942343.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=320347912942343",
+        "CAPTURED_AT": 1506972690000,
+        "HEADING": 238.67562847586,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.11668526381254196,
+        "BBOX_XYXY": [
+          696.0640869140625,
+          378.7708435058594,
+          722.6008911132812,
+          422.8182067871094
+        ],
+        "CROP_PATH": "crops/320347912942343_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "150375083647953",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_150375083647953.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=150375083647953",
+        "CAPTURED_AT": 1506972688100,
+        "HEADING": 240.55856265569,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.6724480390548706,
+        "BBOX_XYXY": [
+          157.69956970214844,
+          383.1793212890625,
+          174.1581573486328,
+          426.2970886230469
+        ],
+        "CROP_PATH": "crops/150375083647953_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "150375083647953",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_150375083647953.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=150375083647953",
+        "CAPTURED_AT": 1506972688100,
+        "HEADING": 240.55856265569,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.11455275863409042,
+        "BBOX_XYXY": [
+          737.5700073242188,
+          318.47314453125,
+          757.7178344726562,
+          344.482421875
+        ],
+        "CROP_PATH": "crops/150375083647953_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "457583215309839",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_457583215309839.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=457583215309839",
+        "CAPTURED_AT": 1506972689500,
+        "HEADING": 239.39771135275,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.15146902203559875,
+        "BBOX_XYXY": [
+          842.9442749023438,
+          383.9158020019531,
+          886.5507202148438,
+          455.9259948730469
+        ],
+        "CROP_PATH": "crops/457583215309839_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "457583215309839",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_457583215309839.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=457583215309839",
+        "CAPTURED_AT": 1506972689500,
+        "HEADING": 239.39771135275,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.0847235694527626,
+        "BBOX_XYXY": [
+          946.1749877929688,
+          365.95849609375,
+          977.3265991210938,
+          395.88214111328125
+        ],
+        "CROP_PATH": "crops/457583215309839_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2892882140955014",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2892882140955014.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2892882140955014",
+        "CAPTURED_AT": 1506972690200,
+        "HEADING": 238.67543435093,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "street cleaning sign",
+        "OBJECT_CONFIDENCE": 0.2058873027563095,
+        "BBOX_XYXY": [
+          738.5018310546875,
+          378.8973083496094,
+          770.6400756835938,
+          433.3348083496094
+        ],
+        "CROP_PATH": "crops/2892882140955014_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "515117359493425",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_515117359493425.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=515117359493425",
+        "CAPTURED_AT": 1507117504448,
+        "HEADING": 345.27700805664,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.34139183163642883,
+        "BBOX_XYXY": [
+          807.8125,
+          481.4694519042969,
+          855.0369262695312,
+          526.27294921875
+        ],
+        "CROP_PATH": "crops/515117359493425_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "946067206152005",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_946067206152005.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=946067206152005",
+        "CAPTURED_AT": 1506972694800,
+        "HEADING": 241.54920126277,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.09708257764577866,
+        "BBOX_XYXY": [
+          215.91650390625,
+          323.1767272949219,
+          240.7619171142578,
+          345.35321044921875
+        ],
+        "CROP_PATH": "crops/946067206152005_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1196596610779062",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1196596610779062.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1196596610779062",
+        "CAPTURED_AT": 1506972691900,
+        "HEADING": 238.30282260653,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.36508920788764954,
+        "BBOX_XYXY": [
+          896.01025390625,
+          186.1361846923828,
+          958.6173095703125,
+          295.95166015625
+        ],
+        "CROP_PATH": "crops/1196596610779062_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1196596610779062",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1196596610779062.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1196596610779062",
+        "CAPTURED_AT": 1506972691900,
+        "HEADING": 238.30282260653,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.30256330966949463,
+        "BBOX_XYXY": [
+          885.7796020507812,
+          123.90801239013672,
+          947.8440551757812,
+          185.18359375
+        ],
+        "CROP_PATH": "crops/1196596610779062_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1196596610779062",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1196596610779062.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1196596610779062",
+        "CAPTURED_AT": 1506972691900,
+        "HEADING": 238.30282260653,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1759297102689743,
+        "BBOX_XYXY": [
+          910.6676635742188,
+          234.7822265625,
+          954.8858642578125,
+          293.6063537597656
+        ],
+        "CROP_PATH": "crops/1196596610779062_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "196387038849378",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_196387038849378.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=196387038849378",
+        "CAPTURED_AT": 1506972696600,
+        "HEADING": 241.70325550987,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.11917197704315186,
+        "BBOX_XYXY": [
+          712.5119018554688,
+          318.6506042480469,
+          744.5730590820312,
+          352.2356262207031
+        ],
+        "CROP_PATH": "crops/196387038849378_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "304231684499225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_304231684499225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=304231684499225",
+        "CAPTURED_AT": 1507117530446,
+        "HEADING": 243.01766967773,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.5850259065628052,
+        "BBOX_XYXY": [
+          803.8389892578125,
+          326.48394775390625,
+          845.49755859375,
+          403.82763671875
+        ],
+        "CROP_PATH": "crops/304231684499225_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "304231684499225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_304231684499225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=304231684499225",
+        "CAPTURED_AT": 1507117530446,
+        "HEADING": 243.01766967773,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2528332769870758,
+        "BBOX_XYXY": [
+          810.3031616210938,
+          401.8625183105469,
+          847.5265502929688,
+          422.2740173339844
+        ],
+        "CROP_PATH": "crops/304231684499225_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "304231684499225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_304231684499225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=304231684499225",
+        "CAPTURED_AT": 1507117530446,
+        "HEADING": 243.01766967773,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1292412281036377,
+        "BBOX_XYXY": [
+          732.5426025390625,
+          510.42626953125,
+          763.0886840820312,
+          522.5462036132812
+        ],
+        "CROP_PATH": "crops/304231684499225_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "304231684499225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_304231684499225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=304231684499225",
+        "CAPTURED_AT": 1507117530446,
+        "HEADING": 243.01766967773,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08828295022249222,
+        "BBOX_XYXY": [
+          743.3717651367188,
+          522.9171752929688,
+          756.07666015625,
+          554.517578125
+        ],
+        "CROP_PATH": "crops/304231684499225_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "304231684499225",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_304231684499225.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=304231684499225",
+        "CAPTURED_AT": 1507117530446,
+        "HEADING": 243.01766967773,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.08607722818851471,
+        "BBOX_XYXY": [
+          162.39453125,
+          579.8974609375,
+          176.150146484375,
+          615.9407348632812
+        ],
+        "CROP_PATH": "crops/304231684499225_0_4.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "789960501711255",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_789960501711255.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=789960501711255",
+        "CAPTURED_AT": 1506972696800,
+        "HEADING": 241.70343912073,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.4306834638118744,
+        "BBOX_XYXY": [
+          754.3328857421875,
+          307.6846618652344,
+          790.6694946289062,
+          348.65753173828125
+        ],
+        "CROP_PATH": "crops/789960501711255_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "789960501711255",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_789960501711255.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=789960501711255",
+        "CAPTURED_AT": 1506972696800,
+        "HEADING": 241.70343912073,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.09180360287427902,
+        "BBOX_XYXY": [
+          753.8661499023438,
+          307.0871276855469,
+          791.6041870117188,
+          347.60205078125
+        ],
+        "CROP_PATH": "crops/789960501711255_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "494843915264706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_494843915264706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=494843915264706",
+        "CAPTURED_AT": 1507117531312,
+        "HEADING": 244.80346679688,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.33629170060157776,
+        "BBOX_XYXY": [
+          924.048828125,
+          500.65533447265625,
+          951.2345581054688,
+          549.0116577148438
+        ],
+        "CROP_PATH": "crops/494843915264706_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "494843915264706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_494843915264706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=494843915264706",
+        "CAPTURED_AT": 1507117531312,
+        "HEADING": 244.80346679688,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2323196679353714,
+        "BBOX_XYXY": [
+          200.65882873535156,
+          553.3162231445312,
+          221.4263153076172,
+          572.4308471679688
+        ],
+        "CROP_PATH": "crops/494843915264706_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "494843915264706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_494843915264706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=494843915264706",
+        "CAPTURED_AT": 1507117531312,
+        "HEADING": 244.80346679688,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.15975651144981384,
+        "BBOX_XYXY": [
+          906.9447631835938,
+          476.68310546875,
+          956.1404418945312,
+          495.09326171875
+        ],
+        "CROP_PATH": "crops/494843915264706_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "494843915264706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_494843915264706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=494843915264706",
+        "CAPTURED_AT": 1507117531312,
+        "HEADING": 244.80346679688,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10311100631952286,
+        "BBOX_XYXY": [
+          405.6381530761719,
+          571.0687866210938,
+          423.7161560058594,
+          596.7019653320312
+        ],
+        "CROP_PATH": "crops/494843915264706_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "494843915264706",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_494843915264706.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=494843915264706",
+        "CAPTURED_AT": 1507117531312,
+        "HEADING": 244.80346679688,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08747458457946777,
+        "BBOX_XYXY": [
+          912.1677856445312,
+          540.5026245117188,
+          936.0830078125,
+          558.7347412109375
+        ],
+        "CROP_PATH": "crops/494843915264706_0_4.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "937998370284110",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_937998370284110.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=937998370284110",
+        "CAPTURED_AT": 1506972695100,
+        "HEADING": 240.75560885189,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.11796798557043076,
+        "BBOX_XYXY": [
+          165.0570068359375,
+          354.6995544433594,
+          178.7322998046875,
+          391.455078125
+        ],
+        "CROP_PATH": "crops/937998370284110_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "937998370284110",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_937998370284110.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=937998370284110",
+        "CAPTURED_AT": 1506972695100,
+        "HEADING": 240.75560885189,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.09060071408748627,
+        "BBOX_XYXY": [
+          394.8900451660156,
+          377.036865234375,
+          414.0811462402344,
+          408.0141296386719
+        ],
+        "CROP_PATH": "crops/937998370284110_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1221398524945923",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1221398524945923.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1221398524945923",
+        "CAPTURED_AT": 1506972697100,
+        "HEADING": 245.17725955821,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.3849918842315674,
+        "BBOX_XYXY": [
+          864.1046752929688,
+          277.9972839355469,
+          914.6898803710938,
+          336.0610046386719
+        ],
+        "CROP_PATH": "crops/1221398524945923_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1221398524945923",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1221398524945923.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1221398524945923",
+        "CAPTURED_AT": 1506972697100,
+        "HEADING": 245.17725955821,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.21675164997577667,
+        "BBOX_XYXY": [
+          864.2951049804688,
+          277.92242431640625,
+          915.5509643554688,
+          336.119384765625
+        ],
+        "CROP_PATH": "crops/1221398524945923_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "760747234622811",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_760747234622811.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=760747234622811",
+        "CAPTURED_AT": 1507117501493,
+        "HEADING": 354.9944152832,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1891239881515503,
+        "BBOX_XYXY": [
+          675.6280517578125,
+          512.3538818359375,
+          704.7234497070312,
+          541.425048828125
+        ],
+        "CROP_PATH": "crops/760747234622811_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "973363140066450",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_973363140066450.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=973363140066450",
+        "CAPTURED_AT": 1507117502350,
+        "HEADING": 348.25378417969,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.38199934363365173,
+        "BBOX_XYXY": [
+          705.4306640625,
+          504.529296875,
+          740.9021606445312,
+          537.3591918945312
+        ],
+        "CROP_PATH": "crops/973363140066450_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "973363140066450",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_973363140066450.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=973363140066450",
+        "CAPTURED_AT": 1507117502350,
+        "HEADING": 348.25378417969,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.12733997404575348,
+        "BBOX_XYXY": [
+          705.2166137695312,
+          504.0445251464844,
+          741.4777221679688,
+          536.9796752929688
+        ],
+        "CROP_PATH": "crops/973363140066450_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "139406448161589",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_139406448161589.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=139406448161589",
+        "CAPTURED_AT": 1506972538900,
+        "HEADING": 242.11380618119,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1668412983417511,
+        "BBOX_XYXY": [
+          802.6827392578125,
+          307.5797424316406,
+          824.3975830078125,
+          338.8731994628906
+        ],
+        "CROP_PATH": "crops/139406448161589_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "139406448161589",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_139406448161589.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=139406448161589",
+        "CAPTURED_AT": 1506972538900,
+        "HEADING": 242.11380618119,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.11859478056430817,
+        "BBOX_XYXY": [
+          747.8030395507812,
+          287.2327575683594,
+          805.3092651367188,
+          337.4230041503906
+        ],
+        "CROP_PATH": "crops/139406448161589_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "300224494960401",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_300224494960401.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=300224494960401",
+        "CAPTURED_AT": 1506972508200,
+        "HEADING": 233.03468925122,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking meter",
+        "OBJECT_CONFIDENCE": 0.09403443336486816,
+        "BBOX_XYXY": [
+          0.0,
+          309.7979431152344,
+          60.264625549316406,
+          575.5297241210938
+        ],
+        "CROP_PATH": "crops/300224494960401_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "134307861978757",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_134307861978757.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=134307861978757",
+        "CAPTURED_AT": 1506972796400,
+        "HEADING": 251.73903659089,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08300402015447617,
+        "BBOX_XYXY": [
+          765.0302734375,
+          275.76904296875,
+          841.2767944335938,
+          305.73443603515625
+        ],
+        "CROP_PATH": "crops/134307861978757_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "197880475334648",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_197880475334648.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=197880475334648",
+        "CAPTURED_AT": 1426090809000,
+        "HEADING": 109.7633,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.18483588099479675,
+        "BBOX_XYXY": [
+          734.2348022460938,
+          478.52520751953125,
+          779.344970703125,
+          525.3870239257812
+        ],
+        "CROP_PATH": "crops/197880475334648_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "197880475334648",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_197880475334648.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=197880475334648",
+        "CAPTURED_AT": 1426090809000,
+        "HEADING": 109.7633,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.1683545708656311,
+        "BBOX_XYXY": [
+          246.9102020263672,
+          513.3492431640625,
+          304.9960632324219,
+          582.4421997070312
+        ],
+        "CROP_PATH": "crops/197880475334648_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "197880475334648",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_197880475334648.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=197880475334648",
+        "CAPTURED_AT": 1426090809000,
+        "HEADING": 109.7633,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.16555741429328918,
+        "BBOX_XYXY": [
+          246.6190948486328,
+          513.7154541015625,
+          304.91900634765625,
+          582.0322265625
+        ],
+        "CROP_PATH": "crops/197880475334648_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "368306764571287",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_368306764571287.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=368306764571287",
+        "CAPTURED_AT": 1426088418000,
+        "HEADING": 118.6593,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.08268684893846512,
+        "BBOX_XYXY": [
+          699.3956909179688,
+          508.0441589355469,
+          880.00390625,
+          664.0675048828125
+        ],
+        "CROP_PATH": "crops/368306764571287_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2828931857373674",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_2828931857373674.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=2828931857373674",
+        "CAPTURED_AT": 1426088423000,
+        "HEADING": 117.6638,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08132176101207733,
+        "BBOX_XYXY": [
+          0.0,
+          528.7852783203125,
+          36.42916488647461,
+          553.3259887695312
+        ],
+        "CROP_PATH": "crops/2828931857373674_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "173470318005821",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_173470318005821.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=173470318005821",
+        "CAPTURED_AT": 1426090515000,
+        "HEADING": 270.0906,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.36828961968421936,
+        "BBOX_XYXY": [
+          860.9412231445312,
+          519.4244384765625,
+          919.2185668945312,
+          547.9814453125
+        ],
+        "CROP_PATH": "crops/173470318005821_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "173470318005821",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_173470318005821.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=173470318005821",
+        "CAPTURED_AT": 1426090515000,
+        "HEADING": 270.0906,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.14611627161502838,
+        "BBOX_XYXY": [
+          860.0753784179688,
+          517.8275756835938,
+          919.5512084960938,
+          554.330078125
+        ],
+        "CROP_PATH": "crops/173470318005821_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1480569958958472",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1480569958958472.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1480569958958472",
+        "CAPTURED_AT": 1426090509000,
+        "HEADING": 280.4386,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.4349616765975952,
+        "BBOX_XYXY": [
+          920.02734375,
+          508.7008972167969,
+          948.9308471679688,
+          543.0899658203125
+        ],
+        "CROP_PATH": "crops/1480569958958472_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1480569958958472",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1480569958958472.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1480569958958472",
+        "CAPTURED_AT": 1426090509000,
+        "HEADING": 280.4386,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1916971206665039,
+        "BBOX_XYXY": [
+          897.646484375,
+          492.7547912597656,
+          940.0258178710938,
+          507.34521484375
+        ],
+        "CROP_PATH": "crops/1480569958958472_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1480569958958472",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1480569958958472.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1480569958958472",
+        "CAPTURED_AT": 1426090509000,
+        "HEADING": 280.4386,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.16418065130710602,
+        "BBOX_XYXY": [
+          896.7705078125,
+          491.7135925292969,
+          940.4263916015625,
+          507.28662109375
+        ],
+        "CROP_PATH": "crops/1480569958958472_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1480569958958472",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1480569958958472.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1480569958958472",
+        "CAPTURED_AT": 1426090509000,
+        "HEADING": 280.4386,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.14040644466876984,
+        "BBOX_XYXY": [
+          942.6593017578125,
+          467.0587463378906,
+          1002.0944213867188,
+          561.4028930664062
+        ],
+        "CROP_PATH": "crops/1480569958958472_0_3.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1480569958958472",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1480569958958472.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1480569958958472",
+        "CAPTURED_AT": 1426090509000,
+        "HEADING": 280.4386,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10966088622808456,
+        "BBOX_XYXY": [
+          947.5564575195312,
+          467.3760681152344,
+          1001.8201293945312,
+          501.0733337402344
+        ],
+        "CROP_PATH": "crops/1480569958958472_0_4.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "467104677929967",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_467104677929967.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=467104677929967",
+        "CAPTURED_AT": 1426090807000,
+        "HEADING": 111.9266,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.08348523825407028,
+        "BBOX_XYXY": [
+          703.3666381835938,
+          491.0138854980469,
+          740.3123779296875,
+          526.8955078125
+        ],
+        "CROP_PATH": "crops/467104677929967_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "917964302107910",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_917964302107910.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=917964302107910",
+        "CAPTURED_AT": 1426090799000,
+        "HEADING": 110.7868,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.2931692600250244,
+        "BBOX_XYXY": [
+          0.0,
+          596.0912475585938,
+          10.24006175994873,
+          671.3990478515625
+        ],
+        "CROP_PATH": "crops/917964302107910_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "901650677291139",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_901650677291139.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=901650677291139",
+        "CAPTURED_AT": 1426090805000,
+        "HEADING": 118.1979,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.1789686381816864,
+        "BBOX_XYXY": [
+          690.6630249023438,
+          500.6981506347656,
+          723.8253784179688,
+          534.3040161132812
+        ],
+        "CROP_PATH": "crops/901650677291139_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "901650677291139",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_901650677291139.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=901650677291139",
+        "CAPTURED_AT": 1426090805000,
+        "HEADING": 118.1979,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10777732729911804,
+        "BBOX_XYXY": [
+          924.9259033203125,
+          322.615966796875,
+          974.3829345703125,
+          474.31353759765625
+        ],
+        "CROP_PATH": "crops/901650677291139_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "778778263013407",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_778778263013407.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=778778263013407",
+        "CAPTURED_AT": 1426090503000,
+        "HEADING": 276.092,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.11684144288301468,
+        "BBOX_XYXY": [
+          868.71484375,
+          494.7451171875,
+          889.7886962890625,
+          525.1041870117188
+        ],
+        "CROP_PATH": "crops/778778263013407_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "778778263013407",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_778778263013407.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=778778263013407",
+        "CAPTURED_AT": 1426090503000,
+        "HEADING": 276.092,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.10553805530071259,
+        "BBOX_XYXY": [
+          0.0,
+          481.51715087890625,
+          34.31120681762695,
+          501.04010009765625
+        ],
+        "CROP_PATH": "crops/778778263013407_0_1.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "778778263013407",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_778778263013407.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=778778263013407",
+        "CAPTURED_AT": 1426090503000,
+        "HEADING": 276.092,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.10058300197124481,
+        "BBOX_XYXY": [
+          626.1204223632812,
+          572.0860595703125,
+          650.47119140625,
+          636.3946533203125
+        ],
+        "CROP_PATH": "crops/778778263013407_0_2.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "473738400346137",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_473738400346137.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=473738400346137",
+        "CAPTURED_AT": 1506972548500,
+        "HEADING": 256.82222058482,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09276752918958664,
+        "BBOX_XYXY": [
+          850.5037231445312,
+          300.531982421875,
+          873.9279174804688,
+          335.268798828125
+        ],
+        "CROP_PATH": "crops/473738400346137_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "1903031189846710",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_1903031189846710.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=1903031189846710",
+        "CAPTURED_AT": 1506972548600,
+        "HEADING": 256.82227341485,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.19483759999275208,
+        "BBOX_XYXY": [
+          897.6685791015625,
+          258.6068115234375,
+          924.7924194335938,
+          328.0885009765625
+        ],
+        "CROP_PATH": "crops/1903031189846710_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "3899995303381023",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_3899995303381023.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=3899995303381023",
+        "CAPTURED_AT": 1506972544000,
+        "HEADING": 253.62817944174,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.2623860538005829,
+        "BBOX_XYXY": [
+          886.46337890625,
+          279.3047790527344,
+          924.9229736328125,
+          326.3771667480469
+        ],
+        "CROP_PATH": "crops/3899995303381023_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "271114707920352",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_271114707920352.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=271114707920352",
+        "CAPTURED_AT": 1506972547000,
+        "HEADING": 256.97743451195,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "fire hydrant",
+        "OBJECT_CONFIDENCE": 0.2666143476963043,
+        "BBOX_XYXY": [
+          1006.1054077148438,
+          520.0442504882812,
+          1024.0,
+          575.0302124023438
+        ],
+        "CROP_PATH": "crops/271114707920352_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": null,
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "624052335220659",
+        "IMAGE_PATH": "data/processed/imagery/assets/medford_salem_street_mapillary_index/mapillary_624052335220659.jpg",
+        "SOURCE_URL": "https://www.mapillary.com/app/?pKey=624052335220659",
+        "CAPTURED_AT": 1506972558000,
+        "HEADING": 257.27755311261,
+        "STREET_NAME": "SALEM STREET",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.09113992750644684,
+        "BBOX_XYXY": [
+          977.6181640625,
+          292.101806640625,
+          1024.0,
+          327.38525390625
+        ],
+        "CROP_PATH": "crops/624052335220659_0_0.jpg",
+        "PROJECTION_CONFIDENCE": "image_location_only"
+      }
+    }
+  ]
+}

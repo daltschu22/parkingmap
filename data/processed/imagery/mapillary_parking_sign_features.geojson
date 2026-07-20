@@ -1,0 +1,769 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "generated_at_utc": "2026-05-23T17:28:34.791215+00:00",
+    "provider": "mapillary",
+    "provider_api": "https://graph.mapillary.com/map_features",
+    "bbox": [
+      -71.11,
+      42.4175,
+      -71.0965,
+      42.4218
+    ],
+    "object_values": [
+      "*parking*",
+      "regulatory--*parking*",
+      "regulatory--parking-restrictions--*",
+      "regulatory--no-parking--*",
+      "regulatory--no-parking-or-no-stopping--*",
+      "regulatory--no-stopping--*",
+      "regulatory--no-standing--*"
+    ],
+    "feature_count": 26,
+    "object_value_counts": {
+      "regulatory--no-parking-or-no-stopping--g1": 7,
+      "regulatory--no-parking--g2": 10,
+      "information--parking--g1": 4,
+      "regulatory--no-parking-or-no-stopping--g3": 1,
+      "object--parking-meter": 2,
+      "object--traffic-sign--information-parking": 1,
+      "regulatory--parking-restrictions--g1": 1
+    },
+    "errors": [],
+    "note": "Parking-related traffic-sign map features. Use these to prioritize OCR/review of nearby street imagery detections; do not treat them as legal rules without municipal source checks."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10948,
+          42.418213
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "855363555893906",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2020-05-20T17:18:14+0000",
+        "LAST_SEEN_AT": "2020-05-20T17:18:14+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "1079894539086102",
+          "1065188217339162",
+          "178279367504792",
+          "479680326600540"
+        ],
+        "LINKED_IMAGE_COUNT": 4,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=855363555893906",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10923,
+          42.418148
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "855363559227239",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2020-05-20T17:18:16+0000",
+        "LAST_SEEN_AT": "2020-05-20T17:18:16+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "1623444304523440",
+          "328614251973895",
+          "178279367504792",
+          "479680326600540",
+          "954107592053181",
+          "499276491112984"
+        ],
+        "LINKED_IMAGE_COUNT": 6,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=855363559227239",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10833,
+          42.417904
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "855363569227238",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "LAST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "854983171761818",
+          "615561546511415",
+          "2832602070313210"
+        ],
+        "LINKED_IMAGE_COUNT": 3,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=855363569227238",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10796,
+          42.417774
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "855363579227237",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2020-05-20T17:18:28+0000",
+        "LAST_SEEN_AT": "2020-05-20T17:18:28+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "843019626292090",
+          "768895757151931",
+          "480053073246263"
+        ],
+        "LINKED_IMAGE_COUNT": 3,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=855363579227237",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10928,
+          42.418144
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "183790530158206",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2015-03-11T16:20:19+0000",
+        "LAST_SEEN_AT": "2015-03-11T16:20:19+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "328614251973895",
+          "954107592053181",
+          "1100513857105614"
+        ],
+        "LINKED_IMAGE_COUNT": 3,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=183790530158206",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10847,
+          42.41841
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "266899948471572",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:33:06+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:33:06+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "480254979859005",
+          "529280625148298"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=266899948471572",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10839,
+          42.418423
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "266959318465635",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "information--parking--g1",
+        "FIRST_SEEN_AT": "2017-10-02T19:33:05+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:33:05+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "466260777992931",
+          "462519334837581"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=266959318465635",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10847,
+          42.41841
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "269168511578049",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:33:06+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:33:06+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "529280625148298",
+          "286510859853303",
+          "214040707199742"
+        ],
+        "LINKED_IMAGE_COUNT": 3,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=269168511578049",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10878,
+          42.41851
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "269317404896493",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g3",
+        "FIRST_SEEN_AT": "2017-10-02T19:33:07+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:33:07+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "1023662471500958",
+          "312681627166490",
+          "484940689595603"
+        ],
+        "LINKED_IMAGE_COUNT": 3,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=269317404896493",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10888,
+          42.418495
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "274806471014253",
+        "OBJECT_TYPE": "mvd_fast",
+        "OBJECT_VALUE": "object--parking-meter",
+        "FIRST_SEEN_AT": "2017-10-02T19:33:08+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:33:08+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "267418065075273",
+          "1699175096957161",
+          "294134062269523",
+          "4065654803477361",
+          "3880698705313056",
+          "519229345756830"
+        ],
+        "LINKED_IMAGE_COUNT": 6,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=274806471014253",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10928,
+          42.41842
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "1964369373945913",
+        "OBJECT_TYPE": "panoptic",
+        "OBJECT_VALUE": "object--traffic-sign--information-parking",
+        "FIRST_SEEN_AT": "2018-03-10T21:14:00+0000",
+        "LAST_SEEN_AT": "2018-03-10T21:14:00+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "307290874237365",
+          "130958125740928",
+          "467329871147154",
+          "1388597448171452"
+        ],
+        "LINKED_IMAGE_COUNT": 4,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=1964369373945913",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09703,
+          42.42157
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "223414302491272",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:29:38+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:29:38+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "797237110899969",
+          "809578746323957",
+          "942012463304484",
+          "503306377695090",
+          "307181484415970",
+          "526027015075534",
+          "132204998901606",
+          "3806286339420085",
+          "465949751176557",
+          "518042705881243",
+          "308604510660320",
+          "5590605274345575"
+        ],
+        "LINKED_IMAGE_COUNT": 12,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=223414302491272",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.096855,
+          42.421623
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "223443392488363",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:29:35+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:29:35+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "1086688708520619",
+          "105732061601756",
+          "253925979503556"
+        ],
+        "LINKED_IMAGE_COUNT": 3,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=223443392488363",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09748,
+          42.421455
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "857461364977804",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:29:59+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:29:59+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "1119249101907078",
+          "1406795129696651",
+          "910554786179175",
+          "267459741736810"
+        ],
+        "LINKED_IMAGE_COUNT": 4,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=857461364977804",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09718,
+          42.42152
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "857665904957350",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:29:40+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:29:40+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "851518952373654",
+          "169408861756436",
+          "1011263349680592",
+          "1449879572012022",
+          "297605471951527",
+          "467896457626537",
+          "3936152419833397",
+          "1176157952830603",
+          "1079655289190631",
+          "1388300854863306",
+          "955770051631265",
+          "318104399690927",
+          "257887496078352",
+          "330116498488046",
+          "2654199094871755"
+        ],
+        "LINKED_IMAGE_COUNT": 15,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=857665904957350",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10803,
+          42.41817
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "4017771841602812",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2020-05-20T18:46:46+0000",
+        "LAST_SEEN_AT": "2020-05-20T18:46:46+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "307132767531261",
+          "159877812750481"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4017771841602812",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10785,
+          42.417618
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "4017820041597992",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--parking-restrictions--g1",
+        "FIRST_SEEN_AT": "2020-05-20T18:46:57+0000",
+        "LAST_SEEN_AT": "2020-05-20T18:46:57+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "484771832849418",
+          "139032784829047"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4017820041597992",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10729,
+          42.418613
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "4018758894837440",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "information--parking--g1",
+        "FIRST_SEEN_AT": "2020-05-20T18:45:15+0000",
+        "LAST_SEEN_AT": "2020-05-20T18:45:15+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "511752560012839",
+          "618371175746197"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4018758894837440",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.108116,
+          42.417572
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "4019481208098542",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "FIRST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "LAST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "854983171761818",
+          "180826830487352"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4019481208098542",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10679,
+          42.41862
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "508273793919207",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "information--parking--g1",
+        "FIRST_SEEN_AT": "2017-10-02T19:32:57+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:32:57+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "1078398366024437",
+          "2938925686380402"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=508273793919207",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10729,
+          42.418488
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "508296640583589",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:32:59+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:32:59+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "216610136620165",
+          "943054826516398"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=508296640583589",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10716,
+          42.418655
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "508363910576862",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "information--parking--g1",
+        "FIRST_SEEN_AT": "2017-10-02T19:32:57+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:32:57+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "493002938518046",
+          "897147737505116",
+          "230208002196071",
+          "911082753011164"
+        ],
+        "LINKED_IMAGE_COUNT": 4,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=508363910576862",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.107086,
+          42.418625
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "513766270036626",
+        "OBJECT_TYPE": "mvd_fast",
+        "OBJECT_VALUE": "object--parking-meter",
+        "FIRST_SEEN_AT": "2017-10-02T19:32:57+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:32:57+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "2922817501319440",
+          "493002938518046",
+          "897147737505116",
+          "4180534512010296",
+          "230208002196071",
+          "504133974284108",
+          "911082753011164",
+          "377074643619069"
+        ],
+        "LINKED_IMAGE_COUNT": 8,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=513766270036626",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "4244003715620083",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "2900833176837184",
+          "259906112526024",
+          "761628047846688",
+          "180745247252270",
+          "2957111781277587"
+        ],
+        "LINKED_IMAGE_COUNT": 5,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244003715620083",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "4244190028934785",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "2900833176837184",
+          "259906112526024",
+          "180745247252270",
+          "2957111781277587"
+        ],
+        "LINKED_IMAGE_COUNT": 4,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244190028934785",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.09915,
+          42.42072
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "MAPILLARY_FEATURE_ID": "316317790098316",
+        "OBJECT_TYPE": "trafficsign",
+        "OBJECT_VALUE": "regulatory--no-parking--g2",
+        "FIRST_SEEN_AT": "2017-10-02T19:31:15+0000",
+        "LAST_SEEN_AT": "2017-10-02T19:31:15+0000",
+        "QUERY_OBJECT_VALUE": "*parking*",
+        "LINKED_IMAGE_IDS": [
+          "225383136020173",
+          "1430297550651237"
+        ],
+        "LINKED_IMAGE_COUNT": 2,
+        "SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=316317790098316",
+        "PARKING_REFERENCE_CLASS": "mapillary_parking_sign_feature"
+      }
+    }
+  ]
+}

@@ -1,0 +1,297 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "row_count": 12,
+    "note": "Spark sign-like detections whose Mapillary image is linked to a parking-related Mapillary map feature. Prioritize these for OCR/review."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10729,
+          42.418488
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "216610136620165",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.28070685267448425,
+        "CROP_PATH": "crops/216610136620165_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "508296640583589",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:32:59+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:32:59+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=508296640583589",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10729,
+          42.418488
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "216610136620165",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.15175655484199524,
+        "CROP_PATH": "crops/216610136620165_0_1.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "508296640583589",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:32:59+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:32:59+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=508296640583589",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10833,
+          42.417904
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2832602070313210",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.30293112993240356,
+        "CROP_PATH": "crops/2832602070313210_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "855363569227238",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "REFERENCE_FIRST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "REFERENCE_LAST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=855363569227238",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10833,
+          42.417904
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2832602070313210",
+        "DETECTED_OBJECT": "bus stop sign",
+        "OBJECT_CONFIDENCE": 0.10833607614040375,
+        "CROP_PATH": "crops/2832602070313210_0_2.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "855363569227238",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking-or-no-stopping--g1",
+        "REFERENCE_FIRST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "REFERENCE_LAST_SEEN_AT": "2020-05-20T17:18:25+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=855363569227238",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "259906112526024",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.5237900018692017,
+        "CROP_PATH": "crops/259906112526024_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244003715620083",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244003715620083",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "259906112526024",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.5237900018692017,
+        "CROP_PATH": "crops/259906112526024_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244190028934785",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244190028934785",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "259906112526024",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.0989508405327797,
+        "CROP_PATH": "crops/259906112526024_0_1.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244003715620083",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244003715620083",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "259906112526024",
+        "DETECTED_OBJECT": "parking sign",
+        "OBJECT_CONFIDENCE": 0.0989508405327797,
+        "CROP_PATH": "crops/259906112526024_0_1.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244190028934785",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244190028934785",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2957111781277587",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.40259554982185364,
+        "CROP_PATH": "crops/2957111781277587_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244003715620083",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244003715620083",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2957111781277587",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.40259554982185364,
+        "CROP_PATH": "crops/2957111781277587_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244190028934785",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244190028934785",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2900833176837184",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.16378790140151978,
+        "CROP_PATH": "crops/2900833176837184_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244003715620083",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244003715620083",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.099915,
+          42.420387
+        ]
+      },
+      "properties": {
+        "PROVIDER": "mapillary",
+        "IMAGE_ID": "2900833176837184",
+        "DETECTED_OBJECT": "resident permit parking sign",
+        "OBJECT_CONFIDENCE": 0.16378790140151978,
+        "CROP_PATH": "crops/2900833176837184_0_0.jpg",
+        "REFERENCE_PROVIDER": "mapillary",
+        "REFERENCE_FEATURE_ID": "4244190028934785",
+        "REFERENCE_OBJECT_VALUE": "regulatory--no-parking--g2",
+        "REFERENCE_FIRST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_LAST_SEEN_AT": "2017-10-02T19:31:22+0000",
+        "REFERENCE_SOURCE_URL": "https://www.mapillary.com/app/?focus=map&pKey=4244190028934785",
+        "MATCH_METHOD": "mapillary_reference_linked_image_id"
+      }
+    }
+  ]
+}

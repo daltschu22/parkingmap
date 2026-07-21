@@ -41,4 +41,6 @@ The Cambridge meter layer is stronger than a pure street-name regulation table b
 - A single matched meter must not classify a whole street as metered.
 - Use `meter_match_confidence: nearest_street_approx` and the meter counts as segment evidence until curb-side geometry exists.
 
+The UI therefore renders Cambridge centerlines in a neutral style and enables the exact meter/accessible-space evidence overlays by default. Nearest-street summaries appear as evidence context only; they do not change a street's parking-access classification.
+
 The manifest also tracks the official traffic-regulation schedule index and Aggregated Street Occupancy Permits dataset as planned sources. Future Cambridge work should ingest the legal side/from/to schedules as baseline curb records and query only active temporary permits as dated overrides, then add resident-permit, street-cleaning, loading-zone, no-parking, and sign-regulation sources.

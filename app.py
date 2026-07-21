@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-20-site-review-v1"
+APP_VERSION = "2026-07-21-cambridge-map-v2"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -255,32 +255,49 @@ def _classify_cambridge_parking_access(
 
     if active_meter_count > 0:
         return (
-            "metered_segments_known",
+            "unknown",
             (
-                f"Cambridge GIS has {active_meter_count} active metered parking space(s) "
-                "matched to this street by nearest centerline. Treat this as segment evidence, not whole-street status."
+                "Curb-level parking rules are not mapped for this street. Cambridge GIS "
+                f"shows {active_meter_count} active meter space(s) nearby; use the exact "
+                "meter-space overlay and posted signs rather than treating the whole street as metered."
             ),
         )
     if total_meter_count > 0:
         return (
-            "inactive_metered_segments_known",
+            "unknown",
             (
-                f"Cambridge GIS has {total_meter_count} inactive, removed, or proposed meter space(s) "
-                "matched to this street and no active meters. Treat this as historical/segment evidence only."
+                "Curb-level parking rules are not mapped for this street. Cambridge GIS "
+                f"shows {total_meter_count} inactive, removed, or proposed meter space(s) "
+                "nearby and no active meters; this is historical point evidence only."
             ),
         )
     if accessible_count > 0:
         return (
-            "parking_special_spaces_known",
+            "unknown",
             (
-                f"Cambridge GIS lists {accessible_count} public accessible parking space(s) on this street. "
-                "Other posted rules still need curb-level matching."
+                "Curb-level parking rules are not mapped for this street. Cambridge GIS "
+                f"lists {accessible_count} public accessible parking space(s) nearby; use "
+                "the exact accessible-space overlay and posted signs."
             ),
         )
     return (
         "unknown",
-        "No Cambridge meter or accessible-space record matched this street yet; posted rules may still apply.",
+        "Curb-level parking rules are not mapped for this Cambridge street. No meter or "
+        "accessible-space record matched it; posted rules may still apply.",
     )
+
+
+def _cambridge_evidence_category(rule: dict) -> str:
+    active_meter_count = int(rule.get("active_meter_count_estimate") or 0)
+    total_meter_count = int(rule.get("meter_count_estimate") or 0)
+    accessible_count = int(rule.get("accessible_space_count") or 0)
+    if active_meter_count > 0:
+        return "active_meter_spaces_nearby"
+    if total_meter_count > 0:
+        return "inactive_meter_spaces_nearby"
+    if accessible_count > 0:
+        return "accessible_spaces_nearby"
+    return "none"
 
 
 def _format_count_values(values: list[dict], limit: int = 3) -> str:
@@ -592,10 +609,15 @@ def get_enriched_streets():
             match_level = "none"
         props["PARKING_ACCESS"] = category
         props["PARKING_NOTE"] = note
-        props["PARKING_RULE_SOURCE"] = "Cambridge GIS parking layers"
-        props["PARKING_SOURCE_URL"] = CAMBRIDGE_PARKING_SOURCE_URL
-        props["PARKING_RULE_MATCH_LEVEL"] = match_level
-        props["PARKING_CONFIDENCE"] = (
+        props["PARKING_RULE_SOURCE"] = ""
+        props["PARKING_SOURCE_URL"] = ""
+        props["PARKING_RULE_MATCH_LEVEL"] = ""
+        props["PARKING_CONFIDENCE"] = "none"
+        props["PARKING_EVIDENCE"] = _cambridge_evidence_category(rule)
+        props["PARKING_EVIDENCE_SOURCE"] = "Cambridge GIS parking evidence layers"
+        props["PARKING_EVIDENCE_SOURCE_URL"] = CAMBRIDGE_PARKING_SOURCE_URL
+        props["PARKING_EVIDENCE_MATCH_LEVEL"] = match_level
+        props["PARKING_EVIDENCE_CONFIDENCE"] = (
             "low" if meter_count or accessible_count else "none"
         )
         props["PARKING_DATA_UPDATED_AT"] = _generated_at(CAMBRIDGE_RULES_PATH)
@@ -747,6 +769,19 @@ async def get_stats():
         access = props.get("PARKING_ACCESS", "unknown")
         parking_access_counts[access] = parking_access_counts.get(access, 0) + 1
 
+    cambridge_meters = load_cambridge_meter_spaces().get("features", [])
+    cambridge_accessible = load_cambridge_accessible_spaces().get("features", [])
+    parking_evidence_counts = {
+        "cambridge_meter_spaces": len(cambridge_meters),
+        "cambridge_active_meter_spaces": sum(
+            1
+            for feature in cambridge_meters
+            if str(feature.get("properties", {}).get("STATUS") or "").strip().casefold()
+            == "in service"
+        ),
+        "cambridge_accessible_spaces": len(cambridge_accessible),
+    }
+
     _stats_cache = {
         "total_segments": len(features),
         "unique_streets": len(street_names),
@@ -754,6 +789,7 @@ async def get_stats():
         "ownership": ownership_counts,
         "functional_class": func_class_counts,
         "parking_access": parking_access_counts,
+        "parking_evidence": parking_evidence_counts,
     }
     return _json_response(_stats_cache)
 

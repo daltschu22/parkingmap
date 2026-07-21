@@ -143,7 +143,7 @@ html, body {
 }
 
 .evidence-controls {
-    display: none;
+    display: block;
     margin: 0 1.5rem 1rem;
     padding: 0.75rem;
     border: 1px solid var(--border);
@@ -385,7 +385,4 @@ html, body {
         display: none;
     }
 
-    .evidence-controls {
-        display: block;
-    }
 }

@@ -15,7 +15,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Medford street geometry is loaded from MassGIS/MassDOT Roads.
 - Medford resident-permit rules are derived from the official resident permit street PDF.
 - Cambridge street geometry, metered parking spaces, and public accessible parking spaces are loaded from Cambridge GIS.
-- Cambridge metered-space polygons are shown as their own evidence layer and nearest-matched to street centerlines for summaries, not whole-street status.
+- Cambridge streets render as a neutral network because curb-level rules are not yet mapped. Official meter polygons and accessible-space points are enabled as separate evidence layers by default and nearest-matched only for sidebar context, never whole-street status.
 - Matching is street-name based, not exact block-segment based.
 - Boston and other surrounding communities are target future coverage areas.
 

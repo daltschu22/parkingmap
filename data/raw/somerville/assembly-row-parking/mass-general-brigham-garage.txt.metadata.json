@@ -1,0 +1,18 @@
+{
+  "id": "assembly_row_parking_mass_general_brigham_garage",
+  "title": "Mass General Brigham Garage",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/somerville/assembly-row-parking/mass-general-brigham-garage.txt",
+  "url": "https://www.assemblyparking.com/where-to-park/partners-garage/",
+  "final_url": "https://www.assemblyparking.com/where-to-park/partners-garage/",
+  "fetched_at_utc": "2026-07-21T22:07:11.481458+00:00",
+  "content_type": "text/html; charset=UTF-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 1104,
+  "sha256": "7033a50825f53208537076e75d94aeb1762995decc9f7de2189c6f846817a1d4",
+  "source_bytes": 151514,
+  "source_sha256": "9a383f1bd1afc073efe4557ceb1a9955129d393ae51f22460ef52d0909cde083",
+  "preservation": "visible-text-snapshot"
+}

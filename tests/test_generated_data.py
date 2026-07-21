@@ -81,16 +81,27 @@ def test_public_parking_facilities_have_valid_shared_grain_and_sources():
     features = facilities["features"]
     ids = [feature["properties"]["FACILITY_ID"] for feature in features]
 
-    assert len(features) == 24
+    assert len(features) == 31
     assert len(ids) == len(set(ids))
     assert Counter(
         feature["properties"]["MUNICIPALITY"] for feature in features
-    ) == {"Cambridge": 11, "Somerville": 13}
+    ) == {"Cambridge": 11, "Somerville": 20}
     assert Counter(
         feature["properties"]["FACILITY_TYPE"]
         for feature in features
         if feature["properties"]["MUNICIPALITY"] == "Cambridge"
     ) == {"Municipal Parking Lot": 9, "Municipal Parking Garage": 2}
+    assert Counter(
+        feature["properties"]["FACILITY_TYPE"]
+        for feature in features
+        if feature["properties"]["MUNICIPALITY"] == "Somerville"
+    ) == {
+        "Municipal Parking Lot": 13,
+        "Public Parking Garage": 6,
+        "Public Visitor Parking Lot": 1,
+    }
+    assert all(feature["properties"]["OWNERSHIP_TYPE"] for feature in features)
+    assert all(feature["properties"]["OPERATOR"] for feature in features)
     assert all(
         feature["properties"]["SOURCE_URL"].startswith("https://")
         for feature in features
@@ -108,6 +119,25 @@ def test_public_parking_facilities_have_valid_shared_grain_and_sources():
     )
     assert lot_5["properties"]["ADDRESS"] == "84 Bishop Allen Drive"
     assert lot_5["properties"]["GIS_ADDRESS"] == "84 Norfolk Street"
+    assembly = {
+        feature["properties"]["NAME"]: feature
+        for feature in features
+        if feature["properties"]["FACILITY_ID"].startswith(
+            "somerville:assembly-row:"
+        )
+    }
+    assert len(assembly) == 7
+    assert assembly["Foley Street Garage"]["properties"]["ADDRESS"] == (
+        "350 Foley Street, Somerville, MA 02145"
+    )
+    assert assembly["Assembly Marketplace"]["properties"]["FACILITY_TYPE"] == (
+        "Public Visitor Parking Lot"
+    )
+    assert all(
+        feature["properties"]["OWNERSHIP_TYPE"]
+        == "Private facility with public visitor access"
+        for feature in assembly.values()
+    )
 
     raw_sources = {
         "cambridge_details": (
@@ -122,6 +152,14 @@ def test_public_parking_facilities_have_valid_shared_grain_and_sources():
             "data/raw/somerville/municipal-parking-lots.kml",
             "data/raw/somerville/municipal-parking-lots.kml.metadata.json",
         ),
+        "assembly_parking_page": (
+            "data/raw/somerville/assembly-row-parking/index.txt",
+            "data/raw/somerville/assembly-row-parking/index.txt.metadata.json",
+        ),
+        "assembly_parking_markers": (
+            "data/raw/somerville/assembly-row-parking/markers.json",
+            "data/raw/somerville/assembly-row-parking/markers.json.metadata.json",
+        ),
     }
     for source_key, (raw_path, metadata_path) in raw_sources.items():
         raw_content = (BASE_DIR / raw_path).read_bytes()
@@ -132,6 +170,22 @@ def test_public_parking_facilities_have_valid_shared_grain_and_sources():
 
     authority_page = (BASE_DIR / raw_sources["somerville_authority_page"][0]).read_text()
     assert "1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y" in authority_page
+    for key in (
+        "assembly-marketplace",
+        "canal-street-garage",
+        "mass-general-brigham-garage",
+        "foley-street-garage",
+        "artisan-west-garage",
+        "artisan-east-garage",
+        "great-river-garage",
+    ):
+        raw_path = BASE_DIR / f"data/raw/somerville/assembly-row-parking/{key}.txt"
+        metadata = load_json(f"{raw_path.relative_to(BASE_DIR)}.metadata.json")
+        digest = hashlib.sha256(raw_path.read_bytes()).hexdigest()
+        assert facilities["properties"]["sources"]["assembly_parking_details"][key][
+            "sha256"
+        ] == digest
+        assert metadata["sha256"] == digest
 
 
 def test_medford_rules_match_the_fetched_official_source_and_keep_row_volume():

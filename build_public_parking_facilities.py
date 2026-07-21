@@ -1,9 +1,10 @@
 """Build a shared, source-backed public parking facility layer.
 
 Cambridge publishes municipal lot/garage points as GeoJSON. Somerville embeds a
-detailed Google My Maps KML on its official Parking Department page. The source
-formats stay city-specific here, while the emitted feature properties use one
-shared schema for the map.
+detailed Google My Maps KML on its official Parking Department page. Assembly
+Row separately publishes operator-maintained visitor garage/lot pages and map
+points. The source formats stay provider-specific here, while the emitted
+feature properties use one shared schema for the map.
 """
 
 from __future__ import annotations
@@ -16,7 +17,9 @@ import xml.etree.ElementTree as ET
 from collections import Counter
 from datetime import datetime, timezone
 from html import unescape
+from html.parser import HTMLParser
 from pathlib import Path
+from urllib.parse import urlsplit
 from urllib.request import Request, urlopen
 
 
@@ -31,6 +34,11 @@ SOMERVILLE_PAGE_RAW_PATH = (
 CAMBRIDGE_DETAILS_RAW_PATH = (
     BASE_DIR / "data" / "raw" / "cambridge" / "public-parking.html"
 )
+ASSEMBLY_RAW_DIR = (
+    BASE_DIR / "data" / "raw" / "somerville" / "assembly-row-parking"
+)
+ASSEMBLY_PAGE_RAW_PATH = ASSEMBLY_RAW_DIR / "index.txt"
+ASSEMBLY_MARKERS_RAW_PATH = ASSEMBLY_RAW_DIR / "markers.json"
 
 CAMBRIDGE_LOTS_URL = (
     "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/"
@@ -50,6 +58,110 @@ SOMERVILLE_LOTS_KML_URL = (
     "mid=1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y&forcekml=1"
 )
 SOMERVILLE_LOTS_MAP_ID = "1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y"
+
+ASSEMBLY_PARKING_URL = "https://www.assemblyparking.com/"
+ASSEMBLY_MARKERS_URL = "https://www.assemblyparking.com/wp-json/wpgmza/v1/markers"
+ASSEMBLY_GARAGE_REGULATIONS = (
+    "0-3 hours free; 3-4 hours $3; 4-5 hours $5; 5-6 hours $15; "
+    "6+ hours $27. Each new business day begins at 5 a.m.; staying past "
+    "5 a.m. incurs another day's fees and the free 3 hours no longer applies."
+)
+ASSEMBLY_MARKETPLACE_REGULATIONS = (
+    "Assembly Marketplace customers receive up to 3 hours of complimentary "
+    "outdoor parking. Vehicles parked longer than 3 hours are subject to towing."
+)
+
+# The operator's public map API supplies exact points. Its address field is
+# incomplete for two facilities and has a typo for Artisan West, so current
+# driver-facing addresses are validated against the corresponding detail pages.
+ASSEMBLY_FACILITIES = {
+    "assembly-marketplace": {
+        "marker_id": "225",
+        "map_id": "101",
+        "marker_title": "Marketplace Garage",
+        "name": "Assembly Marketplace",
+        "facility_type": "Public Visitor Parking Lot",
+        "address": "Assembly Marketplace, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/assembly-marketplace/",
+        "regulations": ASSEMBLY_MARKETPLACE_REGULATIONS,
+        "evidence": (
+            "Assembly Marketplace customers are offered convenient outdoor parking",
+            "Complimentary parking is available for 3-hours",
+            "subject to being towed",
+        ),
+    },
+    "canal-street-garage": {
+        "marker_id": "228",
+        "map_id": "102",
+        "marker_title": "Canal Street Garage",
+        "name": "Canal Street Garage",
+        "facility_type": "Public Parking Garage",
+        "address": "449 Canal Street, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/canal-street-garage/",
+        "regulations": ASSEMBLY_GARAGE_REGULATIONS,
+        "evidence": ("449 Canal Street", "0 - 3 Hours", "6+ Hours", "$27.00"),
+    },
+    "mass-general-brigham-garage": {
+        "marker_id": "222",
+        "map_id": "99",
+        "marker_title": "MGB Garage",
+        "name": "Mass General Brigham Garage",
+        "facility_type": "Public Parking Garage",
+        "address": "255 Grand Union Boulevard, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/partners-garage/",
+        "regulations": ASSEMBLY_GARAGE_REGULATIONS,
+        "evidence": (
+            "Mass General Brigham Garage Parking",
+            "255 Grand Union Blvd",
+            "0 - 3 Hours",
+            "$27.00",
+        ),
+    },
+    "foley-street-garage": {
+        "marker_id": "280",
+        "map_id": "146",
+        "marker_title": "Foley Street Garage",
+        "name": "Foley Street Garage",
+        "facility_type": "Public Parking Garage",
+        "address": "350 Foley Street, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/foley-street-garage/",
+        "regulations": ASSEMBLY_GARAGE_REGULATIONS,
+        "evidence": ("350 Foley St", "0 - 3 Hours", "6+ Hours", "$27.00"),
+    },
+    "artisan-west-garage": {
+        "marker_id": "129",
+        "map_id": "43",
+        "marker_title": "Artisan West Garage",
+        "name": "Artisan West Garage",
+        "facility_type": "Public Parking Garage",
+        "address": "355 Artisan Way, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/artisian-west-garage/",
+        "regulations": ASSEMBLY_GARAGE_REGULATIONS,
+        "evidence": ("355 Artisan Way", "0 - 3 Hours", "6+ Hours", "$27.00"),
+    },
+    "artisan-east-garage": {
+        "marker_id": "123",
+        "map_id": "41",
+        "marker_title": "Artisan East Garage",
+        "name": "Artisan East Garage",
+        "facility_type": "Public Parking Garage",
+        "address": "451 Artisan Way, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/artisian-east-garage/",
+        "regulations": ASSEMBLY_GARAGE_REGULATIONS,
+        "evidence": ("451 Artisan Way", "0 - 3 Hours", "6+ Hours", "$27.00"),
+    },
+    "great-river-garage": {
+        "marker_id": "126",
+        "map_id": "42",
+        "marker_title": "Great River Garage",
+        "name": "Great River Garage",
+        "facility_type": "Public Parking Garage",
+        "address": "333 Great River Road, Somerville, MA 02145",
+        "details_url": f"{ASSEMBLY_PARKING_URL}where-to-park/great-river-garage/",
+        "regulations": ASSEMBLY_GARAGE_REGULATIONS,
+        "evidence": ("333 Great River Rd", "0 - 3 Hours", "6+ Hours", "$27.00"),
+    },
+}
 
 KML_NAMESPACE = {"kml": "http://www.opengis.net/kml/2.2"}
 
@@ -227,6 +339,8 @@ def parse_cambridge_facilities(payload: dict) -> list[dict]:
                     "FACILITY_TYPE": facility_type,
                     "ADDRESS": CAMBRIDGE_CURRENT_ADDRESSES.get(name, gis_address),
                     "GIS_ADDRESS": gis_address,
+                    "OWNERSHIP_TYPE": "Municipal",
+                    "OPERATOR": "City of Cambridge",
                     "PUBLIC_ACCESS": "City-managed paid public parking",
                     "PARKING_REGULATIONS": CAMBRIDGE_PARKING_REGULATIONS.get(
                         name,
@@ -273,9 +387,47 @@ def parse_cambridge_facilities(payload: dict) -> list[dict]:
 
 
 def visible_html_text(content: bytes) -> str:
-    decoded = content.decode("utf-8", errors="replace")
-    without_tags = re.sub(r"<[^>]+>", " ", decoded)
-    return clean_text(unescape(without_tags))
+    class VisibleTextParser(HTMLParser):
+        def __init__(self) -> None:
+            super().__init__(convert_charrefs=True)
+            self.hidden_depth = 0
+            self.parts: list[str] = []
+
+        def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+            if tag.casefold() in {"script", "style", "template", "noscript"}:
+                self.hidden_depth += 1
+
+        def handle_endtag(self, tag: str) -> None:
+            if (
+                tag.casefold() in {"script", "style", "template", "noscript"}
+                and self.hidden_depth
+            ):
+                self.hidden_depth -= 1
+
+        def handle_data(self, data: str) -> None:
+            if not self.hidden_depth:
+                self.parts.append(data)
+
+    parser = VisibleTextParser()
+    parser.feed(content.decode("utf-8", errors="replace"))
+    return clean_text(unescape(" ".join(parser.parts)))
+
+
+def visible_text_snapshot(content: bytes) -> bytes:
+    """Preserve source evidence without third-party scripts or configuration."""
+    return (visible_html_text(content) + "\n").encode()
+
+
+def preserved_metadata(metadata: dict, content: bytes, preservation: str) -> dict:
+    """Describe both the fetched response and the safe persisted representation."""
+    return {
+        **metadata,
+        "source_bytes": metadata["bytes"],
+        "source_sha256": metadata["sha256"],
+        "bytes": len(content),
+        "sha256": hashlib.sha256(content).hexdigest(),
+        "preservation": preservation,
+    }
 
 
 def validate_cambridge_details_page(content: bytes) -> None:
@@ -344,6 +496,8 @@ def parse_somerville_facilities(content: bytes) -> list[dict]:
                     "NAME": name,
                     "FACILITY_TYPE": "Municipal Parking Lot",
                     "ADDRESS": clean_text(values.get("description")),
+                    "OWNERSHIP_TYPE": "Municipal",
+                    "OPERATOR": "City of Somerville",
                     "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
                     "PARKING_REGULATIONS": clean_text(
                         values.get("Parking Regulations")
@@ -390,6 +544,115 @@ def validate_somerville_authority_page(content: bytes) -> None:
         )
 
 
+def validate_assembly_authority_page(content: bytes) -> None:
+    """Confirm the operator still links every facility being published."""
+    prefix = content[:4096].lstrip().lower()
+    if b"<html" not in prefix and b"<!doctype html" not in prefix:
+        raise SourceValidationError("Assembly Row parking source is not HTML")
+    decoded = content.decode("utf-8", errors="replace")
+    missing = [
+        urlsplit(config["details_url"]).path
+        for config in ASSEMBLY_FACILITIES.values()
+        if urlsplit(config["details_url"]).path not in decoded
+    ]
+    if missing:
+        raise SourceValidationError(
+            "Assembly Row parking index changed; missing facility links: "
+            + ", ".join(missing)
+        )
+
+
+def validate_assembly_detail_page(content: bytes, config: dict) -> None:
+    prefix = content[:4096].lstrip().lower()
+    if b"<html" not in prefix and b"<!doctype html" not in prefix:
+        raise SourceValidationError(
+            f"Assembly Row detail source is not HTML: {config['name']}"
+        )
+    page_text = visible_html_text(content).casefold()
+    missing = [
+        evidence
+        for evidence in config["evidence"]
+        if clean_text(evidence).casefold() not in page_text
+    ]
+    if missing:
+        raise SourceValidationError(
+            f"Assembly Row parking details changed for {config['name']}; "
+            "missing expected text: " + ", ".join(missing)
+        )
+
+
+def parse_assembly_facilities(payload: object) -> list[dict]:
+    if not isinstance(payload, list):
+        raise SourceValidationError("Assembly Row parking marker source is not a list")
+
+    markers = {
+        (clean_text(marker.get("map_id")), clean_text(marker.get("id"))): marker
+        for marker in payload
+        if isinstance(marker, dict)
+    }
+    features = []
+    for key, config in ASSEMBLY_FACILITIES.items():
+        marker = markers.get((config["map_id"], config["marker_id"]))
+        if not marker:
+            raise SourceValidationError(
+                f"Assembly Row map marker is missing for {config['name']}"
+            )
+        if clean_text(marker.get("title")) != config["marker_title"]:
+            raise SourceValidationError(
+                f"Assembly Row marker title changed for {config['name']}"
+            )
+        try:
+            coordinates = [float(marker["lng"]), float(marker["lat"])]
+        except (KeyError, TypeError, ValueError) as exc:
+            raise SourceValidationError(
+                f"Assembly Row marker coordinate is invalid for {config['name']}"
+            ) from exc
+
+        features.append(
+            {
+                "type": "Feature",
+                "geometry": {"type": "Point", "coordinates": coordinates},
+                "properties": {
+                    "FACILITY_ID": f"somerville:assembly-row:{key}",
+                    "MUNICIPALITY": "Somerville",
+                    "NAME": config["name"],
+                    "FACILITY_TYPE": config["facility_type"],
+                    "ADDRESS": config["address"],
+                    "OWNERSHIP_TYPE": "Private facility with public visitor access",
+                    "OPERATOR": "Assembly Row Parking (SP Plus)",
+                    "PUBLIC_ACCESS": (
+                        "Assembly Marketplace customer parking"
+                        if key == "assembly-marketplace"
+                        else "Public visitor parking for Assembly Row"
+                    ),
+                    "PARKING_REGULATIONS": config["regulations"],
+                    "TOTAL_SPACES": None,
+                    "ACCESSIBLE_PARKING": "See posted facility information",
+                    "EV_CHARGING": "Not verified in the operator source",
+                    "SPECIAL_RESTRICTIONS": "",
+                    "SNOW_EMERGENCY_PARKING": "Not listed",
+                    "SOURCE_TITLE": "Assembly Row Parking",
+                    "SOURCE_URL": ASSEMBLY_PARKING_URL,
+                    "DETAILS_URL": config["details_url"],
+                    "SOURCE_FORMAT": "operator-html-and-map-json",
+                    "SOURCE_CONFIDENCE": "high",
+                },
+            }
+        )
+
+    type_counts = Counter(
+        feature["properties"]["FACILITY_TYPE"] for feature in features
+    )
+    if type_counts != {
+        "Public Parking Garage": 6,
+        "Public Visitor Parking Lot": 1,
+    }:
+        raise SourceValidationError(
+            f"Unexpected Assembly Row facility types: {dict(type_counts)}"
+        )
+    return features
+
+
 def validate_combined(features: list[dict]) -> None:
     ids = [feature["properties"]["FACILITY_ID"] for feature in features]
     if len(ids) != len(set(ids)):
@@ -419,15 +682,62 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
         SOMERVILLE_PARKING_PAGE_URL
     )
     somerville_content, somerville_metadata = fetch_bytes(SOMERVILLE_LOTS_KML_URL)
+    assembly_page_content, assembly_page_metadata = fetch_bytes(ASSEMBLY_PARKING_URL)
+    assembly_markers_content, assembly_markers_metadata = fetch_bytes(
+        ASSEMBLY_MARKERS_URL
+    )
+    assembly_details = {}
+    for key, config in ASSEMBLY_FACILITIES.items():
+        content, metadata = fetch_bytes(config["details_url"])
+        validate_assembly_detail_page(content, config)
+        assembly_details[key] = (content, metadata)
     try:
         cambridge_payload = json.loads(cambridge_content)
     except (UnicodeDecodeError, json.JSONDecodeError) as exc:
         raise SourceValidationError("Cambridge municipal lot GeoJSON is invalid") from exc
+    try:
+        assembly_markers_payload = json.loads(assembly_markers_content)
+    except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+        raise SourceValidationError("Assembly Row parking markers JSON is invalid") from exc
 
     validate_cambridge_details_page(cambridge_details_content)
     validate_somerville_authority_page(somerville_page_content)
+    validate_assembly_authority_page(assembly_page_content)
     cambridge_features = parse_cambridge_facilities(cambridge_payload)
-    somerville_features = parse_somerville_facilities(somerville_content)
+    somerville_municipal_features = parse_somerville_facilities(somerville_content)
+    assembly_features = parse_assembly_facilities(assembly_markers_payload)
+    marker_lookup = {
+        (clean_text(marker.get("map_id")), clean_text(marker.get("id"))): marker
+        for marker in assembly_markers_payload
+        if isinstance(marker, dict)
+    }
+    selected_assembly_markers = [
+        marker_lookup[(config["map_id"], config["marker_id"])]
+        for config in ASSEMBLY_FACILITIES.values()
+    ]
+    assembly_page_snapshot = visible_text_snapshot(assembly_page_content)
+    assembly_markers_snapshot = (
+        json.dumps(selected_assembly_markers, indent=2) + "\n"
+    ).encode()
+    assembly_detail_snapshots = {
+        key: visible_text_snapshot(content)
+        for key, (content, _) in assembly_details.items()
+    }
+    assembly_page_preserved_metadata = preserved_metadata(
+        assembly_page_metadata, assembly_page_snapshot, "visible-text-snapshot"
+    )
+    assembly_markers_preserved_metadata = preserved_metadata(
+        assembly_markers_metadata,
+        assembly_markers_snapshot,
+        "selected-seven-marker-records",
+    )
+    assembly_details_preserved_metadata = {
+        key: preserved_metadata(
+            metadata, assembly_detail_snapshots[key], "visible-text-snapshot"
+        )
+        for key, (_, metadata) in assembly_details.items()
+    }
+    somerville_features = somerville_municipal_features + assembly_features
     features = cambridge_features + somerville_features
     validate_combined(features)
 
@@ -453,6 +763,9 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
                     **somerville_metadata,
                     "authority_url": SOMERVILLE_PARKING_PAGE_URL,
                 },
+                "assembly_parking_page": assembly_page_preserved_metadata,
+                "assembly_parking_markers": assembly_markers_preserved_metadata,
+                "assembly_parking_details": assembly_details_preserved_metadata,
             },
             "note": (
                 "Facilities are public parking locations, not a promise that a space is "
@@ -487,6 +800,22 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
         "destination": str(CAMBRIDGE_DETAILS_RAW_PATH.relative_to(BASE_DIR)),
         **cambridge_details_metadata,
     }
+    assembly_page_raw_metadata = {
+        "id": "assembly_row_public_parking",
+        "title": "Assembly Row Parking",
+        "municipality": "somerville",
+        "category": "public_parking_facilities",
+        "destination": str(ASSEMBLY_PAGE_RAW_PATH.relative_to(BASE_DIR)),
+        **assembly_page_preserved_metadata,
+    }
+    assembly_markers_raw_metadata = {
+        "id": "assembly_row_parking_markers",
+        "title": "Assembly Row Parking Map Markers",
+        "municipality": "somerville",
+        "category": "public_parking_facilities",
+        "destination": str(ASSEMBLY_MARKERS_RAW_PATH.relative_to(BASE_DIR)),
+        **assembly_markers_preserved_metadata,
+    }
     artifacts = [
         (
             CAMBRIDGE_DETAILS_RAW_PATH,
@@ -499,7 +828,30 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
             somerville_page_content,
             somerville_page_raw_metadata,
         ),
+        (
+            ASSEMBLY_PAGE_RAW_PATH,
+            assembly_page_snapshot,
+            assembly_page_raw_metadata,
+        ),
+        (
+            ASSEMBLY_MARKERS_RAW_PATH,
+            assembly_markers_snapshot,
+            assembly_markers_raw_metadata,
+        ),
     ]
+    for key, config in ASSEMBLY_FACILITIES.items():
+        detail_path = ASSEMBLY_RAW_DIR / f"{key}.txt"
+        detail_metadata = {
+            "id": f"assembly_row_parking_{key.replace('-', '_')}",
+            "title": config["name"],
+            "municipality": "somerville",
+            "category": "public_parking_facilities",
+            "destination": str(detail_path.relative_to(BASE_DIR)),
+            **assembly_details_preserved_metadata[key],
+        }
+        artifacts.append(
+            (detail_path, assembly_detail_snapshots[key], detail_metadata)
+        )
     return output, artifacts
 
 

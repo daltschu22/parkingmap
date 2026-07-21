@@ -609,11 +609,14 @@ function createAccessibleEvidencePopup(properties) {
 function createPublicFacilityPopup(properties) {
     const source = safeExternalUrl(properties.DETAILS_URL || properties.SOURCE_URL);
     const sourceLink = source
-        ? `<br><a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">Official parking information</a>`
+        ? `<br><a href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">Parking information</a>`
         : '';
     const rows = [
         properties.FACILITY_TYPE,
         properties.ADDRESS,
+        properties.OWNERSHIP_TYPE ? `Ownership: ${properties.OWNERSHIP_TYPE}` : '',
+        properties.OPERATOR ? `Operator: ${properties.OPERATOR}` : '',
+        properties.PUBLIC_ACCESS,
         properties.PARKING_REGULATIONS,
         properties.TOTAL_SPACES !== null && properties.TOTAL_SPACES !== undefined
             ? `${properties.TOTAL_SPACES} total spaces`

@@ -1,0 +1,18 @@
+{
+  "id": "assembly_row_parking_assembly_marketplace",
+  "title": "Assembly Marketplace",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/somerville/assembly-row-parking/assembly-marketplace.txt",
+  "url": "https://www.assemblyparking.com/where-to-park/assembly-marketplace/",
+  "final_url": "https://www.assemblyparking.com/where-to-park/assembly-marketplace/",
+  "fetched_at_utc": "2026-07-21T22:07:10.673888+00:00",
+  "content_type": "text/html; charset=UTF-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 1186,
+  "sha256": "f70e25eb052cf269b46503b41bd1110def66ba0ea92ce0f03c9739016a03d36b",
+  "source_bytes": 150791,
+  "source_sha256": "a86426898b71cb0d65e336b1ed4dc64fd2f04d1684d0cc4524d58d7ca57e995e",
+  "preservation": "visible-text-snapshot"
+}

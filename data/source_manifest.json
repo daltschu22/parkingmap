@@ -65,6 +65,33 @@
       "notes": "Detailed lot map embedded by the current official Parking Department page. Preserve the KML and normalize its hours, capacity, accessible, EV, and special-restriction fields."
     },
     {
+      "id": "assembly_row_public_parking",
+      "municipality": "somerville",
+      "title": "Assembly Row Public Visitor Parking",
+      "url": "https://www.assemblyparking.com/",
+      "destination": "data/raw/somerville/assembly-row-parking/index.txt",
+      "type": "text_snapshot",
+      "category": "public_parking_facilities",
+      "enabled": false,
+      "managed_by": "build_public_parking_facilities.py",
+      "refresh_command": "python3 build_public_parking_facilities.py",
+      "notes": "Primary operator source for six public visitor garages and the Assembly Marketplace customer lot. These facilities are privately owned or managed, not Somerville municipal parking. Live detail pages are validated for current facility names, addresses, rates, and restrictions; clean visible-text snapshots and original response hashes are preserved without third-party scripts."
+    },
+    {
+      "id": "assembly_row_parking_markers",
+      "municipality": "somerville",
+      "title": "Assembly Row Parking Map Markers",
+      "url": "https://www.assemblyparking.com/wp-json/wpgmza/v1/markers",
+      "authority_url": "https://www.assemblyparking.com/",
+      "destination": "data/raw/somerville/assembly-row-parking/markers.json",
+      "type": "json",
+      "category": "public_parking_facilities",
+      "enabled": false,
+      "managed_by": "build_public_parking_facilities.py",
+      "refresh_command": "python3 build_public_parking_facilities.py",
+      "notes": "Operator map points for the seven facilities linked by the current Assembly Row parking index. The builder preserves only those seven selected marker records and validates them against the detail pages before publishing."
+    },
+    {
       "id": "cambridge_gis_street_centerlines",
       "municipality": "cambridge",
       "title": "Cambridge GIS Street Centerlines",
@@ -115,7 +142,7 @@
       "enabled": false,
       "managed_by": "build_public_parking_facilities.py",
       "refresh_command": "python3 build_public_parking_facilities.py",
-      "notes": "The shared facility builder combines these 9 municipal lots and 2 municipal garages with the Somerville public-lot source."
+      "notes": "The shared facility builder combines these 9 municipal lots and 2 municipal garages with Somerville municipal and operator-backed public-access facility sources."
     },
     {
       "id": "cambridge_public_parking_details",

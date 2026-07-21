@@ -1,0 +1,18 @@
+{
+  "id": "assembly_row_parking_markers",
+  "title": "Assembly Row Parking Map Markers",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/somerville/assembly-row-parking/markers.json",
+  "url": "https://www.assemblyparking.com/wp-json/wpgmza/v1/markers",
+  "final_url": "https://www.assemblyparking.com/wp-json/wpgmza/v1/markers",
+  "fetched_at_utc": "2026-07-21T22:07:10.295108+00:00",
+  "content_type": "application/json; charset=UTF-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 5328,
+  "sha256": "7edc4a69971c172adb7a4f9e6011b03bf7b3c2baa311f59b2517bfdc7047e7f2",
+  "source_bytes": 82719,
+  "source_sha256": "711c81273b63b50750f4c92a25e411b56740dcd6b79ee3fb9cf05f5055435cc8",
+  "preservation": "selected-seven-marker-records"
+}

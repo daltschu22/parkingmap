@@ -1,0 +1,18 @@
+{
+  "id": "assembly_row_public_parking",
+  "title": "Assembly Row Parking",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/somerville/assembly-row-parking/index.txt",
+  "url": "https://www.assemblyparking.com/",
+  "final_url": "https://www.assemblyparking.com/?doing_wp_cron=1784671629.4320030212402343750000",
+  "fetched_at_utc": "2026-07-21T22:07:09.819489+00:00",
+  "content_type": "text/html; charset=UTF-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 2542,
+  "sha256": "bb9cb48312706d5299b3aed567b7e7838822271dfe763986548920adfd5683d3",
+  "source_bytes": 153455,
+  "source_sha256": "28e82294f6f5673ac0bf249dd658b833ce93019a4ee959a124d8a1407320aefb",
+  "preservation": "visible-text-snapshot"
+}

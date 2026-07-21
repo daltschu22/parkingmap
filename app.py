@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-21-public-parking-v5"
+APP_VERSION = "2026-07-21-public-parking-v6"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -783,7 +783,7 @@ async def get_cambridge_accessible_spaces():
 
 @app.get("/api/parking-evidence/public-facilities")
 async def get_public_parking_facilities():
-    """Return official public lot and garage locations as GeoJSON."""
+    """Return source-backed public lot and garage locations as GeoJSON."""
     return _encoded_json_response(_encoded_public_parking_facilities())
 
 

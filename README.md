@@ -15,7 +15,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Medford street geometry is loaded from MassGIS/MassDOT Roads.
 - Medford resident-permit rules are derived from the official resident permit street PDF.
 - Cambridge street geometry, metered parking spaces, and public accessible parking spaces are loaded from Cambridge GIS.
-- Public parking facilities include 13 Somerville municipal lots from the current city-embedded lot map and 9 Cambridge municipal lots plus 2 municipal garages from Cambridge GIS.
+- Public parking facilities include 13 Somerville municipal lots, 6 operator-published Assembly Row visitor garages, the Assembly Marketplace customer lot, and 9 Cambridge municipal lots plus 2 municipal garages.
 - Cambridge streets render as a neutral network because curb-level rules are not yet mapped. Official active-meter polygons and accessible-space points are enabled as separate evidence layers by default and nearest-matched only for sidebar context, never whole-street status. Inactive, removed, and proposed meter records remain available to the data pipeline but are not drawn as default map dots.
 - Street lines are red only where permit/private/restricted evidence safely applies to that segment, and gray where the exact segment is unresolved. Partial metered or time-limited exceptions never recolor an entire street; exact active meter polygons remain blue.
 - Matching is street-name based, not exact block-segment based.
@@ -27,7 +27,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Search by street, municipality, or both (for example, `Otis St Cambridge`)
 - Search or click a street to get a plain-language parking answer before the technical source details
 - Responsive street and evidence styling that stays legible at overview and curb-level zooms
-- Clearly labeled `P` markers for official public lots and garages, with hours, capacity, accessible/EV information, and special restrictions where published
+- Clearly labeled `P` markers for municipal and operator-backed public-access lots and garages, with ownership, operator, hours, capacity, accessible/EV information, and special restrictions where published
 - Source, confidence, match level, and data-generation provenance in street details
 - Lazy-loaded, independently toggleable parking evidence layers
 - Dark theme with modern UI
@@ -71,7 +71,7 @@ To rebuild the current public lot and garage layer:
 python3 build_public_parking_facilities.py
 ```
 
-This preserves the Somerville KML linked from the official Parking Department page and combines it with Cambridge municipal facility points. Facilities show published rules, not live space availability.
+This preserves the Somerville KML linked from the official Parking Department page, selected Assembly Row map records and clean visible-text evidence snapshots, and the Cambridge municipal facility source. Private public-access facilities are labeled separately from municipal parking. Facilities show published rules, not live space availability.
 
 To start indexing Mapillary imagery metadata for offline research/review:
 
@@ -115,6 +115,8 @@ node --check static/js/main.js
   - Schedule E: Permit Parking streets
   - Schedule D: Parking prohibitions
   - Schedule F: Metered parking zones
+- **Somerville Municipal Parking Lots**: [Somerville Parking Department](https://www.somervillema.gov/departments/parking-department)
+- **Assembly Row Public Visitor Parking**: [Assembly Row Parking](https://www.assemblyparking.com/) (private operator source; not municipal parking)
 - **Cambridge GIS Street Centerlines**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Trans/Street_Centerlines)
 - **Cambridge GIS Metered Parking Spaces**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Traffic/Metered_Parking_Spaces)
 - **Cambridge GIS Public Handicap Parking Spaces**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Traffic/Public_Handicap_Parking_Spaces)
@@ -126,7 +128,7 @@ The UI does not promote street-name-only exceptions into exact curb claims. Red 
 - `build_parking_rules.py` parses Schedule D/F from the city PDF and writes `data/parking_rules_by_street.json`.
 - `scripts/fetch_public_sources.py` validates declared PDFs/JSON before replacement and records resolved URL, HTTP validators, byte count, and SHA-256 metadata.
 - `build_parking_coverage.py` combines loaded city sources into evidence-backed coverage summaries and Medford segment-level matches.
-- `build_public_parking_facilities.py` normalizes the city-specific Somerville and Cambridge facility sources into one point layer.
+- `build_public_parking_facilities.py` normalizes municipal Somerville/Cambridge sources and operator-published Assembly Row facilities into one point layer while retaining ownership and operator labels.
 - Public streets default to **Resident Permit Required** (Schedule E was removed citywide in 2010).
 - If a public street has Schedule F rows, it is labeled **Permit Street with Metered Segments**.
 - If a public street has Schedule D time-limited rows, it is labeled **Permit Street with Time-Limited Segments**.
@@ -148,7 +150,7 @@ parkingmap/
 ├── build_medford_rules_seed.py # Build first-pass Medford row-level permit rules
 ├── build_medford_streets.py # Download Medford street geometry from MassGIS/MassDOT
 ├── build_cambridge_data.py # Download Cambridge GIS streets and parking summaries
-├── build_public_parking_facilities.py # Build official Somerville/Cambridge facility points
+├── build_public_parking_facilities.py # Build source-backed Somerville/Cambridge facility points
 ├── scripts/
 │   └── fetch_public_sources.py # Download official source files from manifest
 │   └── build_imagery_index.py # Build Mapillary/KartaView imagery metadata index
@@ -188,7 +190,7 @@ parkingmap/
 - `GET /api/streets` - All streets as GeoJSON
 - `GET /api/parking-evidence/cambridge/meters` - Cambridge metered-space evidence GeoJSON
 - `GET /api/parking-evidence/cambridge/accessible` - Cambridge public accessible-space evidence GeoJSON
-- `GET /api/parking-evidence/public-facilities` - Official Somerville/Cambridge public lots and garages
+- `GET /api/parking-evidence/public-facilities` - Source-backed Somerville/Cambridge public-access lots and garages
 - `GET /api/parking-evidence/imagery` - Street-level imagery metadata GeoJSON
 - `GET /api/parking-evidence/imagery/detections` - Image-derived parking evidence GeoJSON
 - `GET /api/parking-evidence/imagery/reference-signs` - Experimental Mapillary parking-sign references (research API; not shown in the driver UI)

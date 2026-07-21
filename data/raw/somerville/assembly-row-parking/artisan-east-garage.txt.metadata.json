@@ -1,0 +1,18 @@
+{
+  "id": "assembly_row_parking_artisan_east_garage",
+  "title": "Artisan East Garage",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/somerville/assembly-row-parking/artisan-east-garage.txt",
+  "url": "https://www.assemblyparking.com/where-to-park/artisian-east-garage/",
+  "final_url": "https://www.assemblyparking.com/where-to-park/artisian-east-garage/",
+  "fetched_at_utc": "2026-07-21T22:07:12.659937+00:00",
+  "content_type": "text/html; charset=UTF-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 1079,
+  "sha256": "24089f3e537ec822e2756249c1581f9f59cad6d608b3b6fec8c9dcc1416b1163",
+  "source_bytes": 149822,
+  "source_sha256": "a84f10dbe077f0aed786479641f55dad9ffa6110995c502c7bfdcf11de50d98d",
+  "preservation": "visible-text-snapshot"
+}

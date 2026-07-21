@@ -1,0 +1,225 @@
+[
+  {
+    "map_id": "101",
+    "address": "42.39479525321199,-71.08189961873",
+    "description": "<p><a href=\"/assembly-marketplace/\">\u00a0More info</a></p>",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "https://assemblyparking.com/wp-content/uploads/Assembly-Marketplace-garage-p.png",
+      "retina": false
+    },
+    "lat": "42.39479525321199",
+    "lng": "-71.08189961873",
+    "anim": "0",
+    "title": "Marketplace Garage",
+    "infoopen": "0",
+    "category": "0",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "id": "225",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  },
+  {
+    "map_id": "102",
+    "address": "449 Canal Street. Somerville MA 02145",
+    "description": "<p><a href=\"/canal-street-garage/\">More info</a></p>",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "//www.assemblyparking.com/wp-content/uploads/P-Canal-Garage-2.png",
+      "retina": false
+    },
+    "lat": "42.39433942086972",
+    "lng": "-71.07815069444274",
+    "anim": "0",
+    "title": "Canal Street Garage",
+    "infoopen": "0",
+    "category": "0",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "0": "0",
+    "id": "228",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  },
+  {
+    "map_id": "99",
+    "address": "255 Grand Union Blvd, Somerville, MA 02145",
+    "description": "<p><a href=\"https://assemblyparking.com/partners-garage/\">More info</a></p>",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "//www.assemblyparking.com/wp-content/uploads/p-mgb-garage-1.png",
+      "retina": false
+    },
+    "lat": "42.392543483056805",
+    "lng": "-71.07734994841002",
+    "anim": "0",
+    "title": "MGB Garage",
+    "infoopen": "0",
+    "category": "0",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "0": "0",
+    "id": "222",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  },
+  {
+    "map_id": "146",
+    "address": "42.393180, -71.079547",
+    "description": "<p><a href=\"/foley-street-garage/\">More info</a></p>",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "//www.assemblyparking.com/wp-content/uploads/p-foley-street-2.png",
+      "retina": false
+    },
+    "lat": "42.39318",
+    "lng": "-71.079547",
+    "anim": "0",
+    "title": "Foley Street Garage",
+    "infoopen": "0",
+    "category": "",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "other_data": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "id": "280",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  },
+  {
+    "map_id": "43",
+    "address": "355 Artisan West, Somerville MA",
+    "description": "",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "//www.assemblyparking.com/wp-content/uploads/P-Artisan-West-Garage-3.png",
+      "retina": false
+    },
+    "lat": "42.39491838245179",
+    "lng": "-71.08024004299165",
+    "anim": "0",
+    "title": "Artisan West Garage",
+    "infoopen": "0",
+    "category": "0",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "0": "0",
+    "id": "129",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  },
+  {
+    "map_id": "41",
+    "address": "451 Artisan Way, Somerville, MA 02145",
+    "description": "<p><a href=\"/artisian-east-garage/\">More Info</a></p>",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "//www.assemblyparking.com/wp-content/uploads/P-Artisan-East-Garage-1.png",
+      "retina": false
+    },
+    "lat": "42.39519379325068",
+    "lng": "-71.07808843551254",
+    "anim": "0",
+    "title": "Artisan East Garage",
+    "infoopen": "0",
+    "category": "0",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "0": "0",
+    "id": "123",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  },
+  {
+    "map_id": "42",
+    "address": "333 Great River Rd, Somerville, MA 02145",
+    "description": "<p><a href=\"/great-river-garage/\">More info</a></p>",
+    "pic": "",
+    "link": "",
+    "icon": {
+      "url": "//www.assemblyparking.com/wp-content/uploads/P-great-river-1.png",
+      "retina": false
+    },
+    "lat": "42.3957517154602",
+    "lng": "-71.08031842691423",
+    "anim": "0",
+    "title": "Great River Garage",
+    "infoopen": "0",
+    "category": "0",
+    "approved": "1",
+    "retina": "0",
+    "type": "0",
+    "did": "",
+    "sticky": "0",
+    "layergroup": "0",
+    "0": "0",
+    "id": "126",
+    "categories": [],
+    "custom_field_data": [],
+    "rating": {
+      "average": null,
+      "count": "0"
+    },
+    "custom_fields_html": ""
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "id": "assembly_row_parking_great_river_garage",
+  "title": "Great River Garage",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/somerville/assembly-row-parking/great-river-garage.txt",
+  "url": "https://www.assemblyparking.com/where-to-park/great-river-garage/",
+  "final_url": "https://www.assemblyparking.com/where-to-park/great-river-garage/",
+  "fetched_at_utc": "2026-07-21T22:07:13.059483+00:00",
+  "content_type": "text/html; charset=UTF-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 1078,
+  "sha256": "3ac31ce445035f03661fceb069daac1d0124fa1c81fa905e7a4877017589bd15",
+  "source_bytes": 152583,
+  "source_sha256": "b7f45144ff02c93a5845883a507db33262ccd2cc1f72f92d9a4679ae848a0c4b",
+  "preservation": "visible-text-snapshot"
+}

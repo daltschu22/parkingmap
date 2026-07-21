@@ -365,6 +365,27 @@ function getAtGlanceAnswer(properties = {}) {
             summary: 'Use the exact accessible-space symbols. General parking on the rest of this curb is still unknown.'
         };
     }
+    if (municipality === 'somerville' && access === 'permit_with_metered_segments') {
+        return {
+            tone: 'unknown',
+            title: 'Permit baseline; meter exceptions exist',
+            summary: 'Somerville applies resident permits citywide on City streets unless otherwise posted. This source does not locate the exact metered curbs, so check signs.'
+        };
+    }
+    if (municipality === 'somerville' && access === 'permit_with_time_limited_segments') {
+        return {
+            tone: 'unknown',
+            title: 'Permit baseline; timed exceptions exist',
+            summary: 'Somerville applies resident permits citywide on City streets unless otherwise posted. This source does not locate the exact public time-limited curbs, so check signs.'
+        };
+    }
+    if (municipality === 'somerville' && access === 'resident_permit_required') {
+        return {
+            tone: 'unknown',
+            title: 'Resident permit is the citywide baseline',
+            summary: 'The rule applies on City-controlled public streets unless otherwise posted, but this centerline does not prove the exact curb condition. Check signs before parking.'
+        };
+    }
     if (access === 'permit_with_metered_segments') {
         return {
             tone: 'restricted',
@@ -995,7 +1016,7 @@ async function loadStats() {
                 <span class="stat-value">${stats.total_segments.toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label stat-label--restricted">Known permit / restricted</span>
+                <span class="stat-label stat-label--restricted">Localized permit / private restriction</span>
                 <span class="stat-value">${(display.restricted || 0).toLocaleString()}</span>
             </div>
             <div class="stat-item">

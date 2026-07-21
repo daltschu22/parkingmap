@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import pytest
 
-from app import _classify_cambridge_parking_access, _parking_display_status
+from app import (
+    _classify_cambridge_parking_access,
+    _classify_parking_access,
+    _parking_display_status,
+    _somerville_parking_display_status,
+)
 from build_cambridge_data import is_active_meter_status, summarize_distances
 from build_medford_streets import ownership_details
 from build_parking_coverage import row_matches_segment
@@ -70,6 +75,31 @@ def test_cambridge_meter_points_do_not_classify_a_whole_street():
 )
 def test_driver_facing_display_status_has_four_stable_states(access, expected):
     assert _parking_display_status(access) == expected
+
+
+@pytest.mark.parametrize(
+    ("access", "expected"),
+    [
+        ("resident_permit_required", "unknown"),
+        ("permit_with_metered_segments", "unknown"),
+        ("permit_with_time_limited_segments", "unknown"),
+        ("private_rules_apply", "restricted"),
+        ("unknown", "unknown"),
+    ],
+)
+def test_somerville_citywide_baseline_does_not_recolor_centerlines(
+    access, expected
+):
+    assert _somerville_parking_display_status(access) == expected
+
+
+def test_somerville_state_land_does_not_inherit_city_controlled_street_rule():
+    category, note = _classify_parking_access(
+        {"STNAME": "Example Road", "OWNERSHIP": "State land"}, {}
+    )
+
+    assert category == "unknown"
+    assert "could not be determined" in note.lower()
 
 
 def test_simple_endpoint_rule_can_match_a_whole_centerline_segment():

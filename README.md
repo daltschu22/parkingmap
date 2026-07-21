@@ -17,7 +17,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Cambridge street geometry, metered parking spaces, and public accessible parking spaces are loaded from Cambridge GIS.
 - Public parking facilities include 13 Somerville municipal lots, 6 operator-published Assembly Row visitor garages, the Assembly Marketplace customer lot, and 9 Cambridge municipal lots plus 2 municipal garages.
 - Cambridge streets render as a neutral network because curb-level rules are not yet mapped. Official active-meter polygons and accessible-space points are enabled as separate evidence layers by default and nearest-matched only for sidebar context, never whole-street status. Inactive, removed, and proposed meter records remain available to the data pipeline but are not drawn as default map dots.
-- Street lines are red only where permit/private/restricted evidence safely applies to that segment, and gray where the exact segment is unresolved. Partial metered or time-limited exceptions never recolor an entire street; exact active meter polygons remain blue.
+- Street lines are red only where localized permit/private/restricted evidence safely applies to that segment, and gray where the exact curb remains unresolved. Somerville's citywide resident-permit baseline appears in click/search answers instead of recoloring every public centerline; partial metered or time-limited exceptions never recolor an entire street. Exact active meter polygons remain blue.
 - Matching is street-name based, not exact block-segment based.
 - Boston and other surrounding communities are target future coverage areas.
 
@@ -123,13 +123,13 @@ node --check static/js/main.js
 
 ## Parking Classification Logic
 
-The UI does not promote street-name-only exceptions into exact curb claims. Red means a permit/private/restricted conclusion safely applies to that street segment; gray means the segment remains unresolved. Exact meter polygons are blue, and public lots/garages use a labeled `P` marker.
+The UI does not promote a citywide policy or street-name-only exception into an exact curb claim. Red means a localized permit/private/restricted conclusion safely applies to that street segment; gray means the exact curb remains unresolved. Exact meter polygons are blue, and public lots/garages use a labeled `P` marker.
 
 - `build_parking_rules.py` parses Schedule D/F from the city PDF and writes `data/parking_rules_by_street.json`.
 - `scripts/fetch_public_sources.py` validates declared PDFs/JSON before replacement and records resolved URL, HTTP validators, byte count, and SHA-256 metadata.
 - `build_parking_coverage.py` combines loaded city sources into evidence-backed coverage summaries and Medford segment-level matches.
 - `build_public_parking_facilities.py` normalizes municipal Somerville/Cambridge sources and operator-published Assembly Row facilities into one point layer while retaining ownership and operator labels.
-- Public streets default to **Resident Permit Required** (Schedule E was removed citywide in 2010).
+- Somerville public streets retain the **Resident Permit Required** citywide baseline from the regulations, but render neutrally until curb-level exceptions are mapped.
 - If a public street has Schedule F rows, it is labeled **Permit Street with Metered Segments**.
 - If a public street has Schedule D time-limited rows, it is labeled **Permit Street with Time-Limited Segments**.
 - Private streets are labeled **Private Street Rules Apply**.

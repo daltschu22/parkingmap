@@ -88,3 +88,13 @@ def test_search_can_disambiguate_a_street_with_municipality_terms():
     assert properties
     assert {row["MUNICIPALITY"] for row in properties} == {"Cambridge"}
     assert {row["STNAME"] for row in properties} == {"Otis St"}
+
+
+def test_exact_street_search_is_not_expanded_as_municipality_terms():
+    response = client.get("/api/streets/search", params={"q": "Cambridge St"})
+
+    assert response.status_code == 200
+    properties = [feature["properties"] for feature in response.json()["features"]]
+    assert properties
+    assert {row["MUNICIPALITY"] for row in properties} == {"Cambridge"}
+    assert {row["STNAME"] for row in properties} == {"Cambridge St"}

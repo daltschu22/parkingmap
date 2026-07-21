@@ -16,14 +16,16 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Medford resident-permit rules are derived from the official resident permit street PDF.
 - Cambridge street geometry, metered parking spaces, and public accessible parking spaces are loaded from Cambridge GIS.
 - Cambridge streets render as a neutral network because curb-level rules are not yet mapped. Official meter polygons and accessible-space points are enabled as separate evidence layers by default and nearest-matched only for sidebar context, never whole-street status.
+- Street colors use four driver-facing states across every municipality: blue metered sections, green open/time-limited sections, red permit/private/restricted streets, and gray unknown streets.
 - Matching is street-name based, not exact block-segment based.
 - Boston and other surrounding communities are target future coverage areas.
 
 ## Features
 
 - Interactive map with Somerville, Medford, and Cambridge streets
-- Search streets by name
-- Click streets to see details, including current parking-rule classification
+- Search by street, municipality, or both (for example, `Otis St Cambridge`)
+- Search or click a street to get a plain-language parking answer before the technical source details
+- Responsive street and evidence styling that stays legible at overview and curb-level zooms
 - Source, confidence, match level, and data-generation provenance in street details
 - Lazy-loaded, independently toggleable parking evidence layers
 - Dark theme with modern UI
@@ -107,6 +109,8 @@ node --check static/js/main.js
 - **Cambridge GIS Public Handicap Parking Spaces**: [Cambridge GIS GitHub](https://github.com/cambridgegis/cambridgegis_data/tree/main/Traffic/Public_Handicap_Parking_Spaces)
 
 ## Parking Classification Logic
+
+The UI intentionally collapses the more detailed source categories into four stable display states. Blue and green mean that matching sections exist; they do not claim that every curb on the street has that rule. Red combines permit, private, and restricted categories for a clear “do not assume open parking” signal. Gray means the current data cannot answer and posted signs must be checked.
 
 - `build_parking_rules.py` parses Schedule D/F from the city PDF and writes `data/parking_rules_by_street.json`.
 - `scripts/fetch_public_sources.py` validates declared PDFs/JSON before replacement and records resolved URL, HTTP validators, byte count, and SHA-256 metadata.

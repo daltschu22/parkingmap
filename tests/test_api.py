@@ -39,6 +39,12 @@ def test_stats_separate_cambridge_point_evidence_from_street_rules():
     }
     assert stats["parking_access"]["unknown"] >= 2643
     assert stats["parking_access"].get("metered_segments_known", 0) == 0
+    assert stats["parking_display"] == {
+        "metered": 592,
+        "open_time_limited": 373,
+        "restricted": 1758,
+        "unknown": 4364,
+    }
 
 
 def test_large_street_response_is_compressed_and_has_provenance():
@@ -52,6 +58,12 @@ def test_large_street_response_is_compressed_and_has_provenance():
     assert properties["PARKING_RULE_SOURCE"]
     assert properties["PARKING_SOURCE_URL"].startswith("https://")
     assert "PARKING_CONFIDENCE" in properties
+    assert properties["PARKING_DISPLAY_STATUS"] in {
+        "metered",
+        "open_time_limited",
+        "restricted",
+        "unknown",
+    }
 
 
 def test_cambridge_search_keeps_street_rules_unknown_and_evidence_separate():
@@ -62,6 +74,17 @@ def test_cambridge_search_keeps_street_rules_unknown_and_evidence_separate():
     cambridge = [row for row in properties if row.get("MUNICIPALITY") == "Cambridge"]
     assert len(cambridge) == 2643
     assert {row["PARKING_ACCESS"] for row in cambridge} == {"unknown"}
+    assert {row["PARKING_DISPLAY_STATUS"] for row in cambridge} == {"unknown"}
     assert all(not row.get("PARKING_RULE_SOURCE") for row in cambridge)
     assert all(row.get("PARKING_EVIDENCE_SOURCE") for row in cambridge)
     assert any(row.get("PARKING_EVIDENCE") == "active_meter_spaces_nearby" for row in cambridge)
+
+
+def test_search_can_disambiguate_a_street_with_municipality_terms():
+    response = client.get("/api/streets/search", params={"q": "Cambridge Otis St"})
+
+    assert response.status_code == 200
+    properties = [feature["properties"] for feature in response.json()["features"]]
+    assert properties
+    assert {row["MUNICIPALITY"] for row in properties} == {"Cambridge"}
+    assert {row["STNAME"] for row in properties} == {"Otis St"}

@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-21-cambridge-map-v2"
+APP_VERSION = "2026-07-21-at-a-glance-v3"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -300,6 +300,21 @@ def _cambridge_evidence_category(rule: dict) -> str:
     return "none"
 
 
+def _parking_display_status(access: str) -> str:
+    """Collapse internal evidence categories into four driver-facing map states."""
+    if access == "permit_with_metered_segments":
+        return "metered"
+    if access == "permit_with_time_limited_segments":
+        return "open_time_limited"
+    if access in {
+        "resident_permit_required",
+        "resident_permit_segment_rules_known",
+        "private_rules_apply",
+    }:
+        return "restricted"
+    return "unknown"
+
+
 def _format_count_values(values: list[dict], limit: int = 3) -> str:
     parts = []
     for item in values[:limit]:
@@ -518,6 +533,7 @@ def get_enriched_streets():
         rule = rules.get(street_key, {})
         category, note = _classify_parking_access(props, rules)
         props["PARKING_ACCESS"] = category
+        props["PARKING_DISPLAY_STATUS"] = _parking_display_status(category)
         props["PARKING_NOTE"] = note
         props["PARKING_METER_COUNT_ESTIMATE"] = rule.get("meter_count_estimate")
         props["PARKING_METER_COUNT_CONFIDENCE"] = rule.get(
@@ -564,6 +580,7 @@ def get_enriched_streets():
                 else "none"
             )
         props["PARKING_ACCESS"] = category
+        props["PARKING_DISPLAY_STATUS"] = _parking_display_status(category)
         props["PARKING_NOTE"] = note
         if category == "private_rules_apply":
             props["PARKING_RULE_SOURCE"] = "MassGIS/MassDOT Roads ownership"
@@ -608,6 +625,7 @@ def get_enriched_streets():
         else:
             match_level = "none"
         props["PARKING_ACCESS"] = category
+        props["PARKING_DISPLAY_STATUS"] = _parking_display_status(category)
         props["PARKING_NOTE"] = note
         props["PARKING_RULE_SOURCE"] = ""
         props["PARKING_SOURCE_URL"] = ""
@@ -716,17 +734,25 @@ async def get_imagery_reference_matches():
 
 @app.get("/api/streets/search")
 async def search_streets(q: str = ""):
-    """Search streets by name."""
+    """Search streets by street name, municipality, or both."""
     streets = get_enriched_streets()
     if not q:
         return _json_response(streets)
 
-    q_lower = q.lower()
+    query_terms = q.casefold().split()
     filtered_features = [
         f
         for f in streets.get("features", [])
-        if q_lower in (f.get("properties", {}).get("STNAME", "") or "").lower()
-        or q_lower in (f.get("properties", {}).get("MUNICIPALITY", "") or "").lower()
+        if all(
+            term
+            in " ".join(
+                [
+                    str(f.get("properties", {}).get("MUNICIPALITY") or ""),
+                    str(f.get("properties", {}).get("STNAME") or ""),
+                ]
+            ).casefold()
+            for term in query_terms
+        )
     ]
 
     return _json_response({"type": "FeatureCollection", "features": filtered_features})
@@ -763,11 +789,16 @@ async def get_stats():
         func_class_counts[func_class] = func_class_counts.get(func_class, 0) + 1
 
     parking_access_counts = {}
+    parking_display_counts = {}
 
     for f in features:
         props = f.get("properties", {})
         access = props.get("PARKING_ACCESS", "unknown")
         parking_access_counts[access] = parking_access_counts.get(access, 0) + 1
+        display_status = props.get("PARKING_DISPLAY_STATUS", "unknown")
+        parking_display_counts[display_status] = (
+            parking_display_counts.get(display_status, 0) + 1
+        )
 
     cambridge_meters = load_cambridge_meter_spaces().get("features", [])
     cambridge_accessible = load_cambridge_accessible_spaces().get("features", [])
@@ -789,6 +820,7 @@ async def get_stats():
         "ownership": ownership_counts,
         "functional_class": func_class_counts,
         "parking_access": parking_access_counts,
+        "parking_display": parking_display_counts,
         "parking_evidence": parking_evidence_counts,
     }
     return _json_response(_stats_cache)

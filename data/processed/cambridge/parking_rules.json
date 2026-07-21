@@ -1,11 +1,51 @@
 {
-  "generated_at_utc": "2026-07-20T20:56:13.669454+00:00",
+  "generated_at_utc": "2026-07-21T13:32:16.584063+00:00",
   "municipality": "cambridge",
   "source_id": "cambridge_gis",
   "street_centerlines_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
   "metered_spaces_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Metered_Parking_Spaces/TRAFFIC_MeteredParkingSpaces.geojson",
   "accessible_spaces_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
-  "parser_note": "Meter polygons are matched to nearest street centerline; this is a street-level summary and must not be treated as exact curb geometry.",
+  "sources": {
+    "street_centerlines": {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
+      "fetched_at_utc": "2026-07-21T13:31:42.197053+00:00",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "etag": "\"82f78b67699798738604bd58b37b587756e8daef37b111ddba0e3b03c3d4273a\"",
+      "bytes": 2089220,
+      "sha256": "3a727b329c4225ffbb8bb2d4eb496a8ffefd46a8e78789f551b46b1a84779192"
+    },
+    "metered_spaces": {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Metered_Parking_Spaces/TRAFFIC_MeteredParkingSpaces.geojson",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Metered_Parking_Spaces/TRAFFIC_MeteredParkingSpaces.geojson",
+      "fetched_at_utc": "2026-07-21T13:31:42.425624+00:00",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "etag": "\"bff6863e869b6ce2262ab10a2c6ae2d53cc13561e36f809a5dbfe29cd2c89f03\"",
+      "bytes": 2116740,
+      "sha256": "8fd8986fa307ec59a968d52989366dc4a1007ec0c4aeb18bce0064beb53f332a"
+    },
+    "accessible_spaces": {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
+      "fetched_at_utc": "2026-07-21T13:31:42.529242+00:00",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "etag": "\"2c64005c065a17e0695043053cb7c0875bcc2f9453b4e82ed554b26e8602ed55\"",
+      "bytes": 61717,
+      "sha256": "a96f426af2b2e4279699e8bc86cd4e52cd714c7ab53dd7242bdec2145fed399e"
+    }
+  },
+  "parser_note": "Meter polygons are matched to nearest street centerline; this is a street-level summary and must not be treated as exact curb geometry. Match distance is retained on each meter feature for quality review.",
+  "meter_match_threshold_meters": 45,
+  "meter_match_distance_meters": {
+    "min": 0.85,
+    "mean": 5.23,
+    "median": 4.66,
+    "p95": 9.84,
+    "max": 34.95
+  },
   "street_count": 809,
   "metered_street_count": 121,
   "unmatched_meter_spaces": 0,
@@ -73,6 +113,13 @@
           "count": 15
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.0,
+        "mean": 6.05,
+        "median": 6.11,
+        "p95": 6.66,
+        "max": 8.46
+      },
       "accessible_space_count": 8
     },
     "HAMPSHIRE ST": {
@@ -138,6 +185,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 0.86,
+        "mean": 5.37,
+        "median": 5.52,
+        "p95": 6.0,
+        "max": 8.52
+      },
       "accessible_space_count": 1
     },
     "HARVARD ST": {
@@ -175,6 +229,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.5,
+        "mean": 3.91,
+        "median": 3.99,
+        "p95": 4.15,
+        "max": 4.15
+      },
       "accessible_space_count": 1
     },
     "BROADWAY": {
@@ -240,6 +301,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.45,
+        "mean": 5.98,
+        "median": 5.6,
+        "p95": 9.79,
+        "max": 11.2
+      },
       "accessible_space_count": 4
     },
     "FAINWOOD CIR": {
@@ -250,6 +318,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HANCOCK ST": {
@@ -279,6 +348,13 @@
           "count": 14
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.36,
+        "mean": 2.29,
+        "median": 2.34,
+        "p95": 3.57,
+        "max": 3.57
+      },
       "accessible_space_count": 0
     },
     "HOUGHTON ST": {
@@ -289,6 +365,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HIGHLAND AVE": {
@@ -299,6 +376,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AMORY ST": {
@@ -309,6 +387,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAYETTE ST": {
@@ -334,6 +413,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.87,
+        "mean": 2.89,
+        "median": 2.89,
+        "p95": 2.91,
+        "max": 2.91
+      },
       "accessible_space_count": 0
     },
     "PLEASANT ST": {
@@ -363,6 +449,13 @@
           "count": 9
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.0,
+        "mean": 4.2,
+        "median": 3.04,
+        "p95": 14.64,
+        "max": 14.64
+      },
       "accessible_space_count": 2
     },
     "MAGAZINE ST": {
@@ -373,6 +466,13 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": {
+        "min": 3.8,
+        "mean": 4.02,
+        "median": 4.02,
+        "p95": 4.25,
+        "max": 4.25
+      },
       "accessible_space_count": 0
     },
     "RICHARDSON ST": {
@@ -383,6 +483,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORFOLK CT": {
@@ -393,6 +494,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ASHBURTON PL": {
@@ -403,6 +505,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAMSON PL": {
@@ -413,6 +516,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PERCY PL": {
@@ -423,6 +527,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FISKE PL": {
@@ -433,6 +538,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BISHOP ALLEN DR": {
@@ -466,6 +572,13 @@
           "count": 92
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.11,
+        "mean": 3.6,
+        "median": 3.62,
+        "p95": 3.94,
+        "max": 4.0
+      },
       "accessible_space_count": 0
     },
     "WEST ST": {
@@ -476,6 +589,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EATON ST": {
@@ -486,6 +600,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WORCESTER ST": {
@@ -496,6 +611,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WASHINGTON ST": {
@@ -506,6 +622,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARVIN PL": {
@@ -516,6 +633,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GREEN ST": {
@@ -553,6 +671,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.28,
+        "mean": 3.63,
+        "median": 3.01,
+        "p95": 17.51,
+        "max": 17.51
+      },
       "accessible_space_count": 1
     },
     "MASSACHUSETTS AVE": {
@@ -630,6 +755,13 @@
           "count": 10
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.58,
+        "mean": 8.08,
+        "median": 9.12,
+        "p95": 10.24,
+        "max": 10.9
+      },
       "accessible_space_count": 26
     },
     "WESTERN AVE": {
@@ -663,6 +795,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.78,
+        "mean": 2.9,
+        "median": 2.85,
+        "p95": 3.13,
+        "max": 3.13
+      },
       "accessible_space_count": 1
     },
     "AUBURN ST": {
@@ -673,6 +812,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COLUMBIA TER": {
@@ -683,6 +823,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELM ST": {
@@ -693,6 +834,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AUSTIN PK": {
@@ -703,6 +845,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ST PAUL ST": {
@@ -713,6 +856,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WASHINGTON CT": {
@@ -723,6 +867,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RIVER ST": {
@@ -748,6 +893,13 @@
           "count": 13
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.47,
+        "mean": 3.84,
+        "median": 3.93,
+        "p95": 3.99,
+        "max": 3.99
+      },
       "accessible_space_count": 0
     },
     "ESSEX ST": {
@@ -773,6 +925,13 @@
           "count": 8
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.49,
+        "mean": 1.58,
+        "median": 1.54,
+        "p95": 1.74,
+        "max": 1.74
+      },
       "accessible_space_count": 0
     },
     "BIGELOW ST": {
@@ -798,6 +957,13 @@
           "count": 14
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.1,
+        "mean": 2.51,
+        "median": 2.47,
+        "p95": 2.9,
+        "max": 2.9
+      },
       "accessible_space_count": 0
     },
     "INMAN ST": {
@@ -839,6 +1005,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.93,
+        "mean": 2.4,
+        "median": 2.17,
+        "p95": 2.95,
+        "max": 2.95
+      },
       "accessible_space_count": 2
     },
     "DOYLE WAY": {
@@ -849,6 +1022,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TEMPLE ST": {
@@ -874,6 +1048,13 @@
           "count": 8
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.22,
+        "mean": 2.55,
+        "median": 2.57,
+        "p95": 2.72,
+        "max": 2.72
+      },
       "accessible_space_count": 0
     },
     "FRANKLIN ST": {
@@ -899,6 +1080,13 @@
           "count": 10
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.95,
+        "mean": 3.04,
+        "median": 2.98,
+        "p95": 3.27,
+        "max": 3.27
+      },
       "accessible_space_count": 0
     },
     "VAIL CT": {
@@ -909,6 +1097,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WILLOW ST": {
@@ -919,6 +1108,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PORTER ST": {
@@ -929,6 +1119,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PALERMO ST": {
@@ -939,6 +1130,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JEFFERSON ST": {
@@ -949,6 +1141,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "OTIS ST": {
@@ -959,6 +1152,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "FULKERSON ST": {
@@ -984,6 +1178,13 @@
           "count": 53
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.9,
+        "mean": 4.19,
+        "median": 4.27,
+        "p95": 5.05,
+        "max": 5.05
+      },
       "accessible_space_count": 0
     },
     "SPRING ST": {
@@ -1009,6 +1210,13 @@
           "count": 13
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.29,
+        "mean": 3.82,
+        "median": 3.72,
+        "p95": 4.27,
+        "max": 4.27
+      },
       "accessible_space_count": 0
     },
     "THORNDIKE ST": {
@@ -1038,6 +1246,13 @@
           "count": 38
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.2,
+        "mean": 3.82,
+        "median": 3.61,
+        "p95": 4.87,
+        "max": 4.96
+      },
       "accessible_space_count": 1
     },
     "COLUMBIA ST": {
@@ -1063,6 +1278,13 @@
           "count": 4
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.78,
+        "mean": 3.94,
+        "median": 3.96,
+        "p95": 4.06,
+        "max": 4.06
+      },
       "accessible_space_count": 0
     },
     "NORFOLK ST": {
@@ -1088,6 +1310,13 @@
           "count": 10
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.66,
+        "mean": 2.26,
+        "median": 1.93,
+        "p95": 3.84,
+        "max": 3.84
+      },
       "accessible_space_count": 1
     },
     "JAMES WAY": {
@@ -1098,6 +1327,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARNEY ST": {
@@ -1108,6 +1338,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "YORK ST": {
@@ -1118,6 +1349,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WEBSTER AVE": {
@@ -1128,6 +1360,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MACARELLI WAY": {
@@ -1153,6 +1386,13 @@
           "count": 27
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.83,
+        "mean": 7.06,
+        "median": 9.6,
+        "p95": 10.03,
+        "max": 10.07
+      },
       "accessible_space_count": 1
     },
     "WARREN ST": {
@@ -1178,6 +1418,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 8.68,
+        "mean": 8.68,
+        "median": 8.68,
+        "p95": 8.68,
+        "max": 8.68
+      },
       "accessible_space_count": 0
     },
     "CARDINAL MEDEIROS AVE": {
@@ -1188,6 +1435,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARRINGTON TER": {
@@ -1198,6 +1446,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CITIZENS PL": {
@@ -1208,6 +1457,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "UNION TER": {
@@ -1218,6 +1468,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "UNION PL": {
@@ -1228,6 +1479,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LIVERMORE PL": {
@@ -1238,6 +1490,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINCOLN PL": {
@@ -1248,6 +1501,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAMBERT ST": {
@@ -1258,6 +1512,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARDING ST": {
@@ -1268,6 +1523,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BERKSHIRE ST": {
@@ -1278,6 +1534,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PORTSMOUTH ST": {
@@ -1288,6 +1545,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BERKSHIRE PL": {
@@ -1298,6 +1556,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PLYMOUTH ST": {
@@ -1308,6 +1567,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MEMORIAL WAY": {
@@ -1318,6 +1578,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLARK ST": {
@@ -1328,6 +1589,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHERRY ST": {
@@ -1338,6 +1600,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DICKINSON ST": {
@@ -1348,6 +1611,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PORTLAND ST": {
@@ -1377,6 +1641,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.72,
+        "mean": 4.13,
+        "median": 4.28,
+        "p95": 4.37,
+        "max": 4.38
+      },
       "accessible_space_count": 0
     },
     "TURNER CT": {
@@ -1387,6 +1658,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CROSSLAND ST": {
@@ -1397,6 +1669,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LILAC CT": {
@@ -1407,6 +1680,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AMHERST ST": {
@@ -1432,6 +1706,13 @@
           "count": 22
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.24,
+        "mean": 4.55,
+        "median": 4.48,
+        "p95": 5.16,
+        "max": 5.34
+      },
       "accessible_space_count": 1
     },
     "AMES ST": {
@@ -1469,6 +1750,13 @@
           "count": 21
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.2,
+        "mean": 4.96,
+        "median": 5.01,
+        "p95": 9.87,
+        "max": 9.96
+      },
       "accessible_space_count": 3
     },
     "ALBANY ST": {
@@ -1498,6 +1786,13 @@
           "count": 94
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.4,
+        "mean": 4.12,
+        "median": 4.03,
+        "p95": 5.05,
+        "max": 5.31
+      },
       "accessible_space_count": 3
     },
     "OSBORN ST": {
@@ -1523,6 +1818,13 @@
           "count": 21
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.6,
+        "mean": 2.09,
+        "median": 1.81,
+        "p95": 3.09,
+        "max": 3.15
+      },
       "accessible_space_count": 0
     },
     "GORE ST": {
@@ -1533,6 +1835,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SECOND ST": {
@@ -1566,6 +1869,13 @@
           "count": 10
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.2,
+        "mean": 3.79,
+        "median": 3.73,
+        "p95": 4.31,
+        "max": 4.8
+      },
       "accessible_space_count": 1
     },
     "SEVENTH ST": {
@@ -1576,6 +1886,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALLSTON ST": {
@@ -1586,6 +1897,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALPINE ST": {
@@ -1596,6 +1908,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ANDERSON BRIDGE": {
@@ -1606,6 +1919,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "APPIAN WAY": {
@@ -1631,6 +1945,13 @@
           "count": 14
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.85,
+        "mean": 2.1,
+        "median": 2.1,
+        "p95": 2.29,
+        "max": 2.29
+      },
       "accessible_space_count": 0
     },
     "APPLETON RD": {
@@ -1641,6 +1962,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHAUNCY ST": {
@@ -1651,6 +1973,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LANGDON ST": {
@@ -1661,6 +1984,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WENDELL ST": {
@@ -1686,6 +2010,13 @@
           "count": 4
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.64,
+        "mean": 3.66,
+        "median": 3.66,
+        "p95": 3.67,
+        "max": 3.67
+      },
       "accessible_space_count": 0
     },
     "THOMAS PK": {
@@ -1696,6 +2027,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EXETER PK": {
@@ -1706,6 +2038,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WINDSOR ST": {
@@ -1751,6 +2084,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.71,
+        "mean": 3.21,
+        "median": 3.08,
+        "p95": 3.77,
+        "max": 3.96
+      },
       "accessible_space_count": 0
     },
     "GROVE ST": {
@@ -1761,6 +2101,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PUTNAM AVE": {
@@ -1771,6 +2112,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CALLENDER ST": {
@@ -1781,6 +2123,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KINNAIRD ST": {
@@ -1791,6 +2134,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOWARD ST": {
@@ -1801,6 +2145,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BAY ST": {
@@ -1826,6 +2171,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.85,
+        "mean": 2.97,
+        "median": 2.97,
+        "p95": 3.08,
+        "max": 3.08
+      },
       "accessible_space_count": 0
     },
     "GRANT ST": {
@@ -1836,6 +2188,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FLAGG ST": {
@@ -1846,6 +2199,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RIVERSIDE PL": {
@@ -1856,6 +2210,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GILMORE ST": {
@@ -1866,6 +2221,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BANKS ST": {
@@ -1876,6 +2232,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MEMORIAL DR": {
@@ -1886,6 +2243,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RICE ST": {
@@ -1896,6 +2254,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RINDGE AVE": {
@@ -1906,6 +2265,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARVEY ST": {
@@ -1916,6 +2276,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "VERDUN ST": {
@@ -1926,6 +2287,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOLTON ST": {
@@ -1936,6 +2298,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FIELD ST": {
@@ -1946,6 +2309,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PEMBERTON ST": {
@@ -1956,6 +2320,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SHERMAN ST": {
@@ -1966,6 +2331,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 2
     },
     "THIRD ST": {
@@ -1999,6 +2365,13 @@
           "count": 15
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.67,
+        "mean": 5.09,
+        "median": 4.87,
+        "p95": 7.54,
+        "max": 7.85
+      },
       "accessible_space_count": 3
     },
     "SIXTH ST": {
@@ -2009,6 +2382,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "GORE ST PL": {
@@ -2019,6 +2393,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MT AUBURN ST": {
@@ -2068,6 +2443,13 @@
           "count": 36
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.96,
+        "mean": 6.47,
+        "median": 5.2,
+        "p95": 18.98,
+        "max": 20.38
+      },
       "accessible_space_count": 4
     },
     "MONSIGNOR OBRIEN HWY": {
@@ -2078,6 +2460,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STEVENS CT": {
@@ -2088,6 +2471,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HURLEY ST": {
@@ -2117,6 +2501,13 @@
           "count": 11
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.7,
+        "mean": 3.88,
+        "median": 3.8,
+        "p95": 4.49,
+        "max": 4.49
+      },
       "accessible_space_count": 0
     },
     "BINNEY ST": {
@@ -2154,6 +2545,13 @@
           "count": 31
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.44,
+        "mean": 7.08,
+        "median": 6.95,
+        "p95": 9.12,
+        "max": 9.15
+      },
       "accessible_space_count": 0
     },
     "FIFTH ST": {
@@ -2164,6 +2562,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LOPEZ AVE": {
@@ -2174,6 +2573,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROGERS ST": {
@@ -2203,6 +2603,13 @@
           "count": 50
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.48,
+        "mean": 3.82,
+        "median": 3.81,
+        "p95": 4.19,
+        "max": 4.24
+      },
       "accessible_space_count": 0
     },
     "BENT ST": {
@@ -2232,6 +2639,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.01,
+        "mean": 3.61,
+        "median": 3.81,
+        "p95": 4.22,
+        "max": 4.26
+      },
       "accessible_space_count": 0
     },
     "FIRST ST": {
@@ -2265,6 +2679,13 @@
           "count": 10
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.7,
+        "mean": 4.92,
+        "median": 5.11,
+        "p95": 5.64,
+        "max": 5.66
+      },
       "accessible_space_count": 1
     },
     "VASSAR ST": {
@@ -2310,6 +2731,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.95,
+        "mean": 3.76,
+        "median": 3.17,
+        "p95": 6.19,
+        "max": 6.31
+      },
       "accessible_space_count": 2
     },
     "DANFORTH ST": {
@@ -2320,6 +2748,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AMHERST ALY": {
@@ -2330,6 +2759,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SCIARAPPA ST": {
@@ -2340,6 +2770,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ASH ST PL": {
@@ -2350,6 +2781,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FULLER PL": {
@@ -2360,6 +2792,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HILLIARD PL": {
@@ -2370,6 +2803,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "UNIVERSITY RD": {
@@ -2399,6 +2833,13 @@
           "count": 5
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.91,
+        "mean": 4.01,
+        "median": 3.99,
+        "p95": 4.1,
+        "max": 4.1
+      },
       "accessible_space_count": 0
     },
     "BREWER ST": {
@@ -2409,6 +2850,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NUTTING RD": {
@@ -2419,6 +2861,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "REVERE ST": {
@@ -2429,6 +2872,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PALMER ST": {
@@ -2439,6 +2883,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BENNETT ST": {
@@ -2464,6 +2909,13 @@
           "count": 5
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.44,
+        "mean": 4.68,
+        "median": 4.65,
+        "p95": 4.95,
+        "max": 4.95
+      },
       "accessible_space_count": 1
     },
     "BRATTLE ST": {
@@ -2489,6 +2941,13 @@
           "count": 64
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.71,
+        "mean": 4.7,
+        "median": 4.61,
+        "p95": 6.23,
+        "max": 6.57
+      },
       "accessible_space_count": 2
     },
     "DUNSTER ST": {
@@ -2522,6 +2981,13 @@
           "count": 22
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.82,
+        "mean": 2.53,
+        "median": 2.71,
+        "p95": 3.15,
+        "max": 3.16
+      },
       "accessible_space_count": 1
     },
     "WINTHROP ST": {
@@ -2532,6 +2998,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STORY ST": {
@@ -2557,6 +3024,13 @@
           "count": 5
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.94,
+        "mean": 2.0,
+        "median": 2.02,
+        "p95": 2.05,
+        "max": 2.05
+      },
       "accessible_space_count": 0
     },
     "ELIOT ST": {
@@ -2582,6 +3056,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 5.2,
+        "mean": 5.2,
+        "median": 5.2,
+        "p95": 5.2,
+        "max": 5.2
+      },
       "accessible_space_count": 0
     },
     "KIRKLAND ST": {
@@ -2607,6 +3088,13 @@
           "count": 14
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.97,
+        "mean": 4.02,
+        "median": 4.01,
+        "p95": 4.09,
+        "max": 4.09
+      },
       "accessible_space_count": 0
     },
     "KIRKLAND RD": {
@@ -2617,6 +3105,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LEXINGTON AVE": {
@@ -2627,6 +3116,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LANDSDOWNE ST": {
@@ -2652,6 +3142,13 @@
           "count": 20
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.34,
+        "mean": 3.76,
+        "median": 3.62,
+        "p95": 4.3,
+        "max": 4.41
+      },
       "accessible_space_count": 0
     },
     "RUTLAND ST": {
@@ -2662,6 +3159,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LANCASTER ST": {
@@ -2672,6 +3170,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "UPLAND RD": {
@@ -2697,6 +3196,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.37,
+        "mean": 4.38,
+        "median": 4.38,
+        "p95": 4.39,
+        "max": 4.39
+      },
       "accessible_space_count": 0
     },
     "SHEPARD ST": {
@@ -2707,6 +3213,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SAGINAW AVE": {
@@ -2717,6 +3224,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WHITE ST PL": {
@@ -2727,6 +3235,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FROST ST": {
@@ -2737,6 +3246,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ARCADIA ST": {
@@ -2747,6 +3257,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SACRAMENTO ST": {
@@ -2757,6 +3268,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SACRAMENTO PL": {
@@ -2767,6 +3279,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GORHAM ST": {
@@ -2777,6 +3290,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MUSEUM ST": {
@@ -2787,6 +3301,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CARVER ST": {
@@ -2797,6 +3312,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOWLAND ST": {
@@ -2807,6 +3323,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TRAYMORE ST": {
@@ -2817,6 +3334,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRANCIS AVE": {
@@ -2827,6 +3345,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 2
     },
     "OXFORD ST": {
@@ -2860,6 +3379,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.51,
+        "mean": 3.94,
+        "median": 3.93,
+        "p95": 4.28,
+        "max": 4.29
+      },
       "accessible_space_count": 0
     },
     "HAMMOND ST": {
@@ -2870,6 +3396,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EUSTIS ST": {
@@ -2880,6 +3407,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOREST ST": {
@@ -2905,6 +3433,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.54,
+        "mean": 3.56,
+        "median": 3.56,
+        "p95": 3.59,
+        "max": 3.59
+      },
       "accessible_space_count": 0
     },
     "BRISTOL ST": {
@@ -2915,6 +3450,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROADWAY CT": {
@@ -2925,6 +3461,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GARDEN ST": {
@@ -2950,6 +3487,13 @@
           "count": 47
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.48,
+        "mean": 6.66,
+        "median": 7.07,
+        "p95": 7.66,
+        "max": 8.57
+      },
       "accessible_space_count": 3
     },
     "GARDEN LN": {
@@ -2960,6 +3504,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GARDEN CT": {
@@ -2970,6 +3515,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GARFIELD ST": {
@@ -2980,6 +3526,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GERRY ST": {
@@ -2990,6 +3537,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GIBSON ST": {
@@ -3000,6 +3548,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GIBSON TER": {
@@ -3010,6 +3559,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GOLD STAR RD": {
@@ -3035,6 +3585,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.16,
+        "mean": 3.17,
+        "median": 3.17,
+        "p95": 3.18,
+        "max": 3.18
+      },
       "accessible_space_count": 0
     },
     "GOLD STAR RD PL": {
@@ -3045,6 +3602,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRANITE ST": {
@@ -3055,6 +3613,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SUMNER RD": {
@@ -3065,6 +3624,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLDEN ST": {
@@ -3075,6 +3635,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOW ST": {
@@ -3104,6 +3665,13 @@
           "count": 38
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.37,
+        "mean": 3.24,
+        "median": 3.28,
+        "p95": 4.11,
+        "max": 4.47
+      },
       "accessible_space_count": 0
     },
     "HOLYOKE ST": {
@@ -3133,6 +3701,13 @@
           "count": 16
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.9,
+        "mean": 2.05,
+        "median": 2.03,
+        "p95": 2.22,
+        "max": 2.22
+      },
       "accessible_space_count": 0
     },
     "PLYMPTON ST": {
@@ -3162,6 +3737,13 @@
           "count": 58
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.87,
+        "mean": 2.78,
+        "median": 2.96,
+        "p95": 3.19,
+        "max": 3.23
+      },
       "accessible_space_count": 0
     },
     "CHATHAM ST": {
@@ -3172,6 +3754,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINNAEAN ST": {
@@ -3182,6 +3765,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WEST BELLEVUE AVE": {
@@ -3192,6 +3776,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUMBOLDT ST": {
@@ -3202,6 +3787,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AGASSIZ ST": {
@@ -3212,6 +3798,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AVON PL": {
@@ -3222,6 +3809,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WASHINGTON AVE": {
@@ -3232,6 +3820,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HURLBUT ST": {
@@ -3242,6 +3831,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOWDOIN ST": {
@@ -3252,6 +3842,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HILLSIDE AVE": {
@@ -3262,6 +3853,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AVON HILL ST": {
@@ -3272,6 +3864,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRAY ST": {
@@ -3282,6 +3875,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WYMAN ST": {
@@ -3292,6 +3886,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUDSON ST": {
@@ -3302,6 +3897,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARTIN ST": {
@@ -3312,6 +3908,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WRIGHT ST": {
@@ -3322,6 +3919,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROBINSON ST": {
@@ -3332,6 +3930,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NEWELL TER": {
@@ -3342,6 +3941,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WINSLOW ST": {
@@ -3352,6 +3952,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NEWELL ST": {
@@ -3362,6 +3963,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HURON AVE": {
@@ -3387,6 +3989,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.83,
+        "mean": 5.8,
+        "median": 6.28,
+        "p95": 7.26,
+        "max": 7.26
+      },
       "accessible_space_count": 2
     },
     "HOLLY AVE": {
@@ -3397,6 +4006,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MADISON ST": {
@@ -3407,6 +4017,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALLEN ST": {
@@ -3417,6 +4028,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELMER ST": {
@@ -3427,6 +4039,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CONCORD AVE": {
@@ -3452,6 +4065,13 @@
           "count": 10
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.16,
+        "mean": 3.34,
+        "median": 3.37,
+        "p95": 3.38,
+        "max": 3.38
+      },
       "accessible_space_count": 1
     },
     "CAMBRIDGESIDE PL": {
@@ -3462,6 +4082,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ENDICOTT ST": {
@@ -3472,6 +4093,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WADSWORTH ST": {
@@ -3497,6 +4119,13 @@
           "count": 12
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.78,
+        "mean": 2.92,
+        "median": 2.93,
+        "p95": 3.05,
+        "max": 3.05
+      },
       "accessible_space_count": 0
     },
     "THINGVALLA AVE": {
@@ -3507,6 +4136,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BELMONT ST": {
@@ -3517,6 +4147,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "LOCUST ST": {
@@ -3527,6 +4158,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LOCUST TER": {
@@ -3537,6 +4169,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LARCH RD": {
@@ -3547,6 +4180,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LARCHWOOD DR": {
@@ -3557,6 +4191,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRESH POND LN": {
@@ -3567,6 +4202,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRESH POND PKWY": {
@@ -3577,6 +4213,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLWORTHY ST": {
@@ -3587,6 +4224,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PARK AVE": {
@@ -3597,6 +4235,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ABERDEEN CT": {
@@ -3607,6 +4246,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "OLD DEE RD": {
@@ -3617,6 +4257,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOSTER ST": {
@@ -3627,6 +4268,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KENNEDY RD": {
@@ -3637,6 +4279,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RIEDESEL AVE": {
@@ -3647,6 +4290,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAYERWEATHER ST": {
@@ -3657,6 +4301,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BREWSTER ST": {
@@ -3667,6 +4312,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "APPLETON ST": {
@@ -3677,6 +4323,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DUNSTABLE RD": {
@@ -3687,6 +4334,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRACEWOOD PK": {
@@ -3697,6 +4345,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PKWY TER": {
@@ -3707,6 +4356,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HIGHLAND ST": {
@@ -3717,6 +4367,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COOLIDGE HILL RD": {
@@ -3727,6 +4378,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COOLIDGE HILL": {
@@ -3737,6 +4389,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELIOT BRIDGE": {
@@ -3747,6 +4400,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELIOT CIR": {
@@ -3757,6 +4411,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GERRYS LNDG": {
@@ -3767,6 +4422,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COOLIDGE AVE": {
@@ -3777,6 +4433,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMDEN PL": {
@@ -3787,6 +4444,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WILLARD ST": {
@@ -3797,6 +4455,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAWTHORN ST": {
@@ -3822,6 +4481,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.44,
+        "mean": 2.46,
+        "median": 2.47,
+        "p95": 2.47,
+        "max": 2.47
+      },
       "accessible_space_count": 0
     },
     "CHAUNCY LN": {
@@ -3832,6 +4498,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ST JOHNS RD": {
@@ -3842,6 +4509,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MERCER CIR": {
@@ -3852,6 +4520,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALKER TER": {
@@ -3862,6 +4531,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROWN ST": {
@@ -3872,6 +4542,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JAMES ST": {
@@ -3897,6 +4568,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.64,
+        "mean": 2.97,
+        "median": 3.01,
+        "p95": 3.22,
+        "max": 3.22
+      },
       "accessible_space_count": 0
     },
     "LONGFELLOW PK": {
@@ -3907,6 +4585,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALKER ST": {
@@ -3917,6 +4596,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WATERHOUSE ST": {
@@ -3927,6 +4607,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DINSMORE CT": {
@@ -3937,6 +4618,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROSS ST": {
@@ -3947,6 +4629,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BRYANT ST": {
@@ -3957,6 +4640,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SCOTT ST": {
@@ -3967,6 +4651,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KIRKLAND PL": {
@@ -3977,6 +4662,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ADAMS TER": {
@@ -3987,6 +4673,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ASHTON PL": {
@@ -3997,6 +4684,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PRESCOTT ST": {
@@ -4007,6 +4695,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TROWBRIDGE PL": {
@@ -4017,6 +4706,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WHITTEMORE AVE": {
@@ -4027,6 +4717,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WESTLEY AVE": {
@@ -4037,6 +4728,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOCH ST": {
@@ -4047,6 +4739,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KASSUL PK": {
@@ -4057,6 +4750,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EDMUNDS ST": {
@@ -4067,6 +4761,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROOKFORD ST": {
@@ -4077,6 +4772,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAGOUN ST": {
@@ -4102,6 +4798,13 @@
           "count": 4
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.92,
+        "mean": 3.15,
+        "median": 3.1,
+        "p95": 3.46,
+        "max": 3.46
+      },
       "accessible_space_count": 0
     },
     "COLUMBUS AVE": {
@@ -4112,6 +4815,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MORRISON CT": {
@@ -4122,6 +4826,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SEAGRAVE RD": {
@@ -4132,6 +4837,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAMPSHIRE CT": {
@@ -4142,6 +4848,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HANCOCK PK": {
@@ -4152,6 +4859,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARDWICK ST": {
@@ -4162,6 +4870,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARRIS ST": {
@@ -4172,6 +4881,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "VANDINE ST": {
@@ -4182,6 +4892,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "POTTER ST": {
@@ -4192,6 +4903,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "POTTER PK": {
@@ -4202,6 +4914,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PROSPECT ST": {
@@ -4231,6 +4944,13 @@
           "count": 6
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.6,
+        "mean": 4.22,
+        "median": 4.42,
+        "p95": 4.56,
+        "max": 4.56
+      },
       "accessible_space_count": 0
     },
     "WASHBURN AVE": {
@@ -4241,6 +4961,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINDEN ST": {
@@ -4270,6 +4991,13 @@
           "count": 9
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.0,
+        "mean": 2.18,
+        "median": 1.11,
+        "p95": 10.68,
+        "max": 10.68
+      },
       "accessible_space_count": 0
     },
     "ASH ST": {
@@ -4280,6 +5008,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "ABERDEEN WAY": {
@@ -4290,6 +5019,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARRISON AVE": {
@@ -4300,6 +5030,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CEDAR ST": {
@@ -4310,6 +5041,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "THERIAULT CT": {
@@ -4320,6 +5052,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JACKSON ST": {
@@ -4330,6 +5063,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GEORGE ST": {
@@ -4340,6 +5074,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DANA PL": {
@@ -4350,6 +5085,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DEWOLFE ST": {
@@ -4387,6 +5123,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.34,
+        "mean": 2.71,
+        "median": 2.75,
+        "p95": 3.08,
+        "max": 3.1
+      },
       "accessible_space_count": 0
     },
     "TROWBRIDGE ST": {
@@ -4397,6 +5140,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ARROW ST": {
@@ -4422,6 +5166,13 @@
           "count": 11
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 0.9,
+        "mean": 1.41,
+        "median": 1.46,
+        "p95": 1.94,
+        "max": 1.94
+      },
       "accessible_space_count": 1
     },
     "HOLYOKE PL": {
@@ -4432,6 +5183,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ATHENS ST": {
@@ -4442,6 +5194,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DODGE ST": {
@@ -4452,6 +5205,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HINGHAM ST": {
@@ -4462,6 +5216,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BANCROFT ST": {
@@ -4472,6 +5227,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FALLON PL": {
@@ -4482,6 +5238,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WEEKS FOOTBRIDGE": {
@@ -4492,6 +5249,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHESTNUT ST": {
@@ -4502,6 +5260,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MILDRED HAMILTON PL": {
@@ -4512,6 +5271,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KENWOOD ST": {
@@ -4522,6 +5282,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ANDREW ST": {
@@ -4532,6 +5293,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ACORN ST": {
@@ -4542,6 +5304,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TUFTS ST": {
@@ -4552,6 +5315,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NEWTON ST": {
@@ -4562,6 +5326,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GORDON PL": {
@@ -4572,6 +5337,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PEARL ST PL": {
@@ -4582,6 +5348,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROCKINGHAM ST": {
@@ -4592,6 +5359,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROCKINGHAM PL": {
@@ -4602,6 +5370,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PEARL ST": {
@@ -4612,6 +5381,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ORRIN ST": {
@@ -4622,6 +5392,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STANDISH ST": {
@@ -4632,6 +5403,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHILTON ST": {
@@ -4642,6 +5414,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SPARKS ST": {
@@ -4652,6 +5425,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMERON AVE": {
@@ -4685,6 +5459,13 @@
           "count": 5
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 5.01,
+        "mean": 5.03,
+        "median": 5.02,
+        "p95": 5.07,
+        "max": 5.07
+      },
       "accessible_space_count": 0
     },
     "SEVEN PINES AVE": {
@@ -4695,6 +5476,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RINDGEFIELD ST": {
@@ -4705,6 +5487,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HASKELL ST": {
@@ -4715,6 +5498,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RINDGE TER": {
@@ -4725,6 +5509,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KIMBALL LN": {
@@ -4735,6 +5520,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LOCKE ST": {
@@ -4745,6 +5531,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RENZ WAY": {
@@ -4755,6 +5542,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LANGDON SQ": {
@@ -4765,6 +5553,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALKER CT": {
@@ -4775,6 +5564,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WARWICK PK": {
@@ -4785,6 +5575,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PETERS ST": {
@@ -4795,6 +5586,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PHILLIPS PL": {
@@ -4805,6 +5597,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PINE ST": {
@@ -4815,6 +5608,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SCHOOL ST": {
@@ -4825,6 +5619,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DECATUR ST": {
@@ -4835,6 +5630,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COTTAGE ST": {
@@ -4845,6 +5641,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SIDNEY ST": {
@@ -4878,6 +5675,13 @@
           "count": 24
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.75,
+        "mean": 4.18,
+        "median": 3.54,
+        "p95": 7.06,
+        "max": 7.62
+      },
       "accessible_space_count": 0
     },
     "LAKEVIEW AVE": {
@@ -4888,6 +5692,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SIBLEY CT": {
@@ -4898,6 +5703,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TRAILL ST": {
@@ -4908,6 +5714,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GREENOUGH BLVD": {
@@ -4918,6 +5725,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BUCKINGHAM ST": {
@@ -4928,6 +5736,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BRATTLE CIR": {
@@ -4938,6 +5747,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROADWAY TER": {
@@ -4948,6 +5758,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "IRVING TER": {
@@ -4958,6 +5769,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "IRVING ST": {
@@ -4968,6 +5780,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SCOUTING WAY": {
@@ -4978,6 +5791,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ST MARY RD": {
@@ -4988,6 +5802,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TREMONT ST": {
@@ -4998,6 +5813,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BEECH ST": {
@@ -5008,6 +5824,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CREIGHTON ST": {
@@ -5018,6 +5835,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MEACHAM RD": {
@@ -5028,6 +5846,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RICE CIR": {
@@ -5038,6 +5857,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RIVERSIDE RD": {
@@ -5048,6 +5868,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALDEN ST": {
@@ -5073,6 +5894,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.01,
+        "mean": 4.01,
+        "median": 4.01,
+        "p95": 4.01,
+        "max": 4.01
+      },
       "accessible_space_count": 0
     },
     "TERMINAL RD": {
@@ -5083,6 +5911,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALEWIFE BROOK PKWY": {
@@ -5093,6 +5922,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELM ST N": {
@@ -5103,6 +5933,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRISWOLD ST": {
@@ -5113,6 +5944,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BLANCHARD RD": {
@@ -5123,6 +5955,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HANCOCK PL": {
@@ -5133,6 +5966,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CENTRE ST": {
@@ -5143,6 +5977,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ARNOLD CIR": {
@@ -5153,6 +5988,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MICHAEL WAY": {
@@ -5163,6 +5999,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SPERIDAKIS TER": {
@@ -5173,6 +6010,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "VALENTINE ST": {
@@ -5183,6 +6021,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TUDOR ST": {
@@ -5208,6 +6047,13 @@
           "count": 11
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.86,
+        "mean": 3.31,
+        "median": 3.38,
+        "p95": 3.49,
+        "max": 3.49
+      },
       "accessible_space_count": 0
     },
     "PACIFIC ST": {
@@ -5233,6 +6079,13 @@
           "count": 15
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.82,
+        "mean": 2.98,
+        "median": 2.94,
+        "p95": 3.36,
+        "max": 3.36
+      },
       "accessible_space_count": 1
     },
     "HENRY ST": {
@@ -5243,6 +6096,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOWLER ST": {
@@ -5253,6 +6107,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AMESBURY ST": {
@@ -5263,6 +6118,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "AUDREY ST": {
@@ -5273,6 +6129,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TALBOT ST": {
@@ -5283,6 +6140,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WAVERLY ST": {
@@ -5293,6 +6151,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PUTNAM CT": {
@@ -5303,6 +6162,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FORT WASHINGTON PL": {
@@ -5313,6 +6173,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAMILTON ST": {
@@ -5323,6 +6184,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORMANDY TER EXT": {
@@ -5333,6 +6195,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LOOMIS ST": {
@@ -5343,6 +6206,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FLANDERS RD": {
@@ -5353,6 +6217,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WHEELER ST": {
@@ -5378,6 +6243,13 @@
           "count": 8
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.04,
+        "mean": 4.13,
+        "median": 4.06,
+        "p95": 4.37,
+        "max": 4.37
+      },
       "accessible_space_count": 0
     },
     "HAWTHORNE PK": {
@@ -5388,6 +6260,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KIMBALL ST": {
@@ -5398,6 +6271,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MURRAY HILL RD": {
@@ -5408,6 +6282,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MULLER AVE": {
@@ -5418,6 +6293,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MONTGOMERY ST": {
@@ -5428,6 +6304,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "OLIVE PL": {
@@ -5438,6 +6315,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRANCES PL": {
@@ -5448,6 +6326,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARRINGTON RD": {
@@ -5458,6 +6337,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "REED ST TER": {
@@ -5468,6 +6348,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NOTRE DAME AVE": {
@@ -5478,6 +6359,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BELMONT CT": {
@@ -5488,6 +6370,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DUDLEY CT": {
@@ -5498,6 +6381,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "REED ST CT": {
@@ -5508,6 +6392,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MCLEAN PL": {
@@ -5518,6 +6403,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BELLIS CIR": {
@@ -5528,6 +6414,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BAY STATE RD": {
@@ -5538,6 +6425,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SAVILLE ST": {
@@ -5548,6 +6436,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AMORY PL": {
@@ -5558,6 +6447,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARIE AVE": {
@@ -5568,6 +6458,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LEE ST": {
@@ -5593,6 +6484,13 @@
           "count": 8
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.78,
+        "mean": 3.05,
+        "median": 2.91,
+        "p95": 3.43,
+        "max": 3.43
+      },
       "accessible_space_count": 0
     },
     "HIGHLAND PK": {
@@ -5603,6 +6501,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MERRILL ST": {
@@ -5613,6 +6512,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ACACIA ST": {
@@ -5623,6 +6523,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALBERTA TER": {
@@ -5633,6 +6534,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ARLINGTON ST": {
@@ -5643,6 +6545,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRAY GARDENS EAST": {
@@ -5653,6 +6556,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EVERETEZE WAY": {
@@ -5663,6 +6567,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAIR OAKS ST": {
@@ -5673,6 +6578,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FARRELL WAY": {
@@ -5683,6 +6589,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAYETTE PK": {
@@ -5693,6 +6600,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FELTON ST": {
@@ -5718,6 +6626,13 @@
           "count": 14
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.99,
+        "mean": 3.14,
+        "median": 3.13,
+        "p95": 3.32,
+        "max": 3.32
+      },
       "accessible_space_count": 1
     },
     "FENNO ST": {
@@ -5728,6 +6643,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FERNALD DR": {
@@ -5738,6 +6654,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAGEE ST": {
@@ -5748,6 +6665,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAGNOLIA AVE": {
@@ -5758,6 +6676,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAIN ST": {
@@ -5803,6 +6722,13 @@
           "count": 11
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.83,
+        "mean": 7.63,
+        "median": 6.37,
+        "p95": 14.14,
+        "max": 14.56
+      },
       "accessible_space_count": 1
     },
     "MALCOLM RD": {
@@ -5813,6 +6739,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAPLE AVE": {
@@ -5823,6 +6750,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARCELLA CT": {
@@ -5833,6 +6761,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARCELLA ST": {
@@ -5843,6 +6772,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARKET ST": {
@@ -5876,6 +6806,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.03,
+        "mean": 3.21,
+        "median": 3.25,
+        "p95": 3.29,
+        "max": 3.29
+      },
       "accessible_space_count": 0
     },
     "TIERNEY ST": {
@@ -5886,6 +6823,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WATERMAN RD": {
@@ -5896,6 +6834,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUTCHINSON ST": {
@@ -5906,6 +6845,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RESERVOIR ST": {
@@ -5916,6 +6856,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "IVY ST": {
@@ -5926,6 +6867,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DRUMMOND PL": {
@@ -5936,6 +6878,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ST GERARD TER": {
@@ -5946,6 +6889,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLLIS PK": {
@@ -5956,6 +6900,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TENNEY ST": {
@@ -5966,6 +6911,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SHEA RD": {
@@ -5976,6 +6922,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ORCHARD ST": {
@@ -5986,6 +6933,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RAYMOND ST": {
@@ -5996,6 +6944,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WOOD ST": {
@@ -6006,6 +6955,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "YERXA RD": {
@@ -6016,6 +6966,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WHITTIER ST": {
@@ -6026,6 +6977,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "VINCENT ST": {
@@ -6036,6 +6988,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALNUT AVE": {
@@ -6046,6 +6999,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PORTER PK": {
@@ -6056,6 +7010,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PORTER CIR": {
@@ -6066,6 +7021,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RICHDALE AVE": {
@@ -6076,6 +7032,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "REGENT ST": {
@@ -6086,6 +7043,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KING ST": {
@@ -6096,6 +7054,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMBRIDGE TER": {
@@ -6106,6 +7065,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HERBERT ST": {
@@ -6116,6 +7076,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BUENA VISTA PK": {
@@ -6126,6 +7087,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MEAD ST": {
@@ -6136,6 +7098,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PEMBERTON TER": {
@@ -6146,6 +7109,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SYCAMORE ST": {
@@ -6156,6 +7120,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COGSWELL PL": {
@@ -6166,6 +7131,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PEMBERTON CT": {
@@ -6176,6 +7142,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CYPRESS ST": {
@@ -6186,6 +7153,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HILLSIDE PL": {
@@ -6196,6 +7164,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CUTLER AVE": {
@@ -6206,6 +7175,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUDSON PL": {
@@ -6216,6 +7186,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EMMONS PL": {
@@ -6226,6 +7197,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BALDWIN ST CT": {
@@ -6236,6 +7208,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRONT ST": {
@@ -6261,6 +7234,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.22,
+        "mean": 2.65,
+        "median": 2.85,
+        "p95": 2.89,
+        "max": 2.89
+      },
       "accessible_space_count": 0
     },
     "VINEYARD ST": {
@@ -6271,6 +7251,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ERICSSON ST": {
@@ -6281,6 +7262,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SULLIVAN RD": {
@@ -6291,6 +7273,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORUMBEGA ST": {
@@ -6301,6 +7284,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SPRUCE AVE": {
@@ -6311,6 +7295,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GROZIER RD": {
@@ -6321,6 +7306,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SHALER LN": {
@@ -6331,6 +7317,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LONGFELLOW RD": {
@@ -6341,6 +7328,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAYNARD PL": {
@@ -6351,6 +7339,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MONTAGUE ST": {
@@ -6361,6 +7350,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JAY ST": {
@@ -6371,6 +7361,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WESTERN AVE BRIDGE": {
@@ -6381,6 +7372,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FLORENCE ST": {
@@ -6391,6 +7383,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PLEASANT PL": {
@@ -6401,6 +7394,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MERRIAM ST": {
@@ -6411,6 +7405,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SUNSET RD": {
@@ -6421,6 +7416,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SPINELLI PL": {
@@ -6431,6 +7427,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAWCETT ST": {
@@ -6460,6 +7457,13 @@
           "count": 18
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.81,
+        "mean": 4.07,
+        "median": 4.07,
+        "p95": 4.21,
+        "max": 4.21
+      },
       "accessible_space_count": 1
     },
     "WORTHINGTON ST": {
@@ -6470,6 +7474,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WASHBURN TER": {
@@ -6480,6 +7485,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GOLD STAR RD CT": {
@@ -6490,6 +7496,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WILSON AVE": {
@@ -6500,6 +7507,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SARGENT ST": {
@@ -6510,6 +7518,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CADBURY RD": {
@@ -6520,6 +7529,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "VAN NORDEN ST": {
@@ -6530,6 +7540,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FERN ST": {
@@ -6540,6 +7551,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALDEN SQ RD": {
@@ -6550,6 +7562,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MANASSAS AVE": {
@@ -6560,6 +7573,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAIRFIELD ST": {
@@ -6570,6 +7584,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MT VERNON ST": {
@@ -6595,6 +7610,13 @@
           "count": 8
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.71,
+        "mean": 4.0,
+        "median": 3.85,
+        "p95": 4.45,
+        "max": 4.45
+      },
       "accessible_space_count": 0
     },
     "CHETWYND RD": {
@@ -6605,6 +7627,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MELLEN ST": {
@@ -6615,6 +7638,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAMONT AVE": {
@@ -6625,6 +7649,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GREENOUGH AVE": {
@@ -6635,6 +7660,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GARDNER RD": {
@@ -6645,6 +7671,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MURDOCK ST": {
@@ -6655,6 +7682,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELLSWORTH PK": {
@@ -6665,6 +7693,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLARY ST": {
@@ -6675,6 +7704,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KING PL": {
@@ -6685,6 +7715,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AVON ST": {
@@ -6695,6 +7726,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BAILEY PL": {
@@ -6705,6 +7737,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BALLORD PL": {
@@ -6715,6 +7748,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BATES ST": {
@@ -6725,6 +7759,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BEDFORD ST": {
@@ -6735,6 +7770,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BELLEVUE AVE": {
@@ -6745,6 +7781,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BERKELEY PL": {
@@ -6755,6 +7792,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BERKELEY ST": {
@@ -6765,6 +7803,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BLACKSTONE ST": {
@@ -6790,6 +7829,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.57,
+        "mean": 3.89,
+        "median": 4.05,
+        "p95": 4.06,
+        "max": 4.06
+      },
       "accessible_space_count": 0
     },
     "BLAIR PL": {
@@ -6800,6 +7846,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BLAKE ST": {
@@ -6810,6 +7857,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BLAKESLEE ST": {
@@ -6820,6 +7868,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOARDMAN ST": {
@@ -6830,6 +7879,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOND ST": {
@@ -6840,6 +7890,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROOKLINE ST": {
@@ -6865,6 +7916,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.03,
+        "mean": 3.14,
+        "median": 3.11,
+        "p95": 3.26,
+        "max": 3.26
+      },
       "accessible_space_count": 0
     },
     "GLENN TER": {
@@ -6875,6 +7933,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMELIA AVE": {
@@ -6885,6 +7944,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMP ST": {
@@ -6895,6 +7955,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CARLISLE ST": {
@@ -6905,6 +7966,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHALK ST": {
@@ -6915,6 +7977,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHANNING PL": {
@@ -6925,6 +7988,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHAPMAN PL": {
@@ -6935,6 +7999,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHARLES ST": {
@@ -6972,6 +8037,13 @@
           "count": 28
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.49,
+        "mean": 4.01,
+        "median": 3.96,
+        "p95": 4.32,
+        "max": 4.41
+      },
       "accessible_space_count": 1
     },
     "CHURCH ST": {
@@ -7001,6 +8073,13 @@
           "count": 19
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 0.85,
+        "mean": 4.21,
+        "median": 4.43,
+        "p95": 4.5,
+        "max": 4.52
+      },
       "accessible_space_count": 3
     },
     "CHURCHILL AVE": {
@@ -7011,6 +8090,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "CLARENDON AVE": {
@@ -7021,6 +8101,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLAY ST": {
@@ -7031,6 +8112,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLEMENT CIR": {
@@ -7041,6 +8123,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLEVELAND ST": {
@@ -7051,6 +8134,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLIFTON ST": {
@@ -7061,6 +8145,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLINTON ST": {
@@ -7090,6 +8175,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.75,
+        "mean": 2.06,
+        "median": 2.19,
+        "p95": 2.26,
+        "max": 2.26
+      },
       "accessible_space_count": 0
     },
     "RUSSELL ST": {
@@ -7115,6 +8207,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 9.33,
+        "mean": 9.33,
+        "median": 9.33,
+        "p95": 9.33,
+        "max": 9.33
+      },
       "accessible_space_count": 0
     },
     "CONCORD LN": {
@@ -7125,6 +8224,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COPLEY ST": {
@@ -7135,6 +8235,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CORNELIUS WAY": {
@@ -7145,6 +8246,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CORPORAL BURNS RD": {
@@ -7155,6 +8257,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CORPORAL MCTERNAN ST": {
@@ -7165,6 +8268,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COWPERTHWAITE ST": {
@@ -7175,6 +8279,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CRAIGIE ST": {
@@ -7185,6 +8290,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CRESCENT ST": {
@@ -7195,6 +8301,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CROSS ST": {
@@ -7205,6 +8312,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CUSHING ST": {
@@ -7215,6 +8323,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 1
     },
     "DANA ST": {
@@ -7240,6 +8349,13 @@
           "count": 6
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.55,
+        "mean": 2.79,
+        "median": 2.84,
+        "p95": 2.99,
+        "max": 2.99
+      },
       "accessible_space_count": 0
     },
     "DAVENPORT ST": {
@@ -7265,6 +8381,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.96,
+        "mean": 2.96,
+        "median": 2.96,
+        "p95": 2.97,
+        "max": 2.97
+      },
       "accessible_space_count": 0
     },
     "DAVIS ST": {
@@ -7275,6 +8398,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DOCK ST": {
@@ -7285,6 +8409,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELMWOOD AVE": {
@@ -7295,6 +8420,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EMILY ST": {
@@ -7320,6 +8446,13 @@
           "count": 23
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.91,
+        "mean": 3.13,
+        "median": 3.1,
+        "p95": 3.32,
+        "max": 3.33
+      },
       "accessible_space_count": 0
     },
     "ERIE ST": {
@@ -7345,6 +8478,13 @@
           "count": 6
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.48,
+        "mean": 2.49,
+        "median": 2.49,
+        "p95": 2.5,
+        "max": 2.5
+      },
       "accessible_space_count": 0
     },
     "EMMETT PL": {
@@ -7355,6 +8495,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ESTEN ST": {
@@ -7365,6 +8506,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOLLEN ST": {
@@ -7375,6 +8517,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOLLEN LN": {
@@ -7385,6 +8528,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOUNTAIN TER": {
@@ -7395,6 +8539,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRESH POND PL": {
@@ -7405,6 +8550,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRANVILLE RD": {
@@ -7415,6 +8561,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GROVE AVE": {
@@ -7425,6 +8572,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GURNEY ST": {
@@ -7435,6 +8583,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HADLEY ST": {
@@ -7445,6 +8594,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAMLIN ST": {
@@ -7455,6 +8605,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HASTINGS AVE": {
@@ -7465,6 +8616,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAYES ST": {
@@ -7475,6 +8627,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAYWARD ST": {
@@ -7485,6 +8638,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HEALEY ST": {
@@ -7495,6 +8649,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HEMLOCK RD": {
@@ -7505,6 +8660,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HEWS ST": {
@@ -7515,6 +8671,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HIGH ST": {
@@ -7525,6 +8682,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HILLIARD ST": {
@@ -7535,6 +8693,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLDEN GREEN": {
@@ -7545,6 +8704,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLLIS ST": {
@@ -7555,6 +8715,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLMES ST": {
@@ -7565,6 +8726,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLWORTHY PL": {
@@ -7575,6 +8737,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOMER AVE": {
@@ -7585,6 +8748,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOOPER PL": {
@@ -7610,6 +8774,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 7.53,
+        "mean": 8.4,
+        "median": 8.4,
+        "p95": 9.28,
+        "max": 9.28
+      },
       "accessible_space_count": 0
     },
     "HOUSTON PK": {
@@ -7620,6 +8791,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUBBARD AVE": {
@@ -7630,6 +8802,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUBBARD PARK RD": {
@@ -7640,6 +8813,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HUNTING ST": {
@@ -7650,6 +8824,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRAY GARDENS WEST": {
@@ -7660,6 +8835,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EDUCATION ST": {
@@ -7689,6 +8865,13 @@
           "count": 21
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.72,
+        "mean": 5.83,
+        "median": 6.05,
+        "p95": 6.74,
+        "max": 6.87
+      },
       "accessible_space_count": 1
     },
     "TROWBRIDGE TER": {
@@ -7699,6 +8882,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WARE ST": {
@@ -7709,6 +8893,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "VASSAL LN": {
@@ -7719,6 +8904,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAWN CT": {
@@ -7729,6 +8915,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAWN ST": {
@@ -7739,6 +8926,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINCOLN ST": {
@@ -7749,6 +8937,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINE ST": {
@@ -7774,6 +8963,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.28,
+        "mean": 2.29,
+        "median": 2.29,
+        "p95": 2.31,
+        "max": 2.31
+      },
       "accessible_space_count": 0
     },
     "LINSKEY WAY": {
@@ -7803,6 +8999,13 @@
           "count": 12
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.73,
+        "mean": 3.29,
+        "median": 3.36,
+        "p95": 3.45,
+        "max": 3.45
+      },
       "accessible_space_count": 0
     },
     "LOPEZ ST": {
@@ -7813,6 +9016,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LOWELL ST": {
@@ -7823,6 +9027,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MARION ST": {
@@ -7848,6 +9053,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 8.14,
+        "mean": 8.14,
+        "median": 8.14,
+        "p95": 8.14,
+        "max": 8.14
+      },
       "accessible_space_count": 0
     },
     "MADISON AVE": {
@@ -7858,6 +9070,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MASON ST": {
@@ -7868,6 +9081,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MATIGNON RD": {
@@ -7878,6 +9092,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RICHARD AVE": {
@@ -7888,6 +9103,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAY ST": {
@@ -7898,6 +9114,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ST SAUVEUR CT": {
@@ -7908,6 +9125,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORMAN ST": {
@@ -7918,6 +9136,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORRIS ST": {
@@ -7928,6 +9147,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MILLER AVE": {
@@ -7938,6 +9158,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WOODBRIDGE ST": {
@@ -7948,6 +9169,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MEADOW WAY": {
@@ -7958,6 +9180,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MIDDLESEX ST": {
@@ -7968,6 +9191,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MIFFLIN PL": {
@@ -7978,6 +9202,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MILL ST": {
@@ -7988,6 +9213,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MULLINS CT": {
@@ -7998,6 +9224,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MUSEUM WAY": {
@@ -8008,6 +9235,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WINTER ST": {
@@ -8018,6 +9246,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BLANCHE ST": {
@@ -8028,6 +9257,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ANTRIM ST": {
@@ -8053,6 +9283,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.92,
+        "mean": 2.92,
+        "median": 2.92,
+        "p95": 2.92,
+        "max": 2.92
+      },
       "accessible_space_count": 0
     },
     "CORLISS PL": {
@@ -8063,6 +9300,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CRAWFORD ST": {
@@ -8073,6 +9311,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CRESTO TER": {
@@ -8083,6 +9322,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DEACON ST": {
@@ -8093,6 +9333,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EDUCATION CIR": {
@@ -8122,6 +9363,13 @@
           "count": 11
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 5.75,
+        "mean": 6.73,
+        "median": 6.74,
+        "p95": 8.75,
+        "max": 8.75
+      },
       "accessible_space_count": 0
     },
     "ATHENAEUM ST": {
@@ -8147,6 +9395,13 @@
           "count": 16
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.9,
+        "mean": 3.22,
+        "median": 3.17,
+        "p95": 3.94,
+        "max": 3.94
+      },
       "accessible_space_count": 0
     },
     "REED ST": {
@@ -8157,6 +9412,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MOONEY ST": {
@@ -8167,6 +9423,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SMITH PL": {
@@ -8177,6 +9434,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 2
     },
     "MOORE ST": {
@@ -8202,6 +9460,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.09,
+        "mean": 2.09,
+        "median": 2.09,
+        "p95": 2.09,
+        "max": 2.09
+      },
       "accessible_space_count": 0
     },
     "NORFOLK TER": {
@@ -8212,6 +9477,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORMANDY AVE": {
@@ -8222,6 +9488,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORMANDY TER": {
@@ -8232,6 +9499,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SOUTH NORMANDY AVE": {
@@ -8242,6 +9510,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALKER ST PL": {
@@ -8252,6 +9521,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "OAKLAND ST": {
@@ -8262,6 +9532,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "VILLAGE ST": {
@@ -8272,6 +9543,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "OXFORD AVE": {
@@ -8282,6 +9554,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAIRVIEW AVE": {
@@ -8292,6 +9565,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PRENTISS ST": {
@@ -8302,6 +9576,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "REMINGTON ST": {
@@ -8327,6 +9602,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.11,
+        "mean": 2.11,
+        "median": 2.11,
+        "p95": 2.11,
+        "max": 2.11
+      },
       "accessible_space_count": 0
     },
     "PEABODY ST": {
@@ -8337,6 +9619,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STONE CT": {
@@ -8347,6 +9630,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WHITE ST": {
@@ -8357,6 +9641,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PORTER RD": {
@@ -8382,6 +9667,13 @@
           "count": 4
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.29,
+        "mean": 3.36,
+        "median": 3.36,
+        "p95": 3.44,
+        "max": 3.44
+      },
       "accessible_space_count": 0
     },
     "STINSON CT": {
@@ -8392,6 +9684,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WHITNEY AVE": {
@@ -8402,6 +9695,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROCKWELL ST": {
@@ -8412,6 +9706,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BEACON ST": {
@@ -8422,6 +9717,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SURREY ST": {
@@ -8432,6 +9728,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROYAL AVE": {
@@ -8442,6 +9739,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SHERIDAN ST": {
@@ -8452,6 +9750,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SOUTH ST": {
@@ -8462,6 +9761,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROBERTS RD": {
@@ -8487,6 +9787,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.04,
+        "mean": 3.08,
+        "median": 3.08,
+        "p95": 3.12,
+        "max": 3.12
+      },
       "accessible_space_count": 0
     },
     "QUINCY ST": {
@@ -8512,6 +9819,13 @@
           "count": 23
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.37,
+        "mean": 2.6,
+        "median": 2.64,
+        "p95": 2.72,
+        "max": 2.72
+      },
       "accessible_space_count": 0
     },
     "JFK ST": {
@@ -8541,6 +9855,13 @@
           "count": 31
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.87,
+        "mean": 5.22,
+        "median": 5.38,
+        "p95": 5.56,
+        "max": 5.72
+      },
       "accessible_space_count": 1
     },
     "MAX AVE": {
@@ -8551,6 +9872,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SPARKS PL": {
@@ -8561,6 +9883,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WYMAN RD": {
@@ -8571,6 +9894,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STEARNS ST": {
@@ -8581,6 +9905,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "UNION ST": {
@@ -8591,6 +9916,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "INMAN PL": {
@@ -8601,6 +9927,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WEST PL": {
@@ -8611,6 +9938,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LEONARD AVE": {
@@ -8621,6 +9949,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NICHOLS PL": {
@@ -8631,6 +9960,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CRAIGIE CIR": {
@@ -8641,6 +9971,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NEWPORT RD": {
@@ -8651,6 +9982,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BIRCH ST": {
@@ -8661,6 +9993,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ACORN PK": {
@@ -8671,6 +10004,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CORCORAN LN": {
@@ -8681,6 +10015,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINCOLN LN": {
@@ -8691,6 +10026,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROOKLINE PL": {
@@ -8701,6 +10037,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WINTER ST PL": {
@@ -8711,6 +10048,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "OAK ST": {
@@ -8736,6 +10074,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 1.44,
+        "mean": 1.5,
+        "median": 1.49,
+        "p95": 1.57,
+        "max": 1.57
+      },
       "accessible_space_count": 0
     },
     "SPRINGFIELD ST": {
@@ -8761,6 +10106,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.42,
+        "mean": 10.62,
+        "median": 2.56,
+        "p95": 34.95,
+        "max": 34.95
+      },
       "accessible_space_count": 0
     },
     "CENTRAL SQ": {
@@ -8771,6 +10123,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BU BRIDGE": {
@@ -8781,6 +10134,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GALILEI WAY": {
@@ -8791,6 +10145,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GARDEN TER": {
@@ -8801,6 +10156,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GERRYS LANDING RD": {
@@ -8811,6 +10167,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GLADSTONE ST": {
@@ -8821,6 +10178,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HAZEL ST": {
@@ -8831,6 +10189,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CONCORD TPK": {
@@ -8841,6 +10200,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NEW ST": {
@@ -8851,6 +10211,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MILTON ST": {
@@ -8861,6 +10222,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BELLIS CT": {
@@ -8871,6 +10233,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHESTER ST": {
@@ -8881,6 +10244,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAND BLVD": {
@@ -8891,6 +10255,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALEWIFE T STATION ACCESS RD": {
@@ -8901,6 +10266,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ADLEY RD": {
@@ -8911,6 +10277,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AKRON ST": {
@@ -8921,6 +10288,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ARTHUR PK": {
@@ -8931,6 +10299,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MAGAZINE CT": {
@@ -8941,6 +10310,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MT PLEASANT ST": {
@@ -8951,6 +10321,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMBRIDGEPARK DR": {
@@ -8961,6 +10332,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SOMERVILLE AVE": {
@@ -8971,6 +10343,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STEEL PL": {
@@ -8981,6 +10354,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ABERDEEN AVE": {
@@ -8991,6 +10365,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARVARD BRIDGE": {
@@ -9001,6 +10376,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOVEY AVE": {
@@ -9030,6 +10406,13 @@
           "count": 8
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.71,
+        "mean": 3.35,
+        "median": 3.43,
+        "p95": 3.47,
+        "max": 3.47
+      },
       "accessible_space_count": 0
     },
     "WILLARD ST CT": {
@@ -9040,6 +10423,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOSTER PL": {
@@ -9050,6 +10434,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BUCKINGHAM PL": {
@@ -9060,6 +10445,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PARKER ST": {
@@ -9070,6 +10456,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAIRMONT AVE": {
@@ -9080,6 +10467,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LAUREL ST": {
@@ -9090,6 +10478,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PRINCE ST": {
@@ -9100,6 +10489,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FAIRMONT ST": {
@@ -9110,6 +10500,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALLSTON CT": {
@@ -9120,6 +10511,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RIVER ST BRIDGE": {
@@ -9130,6 +10522,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GLENWOOD AVE": {
@@ -9140,6 +10533,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HASTINGS SQ": {
@@ -9150,6 +10544,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PURRINGTON ST": {
@@ -9160,6 +10555,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COTTAGE CT": {
@@ -9170,6 +10566,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "YORK PL": {
@@ -9180,6 +10577,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CANAL PK": {
@@ -9190,6 +10588,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MYRTLE AVE": {
@@ -9200,6 +10599,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "AUBURN PK": {
@@ -9210,6 +10610,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PILGRIM ST": {
@@ -9220,6 +10621,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "STATE ST": {
@@ -9249,6 +10651,13 @@
           "count": 9
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.98,
+        "mean": 3.28,
+        "median": 3.33,
+        "p95": 3.41,
+        "max": 3.41
+      },
       "accessible_space_count": 0
     },
     "LAWRENCE ST": {
@@ -9259,6 +10668,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GOODMAN RD": {
@@ -9269,6 +10679,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CARLETON ST": {
@@ -9279,6 +10690,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DIVINITY AVE": {
@@ -9289,6 +10701,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DOANE ST": {
@@ -9299,6 +10712,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DONNELL ST": {
@@ -9309,6 +10723,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DOVER ST": {
@@ -9319,6 +10734,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DUDLEY ST": {
@@ -9344,6 +10760,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.75,
+        "mean": 2.89,
+        "median": 2.94,
+        "p95": 2.99,
+        "max": 2.99
+      },
       "accessible_space_count": 0
     },
     "EIGHTH ST": {
@@ -9354,6 +10777,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELLERY ST": {
@@ -9379,6 +10803,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.97,
+        "mean": 3.13,
+        "median": 3.18,
+        "p95": 3.24,
+        "max": 3.24
+      },
       "accessible_space_count": 0
     },
     "ELLSWORTH AVE": {
@@ -9389,6 +10820,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELLERY PL": {
@@ -9399,6 +10831,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JAY ST PL": {
@@ -9409,6 +10842,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KELLEY ST": {
@@ -9419,6 +10853,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KELLY RD": {
@@ -9429,6 +10864,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KENWAY ST": {
@@ -9439,6 +10875,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SECKEL ST": {
@@ -9449,6 +10886,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORFOLK PL": {
@@ -9459,6 +10897,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SUFFOLK ST": {
@@ -9469,6 +10908,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "UPTON ST": {
@@ -9479,6 +10919,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "PERRY ST": {
@@ -9489,6 +10930,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WATSON ST": {
@@ -9499,6 +10941,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROLLINS CT": {
@@ -9509,6 +10952,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SALEM ST": {
@@ -9519,6 +10963,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WILLIAM ST": {
@@ -9529,6 +10974,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SELLERS ST": {
@@ -9554,6 +11000,13 @@
           "count": 7
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.09,
+        "mean": 2.54,
+        "median": 2.59,
+        "p95": 2.79,
+        "max": 2.79
+      },
       "accessible_space_count": 0
     },
     "WEST KENDALL ST": {
@@ -9564,6 +11017,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "KENDALL ST": {
@@ -9574,6 +11028,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ROSELAND ST": {
@@ -9584,6 +11039,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EAST KENDALL ST": {
@@ -9594,6 +11050,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NEWMAN ST": {
@@ -9604,6 +11061,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LONGFELLOW BRIDGE": {
@@ -9614,6 +11072,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EAST ST": {
@@ -9624,6 +11083,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MORGAN AVE": {
@@ -9634,6 +11094,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GLASSWORKS AVE": {
@@ -9644,6 +11105,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "EARHART ST": {
@@ -9654,6 +11116,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LEIGHTON ST": {
@@ -9664,6 +11127,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHARLESTOWN AVE": {
@@ -9674,6 +11138,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GILMORE BRIDGE": {
@@ -9684,6 +11149,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SIDNEY ST EXT": {
@@ -9709,6 +11175,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 9.38,
+        "mean": 9.44,
+        "median": 9.45,
+        "p95": 9.49,
+        "max": 9.49
+      },
       "accessible_space_count": 0
     },
     "ELMWOOD ST": {
@@ -9719,6 +11192,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HOLWORTHY TER": {
@@ -9729,6 +11203,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOYLE TER": {
@@ -9739,6 +11214,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SPRING PL": {
@@ -9749,6 +11225,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ELLERY SQ": {
@@ -9759,6 +11236,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SODEN PL": {
@@ -9769,6 +11247,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SODEN ST": {
@@ -9779,6 +11258,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BROAD CANAL WAY": {
@@ -9804,6 +11284,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 12.56,
+        "mean": 12.56,
+        "median": 12.56,
+        "p95": 12.56,
+        "max": 12.56
+      },
       "accessible_space_count": 0
     },
     "POND PL": {
@@ -9814,6 +11301,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BOARDMAN PL": {
@@ -9824,6 +11312,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "REARDON ST": {
@@ -9834,6 +11323,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BURNS CT": {
@@ -9844,6 +11334,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BRADBURY ST": {
@@ -9854,6 +11345,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHAUNCY TER": {
@@ -9864,6 +11356,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "POPLAR RD": {
@@ -9874,6 +11367,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORTON PL": {
@@ -9884,6 +11378,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WALDEN MEWS": {
@@ -9894,6 +11389,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SHADY HILL SQ": {
@@ -9904,6 +11400,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "RUFO RD": {
@@ -9914,6 +11411,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "TYLER CT": {
@@ -9939,6 +11437,13 @@
           "count": 1
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 8.79,
+        "mean": 8.79,
+        "median": 8.79,
+        "p95": 8.79,
+        "max": 8.79
+      },
       "accessible_space_count": 0
     },
     "LINCOLN WAY": {
@@ -9949,6 +11454,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "DOUGLASS ST": {
@@ -9974,6 +11480,13 @@
           "count": 3
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.09,
+        "mean": 2.13,
+        "median": 2.13,
+        "p95": 2.18,
+        "max": 2.18
+      },
       "accessible_space_count": 0
     },
     "EVERETT ST": {
@@ -9999,6 +11512,13 @@
           "count": 6
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 4.94,
+        "mean": 5.1,
+        "median": 5.1,
+        "p95": 5.32,
+        "max": 5.32
+      },
       "accessible_space_count": 1
     },
     "DAY ST": {
@@ -10009,6 +11529,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "BELVIDERE PL": {
@@ -10019,6 +11540,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "HARWELL DR": {
@@ -10029,6 +11551,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WELLINGTON LN": {
@@ -10039,6 +11562,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SIDNEY PL": {
@@ -10049,6 +11573,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FARRAR ST": {
@@ -10059,6 +11584,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ATHENS TER": {
@@ -10069,6 +11595,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FARWELL PL": {
@@ -10094,6 +11621,13 @@
           "count": 5
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 2.48,
+        "mean": 2.52,
+        "median": 2.53,
+        "p95": 2.54,
+        "max": 2.54
+      },
       "accessible_space_count": 0
     },
     "CHANNING ST": {
@@ -10104,6 +11638,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHANNING CIR": {
@@ -10114,6 +11649,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SHADY HILL RD": {
@@ -10124,6 +11660,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WILSON RD": {
@@ -10134,6 +11671,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MOULTON ST": {
@@ -10144,6 +11682,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRISBIE PL": {
@@ -10154,6 +11693,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COGSWELL AVE": {
@@ -10164,6 +11704,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SEDGWICK RD": {
@@ -10174,6 +11715,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WESTACOTT CT": {
@@ -10184,6 +11726,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FRANKLIN PL": {
@@ -10194,6 +11737,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CAMBRIDGE PKWY": {
@@ -10204,6 +11748,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "WATER ST": {
@@ -10214,6 +11759,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JACOBS ST": {
@@ -10224,6 +11770,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "NORTH FIRST ST": {
@@ -10234,6 +11781,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHILD ST": {
@@ -10244,6 +11792,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COTTAGE PARK AVE": {
@@ -10269,6 +11818,13 @@
           "count": 2
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.3,
+        "mean": 3.31,
+        "median": 3.31,
+        "p95": 3.32,
+        "max": 3.32
+      },
       "accessible_space_count": 0
     },
     "COGSWELL CT": {
@@ -10279,6 +11835,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "COTTAGE ROW": {
@@ -10289,6 +11846,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "FOURTH ST PL": {
@@ -10299,6 +11857,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "LINWOOD CT": {
@@ -10309,6 +11868,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "APPLETON TER": {
@@ -10319,6 +11879,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CHERRY CT": {
@@ -10329,6 +11890,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "JACKSON PL": {
@@ -10339,6 +11901,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLIFTON CIR": {
@@ -10349,6 +11912,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "CLIFTON PL": {
@@ -10359,6 +11923,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "GRAHAM PL": {
@@ -10369,6 +11934,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "SOUTH WILLIAM WAY": {
@@ -10379,6 +11945,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "ALEWIFE PK": {
@@ -10389,6 +11956,7 @@
       "meter_operation_hours": [],
       "meter_max_times": [],
       "meter_rates": [],
+      "meter_match_distance_meters": null,
       "accessible_space_count": 0
     },
     "MUNROE ST": {
@@ -10414,6 +11982,13 @@
           "count": 15
         }
       ],
+      "meter_match_distance_meters": {
+        "min": 3.09,
+        "mean": 3.2,
+        "median": 3.21,
+        "p95": 3.36,
+        "max": 3.36
+      },
       "accessible_space_count": 0
     }
   }

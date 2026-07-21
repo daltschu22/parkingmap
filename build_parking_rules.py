@@ -3,6 +3,7 @@ Build a structured per-street parking rules dataset from Somerville traffic regu
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 from datetime import datetime, timezone
@@ -15,7 +16,20 @@ DATA_DIR = BASE_DIR / "data"
 PDF_PATH = DATA_DIR / "traffic-regulations.pdf"
 STREETS_PATH = DATA_DIR / "streets.geojson"
 OUTPUT_PATH = DATA_DIR / "parking_rules_by_street.json"
-PDF_TEXT_PATH = DATA_DIR / "pdf_text.txt"
+SOURCE_METADATA_PATH = PDF_PATH.with_suffix(PDF_PATH.suffix + ".metadata.json")
+PARSER_VERSION = 2
+
+
+class SourceValidationError(ValueError):
+    """Raised when the legal source is missing expected identity or schedules."""
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
 
 
 def normalize_street_name(value: str | None) -> str:
@@ -89,14 +103,6 @@ def find_schedule_page(reader: PdfReader, schedule_letter: str) -> int:
     return matches[-1]
 
 
-def find_schedule_line(lines: list[str], schedule_letter: str) -> int:
-    pattern = re.compile(rf"^\s*SCHEDULE\s+{schedule_letter}\s*$", re.IGNORECASE)
-    matches = [i for i, line in enumerate(lines) if pattern.match(line.strip())]
-    if not matches:
-        return -1
-    return matches[-1]
-
-
 def extract_schedule_lines(reader: PdfReader, start_page: int, end_page: int) -> list[str]:
     if start_page == -1:
         return []
@@ -107,19 +113,6 @@ def extract_schedule_lines(reader: PdfReader, start_page: int, end_page: int) ->
     for page_index in range(start_page, end_page):
         text = reader.pages[page_index].extract_text() or ""
         out.extend(split_lines(text))
-    return out
-
-
-def extract_schedule_lines_from_text(
-    lines: list[str], start_letter: str, end_letter: str
-) -> list[str]:
-    start = find_schedule_line(lines, start_letter)
-    end = find_schedule_line(lines, end_letter) if end_letter else -1
-    if start == -1:
-        return []
-    if end == -1 or end <= start:
-        end = len(lines)
-    out = [line.strip() for line in lines[start + 1:end] if line.strip()]
     return out
 
 
@@ -196,30 +189,79 @@ def line_has_time_limit(row_text: str) -> bool:
     return any(re.search(pattern, text) for pattern in patterns)
 
 
+def source_metadata(reader: PdfReader, first_page_text: str) -> dict:
+    if not SOURCE_METADATA_PATH.exists():
+        raise SourceValidationError(
+            "Traffic-regulation fetch metadata is missing; run the Somerville source "
+            "fetcher before rebuilding."
+        )
+    try:
+        metadata = json.loads(SOURCE_METADATA_PATH.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SourceValidationError(
+            "Traffic-regulation fetch metadata is unreadable; refetch the source before "
+            "rebuilding."
+        ) from exc
+
+    edition_match = re.search(
+        r"\b(January|February|March|April|May|June|July|August|September|"
+        r"October|November|December)\s+(20\d{2})\b",
+        first_page_text,
+        re.IGNORECASE,
+    )
+    edition = edition_match.group(0).title() if edition_match else None
+    digest = sha256_file(PDF_PATH)
+    recorded_digest = metadata.get("sha256")
+    if recorded_digest and recorded_digest != digest:
+        raise SourceValidationError(
+            "Traffic-regulation PDF does not match its fetch metadata; refetch the source "
+            "before rebuilding."
+        )
+
+    return {
+        "id": metadata.get("id", "somerville_traffic_regulations_pdf"),
+        "file": str(PDF_PATH.relative_to(BASE_DIR)),
+        "url": metadata.get("final_url") or metadata.get("url"),
+        "downloaded_at_utc": metadata.get("downloaded_at_utc"),
+        "last_modified": metadata.get("last_modified"),
+        "etag": metadata.get("etag"),
+        "bytes": PDF_PATH.stat().st_size,
+        "sha256": digest,
+        "page_count": len(reader.pages),
+        "edition": edition,
+    }
+
+
 def build_rules() -> dict:
     candidates, display_names = load_street_candidates()
     reader = PdfReader(PDF_PATH)
+    first_page_text = reader.pages[0].extract_text() or ""
+    first_page_identity = first_page_text.casefold()
+    if "somerville" not in first_page_identity or "traffic regulations" not in first_page_identity:
+        raise SourceValidationError(
+            "Source PDF does not identify itself as Somerville Traffic Regulations."
+        )
 
     page_d = find_schedule_page(reader, "D")
     page_e = find_schedule_page(reader, "E")
     page_f = find_schedule_page(reader, "F")
     page_g = find_schedule_page(reader, "G")
+    pages = {"D": page_d, "E": page_e, "F": page_f, "G": page_g}
+    missing_schedules = [letter for letter, page in pages.items() if page < 0]
+    if missing_schedules:
+        raise SourceValidationError(
+            "Source PDF is missing expected schedule headings: "
+            + ", ".join(missing_schedules)
+        )
 
     schedule_d_lines = extract_schedule_lines(reader, page_d, page_e)
     schedule_f_lines = extract_schedule_lines(reader, page_f, page_g)
     schedule_d_rows = rows_from_schedule(schedule_d_lines, candidates)
     schedule_f_rows = rows_from_schedule(schedule_f_lines, candidates)
-
-    # Fallback for environments where direct PDF text extraction layout differs.
-    if not schedule_d_rows and not schedule_f_rows and PDF_TEXT_PATH.exists():
-        text_lines = PDF_TEXT_PATH.read_text(errors="ignore").splitlines()
-        schedule_d_rows = rows_from_schedule(
-            extract_schedule_lines_from_text(text_lines, "D", "E"),
-            candidates,
-        )
-        schedule_f_rows = rows_from_schedule(
-            extract_schedule_lines_from_text(text_lines, "F", "G"),
-            candidates,
+    if not schedule_d_rows or not schedule_f_rows:
+        raise SourceValidationError(
+            "Direct PDF extraction produced no Schedule D or Schedule F rows; refusing "
+            "to reuse an unverified text fallback."
         )
 
     streets: dict[str, dict] = {}
@@ -267,7 +309,9 @@ def build_rules() -> dict:
 
     return {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+        "parser_version": PARSER_VERSION,
         "source_pdf": PDF_PATH.name,
+        "source": source_metadata(reader, first_page_text),
         "page_index": {
             "schedule_d_start_page": page_d + 1 if page_d >= 0 else None,
             "schedule_e_start_page": page_e + 1 if page_e >= 0 else None,

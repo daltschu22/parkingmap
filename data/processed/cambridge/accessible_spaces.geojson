@@ -4,7 +4,17 @@
     "municipality": "Cambridge",
     "source_id": "cambridge_gis",
     "accessible_spaces_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
-    "generated_at_utc": "2026-07-20T20:56:13.669454+00:00",
+    "source": {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
+      "fetched_at_utc": "2026-07-21T13:31:42.529242+00:00",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "etag": "\"2c64005c065a17e0695043053cb7c0875bcc2f9453b4e82ed554b26e8602ed55\"",
+      "bytes": 61717,
+      "sha256": "a96f426af2b2e4279699e8bc86cd4e52cd714c7ab53dd7242bdec2145fed399e"
+    },
+    "generated_at_utc": "2026-07-21T13:32:16.584063+00:00",
     "feature_count": 154
   },
   "features": [

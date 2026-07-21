@@ -4,7 +4,7 @@ Interactive web application for visualizing street-level parking rules in Boston
 
 The long-term goal is to answer a practical curbside question: for a specific street or block, can a driver legally park there, and under what conditions? The app should distinguish resident-permit restrictions, meters, time limits, no-parking rules, private streets, and other posted constraints as accurately as the available municipal data allows.
 
-See [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md), [docs/CURB_SEGMENT_STRATEGY.md](docs/CURB_SEGMENT_STRATEGY.md), [docs/DATA_PIPELINE.md](docs/DATA_PIPELINE.md), [docs/IMAGERY_SOURCES.md](docs/IMAGERY_SOURCES.md), [docs/SPARK_IMAGE_WORKLOAD.md](docs/SPARK_IMAGE_WORKLOAD.md), [docs/MEDFORD_SOURCES.md](docs/MEDFORD_SOURCES.md), [docs/CAMBRIDGE_SOURCES.md](docs/CAMBRIDGE_SOURCES.md), and [docs/ROADMAP.md](docs/ROADMAP.md) for the product scope and implementation direction.
+See [docs/PROJECT_GOAL.md](docs/PROJECT_GOAL.md), [docs/CURB_SEGMENT_STRATEGY.md](docs/CURB_SEGMENT_STRATEGY.md), [docs/DATA_PIPELINE.md](docs/DATA_PIPELINE.md), [docs/IMAGERY_SOURCES.md](docs/IMAGERY_SOURCES.md), [docs/SPARK_IMAGE_WORKLOAD.md](docs/SPARK_IMAGE_WORKLOAD.md), [docs/MEDFORD_SOURCES.md](docs/MEDFORD_SOURCES.md), [docs/CAMBRIDGE_SOURCES.md](docs/CAMBRIDGE_SOURCES.md), [docs/BOSTON_SOURCES.md](docs/BOSTON_SOURCES.md), and [docs/ROADMAP.md](docs/ROADMAP.md) for the product scope and implementation direction.
 
 ## Current Status
 
@@ -34,6 +34,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 ```bash
 # Install dependencies and run
 uv sync
+uv run python scripts/fetch_public_sources.py --municipality somerville
 uv run python build_parking_rules.py
 uv run python build_parking_coverage.py
 uv run python -m parkingmap
@@ -57,7 +58,7 @@ To rebuild Cambridge GIS-derived data:
 python3 build_cambridge_data.py
 ```
 
-The Cambridge output keeps meter polygons as their own evidence layer plus approximate nearest-street summaries. A street with one matched meter is not treated as fully metered.
+The Cambridge output keeps meter polygons as their own evidence layer plus approximate nearest-street summaries. Each meter feature retains its nearest-centerline distance and threshold for review. A street with one matched meter is not treated as fully metered.
 
 To start indexing Mapillary imagery metadata:
 
@@ -97,7 +98,7 @@ node --check static/js/main.js
 ## Data Sources
 
 - **Somerville Street Centerlines**: City of Somerville GIS via [data.somervillema.gov](https://data.somervillema.gov)
-- **Somerville Parking Regulations**: [Traffic Commission Regulations PDF](https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-regulations_1.pdf)
+- **Somerville Parking Regulations**: [Traffic Commission Regulations PDF](https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-rules-regulations.pdf)
   - Schedule E: Permit Parking streets
   - Schedule D: Parking prohibitions
   - Schedule F: Metered parking zones
@@ -108,6 +109,7 @@ node --check static/js/main.js
 ## Parking Classification Logic
 
 - `build_parking_rules.py` parses Schedule D/F from the city PDF and writes `data/parking_rules_by_street.json`.
+- `scripts/fetch_public_sources.py` validates declared PDFs/JSON before replacement and records resolved URL, HTTP validators, byte count, and SHA-256 metadata.
 - `build_parking_coverage.py` combines loaded city sources into evidence-backed coverage summaries and Medford segment-level matches.
 - Public streets default to **Resident Permit Required** (Schedule E was removed citywide in 2010).
 - If a public street has Schedule F rows, it is labeled **Permit Street with Metered Segments**.

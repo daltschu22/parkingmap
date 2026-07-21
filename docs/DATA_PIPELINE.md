@@ -46,6 +46,15 @@ Public source files are tracked in `data/source_manifest.json`. Fetch them with:
 python3 scripts/fetch_public_sources.py --municipality medford
 ```
 
+Refresh Somerville's canonical legal source before rebuilding its rules:
+
+```bash
+python3 scripts/fetch_public_sources.py --municipality somerville
+python3 build_parking_rules.py
+```
+
+The generic fetcher validates declared PDF/JSON content before atomically replacing a local artifact. Its sidecar metadata records the requested and resolved URLs, retrieval time, Last-Modified, ETag, byte count, and SHA-256. Builders should copy this provenance into derived outputs and fail closed when the source identity, hash, or expected structure does not match.
+
 Cambridge GIS sources are currently downloaded directly by:
 
 ```bash
@@ -93,4 +102,6 @@ Generated files should be reproducible. Scripts should:
 - Read raw source files or documented source URLs.
 - Normalize street names through shared utilities.
 - Emit structured JSON or GeoJSON with source metadata.
+- Preserve source hashes, retrieval times, resolved URLs, and parser versions.
+- Fail rather than silently reuse text extracted from a different source edition.
 - Avoid hand-editing generated outputs except for temporary debugging.

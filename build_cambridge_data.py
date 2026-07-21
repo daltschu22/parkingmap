@@ -2,12 +2,13 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 import math
 from collections import Counter, defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
-from urllib.request import urlopen
+from urllib.request import Request, urlopen
 
 BASE_DIR = Path(__file__).parent
 OUTPUT_DIR = BASE_DIR / "data" / "processed" / "cambridge"
@@ -38,9 +39,22 @@ def is_active_meter_status(value: object) -> bool:
     return clean_text(value).casefold() == "in service"
 
 
-def fetch_json(url: str) -> dict:
-    with urlopen(url, timeout=60) as response:
-        return json.loads(response.read())
+def fetch_json(url: str) -> tuple[dict, dict]:
+    request = Request(url, headers={"User-Agent": "parkingmap Cambridge GIS builder"})
+    with urlopen(request, timeout=60) as response:
+        content = response.read()
+        payload = json.loads(content)
+        metadata = {
+            "url": url,
+            "final_url": response.geturl(),
+            "fetched_at_utc": datetime.now(timezone.utc).isoformat(),
+            "content_type": response.headers.get("Content-Type"),
+            "last_modified": response.headers.get("Last-Modified"),
+            "etag": response.headers.get("ETag"),
+            "bytes": len(content),
+            "sha256": hashlib.sha256(content).hexdigest(),
+        }
+        return payload, metadata
 
 
 def normalize_street_name(value: str | None) -> str:
@@ -235,9 +249,10 @@ def build_street_index(features: list[dict]) -> list[dict]:
 
 def nearest_street(
     point: tuple[float, float], street_index: list[dict], origin_lat: float
-) -> tuple[str, float]:
+) -> tuple[str, str, float]:
     local_point = to_local_meters(point, origin_lat)
     best_key = ""
+    best_name = ""
     best_distance = float("inf")
     for street in street_index:
         for start, end in street["segments"]:
@@ -245,10 +260,33 @@ def nearest_street(
             if distance < best_distance:
                 best_distance = distance
                 best_key = street["street_key"]
-    return best_key, best_distance
+                best_name = street["street_name"]
+    return best_key, best_name, best_distance
 
 
-def summarize_metered_spaces(meters: dict, street_features: list[dict]) -> dict:
+def summarize_distances(distances: list[float]) -> dict | None:
+    if not distances:
+        return None
+    ordered = sorted(distances)
+    p95_index = min(len(ordered) - 1, math.ceil(len(ordered) * 0.95) - 1)
+    middle = len(ordered) // 2
+    median = (
+        ordered[middle]
+        if len(ordered) % 2
+        else (ordered[middle - 1] + ordered[middle]) / 2
+    )
+    return {
+        "min": round(ordered[0], 2),
+        "mean": round(sum(ordered) / len(ordered), 2),
+        "median": round(median, 2),
+        "p95": round(ordered[p95_index], 2),
+        "max": round(ordered[-1], 2),
+    }
+
+
+def summarize_metered_spaces(
+    meter_features: list[dict], street_features: list[dict]
+) -> dict:
     street_index = build_street_index(street_features)
     all_points = [
         tuple(point)
@@ -265,29 +303,45 @@ def summarize_metered_spaces(meters: dict, street_features: list[dict]) -> dict:
             "meter_operation_hours": Counter(),
             "meter_max_times": Counter(),
             "meter_rates": Counter(),
+            "match_distances": [],
         }
     )
     unmatched = 0
-    for feature in meters.get("features", []):
+    all_match_distances = []
+    for feature in meter_features:
+        props = feature.get("properties") or {}
         point = polygon_centroid(feature.get("geometry") or {})
         if not point:
+            props["MATCH_CONFIDENCE"] = "unmatched_no_geometry"
             unmatched += 1
             continue
-        street_key, distance = nearest_street(point, street_index, origin_lat)
+        street_key, street_name, distance = nearest_street(
+            point, street_index, origin_lat
+        )
+        props["NEAREST_STREET"] = street_name
+        props["NEAREST_STREET_KEY"] = street_key
+        props["MATCH_DISTANCE_METERS"] = round(distance, 2)
+        props["MATCH_THRESHOLD_METERS"] = METER_MATCH_THRESHOLD_METERS
         if not street_key or distance > METER_MATCH_THRESHOLD_METERS:
+            props["MATCH_CONFIDENCE"] = "unmatched_beyond_threshold"
             unmatched += 1
             continue
-        props = feature.get("properties") or {}
+        props["MATCHED_STREET"] = street_name
+        props["MATCHED_STREET_KEY"] = street_key
+        props["MATCH_CONFIDENCE"] = "nearest_street_approx"
         summary = summaries[street_key]
         summary["meter_count_estimate"] += 1
-        if is_active_meter_status(props.get("Status")):
+        if is_active_meter_status(props.get("STATUS")):
             summary["active_meter_count_estimate"] += 1
-        summary["meter_operation_hours"][clean_text(props.get("OperationHours"))] += 1
-        summary["meter_max_times"][clean_text(props.get("MaxTime"))] += 1
-        summary["meter_rates"][clean_text(props.get("Rate"))] += 1
+        summary["meter_operation_hours"][clean_text(props.get("OPERATION_HOURS"))] += 1
+        summary["meter_max_times"][clean_text(props.get("MAX_TIME"))] += 1
+        summary["meter_rates"][clean_text(props.get("RATE"))] += 1
+        summary["match_distances"].append(distance)
+        all_match_distances.append(distance)
     return {
         "streets": summaries,
         "unmatched_meter_spaces": unmatched,
+        "match_distance_meters": summarize_distances(all_match_distances),
     }
 
 
@@ -310,9 +364,9 @@ def counter_to_list(counter: Counter) -> list[dict]:
 
 
 def build() -> tuple[dict, dict, dict, dict]:
-    raw_streets = fetch_json(STREET_CENTERLINES_URL)
-    raw_meters = fetch_json(METERED_SPACES_URL)
-    raw_accessible = fetch_json(ACCESSIBLE_SPACES_URL)
+    raw_streets, street_source = fetch_json(STREET_CENTERLINES_URL)
+    raw_meters, meter_source = fetch_json(METERED_SPACES_URL)
+    raw_accessible, accessible_source = fetch_json(ACCESSIBLE_SPACES_URL)
 
     street_features = [
         normalize_street_feature(feature)
@@ -329,7 +383,7 @@ def build() -> tuple[dict, dict, dict, dict]:
         for feature in raw_accessible.get("features", [])
         if feature.get("geometry")
     ]
-    meter_summary = summarize_metered_spaces(raw_meters, street_features)
+    meter_summary = summarize_metered_spaces(meter_features, street_features)
     accessible_counts = summarize_accessible_spaces(raw_accessible)
 
     rules = {}
@@ -344,6 +398,7 @@ def build() -> tuple[dict, dict, dict, dict]:
                 "meter_operation_hours": [],
                 "meter_max_times": [],
                 "meter_rates": [],
+                "meter_match_distance_meters": None,
                 "accessible_space_count": accessible_counts.get(key, 0),
             }
 
@@ -363,6 +418,9 @@ def build() -> tuple[dict, dict, dict, dict]:
         )
         record["meter_max_times"] = counter_to_list(summary["meter_max_times"])
         record["meter_rates"] = counter_to_list(summary["meter_rates"])
+        record["meter_match_distance_meters"] = summarize_distances(
+            summary["match_distances"]
+        )
 
     now = datetime.now(timezone.utc).isoformat()
     streets_geojson = {
@@ -371,6 +429,7 @@ def build() -> tuple[dict, dict, dict, dict]:
             "municipality": "Cambridge",
             "source_id": SOURCE_ID,
             "street_centerlines_url": STREET_CENTERLINES_URL,
+            "source": street_source,
             "generated_at_utc": now,
             "feature_count": len(street_features),
         },
@@ -383,10 +442,18 @@ def build() -> tuple[dict, dict, dict, dict]:
         "street_centerlines_url": STREET_CENTERLINES_URL,
         "metered_spaces_url": METERED_SPACES_URL,
         "accessible_spaces_url": ACCESSIBLE_SPACES_URL,
+        "sources": {
+            "street_centerlines": street_source,
+            "metered_spaces": meter_source,
+            "accessible_spaces": accessible_source,
+        },
         "parser_note": (
             "Meter polygons are matched to nearest street centerline; this is a street-level "
-            "summary and must not be treated as exact curb geometry."
+            "summary and must not be treated as exact curb geometry. Match distance is "
+            "retained on each meter feature for quality review."
         ),
+        "meter_match_threshold_meters": METER_MATCH_THRESHOLD_METERS,
+        "meter_match_distance_meters": meter_summary["match_distance_meters"],
         "street_count": len(rules),
         "metered_street_count": sum(
             1 for record in rules.values() if record.get("meter_count_estimate", 0) > 0
@@ -400,6 +467,7 @@ def build() -> tuple[dict, dict, dict, dict]:
             "municipality": "Cambridge",
             "source_id": SOURCE_ID,
             "metered_spaces_url": METERED_SPACES_URL,
+            "source": meter_source,
             "generated_at_utc": now,
             "feature_count": len(meter_features),
         },
@@ -411,6 +479,7 @@ def build() -> tuple[dict, dict, dict, dict]:
             "municipality": "Cambridge",
             "source_id": SOURCE_ID,
             "accessible_spaces_url": ACCESSIBLE_SPACES_URL,
+            "source": accessible_source,
             "generated_at_utc": now,
             "feature_count": len(accessible_features),
         },

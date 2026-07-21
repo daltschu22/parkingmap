@@ -8,7 +8,7 @@ This inventory tracks the first Cambridge public sources wired into the app.
 - Metered parking spaces: Cambridge GIS `TRAFFIC_MeteredParkingSpaces.geojson`
 - Public accessible parking spaces: Cambridge GIS `TRAFFIC_PublicHandicapParkingSpaces.geojson`
 
-The source URLs are recorded in `data/source_manifest.json` and in the generated Cambridge output files.
+The source URLs are recorded in `data/source_manifest.json` and in the generated Cambridge output files. The builder also records SHA-256, byte count, retrieval time, ETag, and resolved URL for each downloaded layer.
 
 ## Builder
 
@@ -36,8 +36,9 @@ Accessible spaces are counted by their source `StreetName` field.
 The Cambridge meter layer is stronger than a pure street-name regulation table because each meter is spatial data. It is still not a final curb segment model:
 
 - Meter polygons are nearest-matched to street centerlines, not snapped to a curb side.
+- Each normalized meter feature retains the matched/nearest street, match distance, 45-meter threshold, and match confidence so the approximation can be audited.
 - The current output summarizes by street name.
 - A single matched meter must not classify a whole street as metered.
 - Use `meter_match_confidence: nearest_street_approx` and the meter counts as segment evidence until curb-side geometry exists.
 
-Future Cambridge work should add resident-permit, street-cleaning, loading-zone, no-parking, and sign-regulation sources.
+The manifest also tracks the official traffic-regulation schedule index and Aggregated Street Occupancy Permits dataset as planned sources. Future Cambridge work should ingest the legal side/from/to schedules as baseline curb records and query only active temporary permits as dated overrides, then add resident-permit, street-cleaning, loading-zone, no-parking, and sign-regulation sources.

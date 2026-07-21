@@ -374,6 +374,8 @@ function showStreetDetails(properties) {
         'MUNICIPALITY',
         'STNAME',
         'OWNERSHIP',
+        'OWNERSHIP_SOURCE',
+        'OWNERSHIP_CONFIDENCE',
         'FUNC_CLASS',
         'ROAD_TYPE',
         'FROM_STREET',
@@ -393,7 +395,8 @@ function showStreetDetails(properties) {
         'PARKING_CAMBRIDGE_ACCESSIBLE_SPACE_COUNT',
         'PARKING_CAMBRIDGE_METER_HOURS',
         'PARKING_CAMBRIDGE_METER_MAX_TIMES',
-        'PARKING_CAMBRIDGE_METER_RATES'
+        'PARKING_CAMBRIDGE_METER_RATES',
+        'PARKING_CAMBRIDGE_MATCH_DISTANCE'
     ];
     
     for (const key of displayProps) {
@@ -432,7 +435,12 @@ function createMeterEvidencePopup(properties) {
     const hours = properties.OPERATION_HOURS || 'Hours unknown';
     const maxTime = properties.MAX_TIME || 'Max time unknown';
     const rate = properties.RATE || 'Rate unknown';
-    return `<strong>Cambridge meter space</strong><br>${escapeHtml(status)}<br>${escapeHtml(hours)}<br>${escapeHtml(maxTime)}<br>${escapeHtml(rate)}`;
+    const matchedStreet = properties.MATCHED_STREET || properties.NEAREST_STREET;
+    const matchDistance = Number(properties.MATCH_DISTANCE_METERS);
+    const matchText = matchedStreet && Number.isFinite(matchDistance)
+        ? `<br>Nearest centerline: ${escapeHtml(matchedStreet)} (${escapeHtml(matchDistance.toFixed(1))} m, approximate)`
+        : '<br>Nearest-street match unavailable';
+    return `<strong>Cambridge meter space</strong><br>${escapeHtml(status)}<br>${escapeHtml(hours)}<br>${escapeHtml(maxTime)}<br>${escapeHtml(rate)}${matchText}`;
 }
 
 function createAccessibleEvidencePopup(properties) {

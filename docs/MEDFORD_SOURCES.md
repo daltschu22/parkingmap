@@ -30,6 +30,8 @@ python3 scripts/fetch_public_sources.py --municipality medford
 
 - `data/processed/medford/streets.geojson`
 
+Street ownership in this output is only an explicit MassDOT attribute inference. Each segment carries `OWNERSHIP_SOURCE` and `OWNERSHIP_CONFIDENCE`; unresolved attributes remain `Unknown`. The official public/private ways PDF has not been georegistered and is not silently promoted to segment ownership.
+
 The JSON output preserves resident-permit rows and marks rows as:
 
 - `likely_full_street`
@@ -41,6 +43,7 @@ Rows marked `partial_or_segment_specific` must not be painted as whole-street pa
 ## Next Medford Work
 
 - Parse public/private ways into a street ownership dataset.
+- Review Traffic Commission decisions as a dated rule-change log.
 - Georeference or digitize the G Zone map.
 - Extract pay-to-park and business-permit spans from the Medford parking maps.
 - Match resident-permit rows to curb spans using address ranges, cross streets, side-of-street phrases, and distance text.

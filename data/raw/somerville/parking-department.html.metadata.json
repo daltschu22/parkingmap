@@ -1,0 +1,15 @@
+{
+  "id": "somerville_parking_department_page",
+  "title": "Somerville Parking Department",
+  "municipality": "somerville",
+  "category": "source_index",
+  "destination": "data/raw/somerville/parking-department.html",
+  "url": "https://www.somervillema.gov/departments/parking-department",
+  "final_url": "https://www.somervillema.gov/departments/parking-department",
+  "fetched_at_utc": "2026-07-21T21:32:06.844746+00:00",
+  "content_type": "text/html; charset=UTF-8",
+  "last_modified": "Tue, 21 Jul 2026 21:02:58 GMT",
+  "etag": "W/\"1784667778\"",
+  "bytes": 131741,
+  "sha256": "53771c6967f23d26b9f5a39c1b6e3e381ff86c6839f2117082d52e9df3f342e0"
+}

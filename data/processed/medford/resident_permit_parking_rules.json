@@ -1,8 +1,18 @@
 {
-  "generated_at_utc": "2026-05-23T09:56:29.810820+00:00",
+  "generated_at_utc": "2026-07-21T21:14:07.995424+00:00",
   "municipality": "medford",
   "source_id": "medford_resident_permit_streets_pdf",
   "source_file": "data/raw/medford/resident-permit-parking-streets.pdf",
+  "source": {
+    "id": "medford_resident_permit_streets_pdf",
+    "file": "data/raw/medford/resident-permit-parking-streets.pdf",
+    "url": "https://resources.finalsite.net/images/v1770298632/medfordmaorg/d3rwdrnsqqa3xwk4h5v0/ResidentPermitParkingStreetsNEW02-04-26-Sheet.pdf",
+    "downloaded_at_utc": "2026-07-21T21:04:30.078902+00:00",
+    "last_modified": "Thu, 05 Feb 2026 13:37:13 GMT",
+    "etag": "\"683dbf6e170ffda8dffb88bd74255aef\"",
+    "bytes": 104463,
+    "sha256": "d15dfa588df1f25015a0be6423176ecf4adc610c2a47771ded0e61f244eec63e"
+  },
   "parser_note": "First-pass text extraction from the Medford resident-permit PDF. Rows with partial_or_segment_specific scope must not be applied to an entire street.",
   "row_count": 191,
   "street_count": 181,

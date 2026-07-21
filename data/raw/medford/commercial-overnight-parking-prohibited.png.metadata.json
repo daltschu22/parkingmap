@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "citywide_rule",
   "url": "https://www.medfordma.org/fs/resource-manager/view/8c352261-50aa-4a26-b74e-72de15060207",
-  "downloaded_at_utc": "2026-05-23T09:54:14.255036+00:00",
+  "final_url": "https://resources.finalsite.net/images/f_auto,q_auto/v1698158937/medfordmaorg/m8vb1la1ahenldnmb6qp/commercialparking.png",
+  "destination": "data/raw/medford/commercial-overnight-parking-prohibited.png",
+  "downloaded_at_utc": "2026-07-21T21:04:30.929112+00:00",
   "http_status": 200,
   "content_type": "image/png",
-  "bytes": 240135
+  "last_modified": "Tue, 24 Oct 2023 18:01:02 GMT",
+  "etag": "\"4d02c9ebfa1771f19487f7ef4f4305e7\"",
+  "bytes": 240135,
+  "sha256": "dd5214148654faa944c2097982af3900d341301ad9345b92c06a8c0eb27d7769"
 }

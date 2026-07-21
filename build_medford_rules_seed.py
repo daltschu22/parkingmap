@@ -5,6 +5,7 @@ partial, such as address ranges, side-of-street rules, and from/to blocks.
 """
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import shutil
@@ -15,11 +16,51 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
 RAW_PATH = BASE_DIR / "data" / "raw" / "medford" / "resident-permit-parking-streets.pdf"
+SOURCE_METADATA_PATH = RAW_PATH.with_suffix(RAW_PATH.suffix + ".metadata.json")
 OUTPUT_DIR = BASE_DIR / "data" / "processed" / "medford"
 OUTPUT_PATH = OUTPUT_DIR / "resident_permit_parking_rules.json"
 TEXT_PATH = OUTPUT_DIR / "resident_permit_parking_text.txt"
 
 SOURCE_ID = "medford_resident_permit_streets_pdf"
+
+
+class SourceValidationError(ValueError):
+    """Raised when the Medford PDF and its fetch provenance disagree."""
+
+
+def sha256_file(path: Path) -> str:
+    digest = hashlib.sha256()
+    with path.open("rb") as handle:
+        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def source_metadata() -> dict:
+    if not SOURCE_METADATA_PATH.exists():
+        raise SourceValidationError(
+            "Medford source metadata is missing; refetch official sources before rebuilding."
+        )
+    try:
+        metadata = json.loads(SOURCE_METADATA_PATH.read_text())
+    except (OSError, json.JSONDecodeError) as exc:
+        raise SourceValidationError("Medford source metadata is unreadable") from exc
+
+    digest = sha256_file(RAW_PATH)
+    if metadata.get("sha256") != digest:
+        raise SourceValidationError(
+            "Medford resident-permit PDF does not match its fetch metadata"
+        )
+    return {
+        "id": metadata.get("id", SOURCE_ID),
+        "file": str(RAW_PATH.relative_to(BASE_DIR)),
+        "url": metadata.get("final_url") or metadata.get("url"),
+        "downloaded_at_utc": metadata.get("downloaded_at_utc"),
+        "last_modified": metadata.get("last_modified"),
+        "etag": metadata.get("etag"),
+        "bytes": RAW_PATH.stat().st_size,
+        "sha256": digest,
+    }
 
 STREET_TYPES = [
     "Avenue",
@@ -63,15 +104,9 @@ TIME_CLUE_PATTERN = re.compile(
 
 
 def extract_pdf_text(path: Path) -> str:
-    try:
-        from pypdf import PdfReader
-    except ModuleNotFoundError:
-        PdfReader = None
-
-    if PdfReader is not None:
-        reader = PdfReader(path)
-        return "\n".join(page.extract_text() or "" for page in reader.pages)
-
+    # This source is a four-column table. Layout-preserving extraction is
+    # required; plain pypdf extraction can collapse the columns and reduce 191
+    # source rows to roughly 20 malformed records.
     if shutil.which("pdftotext"):
         with tempfile.TemporaryDirectory() as tmpdir:
             text_file = Path(tmpdir) / "resident_permit_parking.txt"
@@ -80,6 +115,18 @@ def extract_pdf_text(path: Path) -> str:
                 check=True,
             )
             return text_file.read_text(errors="replace")
+
+    try:
+        from pypdf import PdfReader
+    except ModuleNotFoundError:
+        PdfReader = None
+
+    if PdfReader is not None:
+        reader = PdfReader(path)
+        return "\n".join(
+            page.extract_text(extraction_mode="layout") or ""
+            for page in reader.pages
+        )
 
     raise RuntimeError("Install pypdf or pdftotext to extract Medford PDF text.")
 
@@ -202,11 +249,18 @@ def build_seed() -> dict:
             f"Missing {RAW_PATH}. Run: python3 scripts/fetch_public_sources.py --municipality medford"
         )
 
+    source = source_metadata()
     text = extract_pdf_text(RAW_PATH)
+    rows = parse_rows(split_text_lines(text))
+    unique_street_count = len({row["street_name"].casefold() for row in rows})
+    if len(rows) < 150 or unique_street_count < 150:
+        raise SourceValidationError(
+            "Medford resident-permit extraction is implausibly small: "
+            f"{len(rows)} rows across {unique_street_count} streets"
+        )
+
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     TEXT_PATH.write_text(text)
-
-    rows = parse_rows(split_text_lines(text))
     streets: dict[str, list[dict]] = {}
     for row in rows:
         row["source_id"] = SOURCE_ID
@@ -218,6 +272,7 @@ def build_seed() -> dict:
         "municipality": "medford",
         "source_id": SOURCE_ID,
         "source_file": str(RAW_PATH.relative_to(BASE_DIR)),
+        "source": source,
         "parser_note": (
             "First-pass text extraction from the Medford resident-permit PDF. "
             "Rows with partial_or_segment_specific scope must not be applied to an entire street."

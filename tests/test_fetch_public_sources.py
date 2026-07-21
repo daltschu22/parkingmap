@@ -86,3 +86,28 @@ def test_fetcher_does_not_replace_a_pdf_with_an_error_page(tmp_path, monkeypatch
         fetcher.download_source(source)
 
     assert destination.read_bytes() == b"%PDF-1.7\nknown-good"
+
+
+@pytest.mark.parametrize(
+    ("source_type", "content"),
+    [
+        ("html", b"not an html document"),
+        ("image", b"<html>upstream error</html>"),
+        ("kml", b"<html><body>not kml</body></html>"),
+    ],
+)
+def test_fetcher_rejects_wrong_content_for_declared_source_type(
+    source_type, content
+):
+    with pytest.raises(fetcher.ContentValidationError):
+        fetcher.validate_content(
+            {"id": f"test_{source_type}", "type": source_type},
+            content,
+        )
+
+
+def test_fetcher_accepts_well_formed_kml():
+    fetcher.validate_content(
+        {"id": "test_kml", "type": "kml"},
+        b'<?xml version="1.0"?><kml xmlns="http://www.opengis.net/kml/2.2"/>',
+    )

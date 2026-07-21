@@ -166,8 +166,9 @@ def build_medford_segment_evidence() -> dict:
         partial_rows = [
             row for row in rows if row.get("scope") == "partial_or_segment_specific"
         ]
-        full_rows = [
-            row for row in rows if row.get("scope") != "partial_or_segment_specific"
+        full_rows = [row for row in rows if row.get("scope") == "likely_full_street"]
+        time_window_rows = [
+            row for row in rows if row.get("scope") == "street_level_time_window"
         ]
         matched_partial_rows = [
             row for row in partial_rows if row_matches_segment(row, props)
@@ -183,6 +184,14 @@ def build_medford_segment_evidence() -> dict:
             confidence = "medium"
             match_level = "street_name_full_row"
             note = "Medford resident-permit source has a street-level row for this street. Confirm posted signs."
+        elif time_window_rows:
+            category = "resident_permit_time_restricted"
+            confidence = "medium"
+            match_level = "street_name_time_window"
+            note = (
+                "Medford documents a resident-permit restriction with scheduled hours "
+                "for this street. Check the source detail and posted signs for when it applies."
+            )
         elif matched_partial_rows:
             category = "resident_permit_required"
             confidence = "medium"
@@ -214,7 +223,9 @@ def build_medford_segment_evidence() -> dict:
             "rule_count": len(rows),
             "partial_rule_count": len(partial_rows),
             "matched_partial_rule_count": len(matched_partial_rows),
-            "rule_summary": summarize_rows(matched_partial_rows or full_rows or rows),
+            "rule_summary": summarize_rows(
+                matched_partial_rows or full_rows or time_window_rows or rows
+            ),
             "matched_rows": matched_partial_rows[:5],
         }
         if object_id:

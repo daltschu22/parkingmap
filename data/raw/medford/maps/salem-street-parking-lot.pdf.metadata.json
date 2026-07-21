@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "business_municipal_commuter_map",
   "url": "https://www.medfordma.org/fs/resource-manager/view/3c92f619-adc7-4843-a711-0b5b71e8a8be",
-  "downloaded_at_utc": "2026-05-23T09:54:21.480542+00:00",
+  "final_url": "https://resources.finalsite.net/images/v1731599917/medfordmaorg/sprckq4pl7fi27ymlseo/Salem_Street_Parking_Lot1.pdf",
+  "destination": "data/raw/medford/maps/salem-street-parking-lot.pdf",
+  "downloaded_at_utc": "2026-07-21T21:04:38.827209+00:00",
   "http_status": 200,
   "content_type": "application/pdf",
-  "bytes": 54064566
+  "last_modified": "Thu, 14 Nov 2024 15:58:39 GMT",
+  "etag": "\"7920c78ba3145ef1b624a7ca08ce85a6\"",
+  "bytes": 54064566,
+  "sha256": "06c8e9887f4fd6ae0e01a7956ed445cb44f1b9060e17ca58af9b28ca5ff70f55"
 }

@@ -1,0 +1,1833 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Park a Car in Cambridge</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- [Favicons] -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+
+    
+        <meta property="og:url" content="https://www.cambridgema.gov/iwantto/parkacarincambridge">
+        <meta property="og:title" content="Park a Car in Cambridge">
+        <meta property="og:description" content="Information for residents and visitors about parking a car in Cambridge.">
+            <meta property="og:image" content="https://www.cambridgema.gov/-/media/Images/sharedphotos/citymanaer2.jpg?mh=1080&amp;mw=1920">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@cambma">
+        <meta name="twitter:title" content="Park a Car in Cambridge">
+        <meta name="twitter:description" content="Information for residents and visitors about parking a car in Cambridge.">
+            <meta name="twitter:image" content="https://www.cambridgema.gov/-/media/Images/sharedphotos/citymanaer2.jpg?mh=1080&amp;mw=1920">
+
+    
+
+
+    
+    
+
+
+
+
+    
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link href="/Layouts/Cambridge2016/_resources/css/normalize.2026250000.css" rel="stylesheet" />
+        <link href="/Layouts/Cambridge2016/_resources/css/main.min.2026250000.css" rel="stylesheet" />
+
+    <!-- USA Banner -->
+    <link href="/Layouts/Cambridge2016/_resources/css/usa-banner.css" rel="stylesheet" />
+
+    
+    <script src="https://use.typekit.net/ile0gqp.js" type="text/javascript"></script>
+    <script>try { Typekit.load({ async: false }); } catch (e) { }</script>
+
+    
+    <script src="https://kit.fontawesome.com/2ea135482a.js" crossorigin="anonymous"></script>
+
+    
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ar,am,az,be,bg,bn,cs,da,de,el,en,es,et,fa,fr,hi,hr,ht,hu,hy,it,iw,ja,ko,lt,lv,mk,mn,ne,nl,pl,pt,ro,ru,sk,sl,sr,th,tl,tr,uk,vi,zh-CN,zh-TW',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+
+    
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+
+    
+        <meta name="robots" content="index, follow" />
+    <script type="text/javascript" src="/Layouts/Cambridge2016/_resources/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="/Layouts/Cambridge2016/_resources/js/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="/Layouts/Cambridge2016/_resources/js/universal.min.2026250000.js"></script>
+        <script type="text/javascript" src="/Layouts/Cambridge2016/_resources/js/custom.min.2026250000.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
+</head>
+
+<body id="bodyTag" data-mobile-menu-title="Menu" data-mobile-menu-close="Close" data-mobile-menu-back="Back">
+    <a href="#navigation" class="skipLink button">Skip to Navigation</a>
+    <a href="#mainContent" class="skipLink button">Skip to Main Content</a>
+    <a href="#footer" class="skipLink button">Skip to Footer</a>
+
+    <div id="wrapper" class="cambridge2018 iWantToDetail">
+        <section class="usa-banner" aria-label="Official government website">
+            <div class="usa-accordion">
+                <header class="usa-banner__header">
+                    <div class="usa-banner__inner">
+                        <div class="grid-col-auto">
+                            <img class="usa-banner__header-flag"
+                                 src="/images/uswds/us_flag_small.png"
+                                 alt="U.S. flag" />
+                        </div>
+                        <div class="grid-col-fill tablet:grid-col-auto">
+                            <p class="usa-banner__header-text">
+                                An official website of the United States government
+                            </p>
+                            <p class="usa-banner__header-action" aria-hidden="true">
+                                Here’s how you know
+                            </p>
+                        </div>
+                        <button type="button"
+                                class="usa-accordion__button usa-banner__button"
+                                aria-expanded="false"
+                                aria-controls="gov-banner-default-default">
+                            <span class="usa-banner__button-text">Here’s how you know</span>
+                        </button>
+                    </div>
+                </header>
+                <div class="usa-banner__content usa-accordion__content"
+                     id="gov-banner-default-default">
+                    <div class="grid-row grid-gap-lg">
+                        <div class="usa-banner__guidance tablet:grid-col-6">
+                            <img class="usa-banner__icon usa-media-block__img"
+                                 src="/images/uswds/icon-dot-gov.svg"
+                                 role="img"
+                                 alt=""
+                                 aria-hidden="true" />
+                            <div class="usa-media-block__body">
+                                <p>
+                                    <strong>Official websites use .gov</strong><br />A
+                                    <strong>.gov</strong> website belongs to an official government
+                                    organization in the United States.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="usa-banner__guidance tablet:grid-col-6">
+                            <img class="usa-banner__icon usa-media-block__img"
+                                 src="/images/uswds/icon-https.svg"
+                                 role="img"
+                                 alt=""
+                                 aria-hidden="true" />
+                            <div class="usa-media-block__body">
+                                <p>
+                                    <strong>Secure .gov websites use HTTPS</strong><br />A
+                                    <strong>lock</strong> (
+                                    <span class="icon-lock">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             width="52"
+                                             height="64"
+                                             viewBox="0 0 52 64"
+                                             class="usa-banner__lock-image"
+                                             role="img"
+                                             aria-labelledby="banner-lock-title-default banner-lock-description-default"
+                                             focusable="false">
+                                            <title id="banner-lock-title-default">Lock</title>
+                                            <desc id="banner-lock-description-default">A locked padlock</desc>
+                                            <path fill="#000000"
+                                                  fill-rule="evenodd"
+                                                  d="M26 0c10.493 0 19 8.507 19 19v9h3a4 4 0 0 1 4 4v28a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V32a4 4 0 0 1 4-4h3v-9C7 8.507 15.507 0 26 0zm0 8c-5.979 0-10.843 4.77-10.996 10.712L15 19v9h22v-9c0-6.075-4.925-11-11-11z" />
+                                        </svg>
+                                    </span>) or <strong>https://</strong> means you’ve safely connected to
+                                    the .gov website. Share sensitive information only on official,
+                                    secure websites.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        
+        
+
+        
+        <header id="topNav" runat="server" class="topNav">
+	
+	<div class="brand">
+		<div class="seal">
+			<a href="/"><img src="/~/media/Images/sharedimages/cityseal/cityseal?mw=1920" alt="City Seal of Cambridge" /></a>
+		</div>
+		<div class="name">
+			<div class="top"><a href="/">City of</a></div>
+			<div class="bottom"><a href="/">Cambridge</a></div>
+		</div>
+
+		
+		
+<div class="search">
+
+    <input type="text" placeholder="Search" class="txtQuickSearch" />
+    <input type="button" class="btnNavQuickSearch" value="Go" />
+</div>
+
+	</div>
+	<div class="menu">
+		
+		<div class="top">
+			<div class="toolsMenu" id="navigation">
+				<ul>
+					
+					<li class="slant"></li>
+
+					
+					<li class="quickLinks">
+						<a href="javascript:void(0);" class="title">Quick Links</a>
+						<div class="subMenu quickLinksMenu">
+	<ul>
+			<li>
+				<a class="navigation" title="Boards &amp; Commissions" href="https://cambridgema.iqm2.com/Citizens/Board" target="">
+					<span>Boards &amp; Commissions</span>
+				</a>
+			</li>
+			<li>
+				<a class="calendar" title="Calendar" href="/citycalendar" target="">
+					<span>Calendar</span>
+				</a>
+			</li>
+			<li>
+				<a class="person" title="City Directory" href="/citydirectory" target="">
+					<span>City Directory</span>
+				</a>
+			</li>
+			<li>
+				<a class="person" title="Contact City Council" href="/Departments/citycouncil/members" target="">
+					<span>Contact City Council</span>
+				</a>
+			</li>
+			<li>
+				<a class="navigation" title="Department List" href="/Departments" target="">
+					<span>Department List</span>
+				</a>
+			</li>
+			<li>
+				<a class="document" title="Forms &amp; Documents" href="/publications" target="">
+					<span>Forms &amp; Documents</span>
+				</a>
+			</li>
+			<li>
+				<a class="document" title="Municipal Code" href="https://www.municode.com/library/ma/cambridge/codes/code_of_ordinances" target="_blank">
+					<span>Municipal Code</span>
+				</a>
+			</li>
+			<li>
+				<a class="computer screen" title="Open Meeting Portal" href="https://cambridgema.primegov.com/public/portal" target="_blank">
+					<span>Open Meeting Portal</span>
+				</a>
+			</li>
+			<li>
+				<a class="computer screen" title="Pay Bills Online" href="/iwantto/payabillonline" target="">
+					<span>Pay Bills Online</span>
+				</a>
+			</li>
+			<li>
+				<a class="building" title="Property Database" href="/propertydatabase" target="">
+					<span>Property Database</span>
+				</a>
+			</li>
+			<li>
+				<a class="person" title="SeeClickFix" href="/SeeClickFix" target="">
+					<span>SeeClickFix</span>
+				</a>
+			</li>
+			<li>
+				<a class="news" title="View News" href="/news" target="">
+					<span>View News</span>
+				</a>
+			</li>
+			<li>
+				<a class="video" title="Watch City Council" href="https://cambridgema.primegov.com/public/portal" target="_blank">
+					<span>Watch City Council</span>
+				</a>
+			</li>
+	</ul>
+</div>
+					</li>
+
+					
+					<li class="subscribe">
+						<a href="/Subscribe" class="title">Subscribe</a>
+					</li>
+
+					
+					<li class="translate">
+						<a href="javascript:void(0);" class="title">Translate</a>
+						<div class="subMenu translateMenu">
+	<div id="google_translate_element">
+	</div>
+</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		
+		<div class="bottom">
+			
+			
+
+
+<nav>
+	<ul>
+				<li class="services">
+					<a href="javascript:void(0);" class="title">Services</a>
+
+					<div class="subMenu main">
+								<section>
+									<h2>A</h2>
+
+										<ul>
+												<li>
+													<a href="/Services/applyforaffordablehousing">Affordable Housing</a>
+												</li>
+												<li>
+													<a href="/Services/dhspafterschoolprogramslottery">Afterschool Programs Lottery</a>
+												</li>
+												<li>
+													<a href="/Services/cambridgealertnetwork">Alert Network</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>B</h2>
+
+										<ul>
+												<li>
+													<a href="/iwantto/orderacertifiedcopyofabirthcertificate">Birth Certificate</a>
+												</li>
+												<li>
+													<a href="/Services/boardsandcommissions">Boards and Commissions</a>
+												</li>
+												<li>
+													<a href="/Services/buildingpermits">Building Permit</a>
+												</li>
+												<li>
+													<a href="/CDD/economicopportunityanddevelopment">Business Support</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>C - D</h2>
+
+										<ul>
+												<li>
+													<a href="/Services/communitygardens">Community Garden Program</a>
+												</li>
+												<li>
+													<a href="/Departments/publicworks/cityprojects">Construction Project Information</a>
+												</li>
+												<li>
+													<a href="/Services/curbsidecomposting">Curbside Composting</a>
+												</li>
+												<li>
+													<a href="/iwantto/orderacertifiedcopyofadeathcertificate">Death Certificate</a>
+												</li>
+												<li>
+													<a href="/iwantto/dobusinesswiththecity">Doing Business with the City</a>
+												</li>
+												<li>
+													<a href="/Services/annualdoglicense">Dog License</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>E - L</h2>
+
+										<ul>
+												<li>
+													<a href="/Services/electricalpermits">Electrical Permit</a>
+												</li>
+												<li>
+													<a href="/Departments/officeofthehousingliaison">Housing Information</a>
+												</li>
+												<li>
+													<a href="/Services/immigrationconcernsresourcepage">Immigrant &amp; Immigration Resources</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>M - P</h2>
+
+										<ul>
+												<li>
+													<a href="/Services/applyforamarriagelicense">Marriage License</a>
+												</li>
+												<li>
+													<a href="/Services/onedaylicenses">One Day Licenses</a>
+												</li>
+												<li>
+													<a href="/Services/plumbingpermit">Plumbing Permit</a>
+												</li>
+												<li>
+													<a href="/Departments/Purchasing/currentbidlist">Purchasing Bid List</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Q - Z</h2>
+
+										<ul>
+												<li>
+													<a target="_blank" rel="noopener noreferrer" href="http://www.cambridgeretirementma.gov/">Retirement System</a>
+												</li>
+												<li>
+													<a target="_blank" href="/Services/Rodents">Rodent Control</a>
+												</li>
+												<li>
+													<a href="/Services/planninganeventinthecity">Special Event</a>
+												</li>
+												<li>
+													<a href="/sustainable">Sustainable Cambridge</a>
+												</li>
+												<li>
+													<a href="/Services/towedvehiclelookup">Towed Vehicle Lookup</a>
+												</li>
+												<li>
+													<a href="/Departments/publicworks">Trash/Recycling</a>
+												</li>
+												<li>
+													<a href="/Services/winterwarmingcenter">Winter Warming Center</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Commonly Requested</h2>
+
+										<ul>
+												<li>
+													<a href="/inspection/Zoning/boardofzoningappeal">Board of Zoning Appeal</a>
+												</li>
+												<li>
+													<a href="/Departments/citycouncil">City Council</a>
+												</li>
+												<li>
+													<a href="/Departments/historicalcommission">Historical Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/licensecommission">License Commission</a>
+												</li>
+												<li>
+													<a href="/CDD/zoninganddevelopment/planningboard">Planning Board</a>
+												</li>
+										</ul>
+								</section>
+								<ul class="callToActions">
+										<li>
+											<a target="_blank" rel="noopener noreferrer" href="https://phe.tbe.taleo.net/phe02/ats/careers/v2/searchResults?org=CAMBRIDGEMA&amp;cws=37">Job Listings</a>
+										</li>
+										<li>
+											<a href="/Services/payorviewbillonline">Pay or View Bill</a>
+										</li>
+										<li>
+											<a href="/Departments/Assessing/propertydatabase">Property Database</a>
+										</li>
+										<li>
+											<a href="/Services/streetcleaning">Street Cleaning</a>
+										</li>
+										<li>
+											<a href="/Services">View All Services</a>
+										</li>
+								</ul>
+
+					</div>
+				</li>
+				<li class="iwantto">
+					<a href="javascript:void(0);" class="title">I Want To</a>
+
+					<div class="subMenu main">
+								<section>
+									<h2>Apply For</h2>
+
+										<ul>
+												<li>
+													<a href="/CDD/housing/forapplicants">Affordable Housing</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforaboardorcommission">Board or Commission</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforabuildingpermit">Building Permit</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforrenewfordoglicense">Dog License</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforanelectricalpermit">Electrical Permit</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforajobwiththecity">Job with the City</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyfordhspafterschoollottery">Afterschool Programs Lottery</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforamovingvanpermit">Moving Van Permit</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforaplumbingpermit">Plumbing Permit</a>
+												</li>
+												<li>
+													<a href="/iwantto/applyforaparkingpermit">Resident/Visitor Parking Permit</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>View</h2>
+
+										<ul>
+												<li>
+													<a href="/citycalendar">Calendar Listings</a>
+												</li>
+												<li>
+													<a href="/Departments/citycouncil/openmeetingportal">City Council Meeting Details</a>
+												</li>
+												<li>
+													<a href="/news">City News</a>
+												</li>
+												<li>
+													<a href="/Departments/officeofthehousingliaison">Housing Information</a>
+												</li>
+												<li>
+													<a href="/Departments/cambridgepubliclibrary/Locations">Library Hours &amp; Locations</a>
+												</li>
+												<li>
+													<a target="_blank" href="/iwantto/movingtocambridge">Move In Resources</a>
+												</li>
+												<li>
+													<a target="_blank" rel="noopener noreferrer" href="https://data.cambridgema.gov">Open Data</a>
+												</li>
+												<li>
+													<a href="/externallinks/municipalcode">Ordinances</a>
+												</li>
+												<li>
+													<a href="/iwantto/parkacarincambridge">Parking Information</a>
+												</li>
+												<li>
+													<a href="/Services/streetcleaning">Street Cleaning Information</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Sign Up For</h2>
+
+										<ul>
+												<li>
+													<a href="/iwantto/signupforcodered">Emergency Alerts</a>
+												</li>
+												<li>
+													<a href="/iwantto/signupfortrashandrecyclingalerts">Recycling and Trash Notifications</a>
+												</li>
+												<li>
+													<a href="/iwantto/signupforstreetcleaningalerts">Street Cleaning Alerts</a>
+												</li>
+												<li>
+													<a href="/iwantto/signupweeklyemailnewsletter">Daily Email from City</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Order</h2>
+
+										<ul>
+												<li>
+													<a href="/iwantto/orderacertifiedcopyofabirthcertificate">Birth Certificate</a>
+												</li>
+												<li>
+													<a href="/iwantto/orderacertifiedcopyofadeathcertificate">Death Certificate</a>
+												</li>
+												<li>
+													<a href="/iwantto/orderacertifiedcopyofamarriagecertificate">Marriage Certificate</a>
+												</li>
+												<li>
+													<a href="/externallinks/paybillsonline/InvoiceCloud">Municipal Lien Certificate</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Look Up</h2>
+
+										<ul>
+												<li>
+													<a href="/citydirectory">City Directory</a>
+												</li>
+												<li>
+													<a href="/CDD/parks/farmersmarkets">Farmers Market</a>
+												</li>
+												<li>
+													<a href="/iwantto/viewthepropertydatabase">Property Information</a>
+												</li>
+												<li>
+													<a href="/Services/immigrationconcernsresourcepage">Resources for Immigrants</a>
+												</li>
+												<li>
+													<a href="/Services/streetcleaning#schedule">Street Cleaning Schedule</a>
+												</li>
+												<li>
+													<a href="/iwantto/lookuptowedvehicle">Towed Vehicle</a>
+												</li>
+												<li>
+													<a href="/Services/curbsidecollections?schedule=true#rCw">Recycling and Trash Schedule</a>
+												</li>
+												<li>
+													<a target="_blank" rel="noopener noreferrer" href="https://secure.cambridgema.gov/webtrac/web/splash.html">War Memorial Schedule</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Contact</h2>
+
+										<ul>
+												<li>
+													<a href="/Departments/citycouncil">City Council</a>
+												</li>
+												<li>
+													<a href="/Departments/citymanagersoffice">City Manager</a>
+												</li>
+												<li>
+													<a href="/Departments/mayorsoffice">Mayor</a>
+												</li>
+												<li>
+													<a href="/Departments/citymanagersoffice/communicationsoffice">Communications Office</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Submit</h2>
+
+										<ul>
+												<li>
+													<a href="/iwantto/submitanonymouscrimetip">Anonymous Crime Tip</a>
+												</li>
+												<li>
+													<a href="/iwantto/submitcertifiedpayrollreports">Certified Payroll Report</a>
+												</li>
+												<li>
+													<a href="/iwantto/submitaservicerequest">Service Request</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Request</h2>
+
+										<ul>
+												<li>
+													<a href="/iwantto/getamuseumpass">Museum Pass</a>
+												</li>
+												<li>
+													<a href="/iwantto/submitapublicrecordsrequest">Public Records</a>
+												</li>
+										</ul>
+								</section>
+								<ul class="callToActions">
+										<li>
+											<a href="/iwantto/dobusinesswiththecity">Do Business with the City</a>
+										</li>
+										<li>
+											<a href="/iwantto/payabillonline">Pay Bills Online</a>
+										</li>
+										<li>
+											<a href="/iwantto">View All I Want To&#39;s</a>
+										</li>
+								</ul>
+
+					</div>
+				</li>
+				<li class="departments">
+					<a href="javascript:void(0);" class="title">Departments</a>
+
+					<div class="subMenu main">
+								<section>
+									<h2>A - C</h2>
+
+										<ul>
+												<li>
+													<a href="/Departments/americanfreedmencommission">American Freedmen Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/animalcommission">Animal Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/Assessing">Assessing</a>
+												</li>
+												<li>
+													<a href="/Departments/Auditing">Auditing</a>
+												</li>
+												<li>
+													<a href="/Departments/Budget">Budget</a>
+												</li>
+												<li>
+													<a href="/Departments/cambridgearts">Cambridge Arts</a>
+												</li>
+												<li>
+													<a href="/Departments/capitalbuildingprojects">Capital Building Projects</a>
+												</li>
+												<li>
+													<a href="/Departments/cityclerksoffice">City Clerk&#39;s Office</a>
+												</li>
+												<li>
+													<a href="/Departments/citycouncil">City Council</a>
+												</li>
+												<li>
+													<a href="/Departments/citymanagersoffice">City Manager&#39;s Office</a>
+												</li>
+												<li>
+													<a href="/Departments/commissionforpersonswithdisabilities">Commission for Persons with Disabilities</a>
+												</li>
+												<li>
+													<a href="/Departments/communitydevelopment">Community Development</a>
+												</li>
+												<li>
+													<a href="/Departments/communitysafety">Community Safety</a>
+												</li>
+												<li>
+													<a href="/Departments/consumerscouncil">Consumers&#39; Council</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>D - F</h2>
+
+										<ul>
+												<li>
+													<a href="/Departments/electioncommission">Election Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/Electrical">Electrical</a>
+												</li>
+												<li>
+													<a href="/Departments/emergencycommunications">Emergency Communications</a>
+												</li>
+												<li>
+													<a href="/Departments/departmentofequityandinclusion">Equity &amp; Inclusion</a>
+												</li>
+												<li>
+													<a href="/Departments/humanserviceprograms/familypolicycouncil">Family Policy Council</a>
+												</li>
+												<li>
+													<a href="/Departments/Finance">Finance</a>
+												</li>
+												<li>
+													<a href="/Departments/cambridgefire">Fire Department</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>G - L</h2>
+
+										<ul>
+												<li>
+													<a href="/Departments/historicalcommission">Historical Commission</a>
+												</li>
+												<li>
+													<a target="Active Browser" href="/Departments/humanresources">Human Resources</a>
+												</li>
+												<li>
+													<a href="/Departments/humanrightscommission">Human Rights Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/humanserviceprograms">Human Service Programs</a>
+												</li>
+												<li>
+													<a href="/Departments/commissiononimmigrantrightsandcitizenship">Immigrant Rights &amp; Citizenship (CIRC)</a>
+												</li>
+												<li>
+													<a href="/Departments/informationtechnology">Information Technology</a>
+												</li>
+												<li>
+													<a href="/Departments/inspectionalservices">Inspectional Services</a>
+												</li>
+												<li>
+													<a href="/Departments/Law">Law</a>
+												</li>
+												<li>
+													<a href="/Departments/lgbtqpluscommission">LGBTQ+ Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/cambridgepubliclibrary">Library</a>
+												</li>
+												<li>
+													<a href="/Departments/licensecommission">License Commission</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>M - P</h2>
+
+										<ul>
+												<li>
+													<a href="/Departments/mayorsoffice">Mayor&#39;s Office</a>
+												</li>
+												<li>
+													<a href="/Departments/officeofsustainability">Office of Sustainability</a>
+												</li>
+												<li>
+													<a href="/Departments/peacecommission">Peace Commission</a>
+												</li>
+												<li>
+													<a href="/Departments/cambridgepolice">Police Department</a>
+												</li>
+												<li>
+													<a href="/Departments/policereviewandadvisoryboard">Police Review and Advisory Board</a>
+												</li>
+												<li>
+													<a target="_blank" href="/Departments/publichealthdepartment">Public Health</a>
+												</li>
+												<li>
+													<a href="/Departments/publicworks">Public Works (DPW)</a>
+												</li>
+												<li>
+													<a href="/Departments/Purchasing">Purchasing</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>Q - Z</h2>
+
+										<ul>
+												<li>
+													<a target="_blank" rel="noopener noreferrer" href="http://www.cambridgeretirementma.gov/">Retirement Board</a>
+												</li>
+												<li>
+													<a target="_blank" rel="noopener noreferrer" href="http://www.cpsd.us/">School Department</a>
+												</li>
+												<li>
+													<a target="_blank" rel="noopener noreferrer" href="http://www.cambridgeusa.org/">Tourism Office</a>
+												</li>
+												<li>
+													<a href="/Departments/transportation">Transportation</a>
+												</li>
+												<li>
+													<a href="/Departments/veteransservices">Veterans&#39; Services</a>
+												</li>
+												<li>
+													<a href="/Departments/waterdepartment">Water Department</a>
+												</li>
+												<li>
+													<a href="/Departments/weightsandmeasures">Weights &amp; Measures</a>
+												</li>
+												<li>
+													<a target="_blank" href="/Departments/womenscommission">Women&#39;s Commission</a>
+												</li>
+										</ul>
+								</section>
+								<section>
+									<h2>#</h2>
+
+										<ul>
+												<li>
+													<a href="/Departments/22cityview">22-CityView</a>
+												</li>
+										</ul>
+								</section>
+								<ul class="callToActions">
+										<li>
+											<a href="/Departments">Department Directory</a>
+										</li>
+								</ul>
+
+					</div>
+				</li>
+
+	</ul>
+</nav>
+
+
+
+			
+			
+<div class="search">
+
+    <input type="text" placeholder="Search" class="txtQuickSearch" />
+    <input type="button" class="btnNavQuickSearch" value="Go" />
+</div>
+
+		</div>
+	</div>
+</header>
+
+        <main id="mainContent">
+            
+            
+
+	<div class="breadcrumbs">
+		<div class="container">
+					<a href="/">Home</a> &gt; 					<a href="/iwantto">I Want To</a> &gt; Park a Car in Cambridge		</div>
+	</div>
+
+
+            
+            
+
+            
+            
+
+
+<header >
+    <div class="leadInContent mvc  noPhoto ">
+        
+
+            <div class="mainPageHeader">
+                
+                    <h1>Park a Car in Cambridge</h1>
+
+                
+                        <h2><a href="/Departments/transportation">Department of Transportation</a></h2>
+            </div>
+    </div>
+</header>
+
+
+
+<section  class="twoColContent scaffolding  ">
+	<div class="contentContainer standard">
+		<section class="content">
+			
+
+
+
+
+    <div class="pageContent" >
+        
+        <p>
+</p>
+<p>
+</p>
+<p>
+</p>
+<style>
+    dt {
+    display: block;
+    font-size: 1.5rem;
+    font-family: "alternate-gothic-no-3-d", sans-serif;
+    margin-top: 1rem;
+    }
+    dd {
+    display: block;
+    margin-left: 20px;
+    }
+    .garageFlexBoxBoxes:first-child {
+    margin-right: 3rem;
+    }
+    h4 {
+    font-size: 1.5rem;
+    }
+    h5 {
+    font-size: 1.2rem;
+    }
+    ul {
+    margin: 0 0 1rem 0;
+    }
+    .faq ul {
+    margin-bottom: 1rem;
+    }
+    @media only screen and (max-width: 450px) {
+    .garageFlexBoxBoxes:first-child {
+    margin-right: 0;
+    }
+    }
+</style>
+Whether you live in Cambridge or are just visiting, you may need to park a car. This page provides information about the different types of parking available in Cambridge.
+<p>&nbsp;</p>
+    </div>
+
+
+
+
+	<section  class="arbitraryContent ">
+		<div class="container ">
+			<style>
+    .boxOfResources {
+    display: flex;
+    flex-flow: row wrap;
+    }
+    .theResourceItem a {
+    color: #ffffff;
+    }
+    .theResourceItem {
+    background-color: #eff0f2;
+    margin: 0 1em 1em 0;
+    width: calc(33.33% - 0.67em);
+    }
+    .theResourceItem:nth-child(3n+3) {
+    margin-right: 0;
+    }
+    .resourceHeader {
+    font-size: 1.5em;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem 0 1rem;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    text-align: center;
+    }
+    #resourceHeader1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(https://www.cambridgema.gov/-/media/Images/Traffic/General/parkacarheaders/parkacarheader01.png);
+    background-size: cover;
+    }
+    #resourceHeader2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(https://www.cambridgema.gov/-/media/Images/Traffic/General/parkacarheaders/parkacarheader02.png);
+    background-size: cover;
+    }
+    #resourceHeader3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(https://www.cambridgema.gov/-/media/Images/Traffic/General/parkacarheaders/parkacarheader03.png);
+    background-size: cover;
+    }
+    #resourceHeader4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(https://www.cambridgema.gov/-/media/Images/Traffic/General/parkacarheaders/parkacarheader04.png);
+    background-size: cover;
+    }
+    #resourceHeader5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(https://www.cambridgema.gov/-/media/Images/Traffic/General/parkacarheaders/parkacarheader05.png);
+    background-size: cover;
+    }
+    #resourceHeader6 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(https://www.cambridgema.gov/-/media/Images/Traffic/General/parkacarheaders/parkacarheader06.png);
+    background-size: cover;
+    }
+    .resourceDescription {
+    margin: 1em !important;
+    }
+    @media only screen and (max-width: 999px) {
+    .theResourceItem {
+    width: calc(50% - 0.5em);
+    }
+    .theResourceItem:nth-child(odd) {
+    margin: 0 1em 1em 0;
+    }
+    .theResourceItem:nth-child(even) {
+    margin: 0 0 1em 0;
+    }
+    }
+    @media only screen and (max-width: 700px) {
+    .theResourceItem {
+    width: 100%;
+    }
+    .theResourceItem:nth-child(odd) {
+    margin: 0 0 1em 0;
+    }
+    .theResourceItem:nth-child(even) {
+    margin: 0 0 1em 0;
+    }
+    }
+</style>
+<div class="boxOfResources">
+<div class="theResourceItem">
+<h3 class="resourceHeader" id="resourceHeader1"><a href="/iwantto/applyforaparkingpermit">
+Get a Parking Permit
+</a></h3>
+<p class="resourceDescription">
+Most residential streets are designated “Parking by Permit Only." To park in these areas, you must have a permit.
+</p>
+</div>
+<div class="theResourceItem">
+<h3 class="resourceHeader" id="resourceHeader2"><a href="/iwantto/payaparkingticket">Pay or Dispute a Parking Ticket</a></h3>
+<p class="resourceDescription">
+There are multiple ways to pay a parking ticket. If you believe the ticket is invalid, you may submit a dispute.
+</p>
+</div>
+<div class="theResourceItem">
+<h3 class="resourceHeader" id="resourceHeader3"><a href="/Services/streetcleaning">Get the Street Cleaning Schedule</a></h3>
+<p class="resourceDescription">
+DPW mechanically sweeps each street twice a month, April through December. You must move your car to avoid ticketing and towing.
+</p>
+</div>
+<div class="theResourceItem">
+<h3 class="resourceHeader" id="resourceHeader4"><a href="/iwantto/lookuptowedvehicle">Look for a Towed Vehicle</a></h3>
+<p class="resourceDescription">
+If you believe that your vehicle was towed, use our Towed Vehicle Lookup to get more information.
+</p>
+</div>
+<div class="theResourceItem">
+<h3 class="resourceHeader" id="resourceHeader5"><a href="/iwantto/requestadisabilityparkingspace">Request a Disability Parking Space</a></h3>
+<p class="resourceDescription">
+If you have a disability placard or plate, you may request a disability parking space in front of your home.
+</p>
+</div>
+<div class="theResourceItem">
+<h3 class="resourceHeader" id="resourceHeader6"><a href="/snow">Visit the Snow Center</a></h3>
+<p class="resourceDescription">
+When a snow emergency is declared, a number of garages around Cambridge offer reduced rate parking.
+</p>
+</div>
+</div>
+		</div>
+	</section>
+
+
+
+	<section  class="arbitraryContent ">
+		<div class="container ">
+			<h2>Parking Meters, Garages, and Lots</h2>
+<p>You'll find parking meters throughout Cambridge. In addition to metered parking, City of Cambridge manages two parking garages and nine parking lots. Find more information about costs and locations below.&nbsp;</p>
+<style>
+    .Banner {
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #ffa500;
+    display: flex;
+    }
+    .Banner a {
+    color: #ffffff;
+    }
+</style>
+		</div>
+	</section>
+
+
+
+	<section  class="arbitraryContent ">
+		<div class="container ">
+			<style>
+    .EVBanner {
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #223a7f;
+    color: #ffffff;
+    display: flex;
+    }
+    .EVBanner a {
+    color: #ffffff;
+    }
+</style>
+<div class="EVBanner">
+<p style="margin-bottom: 0;"><img style="float: left; max-height: 80px; padding-right: 1em;" alt="EV Charging Station Icon" src="/-/media/Images/departmentoftransportation/General/parkacarheaders/evstation01.png" /><strong>Looking for electric vehicle chargers?&nbsp;</strong>Each garage or lot marked with <strong>[EV]</strong> has two dedicated parking spaces and one charging station that can charge two cars with a level 2 charge at the same time. City-owned stations charge a rate of $0.189 per kWh drawn and $0.15 per hour. Standard parking fees still apply.&nbsp;<br />
+<br />
+<strong>More City-owned EV Charging Stations: </strong>In addition to chargers at the lots and garages listed below, Cambridge is installing a network of EV charging stations in other locations. <span style="text-decoration: underline;"><a rel="noopener noreferrer" href="https://www.cambridgema.gov/Departments/communitydevelopment/evchargingstations" target="_blank">Click here for the latest list</a></span>.&nbsp;</p>
+<p style="margin-bottom: 0;">&nbsp;</p>
+<p style="margin-bottom: 0;">&nbsp;</p>
+</div>
+<br />
+		</div>
+	</section>
+
+
+
+    <section  class="faq ">
+        <div class="container ">
+
+
+        <div class="accordion" data-closedByDefault=true>
+                <h3 id="4ffe8ea28f76419aac982923525e5b0e" class="question " >
+                    Parking Meters
+                </h3>
+                <div id="Answer4ffe8ea28f76419aac982923525e5b0e" runat="server" class="answer" >
+                    <h3>General</h3>
+<p>In locations with parking meters, there are signs which indicate:</p>
+<ul>
+    <li>the dates and times that the meter is in effect, and</li>
+    <li>the maximum allowable time limit that you may park at the meter.</li>
+</ul>
+<p>When in a location that has metered parking and during a time when the meter is in effect, you must:</p>
+<ul>
+    <li>comply with all other regulations, including street sweeping and temporary parking restrictions,</li>
+    <li>pay&nbsp;the meter via U.S. quarters or by using the PayByPhone or Passport Parking App.</li>
+    <li>leave the zone once you&rsquo;ve reached the posted time limit.&nbsp; You may not move your vehicle to another space within the same zone or pay more money to get additional time.</li>
+</ul>
+<h3>Payment Details</h3>
+<div class="SCXW161863147 BCX0" style="color: #000000; background-color: #ffffff; margin: 0px; padding: 0px;">
+<div class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<p class="Paragraph SCXW161863147 BCX0" paraid="1414061768" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{169}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-bottom: 10.6667px; margin-left: 0px; padding: 0px;">There are three options for paying at Cambridge parking meters: coins, Passport Parking, or PayByPhone.&nbsp;</p>
+</div>
+<div class="ListContainerWrapper SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<ul class="BulletListStyle1 SCXW161863147 BCX0" role="list" style="margin: 0px; padding: 0px;">
+    <li aria-setsize="-1" data-leveltext="" data-font="Symbol" data-list-defn-props="{'335552541':1,'335559685':720,'335559991':360,'469769226':'Symbol','469769242':[8226],'469777803':'left','469777804':'','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="1" role="listitem" class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px 0px 0px 24px; padding: 0px;">
+    <p class="Paragraph SCXW161863147 BCX0" paraid="728024798" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{175}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;">Pay with coins&nbsp;</p>
+    </li>
+</ul>
+</div>
+<div class="ListContainerWrapper SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<ul class="BulletListStyle1 SCXW161863147 BCX0" role="list" style="margin: 0px; padding: 0px;">
+    <li aria-setsize="-1" data-leveltext="" data-font="Symbol" data-list-defn-props="{'335552541':1,'335559685':720,'335559991':360,'469769226':'Symbol','469769242':[8226],'469777803':'left','469777804':'','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="1" role="listitem" class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px 0px 0px 24px; padding: 0px;">
+    <p class="Paragraph SCXW161863147 BCX0" paraid="424226944" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{181}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">Pay with Passport Parking</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;"> or </span><span class="NormalTextRun SpellingErrorV2Themed SCXW161863147 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">PayByPhone</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">:&nbsp;&nbsp;</span></span><span class="EOP SCXW161863147 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+</ul>
+</div>
+<div class="ListContainerWrapper SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<ul class="BulletListStyle1 SCXW161863147 BCX0" role="list" style="margin: 0px; padding: 0px;">
+    <li aria-setsize="-1" data-leveltext="" data-font="Symbol" data-list-defn-props="{'335552541':1,'335559685':1080,'335559991':360,'469769226':'Symbol','469769242':[8226],'469777803':'left','469777804':'','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="1" role="listitem" class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px 0px 0px 48px; padding: 0px;">
+    <p class="Paragraph SCXW161863147 BCX0" paraid="670523535" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{191}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">There is a</span><span class="NormalTextRun CommentStart SCXW161863147 BCX0" style="margin: 0px; padding: 0px;"> </span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">fee for each transaction made with Passport </span><span class="NormalTextRun CommentStart SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">Parking</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;"> or </span><span class="NormalTextRun SpellingErrorV2Themed SCXW161863147 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">P</span><span class="NormalTextRun SpellingErrorV2Themed SCXW161863147 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">ayByPhone</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">.</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;"> This fee is in addition to Cambridge&rsquo;s parking meter fee</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">.&nbsp;&nbsp;</span></span><span class="EOP SCXW161863147 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+</ul>
+</div>
+<div class="ListContainerWrapper SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<ul class="BulletListStyle1 SCXW161863147 BCX0" role="list" style="margin: 0px; padding: 0px;">
+    <li aria-setsize="-1" data-leveltext="" data-font="Symbol" data-list-defn-props="{'335552541':1,'335559685':1080,'335559991':360,'469769226':'Symbol','469769242':[8226],'469777803':'left','469777804':'','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="1" role="listitem" class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px 0px 0px 48px; padding: 0px;">
+    <p class="Paragraph SCXW161863147 BCX0" paraid="193051996" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{217}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><a class="Hyperlink SCXW161863147 BCX0" href="https://www.passportparking.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px; color: #467886;"><span class="NormalTextRun SCXW161863147 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">Download the Passport Parking app here</span></span></a><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"> or </span><a class="Hyperlink SCXW161863147 BCX0" href="https://park.passportparking.com/park/" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px; color: #467886;"><span class="NormalTextRun SCXW161863147 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">pay online here.</span></span></a><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span><span class="EOP SCXW161863147 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+</ul>
+</div>
+</div>
+<div class="SCXW161863147 BCX0" style="color: #000000; background-color: #ffffff; margin: 0px; padding: 0px;">
+<div class="ListContainerWrapper SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<ul class="BulletListStyle1 SCXW161863147 BCX0" role="list" style="margin: 0px; padding: 0px;">
+    <li aria-setsize="-1" data-leveltext="" data-font="Symbol" data-list-defn-props="{'335552541':1,'335559685':1080,'335559991':360,'469769226':'Symbol','469769242':[8226],'469777803':'left','469777804':'','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="1" role="listitem" class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px 0px 0px 48px; padding: 0px;">
+    <p class="Paragraph SCXW161863147 BCX0" paraid="2134659880" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{231}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">Download the </span><span class="NormalTextRun SpellingErrorV2Themed SCXW161863147 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">PayByPhone</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;"> app for </span></span><a class="Hyperlink SCXW161863147 BCX0" href="https://play.google.com/store/apps/details?id=com.paybyphone" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px; color: #467886;"><span class="NormalTextRun SCXW161863147 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">Google Play</span></span></a><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"> or </span><a class="Hyperlink SCXW161863147 BCX0" href="https://apps.apple.com/us/app/paybyphone-parking/id448474183" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px; color: #467886;"><span class="NormalTextRun SCXW161863147 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">Apple</span></span></a><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;">, or </span><a class="Hyperlink SCXW161863147 BCX0" href="https://gbc-word-edit.officeapps.live.com/we/m.paybyphone.com" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px; color: #467886;"><span class="NormalTextRun SCXW161863147 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">pay online here</span></span></a><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;">.&nbsp;&nbsp;</span><span class="EOP SCXW161863147 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+</ul>
+</div>
+<div class="ListContainerWrapper SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<ul class="BulletListStyle1 SCXW161863147 BCX0" role="list" style="margin: 0px; padding: 0px;">
+    <li aria-setsize="-1" data-leveltext="" data-font="Symbol" data-list-defn-props="{'335552541':1,'335559685':1080,'335559991':360,'469769226':'Symbol','469769242':[8226],'469777803':'left','469777804':'','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="1" role="listitem" class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px 0px 0px 48px; padding: 0px;">
+    <p class="Paragraph SCXW161863147 BCX0" paraid="1435092587" paraeid="{ee8627c2-3fc2-4b4a-a160-aea55ad18f1a}{252}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;">Make sure that you enter your license plate number, car description, and the zone number correctly.&nbsp;</span><span class="EOP SCXW161863147 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+</ul>
+</div>
+<div class="OutlineElement Ltr SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">
+<p class="Paragraph SCXW161863147 BCX0" paraid="1997645637" paraeid="{bd5c5b54-d7b8-478e-bef7-a2d7a6869019}{3}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-bottom: 10.6667px; margin-left: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">Vehicles displaying a valid accessible/disability plate or placard do not have to pay to park at meters. The placard/plate number and </span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">expiration</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;"> date must be visible</span><span class="NormalTextRun SCXW161863147 BCX0" style="margin: 0px; padding: 0px;">.&nbsp;&nbsp;</span></span><span class="EOP SCXW161863147 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':160,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+</div>
+</div>
+Payments are not required on Sundays and Commonwealth of Massachusetts holidays,
+<h3>Broken Meters</h3>
+<p>You may not park at a broken meter without paying. If you believe that a meter is broken, you must pay via one of the parking applications listed above or park at another meter.</p>
+<h3>Understanding When Meters are In Effect</h3>
+<p>
+Signs at meters that say "Except" during certain hours and days, mean that the meters and the maximum time limit are not in effect on those days or during those times. For example, a sign that says "2-HR Parking, 8AM - 6PM, Except Sat &amp; Sun" means:</p>
+<ul>
+    <li>you must pay to park there Monday through Friday, between 8:00 a.m. and 6:00 p.m.,</li>
+    <li>you may only park for up to two hours. </li>
+</ul>
+<p>Outside of the posted time, you may park for more than two hours and you do not have to pay the meter. Other signs (e.g., street sweeping) may require you to move your vehicle. Otherwise, if you have a Resident Parking Permit, you may park for the entire time that the meters are not in effect. If you do not have a Resident Permit, you are still required to move your vehicle every 24 hours.</p>
+                </div>
+                <h3 id="c69e0685c9474325b72230c115a5d8d6" class="question " >
+                    Parking Lots
+                </h3>
+                <div id="Answerc69e0685c9474325b72230c115a5d8d6" runat="server" class="answer" >
+                    <p>The City of Cambridge manages nine parking lots. See their locations on the <a rel="noopener noreferrer" href="https://www.cambridgema.gov/iwantto/parkacarincambridge/map" target="_blank">public parking map</a>.&nbsp;</p>
+<h3>How to Pay at Parking Lots</h3>
+<h3><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="color: windowtext; font-size: 13px; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">There are three options for paying at most Cambridge parking lots: pay stations, Passport Parking, or </span><span class="NormalTextRun SpellingErrorV2Themed SCXW55572819 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">PayByPhone</span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">. At Lot 12 on </span><span class="NormalTextRun SpellingErrorV2Themed SCXW55572819 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">Macarelli</span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;"> Way, you can also pay with coins</span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">.&nbsp;&nbsp;</span></span><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':160,'335559740':276}" style="color: windowtext; font-size: 13px; margin: 0px; padding: 0px; line-height: 20.7px;"></span></h3>
+<ul>
+    <li style="margin-left: 0px;"><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':160,'335559740':276}" style="color: windowtext; font-size: 13px; margin: 0px; padding: 0px; line-height: 20.7px;"></span><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="color: windowtext; font-size: 13px; margin: 0px; padding: 0px; line-height: 20.7px;">Pay at a pay station: Use a pay station to pay with most major debit or credit cards. Pay stations are pay-by-plate, which means that you can pay and go. You do not need to display a receipt in your window.&nbsp;</span><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="color: windowtext; font-size: 13px; margin: 0px; padding: 0px; line-height: 20.7px;"></span></li>
+    <li style="margin-left: 0px;"><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="color: windowtext; font-size: 13px; margin: 0px; padding: 0px; line-height: 20.7px;"></span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">Pay with Passport Parking or </span><span class="NormalTextRun SpellingErrorV2Themed SCXW55572819 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">PayByPhone</span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">:&nbsp;&nbsp;</span><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="color: windowtext; margin: 0px; padding: 0px; line-height: 20.7px;"></span></li>
+</ul>
+<ul class="BulletListStyle2 SCXW55572819 BCX0" role="list" style="margin: 0px; padding: 0px; list-style-type: circle;">
+    <li aria-setsize="-1" data-leveltext="o" data-font="Courier New" data-list-defn-props="{'335552541':1,'335559685':1440,'335559991':360,'469769226':'Courier New','469769242':[9675],'469777803':'left','469777804':'o','469777815':'hybridMultilevel'}" data-aria-posinset="1" data-aria-level="2" role="listitem" class="OutlineElement Ltr SCXW55572819 BCX0" style="margin: 0px 0px 0px 72px; padding: 0px;">
+    <p class="Paragraph SCXW55572819 BCX0" paraid="1551560908" paraeid="{bd5c5b54-d7b8-478e-bef7-a2d7a6869019}{94}" style="color: windowtext; background-color: transparent; margin-right: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">There is a </span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">fee for each transaction made with Passport </span><span class="NormalTextRun CommentStart CommentHighlightPipeRest CommentHighlightRest SCXW55572819 BCX0" style="background-color: rgba(209, 209, 209, 0.5); margin: 0px; padding: 0px;">Parking or </span><span class="NormalTextRun SpellingErrorV2Themed CommentHighlightRest SCXW55572819 BCX0" style="background-color: rgba(209, 209, 209, 0.5); margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">PayByPhone</span><span class="NormalTextRun CommentHighlightPipeRest SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">. This fee is in addition to Cambridge&rsquo;s parking meter fee</span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">.&nbsp;&nbsp;</span></span><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+    <li aria-setsize="-1" data-leveltext="o" data-font="Courier New" data-list-defn-props="{'335552541':1,'335559685':1440,'335559991':360,'469769226':'Courier New','469769242':[9675],'469777803':'left','469777804':'o','469777815':'hybridMultilevel'}" data-aria-posinset="2" data-aria-level="2" role="listitem" class="OutlineElement Ltr SCXW55572819 BCX0" style="margin: 0px 0px 0px 72px; padding: 0px;">
+    <p class="Paragraph SCXW55572819 BCX0" paraid="1630287900" paraeid="{bd5c5b54-d7b8-478e-bef7-a2d7a6869019}{112}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><a class="Hyperlink SCXW55572819 BCX0" href="https://www.passportparking.com/" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW55572819 BCX0" style="color: #467886; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">Download the Passport Parking app here</span></span></a><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"> or </span><a class="Hyperlink SCXW55572819 BCX0" href="https://park.passportparking.com/park/" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW55572819 BCX0" style="color: #467886; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">pay online here.</span></span></a><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+    <li aria-setsize="-1" data-leveltext="o" data-font="Courier New" data-list-defn-props="{'335552541':1,'335559685':1440,'335559991':360,'469769226':'Courier New','469769242':[9675],'469777803':'left','469777804':'o','469777815':'hybridMultilevel'}" data-aria-posinset="3" data-aria-level="2" role="listitem" class="OutlineElement Ltr SCXW55572819 BCX0" style="margin: 0px 0px 0px 72px; padding: 0px;">
+    <p class="Paragraph SCXW55572819 BCX0" paraid="1382115680" paraeid="{bd5c5b54-d7b8-478e-bef7-a2d7a6869019}{126}" style="color: windowtext; background-color: transparent; margin-right: 0px; margin-left: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;">Download the </span><span class="NormalTextRun SpellingErrorV2Themed SCXW55572819 BCX0" style="margin: 0px; padding: 0px; border-bottom: 1px solid transparent;">PayByPhone</span><span class="NormalTextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px;"> app for </span></span><a class="Hyperlink SCXW55572819 BCX0" href="https://play.google.com/store/apps/details?id=com.paybyphone" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW55572819 BCX0" style="color: #467886; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">Google Play</span></span></a><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"> or </span><a class="Hyperlink SCXW55572819 BCX0" href="https://apps.apple.com/us/app/paybyphone-parking/id448474183" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW55572819 BCX0" style="color: #467886; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">Apple</span></span></a><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;">, or </span><a class="Hyperlink SCXW55572819 BCX0" href="https://gbc-word-edit.officeapps.live.com/we/m.paybyphone.com" target="_blank" rel="noopener noreferrer" style="color: inherit; margin: 0px; padding: 0px;"><span data-contrast="none" class="TextRun Underlined SCXW55572819 BCX0" style="color: #467886; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW55572819 BCX0" data-ccp-charstyle="Hyperlink" style="margin: 0px; padding: 0px;">pay online here</span></span></a><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;">.&nbsp;&nbsp;</span><span class="EOP SCXW55572819 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':0,'335559740':276}" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span></p>
+    </li>
+    <li aria-setsize="-1" data-leveltext="o" data-font="Courier New" data-list-defn-props="{'335552541':1,'335559685':1440,'335559991':360,'469769226':'Courier New','469769242':[9675],'469777803':'left','469777804':'o','469777815':'hybridMultilevel'}" data-aria-posinset="4" data-aria-level="2" role="listitem" class="OutlineElement Ltr SCXW55572819 BCX0" style="margin: 0px 0px 0px 72px; padding: 0px;">
+    <p class="Paragraph SCXW55572819 BCX0" paraid="1569769550" paraeid="{bd5c5b54-d7b8-478e-bef7-a2d7a6869019}{151}" style="color: windowtext; background-color: transparent; margin-right: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;">Make sure that you enter your license plate number, car description, and the zone number correctly.</span></p>
+    </li>
+    <li class="Paragraph SCXW55572819 BCX0" paraid="1569769550" paraeid="{bd5c5b54-d7b8-478e-bef7-a2d7a6869019}{151}" style="color: windowtext; background-color: transparent; margin-right: 0px; padding: 0px;"><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="margin: 0px; padding: 0px; line-height: 20.7px;"></span><span data-contrast="auto" class="TextRun SCXW55572819 BCX0" style="color: windowtext; margin: 0px; padding: 0px; line-height: 20.7px;"><span data-contrast="auto" class="TextRun SCXW35608217 BCX0" style="background-color: #ffffff; margin: 0px; padding: 0px; line-height: 20.7px;"><span class="NormalTextRun SCXW35608217 BCX0" style="margin: 0px; padding: 0px;">Vehicles displaying a valid accessible/disability plate or placard do not have to pay to park in City parking lots. The placard/plate number and </span><span class="NormalTextRun SCXW35608217 BCX0" style="margin: 0px; padding: 0px;">expiration</span><span class="NormalTextRun SCXW35608217 BCX0" style="margin: 0px; padding: 0px;"> date must be visible.&nbsp;</span></span><span class="EOP SCXW35608217 BCX0" data-ccp-props="{'134233117':false,'134233118':false,'201341983':0,'335559738':0,'335559739':160,'335559740':276}" style="background-color: #ffffff; margin: 0px; padding: 0px; line-height: 20.7px;"></span></span><span style="color: windowtext;"></span></li>
+</ul>
+<p>
+<div class="ListContainerWrapper SCXW55572819 BCX0" style="color: #000000; background-color: #ffffff; margin-top: 0px; margin-right: 0px; margin-bottom: 0px; padding: 0px;">&nbsp;</div>
+</p>
+<h3>Parking Rates and Time Limits</h3>
+<p>Payments are required Monday through Saturday, except for holidays, during the hours listed below. No payment is required for  vehicles that have a visible disability plate or placard.</p>
+<p>You may only park in the lot for the posted amount of time (2 hours or 4 hours). If your vehicle is parked in a lot for longer than the posted time limit, we will issue a ticket for an overtime violation. You may not move to a new space to get additional time.</p>
+<h4>Harvard Square - Lot&nbsp;2</h4>
+<p><em>110 Mt. Auburn Street&nbsp;</em></p>
+<ul>
+    <li>8 a.m. to 6 p.m.&nbsp; &nbsp;| 2-hour maximum | $3.00 per hour</li>
+    <li>6 p.m. to 10 p.m.&nbsp;| 4-hour maximum | $3.00 per hour</li>
+</ul>
+<h4>Central Square - Lot&nbsp;4 and Lot&nbsp;5&nbsp;[EV]</h4>
+<p><em>Lot 4: 96 Bishop Allen Drive<br />
+Lot 5: 84 Bishop Allen Drive [EV charging available]</em></p>
+<ul>
+    <li>8 a.m. to 6 p.m.&nbsp; &nbsp;| 2-hour maximum | $1.25 per hour</li>
+    <li>6 p.m. to 10 p.m.&nbsp;| 4-hour maximum | $2.00 per hour</li>
+</ul>
+<h4>Central Square - Lot&nbsp;6</h4>
+<p><em>36 Bishop Allen Drive</em></p>
+<ul>
+    <li>8 a.m. to 6 p.m.&nbsp; &nbsp;| 4-hour maximum | $1.25 per hour</li>
+    <li>6 p.m. to 10 p.m. | 4-hour maximum | $2.00 per hour</li>
+</ul>
+<h4>&nbsp;Central Square - Lot&nbsp;8&nbsp;[EV] and Lot&nbsp;9&nbsp;[EV]</h4>
+<p><em>Lot 8: 375 Green Street [<em>EV charging available]</em><br />
+Lot 9: 9 Pleasant Street&nbsp;<em>[<em>EV charging available]</em></em></em></p>
+<ul>
+    <li>8 a.m. to 6 p.m.&nbsp; &nbsp;| 2-hour maximum | $1.25 per hour</li>
+    <li>6 p.m. to 10 p.m. | 4-hour maximum | $2.00 per hour</li>
+</ul>
+<h4>Wellington-Harrington (Windsor Street at Cambridge Street) - Lot&nbsp;11</h4>
+<p><em>984 Cambridge Street</em></p>
+<ul>
+    <li>8 a.m. to 10 p.m. | 2-hour maximum | $1.25 per hour</li>
+    <li><em>Note: Cambridge residents with Resident Parking Permits do not have to pay for parking after 6 p.m. in this lot.</em></li>
+</ul>
+<h4>Wellington-Harrington (Macarelli Way) - Lot&nbsp;12&nbsp;[EV]</h4>
+<p><em>Macarelli Way / 9 Warren Street&nbsp;<em>[<em>EV charging available]</em></em></em></p>
+<ul>
+    <li>08 a.m. to 6 p.m. | 4-hour maximum | $0.50 per hour</li>
+</ul>
+<h4>Inman Square - Lot&nbsp;14</h4>
+<p><em>15 Springfield Street</em></p>
+<ul>
+    <li>8 a.m. to 6 p.m.&nbsp; &nbsp;| 2-hour maximum | $1.25 per hour</li>
+    <li>6 p.m. to 10 p.m. | 4-hour maximum | $2.00 per hour</li>
+</ul>
+                </div>
+                <h3 id="fccc9ab190af42f09e32c9ddc185daaa" class="question " >
+                    First Street Garage (East Cambridge)
+                </h3>
+                <div id="Answerfccc9ab190af42f09e32c9ddc185daaa" runat="server" class="answer" >
+                    <h3><span>General Information</span></h3>
+<ul>
+    <li>Entrance: <a href="https://www.google.com/maps/dir//First+Street+Garage,+First+St,+Cambridge,+MA+02141/@42.3692211,-71.0782037,19z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89e370bc6af4c2eb:0x18753164cca87833!2m2!1d-71.078086!2d42.3687568">Across from 10 Spring St, Cambridge, MA</a>; Height clearance: 7 feet 3 inches</li>
+    <li>You may pay with cash or major debit or credit cards. Partial hours are rounded up to the next whole hour. If you lose your ticket, you must show identification and pay the maximum day rate ($30.00) in order to exit the garage.</li>
+    <li>The garage is open 24/7. The business hours are 9 a.m. to 3 p.m. </li>
+    <li>The garage is owned by the City of Cambridge and operated by Republic Parking Systems.</li>
+    <li>[EV] You may charge an electric vehicle in this garage.</li>
+</ul>
+<p><strong>Contact:&nbsp;</strong>You may contact the garage office at 617-349-4754.</p>
+<h3>Day Rate</h3>
+<ul>
+    <div class="garageFlexBox" style="display: flex; flex-flow: row wrap;">
+    <div class="garageFlexBoxBoxes">
+    <li>up to 1 hour - $4.00</li>
+    <li>1-2 hours - $6.00</li>
+    <li>2-3 hours - $8.00</li>
+    <li>3-4 hours - $10.00</li>
+    <li>4-5 hours - $12.00</li>
+    </div>
+    <div>
+    <li>5-6 hours - $14.00</li>
+    <li>6-7 hours - $16.00</li>
+    <li>7-8 hours - $19.00</li>
+    <li>8-9 hours - $22.00</li>
+    <li>9-24 hours - $30.00</li>
+    </div>
+    </div>
+</ul>
+<h3>Night and Weekend Rate</h3>
+<ul>
+    <li>Nights: Enter after 5 p.m. and exit by 6 a.m.</li>
+    <li>Weekends: All day Saturday and Sunday</li>
+    <li>Up to 2 hours - $2.00 per hour</li>
+    <li>2-24 hours - $5.00</li>
+</ul>
+<p>&nbsp;</p>
+<h3>Reduced Fee Monthly Parking for Residents</h3>
+<p>
+Cambridge residents may apply for monthly parking at the First Street Garage.</p>
+<p style="text-align: left;"><a class="button blue" href="https://www.cambridgema.gov/-/media/Files/Traffic/applicationforms/2026firststreetgarageapplication.pdf">Monthly Parking Application</a></p>
+<h4>Fees</h4>
+<ul>
+    <li>One-time fee for access card - $10.00 (replacement fee: $10.00)</li>
+    <li>May through November - $100.00 per month</li>
+    <li>December through April - $50.00 per month</li>
+</ul>
+<h4>Eligibility</h4>
+<p>In order to be eligible you must:</p>
+<ul>
+    <li>Have a current Resident parking Permit</li>
+    <li>Pay all outstanding parking tickets</li>
+</ul>
+<h4>Rules</h4>
+<ul>
+    <li>The monthly payment is due before the first of the month. Failure to pay or late payment will result in the access card being disabled, and you will be responsible for paying the full garage daily maximum rate for each day your vehicle is parked in the garage after the first of the month.</li>
+    <li>Vehicles cannot be left in the garage for more than one week without exiting the garage. </li>
+    <li>Requests for parking in the garage longer than a week must be submitted in writing including the reason, duration, and emergency contact information.</li>
+    <li>You are responsible for making sure your vehicle is in safe condition and is not a hazard to other users of the garage (e.g., not leaking fluids, and not unable to be driven). </li>
+    <li>You are&nbsp;responsible for all items left in your vehicle. </li>
+    <li>Your vehicle must have a valid, up-to-date inspection sticker, registration, and resident parking permit. </li>
+    <li>If you do not comply with the rules, your vehicle will considered an abandoned vehicle (G.L. c.90 Sec22B) and towed at your expense.</li>
+</ul>
+                </div>
+                <h3 id="d03b69fe84da442bab165cddaf1e5d2b" class="question " >
+                    Green Street Garage (Central Square)
+                </h3>
+                <div id="Answerd03b69fe84da442bab165cddaf1e5d2b" runat="server" class="answer" >
+                    <h3>General Information</h3>
+<ul>
+    <li>Entrance: <a href="https://www.google.com/maps/dir//260+Green+St,+Cambridge,+MA+02139/@42.3643531,-71.1035205,15z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89e37756a5b5e1fb:0x1fcfea7099583aa5!2m2!1d-71.1037278!2d42.3641119">260 Green St, Cambridge, MA</a>; Height clearance: 6 feet 8 inches</li>
+    <li>You may pay with cash or major debit or credit cards. Partial hours are rounded up to the next whole hour. If you lose your ticket, you must show identification and pay the maximum day rate ($30.00) in order to exit the garage.</li>
+    <li>The garage is open 24/7. The business hours are 9:00 a.m. to 3:00 p.m.&nbsp;</li>
+    <li><strong>Phone Number:&nbsp;</strong>You may contact the garage office at 617-349-4758.</li>
+    <li>The garage is owned by the City of Cambridge and operated by Republic Parking Systems.</li>
+</ul>
+<h3>Day Rate&nbsp;&nbsp;</h3>
+<ul>
+    <div style="display: flex; flex-flow: row wrap;">
+    <div class="garageFlexBoxBoxes">
+    <li>up to 1 hour - $4.00</li>
+    <li>1-2 hours - $8.00</li>
+    <li>2-3 hours - $10.00</li>
+    <li>3-4 hours - $12.00</li>
+    <li>4-5 hours - $16.00</li>
+    </div>
+    <div>
+    <li>5-8 hours - $18.00</li>
+    <li>8-9 hours - $20.00</li>
+    <li>9-12 hours - $22.00</li>
+    <li>12-24 hours - $30.00</li>
+    </div>
+    </div>
+</ul>
+<h3>Night Rate&nbsp;</h3>
+<ul>
+    <li>Enter after 6 p.m. and exit by 7 a.m.</li>
+    <li>Up to 4 hours - $2.00 per hour</li>
+    <li>Over 4 hours - $9.00</li>
+</ul>
+<h3>Weekend Rate&nbsp;</h3>
+<ul>
+    <li>7 a.m. Saturday to 7 a.m. Monday</li>
+    <li>Up to 6 hours - $2.00 per hour</li>
+    <li>6 to 24 hours - $13.00</li>
+</ul>
+                </div>
+                <h3 id="755ae4af53224dd3ada653f59d1fcd80" class="question " >
+                    Parking Holidays (Lots and Meters)
+                </h3>
+                <div id="Answer755ae4af53224dd3ada653f59d1fcd80" runat="server" class="answer" >
+                    <p>Payments are not required at City of Cambridge parking meters and parking meter pay stations on the following Commonwealth of Massachusetts holidays. Payments are required in Garages every day of the year.</p>
+<ul>
+    <li>New Year's Day - January 1</li>
+    <li>Martin Luther King, Jr. Day - Third Monday in January </li>
+    <li>Presidents' Day - Third Monday in February</li>
+    <li>Patriots' Day - Third Monday in April&nbsp;</li>
+    <li>Memorial Day - Last Monday in May</li>
+    <li>Juneteenth - June 19&nbsp;</li>
+    <li>Independence Day - July 4</li>
+    <li>Labor Day - First Monday in September</li>
+    <li>Indigenous Peoples' Day - Second Monday in October</li>
+    <li>Veterans Day - November 11</li>
+    <li>Thanksgiving Day - Fourth Thursday in November</li>
+    <li>Christmas Day - December 25</li>
+</ul>
+<p>Under state law, all holidays falling on Sunday are observed on Monday.</p>
+                </div>
+        </div>
+        </div>
+    </section>
+        <script>
+            $j(window).ready(function () {
+                //Check to see if any FAQ needed to be forced open
+                if ($j(".accordion .force").length > 0) {
+
+                    $j(".accordion .force").each(function () {
+                        //close all faqs in the current accordion
+                        $j(this).parent().accordion('option', { active: false });
+
+                        //Show the answer of the forced faq
+                        $j(this).next('div').show();
+                    })
+                }
+                else {
+                    //Get the hash value in the url
+                    var FaqID = window.location.hash;
+
+                    //Check if value came back
+                    if (FaqID != "") {
+                        //Replace the lead hashtag so that just the id value is left
+                        FaqID = FaqID.replace('#', '');
+                        console.log("FaqID: " + FaqID);
+
+                        //Check is the value is alpha-numeric and 32 characters long
+                        if (FaqID.match("[a-zA-Z0-9]*$")[0] != "" && FaqID.match("[a-f0-9]*$")[0].length == 32 && FaqID.replace('#', '').length == 32) {
+                            var foundFAQ = false;
+                            var faqCount = 0, faqQuestionCount = 0;
+
+                            //Search for all the questions until we an id that matches the given id
+                            $j('.accordion').each(function () {
+
+                                $j(this).children(".question").each(function () {
+                                    if ($j(this).attr("id") == FaqID) {
+                                        //Flag that we found the FAQ
+                                        foundFAQ = true;
+                                        //Break out of current loop
+                                        return false;
+                                    }
+                                    //Increment the question count
+                                    faqQuestionCount++;
+                                })
+
+                                //Break of out current loop
+                                if (foundFAQ)
+                                    return false;
+
+                                //Reset the question count
+                                faqQuestionCount = 0;
+                                //Increment the FAQ count
+                                faqCount++;
+                            });
+
+                            if (foundFAQ) {
+                                //collapse all FAQs
+                                $j('.accordion').accordion('option', { active: false });
+
+                                //Expand the question that was found
+                                $j('.accordion:eq(' + faqCount + ')').accordion("option", { active: faqQuestionCount });
+
+                                //reverse scroll
+                                setTimeout(function () { window.scrollBy(0, -60); }, 150);
+                            }
+                        }
+                    }
+                    //If there is more than 1 FAQ, inactivate all of them except for the first one
+                    else if ($j(".faq > .accordion").length > 1) {
+                        $j(".faq:not(:first-of-type) .accordion").accordion('option', { active: false });
+                    }
+                }
+            });
+        </script>
+
+
+
+
+	<section  class="arbitraryContent ">
+		<div class="container ">
+			<h2>Public Parking Map</h2>
+<p>The Public Parking Map below includes information about location and other key details about our parking meters, lots, garages, and disability parking spaces in commercial areas. <em>Please note that meter locations may change in between map updates.&nbsp;</em></p>
+<p>Instructions:</p>
+<ul>
+    <li>Click the "&gt;&gt;" button to expand the legend.</li>
+    <li>Use the "+" and "-" buttons to zoom in and out on the map.</li>
+    <li>Type an address in the box at the top left to zoom in on a specific location.</li>
+    <li>Click on a rectangle to get more information about each metered parking space.</li>
+    <li>Click on a circle to get more information&nbsp;about each lot or garage.</li>
+</ul>
+
+		</div>
+	</section>
+
+
+
+<section  class="agolMap ">
+			<div class="text-align-right">
+				
+				<a href="https://cambridgegis.maps.arcgis.com/apps/Embed/index.html?webmap=19de2226107240fd8e78d8a2da44af5e&amp;extent=-71.1767,42.3469,-71.05,42.4069&amp;home=true&amp;zoom=true&amp;scale=false&amp;search=true&amp;searchextent=false&amp;legendlayers=false&amp;disable_scroll=false&amp;theme=light&amp;show_panel=true" target="_blank">View larger map</a>
+			</div>
+		<div class="embed-container">
+			
+			<iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Meters Lots and Garages" src="https://cambridgegis.maps.arcgis.com/apps/Embed/index.html?webmap=19de2226107240fd8e78d8a2da44af5e&amp;extent=-71.176,42.405,-71.049,42.351&amp;home=True&amp;zoom=True&amp;scale=True&amp;search=True&amp;searchextent=True&amp;find=&amp;feature=&amp;legend=True&amp;disable_scroll=True&amp;theme=light&amp;basemap_toggle=False&amp;details=False&amp;popup_sidepanel=False&amp;show_panel=False&amp;logoimage=&amp;logolink=">
+			</iframe>
+		</div>
+</section>
+
+		</section>
+
+		<aside class="rightRail">
+			<section class="relatedDepartments wells">
+    <h2>Contact</h2>
+    <div>
+            <h2>Department of Transportation</h2>
+                <div class="info">
+            <div class="relatedDeptContactInfo">
+                    <div aria-label="Phone Number"><img class="contactIcon" src="/images/icons8phone.svg" alt="">617-349-4700</div>
+                                    <div aria-label="Email Address">
+                        <a href="mailto:cdot@cambridgema.gov">
+                            <img class="contactIcon"
+                                 src="/images/icons8mail.svg" alt="">Email us
+                        </a>
+                    </div>
+                                    <div aria-label="Website Address">
+                        <a href="/Departments/transportation">
+                            <img class="contactIcon"
+                                 src="/images/icons8globe.svg" alt="">Visit Website
+                        </a>
+                    </div>
+                                    <div aria-label="Physical Address" class="physicalAddress">
+                        <img class="contactIcon" src="/images/icons8-location-pin.svg" alt="">
+                        <div>
+                            344 Broadway<br />
+                            Cambridge, MA 02139
+                        </div>
+                    </div>
+            </div>
+	<section class="hoursOfServiceList">
+		
+		<h2 class="title">Hours of Service</h2>
+
+		<div class="hoursList">
+				<div class="dailyHours ">
+					<span class="day">Mon:</span>
+					<span class="hours">8:30AM - 8PM</span>
+				</div>
+				<div class="dailyHours bold">
+					<span class="day">Tue - Thu:</span>
+					<span class="hours">8:30AM - 5PM</span>
+				</div>
+				<div class="dailyHours ">
+					<span class="day">Fri:</span>
+					<span class="hours">8:30AM - 12PM</span>
+				</div>
+		</div>
+	</section>
+        </div>
+    </div>
+</section>
+
+
+
+        <section  class="wells contentWell " >
+
+                <h2>Accessibility Statement</h2>
+
+            <p style="margin: 1em 1em 0 1em;">The City of Cambridge does not discriminate, including on the basis of disability. We may provide auxiliary aids and services, written materials in alternative formats, and reasonable modifications in policies and procedures to people with disabilities. For more information contact us at <a href="mailto:tpt@cambridgema.gov"></a>cdot@cambridgema.gov, 617-349-4700 (voice), or via relay at 711.</p>
+        </section>
+
+
+		</aside>
+	</div>
+</section>
+        </main>
+
+        
+        <footer>
+	
+	<section class="contact " itemscope="" itemtype="http://schema.org/Organization">
+    <div>
+        <h2 id="title">Contact City Hall</h2>
+
+        <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
+            <a href="https://www.google.com/maps/place/795+Massachusetts+Ave,+Cambridge,+MA+02139" target="_blank">
+                <div><span class="address" itemprop="streetAddress">795 Massachusetts Ave.</span></div>
+                <div>
+                    <span class="address">
+                        <span itemprop="addressLocality">Cambridge</span>,
+                        <span itemprop="addressRegion">MA</span>
+                        <span itemprop="postalCode" id="postalCode">02139</span>
+                    </span>
+                </div>
+            </a>
+        </div>
+
+        <div itemprop="contactPoint" itemscope="" itemtype="http://schema.org/ContactPoint">
+            <div>
+                Ph: <span itemprop="telephone" id="telephone">617-349-4000</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="socialLinks">
+
+            <a href="//bsky.app/profile/cambridgemass.bsky.social" target="_blank" title="Bluesky logo" aria-label="Bluesky logo"><i class="fa-brands fa-bluesky"></i></a>
+
+            <a href="//facebook.com/CambridgeMass.Gov" target="_blank" title="Facebook logo" aria-label="Facebook logo"><i class="fa-brands fa-facebook"></i></a>
+
+
+            <a href="//instagram.com/cambridgemass" target="_blank" title="Instagram logo" aria-label="Instagram logo"><i class="fa-brands fa-instagram"></i></a>
+
+            <a href="//youtube.com/user/cambridgemagov" target="_blank" title="YouTube logo" aria-label="YouTube logo"><i class="fa-brands fa-youtube"></i></a>
+
+    </div>
+
+</section>
+
+	
+		<section class="hoursOfServiceList">
+		
+		<h2 class="title">Hours of Service</h2>
+
+		<div class="hoursList">
+				<div class="dailyHours ">
+					<span class="day">Mon:</span>
+					<span class="hours">8:30AM - 8PM</span>
+				</div>
+				<div class="dailyHours bold">
+					<span class="day">Tue - Thu:</span>
+					<span class="hours">8:30AM - 5PM</span>
+				</div>
+				<div class="dailyHours ">
+					<span class="day">Fri:</span>
+					<span class="hours">8:30AM - 12PM</span>
+				</div>
+		</div>
+	</section>
+
+
+	
+	
+	<ul class="footerQuickLinks even">
+
+			<li>
+				<a href="/iwantto/payabillonline" target="" class="computer screen" title="Pay Bills Online">
+					<span>Pay Bills Online</span>
+				</a>
+			</li>
+			<li>
+				<a href="/propertydatabase" target="" class="building" title="Property Database">
+					<span>Property Database</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://cambridgema.primegov.com/public/portal" target="" class="video" title="Watch City Council">
+					<span>Watch City Council</span>
+				</a>
+			</li>
+			<li>
+				<a href="/citycalendar" target="" class="calendar" title="Calendar">
+					<span>Calendar</span>
+				</a>
+			</li>
+			<li>
+				<a href="/citydirectory" target="" class="person" title="View City Directory">
+					<span>View City Directory</span>
+				</a>
+			</li>
+			<li>
+				<a href="/publications" target="" class="document" title="Find Forms &amp; Documents">
+					<span>Find Forms &amp; Documents</span>
+				</a>
+			</li>
+	</ul>
+
+
+
+	
+	
+
+
+<div id="footer">
+		<ul>
+				<li><a href="/Departments/citymanagersoffice" target="" title="Yi-An Huang, City Manager">Yi-An Huang, City Manager</a></li>
+				<li><a href="/iwantto/submitapublicrecordsrequest" target="" title="Public Records Request">Public Records Request</a></li>
+				<li><a href="/disclaimer" target="" title="Disclaimer">Disclaimer</a></li>
+				<li><a href="/iwantto/applyforajobwiththecity" target="" title="Jobs">Jobs</a></li>
+				<li><a href="/privacystatement" target="" title="Privacy Statement">Privacy Statement</a></li>
+				<li><a href="/socialmedia" target="" title="Social Media">Social Media</a></li>
+				<li><a href="https://app.smartsheet.com/b/form/4ce90128af5e40229f5f3c9248aa10f6" target="_blank" title="Media Inquiries">Media Inquiries</a></li>
+				<li><a href="/citydirectory" target="" title="Contact Us">Contact Us</a></li>
+		</ul>
+
+	<p>&copy; 2026 City of Cambridge</p>
+</div>
+
+</footer>
+
+    </div>
+
+    
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QTK0ZFS111"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+    gtag('config', 'G-QTK0ZFS111', { cookie_flags: 'secure;samesite=none' });
+</script>
+
+<script defer src="https://analytics.silktide.com/f24187b6e9c782cd445551aadba125f5.js"></script>
+<script>
+  (function (s,i,l,k,y) {
+    s[i] = s[i] || y;
+    s[l] = s[l] || [];
+    s[k] = function(e, p) { p = p || {}; p.event = e; p.time = Date.now(); s[l].push(p); };
+    s[k]('page_load');
+  })(window, 'stConfig', 'stEvents', 'silktide', {});
+</script>
+
+    
+    <a href="#" onclick="showFeedbackDialog();" id="btnFeedback" class="btnFeedback">Contact Us</a>
+
+    
+    <script>
+        var contactUsWidget;
+        function submitFeedBackHelper() {
+            wdiegtId = document.querySelectorAll('#feedback-submit').forEach(function (el) {
+                grecaptcha.render(el, {
+                    'sitekey': '6Le54kwpAAAAAMqsq6GL210byANPuAcjmKbPd90J',
+                    'callback': function (response) {
+                        submitFeedback('ly5X8fSrnKSp-bfQ0dAutFyv531Ap0m8mJnCCZrfeVusTzKDl-o0CGDAjHZ-c5g7ME-W1zH5MjwlrNIoOLUAWkb6cu8Acz0Ut6C8Z2ryKkg1:OV51ikhgCBs1jzaVuo0CmCTs3244NCPqMq8t3Yz6FgPNIcx-BUCNisLXKeSNO9gtz_pwx9lwCA4FsbYc6yvDvvLjAb_Nam3DqWnfkO7A7Es1', response);
+                    },
+                });
+            });
+            contactUsWidget = wdiegtId;
+        }
+    </script>
+    <div id="atlwdg-blanket" class="atlwdg-blanket" style="display: none;" onclick="hideFeedbackDialog();"></div>
+    <div id="atlwdg-container" class="atlwdg-popup">
+        <div id="atlScriptlet">
+            <div class="aui-dialog collector-dialog">
+
+                <h2 class="dialog-title">How can we help?</h2>
+
+                <!-- [Main Form] -->
+                <div class="content-body">
+                    <div class="msg-container"></div>
+
+                    <div id="feedbackForm">
+                        <div class="aui-message info custom-msg">
+                            <span class="aui-icon icon-info"></span>
+                            <p style="margin:0;">Please provide as much detail below as possible so City staff can respond to your inquiry:</p>
+                        </div>
+                        <div class="desc-group field-group">
+                            <label for="feedback">Description:<span class="required">*</span></label>
+                            <textarea class="textarea long-field" cols="30" rows="5" id="feedback" name="feedback"></textarea>
+                        </div>
+                        <div class="desc-group field-group">
+                            <label for="feedback_name">Name:</label>
+                            <input id="feedback_name" type="text" />
+                        </div>
+                        <div class="desc-group field-group">
+                            <label for="feedback_email">Email:</label>
+                            <input id="feedback_email" type="email" />
+                        </div>
+                        <p style="margin:1em 0;">As a governmental entity, the Massachusetts Public Records Law applies to records made or received by the City. Any information received through use of this site is subject to the same provisions as information provided on paper.</p>
+                        <p style="margin:0;"><a href="https://www.cambridgema.gov/privacystatement" target="_blank">Read our complete privacy statement</a></p>
+                        <hr style="margin:1em 0;" />
+                        <h2 style="margin:0;">Service Requests</h2>
+                        <p style="margin:0;"><a href="/SeeClickFix" target="_blank">Enter a service request via SeeClickFix</a> for things like missed trash pickups, potholes, etc., click here</p>
+                    </div>
+                </div>
+                <div class="dialog-button-panel">
+                    <input id="feedback-submit" type="button" class="aui-button aui-button-primary submit-button g-recaptcha" value="Submit" />
+                    <a href="#" onclick="hideFeedbackDialog()" class="cancel">Close</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.google.com/recaptcha/api.js?onload=submitFeedBackHelper&render=explicit" async defer></script>
+        <script src="/Layouts/Cambridge2016/_resources/js/uswds.min.js" type="text/javascript"></script>
+        <script src="/Layouts/Cambridge2016/_resources/js/uswds-init.min.js" type="text/javascript"></script>
+</body>
+
+
+<script type="text/javascript" src="//www.google-analytics.com/analytics.js"></script>
+<script type="text/javascript" src="/Layouts/Cambridge2016/_resources/js/google-analytics.js?t=2026250000"></script>
+</html>

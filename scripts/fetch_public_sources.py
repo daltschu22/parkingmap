@@ -38,6 +38,31 @@ def validate_content(source: dict, content: bytes) -> None:
         raise ContentValidationError(
             f"{source['id']}: expected a PDF but the response was not a PDF"
         )
+    if source_type == "html":
+        prefix = content[:4096].lstrip().lower()
+        if b"<html" not in prefix and b"<!doctype html" not in prefix:
+            raise ContentValidationError(
+                f"{source['id']}: expected HTML but the response was not HTML"
+            )
+    if source_type == "image" and not content.startswith(
+        (b"\x89PNG\r\n\x1a\n", b"\xff\xd8\xff")
+    ):
+        raise ContentValidationError(
+            f"{source['id']}: expected a PNG or JPEG image"
+        )
+    if source_type == "kml":
+        try:
+            import xml.etree.ElementTree as ET
+
+            root = ET.fromstring(content)
+        except ET.ParseError as exc:
+            raise ContentValidationError(
+                f"{source['id']}: expected valid KML/XML"
+            ) from exc
+        if not root.tag.casefold().endswith("kml"):
+            raise ContentValidationError(
+                f"{source['id']}: XML response is not a KML document"
+            )
     if source_type in {"json", "geojson"}:
         try:
             json.loads(content)

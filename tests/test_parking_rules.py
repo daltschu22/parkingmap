@@ -58,10 +58,11 @@ def test_cambridge_meter_points_do_not_classify_a_whole_street():
 @pytest.mark.parametrize(
     ("access", "expected"),
     [
-        ("permit_with_metered_segments", "metered"),
-        ("permit_with_time_limited_segments", "open_time_limited"),
+        ("permit_with_metered_segments", "restricted"),
+        ("permit_with_time_limited_segments", "restricted"),
         ("resident_permit_required", "restricted"),
-        ("resident_permit_segment_rules_known", "restricted"),
+        ("resident_permit_time_restricted", "restricted"),
+        ("resident_permit_segment_rules_known", "unknown"),
         ("private_rules_apply", "restricted"),
         ("unknown", "unknown"),
         ("inactive_metered_segments_known", "unknown"),

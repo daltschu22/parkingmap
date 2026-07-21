@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "resident_permit_zone",
   "url": "https://www.medfordma.org/fs/resource-manager/view/809c574b-8dfd-4592-af4a-5b05bbe85571",
-  "downloaded_at_utc": "2026-05-23T09:54:14.440856+00:00",
+  "final_url": "https://resources.finalsite.net/images/f_auto,q_auto,t_image_size_6/v1716232336/medfordmaorg/yteh1dgszjcje7h3fawf/RPP_Pilot_Program_C_Size_Expanded_Area_1.png",
+  "destination": "data/raw/medford/green-line-zone-map.png",
+  "downloaded_at_utc": "2026-07-21T21:04:32.265863+00:00",
   "http_status": 200,
   "content_type": "image/jpeg",
-  "bytes": 858329
+  "last_modified": "Tue, 21 May 2024 18:07:21 GMT",
+  "etag": "\"1ca1bc699a99aef481bf487228698218\"",
+  "bytes": 858329,
+  "sha256": "a48e6f0faa06748f8930bf228bb420990abadf02d7b4e32e25117abd79e59ce7"
 }

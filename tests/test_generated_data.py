@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+from collections import Counter
 from pathlib import Path
 
 
@@ -73,3 +74,83 @@ def test_cambridge_meter_matches_retain_distance_and_threshold():
     assert all(0 <= props["MATCH_DISTANCE_METERS"] <= threshold for props in matched)
     assert all(props.get("MATCHED_STREET_KEY") for props in matched)
     assert rules["meter_match_distance_meters"]["max"] <= threshold
+
+
+def test_public_parking_facilities_have_valid_shared_grain_and_sources():
+    facilities = load_json("data/processed/public_parking_facilities.geojson")
+    features = facilities["features"]
+    ids = [feature["properties"]["FACILITY_ID"] for feature in features]
+
+    assert len(features) == 24
+    assert len(ids) == len(set(ids))
+    assert Counter(
+        feature["properties"]["MUNICIPALITY"] for feature in features
+    ) == {"Cambridge": 11, "Somerville": 13}
+    assert Counter(
+        feature["properties"]["FACILITY_TYPE"]
+        for feature in features
+        if feature["properties"]["MUNICIPALITY"] == "Cambridge"
+    ) == {"Municipal Parking Lot": 9, "Municipal Parking Garage": 2}
+    assert all(
+        feature["properties"]["SOURCE_URL"].startswith("https://")
+        for feature in features
+    )
+    assert all(
+        -71.20 < feature["geometry"]["coordinates"][0] < -70.95
+        and 42.30 < feature["geometry"]["coordinates"][1] < 42.50
+        for feature in features
+    )
+    by_id = {feature["properties"]["FACILITY_ID"]: feature for feature in features}
+    lot_5 = next(
+        feature
+        for feature in by_id.values()
+        if feature["properties"]["NAME"] == "Municipal Lot 5"
+    )
+    assert lot_5["properties"]["ADDRESS"] == "84 Bishop Allen Drive"
+    assert lot_5["properties"]["GIS_ADDRESS"] == "84 Norfolk Street"
+
+    raw_sources = {
+        "cambridge_details": (
+            "data/raw/cambridge/public-parking.html",
+            "data/raw/cambridge/public-parking.html.metadata.json",
+        ),
+        "somerville_authority_page": (
+            "data/raw/somerville/parking-department.html",
+            "data/raw/somerville/parking-department.html.metadata.json",
+        ),
+        "somerville_lots": (
+            "data/raw/somerville/municipal-parking-lots.kml",
+            "data/raw/somerville/municipal-parking-lots.kml.metadata.json",
+        ),
+    }
+    for source_key, (raw_path, metadata_path) in raw_sources.items():
+        raw_content = (BASE_DIR / raw_path).read_bytes()
+        metadata = load_json(metadata_path)
+        digest = hashlib.sha256(raw_content).hexdigest()
+        assert facilities["properties"]["sources"][source_key]["sha256"] == digest
+        assert metadata["sha256"] == digest
+
+    authority_page = (BASE_DIR / raw_sources["somerville_authority_page"][0]).read_text()
+    assert "1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y" in authority_page
+
+
+def test_medford_rules_match_the_fetched_official_source_and_keep_row_volume():
+    rules = load_json("data/processed/medford/resident_permit_parking_rules.json")
+    metadata = load_json(
+        "data/raw/medford/resident-permit-parking-streets.pdf.metadata.json"
+    )
+    source_pdf = BASE_DIR / rules["source"]["file"]
+
+    assert rules["row_count"] == 191
+    assert rules["street_count"] == 181
+    assert rules["source"]["sha256"] == hashlib.sha256(source_pdf.read_bytes()).hexdigest()
+    assert rules["source"]["sha256"] == metadata["sha256"]
+    assert rules["source"]["url"] == metadata["final_url"]
+
+
+def test_medford_time_windows_are_not_reported_as_unconditional_permit_rules():
+    evidence = load_json("data/processed/medford/segment_parking_evidence.json")
+    counts = evidence["parking_access_counts"]
+
+    assert counts["resident_permit_time_restricted"] == 104
+    assert counts["resident_permit_required"] == 136

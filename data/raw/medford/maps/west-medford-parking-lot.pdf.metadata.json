@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "business_municipal_commuter_map",
   "url": "https://www.medfordma.org/fs/resource-manager/view/dd6de10c-0a48-407a-9df3-680b1a50f433",
-  "downloaded_at_utc": "2026-05-23T09:54:22.025894+00:00",
+  "final_url": "https://resources.finalsite.net/images/v1697746769/medfordmaorg/b66yo1a05xbr4zxjxzjm/West_Medford_Parking_Lot_publish.pdf",
+  "destination": "data/raw/medford/maps/west-medford-parking-lot.pdf",
+  "downloaded_at_utc": "2026-07-21T21:04:39.258011+00:00",
   "http_status": 200,
   "content_type": "application/pdf",
-  "bytes": 5204440
+  "last_modified": "Thu, 19 Oct 2023 20:19:30 GMT",
+  "etag": "\"88c208ba914c92a7467ef9b78d66efdd\"",
+  "bytes": 5204440,
+  "sha256": "1f1ef714b9c2a71d05d7d36d3388d9e915fb85511f6858f6a0f17c835e57e490"
 }

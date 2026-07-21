@@ -1,0 +1,16 @@
+{
+  "id": "somerville_municipal_parking_lots_kml",
+  "title": "Somerville Map of Municipal Parking Lots",
+  "municipality": "somerville",
+  "category": "public_parking_facilities",
+  "authority_url": "https://www.somervillema.gov/departments/parking-department",
+  "destination": "data/raw/somerville/municipal-parking-lots.kml",
+  "url": "https://www.google.com/maps/d/kml?mid=1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y&forcekml=1",
+  "final_url": "https://www.google.com/maps/d/kml?mid=1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y&forcekml=1",
+  "fetched_at_utc": "2026-07-21T21:32:07.044143+00:00",
+  "content_type": "text/xml; charset=utf-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 20496,
+  "sha256": "af959179f5f0b420f3eb9095c8a5d4522d81007a4489e7a977449b81bd96231c"
+}

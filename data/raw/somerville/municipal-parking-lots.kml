@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>Somerville Municipal Parking Lots</name>
+    <description/>
+    <Style id="icon-1644-0F9D58-normal">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+    </Style>
+    <Style id="icon-1644-0F9D58-highlight">
+      <IconStyle>
+        <color>ff589d0f</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+    </Style>
+    <StyleMap id="icon-1644-0F9D58">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1644-0F9D58-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1644-0F9D58-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Folder>
+      <name>Municipal Parking Lots</name>
+      <Placemark>
+        <name>Buena Vista Lot</name>
+        <description><![CDATA[description: Buena Vista Rd at Holland St<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 94<br>Accessible Parking: 4 spaces<br>Electric Vehicle Charging: No<br>Special Restrictions: No trucks allowed. 3 spaces reserved for Zipcar. Certain spaces reserved for Business Permit Parking Only.<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Buena Vista Rd at Holland St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>94.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>4 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No trucks allowed. 3 spaces reserved for Zipcar. Certain spaces reserved for Business Permit Parking Only.</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1241884,42.3977251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Cutter Square Lot</name>
+        <description><![CDATA[description: Elm St/Summer St at Cutter Ave<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 12<br>Accessible Parking: No<br>Electric Vehicle Charging: No<br>Special Restrictions: No<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Elm St/Summer St at Cutter Ave</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>12.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>No</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1208838,42.3940953,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Day St Lot</name>
+        <description><![CDATA[description: 44 Day St<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 61<br>Accessible Parking: 3 spaces<br>Electric Vehicle Charging: 2 spaces<br>Special Restrictions: No Parking-Farmers Market, Wednesdays, 8:00am-7:00pm, May-November<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>44 Day St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>61.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>3 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No Parking-Farmers Market, Wednesdays, 8:00am-7:00pm, May-November</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1233504,42.3954905,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Foss Park Lot</name>
+        <description><![CDATA[description: Broadway at McGrath Hwy<br>Parking Regulations: 2 hour parking 8:00am-8:00pm, permit parking only 8:00pm-8:00am<br>Total Number of Spaces: 21<br>Accessible Parking: 2 spaces<br>Electric Vehicle Charging: No<br>Special Restrictions: No Parking-Street Cleaning, April 1st-December 31st, Mondays, 12:00AM-6:00AM<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Broadway at McGrath Hwy</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>2 hour parking 8:00am-8:00pm, permit parking only 8:00pm-8:00am</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>21.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No Parking-Street Cleaning, April 1st-December 31st, Mondays, 12:00AM-6:00AM</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.08935,42.3905411,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grove St Lot A</name>
+        <description><![CDATA[description: Grove St west side at Elm St<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 17<br>Accessible Parking: 1 space<br>Electric Vehicle Charging: No<br>Special Restrictions: No<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Grove St west side at Elm St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>17.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>1 space</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1211329,42.3952787,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grove St Lot B</name>
+        <description><![CDATA[description: Grove St east side at Elm St<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 20<br>Accessible Parking: 2 spaces<br>Electric Vehicle Charging: No<br>Special Restrictions: Certain spaces reserved for Business Permit Parking Only<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Grove St east side at Elm St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>20.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>Certain spaces reserved for Business Permit Parking Only</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1207711,42.3950677,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Grove St Lot C</name>
+        <description><![CDATA[description: Grove St at Highland Ave<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 54<br>Accessible Parking: 4 spaces<br>Electric Vehicle Charging: 2 spaces<br>Special Restrictions: Certain spaces reserved for Business Permit Parking Only. 2 spaces reserved for Zipcar<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Grove St at Highland Ave</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>54.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>4 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>Certain spaces reserved for Business Permit Parking Only. 2 spaces reserved for Zipcar</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1200644,42.3960908,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Magoun Square Lot</name>
+        <description><![CDATA[description: Broadway at Medford St<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 51<br>Accessible Parking: 3 spaces<br>Electric Vehicle Charging: 2 spaces<br>Special Restrictions: 1 space reserved for Zipcar<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Broadway at Medford St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>51.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>3 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>1 space reserved for Zipcar</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1047555,42.396996,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Mt. Vernon St Lot</name>
+        <description><![CDATA[description: Broadway at Mt. Vernon St<br>Parking Regulations: Metered Parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 10<br>Accessible Parking: No<br>Electric Vehicle Charging: 2 spaces<br>Special Restrictions: 1 space reserved for Zipcar<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Broadway at Mt. Vernon St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered Parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>10.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>No</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>1 space reserved for Zipcar</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.0783636,42.3861729,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Union Square Lot</name>
+        <description><![CDATA[description: Washington St at Bonner Ave<br>Parking Regulations: Metered parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 41<br>Accessible Parking: 2 spaces<br>Electric Vehicle Charging: 2 spaces<br>Special Restrictions: No Parking-Farmers Market, Saturdays, May-October, 6:30am-2:00pm; 1st spot at entrance reserved as a Loading Zone<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Washington St at Bonner Ave</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>41.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No Parking-Farmers Market, Saturdays, May-October, 6:30am-2:00pm; 1st spot at entrance reserved as a Loading Zone</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.0946698,42.3796246,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Founders Memorial Rink Lot</name>
+        <description><![CDATA[description: Bleachery Ct at Somerville Ave<br>Parking Regulations: Park Facility Visitor Parking Only 5:30am-1:00am, Resident Permit Parking Only 1:00am-5:30am.<br>Total Number of Spaces: 88<br>Accessible Parking: 8 spaces<br>Electric Vehicle Charging: 2 spaces<br>Special Restrictions: <br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Bleachery Ct at Somerville Ave</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Park Facility Visitor Parking Only 5:30am-1:00am, Resident Permit Parking Only 1:00am-5:30am.</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>88.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>8 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value/>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.1091403,42.3831626,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Winter Hill Lot A</name>
+        <description><![CDATA[description: Broadway between Fellsway W and Wheatland St<br>Parking Regulations: 2 hour parking except by permit 8:00am-2:30a,. permit parking only 2:30am-8:00am.<br>Total Number of Spaces: 15<br>Accessible Parking: No<br>Electric Vehicle Charging: No<br>Special Restrictions: No Parking-Street Cleaning, April 1st-December 31st, 1st & 3rd Mondays, 8:00am-12:00pm<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Broadway between Fellsway W and Wheatland St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>2 hour parking except by permit 8:00am-2:30a,. permit parking only 2:30am-8:00am.</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>15.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>No</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value><![CDATA[No Parking-Street Cleaning, April 1st-December 31st, 1st & 3rd Mondays, 8:00am-12:00pm]]></value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.0906908,42.3912251,0
+          </coordinates>
+        </Point>
+      </Placemark>
+      <Placemark>
+        <name>Winter Hill Lot B</name>
+        <description><![CDATA[description: Broadway between Wheatland St and Grant St<br>Parking Regulations: Metered Parking, 3 hour limit, 8:00am-8:00pm<br>Total Number of Spaces: 14<br>Accessible Parking: 2 spaces<br>Electric Vehicle Charging: No<br>Special Restrictions: No Parking-Street Cleaning Mondays 12:00am-6:00am<br>Is Parking Allow During a Snow Emergency?: Yes]]></description>
+        <styleUrl>#icon-1644-0F9D58</styleUrl>
+        <ExtendedData>
+          <Data name="description">
+            <value>Broadway between Wheatland St and Grant St</value>
+          </Data>
+          <Data name="Parking Regulations">
+            <value>Metered Parking, 3 hour limit, 8:00am-8:00pm</value>
+          </Data>
+          <Data name="Total Number of Spaces">
+            <value>14.0</value>
+          </Data>
+          <Data name="Accessible Parking">
+            <value>2 spaces</value>
+          </Data>
+          <Data name="Electric Vehicle Charging">
+            <value>No</value>
+          </Data>
+          <Data name="Special Restrictions">
+            <value>No Parking-Street Cleaning Mondays 12:00am-6:00am</value>
+          </Data>
+          <Data name="Is Parking Allow During a Snow Emergency?">
+            <value>Yes</value>
+          </Data>
+        </ExtendedData>
+        <Point>
+          <coordinates>
+            -71.0912648,42.391554,0
+          </coordinates>
+        </Point>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>

@@ -1,0 +1,766 @@
+{
+  "type": "FeatureCollection",
+  "properties": {
+    "generated_at_utc": "2026-07-21T21:32:07.056404+00:00",
+    "feature_count": 24,
+    "municipality_counts": {
+      "Cambridge": 11,
+      "Somerville": 13
+    },
+    "sources": {
+      "cambridge": {
+        "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Municipal_Parking_Lots/TRAFFIC_MunicipalParkingLots.geojson",
+        "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Municipal_Parking_Lots/TRAFFIC_MunicipalParkingLots.geojson",
+        "fetched_at_utc": "2026-07-21T21:32:06.754579+00:00",
+        "content_type": "text/plain; charset=utf-8",
+        "last_modified": null,
+        "etag": "\"490a9e6457df40644f4bebc4defab01b57b26a775ebb677fad145ae67d7c393b\"",
+        "bytes": 3378,
+        "sha256": "7732fc6f768a4c15f508874be6618c9f4b99850e560c6e77afff76d5fdb181c1",
+        "authority_url": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "details_url": "https://www.cambridgema.gov/iwantto/parkacarincambridge"
+      },
+      "cambridge_details": {
+        "url": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "final_url": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "fetched_at_utc": "2026-07-21T21:32:06.811640+00:00",
+        "content_type": "text/html; charset=utf-8",
+        "last_modified": null,
+        "etag": null,
+        "bytes": 97073,
+        "sha256": "55021b65e90f62aa6cdf45af27603897e0a549aeff6a84081241821e93f2aff4"
+      },
+      "somerville_authority_page": {
+        "url": "https://www.somervillema.gov/departments/parking-department",
+        "final_url": "https://www.somervillema.gov/departments/parking-department",
+        "fetched_at_utc": "2026-07-21T21:32:06.844746+00:00",
+        "content_type": "text/html; charset=UTF-8",
+        "last_modified": "Tue, 21 Jul 2026 21:02:58 GMT",
+        "etag": "W/\"1784667778\"",
+        "bytes": 131741,
+        "sha256": "53771c6967f23d26b9f5a39c1b6e3e381ff86c6839f2117082d52e9df3f342e0"
+      },
+      "somerville_lots": {
+        "url": "https://www.google.com/maps/d/kml?mid=1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y&forcekml=1",
+        "final_url": "https://www.google.com/maps/d/kml?mid=1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y&forcekml=1",
+        "fetched_at_utc": "2026-07-21T21:32:07.044143+00:00",
+        "content_type": "text/xml; charset=utf-8",
+        "last_modified": null,
+        "etag": null,
+        "bytes": 20496,
+        "sha256": "af959179f5f0b420f3eb9095c8a5d4522d81007a4489e7a977449b81bd96231c",
+        "authority_url": "https://www.somervillema.gov/departments/parking-department"
+      }
+    },
+    "note": "Facilities are public parking locations, not a promise that a space is currently available. Posted rates, hours, permits, temporary closures, and other restrictions control."
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10011405790121,
+          42.37421984582862
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:69892ef7-2d14-44de-b6ea-504ad48d1f7f",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 14",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "15 Springfield Street",
+        "GIS_ADDRESS": "15 Springfield Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 2-hour maximum, $1.25/hour; 6-10 p.m.: 4-hour maximum, $2.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Not listed on the official parking page",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0938267257029,
+          42.372501759059276
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:4a2b3a73-e06c-4280-9d02-5ea70e2b685b",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 11",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "984 Cambridge Street",
+        "GIS_ADDRESS": "1010 Cambridge Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays, 8 a.m.-10 p.m.: 2-hour maximum, $1.25/hour. Cambridge resident permits do not pay after 6 p.m.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Not listed on the official parking page",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08854448877854,
+          42.37249053253008
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:51abe47d-b12c-41e3-98cb-9b2f6569022c",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 12",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Macarelli Way / 9 Warren Street",
+        "GIS_ADDRESS": "7 Warren Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays, 8 a.m.-6 p.m.: 4-hour maximum, $0.50/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Available",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10636936478787,
+          42.365880109407755
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:2775c6ea-687c-4094-b6b6-d67f12544338",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 9",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "9 Pleasant Street",
+        "GIS_ADDRESS": "9 Pleasant Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 2-hour maximum, $1.25/hour; 6-10 p.m.: 4-hour maximum, $2.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Available",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10570633404312,
+          42.365874819917686
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:ea0c1503-c7d5-4c43-8df6-96cb0f441d91",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 8",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "375 Green Street",
+        "GIS_ADDRESS": "375 Green Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 2-hour maximum, $1.25/hour; 6-10 p.m.: 4-hour maximum, $2.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Available",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10232762252085,
+          42.365622696678784
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:55d20231-5bdf-4430-a924-87a96c0fe9f2",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 4",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "96 Bishop Allen Drive",
+        "GIS_ADDRESS": "96 Bishop Allen Drive",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 2-hour maximum, $1.25/hour; 6-10 p.m.: 4-hour maximum, $2.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Not listed on the official parking page",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10186716749847,
+          42.36518553590876
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:81e42ebe-6655-4caf-9cd7-ccd6f9e0c9f8",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 5",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "84 Bishop Allen Drive",
+        "GIS_ADDRESS": "84 Norfolk Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 2-hour maximum, $1.25/hour; 6-10 p.m.: 4-hour maximum, $2.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Available",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.10014543419733,
+          42.364223031562425
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:4e5d43a9-0586-48e4-9a98-3f09f1f757ec",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 6",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "36 Bishop Allen Drive",
+        "GIS_ADDRESS": "453 Massachusetts Avenue",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 4-hour maximum, $1.25/hour; 6-10 p.m.: 4-hour maximum, $2.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Not listed on the official parking page",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1037149000554,
+          42.36408292432613
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:f6d7b3ff-6d68-4474-816b-3f2916be72cf",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Green Street Parking Garage",
+        "FACILITY_TYPE": "Municipal Parking Garage",
+        "ADDRESS": "260 Green Street",
+        "GIS_ADDRESS": "260 Green Street",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Open 24/7. Hourly, night, and weekend rates vary; see the official parking page.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "See posted garage information",
+        "EV_CHARGING": "Not listed on the official parking page",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.07815214025543,
+          42.36903310778189
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:af0ed252-356e-4881-9276-d02d9d595ee4",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "East Cambridge/First Street Parking Garage",
+        "FACILITY_TYPE": "Municipal Parking Garage",
+        "ADDRESS": "First Street entrance across from 10 Spring Street",
+        "GIS_ADDRESS": "51 First St",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Open 24/7. Hourly, night, and weekend rates vary; see the official parking page.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "See posted garage information",
+        "EV_CHARGING": "Available",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.12209278964075,
+          42.37269482149193
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "cambridge:ed01e642-a534-44aa-8c36-3978bd2042c4",
+        "MUNICIPALITY": "Cambridge",
+        "NAME": "Municipal Lot 2",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "110 Mt. Auburn Street",
+        "GIS_ADDRESS": "110 Mt Auburn St",
+        "PUBLIC_ACCESS": "City-managed paid public parking",
+        "PARKING_REGULATIONS": "Payment required Monday-Saturday except holidays. 8 a.m.-6 p.m.: 2-hour maximum, $3.00/hour; 6-10 p.m.: 4-hour maximum, $3.00/hour.",
+        "TOTAL_SPACES": null,
+        "ACCESSIBLE_PARKING": "No payment is required at lots for a visible disability plate or placard; check posted facility information.",
+        "EV_CHARGING": "Not listed on the official parking page",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "See current City guidance",
+        "SOURCE_TITLE": "Cambridge GIS Municipal Parking Lots",
+        "SOURCE_URL": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+        "DETAILS_URL": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+        "SOURCE_FORMAT": "geojson",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1241884,
+          42.3977251
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:buena-vista-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Buena Vista Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Buena Vista Rd at Holland St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 94,
+        "ACCESSIBLE_PARKING": "4 spaces",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "No trucks allowed. 3 spaces reserved for Zipcar. Certain spaces reserved for Business Permit Parking Only.",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1208838,
+          42.3940953
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:cutter-square-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Cutter Square Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Elm St/Summer St at Cutter Ave",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 12,
+        "ACCESSIBLE_PARKING": "No",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "No",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1233504,
+          42.3954905
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:day-st-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Day St Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "44 Day St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 61,
+        "ACCESSIBLE_PARKING": "3 spaces",
+        "EV_CHARGING": "2 spaces",
+        "SPECIAL_RESTRICTIONS": "No Parking-Farmers Market, Wednesdays, 8:00am-7:00pm, May-November",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.08935,
+          42.3905411
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:foss-park-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Foss Park Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Broadway at McGrath Hwy",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "2 hour parking 8:00am-8:00pm, permit parking only 8:00pm-8:00am",
+        "TOTAL_SPACES": 21,
+        "ACCESSIBLE_PARKING": "2 spaces",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "No Parking-Street Cleaning, April 1st-December 31st, Mondays, 12:00AM-6:00AM",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1211329,
+          42.3952787
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:grove-st-lot-a",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Grove St Lot A",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Grove St west side at Elm St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 17,
+        "ACCESSIBLE_PARKING": "1 space",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "No",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1207711,
+          42.3950677
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:grove-st-lot-b",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Grove St Lot B",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Grove St east side at Elm St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 20,
+        "ACCESSIBLE_PARKING": "2 spaces",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "Certain spaces reserved for Business Permit Parking Only",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1200644,
+          42.3960908
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:grove-st-lot-c",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Grove St Lot C",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Grove St at Highland Ave",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 54,
+        "ACCESSIBLE_PARKING": "4 spaces",
+        "EV_CHARGING": "2 spaces",
+        "SPECIAL_RESTRICTIONS": "Certain spaces reserved for Business Permit Parking Only. 2 spaces reserved for Zipcar",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1047555,
+          42.396996
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:magoun-square-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Magoun Square Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Broadway at Medford St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 51,
+        "ACCESSIBLE_PARKING": "3 spaces",
+        "EV_CHARGING": "2 spaces",
+        "SPECIAL_RESTRICTIONS": "1 space reserved for Zipcar",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0783636,
+          42.3861729
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:mt-vernon-st-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Mt. Vernon St Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Broadway at Mt. Vernon St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered Parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 10,
+        "ACCESSIBLE_PARKING": "No",
+        "EV_CHARGING": "2 spaces",
+        "SPECIAL_RESTRICTIONS": "1 space reserved for Zipcar",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0946698,
+          42.3796246
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:union-square-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Union Square Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Washington St at Bonner Ave",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 41,
+        "ACCESSIBLE_PARKING": "2 spaces",
+        "EV_CHARGING": "2 spaces",
+        "SPECIAL_RESTRICTIONS": "No Parking-Farmers Market, Saturdays, May-October, 6:30am-2:00pm; 1st spot at entrance reserved as a Loading Zone",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1091403,
+          42.3831626
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:founders-memorial-rink-lot",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Founders Memorial Rink Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Bleachery Ct at Somerville Ave",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Park Facility Visitor Parking Only 5:30am-1:00am, Resident Permit Parking Only 1:00am-5:30am.",
+        "TOTAL_SPACES": 88,
+        "ACCESSIBLE_PARKING": "8 spaces",
+        "EV_CHARGING": "2 spaces",
+        "SPECIAL_RESTRICTIONS": "",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0906908,
+          42.3912251
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:winter-hill-lot-a",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Winter Hill Lot A",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Broadway between Fellsway W and Wheatland St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "2 hour parking except by permit 8:00am-2:30a,. permit parking only 2:30am-8:00am.",
+        "TOTAL_SPACES": 15,
+        "ACCESSIBLE_PARKING": "No",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "No Parking-Street Cleaning, April 1st-December 31st, 1st & 3rd Mondays, 8:00am-12:00pm",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.0912648,
+          42.391554
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "somerville:winter-hill-lot-b",
+        "MUNICIPALITY": "Somerville",
+        "NAME": "Winter Hill Lot B",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "Broadway between Wheatland St and Grant St",
+        "PUBLIC_ACCESS": "Public parking with facility-specific restrictions",
+        "PARKING_REGULATIONS": "Metered Parking, 3 hour limit, 8:00am-8:00pm",
+        "TOTAL_SPACES": 14,
+        "ACCESSIBLE_PARKING": "2 spaces",
+        "EV_CHARGING": "No",
+        "SPECIAL_RESTRICTIONS": "No Parking-Street Cleaning Mondays 12:00am-6:00am",
+        "SNOW_EMERGENCY_PARKING": "Yes",
+        "SOURCE_TITLE": "Somerville Map of Municipal Parking Lots",
+        "SOURCE_URL": "https://www.somervillema.gov/departments/parking-department",
+        "DETAILS_URL": "https://www.somervillema.gov/departments/parking-department",
+        "SOURCE_FORMAT": "official-page-linked-kml",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    }
+  ]
+}

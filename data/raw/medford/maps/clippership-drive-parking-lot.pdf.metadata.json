@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "business_municipal_commuter_map",
   "url": "https://www.medfordma.org/fs/resource-manager/view/1755a5e6-66c7-4f52-8660-b464035c503c",
-  "downloaded_at_utc": "2026-05-23T09:54:17.754373+00:00",
+  "final_url": "https://resources.finalsite.net/images/v1731599749/medfordmaorg/o8hxe1cpal0jxlhtlovl/Clippership_Drive_Parking_Lot1.pdf",
+  "destination": "data/raw/medford/maps/clippership-drive-parking-lot.pdf",
+  "downloaded_at_utc": "2026-07-21T21:04:35.668126+00:00",
   "http_status": 200,
   "content_type": "application/pdf",
-  "bytes": 15833299
+  "last_modified": "Thu, 14 Nov 2024 15:55:51 GMT",
+  "etag": "\"4f7796f76e6c015cd0a1525bb07cf865\"",
+  "bytes": 15833299,
+  "sha256": "667b82afd18b9e484aa27ef1958d3a2550a6a1c35fb793c3c8eba35842cccedd"
 }

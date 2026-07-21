@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-21T13:32:16.584063+00:00",
+  "generated_at_utc": "2026-07-21T21:17:24.895485+00:00",
   "municipality": "cambridge",
   "source_id": "cambridge_gis",
   "street_centerlines_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
@@ -9,7 +9,7 @@
     "street_centerlines": {
       "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
       "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
-      "fetched_at_utc": "2026-07-21T13:31:42.197053+00:00",
+      "fetched_at_utc": "2026-07-21T21:16:51.397615+00:00",
       "content_type": "text/plain; charset=utf-8",
       "last_modified": null,
       "etag": "\"82f78b67699798738604bd58b37b587756e8daef37b111ddba0e3b03c3d4273a\"",
@@ -19,7 +19,7 @@
     "metered_spaces": {
       "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Metered_Parking_Spaces/TRAFFIC_MeteredParkingSpaces.geojson",
       "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Metered_Parking_Spaces/TRAFFIC_MeteredParkingSpaces.geojson",
-      "fetched_at_utc": "2026-07-21T13:31:42.425624+00:00",
+      "fetched_at_utc": "2026-07-21T21:16:51.570930+00:00",
       "content_type": "text/plain; charset=utf-8",
       "last_modified": null,
       "etag": "\"bff6863e869b6ce2262ab10a2c6ae2d53cc13561e36f809a5dbfe29cd2c89f03\"",
@@ -29,7 +29,7 @@
     "accessible_spaces": {
       "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
       "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Public_Handicap_Parking_Spaces/TRAFFIC_PublicHandicapParkingSpaces.geojson",
-      "fetched_at_utc": "2026-07-21T13:31:42.529242+00:00",
+      "fetched_at_utc": "2026-07-21T21:16:51.642079+00:00",
       "content_type": "text/plain; charset=utf-8",
       "last_modified": null,
       "etag": "\"2c64005c065a17e0695043053cb7c0875bcc2f9453b4e82ed554b26e8602ed55\"",

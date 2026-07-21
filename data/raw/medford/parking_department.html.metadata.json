@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "source_index",
   "url": "https://www.medfordma.org/departments/parking",
-  "downloaded_at_utc": "2026-05-23T09:54:13.360768+00:00",
+  "final_url": "https://www.medfordma.org/departments/parking",
+  "destination": "data/raw/medford/parking_department.html",
+  "downloaded_at_utc": "2026-07-21T21:04:29.757803+00:00",
   "http_status": 200,
   "content_type": "text/html; charset=utf-8",
-  "bytes": 132666
+  "last_modified": null,
+  "etag": null,
+  "bytes": 139752,
+  "sha256": "2f1f7b9b3b89ac97142c3e25a874467fe87bad735241164b4b1cf7b9b2e9c351"
 }

@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "resident_permit_zone",
   "url": "https://www.medfordma.org/departments/parking/green-line-zone",
-  "downloaded_at_utc": "2026-05-23T09:54:14.311400+00:00",
+  "final_url": "https://www.medfordma.org/departments/parking/green-line-zone",
+  "destination": "data/raw/medford/green-line-zone.html",
+  "downloaded_at_utc": "2026-07-21T21:04:32.027148+00:00",
   "http_status": 200,
   "content_type": "text/html; charset=utf-8",
-  "bytes": 87546
+  "last_modified": null,
+  "etag": null,
+  "bytes": 88733,
+  "sha256": "42dcfe1ed3b9edfda9e7d5221b96afecab4cefce8c78f716f697182ee2af040f"
 }

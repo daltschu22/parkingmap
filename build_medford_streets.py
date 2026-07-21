@@ -43,11 +43,16 @@ def normalize_feature(feature: dict) -> dict:
     street_name = clean_name(props.get("STREETNAME")) or clean_name(props.get("STREET_NAME"))
     from_street = clean_name(props.get("FM_ST_NAME"))
     to_street = clean_name(props.get("TO_ST_NAME"))
+    ownership, ownership_source, ownership_confidence = ownership_details(
+        props.get("FACILITY"), props.get("JURISDICTN")
+    )
     normalized = {
         "STNAME": street_name,
         "MUNICIPALITY": "Medford",
         "DATA_SOURCE": SOURCE_ID,
-        "OWNERSHIP": ownership_text(props.get("FACILITY"), props.get("JURISDICTN")),
+        "OWNERSHIP": ownership,
+        "OWNERSHIP_SOURCE": ownership_source,
+        "OWNERSHIP_CONFIDENCE": ownership_confidence,
         "FUNC_CLASS": functional_class_text(props.get("F_CLASS")),
         "ROAD_TYPE": road_type_text(props.get("RDTYPE")),
         "FROM_STREET": from_street,
@@ -66,12 +71,17 @@ def clean_name(value: object) -> str:
     return "" if text in {"", " "} else text
 
 
-def ownership_text(facility: object, jurisdiction: object) -> str:
+def ownership_details(facility: object, jurisdiction: object) -> tuple[str, str, str]:
+    """Keep MassDOT ownership inference explicit until the city map is registered."""
     if facility == 14:
-        return "Private"
+        return "Private", "MassDOT FACILITY code 14", "medium"
     if str(jurisdiction or "").strip() == "2":
-        return "Public"
-    return "Unknown"
+        return "Public", "MassDOT JURISDICTN code 2", "medium"
+    return "Unknown", "Not resolved from MassDOT road attributes", "none"
+
+
+def ownership_text(facility: object, jurisdiction: object) -> str:
+    return ownership_details(facility, jurisdiction)[0]
 
 
 def functional_class_text(value: object) -> str:
@@ -110,6 +120,11 @@ def build_geojson() -> dict:
             break
         offset += PAGE_SIZE
 
+    ownership_counts = {}
+    for feature in features:
+        ownership = feature.get("properties", {}).get("OWNERSHIP", "Unknown")
+        ownership_counts[ownership] = ownership_counts.get(ownership, 0) + 1
+
     return {
         "type": "FeatureCollection",
         "properties": {
@@ -118,6 +133,12 @@ def build_geojson() -> dict:
             "source_url": SERVICE_URL,
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
             "feature_count": len(features),
+            "ownership_counts": ownership_counts,
+            "ownership_note": (
+                "Ownership is inferred only from MassDOT FACILITY/JURISDICTN attributes. "
+                "The official Medford public/private ways map remains source evidence and "
+                "has not been georegistered; unresolved segments stay Unknown."
+            ),
         },
         "features": features,
     }

@@ -3,7 +3,8 @@ from __future__ import annotations
 import pytest
 
 from app import _classify_cambridge_parking_access
-from build_cambridge_data import is_active_meter_status
+from build_cambridge_data import is_active_meter_status, summarize_distances
+from build_medford_streets import ownership_details
 from build_parking_coverage import row_matches_segment
 
 
@@ -68,3 +69,32 @@ def test_mixed_public_private_rule_is_not_promoted_to_whole_segment():
     }
 
     assert not row_matches_segment(row, segment)
+
+
+def test_distance_summary_is_deterministic_and_keeps_quality_tail():
+    assert summarize_distances([1, 2, 3, 4, 100]) == {
+        "min": 1,
+        "mean": 22,
+        "median": 3,
+        "p95": 100,
+        "max": 100,
+    }
+    assert summarize_distances([]) is None
+
+
+def test_medford_ownership_inference_exposes_source_and_confidence():
+    assert ownership_details(14, None) == (
+        "Private",
+        "MassDOT FACILITY code 14",
+        "medium",
+    )
+    assert ownership_details(None, "2") == (
+        "Public",
+        "MassDOT JURISDICTN code 2",
+        "medium",
+    )
+    assert ownership_details(None, None) == (
+        "Unknown",
+        "Not resolved from MassDOT road attributes",
+        "none",
+    )

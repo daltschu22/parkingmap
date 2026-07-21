@@ -67,7 +67,7 @@ IMAGERY_REFERENCE_SIGNS_PATH = (
 IMAGERY_REFERENCE_MATCHES_PATH = (
     DATA_DIR / "processed" / "imagery" / "reference_matched_detections.geojson"
 )
-SOMERVILLE_RULE_SOURCE_URL = "https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-regulations_1.pdf"
+SOMERVILLE_RULE_SOURCE_URL = "https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-rules-regulations.pdf"
 MEDFORD_RULE_SOURCE_URL = "https://www.medfordma.org/fs/resource-manager/view/c2132e77-d61f-40b1-9aa8-1add88772e3d"
 MEDFORD_STREET_SOURCE_URL = (
     "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/"
@@ -291,6 +291,17 @@ def _format_count_values(values: list[dict], limit: int = 3) -> str:
         if value and count:
             parts.append(f"{value} ({count})")
     return " | ".join(parts)
+
+
+def _format_distance_summary(summary: dict | None) -> str:
+    if not summary:
+        return ""
+    median = summary.get("median")
+    p95 = summary.get("p95")
+    maximum = summary.get("max")
+    if median is None or p95 is None or maximum is None:
+        return ""
+    return f"median {median} m | p95 {p95} m | max {maximum} m"
 
 
 def load_streets():
@@ -602,6 +613,9 @@ def get_enriched_streets():
         )
         props["PARKING_CAMBRIDGE_METER_RATES"] = _format_count_values(
             rule.get("meter_rates", [])
+        )
+        props["PARKING_CAMBRIDGE_MATCH_DISTANCE"] = _format_distance_summary(
+            rule.get("meter_match_distance_meters")
         )
         updated_feature = dict(feature)
         updated_feature["properties"] = props

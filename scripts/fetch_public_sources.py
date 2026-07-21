@@ -2,7 +2,10 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
+import os
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.error import HTTPError, URLError
@@ -12,6 +15,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 MANIFEST_PATH = BASE_DIR / "data" / "source_manifest.json"
 
 
+class ContentValidationError(ValueError):
+    """Raised when a source response does not match its declared file type."""
+
+
 def iter_sources(manifest: dict, municipality: str | None, include_disabled: bool):
     for source in manifest.get("sources", []):
         if municipality and source.get("municipality") != municipality:
@@ -19,6 +26,45 @@ def iter_sources(manifest: dict, municipality: str | None, include_disabled: boo
         if not include_disabled and not source.get("enabled", True):
             continue
         yield source
+
+
+def validate_content(source: dict, content: bytes) -> None:
+    """Reject empty responses and common error pages before replacing source files."""
+    if not content:
+        raise ContentValidationError(f"{source['id']}: downloaded an empty response")
+
+    source_type = str(source.get("type") or "").casefold()
+    if source_type == "pdf" and not content.lstrip().startswith(b"%PDF-"):
+        raise ContentValidationError(
+            f"{source['id']}: expected a PDF but the response was not a PDF"
+        )
+    if source_type in {"json", "geojson"}:
+        try:
+            json.loads(content)
+        except (UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise ContentValidationError(
+                f"{source['id']}: expected valid JSON"
+            ) from exc
+
+
+def atomic_write(path: Path, content: bytes) -> None:
+    """Replace a source artifact only after the full response has been validated."""
+    temp_path: Path | None = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            dir=path.parent,
+            prefix=f".{path.name}.",
+            suffix=".tmp",
+            delete=False,
+        ) as handle:
+            handle.write(content)
+            handle.flush()
+            os.fsync(handle.fileno())
+            temp_path = Path(handle.name)
+        temp_path.replace(path)
+    finally:
+        if temp_path and temp_path.exists():
+            temp_path.unlink()
 
 
 def download_source(source: dict, dry_run: bool = False) -> dict:
@@ -42,19 +88,28 @@ def download_source(source: dict, dry_run: bool = False) -> dict:
 
     with urlopen(request, timeout=60) as response:
         content = response.read()
-        destination.write_bytes(content)
+        validate_content(source, content)
+        atomic_write(destination, content)
         metadata = {
             "id": source["id"],
             "title": source.get("title"),
             "municipality": source.get("municipality"),
             "category": source.get("category"),
             "url": source["url"],
+            "final_url": response.geturl(),
+            "destination": str(destination.relative_to(BASE_DIR)),
             "downloaded_at_utc": datetime.now(timezone.utc).isoformat(),
             "http_status": getattr(response, "status", None),
             "content_type": response.headers.get("Content-Type"),
+            "last_modified": response.headers.get("Last-Modified"),
+            "etag": response.headers.get("ETag"),
             "bytes": len(content),
+            "sha256": hashlib.sha256(content).hexdigest(),
         }
-        metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
+        atomic_write(
+            metadata_path,
+            (json.dumps(metadata, indent=2) + "\n").encode(),
+        )
         return metadata
 
 
@@ -82,7 +137,7 @@ def main() -> None:
         try:
             result = download_source(source, dry_run=args.dry_run)
             print(f"{result['id']}: {result.get('bytes', 0)} bytes -> {result['destination'] if 'destination' in result else source['destination']}")
-        except (HTTPError, URLError, TimeoutError) as exc:
+        except (HTTPError, URLError, TimeoutError, ContentValidationError) as exc:
             failures.append((source["id"], str(exc)))
             print(f"{source['id']}: ERROR {exc}")
 

@@ -15,13 +15,38 @@
     {
       "id": "somerville_traffic_regulations_pdf",
       "municipality": "somerville",
-      "title": "Traffic Commission Regulations PDF",
-      "url": "https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-regulations_1.pdf",
-      "destination": "data/raw/somerville/traffic-commission-regulations.pdf",
+      "title": "Traffic Commission Regulations PDF (current edition)",
+      "url": "https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-rules-regulations.pdf",
+      "destination": "data/traffic-regulations.pdf",
       "type": "pdf",
       "category": "traffic_regulations",
+      "enabled": true,
+      "refresh_command": "python3 scripts/fetch_public_sources.py --municipality somerville",
+      "notes": "Canonical legal source parsed by build_parking_rules.py. Fetch metadata records the resolved URL, Last-Modified, ETag, byte count, and SHA-256 before rules are rebuilt."
+    },
+    {
+      "id": "somerville_parking_department_page",
+      "municipality": "somerville",
+      "title": "Somerville Parking Department",
+      "url": "https://www.somervillema.gov/departments/parking-department",
+      "destination": "data/raw/somerville/parking-department.html",
+      "type": "html",
+      "category": "source_index",
       "enabled": false,
-      "notes": "Existing prototype source; current copy is data/traffic-regulations.pdf."
+      "ingestion_status": "validation_only",
+      "notes": "Operational citywide parking guidance and the current regulations link. It is a cross-check, not a replacement for the legal schedules."
+    },
+    {
+      "id": "somerville_parking_meters_gis",
+      "municipality": "somerville",
+      "title": "Somerville Parking Meters GIS",
+      "url": "https://data.somervillema.gov/GIS-Data/Parking-Meters/jich-f4v9",
+      "destination": "data/raw/somerville/parking-meters-dataset.html",
+      "type": "html",
+      "category": "metered_parking",
+      "enabled": false,
+      "ingestion_status": "historical_cross_check",
+      "notes": "Official meter inventory whose data was last updated in 2017. Do not use it as current legal authority."
     },
     {
       "id": "cambridge_gis_street_centerlines",
@@ -32,6 +57,8 @@
       "type": "geojson",
       "category": "street_network",
       "enabled": false,
+      "managed_by": "build_cambridge_data.py",
+      "refresh_command": "python3 build_cambridge_data.py",
       "notes": "Built by build_cambridge_data.py into the app street schema."
     },
     {
@@ -43,6 +70,8 @@
       "type": "geojson",
       "category": "metered_parking",
       "enabled": false,
+      "managed_by": "build_cambridge_data.py",
+      "refresh_command": "python3 build_cambridge_data.py",
       "notes": "Built by build_cambridge_data.py. Meter polygons are also summarized in data/processed/cambridge/parking_rules.json by nearest street and retained as segment evidence, not whole-street classification."
     },
     {
@@ -54,7 +83,33 @@
       "type": "geojson",
       "category": "accessible_parking",
       "enabled": false,
+      "managed_by": "build_cambridge_data.py",
+      "refresh_command": "python3 build_cambridge_data.py",
       "notes": "Built by build_cambridge_data.py. Accessible points are also summarized in data/processed/cambridge/parking_rules.json by street name."
+    },
+    {
+      "id": "cambridge_traffic_regulations",
+      "municipality": "cambridge",
+      "title": "Cambridge Traffic Regulations and Schedules",
+      "url": "https://www.cambridgema.gov/transportation/aboutus/trafficregulations",
+      "destination": "data/raw/cambridge/traffic-regulations.html",
+      "type": "html",
+      "category": "traffic_regulations",
+      "enabled": false,
+      "ingestion_status": "planned",
+      "notes": "Official schedule index with side/from/to rule tables. Revisions require freshness review before becoming authoritative curb records."
+    },
+    {
+      "id": "cambridge_aggregated_street_occupancy_permits",
+      "municipality": "cambridge",
+      "title": "Aggregated Street Occupancy Permits",
+      "url": "https://data.cambridgema.gov/d/kkn6-hyu9",
+      "destination": "data/raw/cambridge/aggregated-street-occupancy-permits-dataset.html",
+      "type": "html",
+      "category": "temporary_rule",
+      "enabled": false,
+      "ingestion_status": "planned_filtered_api",
+      "notes": "Large historical Socrata dataset. A future ingestor must query only active/complete permits whose end date has not passed; never bulk-download it through the generic fetcher."
     },
     {
       "id": "medford_parking_department_page",
@@ -286,6 +341,78 @@
       "category": "business_municipal_commuter_map",
       "enabled": true,
       "notes": "Official business, municipal, and commuter parking map."
+    },
+    {
+      "id": "medford_traffic_commission",
+      "municipality": "medford",
+      "title": "Medford Traffic Commission",
+      "url": "https://www.medfordma.org/boards-commissions/traffic-commission",
+      "destination": "data/raw/medford/traffic-commission.html",
+      "type": "html",
+      "category": "regulation_change_log",
+      "enabled": false,
+      "ingestion_status": "planned",
+      "notes": "Official petitions, agendas, and minutes. A future ingestor should retain decision dates and source documents as a change log rather than infer whole-street rules."
+    },
+    {
+      "id": "boston_ips_parking_meters",
+      "municipality": "boston",
+      "title": "Boston IPS Parking Meter ArcGIS Layer",
+      "url": "https://gisportal.boston.gov/ArcGIS/rest/services/Basemaps/basemap_IPS/MapServer/6",
+      "destination": "data/raw/boston/ips-parking-meters-layer.json",
+      "type": "arcgis_featureserver",
+      "category": "metered_parking",
+      "enabled": false,
+      "ingestion_status": "planned_builder",
+      "notes": "Official point inventory. A city-specific builder must query features and retain meter identity/status without promoting points to whole-street rules."
+    },
+    {
+      "id": "boston_street_cleaning",
+      "municipality": "boston",
+      "title": "Street Cleaning in Boston",
+      "url": "https://www.boston.gov/departments/public-works/street-cleaning-boston",
+      "destination": "data/raw/boston/street-cleaning.html",
+      "type": "html",
+      "category": "street_cleaning",
+      "enabled": false,
+      "ingestion_status": "planned",
+      "notes": "Official lookup/download page. Posted signs remain controlling when the website differs."
+    },
+    {
+      "id": "boston_traffic_rules",
+      "municipality": "boston",
+      "title": "City of Boston Traffic Rules and Regulations",
+      "url": "https://www.boston.gov/departments/transportation/city-boston-traffic-rules-and-regulations",
+      "destination": "data/raw/boston/traffic-rules.html",
+      "type": "html",
+      "category": "traffic_regulations",
+      "enabled": false,
+      "ingestion_status": "planned",
+      "notes": "Current legal baseline and revision index; it is not a curb-location inventory by itself."
+    },
+    {
+      "id": "boston_resident_parking_permits",
+      "municipality": "boston",
+      "title": "Boston Resident Parking Permits",
+      "url": "https://www.boston.gov/departments/parking-clerk/resident-parking-permits",
+      "destination": "data/raw/boston/resident-parking-permits.html",
+      "type": "html",
+      "category": "resident_permit",
+      "enabled": false,
+      "ingestion_status": "planned",
+      "notes": "Official program and neighborhood guidance; requires location-specific source data before curb classification."
+    },
+    {
+      "id": "boston_curb_lab",
+      "municipality": "boston",
+      "title": "Boston Curb Lab",
+      "url": "https://www.boston.gov/departments/emerging-technology/boston-curb-lab-using-ai-and-open-data-improve-curb-management",
+      "destination": "data/raw/boston/curb-lab.html",
+      "type": "html",
+      "category": "future_curb_inventory",
+      "enabled": false,
+      "ingestion_status": "monitor_for_public_api",
+      "notes": "The city describes an authoritative curb data standard and future public API. Do not depend on it until the API is publicly verifiable."
     }
   ]
 }

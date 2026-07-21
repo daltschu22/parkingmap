@@ -4,7 +4,17 @@
     "municipality": "Cambridge",
     "source_id": "cambridge_gis",
     "street_centerlines_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
-    "generated_at_utc": "2026-07-20T20:56:13.669454+00:00",
+    "source": {
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
+      "final_url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Trans/Street_Centerlines/TRANS_Centerlines.geojson",
+      "fetched_at_utc": "2026-07-21T13:31:42.197053+00:00",
+      "content_type": "text/plain; charset=utf-8",
+      "last_modified": null,
+      "etag": "\"82f78b67699798738604bd58b37b587756e8daef37b111ddba0e3b03c3d4273a\"",
+      "bytes": 2089220,
+      "sha256": "3a727b329c4225ffbb8bb2d4eb496a8ffefd46a8e78789f551b46b1a84779192"
+    },
+    "generated_at_utc": "2026-07-21T13:32:16.584063+00:00",
     "feature_count": 2643
   },
   "features": [

@@ -72,12 +72,14 @@ html, body {
 /* Search */
 .search-container {
     padding: 1rem 1.5rem;
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
     gap: 0.5rem;
 }
 
 #search-input {
     flex: 1;
+    min-width: 0;
     padding: 0.625rem 1rem;
     border: 1px solid var(--border);
     border-radius: 0.5rem;
@@ -173,12 +175,43 @@ html, body {
     accent-color: var(--primary);
 }
 
-.evidence-control-dot {
-    width: 0.75rem;
+.evidence-control-symbol {
+    display: inline-flex;
+    width: 1.25rem;
+    height: 1.25rem;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    color: white;
+    flex: 0 0 1.25rem;
+    font-size: 0.75rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.evidence-control-symbol--facility {
+    border-radius: 0.3rem;
+    background: #7c3aed;
+}
+
+.evidence-control-symbol--meter {
     height: 0.75rem;
-    border: 2px solid rgba(255, 255, 255, 0.85);
+    border-width: 1px;
+    border-radius: 0.15rem;
+    background: #0ea5e9;
+}
+
+.evidence-control-symbol--accessible {
     border-radius: 50%;
-    flex: 0 0 0.75rem;
+    background: #2563eb;
+    font-size: 0.875rem;
+}
+
+.evidence-help {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 0.6875rem;
+    line-height: 1.4;
 }
 
 .app-status {
@@ -472,12 +505,67 @@ html, body {
     white-space: nowrap;
 }
 
-.map-evidence-key-dot {
-    width: 0.625rem;
-    height: 0.625rem;
+.map-evidence-key-symbol {
+    display: inline-flex;
+    width: 1rem;
+    height: 1rem;
+    align-items: center;
+    justify-content: center;
     border: 1px solid rgba(255, 255, 255, 0.9);
+    color: white;
+    flex: 0 0 1rem;
+    font-size: 0.625rem;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.map-evidence-key-symbol--area {
+    height: 0.55rem;
+    border-radius: 0.12rem;
+}
+
+.map-evidence-key-symbol--icon {
+    border-radius: 0.25rem;
+}
+
+.public-parking-marker-shell,
+.accessible-parking-marker-shell {
+    background: transparent;
+    border: 0;
+}
+
+.accessible-parking-marker-shell {
+    display: none;
+}
+
+.parking-detail-zoom .accessible-parking-marker-shell {
+    display: block;
+}
+
+.public-parking-marker,
+.accessible-parking-marker {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.75);
+    color: white;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.public-parking-marker {
+    border-radius: 0.4rem;
+    background: #7c3aed;
+    font-size: 0.875rem;
+}
+
+.accessible-parking-marker {
     border-radius: 50%;
-    flex: 0 0 0.625rem;
+    background: #2563eb;
+    font-size: 0.875rem;
 }
 
 /* Responsive */

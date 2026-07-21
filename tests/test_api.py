@@ -36,14 +36,15 @@ def test_stats_separate_cambridge_point_evidence_from_street_rules():
         "cambridge_meter_spaces": 3310,
         "cambridge_active_meter_spaces": 2562,
         "cambridge_accessible_spaces": 154,
+        "public_parking_facilities": 24,
+        "cambridge_public_parking_facilities": 11,
+        "somerville_public_parking_facilities": 13,
     }
     assert stats["parking_access"]["unknown"] >= 2643
     assert stats["parking_access"].get("metered_segments_known", 0) == 0
     assert stats["parking_display"] == {
-        "metered": 592,
-        "open_time_limited": 373,
-        "restricted": 1758,
-        "unknown": 4364,
+        "restricted": 2414,
+        "unknown": 4673,
     }
 
 
@@ -98,3 +99,25 @@ def test_exact_street_search_is_not_expanded_as_municipality_terms():
     assert properties
     assert {row["MUNICIPALITY"] for row in properties} == {"Cambridge"}
     assert {row["STNAME"] for row in properties} == {"Cambridge St"}
+
+
+def test_search_rejects_unbounded_queries():
+    response = client.get("/api/streets/search", params={"q": "x" * 101})
+
+    assert response.status_code == 422
+
+
+def test_public_facilities_are_exposed_and_experimental_imagery_is_not_in_ui():
+    facilities = client.get("/api/parking-evidence/public-facilities")
+    page = client.get("/")
+
+    assert facilities.status_code == 200
+    features = facilities.json()["features"]
+    assert len(features) == 24
+    assert {feature["properties"]["MUNICIPALITY"] for feature in features} == {
+        "Cambridge",
+        "Somerville",
+    }
+    assert "Public lots and garages" in page.text
+    assert "Mapillary sign references" not in page.text
+    assert "Reference-matched detections" not in page.text

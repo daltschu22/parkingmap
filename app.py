@@ -7,15 +7,15 @@ import os
 import re
 from functools import lru_cache
 from pathlib import Path
-from fastapi import FastAPI, Request
-from fastapi.responses import HTMLResponse, JSONResponse
+from fastapi import FastAPI, Query, Request
+from fastapi.responses import HTMLResponse, JSONResponse, Response
 from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-21-marker-key-v4"
+APP_VERSION = "2026-07-21-public-parking-v5"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -35,6 +35,7 @@ _cambridge_streets_cache = None
 _cambridge_rules_cache = None
 _cambridge_meter_spaces_cache = None
 _cambridge_accessible_spaces_cache = None
+_public_parking_facilities_cache = None
 _imagery_index_cache = None
 _imagery_detection_cache = None
 _imagery_reference_signs_cache = None
@@ -56,6 +57,9 @@ CAMBRIDGE_METER_SPACES_PATH = (
 )
 CAMBRIDGE_ACCESSIBLE_SPACES_PATH = (
     DATA_DIR / "processed" / "cambridge" / "accessible_spaces.geojson"
+)
+PUBLIC_PARKING_FACILITIES_PATH = (
+    DATA_DIR / "processed" / "public_parking_facilities.geojson"
 )
 IMAGERY_INDEX_PATH = DATA_DIR / "processed" / "imagery" / "street_imagery_index.geojson"
 IMAGERY_DETECTIONS_PATH = (
@@ -85,6 +89,10 @@ async def add_response_headers(request: Request, call_next):
     response.headers["X-Content-Type-Options"] = "nosniff"
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     response.headers["X-Frame-Options"] = "DENY"
+    response.headers["Permissions-Policy"] = (
+        "camera=(), geolocation=(), microphone=(), payment=()"
+    )
+    response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
         "script-src 'self' https://unpkg.com; "
@@ -97,11 +105,29 @@ async def add_response_headers(request: Request, call_next):
         response.headers["Cache-Control"] = (
             "public, max-age=300, stale-while-revalidate=3600"
         )
+    elif request.url.path.startswith("/static/"):
+        response.headers["Cache-Control"] = "public, max-age=31536000, immutable"
+    else:
+        response.headers["Cache-Control"] = "no-cache"
     return response
 
 
 def _json_response(content: object) -> JSONResponse:
     return JSONResponse(content=content)
+
+
+def _encoded_json_response(content: bytes) -> Response:
+    """Return a pre-serialized JSON document without re-encoding large datasets."""
+    return Response(content=content, media_type="application/json")
+
+
+def _encode_json(content: object) -> bytes:
+    return json.dumps(
+        content,
+        ensure_ascii=False,
+        separators=(",", ":"),
+        allow_nan=False,
+    ).encode()
 
 
 @lru_cache(maxsize=None)
@@ -216,18 +242,31 @@ def _classify_medford_parking_access(properties: dict, rules: dict) -> tuple[str
     partial_rows = [
         row for row in rows if row.get("scope") == "partial_or_segment_specific"
     ]
+    full_rows = [row for row in rows if row.get("scope") == "likely_full_street"]
+    time_window_rows = [
+        row for row in rows if row.get("scope") == "street_level_time_window"
+    ]
     permit_types = sorted(
         {row.get("permit_type") for row in rows if row.get("permit_type")}
     )
     permit_text = ", ".join(permit_types) if permit_types else "Resident"
 
-    if partial_rows:
+    if partial_rows and not full_rows:
         return (
             "resident_permit_segment_rules_known",
             (
                 f"Medford resident-permit source has {len(rows)} row(s) for this street, "
                 f"including {len(partial_rows)} partial/segment-specific row(s). "
                 "Do not treat the whole street as one parking status yet."
+            ),
+        )
+
+    if time_window_rows and not full_rows:
+        return (
+            "resident_permit_time_restricted",
+            (
+                "Medford documents a resident-permit restriction with scheduled hours "
+                "for this street. Check the listed restriction and posted signs."
             ),
         )
 
@@ -301,14 +340,17 @@ def _cambridge_evidence_category(rule: dict) -> str:
 
 
 def _parking_display_status(access: str) -> str:
-    """Collapse internal evidence categories into four driver-facing map states."""
-    if access == "permit_with_metered_segments":
-        return "metered"
-    if access == "permit_with_time_limited_segments":
-        return "open_time_limited"
+    """Map only segment-safe conclusions to a driver-facing street state.
+
+    Somerville meter/time-limit records are street-name evidence for partial
+    exceptions. They must not recolor every centerline segment as open or metered.
+    Exact meter polygons remain a separate blue evidence layer.
+    """
     if access in {
+        "permit_with_metered_segments",
+        "permit_with_time_limited_segments",
         "resident_permit_required",
-        "resident_permit_segment_rules_known",
+        "resident_permit_time_restricted",
         "private_rules_apply",
     }:
         return "restricted"
@@ -401,6 +443,22 @@ def load_cambridge_accessible_spaces():
                 "features": [],
             }
     return _cambridge_accessible_spaces_cache
+
+
+def load_public_parking_facilities():
+    """Load and cache normalized public lot and garage point features."""
+    global _public_parking_facilities_cache
+    if _public_parking_facilities_cache is None:
+        if PUBLIC_PARKING_FACILITIES_PATH.exists():
+            _public_parking_facilities_cache = json.loads(
+                PUBLIC_PARKING_FACILITIES_PATH.read_text()
+            )
+        else:
+            _public_parking_facilities_cache = {
+                "type": "FeatureCollection",
+                "features": [],
+            }
+    return _public_parking_facilities_cache
 
 
 def load_imagery_index():
@@ -668,6 +726,21 @@ def get_enriched_streets():
     return _enriched_streets_cache
 
 
+@lru_cache(maxsize=1)
+def _encoded_enriched_streets() -> bytes:
+    return _encode_json(get_enriched_streets())
+
+
+@lru_cache(maxsize=1)
+def _encoded_cambridge_meter_spaces() -> bytes:
+    return _encode_json(load_cambridge_meter_spaces())
+
+
+@lru_cache(maxsize=1)
+def _encoded_public_parking_facilities() -> bytes:
+    return _encode_json(load_public_parking_facilities())
+
+
 @app.get("/", response_class=HTMLResponse)
 async def index(request: Request):
     """Render the main map page."""
@@ -693,19 +766,25 @@ async def get_health():
 @app.get("/api/streets")
 async def get_streets():
     """Return all streets as GeoJSON."""
-    return _json_response(get_enriched_streets())
+    return _encoded_json_response(_encoded_enriched_streets())
 
 
 @app.get("/api/parking-evidence/cambridge/meters")
 async def get_cambridge_meter_spaces():
     """Return Cambridge metered-space evidence geometry as GeoJSON."""
-    return _json_response(load_cambridge_meter_spaces())
+    return _encoded_json_response(_encoded_cambridge_meter_spaces())
 
 
 @app.get("/api/parking-evidence/cambridge/accessible")
 async def get_cambridge_accessible_spaces():
     """Return Cambridge accessible-space evidence geometry as GeoJSON."""
     return _json_response(load_cambridge_accessible_spaces())
+
+
+@app.get("/api/parking-evidence/public-facilities")
+async def get_public_parking_facilities():
+    """Return official public lot and garage locations as GeoJSON."""
+    return _encoded_json_response(_encoded_public_parking_facilities())
 
 
 @app.get("/api/parking-evidence/imagery")
@@ -733,7 +812,7 @@ async def get_imagery_reference_matches():
 
 
 @app.get("/api/streets/search")
-async def search_streets(q: str = ""):
+async def search_streets(q: str = Query(default="", max_length=100)):
     """Search streets by street name, municipality, or both."""
     streets = get_enriched_streets()
     if not q:
@@ -821,6 +900,7 @@ async def get_stats():
 
     cambridge_meters = load_cambridge_meter_spaces().get("features", [])
     cambridge_accessible = load_cambridge_accessible_spaces().get("features", [])
+    public_facilities = load_public_parking_facilities().get("features", [])
     parking_evidence_counts = {
         "cambridge_meter_spaces": len(cambridge_meters),
         "cambridge_active_meter_spaces": sum(
@@ -830,6 +910,17 @@ async def get_stats():
             == "in service"
         ),
         "cambridge_accessible_spaces": len(cambridge_accessible),
+        "public_parking_facilities": len(public_facilities),
+        "cambridge_public_parking_facilities": sum(
+            1
+            for feature in public_facilities
+            if feature.get("properties", {}).get("MUNICIPALITY") == "Cambridge"
+        ),
+        "somerville_public_parking_facilities": sum(
+            1
+            for feature in public_facilities
+            if feature.get("properties", {}).get("MUNICIPALITY") == "Somerville"
+        ),
     }
 
     _stats_cache = {

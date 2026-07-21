@@ -34,7 +34,9 @@
       "category": "source_index",
       "enabled": false,
       "ingestion_status": "validation_only",
-      "notes": "Operational citywide parking guidance and the current regulations link. It is a cross-check, not a replacement for the legal schedules."
+      "managed_by": "build_public_parking_facilities.py",
+      "refresh_command": "python3 build_public_parking_facilities.py",
+      "notes": "Operational citywide parking guidance and the embedded municipal-lot map. The facility builder preserves this page and verifies the expected map is still published; it is not a replacement for the legal schedules."
     },
     {
       "id": "somerville_parking_meters_gis",
@@ -47,6 +49,20 @@
       "enabled": false,
       "ingestion_status": "historical_cross_check",
       "notes": "Official meter inventory whose data was last updated in 2017. Do not use it as current legal authority."
+    },
+    {
+      "id": "somerville_municipal_parking_lots_kml",
+      "municipality": "somerville",
+      "title": "Somerville Map of Municipal Parking Lots",
+      "url": "https://www.google.com/maps/d/kml?mid=1Vs3VLhrTWksBWwmPl6lA-fHoPbzRH5Y&forcekml=1",
+      "authority_url": "https://www.somervillema.gov/departments/parking-department",
+      "destination": "data/raw/somerville/municipal-parking-lots.kml",
+      "type": "kml",
+      "category": "public_parking_facilities",
+      "enabled": false,
+      "managed_by": "build_public_parking_facilities.py",
+      "refresh_command": "python3 build_public_parking_facilities.py",
+      "notes": "Detailed lot map embedded by the current official Parking Department page. Preserve the KML and normalize its hours, capacity, accessible, EV, and special-restriction fields."
     },
     {
       "id": "cambridge_gis_street_centerlines",
@@ -86,6 +102,33 @@
       "managed_by": "build_cambridge_data.py",
       "refresh_command": "python3 build_cambridge_data.py",
       "notes": "Built by build_cambridge_data.py. Accessible points are also summarized in data/processed/cambridge/parking_rules.json by street name."
+    },
+    {
+      "id": "cambridge_gis_municipal_parking_facilities",
+      "municipality": "cambridge",
+      "title": "Cambridge GIS Municipal Parking Lots and Garages",
+      "url": "https://raw.githubusercontent.com/cambridgegis/cambridgegis_data/main/Traffic/Municipal_Parking_Lots/TRAFFIC_MunicipalParkingLots.geojson",
+      "authority_url": "https://www.cambridgema.gov/gis/gisdatadictionary/traffic/traffic_municipalparkinglots",
+      "destination": "data/processed/public_parking_facilities.geojson",
+      "type": "geojson",
+      "category": "public_parking_facilities",
+      "enabled": false,
+      "managed_by": "build_public_parking_facilities.py",
+      "refresh_command": "python3 build_public_parking_facilities.py",
+      "notes": "The shared facility builder combines these 9 municipal lots and 2 municipal garages with the Somerville public-lot source."
+    },
+    {
+      "id": "cambridge_public_parking_details",
+      "municipality": "cambridge",
+      "title": "Cambridge Public Parking Lots and Garages",
+      "url": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+      "destination": "data/raw/cambridge/public-parking.html",
+      "type": "html",
+      "category": "public_parking_facilities",
+      "enabled": false,
+      "managed_by": "build_public_parking_facilities.py",
+      "refresh_command": "python3 build_public_parking_facilities.py",
+      "notes": "Current driver-facing lot and garage entrances, hours, prices, time limits, and EV guidance. The facility builder preserves and validates this page before publishing normalized rules."
     },
     {
       "id": "cambridge_traffic_regulations",

@@ -1,0 +1,15 @@
+{
+  "id": "cambridge_public_parking_details",
+  "title": "Cambridge Public Parking Lots and Garages",
+  "municipality": "cambridge",
+  "category": "public_parking_facilities",
+  "destination": "data/raw/cambridge/public-parking.html",
+  "url": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+  "final_url": "https://www.cambridgema.gov/iwantto/parkacarincambridge",
+  "fetched_at_utc": "2026-07-21T21:32:06.811640+00:00",
+  "content_type": "text/html; charset=utf-8",
+  "last_modified": null,
+  "etag": null,
+  "bytes": 97073,
+  "sha256": "55021b65e90f62aa6cdf45af27603897e0a549aeff6a84081241821e93f2aff4"
+}

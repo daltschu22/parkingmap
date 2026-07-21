@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "temporary_rule",
   "url": "https://www.medfordma.org/for-residents/snow",
-  "downloaded_at_utc": "2026-05-23T09:54:15.681486+00:00",
+  "final_url": "https://www.medfordma.org/for-residents/snow",
+  "destination": "data/raw/medford/snow-policies.html",
+  "downloaded_at_utc": "2026-07-21T21:04:33.355494+00:00",
   "http_status": 200,
   "content_type": "text/html; charset=utf-8",
-  "bytes": 76907
+  "last_modified": null,
+  "etag": null,
+  "bytes": 77646,
+  "sha256": "3e97de9d791f2caaab1ea10d34b3a44bec8a1729b74ca7bf2351066261cc2477"
 }

@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "business_municipal_commuter_map",
   "url": "https://www.medfordma.org/fs/resource-manager/view/8ad99a98-8da4-47b5-9fbb-aae56f7f6b30",
-  "downloaded_at_utc": "2026-05-23T09:54:17.351755+00:00",
+  "final_url": "https://resources.finalsite.net/images/f_auto,q_auto/v1697746625/medfordmaorg/eor5g2xyeio1d0l038yh/city-hall-lot.jpg",
+  "destination": "data/raw/medford/maps/city-hall-parking-lot.jpg",
+  "downloaded_at_utc": "2026-07-21T21:04:35.323837+00:00",
   "http_status": 200,
   "content_type": "image/jpeg",
-  "bytes": 178328
+  "last_modified": "Thu, 19 Oct 2023 23:15:32 GMT",
+  "etag": "\"5ceb91857cadec1b4f14a78facb64fb6\"",
+  "bytes": 178328,
+  "sha256": "cac836f22b6aa20b0349b7728907e0456597ff194ad0c71a0911b9bf4fc7ee5b"
 }

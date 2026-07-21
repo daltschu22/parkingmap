@@ -22,6 +22,7 @@ Current implemented coverage starts with Somerville, Medford, and Cambridge. Med
 - Build Medford street geometry: `uv run python build_medford_streets.py`
 - Build Medford resident-permit seed rules: `uv run python build_medford_rules_seed.py`
 - Build Cambridge street geometry and parking summaries: `uv run python build_cambridge_data.py`
+- Build Somerville/Cambridge public lot and garage points: `uv run python build_public_parking_facilities.py`
 - Build coverage and Medford segment evidence: `uv run python build_parking_coverage.py`
 - Build Mapillary imagery metadata: `MAPILLARY_ACCESS_TOKEN=... uv run python scripts/build_imagery_index.py --provider mapillary --municipality somerville --limit 25`
 - Run the app: `uv run python -m parkingmap`

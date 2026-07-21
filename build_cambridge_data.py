@@ -32,11 +32,59 @@ ACCESSIBLE_SPACES_URL = (
 
 SOURCE_ID = "cambridge_gis"
 METER_MATCH_THRESHOLD_METERS = 45
+ACTIVE_METER_STATUS = "in service"
+KNOWN_METER_STATUSES = {
+    "in service",
+    "out of service",
+    "temp out of service",
+    "permanently removed",
+    "proposed",
+}
+
+
+class SourceValidationError(ValueError):
+    """Raised before an implausible Cambridge source can replace generated data."""
 
 
 def is_active_meter_status(value: object) -> bool:
     """Return True only for meters that the source explicitly marks in service."""
-    return clean_text(value).casefold() == "in service"
+    return clean_text(value).casefold() == ACTIVE_METER_STATUS
+
+
+def normalize_source_date(value: object) -> str:
+    """Normalize ArcGIS epoch milliseconds while preserving existing date strings."""
+    if isinstance(value, (int, float)):
+        try:
+            return datetime.fromtimestamp(value / 1000, timezone.utc).isoformat()
+        except (OverflowError, OSError, ValueError):
+            return ""
+    return clean_text(value)
+
+
+def validate_feature_source(
+    payload: dict,
+    *,
+    label: str,
+    minimum_features: int,
+    geometry_types: set[str],
+) -> None:
+    if payload.get("type") != "FeatureCollection":
+        raise SourceValidationError(f"{label} is not a GeoJSON FeatureCollection")
+    features = payload.get("features")
+    if not isinstance(features, list) or len(features) < minimum_features:
+        raise SourceValidationError(
+            f"{label} unexpectedly contains {len(features or [])} features; "
+            f"expected at least {minimum_features}"
+        )
+    invalid_geometry = sum(
+        1
+        for feature in features
+        if (feature.get("geometry") or {}).get("type") not in geometry_types
+    )
+    if invalid_geometry:
+        raise SourceValidationError(
+            f"{label} contains {invalid_geometry} unsupported geometries"
+        )
 
 
 def fetch_json(url: str) -> tuple[dict, dict]:
@@ -128,7 +176,7 @@ def normalize_meter_feature(feature: dict) -> dict:
         "MAX_TIME": clean_text(props.get("MaxTime")),
         "RATE": clean_text(props.get("Rate")),
         "PAY_BY_PHONE_ZONE": clean_text(props.get("PbyP_Zone")),
-        "LAST_EDITED_DATE": props.get("last_edited_date"),
+        "LAST_EDITED_DATE": normalize_source_date(props.get("last_edited_date")),
     }
     return updated
 
@@ -145,7 +193,7 @@ def normalize_accessible_feature(feature: dict) -> dict:
         "SIDE_OF_STREET": clean_text(props.get("SideOfStreet")),
         "FROM_STREET": clean_text(props.get("From_")),
         "TO_STREET": clean_text(props.get("To_")),
-        "LAST_EDITED_DATE": props.get("last_edited_date"),
+        "LAST_EDITED_DATE": normalize_source_date(props.get("last_edited_date")),
     }
     return updated
 
@@ -367,6 +415,41 @@ def build() -> tuple[dict, dict, dict, dict]:
     raw_streets, street_source = fetch_json(STREET_CENTERLINES_URL)
     raw_meters, meter_source = fetch_json(METERED_SPACES_URL)
     raw_accessible, accessible_source = fetch_json(ACCESSIBLE_SPACES_URL)
+
+    validate_feature_source(
+        raw_streets,
+        label="Cambridge street centerlines",
+        minimum_features=2_000,
+        geometry_types={"LineString", "MultiLineString"},
+    )
+    validate_feature_source(
+        raw_meters,
+        label="Cambridge metered spaces",
+        minimum_features=2_000,
+        geometry_types={"Polygon", "MultiPolygon"},
+    )
+    validate_feature_source(
+        raw_accessible,
+        label="Cambridge public accessible spaces",
+        minimum_features=100,
+        geometry_types={"Point"},
+    )
+
+    meter_ids = [
+        clean_text((feature.get("properties") or {}).get("SPACE_ID"))
+        for feature in raw_meters.get("features", [])
+    ]
+    if not all(meter_ids) or len(meter_ids) != len(set(meter_ids)):
+        raise SourceValidationError("Cambridge meter SPACE_ID values must be present and unique")
+    meter_statuses = {
+        clean_text((feature.get("properties") or {}).get("Status")).casefold()
+        for feature in raw_meters.get("features", [])
+    }
+    unexpected_statuses = meter_statuses - KNOWN_METER_STATUSES
+    if unexpected_statuses:
+        raise SourceValidationError(
+            f"Cambridge meters contain unexpected statuses: {sorted(unexpected_statuses)}"
+        )
 
     street_features = [
         normalize_street_feature(feature)

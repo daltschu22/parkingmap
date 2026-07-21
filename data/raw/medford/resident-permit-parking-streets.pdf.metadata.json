@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "resident_permit",
   "url": "https://www.medfordma.org/fs/resource-manager/view/c2132e77-d61f-40b1-9aa8-1add88772e3d",
-  "downloaded_at_utc": "2026-05-23T09:54:13.547412+00:00",
+  "final_url": "https://resources.finalsite.net/images/v1770298632/medfordmaorg/d3rwdrnsqqa3xwk4h5v0/ResidentPermitParkingStreetsNEW02-04-26-Sheet.pdf",
+  "destination": "data/raw/medford/resident-permit-parking-streets.pdf",
+  "downloaded_at_utc": "2026-07-21T21:04:30.078902+00:00",
   "http_status": 200,
   "content_type": "application/pdf",
-  "bytes": 104463
+  "last_modified": "Thu, 05 Feb 2026 13:37:13 GMT",
+  "etag": "\"683dbf6e170ffda8dffb88bd74255aef\"",
+  "bytes": 104463,
+  "sha256": "d15dfa588df1f25015a0be6423176ecf4adc610c2a47771ded0e61f244eec63e"
 }

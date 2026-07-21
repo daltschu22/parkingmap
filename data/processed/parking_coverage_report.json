@@ -1,11 +1,12 @@
 {
-  "generated_at_utc": "2026-07-21T13:36:50.199239+00:00",
+  "generated_at_utc": "2026-07-21T21:14:08.172498+00:00",
   "note": "Coverage counts summarize current evidence-backed classification. Unknown means the loaded sources do not determine a rule; it does not mean parking is unrestricted.",
   "municipalities": {
     "medford": {
       "unknown": 1596,
       "resident_permit_segment_rules_known": 309,
-      "resident_permit_required": 240
+      "resident_permit_required": 136,
+      "resident_permit_time_restricted": 104
     }
   }
 }

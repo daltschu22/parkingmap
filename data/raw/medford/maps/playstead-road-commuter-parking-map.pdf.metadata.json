@@ -4,8 +4,13 @@
   "municipality": "medford",
   "category": "business_municipal_commuter_map",
   "url": "https://www.medfordma.org/fs/resource-manager/view/c5b080bc-dbbb-42fa-9cdc-526953f85149",
-  "downloaded_at_utc": "2026-05-23T09:54:20.646368+00:00",
+  "final_url": "https://resources.finalsite.net/images/v1697746665/medfordmaorg/iv6vo40uqzque62uycmu/Commuter_Playstead_Road_publish.pdf",
+  "destination": "data/raw/medford/maps/playstead-road-commuter-parking-map.pdf",
+  "downloaded_at_utc": "2026-07-21T21:04:37.627595+00:00",
   "http_status": 200,
   "content_type": "application/pdf",
-  "bytes": 11021993
+  "last_modified": "Thu, 19 Oct 2023 20:17:46 GMT",
+  "etag": "\"88d0c88e8ac3bed7fcd181736d2c24b5\"",
+  "bytes": 11021993,
+  "sha256": "6ed4594f429996c7b1ce41adac2a86bd1f033f6e1cf9794dc8bfbc16c9617c7e"
 }

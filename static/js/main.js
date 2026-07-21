@@ -60,18 +60,16 @@ function setBaseLayer(layerName) {
     });
 }
 
-// Color scheme based on parking access without resident pass
+// Four driver-facing street states. Evidence markers use separate colors below.
 const COLORS = {
-    meteredNoPass: '#0ea5e9',     // Blue - metered parking
-    inactiveMeterEvidence: '#64748b', // Slate - inactive/removed/proposed meters
-    timeLimitedNoPass: '#22c55e', // Green - timed parking, no resident pass
-    residentPermitRequired: '#ef4444', // Red - resident permit required
-    segmentRulesKnown: '#f97316',  // Orange - partial/segment rules known
-    privateRules: '#a855f7',      // Purple - private street rules
-    unknown: '#6b7280',           // Gray - unknown
-    cambridgeNetwork: '#cbd5e1',  // Neutral - Cambridge network, rules not yet mapped
-    highlight: '#f59e0b',         // Orange - search results
-    hover: '#3b82f6'              // Blue - hover
+    metered: '#0ea5e9',
+    openTimeLimited: '#22c55e',
+    restricted: '#ef4444',
+    unknown: '#94a3b8',
+    inactiveMeterEvidence: '#64748b',
+    accessibleEvidence: '#facc15',
+    highlight: '#f59e0b',
+    hover: '#3b82f6'
 };
 
 function escapeHtml(value) {
@@ -107,45 +105,51 @@ async function fetchJson(url) {
     return response.json();
 }
 
-// Get style based on street ownership
-function getStreetStyle(feature) {
-    const access = feature.properties?.PARKING_ACCESS;
-    const municipality = String(feature.properties?.MUNICIPALITY || '').trim().toLowerCase();
-    let color = COLORS.unknown;
-    let dashArray = null;
+function getFeatureDisplayStatus(properties = {}) {
+    if (properties.PARKING_DISPLAY_STATUS) {
+        return properties.PARKING_DISPLAY_STATUS;
+    }
 
-    if (municipality === 'cambridge' && access !== 'private_rules_apply') {
+    // Backward-compatible fallback for responses cached before display status existed.
+    const access = properties.PARKING_ACCESS || 'unknown';
+    if (access === 'permit_with_metered_segments') return 'metered';
+    if (access === 'permit_with_time_limited_segments') return 'open_time_limited';
+    if (['resident_permit_required', 'resident_permit_segment_rules_known', 'private_rules_apply'].includes(access)) {
+        return 'restricted';
+    }
+    return 'unknown';
+}
+
+// Style streets with the same four meanings in every municipality.
+function getStreetStyle(feature) {
+    const properties = feature.properties || {};
+    const displayStatus = getFeatureDisplayStatus(properties);
+    const access = properties.PARKING_ACCESS || 'unknown';
+    const municipality = String(properties.MUNICIPALITY || '').trim().toLowerCase();
+    const detailed = map.getZoom() >= 15;
+    const statusWeight = detailed ? 2.5 : 1.5;
+
+    if (displayStatus === 'metered') {
+        return { color: COLORS.metered, weight: statusWeight, opacity: 0.9, dashArray: null };
+    }
+    if (displayStatus === 'open_time_limited') {
+        return { color: COLORS.openTimeLimited, weight: statusWeight, opacity: 0.9, dashArray: null };
+    }
+    if (displayStatus === 'restricted') {
+        const mixedOrPrivate = ['resident_permit_segment_rules_known', 'private_rules_apply'].includes(access);
         return {
-            color: COLORS.cambridgeNetwork,
-            weight: 1.75,
-            opacity: 0.62,
-            dashArray: null
+            color: COLORS.restricted,
+            weight: statusWeight,
+            opacity: 0.9,
+            dashArray: mixedOrPrivate ? '6 4' : null
         };
     }
-    
-    if (access === 'permit_with_metered_segments') {
-        color = COLORS.meteredNoPass;
-    } else if (access === 'inactive_metered_segments_known') {
-        color = COLORS.inactiveMeterEvidence;
-        dashArray = '3 5';
-    } else if (access === 'permit_with_time_limited_segments') {
-        color = COLORS.timeLimitedNoPass;
-    } else if (access === 'resident_permit_required') {
-        color = COLORS.residentPermitRequired;
-    } else if (access === 'resident_permit_segment_rules_known' || access === 'metered_segments_known' || access === 'parking_special_spaces_known') {
-        color = COLORS.segmentRulesKnown;
-    } else if (access === 'private_rules_apply') {
-        color = COLORS.privateRules;
-        dashArray = '8 4';
-    } else {
-        dashArray = '2 5';
-    }
-    
+
     return {
-        color: color,
-        weight: 2,
-        opacity: 0.8,
-        dashArray
+        color: COLORS.unknown,
+        weight: detailed ? (municipality === 'cambridge' ? 1.75 : 2) : 1,
+        opacity: municipality === 'cambridge' ? 0.62 : 0.7,
+        dashArray: municipality === 'cambridge' ? null : '2 5'
     };
 }
 
@@ -314,26 +318,80 @@ function formatLabel(key) {
     return labels[key] || key;
 }
 
-function getParkingAccessText(access) {
-    if (access === 'permit_with_metered_segments') return 'Permit Street (Has Metered Segments)';
-    if (access === 'metered_segments_known') return 'Metered Segments Known';
-    if (access === 'inactive_metered_segments_known') return 'Inactive/Proposed Meter Evidence Only';
-    if (access === 'permit_with_time_limited_segments') return 'Permit Street (Has Time-Limited Segments)';
-    if (access === 'resident_permit_required') return 'Resident Permit Required';
-    if (access === 'resident_permit_segment_rules_known') return 'Segment-Specific Permit Rules Known';
-    if (access === 'parking_special_spaces_known') return 'Special Parking Spaces Known';
-    if (access === 'private_rules_apply') return 'Private Street Rules Apply';
-    return 'Unknown';
+function getDisplayStatusColor(status) {
+    if (status === 'metered') return COLORS.metered;
+    if (status === 'open_time_limited') return COLORS.openTimeLimited;
+    if (status === 'restricted') return COLORS.restricted;
+    return COLORS.unknown;
 }
 
-function getParkingAccessColor(access) {
-    if (access === 'permit_with_metered_segments') return COLORS.meteredNoPass;
-    if (access === 'inactive_metered_segments_known') return COLORS.inactiveMeterEvidence;
-    if (access === 'permit_with_time_limited_segments') return COLORS.timeLimitedNoPass;
-    if (access === 'resident_permit_required') return COLORS.residentPermitRequired;
-    if (access === 'resident_permit_segment_rules_known' || access === 'metered_segments_known' || access === 'parking_special_spaces_known') return COLORS.segmentRulesKnown;
-    if (access === 'private_rules_apply') return COLORS.privateRules;
-    return COLORS.unknown;
+function getAtGlanceAnswer(properties = {}) {
+    const municipality = String(properties.MUNICIPALITY || '').trim().toLowerCase();
+    const access = properties.PARKING_ACCESS || 'unknown';
+    const evidence = properties.PARKING_EVIDENCE || 'none';
+    const displayStatus = getFeatureDisplayStatus(properties);
+
+    if (municipality === 'cambridge' && evidence === 'active_meter_spaces_nearby') {
+        return {
+            tone: 'metered',
+            title: 'Metered spaces mapped nearby',
+            summary: 'Use the exact blue meter markers. Other curb sections remain unknown, so check posted signs.'
+        };
+    }
+    if (municipality === 'cambridge' && evidence === 'accessible_spaces_nearby') {
+        return {
+            tone: 'unknown',
+            title: 'Accessible spaces mapped nearby',
+            summary: 'Use the exact yellow markers. General parking on the rest of this curb is still unknown.'
+        };
+    }
+    if (municipality === 'cambridge' && evidence === 'inactive_meter_spaces_nearby') {
+        return {
+            tone: 'unknown',
+            title: 'No active meter confirmed',
+            summary: 'Nearby meter evidence is inactive, removed, or proposed. Check posted signs before parking.'
+        };
+    }
+    if (displayStatus === 'metered') {
+        return {
+            tone: 'metered',
+            title: 'Metered sections exist',
+            summary: 'Park only at a marked meter. Other sections on this street may require a resident permit.'
+        };
+    }
+    if (displayStatus === 'open_time_limited') {
+        return {
+            tone: 'open',
+            title: 'Open / time-limited sections exist',
+            summary: 'Check the exact curb signs and hours. Other sections may require a resident permit.'
+        };
+    }
+    if (displayStatus === 'restricted' && access === 'private_rules_apply') {
+        return {
+            tone: 'restricted',
+            title: 'Private street — do not assume public parking',
+            summary: 'Parking is controlled by the property owner. Look for posted authorization and restrictions.'
+        };
+    }
+    if (displayStatus === 'restricted' && access === 'resident_permit_segment_rules_known') {
+        return {
+            tone: 'restricted',
+            title: 'Permit rules vary by block',
+            summary: 'A permit restriction is documented for part of this street. Confirm the exact block and curb signs.'
+        };
+    }
+    if (displayStatus === 'restricted') {
+        return {
+            tone: 'restricted',
+            title: 'Resident permit required',
+            summary: 'Without the required permit, do not assume parking is allowed. Posted exceptions still control.'
+        };
+    }
+    return {
+        tone: 'unknown',
+        title: 'Unknown — check posted signs',
+        summary: 'The current data cannot answer for this exact curb. Do not infer permission from the map alone.'
+    };
 }
 
 function getOwnershipText(rawOwnership) {
@@ -369,26 +427,28 @@ function showStreetDetails(properties) {
     
     if (hint) hint.style.display = 'none';
     
-    const parkingAccess = properties.PARKING_ACCESS || 'unknown';
-    const accessText = getParkingAccessText(parkingAccess);
-    const statusColor = getParkingAccessColor(parkingAccess);
+    const answer = getAtGlanceAnswer(properties);
+    const statusColor = getDisplayStatusColor(answer.tone === 'open' ? 'open_time_limited' : answer.tone);
     const parkingNote = properties.PARKING_NOTE || 'No additional parking rule note available.';
     const meterCount = properties.PARKING_METER_COUNT_ESTIMATE;
     const meterConfidence = properties.PARKING_METER_COUNT_CONFIDENCE || 'none';
     
     let html = `
-        <div class="detail-row permit-status">
-            <span class="detail-label">${escapeHtml(formatLabel('PARKING_ACCESS'))}</span>
-            <span class="detail-value" style="color: ${statusColor}; font-weight: bold;">${escapeHtml(accessText)}</span>
+        <div class="parking-answer parking-answer--${escapeHtml(answer.tone)}" style="--answer-color: ${statusColor};">
+            <span class="parking-answer-location">${escapeHtml(properties.MUNICIPALITY || 'Unknown')} · ${escapeHtml(properties.STNAME || 'Unknown street')}</span>
+            <strong class="parking-answer-title">${escapeHtml(answer.title)}</strong>
+            <span class="parking-answer-summary">${escapeHtml(answer.summary)}</span>
         </div>
+    `;
+    let detailHtml = `
         <div class="detail-row">
-            <span class="detail-label">${escapeHtml(formatLabel('PARKING_NOTE'))}</span>
+            <span class="detail-label">Source detail</span>
             <span class="detail-value">${escapeHtml(parkingNote)}</span>
         </div>
     `;
 
     if (meterCount !== null && meterCount !== undefined) {
-        html += `
+        detailHtml += `
             <div class="detail-row">
                 <span class="detail-label">Meter Count Estimate</span>
                 <span class="detail-value">${escapeHtml(meterCount)} (${escapeHtml(meterConfidence)})</span>
@@ -447,7 +507,7 @@ function showStreetDetails(properties) {
             const renderedValue = sourceUrl
                 ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(value)}</a>`
                 : escapeHtml(value);
-            html += `
+            detailHtml += `
                 <div class="detail-row">
                     <span class="detail-label">${escapeHtml(formatLabel(key))}</span>
                     <span class="detail-value">${renderedValue}</span>
@@ -455,7 +515,13 @@ function showStreetDetails(properties) {
             `;
         }
     }
-    
+
+    html += `
+        <details class="technical-details">
+            <summary>Source and rule details</summary>
+            <div class="technical-details-body">${detailHtml}</div>
+        </details>
+    `;
     container.innerHTML = html || '<p class="info-hint">No details available</p>';
 }
 
@@ -463,11 +529,8 @@ function showStreetDetails(properties) {
 function createPopup(properties) {
     const name = properties.STNAME || 'Unknown Street';
     const municipality = properties.MUNICIPALITY || 'Unknown';
-    const access = getParkingAccessText(properties.PARKING_ACCESS);
-    const evidence = municipality === 'Cambridge'
-        ? `<br>${escapeHtml(getParkingEvidenceText(properties.PARKING_EVIDENCE))}`
-        : '';
-    return `<strong>${escapeHtml(name)}</strong><br>${escapeHtml(municipality)}<br>${escapeHtml(access)}${evidence}`;
+    const answer = getAtGlanceAnswer(properties);
+    return `<strong>${escapeHtml(name)}</strong><br>${escapeHtml(municipality)}<br><strong>${escapeHtml(answer.title)}</strong><br>${escapeHtml(answer.summary)}`;
 }
 
 function createMeterEvidencePopup(properties) {
@@ -646,6 +709,19 @@ async function loadStreets() {
     }
 }
 
+function meterEvidenceStyle(properties = {}) {
+    const active = String(properties.STATUS || '').trim().toLowerCase() === 'in service';
+    const color = active ? COLORS.metered : COLORS.inactiveMeterEvidence;
+    const detailed = map.getZoom() >= 15;
+    return {
+        color,
+        weight: detailed ? 1 : 0.5,
+        opacity: detailed ? 0.9 : 0.35,
+        fillColor: color,
+        fillOpacity: detailed ? 0.45 : 0.12
+    };
+}
+
 function evidenceLayerDefinitions() {
     return [
         {
@@ -655,11 +731,7 @@ function evidenceLayerDefinitions() {
             group: meterEvidenceLayer,
             options: {
                 renderer: hitRenderer,
-                style: (feature) => {
-                    const active = String(feature.properties?.STATUS || '').trim().toLowerCase() === 'in service';
-                    const color = active ? COLORS.meteredNoPass : COLORS.inactiveMeterEvidence;
-                    return { color, weight: 1, opacity: 0.9, fillColor: color, fillOpacity: 0.45 };
-                },
+                style: (feature) => meterEvidenceStyle(feature.properties || {}),
                 onEachFeature: (feature, layer) => {
                     layer.bindPopup(createMeterEvidencePopup(feature.properties || {}));
                 }
@@ -671,13 +743,18 @@ function evidenceLayerDefinitions() {
             url: '/api/parking-evidence/cambridge/accessible',
             group: accessibleEvidenceLayer,
             options: {
-                pointToLayer: (_feature, latlng) => L.circleMarker(latlng, {
-                    radius: 4,
-                    color: '#fde047',
-                    weight: 2,
-                    fillColor: '#facc15',
-                    fillOpacity: 0.95
-                }),
+                pointToLayer: (_feature, latlng) => {
+                    const detailed = map.getZoom() >= 15;
+                    const marker = L.circleMarker(latlng, {
+                        radius: detailed ? 4 : 2,
+                        color: '#fde047',
+                        weight: detailed ? 2 : 1,
+                        fillColor: COLORS.accessibleEvidence,
+                        fillOpacity: detailed ? 0.95 : 0.7
+                    });
+                    marker._parkingEvidenceKind = 'accessible';
+                    return marker;
+                },
                 onEachFeature: (feature, layer) => {
                     layer.bindPopup(createAccessibleEvidencePopup(feature.properties || {}));
                 }
@@ -734,16 +811,52 @@ function addMeterCentroidMarkers(group, geoJsonLayer) {
         if (!bounds.isValid()) return;
         const properties = layer.feature?.properties || {};
         const active = String(properties.STATUS || '').trim().toLowerCase() === 'in service';
-        const color = active ? COLORS.meteredNoPass : COLORS.inactiveMeterEvidence;
-        L.circleMarker(bounds.getCenter(), {
+        const color = active ? COLORS.metered : COLORS.inactiveMeterEvidence;
+        const marker = L.circleMarker(bounds.getCenter(), {
             renderer: hitRenderer,
-            radius: active ? 3 : 2.5,
+            radius: map.getZoom() >= 15 ? (active ? 3 : 2.5) : (active ? 1.5 : 1),
             color,
-            weight: 1,
-            opacity: 0.95,
+            weight: map.getZoom() >= 15 ? 1 : 0.5,
+            opacity: map.getZoom() >= 15 ? 0.95 : 0.55,
             fillColor: color,
-            fillOpacity: 0.9
+            fillOpacity: map.getZoom() >= 15 ? 0.9 : 0.6
         }).bindPopup(createMeterEvidencePopup(properties)).addTo(group);
+        marker._parkingEvidenceKind = active
+            ? 'active-meter-centroid'
+            : 'inactive-meter-centroid';
+    });
+}
+
+function updateEvidenceRendering() {
+    const detailed = map.getZoom() >= 15;
+
+    meterEvidenceLayer?.eachLayer((layer) => {
+        if (layer._parkingEvidenceKind?.endsWith('meter-centroid')) {
+            const active = layer._parkingEvidenceKind === 'active-meter-centroid';
+            layer.setRadius(detailed ? (active ? 3 : 2.5) : (active ? 1.5 : 1));
+            layer.setStyle({
+                weight: detailed ? 1 : 0.5,
+                opacity: detailed ? 0.95 : 0.55,
+                fillOpacity: detailed ? 0.9 : 0.6
+            });
+            return;
+        }
+        if (typeof layer.eachLayer === 'function') {
+            layer.eachLayer((shape) => {
+                if (shape.feature && typeof shape.setStyle === 'function') {
+                    shape.setStyle(meterEvidenceStyle(shape.feature.properties || {}));
+                }
+            });
+        }
+    });
+
+    accessibleEvidenceLayer?.eachLayer((layer) => {
+        if (typeof layer.eachLayer !== 'function') return;
+        layer.eachLayer((marker) => {
+            if (marker._parkingEvidenceKind !== 'accessible') return;
+            marker.setRadius(detailed ? 4 : 2);
+            marker.setStyle({ weight: detailed ? 2 : 1, fillOpacity: detailed ? 0.95 : 0.7 });
+        });
     });
 }
 
@@ -753,7 +866,6 @@ async function ensureEvidenceLayer(definition) {
         return evidenceLoadPromises.get(definition.key);
     }
 
-    setAppStatus(`Loading ${definition.label}…`);
     const loadPromise = fetchJson(definition.url)
         .then((data) => {
             definition.group.clearLayers();
@@ -763,7 +875,7 @@ async function ensureEvidenceLayer(definition) {
                 addMeterCentroidMarkers(definition.group, geoJsonLayer);
             }
             loadedEvidenceLayers.add(definition.key);
-            setAppStatus(`Loaded ${data.features?.length || 0} ${definition.label.toLowerCase()}.`);
+            updateEvidenceRendering();
         })
         .catch((error) => {
             console.error(`Error loading ${definition.label}:`, error);
@@ -878,14 +990,8 @@ async function loadStats() {
         
         const container = document.getElementById('stats-content');
         if (!container) return;
-        const metered = stats.parking_access?.permit_with_metered_segments || 0;
-        const timeLimited = stats.parking_access?.permit_with_time_limited_segments || 0;
-        const permitRequired = stats.parking_access?.resident_permit_required || 0;
-        const segmentRules = stats.parking_access?.resident_permit_segment_rules_known || 0;
+        const display = stats.parking_display || {};
         const evidence = stats.parking_evidence || {};
-        const municipalities = Object.entries(stats.municipalities || {})
-            .map(([name, count]) => `${escapeHtml(name)}: ${count.toLocaleString()}`)
-            .join(' / ');
 
         container.innerHTML = `
             <div class="stat-item">
@@ -893,40 +999,24 @@ async function loadStats() {
                 <span class="stat-value">${stats.total_segments.toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Unique Streets</span>
-                <span class="stat-value">${stats.unique_streets.toLocaleString()}</span>
+                <span class="stat-label stat-label--metered">Metered sections</span>
+                <span class="stat-value">${(display.metered || 0).toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Municipalities</span>
-                <span class="stat-value">${municipalities}</span>
+                <span class="stat-label stat-label--open">Open / time-limited</span>
+                <span class="stat-value">${(display.open_time_limited || 0).toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Cambridge Meter Spaces</span>
-                <span class="stat-value">${(evidence.cambridge_meter_spaces || 0).toLocaleString()}</span>
+                <span class="stat-label stat-label--restricted">Permit / restricted</span>
+                <span class="stat-value">${(display.restricted || 0).toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Active Cambridge Meters</span>
+                <span class="stat-label stat-label--unknown">Unknown / check signs</span>
+                <span class="stat-value">${(display.unknown || 0).toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Cambridge active meter points</span>
                 <span class="stat-value">${(evidence.cambridge_active_meter_spaces || 0).toLocaleString()}</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Cambridge Accessible Spaces</span>
-                <span class="stat-value">${(evidence.cambridge_accessible_spaces || 0).toLocaleString()}</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Somerville Metered Segments</span>
-                <span class="stat-value">${metered.toLocaleString()}</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Somerville Time-Limited Segments</span>
-                <span class="stat-value">${timeLimited.toLocaleString()}</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Permit Required</span>
-                <span class="stat-value">${permitRequired.toLocaleString()}</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-label">Medford Partial Rules</span>
-                <span class="stat-value">${segmentRules.toLocaleString()}</span>
             </div>
         `;
     } catch (error) {
@@ -992,3 +1082,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 map.on('mouseout', resetHover);
+map.on('zoomend', () => {
+    refreshSelectionStyles();
+    updateEvidenceRendering();
+});

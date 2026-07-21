@@ -43,6 +43,7 @@ Current limitation:
 Users should be able to:
 
 - Search for a street or address.
+- Read one consistent at-a-glance state: metered sections, open/time-limited sections, permit/private/restricted, or unknown.
 - Inspect a block and see whether public parking is likely allowed.
 - See the controlling restriction, such as resident permit, meter, time limit, or no parking.
 - Filter the map by parking rule type.

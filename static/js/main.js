@@ -69,6 +69,7 @@ const COLORS = {
     segmentRulesKnown: '#f97316',  // Orange - partial/segment rules known
     privateRules: '#a855f7',      // Purple - private street rules
     unknown: '#6b7280',           // Gray - unknown
+    cambridgeNetwork: '#cbd5e1',  // Neutral - Cambridge network, rules not yet mapped
     highlight: '#f59e0b',         // Orange - search results
     hover: '#3b82f6'              // Blue - hover
 };
@@ -109,8 +110,18 @@ async function fetchJson(url) {
 // Get style based on street ownership
 function getStreetStyle(feature) {
     const access = feature.properties?.PARKING_ACCESS;
+    const municipality = String(feature.properties?.MUNICIPALITY || '').trim().toLowerCase();
     let color = COLORS.unknown;
     let dashArray = null;
+
+    if (municipality === 'cambridge' && access !== 'private_rules_apply') {
+        return {
+            color: COLORS.cambridgeNetwork,
+            weight: 1.75,
+            opacity: 0.62,
+            dashArray: null
+        };
+    }
     
     if (access === 'permit_with_metered_segments') {
         color = COLORS.meteredNoPass;
@@ -281,6 +292,10 @@ function formatLabel(key) {
         'PARKING_CONFIDENCE': 'Confidence',
         'PARKING_DATA_UPDATED_AT': 'Data Generated',
         'PARKING_RULE_MATCH_LEVEL': 'Rule Match',
+        'PARKING_EVIDENCE': 'Mapped Evidence',
+        'PARKING_EVIDENCE_SOURCE': 'Evidence Source',
+        'PARKING_EVIDENCE_MATCH_LEVEL': 'Evidence Match',
+        'PARKING_EVIDENCE_CONFIDENCE': 'Evidence Confidence',
         'PARKING_MEDFORD_RULE_COUNT': 'Medford Rule Rows',
         'PARKING_MEDFORD_PARTIAL_RULE_COUNT': 'Partial Rule Rows',
         'PARKING_MEDFORD_RULE_SUMMARY': 'Medford Rule Summary',
@@ -291,6 +306,7 @@ function formatLabel(key) {
         'PARKING_CAMBRIDGE_METER_HOURS': 'Meter Hours',
         'PARKING_CAMBRIDGE_METER_MAX_TIMES': 'Meter Max Times',
         'PARKING_CAMBRIDGE_METER_RATES': 'Meter Rates',
+        'PARKING_CAMBRIDGE_MATCH_DISTANCE': 'Nearest-Centerline Distance',
         'FROM_STREET': 'From Street',
         'TO_STREET': 'To Street',
         'ROAD_TYPE': 'Road Type'
@@ -326,6 +342,16 @@ function getOwnershipText(rawOwnership) {
         return 'Unknown';
     }
     return ownership;
+}
+
+function getParkingEvidenceText(value) {
+    const labels = {
+        active_meter_spaces_nearby: 'Active meter spaces nearby',
+        inactive_meter_spaces_nearby: 'Inactive/removed/proposed meter spaces nearby',
+        accessible_spaces_nearby: 'Accessible spaces nearby',
+        none: 'No mapped point evidence nearby'
+    };
+    return labels[String(value || '').trim()] || value || 'None';
 }
 
 // Format one-way value
@@ -386,6 +412,10 @@ function showStreetDetails(properties) {
         'PARKING_CONFIDENCE',
         'PARKING_DATA_UPDATED_AT',
         'PARKING_RULE_MATCH_LEVEL',
+        'PARKING_EVIDENCE',
+        'PARKING_EVIDENCE_SOURCE',
+        'PARKING_EVIDENCE_MATCH_LEVEL',
+        'PARKING_EVIDENCE_CONFIDENCE',
         'PARKING_MEDFORD_RULE_COUNT',
         'PARKING_MEDFORD_PARTIAL_RULE_COUNT',
         'PARKING_MEDFORD_RULE_SUMMARY',
@@ -405,10 +435,17 @@ function showStreetDetails(properties) {
             value = formatOneway(value);
         } else if (key === 'OWNERSHIP') {
             value = getOwnershipText(value);
+        } else if (key === 'PARKING_EVIDENCE') {
+            value = getParkingEvidenceText(value);
         }
         if (value !== null && value !== undefined && value !== '') {
-            const renderedValue = key === 'PARKING_RULE_SOURCE' && safeExternalUrl(properties.PARKING_SOURCE_URL)
-                ? `<a href="${escapeHtml(safeExternalUrl(properties.PARKING_SOURCE_URL))}" target="_blank" rel="noopener noreferrer">${escapeHtml(value)}</a>`
+            const sourceUrl = key === 'PARKING_RULE_SOURCE'
+                ? safeExternalUrl(properties.PARKING_SOURCE_URL)
+                : key === 'PARKING_EVIDENCE_SOURCE'
+                    ? safeExternalUrl(properties.PARKING_EVIDENCE_SOURCE_URL)
+                    : '';
+            const renderedValue = sourceUrl
+                ? `<a href="${escapeHtml(sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(value)}</a>`
                 : escapeHtml(value);
             html += `
                 <div class="detail-row">
@@ -427,7 +464,10 @@ function createPopup(properties) {
     const name = properties.STNAME || 'Unknown Street';
     const municipality = properties.MUNICIPALITY || 'Unknown';
     const access = getParkingAccessText(properties.PARKING_ACCESS);
-    return `<strong>${escapeHtml(name)}</strong><br>${escapeHtml(municipality)}<br>${escapeHtml(access)}`;
+    const evidence = municipality === 'Cambridge'
+        ? `<br>${escapeHtml(getParkingEvidenceText(properties.PARKING_EVIDENCE))}`
+        : '';
+    return `<strong>${escapeHtml(name)}</strong><br>${escapeHtml(municipality)}<br>${escapeHtml(access)}${evidence}`;
 }
 
 function createMeterEvidencePopup(properties) {
@@ -614,6 +654,7 @@ function evidenceLayerDefinitions() {
             url: '/api/parking-evidence/cambridge/meters',
             group: meterEvidenceLayer,
             options: {
+                renderer: hitRenderer,
                 style: (feature) => {
                     const active = String(feature.properties?.STATUS || '').trim().toLowerCase() === 'in service';
                     const color = active ? COLORS.meteredNoPass : COLORS.inactiveMeterEvidence;
@@ -686,6 +727,26 @@ function syncEvidenceCheckbox(key, checked) {
     if (input) input.checked = checked;
 }
 
+function addMeterCentroidMarkers(group, geoJsonLayer) {
+    geoJsonLayer.eachLayer((layer) => {
+        if (typeof layer.getBounds !== 'function') return;
+        const bounds = layer.getBounds();
+        if (!bounds.isValid()) return;
+        const properties = layer.feature?.properties || {};
+        const active = String(properties.STATUS || '').trim().toLowerCase() === 'in service';
+        const color = active ? COLORS.meteredNoPass : COLORS.inactiveMeterEvidence;
+        L.circleMarker(bounds.getCenter(), {
+            renderer: hitRenderer,
+            radius: active ? 3 : 2.5,
+            color,
+            weight: 1,
+            opacity: 0.95,
+            fillColor: color,
+            fillOpacity: 0.9
+        }).bindPopup(createMeterEvidencePopup(properties)).addTo(group);
+    });
+}
+
 async function ensureEvidenceLayer(definition) {
     if (loadedEvidenceLayers.has(definition.key)) return;
     if (evidenceLoadPromises.has(definition.key)) {
@@ -696,7 +757,11 @@ async function ensureEvidenceLayer(definition) {
     const loadPromise = fetchJson(definition.url)
         .then((data) => {
             definition.group.clearLayers();
-            definition.group.addLayer(L.geoJSON(data, definition.options));
+            const geoJsonLayer = L.geoJSON(data, definition.options);
+            definition.group.addLayer(geoJsonLayer);
+            if (definition.key === 'meters') {
+                addMeterCentroidMarkers(definition.group, geoJsonLayer);
+            }
             loadedEvidenceLayers.add(definition.key);
             setAppStatus(`Loaded ${data.features?.length || 0} ${definition.label.toLowerCase()}.`);
         })
@@ -745,6 +810,13 @@ function setupParkingEvidence() {
                 map.removeLayer(definition.group);
             }
         });
+    });
+
+    definitions.forEach((definition) => {
+        const input = document.querySelector(`[data-evidence-layer="${definition.key}"]`);
+        if (input?.checked && !map.hasLayer(definition.group)) {
+            definition.group.addTo(map);
+        }
     });
 }
 
@@ -807,12 +879,10 @@ async function loadStats() {
         const container = document.getElementById('stats-content');
         if (!container) return;
         const metered = stats.parking_access?.permit_with_metered_segments || 0;
-        const knownMetered = stats.parking_access?.metered_segments_known || 0;
         const timeLimited = stats.parking_access?.permit_with_time_limited_segments || 0;
         const permitRequired = stats.parking_access?.resident_permit_required || 0;
         const segmentRules = stats.parking_access?.resident_permit_segment_rules_known || 0;
-        const specialSpaces = stats.parking_access?.parking_special_spaces_known || 0;
-        const inactiveMeters = stats.parking_access?.inactive_metered_segments_known || 0;
+        const evidence = stats.parking_evidence || {};
         const municipalities = Object.entries(stats.municipalities || {})
             .map(([name, count]) => `${escapeHtml(name)}: ${count.toLocaleString()}`)
             .join(' / ');
@@ -831,15 +901,23 @@ async function loadStats() {
                 <span class="stat-value">${municipalities}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Metered Segments Known</span>
-                <span class="stat-value">${(metered + knownMetered).toLocaleString()}</span>
+                <span class="stat-label">Cambridge Meter Spaces</span>
+                <span class="stat-value">${(evidence.cambridge_meter_spaces || 0).toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Inactive Meter Evidence</span>
-                <span class="stat-value">${inactiveMeters.toLocaleString()}</span>
+                <span class="stat-label">Active Cambridge Meters</span>
+                <span class="stat-value">${(evidence.cambridge_active_meter_spaces || 0).toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Permit + Time-Limited Segments</span>
+                <span class="stat-label">Cambridge Accessible Spaces</span>
+                <span class="stat-value">${(evidence.cambridge_accessible_spaces || 0).toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Somerville Metered Segments</span>
+                <span class="stat-value">${metered.toLocaleString()}</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Somerville Time-Limited Segments</span>
                 <span class="stat-value">${timeLimited.toLocaleString()}</span>
             </div>
             <div class="stat-item">
@@ -847,8 +925,8 @@ async function loadStats() {
                 <span class="stat-value">${permitRequired.toLocaleString()}</span>
             </div>
             <div class="stat-item">
-                <span class="stat-label">Segment Rules Known</span>
-                <span class="stat-value">${(segmentRules + specialSpaces).toLocaleString()}</span>
+                <span class="stat-label">Medford Partial Rules</span>
+                <span class="stat-value">${segmentRules.toLocaleString()}</span>
             </div>
         `;
     } catch (error) {

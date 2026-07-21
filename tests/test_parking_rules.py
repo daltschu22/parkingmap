@@ -35,8 +35,24 @@ def test_cambridge_does_not_fallback_to_inactive_meter_count():
         },
     )
 
-    assert category == "inactive_metered_segments_known"
+    assert category == "unknown"
     assert "no active meters" in note.lower()
+
+
+def test_cambridge_meter_points_do_not_classify_a_whole_street():
+    category, note = _classify_cambridge_parking_access(
+        {"STNAME": "Massachusetts Avenue", "OWNERSHIP": "Unknown"},
+        {
+            "MASSACHUSETTS AVE": {
+                "active_meter_count_estimate": 200,
+                "meter_count_estimate": 250,
+            }
+        },
+    )
+
+    assert category == "unknown"
+    assert "whole street" in note.lower()
+    assert "exact meter-space overlay" in note.lower()
 
 
 def test_simple_endpoint_rule_can_match_a_whole_centerline_segment():

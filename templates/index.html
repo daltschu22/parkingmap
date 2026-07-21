@@ -34,8 +34,8 @@
 
             <fieldset class="evidence-controls">
                 <legend>Evidence layers</legend>
-                <label><input type="checkbox" data-evidence-layer="meters"> Cambridge meter spaces</label>
-                <label><input type="checkbox" data-evidence-layer="accessible"> Cambridge accessible spaces</label>
+                <label><input type="checkbox" data-evidence-layer="meters" checked> Cambridge meter spaces</label>
+                <label><input type="checkbox" data-evidence-layer="accessible" checked> Cambridge accessible spaces</label>
                 <label><input type="checkbox" data-evidence-layer="reference-signs"> Mapillary sign references</label>
                 <label><input type="checkbox" data-evidence-layer="reference-matches"> Reference-matched detections</label>
             </fieldset>
@@ -46,11 +46,11 @@
                 <h3>Street Parking Status</h3>
                 <div class="legend-item">
                     <span class="legend-line" style="background: #0ea5e9;"></span>
-                    <span>Metered Parking Evidence</span>
+                    <span>Somerville Street with Metered Segments</span>
                 </div>
                 <div class="legend-item">
-                    <span class="legend-line" style="background: #64748b;"></span>
-                    <span>Inactive/Proposed Meter Evidence</span>
+                    <span class="legend-line" style="background: #cbd5e1;"></span>
+                    <span>Cambridge Network — Curb Rules Not Mapped</span>
                 </div>
                 <div class="legend-item">
                     <span class="legend-line" style="background: #22c55e;"></span>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="legend-item">
                     <span class="legend-line" style="background: #f97316;"></span>
-                    <span>Segment-Specific/Special Rules Known</span>
+                    <span>Medford Segment-Specific Permit Rows</span>
                 </div>
                 <div class="legend-item">
                     <span class="legend-line" style="background: #a855f7;"></span>
@@ -77,8 +77,16 @@
                     <span>Search Results</span>
                 </div>
                 <div class="legend-item">
+                    <span class="legend-dot" style="background: #0ea5e9;"></span>
+                    <span>Cambridge Active Meter Space</span>
+                </div>
+                <div class="legend-item">
+                    <span class="legend-dot" style="background: #64748b;"></span>
+                    <span>Inactive/Removed/Proposed Meter Space</span>
+                </div>
+                <div class="legend-item">
                     <span class="legend-dot" style="background: #facc15;"></span>
-                    <span>Accessible Parking Space</span>
+                    <span>Cambridge Accessible Parking Space</span>
                 </div>
                 <div class="legend-item">
                     <span class="legend-dot" style="background: #f97316;"></span>
@@ -88,7 +96,7 @@
                     <span class="legend-dot" style="background: #14b8a6;"></span>
                     <span>Detection Matched to Reference</span>
                 </div>
-                <p class="legend-note">Dashed lines distinguish inactive, private, or unmatched evidence without relying on color alone. Somerville remains street-name based. Medford partial permit rows are flagged as segment-specific. Cambridge meter polygons render as their own evidence layer and nearest-street summaries are not whole-street status.</p>
+                <p class="legend-note">Cambridge streets are intentionally neutral because a meter or accessible-space point does not determine the whole curb. Its official meter and accessible-space layers are enabled by default. Somerville remains street-name based; Medford partial permit rows remain segment-specific. Dashed lines indicate private or unmatched street-rule evidence.</p>
             </div>
 
             <div class="stats-container">

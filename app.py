@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-21-public-parking-v6"
+APP_VERSION = "2026-07-21-somerville-display-v7"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -72,6 +72,7 @@ IMAGERY_REFERENCE_MATCHES_PATH = (
     DATA_DIR / "processed" / "imagery" / "reference_matched_detections.geojson"
 )
 SOMERVILLE_RULE_SOURCE_URL = "https://s3.amazonaws.com/somervillema-live/s3fs-public/traffic-commission-rules-regulations.pdf"
+SOMERVILLE_STREET_SOURCE_URL = "https://data.somervillema.gov/"
 MEDFORD_RULE_SOURCE_URL = "https://www.medfordma.org/fs/resource-manager/view/c2132e77-d61f-40b1-9aa8-1add88772e3d"
 MEDFORD_STREET_SOURCE_URL = (
     "https://services1.arcgis.com/hGdibHYSPO59RG1h/arcgis/rest/services/"
@@ -194,7 +195,7 @@ def _classify_parking_access(properties: dict, rules: dict) -> tuple[str, str]:
     has_time_limited_segment = bool(street_rule.get("has_time_limited_segment"))
     meter_count = street_rule.get("meter_count_estimate")
 
-    if ownership in {"public", "state land"}:
+    if ownership == "public":
         if has_metered_segment:
             if meter_count is not None:
                 return (
@@ -353,6 +354,20 @@ def _parking_display_status(access: str) -> str:
         "resident_permit_time_restricted",
         "private_rules_apply",
     }:
+        return "restricted"
+    return "unknown"
+
+
+def _somerville_parking_display_status(access: str) -> str:
+    """Keep a citywide policy from masquerading as curb-level geometry.
+
+    Somerville's resident-permit baseline applies to City-controlled public
+    streets unless otherwise posted. The current rules locate many exceptions
+    only by street name, so public centerlines remain neutral until those curb
+    extents are mapped. Private-street ownership is safe to warn about on the
+    full centerline.
+    """
+    if access == "private_rules_apply":
         return "restricted"
     return "unknown"
 
@@ -587,11 +602,14 @@ def get_enriched_streets():
         props = dict(feature.get("properties", {}))
         props["MUNICIPALITY"] = "Somerville"
         props["DATA_SOURCE"] = props.get("DATA_SOURCE") or "somerville_streets_geojson"
+        ownership = str(props.get("OWNERSHIP") or "").strip().lower()
         street_key = _normalize_street_name(props.get("STNAME"))
         rule = rules.get(street_key, {})
         category, note = _classify_parking_access(props, rules)
         props["PARKING_ACCESS"] = category
-        props["PARKING_DISPLAY_STATUS"] = _parking_display_status(category)
+        props["PARKING_DISPLAY_STATUS"] = _somerville_parking_display_status(
+            category
+        )
         props["PARKING_NOTE"] = note
         props["PARKING_METER_COUNT_ESTIMATE"] = rule.get("meter_count_estimate")
         props["PARKING_METER_COUNT_CONFIDENCE"] = rule.get(
@@ -601,12 +619,36 @@ def get_enriched_streets():
         props["PARKING_HAS_TIME_LIMITED_SEGMENT"] = bool(
             rule.get("has_time_limited_segment")
         )
-        props["PARKING_RULE_SOURCE"] = "Somerville Traffic Commission Regulations"
-        props["PARKING_SOURCE_URL"] = SOMERVILLE_RULE_SOURCE_URL
+        if ownership == "public":
+            props["PARKING_RULE_SOURCE"] = (
+                "Somerville Traffic Commission Regulations"
+            )
+            props["PARKING_SOURCE_URL"] = SOMERVILLE_RULE_SOURCE_URL
+        elif ownership == "private":
+            props["PARKING_RULE_SOURCE"] = "Somerville GIS street ownership"
+            props["PARKING_SOURCE_URL"] = SOMERVILLE_STREET_SOURCE_URL
+        else:
+            props["PARKING_RULE_SOURCE"] = ""
+            props["PARKING_SOURCE_URL"] = ""
+        props["PARKING_RULE_MATCH_LEVEL"] = (
+            "street_name_partial_exceptions"
+            if ownership == "public"
+            and (
+                rule.get("has_metered_segment")
+                or rule.get("has_time_limited_segment")
+            )
+            else "citywide_baseline"
+            if ownership == "public"
+            else "street_ownership"
+            if ownership == "private"
+            else "none"
+        )
         props["PARKING_CONFIDENCE"] = (
-            rule.get("meter_count_confidence")
-            if rule.get("has_metered_segment")
-            else "street_name_only"
+            "citywide_baseline_not_curb_specific"
+            if ownership == "public"
+            else "street_ownership"
+            if ownership == "private"
+            else "none"
         )
         props["PARKING_DATA_UPDATED_AT"] = _generated_at(PARKING_RULES_PATH)
         updated_feature = dict(feature)

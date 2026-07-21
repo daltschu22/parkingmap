@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from collections import Counter
+
 from fastapi.testclient import TestClient
 
 from app import APP_VERSION, app
@@ -43,8 +45,8 @@ def test_stats_separate_cambridge_point_evidence_from_street_rules():
     assert stats["parking_access"]["unknown"] >= 2643
     assert stats["parking_access"].get("metered_segments_known", 0) == 0
     assert stats["parking_display"] == {
-        "restricted": 2414,
-        "unknown": 4673,
+        "restricted": 493,
+        "unknown": 6594,
     }
 
 
@@ -79,6 +81,24 @@ def test_cambridge_search_keeps_street_rules_unknown_and_evidence_separate():
     assert all(not row.get("PARKING_RULE_SOURCE") for row in cambridge)
     assert all(row.get("PARKING_EVIDENCE_SOURCE") for row in cambridge)
     assert any(row.get("PARKING_EVIDENCE") == "active_meter_spaces_nearby" for row in cambridge)
+
+
+def test_somerville_citywide_permit_baseline_does_not_turn_every_street_red():
+    response = client.get("/api/streets/search?q=Somerville")
+
+    assert response.status_code == 200
+    properties = [feature["properties"] for feature in response.json()["features"]]
+    somerville = [row for row in properties if row.get("MUNICIPALITY") == "Somerville"]
+    assert len(somerville) == 2299
+    assert Counter(row["PARKING_DISPLAY_STATUS"] for row in somerville) == {
+        "unknown": 2046,
+        "restricted": 253,
+    }
+    assert all(
+        row.get("OWNERSHIP") == "Private"
+        for row in somerville
+        if row["PARKING_DISPLAY_STATUS"] == "restricted"
+    )
 
 
 def test_search_can_disambiguate_a_street_with_municipality_terms():

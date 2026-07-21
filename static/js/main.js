@@ -34,6 +34,7 @@ let meterEvidenceLayer = null;
 let accessibleEvidenceLayer = null;
 let referenceSignLayer = null;
 let referenceMatchLayer = null;
+let evidenceKeyControl = null;
 const evidenceLoadPromises = new Map();
 const loadedEvidenceLayers = new Set();
 let hoveredStreetName = null;
@@ -709,9 +710,12 @@ async function loadStreets() {
     }
 }
 
+function isActiveMeter(properties = {}) {
+    return String(properties.STATUS || '').trim().toLowerCase() === 'in service';
+}
+
 function meterEvidenceStyle(properties = {}) {
-    const active = String(properties.STATUS || '').trim().toLowerCase() === 'in service';
-    const color = active ? COLORS.metered : COLORS.inactiveMeterEvidence;
+    const color = isActiveMeter(properties) ? COLORS.metered : COLORS.inactiveMeterEvidence;
     const detailed = map.getZoom() >= 15;
     return {
         color,
@@ -726,11 +730,12 @@ function evidenceLayerDefinitions() {
     return [
         {
             key: 'meters',
-            label: 'Cambridge meter spaces',
+            label: 'Active Cambridge meter spaces',
             url: '/api/parking-evidence/cambridge/meters',
             group: meterEvidenceLayer,
             options: {
                 renderer: hitRenderer,
+                filter: (feature) => isActiveMeter(feature.properties || {}),
                 style: (feature) => meterEvidenceStyle(feature.properties || {}),
                 onEachFeature: (feature, layer) => {
                     layer.bindPopup(createMeterEvidencePopup(feature.properties || {}));
@@ -802,6 +807,48 @@ function evidenceLayerDefinitions() {
 function syncEvidenceCheckbox(key, checked) {
     const input = document.querySelector(`[data-evidence-layer="${key}"]`);
     if (input) input.checked = checked;
+    updateMapEvidenceKey();
+}
+
+const MAP_EVIDENCE_KEY_ITEMS = {
+    meters: { color: COLORS.metered, label: 'Active meter space' },
+    accessible: { color: COLORS.accessibleEvidence, label: 'Accessible space' },
+    'reference-signs': { color: '#f97316', label: 'Mapillary sign' },
+    'reference-matches': { color: '#14b8a6', label: 'Matched detection' }
+};
+
+function updateMapEvidenceKey() {
+    const container = document.getElementById('map-evidence-key-items');
+    const control = document.querySelector('.map-evidence-key');
+    if (!container || !control) return;
+
+    const visibleItems = Object.entries(MAP_EVIDENCE_KEY_ITEMS).filter(([key]) => {
+        return document.querySelector(`[data-evidence-layer="${key}"]`)?.checked;
+    });
+    control.hidden = visibleItems.length === 0;
+    container.innerHTML = visibleItems.map(([, item]) => `
+        <span class="map-evidence-key-item">
+            <span class="map-evidence-key-dot" style="background: ${item.color};"></span>
+            ${escapeHtml(item.label)}
+        </span>
+    `).join('');
+}
+
+function setupMapEvidenceKey() {
+    evidenceKeyControl = L.control({ position: 'bottomleft' });
+    evidenceKeyControl.onAdd = () => {
+        const container = L.DomUtil.create('div', 'map-evidence-key');
+        container.setAttribute('role', 'note');
+        container.setAttribute('aria-label', 'Visible map marker meanings');
+        container.innerHTML = `
+            <strong>Map dots</strong>
+            <span id="map-evidence-key-items"></span>
+        `;
+        L.DomEvent.disableClickPropagation(container);
+        return container;
+    };
+    evidenceKeyControl.addTo(map);
+    updateMapEvidenceKey();
 }
 
 function addMeterCentroidMarkers(group, geoJsonLayer) {
@@ -810,20 +857,17 @@ function addMeterCentroidMarkers(group, geoJsonLayer) {
         const bounds = layer.getBounds();
         if (!bounds.isValid()) return;
         const properties = layer.feature?.properties || {};
-        const active = String(properties.STATUS || '').trim().toLowerCase() === 'in service';
-        const color = active ? COLORS.metered : COLORS.inactiveMeterEvidence;
+        const color = COLORS.metered;
         const marker = L.circleMarker(bounds.getCenter(), {
             renderer: hitRenderer,
-            radius: map.getZoom() >= 15 ? (active ? 3 : 2.5) : (active ? 1.5 : 1),
+            radius: map.getZoom() >= 15 ? 3 : 1.5,
             color,
             weight: map.getZoom() >= 15 ? 1 : 0.5,
             opacity: map.getZoom() >= 15 ? 0.95 : 0.55,
             fillColor: color,
             fillOpacity: map.getZoom() >= 15 ? 0.9 : 0.6
         }).bindPopup(createMeterEvidencePopup(properties)).addTo(group);
-        marker._parkingEvidenceKind = active
-            ? 'active-meter-centroid'
-            : 'inactive-meter-centroid';
+        marker._parkingEvidenceKind = 'active-meter-centroid';
     });
 }
 
@@ -832,8 +876,7 @@ function updateEvidenceRendering() {
 
     meterEvidenceLayer?.eachLayer((layer) => {
         if (layer._parkingEvidenceKind?.endsWith('meter-centroid')) {
-            const active = layer._parkingEvidenceKind === 'active-meter-centroid';
-            layer.setRadius(detailed ? (active ? 3 : 2.5) : (active ? 1.5 : 1));
+            layer.setRadius(detailed ? 3 : 1.5);
             layer.setStyle({
                 weight: detailed ? 1 : 0.5,
                 opacity: detailed ? 0.95 : 0.55,
@@ -895,6 +938,7 @@ function setupParkingEvidence() {
     accessibleEvidenceLayer = L.layerGroup();
     referenceSignLayer = L.layerGroup();
     referenceMatchLayer = L.layerGroup();
+    setupMapEvidenceKey();
 
     const definitions = evidenceLayerDefinitions();
     definitions.forEach((definition) => {
@@ -921,6 +965,7 @@ function setupParkingEvidence() {
             } else {
                 map.removeLayer(definition.group);
             }
+            updateMapEvidenceKey();
         });
     });
 

@@ -42,10 +42,10 @@
 
             <fieldset class="evidence-controls">
                 <legend>Evidence layers</legend>
-                <label><input type="checkbox" data-evidence-layer="meters" checked> Cambridge meter spaces</label>
-                <label><input type="checkbox" data-evidence-layer="accessible" checked> Cambridge accessible spaces</label>
-                <label><input type="checkbox" data-evidence-layer="reference-signs"> Mapillary sign references</label>
-                <label><input type="checkbox" data-evidence-layer="reference-matches"> Reference-matched detections</label>
+                <label><input type="checkbox" data-evidence-layer="meters" checked><span class="evidence-control-dot" style="background: #0ea5e9;"></span> Active Cambridge meter spaces</label>
+                <label><input type="checkbox" data-evidence-layer="accessible" checked><span class="evidence-control-dot" style="background: #facc15;"></span> Cambridge accessible spaces</label>
+                <label><input type="checkbox" data-evidence-layer="reference-signs"><span class="evidence-control-dot" style="background: #f97316;"></span> Mapillary sign references</label>
+                <label><input type="checkbox" data-evidence-layer="reference-matches"><span class="evidence-control-dot" style="background: #14b8a6;"></span> Reference-matched detections</label>
             </fieldset>
             
             <div class="legend">
@@ -66,30 +66,7 @@
                     <span class="legend-line legend-line--unknown"></span>
                     <span>Unknown — check posted signs</span>
                 </div>
-                <p class="legend-note">Colors show general access without a resident permit. A colored street may contain different curb rules; the exact signs and times always control.</p>
-                <details class="evidence-legend">
-                    <summary>Evidence marker key</summary>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #0ea5e9;"></span>
-                        <span>Active meter space</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #64748b;"></span>
-                        <span>Inactive, removed, or proposed meter</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #facc15;"></span>
-                        <span>Accessible parking space</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #f97316;"></span>
-                        <span>Mapillary sign reference</span>
-                    </div>
-                    <div class="legend-item">
-                        <span class="legend-dot" style="background: #14b8a6;"></span>
-                        <span>Reference-matched detection</span>
-                    </div>
-                </details>
+                <p class="legend-note">Colors show general access without a resident permit. A colored street may contain different curb rules; the exact signs and times always control. The visible dot key is shown directly on the map.</p>
             </div>
 
             <div class="stats-container">

@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-21-at-a-glance-v3"
+APP_VERSION = "2026-07-21-marker-key-v4"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -739,21 +739,40 @@ async def search_streets(q: str = ""):
     if not q:
         return _json_response(streets)
 
-    query_terms = q.casefold().split()
-    filtered_features = [
+    features = streets.get("features", [])
+    query = q.casefold().strip()
+    municipality_matches = [
         f
-        for f in streets.get("features", [])
-        if all(
-            term
-            in " ".join(
-                [
-                    str(f.get("properties", {}).get("MUNICIPALITY") or ""),
-                    str(f.get("properties", {}).get("STNAME") or ""),
-                ]
-            ).casefold()
-            for term in query_terms
-        )
+        for f in features
+        if str(f.get("properties", {}).get("MUNICIPALITY") or "").casefold()
+        == query
     ]
+    street_matches = [
+        f
+        for f in features
+        if query in str(f.get("properties", {}).get("STNAME") or "").casefold()
+    ]
+
+    if municipality_matches:
+        filtered_features = municipality_matches
+    elif street_matches:
+        filtered_features = street_matches
+    else:
+        query_terms = query.split()
+        filtered_features = [
+            f
+            for f in features
+            if all(
+                term
+                in " ".join(
+                    [
+                        str(f.get("properties", {}).get("MUNICIPALITY") or ""),
+                        str(f.get("properties", {}).get("STNAME") or ""),
+                    ]
+                ).casefold()
+                for term in query_terms
+            )
+        ]
 
     return _json_response({"type": "FeatureCollection", "features": filtered_features})
 

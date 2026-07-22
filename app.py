@@ -15,7 +15,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-21-somerville-display-v7"
+APP_VERSION = "2026-07-22-driver-ui-v8"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -91,7 +91,7 @@ async def add_response_headers(request: Request, call_next):
     response.headers["Referrer-Policy"] = "strict-origin-when-cross-origin"
     response.headers["X-Frame-Options"] = "DENY"
     response.headers["Permissions-Policy"] = (
-        "camera=(), geolocation=(), microphone=(), payment=()"
+        "camera=(), geolocation=(self), microphone=(), payment=()"
     )
     response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
     response.headers["Content-Security-Policy"] = (

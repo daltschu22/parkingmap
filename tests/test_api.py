@@ -17,6 +17,7 @@ def test_health_is_lightweight_and_hardened():
     assert response.json() == {"status": "ok", "app_version": APP_VERSION}
     assert response.headers["x-content-type-options"] == "nosniff"
     assert response.headers["x-frame-options"] == "DENY"
+    assert "geolocation=(self)" in response.headers["permissions-policy"]
     assert "default-src 'self'" in response.headers["content-security-policy"]
 
 
@@ -139,5 +140,7 @@ def test_public_facilities_are_exposed_and_experimental_imagery_is_not_in_ui():
         "Somerville",
     }
     assert "Public-access lots and garages" in page.text
+    assert "Use my location" in page.text
+    assert "leaflet.markercluster@1.5.3" in page.text
     assert "Mapillary sign references" not in page.text
     assert "Reference-matched detections" not in page.text

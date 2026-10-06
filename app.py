@@ -96,7 +96,7 @@ async def add_response_headers(request: Request, call_next):
     response.headers["Cross-Origin-Opener-Policy"] = "same-origin"
     response.headers["Content-Security-Policy"] = (
         "default-src 'self'; "
-        "script-src 'self' https://unpkg.com; "
+        "script-src 'self' https://unpkg.com https://static.cloudflareinsights.com; "
         "style-src 'self' 'unsafe-inline' https://unpkg.com; "
         "img-src 'self' data: blob: https://unpkg.com https://*.basemaps.cartocdn.com "
         "https://server.arcgisonline.com; "

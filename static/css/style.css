@@ -764,6 +764,10 @@ a:focus-visible {
     display: none;
 }
 
+.dark-street-tiles {
+    filter: invert(1) hue-rotate(180deg) saturate(0.65);
+}
+
 .leaflet-container {
     background: #d9e1e8;
     font: inherit;

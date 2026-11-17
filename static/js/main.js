@@ -7,15 +7,15 @@ const map = L.map('map', { preferCanvas: true, zoomControl: true })
 // A forgiving hit target keeps thin street lines easy to tap without making them look heavy.
 const hitRenderer = L.canvas({ tolerance: 10 });
 
-const lightBaseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
+const streetTileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+const streetTileOptions = {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
     maxZoom: 19
-});
-const darkBaseLayer = L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-    subdomains: 'abcd',
-    maxZoom: 19
+};
+const lightBaseLayer = L.tileLayer(streetTileUrl, streetTileOptions);
+const darkBaseLayer = L.tileLayer(streetTileUrl, {
+    ...streetTileOptions,
+    className: 'dark-street-tiles'
 });
 const satelliteBaseLayer = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri',

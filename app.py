@@ -17,7 +17,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-11-17-segment-map-v1"
+APP_VERSION = "2026-11-17-segment-map-v2"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -100,7 +100,7 @@ async def add_response_headers(request: Request, call_next):
         "default-src 'self'; "
         "script-src 'self' https://unpkg.com https://static.cloudflareinsights.com; "
         "style-src 'self' 'unsafe-inline' https://unpkg.com; "
-        "img-src 'self' data: blob: https://unpkg.com https://*.basemaps.cartocdn.com "
+        "img-src 'self' data: blob: https://unpkg.com https://tile.openstreetmap.org "
         "https://server.arcgisonline.com; "
         "connect-src 'self'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
     )

@@ -104,47 +104,97 @@ function setPanelExpanded(expanded) {
 }
 
 function setupSheetToggle() {
+    const panel = document.getElementById('app-panel');
     const toggle = document.getElementById('sheet-toggle');
     const results = document.getElementById('sidebar-body');
-    let start = null;
-    let dragged = false;
+    let gesture = null;
+    let suppressClick = false;
+
+    function start(id, x, y) {
+        gesture = {id, x, y, expanded: !panel.classList.contains('sheet-collapsed'), dragging: false};
+    }
+
+    function move(x, y, fromList = false) {
+        const dy = y - gesture.y;
+        if (!gesture.dragging) {
+            if (Math.abs(dy) < 6) return false;
+            if (Math.abs(dy) <= Math.abs(x - gesture.x) || (fromList && (dy < 0 || results.scrollTop > 0))) {
+                gesture = null;
+                return false;
+            }
+            // Measure both resting positions once. The search header can wrap on narrow phones.
+            gesture.height = panel.getBoundingClientRect().height;
+            panel.classList.add('sheet-dragging', 'sheet-collapsed');
+            gesture.min = panel.offsetHeight;
+            panel.classList.remove('sheet-collapsed');
+            gesture.max = Math.max(gesture.min, panel.offsetHeight);
+            gesture.dragging = true;
+        }
+        const height = Math.max(gesture.min, Math.min(gesture.max, gesture.height - dy));
+        panel.style.setProperty('--drag-height', height + 'px');
+        return true;
+    }
+
+    function finish(y) {
+        if (gesture?.dragging) {
+            const dy = y === undefined ? 0 : y - gesture.y;
+            const expanded = Math.abs(dy) >= 28 ? dy < 0 : gesture.expanded;
+            panel.style.removeProperty('--drag-height');
+            panel.classList.remove('sheet-dragging');
+            setPanelExpanded(expanded);
+            // A held drag may already have reached its final size before release.
+            requestAnimationFrame(renderVisitorChoices);
+        }
+        gesture = null;
+    }
+
     toggle.addEventListener('pointerdown', event => {
-        if (!event.isPrimary || event.button !== 0) return;
-        start = {id: event.pointerId, x: event.clientX, y: event.clientY};
-        dragged = false;
+        if (!isMobile() || !event.isPrimary || event.button !== 0 || gesture) return;
+        suppressClick = false;
+        start(event.pointerId, event.clientX, event.clientY);
         toggle.setPointerCapture(event.pointerId);
     });
-    toggle.addEventListener('pointerup', event => {
-        if (start?.id !== event.pointerId) return;
-        const dx = Math.abs(event.clientX - start.x);
-        const dy = event.clientY - start.y;
-        dragged = Math.max(dx, Math.abs(dy)) > 10;
-        if (Math.abs(dy) >= 28 && Math.abs(dy) > dx) setPanelExpanded(dy < 0);
-        start = null;
+    toggle.addEventListener('pointermove', event => {
+        if (gesture?.id !== event.pointerId) return;
+        const sideways = Math.abs(event.clientX - gesture.x) > 6;
+        if (move(event.clientX, event.clientY) || sideways) suppressClick = true;
     });
-    toggle.addEventListener('lostpointercapture', () => { start = null; });
+    toggle.addEventListener('pointerup', event => {
+        if (gesture?.id === event.pointerId) finish(event.clientY);
+    });
+    toggle.addEventListener('lostpointercapture', event => {
+        if (gesture?.id === event.pointerId) finish();
+    });
     toggle.addEventListener('click', event => {
-        if (!dragged || event.detail === 0) setPanelExpanded(toggle.getAttribute('aria-expanded') !== 'true');
-        dragged = false;
+        if (!suppressClick || event.detail === 0) setPanelExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+        suppressClick = false;
     });
 
-    // Pulling down from the top of the list also dismisses the sheet. A swipe
-    // that started partway down the list remains an ordinary scroll.
-    let pull = null;
+    // Let the results scroll normally unless the user pulls down from the top.
     results.addEventListener('touchstart', event => {
-        pull = isMobile() && results.scrollTop <= 0 && event.touches.length === 1 ? event.touches[0] : null;
-    }, {passive: true});
-    results.addEventListener('touchcancel', () => { pull = null; }, {passive: true});
-    results.addEventListener('touchend', event => {
-        const end = event.changedTouches[0];
-        if (pull && end.identifier === pull.identifier && results.scrollTop <= 0) {
-            const dy = end.clientY - pull.clientY;
-            if (dy > 55 && dy > Math.abs(end.clientX - pull.clientX)) {
-                if (event.cancelable) event.preventDefault();
-                setPanelExpanded(false);
-            }
+        if (event.touches.length !== 1) {
+            finish();
+        } else if (isMobile() && results.scrollTop <= 0 && !gesture) {
+            const touch = event.touches[0];
+            start(touch.identifier, touch.clientX, touch.clientY);
         }
-        pull = null;
+    }, {passive: true});
+    results.addEventListener('touchmove', event => {
+        const touch = event.changedTouches[0];
+        if (gesture?.id !== touch.identifier) return;
+        if (!event.cancelable) finish();
+        else if (move(touch.clientX, touch.clientY, true)) event.preventDefault();
+    }, {passive: false});
+    results.addEventListener('touchend', event => {
+        const touch = event.changedTouches[0];
+        if (gesture?.id !== touch.identifier) return;
+        if (gesture.dragging && event.cancelable) event.preventDefault();
+        finish(touch.clientY);
+    }, {passive: false});
+    results.addEventListener('touchcancel', () => finish(), {passive: true});
+
+    map.on('click', () => {
+        if (isMobile() && !panel.classList.contains('sheet-collapsed')) setPanelExpanded(false);
     });
 }
 
@@ -674,6 +724,7 @@ function loadStreets() {
     if (allStreetsLayer || streetLoad) return streetLoad;
     streetLoad = fetchJson('/api/streets?view=map').then(data => {
         allStreetsLayer = L.geoJSON(data, {
+            bubblingMouseEvents: false,
             style: getStreetStyle,
             renderer: hitRenderer,
             onEachFeature: onEachStreet
@@ -710,6 +761,7 @@ function makeEvidenceDefinitions() {
             url: '/api/parking-evidence/cambridge/meters?active_only=true',
             group: meterEvidenceLayer,
             options: {
+                bubblingMouseEvents: false,
                 renderer: hitRenderer,
                 style: { color: COLORS.metered, weight: 1, opacity: 0.9, fillOpacity: 0.52 },
                 onEachFeature: (feature, layer) => layer.on('click', () => showMeterDetails(feature.properties || {}))
@@ -1058,11 +1110,9 @@ function setupControls() {
 document.addEventListener('DOMContentLoaded', () => {
     setupControls();
     setPanelExpanded(!isMobile());
-    const panel = document.getElementById('app-panel');
     new ResizeObserver(() => {
-        document.documentElement.style.setProperty('--sheet-height', panel.offsetHeight + 'px');
         map.invalidateSize({animate: false, debounceMoveend: true});
-    }).observe(panel);
+    }).observe(map.getContainer());
     setupParkingEvidence();
     void loadStats();
 });

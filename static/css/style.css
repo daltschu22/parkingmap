@@ -920,20 +920,17 @@ a:focus-visible {
 
 @media (max-width: 860px) {
     .app-container {
-        display: block;
+        flex-direction: column-reverse;
     }
 
     .map-container {
-        position: fixed;
-        inset: 0;
+        min-height: 0;
+        height: auto;
     }
 
     .sidebar {
-        position: fixed;
-        right: 0;
-        bottom: 0;
-        left: 0;
         z-index: 1100;
+        flex: none;
         width: 100%;
         min-width: 0;
         height: auto;
@@ -946,7 +943,12 @@ a:focus-visible {
     }
 
     .sidebar.sheet-collapsed {
-        max-height: 6.5rem;
+        max-height: 11.5rem;
+    }
+
+    .sidebar.sheet-dragging {
+        height: var(--drag-height, auto);
+        transition: none;
     }
 
     .sidebar-header {
@@ -993,6 +995,8 @@ a:focus-visible {
 
     .sidebar.sheet-collapsed .app-status,
     .sidebar.sheet-collapsed .search-results,
+    .sidebar.sheet-collapsed #destination-context,
+    .sidebar.sheet-collapsed #arrival-form,
     .sidebar.sheet-collapsed .sidebar-body {
         display: none;
     }
@@ -1050,7 +1054,7 @@ a:focus-visible {
     }
 
     .leaflet-bottom {
-        bottom: 6.6rem;
+        bottom: 0;
         transition: opacity 150ms ease;
     }
 
@@ -1197,12 +1201,6 @@ a:focus-visible {
     background: #192a40; color: white; font: bold 22px/1 system-ui; box-shadow: 0 1px 6px #0008;
 }
 #search-results { max-height: min(34vh, 18rem); overflow-y: auto; }
-@media (max-width: 860px) {
-    .sidebar.sheet-collapsed { max-height: 9rem; }
-    .sidebar.sheet-collapsed #destination-context { display: none; }
-    .leaflet-bottom { bottom: 9rem; }
-    .map-panel-button { bottom: 9.6rem; }
-}
 
 @media (max-width: 560px) {
     .parking-filter-bar {
@@ -1221,8 +1219,6 @@ a:focus-visible {
     bottom: auto; top: -5px; transform: rotate(225deg);
 }
 @media (max-width: 860px) {
-    .map-container { bottom: var(--sheet-height, 8rem); height: auto; }
-    .leaflet-bottom { bottom: 0; }
     .map-panel-button { bottom: 0.9rem; }
 }
 #arrival-editor { margin-top: 0.5rem; }
@@ -1236,6 +1232,3 @@ a:focus-visible {
 #arrival-form input { width: 100%; color-scheme: dark; }
 #arrival-form button { cursor: pointer; }
 #arrival-form [type=submit] { background: #075985; color: white; }
-@media (max-width: 860px) {
-    .sidebar.sheet-collapsed { max-height: 11.5rem; }
-}

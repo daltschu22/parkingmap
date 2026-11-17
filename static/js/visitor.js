@@ -251,12 +251,12 @@ function drawVisitorMap(inView, local) {
         const point = mapPoint(option);
         const select = () => openParkingOption(option);
         for (const trace of option.section_traces || []) {
-            L.polyline(trace, {renderer: visitorRenderer, color, weight: detail ? 6 : 4,
+            L.polyline(trace, {renderer: visitorRenderer, bubblingMouseEvents: false, color, weight: detail ? 6 : 4,
                 opacity: 0.95, lineCap: 'butt'}).on('click', select).addTo(visitorPins);
         }
         const reference = Boolean(option.anchor && !option.section_traces);
         if (!option.section_traces || !detail) {
-            L.circleMarker(point, {renderer: visitorRenderer, radius: detail ? 6 : 4,
+            L.circleMarker(point, {renderer: visitorRenderer, bubblingMouseEvents: false, radius: detail ? 6 : 4,
                 color: reference ? color : '#fff', weight: reference ? 3 : 1.5,
                 fillColor: reference ? '#fff' : color, fillOpacity: 1
             }).on('click', select).addTo(visitorPins);
@@ -415,7 +415,10 @@ document.addEventListener('DOMContentLoaded', async () => {
         visitorChoices = await fetchJson('/api/visitor-parking');
         visitorLoaded = true;
         renderVisitorChoices();
-        map.on('moveend resize', renderVisitorChoices);
+        const panel = document.getElementById('app-panel');
+        map.on('moveend', () => {
+            if (!panel.classList.contains('sheet-dragging')) renderVisitorChoices();
+        });
         // Update at time boundaries without replacing the focused result every minute.
         function eligibleFlags() {
             const local = arrivalClock();

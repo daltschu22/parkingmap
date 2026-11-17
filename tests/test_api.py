@@ -39,7 +39,8 @@ def test_stats_separate_cambridge_point_evidence_from_street_rules():
         "cambridge_meter_spaces": 3310,
         "cambridge_active_meter_spaces": 2562,
         "cambridge_accessible_spaces": 154,
-        "public_parking_facilities": 31,
+        "public_parking_facilities": 32,
+        "medford_public_parking_facilities": 1,
         "cambridge_public_parking_facilities": 11,
         "somerville_public_parking_facilities": 20,
     }
@@ -134,8 +135,9 @@ def test_public_facilities_are_exposed_and_experimental_imagery_is_not_in_ui():
 
     assert facilities.status_code == 200
     features = facilities.json()["features"]
-    assert len(features) == 31
+    assert len(features) == 32
     assert {feature["properties"]["MUNICIPALITY"] for feature in features} == {
+        "Medford",
         "Cambridge",
         "Somerville",
     }

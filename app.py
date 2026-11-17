@@ -9,6 +9,7 @@ import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
+from destinations import normalize_street_name as _normalize_street_name, search_destinations
 from visitor_parking import cambridge_options, facility_options, somerville_options
 
 from fastapi import FastAPI, HTTPException, Query, Request
@@ -19,7 +20,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-11-17-visitor-map-v1"
+APP_VERSION = "2026-11-17-destinations-v1"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -146,48 +147,6 @@ def _generated_at(path: Path) -> str:
         or (content.get("properties") or {}).get("generated_at_utc")
         or ""
     )
-
-
-def _normalize_street_name(value: str | None) -> str:
-    """Normalize street names for loose matching across GIS and PDF text."""
-    if not value:
-        return ""
-
-    text = re.sub(r"[^A-Za-z0-9 ]+", " ", value.upper())
-    text = re.sub(r"\s+", " ", text).strip()
-    if not text:
-        return ""
-
-    token_map = {
-        "STREET": "ST",
-        "ST": "ST",
-        "AVENUE": "AVE",
-        "AVE": "AVE",
-        "ROAD": "RD",
-        "RD": "RD",
-        "DRIVE": "DR",
-        "DR": "DR",
-        "PLACE": "PL",
-        "PL": "PL",
-        "COURT": "CT",
-        "CT": "CT",
-        "TERRACE": "TER",
-        "TER": "TER",
-        "PARKWAY": "PKWY",
-        "PKWY": "PKWY",
-        "SQUARE": "SQ",
-        "SQ": "SQ",
-        "HIGHWAY": "HWY",
-        "HWY": "HWY",
-        "LANE": "LN",
-        "LN": "LN",
-        "BOULEVARD": "BLVD",
-        "BLVD": "BLVD",
-        "CIRCLE": "CIR",
-        "CIR": "CIR",
-    }
-    tokens = [token_map.get(token, token) for token in text.split()]
-    return " ".join(tokens)
 
 
 def _classify_parking_access(properties: dict, rules: dict) -> tuple[str, str]:
@@ -914,6 +873,11 @@ def _visitor_options() -> bytes:
     ])
 
 
+@app.get("/api/destinations")
+def find_destinations(q: str = Query(min_length=2, max_length=120)):
+    return {"results": search_destinations(q, load_public_parking_facilities()["features"])}
+
+
 @app.get("/api/visitor-parking")
 async def get_visitor_parking():
     return _encoded_json_response(_visitor_options())
@@ -1089,6 +1053,10 @@ async def get_stats():
             1
             for feature in public_facilities
             if feature.get("properties", {}).get("MUNICIPALITY") == "Cambridge"
+        ),
+        "medford_public_parking_facilities": sum(
+            1 for feature in public_facilities
+            if feature.get("properties", {}).get("MUNICIPALITY") == "Medford"
         ),
         "somerville_public_parking_facilities": sum(
             1

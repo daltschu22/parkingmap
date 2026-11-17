@@ -819,7 +819,7 @@ function renderSearchResults(results) {
     });
 }
 
-async function searchStreets(query) {
+async function searchStreets(query, fromDestination = false) {
     const requestVersion = ++searchRequestVersion;
     try {
         setAppStatus(`Searching for ${query}…`);
@@ -828,13 +828,15 @@ async function searchStreets(query) {
         selectedStreetLayer = null;
         selectedStreetName = null;
         showEmptyState();
+        if (fromDestination) document.getElementById('empty-state').hidden = true;
         const data = await fetchJson(`/api/streets/search?view=summary&q=${encodeURIComponent(query)}`);
         if (requestVersion !== searchRequestVersion) return;
         const results = data.results.sort((a, b) => a.municipality.localeCompare(b.municipality) || a.name.localeCompare(b.name));
         if (!results.length) {
             refreshSelectionStyles();
             renderSearchResults([]);
-            setAppStatus(`No streets found matching “${query}”.`, true);
+            setAppStatus(fromDestination ? 'No destination found. Try a street number and city in Cambridge, Medford, or Somerville.' :
+                `No streets found matching “${query}”.`, true);
             if (isMobile()) setPanelExpanded(true);
             return;
         }
@@ -878,6 +880,7 @@ async function loadStats() {
 }
 
 function clearSearch({ resetView = true } = {}) {
+    clearDestination();
     searchRequestVersion += 1;
     setAppStatus('');
     resetHover();
@@ -897,6 +900,7 @@ function clearSearch({ resetView = true } = {}) {
 }
 
 function locateUser() {
+    clearSearch({ resetView: false });
     const button = document.getElementById('locate-btn');
     button?.setAttribute('aria-busy', 'true');
     setAppStatus('Finding your location…');
@@ -933,10 +937,15 @@ function setupControls() {
     const clearButton = document.getElementById('clear-search-btn');
     document.getElementById('search-btn')?.addEventListener('click', () => {
         const query = input?.value.trim() || '';
-        if (query) void searchStreets(query);
+        if (query) {
+            if (searchMode === 'street') void searchStreets(query);
+            else void searchForDestination(query);
+        }
         else input?.focus();
     });
     input?.addEventListener('input', () => {
+        searchRequestVersion++;
+        document.getElementById('search-results').hidden = true;
         if (clearButton) clearButton.hidden = !input.value;
     });
     input?.addEventListener('keydown', (event) => {

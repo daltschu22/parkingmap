@@ -483,6 +483,59 @@
       "enabled": false,
       "ingestion_status": "monitor_for_public_api",
       "notes": "The city describes an authoritative curb data standard and future public API. Do not depend on it until the API is publicly verifiable."
+    },
+    {
+      "id": "massgis_destination_address_points",
+      "municipality": "regional",
+      "title": "MassGIS Master Address Points",
+      "url": "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/MassGIS_Master_Address_Points/FeatureServer/0",
+      "destination": "data/raw/regional/massgis-address-layer.json",
+      "type": "json",
+      "category": "address_points",
+      "enabled": false,
+      "ingestion_status": "implemented",
+      "notes": "Local destination lookup and reference points for numbered Somerville regulations.",
+      "managed_by": "scripts/build_destinations.py",
+      "refresh_command": "python3 scripts/build_destinations.py"
+    },
+    {
+      "id": "mbta_destination_stations",
+      "municipality": "regional",
+      "title": "MBTA station locations",
+      "url": "https://api-v3.mbta.com/stops?filter%5Blocation_type%5D=1",
+      "destination": "data/raw/regional/mbta-stations.json",
+      "type": "json",
+      "category": "destinations",
+      "enabled": false,
+      "ingestion_status": "implemented",
+      "notes": "Named station destinations in the three covered municipalities.",
+      "managed_by": "scripts/build_destinations.py",
+      "refresh_command": "python3 scripts/build_destinations.py"
+    },
+    {
+      "id": "somerville_curb_profile",
+      "municipality": "somerville",
+      "title": "Citywide Parking and Curb Use Study, Curb Profile",
+      "url": "https://voice.somervillema.gov/parking-study/documents",
+      "destination": "data/raw/somerville/curb-study.html",
+      "type": "html",
+      "category": "curb_inventory",
+      "enabled": false,
+      "ingestion_status": "historical_cross_check",
+      "notes": "Citywide field inventory and public maps. Verify historical observations against subsequent Traffic Commission regulations before using them as current rules."
+    },
+    {
+      "id": "medford_square_visitor_parking",
+      "municipality": "medford",
+      "title": "Parking in Medford Square",
+      "url": "https://www.medfordma.org/departments/parking/parking-in-medford-square",
+      "destination": "data/raw/medford/medford-square-parking.txt",
+      "type": "html",
+      "category": "visitor_parking",
+      "enabled": false,
+      "ingestion_status": "implemented",
+      "managed_by": "build_public_parking_facilities.py",
+      "notes": "City guide and linked Clippership Drive lot pin. The city engineering map distinguishes municipal, business and commuter sections."
     }
   ]
 }

@@ -81,11 +81,11 @@ def test_public_parking_facilities_have_valid_shared_grain_and_sources():
     features = facilities["features"]
     ids = [feature["properties"]["FACILITY_ID"] for feature in features]
 
-    assert len(features) == 31
+    assert len(features) == 32
     assert len(ids) == len(set(ids))
     assert Counter(
         feature["properties"]["MUNICIPALITY"] for feature in features
-    ) == {"Cambridge": 11, "Somerville": 20}
+    ) == {"Cambridge": 11, "Somerville": 20, "Medford": 1}
     assert Counter(
         feature["properties"]["FACILITY_TYPE"]
         for feature in features

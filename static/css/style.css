@@ -1141,3 +1141,23 @@ a:focus-visible {
     .leaflet-top.leaflet-left { top: max(3.1rem, calc(env(safe-area-inset-top) + 3rem)); }
     .parking-filter-bar { right: auto; left: 50%; transform: translateX(-50%); }
 }
+
+.search-modes { display: flex; gap: 0.4rem; margin-bottom: 0.45rem; }
+.search-modes button, #center-destination {
+    border: 0; background: transparent; color: var(--muted); font: inherit;
+    font-size: 0.8rem; cursor: pointer; text-align: left;
+}
+.search-modes button { min-height: 1.9rem; padding: 0.24rem 0.65rem; border-radius: 0.4rem; }
+.search-modes button[aria-pressed=true] { color: var(--ink); background: var(--surface-hover); }
+#center-destination { color: var(--accent); padding: 0.5rem 0 0.1rem; }
+.destination-marker {
+    display: grid; place-items: center; border: 2px solid white; border-radius: 50%;
+    background: #192a40; color: white; font: bold 22px/1 system-ui; box-shadow: 0 1px 6px #0008;
+}
+#search-results { max-height: min(34vh, 18rem); overflow-y: auto; }
+@media (max-width: 860px) {
+    .sidebar.sheet-collapsed { max-height: 9rem; }
+    .sidebar.sheet-collapsed #destination-context { display: none; }
+    .leaflet-bottom { bottom: 9rem; }
+    .map-panel-button { bottom: 9.6rem; }
+}

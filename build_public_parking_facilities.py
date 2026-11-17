@@ -49,6 +49,9 @@ CAMBRIDGE_SOURCE_URL = (
     "traffic_municipalparkinglots"
 )
 CAMBRIDGE_DETAILS_URL = "https://www.cambridgema.gov/iwantto/parkacarincambridge"
+MEDFORD_SQUARE_URL = "https://www.medfordma.org/departments/parking/parking-in-medford-square"
+MEDFORD_LOT_PIN = "https://maps.app.goo.gl/hJgGM8vwts6oacF48"
+MEDFORD_SQUARE_RAW = BASE_DIR / "data/raw/medford/medford-square-parking.txt"
 
 SOMERVILLE_PARKING_PAGE_URL = (
     "https://www.somervillema.gov/departments/parking-department"
@@ -653,6 +656,38 @@ def parse_assembly_facilities(payload: object) -> list[dict]:
     return features
 
 
+def fetch_medford_square():
+    content, metadata = fetch_bytes(MEDFORD_SQUARE_URL)
+    page = visible_html_text(content)
+    if not all(part in page for part in ("Clippership Drive Lot", "81 Riverside Ave")) or MEDFORD_LOT_PIN.encode() not in content:
+        raise SourceValidationError("Medford Square's published lot or map pin has changed")
+    evidence = (page + "\nCity-linked lot pin: " + MEDFORD_LOT_PIN + "\n").encode()
+    metadata = preserved_metadata(metadata, evidence, "visible-text-and-linked-pin")
+    feature = {
+        "type": "Feature",
+        # Place coordinates of the city's linked lot pin. The map viewport has a different center.
+        "geometry": {"type": "Point", "coordinates": [-71.1066163, 42.416756]},
+        "properties": {
+            "FACILITY_ID": "medford:clippership-drive",
+            "MUNICIPALITY": "Medford",
+            "NAME": "Clippership Drive Lot",
+            "FACILITY_TYPE": "Municipal Parking Lot",
+            "ADDRESS": "81 Riverside Avenue",
+            "OWNERSHIP_TYPE": "Municipal and private sections",
+            "OPERATOR": "City of Medford (municipal spaces)",
+            "PUBLIC_ACCESS": "Public parking in signed municipal spaces",
+            "PARKING_REGULATIONS": "Use signed public spaces. Check the posted rate and time limit.",
+            "SPECIAL_RESTRICTIONS": "The city lot map also identifies business, commuter and privately owned areas.",
+            "SOURCE_TITLE": "City of Medford, Parking in Medford Square",
+            "SOURCE_URL": MEDFORD_SQUARE_URL,
+            "DETAILS_URL": MEDFORD_SQUARE_URL,
+            "SOURCE_FORMAT": "city-guide-and-linked-lot-pin",
+            "SOURCE_CONFIDENCE": "high",
+        },
+    }
+    return feature, evidence, metadata
+
+
 def validate_combined(features: list[dict]) -> None:
     ids = [feature["properties"]["FACILITY_ID"] for feature in features]
     if len(ids) != len(set(ids)):
@@ -738,7 +773,8 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
         for key, (_, metadata) in assembly_details.items()
     }
     somerville_features = somerville_municipal_features + assembly_features
-    features = cambridge_features + somerville_features
+    medford_feature, medford_evidence, medford_metadata = fetch_medford_square()
+    features = cambridge_features + somerville_features + [medford_feature]
     validate_combined(features)
 
     now = datetime.now(timezone.utc).isoformat()
@@ -750,8 +786,10 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
             "municipality_counts": {
                 "Cambridge": len(cambridge_features),
                 "Somerville": len(somerville_features),
+                "Medford": 1,
             },
             "sources": {
+                "medford_square": medford_metadata,
                 "cambridge": {
                     **cambridge_metadata,
                     "authority_url": CAMBRIDGE_SOURCE_URL,
@@ -817,6 +855,7 @@ def build() -> tuple[dict, list[tuple[Path, bytes, dict]]]:
         **assembly_markers_preserved_metadata,
     }
     artifacts = [
+        (MEDFORD_SQUARE_RAW, medford_evidence, medford_metadata),
         (
             CAMBRIDGE_DETAILS_RAW_PATH,
             cambridge_details_content,

@@ -15,7 +15,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Medford street geometry is loaded from MassGIS/MassDOT Roads.
 - Medford resident-permit rules are derived from the official resident permit street PDF.
 - Cambridge street geometry, metered parking spaces, and public accessible parking spaces are loaded from Cambridge GIS.
-- Public parking facilities include 13 Somerville municipal lots, 6 operator-published Assembly Row visitor garages, the Assembly Marketplace customer lot, and 9 Cambridge municipal lots plus 2 municipal garages.
+- Public parking facilities include 13 Somerville municipal lots, 6 operator-published Assembly Row visitor garages, the Assembly Marketplace customer lot, 9 Cambridge municipal lots plus 2 municipal garages, and the city-recommended Clippership Drive Lot in Medford Square.
 - Cambridge streets render as a neutral network because curb-level rules are not yet mapped. Official active-meter polygons and accessible-space points are enabled as separate evidence layers by default and nearest-matched only for sidebar context, never whole-street status. Inactive, removed, and proposed meter records remain available to the data pipeline but are not drawn as default map dots.
 - Street lines are red only where localized permit/private/restricted evidence safely applies to that segment, and gray where the exact curb remains unresolved. Somerville's citywide resident-permit baseline appears in click/search answers instead of recoloring every public centerline; partial metered or time-limited exceptions never recolor an entire street. Exact active meter polygons remain blue.
 - Search zooms to the matching street. For streets with multiple blocks, select a block to see its details. Mixed restrictions are identified in the search answer.
@@ -24,7 +24,8 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 ## Features
 
 - Interactive map with Somerville, Medford, and Cambridge streets
-- Search by street, municipality, or both (for example, `Otis St Cambridge`)
+- Find visitor parking near an address, a named building, or an MBTA station. Destination search uses local MassGIS and MBTA data for Cambridge, Somerville, and Medford. Distances are straight-line estimates from the selected destination. Filters and map panning preserve it.
+- Choose **Street rules** to search by street, municipality, or both (for example, `Otis St Cambridge`)
 - Search or click a street to get a plain-language parking answer before the technical source details
 - Responsive street and evidence styling that stays legible at overview and curb-level zooms
 - Clearly labeled `P` markers for municipal and operator-backed public-access lots and garages, with ownership, operator, hours, capacity, accessible/EV information, and special restrictions where published
@@ -46,6 +47,8 @@ uv run python -m parkingmap
 ```
 
 Then open http://localhost:8000 in your browser.
+
+To refresh the local destination lookup, run `python3 scripts/build_destinations.py`. The compact snapshot retains public address labels, building names, ZIP codes, coordinates, station records and source URLs. Unit-level records are consolidated by civic address. The app also uses unique address matches to locate Somerville rules that specify a house number. Each such pin marks the reference address and links to the regulation.
 
 To fetch raw public source files for Medford:
 

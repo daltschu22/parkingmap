@@ -1,11 +1,12 @@
 {
   "type": "FeatureCollection",
   "properties": {
-    "generated_at_utc": "2026-07-21T22:07:13.175141+00:00",
-    "feature_count": 31,
+    "generated_at_utc": "2026-11-17T20:08:01.907729+00:00",
+    "feature_count": 32,
     "municipality_counts": {
       "Cambridge": 11,
-      "Somerville": 20
+      "Somerville": 20,
+      "Medford": 1
     },
     "sources": {
       "cambridge": {
@@ -169,6 +170,19 @@
           "source_sha256": "b7f45144ff02c93a5845883a507db33262ccd2cc1f72f92d9a4679ae848a0c4b",
           "preservation": "visible-text-snapshot"
         }
+      },
+      "medford_square": {
+        "url": "https://www.medfordma.org/departments/parking/parking-in-medford-square",
+        "final_url": "https://www.medfordma.org/departments/parking/parking-in-medford-square",
+        "fetched_at_utc": "2026-11-17T20:08:01.882989+00:00",
+        "content_type": "text/html; charset=utf-8",
+        "last_modified": null,
+        "etag": null,
+        "bytes": 15200,
+        "sha256": "b09e1223734273e3cf6d8be799c718320ec6ac341b8e92e58857bd7b59297be6",
+        "source_bytes": 77638,
+        "source_sha256": "b89200994781af1586b770e4b5e030d94e4b2afe2815237af12aeda0069d6023",
+        "preservation": "visible-text-and-linked-pin"
       }
     },
     "note": "Facilities are public parking locations, not a promise that a space is currently available. Posted rates, hours, permits, temporary closures, and other restrictions control."
@@ -1143,6 +1157,33 @@
         "SOURCE_URL": "https://www.assemblyparking.com/",
         "DETAILS_URL": "https://www.assemblyparking.com/where-to-park/great-river-garage/",
         "SOURCE_FORMAT": "operator-html-and-map-json",
+        "SOURCE_CONFIDENCE": "high"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -71.1066163,
+          42.416756
+        ]
+      },
+      "properties": {
+        "FACILITY_ID": "medford:clippership-drive",
+        "MUNICIPALITY": "Medford",
+        "NAME": "Clippership Drive Lot",
+        "FACILITY_TYPE": "Municipal Parking Lot",
+        "ADDRESS": "81 Riverside Avenue",
+        "OWNERSHIP_TYPE": "Municipal and private sections",
+        "OPERATOR": "City of Medford (municipal spaces)",
+        "PUBLIC_ACCESS": "Public parking in signed municipal spaces",
+        "PARKING_REGULATIONS": "Use signed public spaces. Check the posted rate and time limit.",
+        "SPECIAL_RESTRICTIONS": "The city lot map also identifies business, commuter and privately owned areas.",
+        "SOURCE_TITLE": "City of Medford, Parking in Medford Square",
+        "SOURCE_URL": "https://www.medfordma.org/departments/parking/parking-in-medford-square",
+        "DETAILS_URL": "https://www.medfordma.org/departments/parking/parking-in-medford-square",
+        "SOURCE_FORMAT": "city-guide-and-linked-lot-pin",
         "SOURCE_CONFIDENCE": "high"
       }
     }

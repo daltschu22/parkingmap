@@ -3,6 +3,8 @@
 import re
 from collections import defaultdict
 
+from destinations import exact_address
+
 
 def public_time_limit(restriction: str) -> bool:
     text = restriction.casefold()
@@ -51,13 +53,17 @@ def somerville_options(streets, rules, normalize, source):
                     continue
                 if kind == "limited" and not public_time_limit(restriction):
                     continue
-                if not row["side"] or re.search(
+                if re.search(
                     r"loading|charg(?:ing|er)|commercial|sporting event|school|disabled|handicap|taxi|bus stop|pick.?up|drop.?off",
                     restriction,
                     re.I,
                 ):
                     continue
-                if re.search(r"(?:permit parking|rpp) only\s*$", restriction, re.I):
+                if re.search(
+                    r"(?:permit parking|rpp) only\s*$|temporary|for \d+ days",
+                    restriction,
+                    re.I,
+                ):
                     continue
                 anchor = None
                 for text in (row["from"], row["to"]):
@@ -73,18 +79,38 @@ def somerville_options(streets, rules, normalize, source):
                     if len(crossings.get(candidate, ())) == 1:
                         anchor = candidate
                         break
-                if not anchor:
-                    continue
-                x, y = next(iter(crossings[anchor]))
                 limits = " → ".join(t for t in (row["from"], row["to"]) if t)
+                anchor_type = "intersection"
+                if anchor and row["side"]:
+                    x, y = next(iter(crossings[anchor]))
+                    where = f"{row['side']} side · {limits}"
+                elif (
+                    number := re.fullmatch(r"#?(\d+[A-Za-z]?)", row["from"].strip())
+                ) and not row["to"]:
+                    if row.get("action") == "installation":
+                        continue
+                    anchor = f"{number[1]} {street.title()}"
+                    point = exact_address(anchor, "Somerville")
+                    if point is None:
+                        continue
+                    y, x = point
+                    anchor_type = "address"
+                    where = (
+                        f"{row['side']} side · near {anchor}"
+                        if row["side"]
+                        else f"Near {anchor}"
+                    )
+                else:
+                    continue
                 yield dict(
                     kind=kind,
                     name=street.title(),
                     city="Somerville",
                     point=[y, x],
-                    where=f"{row['side']} side · {limits}",
+                    where=where,
                     rule=restriction,
                     anchor=anchor.title(),
+                    anchor_type=anchor_type,
                     source=f"{source}#page={row['page']}",
                     citation=f"Schedule {schedule.upper()} · p. {row['page']}",
                 )

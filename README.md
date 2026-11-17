@@ -25,7 +25,8 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 ## Features
 
 - Interactive map with Somerville, Medford, and Cambridge streets
-- Find visitor parking near an address, a named building, or an MBTA station. Destination search uses local MassGIS and MBTA data for Cambridge, Somerville, and Medford. Distances are straight-line estimates from the selected destination. Filters and map panning preserve it.
+- Set **Arrival** to a Boston date and time, or choose **Use now**. The selected time controls visitor windows, parsed lot closures and documented Sunday exceptions. Somerville suspends resident-permit enforcement on Sundays. Medford references use explicit exceptions in its permit list, including address-only exceptions. Published hours and temporary restrictions can change.
+- Find visitor parking near an address, Somerville restaurant, named building, or MBTA station. Destination search uses local MassGIS and MBTA data for Cambridge, Somerville, and Medford. Distances are straight-line estimates from the selected destination. Filters and map panning preserve it.
 - Choose **Street rules** to search by street, municipality, or both (for example, `Otis St Cambridge`)
 - Search or click a street to get a plain-language parking answer before the technical source details
 - Responsive street and evidence styling that stays legible at overview and curb-level zooms

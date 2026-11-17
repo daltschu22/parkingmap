@@ -27,10 +27,30 @@ def daily_hours(rule):
             result["permit_window"] = time_window(match)
         elif "visitor_window" not in result:
             result["visitor_window"] = time_window(match)
-    # A day-qualified schedule must keep its weekday qualifier in the original text.
+    if re.search(r"\bmon(?:day)?\s*[-–]\s*fri(?:day)?\b", rule, re.I) and "visitor_window" in result:
+        result["visitor_days"] = [1, 2, 3, 4, 5]
+        return result
+    # Preserve other day-qualified schedules in the original text.
     if re.search(r"\b(?:mon|tue|wed|thu|fri|sat|sun)", rule, re.I):
         return {}
     return result
+
+
+def meter_schedule(hours):
+    """Only return a payment schedule when every published clause is understood."""
+    schedule = []
+    for clause in (hours or "").replace("–", "-").split(";"):
+        clause = clause.strip()
+        span = SPAN.match(clause)
+        if not span:
+            return None
+        days = re.sub(r"[ ()-]", "", clause[span.end():]).lower()
+        masks = {"": [1, 2, 3, 4, 5, 6], "monfri": [1, 2, 3, 4, 5],
+                 "monsat": [1, 2, 3, 4, 5, 6], "sat": [6]}
+        if days not in masks:
+            return None
+        schedule.append({"days": masks[days], "window": time_window(span)})
+    return schedule
 
 
 def closure_hours(restrictions):
@@ -50,6 +70,56 @@ def closure_hours(restrictions):
                         "window": time_window(span)}}
 
 
+SUNDAY_EXCEPTION = re.compile(
+    r"\b(?:except(?:ing)?|exclud(?:ing|es))\s+sundays?\b|"
+    r"\bsundays?(?:\s*(?:&|and)\s*holidays?)?\s+excluded\b", re.I
+)
+
+
+def medford_sunday_rule(rows):
+    """Only a street-wide, explicit exception can be applied to every block."""
+    if rows and all(r.get("scope") == "street_level_time_window" and
+                    SUNDAY_EXCEPTION.search(r.get("restriction_text", "")) for r in rows):
+        return rows[0]
+    return None
+
+
+def medford_sunday_options(streets, rules, normalize, source):
+    # Publish one reference per named street. It identifies a permit exception only.
+    for street, rows in rules.items():
+        for row in rows:
+            match = re.fullmatch(r"24/7\. Sundays excluded in front of ([0-9, and]+) (.+) only\.",
+                                 row.get("restriction_text", ""), re.I)
+            if not match or normalize(match[2]) != street:
+                continue
+            for number in re.findall(r"\d+", match[1]):
+                address = f"{number} {row['street_name']}"
+                point = exact_address(address, "Medford")
+                if point:
+                    yield dict(kind="sunday", name=row["street_name"], city="Medford", point=point,
+                               anchor=address, anchor_type="address", where=f"In front of {address}",
+                               rule=row["restriction_text"], source=f"{source}#page={row['page']}",
+                               citation=f"Medford permit list · p. {row['page']}")
+    seen = set()
+    for feature in streets:
+        props = feature["properties"]
+        name = props.get("STNAME") or ""
+        key = normalize(name)
+        if key in seen or props.get("OWNERSHIP") != "Public":
+            continue
+        row = medford_sunday_rule(rules.get(key))
+        if not row:
+            continue
+        line = feature["geometry"]["coordinates"]
+        a, b = line[(len(line) - 1) // 2], line[len(line) // 2]
+        point = [round((a[i] + b[i]) / 2, 6) for i in (1, 0)]
+        seen.add(key)
+        yield dict(kind="sunday", name=name.title(), city="Medford", point=point,
+                   anchor=name.title(), anchor_type="street", where="Street reference · check the signed curb",
+                   rule=row["restriction_text"], source=f"{source}#page={row['page']}",
+                   citation=f"Medford permit list · p. {row['page']}")
+
+
 def public_time_limit(restriction: str) -> bool:
     text = restriction.casefold()
     if re.search(
@@ -67,8 +137,10 @@ def somerville_options(streets, rules, normalize, source):
     # An offset in a regulation is not itself an exact mapped curb or routing point.
     nodes = defaultdict(set)
     outgoing = defaultdict(list)
+    ownership = defaultdict(set)
     for feature in streets:
         name = normalize(feature["properties"].get("STNAME"))
+        ownership[name].add(feature["properties"].get("OWNERSHIP"))
         geom = feature["geometry"]
         lines = (
             geom["coordinates"]
@@ -161,6 +233,7 @@ def somerville_options(streets, rules, normalize, source):
                     rule=restriction,
                     anchor=anchor.title(),
                     anchor_type=anchor_type,
+                    sunday_permit_exception=ownership[street] == {"Public"},
                     **daily_hours(restriction),
                     **({"section_traces": traces} if traces else {}),
                     source=f"{source}#page={row['page']}",
@@ -203,7 +276,7 @@ def cambridge_options(features, source):
                 str(v) for v in (p.get("MAX_TIME"), p.get("OPERATION_HOURS")) if v
             ),
             rate=p.get("RATE"),
-            **daily_hours(str(p.get("OPERATION_HOURS") or "")),
+            meter_schedule=meter_schedule(p.get("OPERATION_HOURS")),
             source=source,
             citation="Cambridge meter inventory",
         )

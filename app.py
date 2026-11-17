@@ -10,7 +10,8 @@ from functools import lru_cache
 from pathlib import Path
 from typing import Literal
 from destinations import normalize_street_name as _normalize_street_name, search_destinations
-from visitor_parking import cambridge_options, facility_options, somerville_options
+from visitor_parking import (cambridge_options, facility_options, medford_sunday_options,
+                             medford_sunday_rule, meter_schedule, somerville_options)
 
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, Response
@@ -20,7 +21,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-11-17-visitor-map-v3"
+APP_VERSION = "2026-11-17-sunday-venues-v1"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -403,6 +404,9 @@ def load_cambridge_meter_spaces():
             _cambridge_meter_spaces_cache = json.loads(
                 CAMBRIDGE_METER_SPACES_PATH.read_text()
             )
+            for feature in _cambridge_meter_spaces_cache["features"]:
+                props = feature["properties"]
+                props["PAYMENT_SCHEDULE"] = meter_schedule(props.get("OPERATION_HOURS"))
         else:
             _cambridge_meter_spaces_cache = {
                 "type": "FeatureCollection",
@@ -582,6 +586,7 @@ def get_enriched_streets():
         props["PARKING_HAS_TIME_LIMITED_SEGMENT"] = bool(
             rule.get("has_time_limited_segment")
         )
+        props["SUNDAY_PERMIT_EXCEPTION"] = ownership == "public"
         if ownership == "public":
             props["PARKING_RULE_SOURCE"] = (
                 "Somerville Traffic Commission Regulations"
@@ -643,6 +648,7 @@ def get_enriched_streets():
                 else "none"
             )
         props["PARKING_ACCESS"] = category
+        props["SUNDAY_PERMIT_EXCEPTION"] = props.get("OWNERSHIP") == "Public" and bool(medford_sunday_rule(rows))
         props["PARKING_DISPLAY_STATUS"] = _parking_display_status(category)
         props["PARKING_NOTE"] = note
         if category == "private_rules_apply":
@@ -751,7 +757,7 @@ def street_segments() -> dict:
 
 @lru_cache(maxsize=1)
 def _encoded_map_streets() -> bytes:
-    fields = ("MUNICIPALITY", "STNAME", "PARKING_ACCESS", "PARKING_DISPLAY_STATUS")
+    fields = ("MUNICIPALITY", "STNAME", "PARKING_ACCESS", "PARKING_DISPLAY_STATUS", "SUNDAY_PERMIT_EXCEPTION")
     features = [
         {
             "type": "Feature",
@@ -870,6 +876,8 @@ def _visitor_options() -> bytes:
                             _normalize_street_name, SOMERVILLE_RULE_SOURCE_URL),
         *cambridge_options(load_cambridge_meter_spaces()["features"], CAMBRIDGE_PARKING_SOURCE_URL),
         *facility_options(load_public_parking_facilities()["features"]),
+        *medford_sunday_options(load_medford_streets()["features"], load_medford_rules(),
+                                _normalize_street_name, MEDFORD_RULE_SOURCE_URL),
     ])
 
 

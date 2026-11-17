@@ -6,6 +6,7 @@ import os
 from collections import defaultdict
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from tempfile import NamedTemporaryFile
 from urllib.parse import urlencode
@@ -15,8 +16,10 @@ SOURCE = "https://arcgisserver.digital.mass.gov/arcgisserver/rest/services/AGOL/
 OUTPUT = Path(__file__).resolve().parents[1] / "data/processed/destinations.json.gz"
 CITIES = ("Cambridge", "Medford", "Somerville")
 STATIONS = "https://api-v3.mbta.com/stops?filter%5Blocation_type%5D=1"
+RESTAURANTS = "https://data.somervillema.gov/resource/nneb-s3f7.json"
 FIELDS = "OBJECTID,FULL_NUMBER_STANDARDIZED,STREET_NAME,GEOGRAPHIC_TOWN,POSTCODE,BUILDING_NAME"
 VENUES = [
+    ("Sarma", "249 Pearl Street", "Somerville", "https://www.sarmarestaurant.com/"),
     ("Chevalier Theatre", "30 Forest Street", "Medford", "https://chevaliertheatre.com/event/bored-teachers-is-it-friday-yet-comedy-tour/"),
 ]
 
@@ -103,6 +106,31 @@ def stations():
     return sorted(rows)
 
 
+def restaurants():
+    today = datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    where = ("currently_active='1' and status='Issued' and expiration_date >= '" + today +
+             "' and application_type in('Common Victualer (without alcohol)','Restaurant (with alcohol)')")
+    params = {"$select": "application_id,project_description_or_business_name,application_address,"
+                         "application_latitude,application_longitude", "$where": where,
+              "$order": "application_id", "$limit": 1000}
+    with urlopen(RESTAURANTS + "?" + urlencode(params), timeout=30) as response:
+        records = json.load(response)
+    if not records or len(records) == params["$limit"]:
+        raise ValueError("Incomplete restaurant directory")
+    entries = set()
+    for record in records:
+        name = (record.get("project_description_or_business_name") or "").strip()
+        address = (record.get("application_address") or "").split(",")[0].strip().title()
+        if not name or not address or not record.get("application_latitude") or not record.get("application_longitude"):
+            continue
+        lat, lon = (round(float(record["application_" + field]), 6) for field in ("latitude", "longitude"))
+        if 42.37 < lat < 42.42 and -71.145 < lon < -71.07:
+            entries.add((name, address, lat, lon))
+    if not entries:
+        raise ValueError("No geocoded restaurant addresses")
+    return {"source": RESTAURANTS, "as_of": today, "entries": sorted(entries)}
+
+
 def main():
     with ThreadPoolExecutor(max_workers=len(CITIES)) as pool:
         cities = dict(pool.map(download_city, CITIES))
@@ -113,6 +141,7 @@ def main():
         "stations_source": STATIONS,
         "stations": stations(),
         "venues": VENUES,
+        "somerville_restaurants": restaurants(),
     }
     data = gzip.compress(json.dumps(snapshot, separators=(",", ":")).encode(), mtime=0)
     with NamedTemporaryFile(dir=OUTPUT.parent, delete=False) as scratch:

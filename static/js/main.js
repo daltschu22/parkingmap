@@ -44,6 +44,7 @@ let accessibleEvidenceLayer = null;
 let publicParkingFacilityLayer = null;
 let evidenceDefinitions = [];
 let selectedStreetLayer = null;
+let refreshTimedDetail = null;
 let selectedStreetName = null;
 let hoveredStreetName = null;
 let hoverResetTimer = null;
@@ -75,7 +76,9 @@ function safeExternalUrl(value) {
 }
 
 function fetchJson(url) {
-    return fetch(url, { headers: { Accept: 'application/json' } }).then((response) => {
+    const versioned = new URL(url, window.location.origin);
+    versioned.searchParams.set('v', document.documentElement.dataset.appVersion);
+    return fetch(versioned, { headers: { Accept: 'application/json' } }).then((response) => {
         if (!response.ok) throw new Error(`${response.status} ${response.statusText}`);
         return response.json();
     });
@@ -95,6 +98,7 @@ function setPanelExpanded(expanded) {
 }
 
 function showSelectionPanel(withNearby = false) {
+    refreshTimedDetail = null;
     document.getElementById('parking-heading').textContent = 'Parking details';
     const empty = document.getElementById('empty-state');
     const close = document.getElementById('clear-selection-btn');
@@ -106,6 +110,7 @@ function showSelectionPanel(withNearby = false) {
 }
 
 function showEmptyState() {
+    refreshTimedDetail = null;
     document.getElementById('nearby-heading').hidden = true;
     document.getElementById('parking-heading').textContent = 'Visitor parking nearby';
     detailRequestVersion++;
@@ -168,6 +173,9 @@ function getStreetStyle(feature) {
         'resident_permit_required',
         'resident_permit_segment_rules_known'
     ].includes(access);
+    if (properties.SUNDAY_PERMIT_EXCEPTION && arrivalClock().day === 0) {
+        return {color: COLORS.unknown, weight: 1, opacity: 0.35, dashArray: null};
+    }
     if (somervilleBaseline) {
         return { color: '#a16207', weight: detailed ? 2.2 : 1.25, opacity: 0.7, dashArray: '3 4' };
     }
@@ -278,6 +286,10 @@ function getAtGlanceAnswer(properties = {}) {
     const evidence = properties.PARKING_EVIDENCE || 'none';
     const displayStatus = getFeatureDisplayStatus(properties);
 
+    if (properties.SUNDAY_PERMIT_EXCEPTION && arrivalClock().day === 0) {
+        return {tone: 'caution', title: 'Sunday permit exception',
+            summary: 'The resident-permit requirement is suspended on the selected Sunday. Check the signs for loading, no-parking areas and other limits on this curb.'};
+    }
     if (municipality === 'cambridge' && evidence === 'active_meter_spaces_nearby') {
         return {
             tone: 'caution', title: 'Use a mapped meter',
@@ -311,7 +323,7 @@ function getAtGlanceAnswer(properties = {}) {
     if (municipality === 'somerville' && access === 'resident_permit_required') {
         return {
             tone: 'restricted', title: 'Resident permit is the baseline',
-            summary: 'Treat this as permit parking unless a sign or marked space says otherwise. The line is not an exact curb rule.'
+            summary: 'Somerville suspends permit enforcement on Sundays and holidays. At other times, follow the posted permit and visitor rules. The line is not an exact curb rule.'
         };
     }
     if (access === 'permit_with_metered_segments') {
@@ -412,7 +424,7 @@ function renderDetailRows(rows) {
 
 function streetFacts(properties, answer) {
     const access = String(properties.PARKING_ACCESS || 'unknown');
-    const permit = access.includes('permit')
+    const permit = properties.SUNDAY_PERMIT_EXCEPTION ? 'Exempt on Sundays' : access.includes('permit')
         ? (access.includes('time_restricted') ? 'Scheduled' : 'Baseline / likely')
         : (access === 'private_rules_apply' ? 'Private rules' : 'Not confirmed');
     const evidence = String(properties.PARKING_EVIDENCE || 'none');
@@ -434,6 +446,8 @@ function showStreetDetails(properties = {}) {
     const evidenceUrl = properties.PARKING_EVIDENCE_SOURCE_URL;
     const generated = formatDate(properties.PARKING_DATA_UPDATED_AT);
     const rows = [
+        ...(properties.SUNDAY_PERMIT_EXCEPTION && properties.MUNICIPALITY === 'Somerville' ?
+            [['Sunday exception', 'Somerville Parking Department', 'https://www.somervillema.gov/departments/parking-department']] : []),
         ['Rule note', properties.PARKING_NOTE || 'No additional rule note is available.'],
         ['Rule source', properties.PARKING_RULE_SOURCE, sourceUrl],
         ['Rule confidence', properties.PARKING_CONFIDENCE],
@@ -471,6 +485,7 @@ function showStreetDetails(properties = {}) {
             ${sourceRows.length ? `<details><summary>Regulation rows for this street (${sourceRows.length})</summary>${renderDetailRows(sourceRows)}</details>` : ''}
         </details>`;
     showSelectionPanel(true);
+    refreshTimedDetail = () => showStreetDetails(properties);
 }
 
 function formatMeterRate(value) {
@@ -485,6 +500,7 @@ function showMeterDetails(properties = {}) {
     if (!container) return;
     const status = properties.STATUS || 'Unknown';
     const active = isActiveMeter(properties);
+    const feeWaived = noMeterFee({kind: 'meter', city: 'Cambridge', meter_schedule: properties.PAYMENT_SCHEDULE}, arrivalClock());
     const street = properties.MATCHED_STREET || properties.NEAREST_STREET || 'Cambridge';
     const matchDistance = Number(properties.MATCH_DISTANCE_METERS);
     const rows = [
@@ -499,13 +515,14 @@ function showMeterDetails(properties = {}) {
             <p class="answer-location">${escapeHtml(street)} · Cambridge</p>
             <h3 class="answer-title">${escapeHtml(active ? 'Meter is in service' : status)}</h3>
             <p class="answer-summary">This shape represents a specific meter space, not the whole street. Confirm the meter display and curb signs.</p>
-            ${renderFacts([['Hours', properties.OPERATION_HOURS || 'Unknown'], ['Rate', formatMeterRate(properties.RATE)], ['Maximum', properties.MAX_TIME || 'Unknown']])}
+            ${renderFacts([['Hours', properties.OPERATION_HOURS || 'Unknown'], ['Rate', feeWaived ? 'No fee at arrival' : formatMeterRate(properties.RATE)], ['Posted maximum', properties.MAX_TIME || 'Unknown']])}
             <p class="answer-freshness">Availability and meter status are not live.</p>
         </article>
         <details class="answer-details"><summary>Meter details</summary><div class="answer-detail-body">${renderDetailRows(rows)}</div></details>`;
     selectedStreetLayer = null;
     refreshSelectionStyles();
     showSelectionPanel();
+    refreshTimedDetail = () => showMeterDetails(properties);
 }
 
 function showAccessibleDetails(properties = {}) {
@@ -779,8 +796,8 @@ function searchBounds(result) {
     return L.latLngBounds([south, west], [north, east]);
 }
 
-function focusSearchResult(result) {
-    map.fitBounds(searchBounds(result), { padding: [55, 55], maxZoom: 17 });
+function focusSearchResult(result, recenter = true) {
+    if (recenter) map.fitBounds(searchBounds(result), { padding: [55, 55], maxZoom: 17 });
     const key = `${result.municipality}:${result.name}`.toUpperCase();
     searchResultStreetKeys.clear();
     searchResultStreetKeys.add(key);
@@ -790,7 +807,9 @@ function focusSearchResult(result) {
         detailRequestVersion++;
         selectStreet(key);
         const title = result.mixed ? 'Rules vary by block' : 'Choose your block';
-        const context = result.common_access && result.municipality === 'Somerville'
+        const sundayExempt = arrivalClock().day === 0 && result.segment_ids.every(id =>
+            streetLayersById.get(id)?.feature.properties.SUNDAY_PERMIT_EXCEPTION);
+        const context = sundayExempt ? 'The resident-permit requirement is suspended on this Sunday. Check each curb for other restrictions.' : result.common_access && result.municipality === 'Somerville'
             ? getAtGlanceAnswer({ MUNICIPALITY: result.municipality, PARKING_ACCESS: result.common_access }).title
             : '';
         document.getElementById('street-details').innerHTML = `
@@ -801,6 +820,7 @@ function focusSearchResult(result) {
                 <p class="answer-summary">Tap your block on the map to see its parking rules and sources.</p>
             </article>`;
         showSelectionPanel(true);
+        refreshTimedDetail = () => focusSearchResult(result, false);
     }
     const searchResults = document.getElementById('search-results');
     if (searchResults) searchResults.hidden = true;

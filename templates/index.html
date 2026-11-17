@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-app-version="{{ app_version }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
@@ -50,6 +50,16 @@
                         <svg viewBox="0 0 24 24" width="19" height="19" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v3M12 19v3M2 12h3M19 12h3"></path></svg>
                     </button>
                 </div>
+                <details id="arrival-editor">
+                    <summary>Arrival <strong id="arrival-label">Now</strong></summary>
+                    <form id="arrival-form">
+                        <label for="arrival-time">Arrival date and time in Boston</label>
+                        <input type="datetime-local" id="arrival-time" required>
+                        <small>Check posted signs for holiday schedules and temporary changes.</small>
+                        <div><button type="submit">Set arrival</button>
+                            <button type="button" id="arrival-now">Use now</button></div>
+                    </form>
+                </details>
                 <div id="destination-context" hidden>
                     <button type="button" id="center-destination" title="Center the map on your destination"></button>
                 </div>
@@ -115,7 +125,7 @@
         </aside>
 
         <main class="map-container">
-            <div id="map" data-visitor-options-url="/api/visitor-parking?v={{ app_version }}" role="region" aria-label="Interactive parking evidence map"></div>
+            <div id="map" role="region" aria-label="Interactive parking evidence map"></div>
             <div class="parking-filter-bar" role="group" aria-label="Find visitor parking">
                 <button type="button" data-parking-filter="all" aria-pressed="true">All parking</button>
                 <button type="button" data-parking-filter="meter" aria-pressed="false">Meters</button>
@@ -134,6 +144,7 @@
             integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"
             integrity="sha384-eXVCORTRlv4FUUgS/xmOyr66XBVraen8ATNLMESp92FKXLAMiKkerixTiBvXriZr" crossorigin=""></script>
+    <script src="/static/js/arrival.js?v={{ app_version }}"></script>
     <script src="/static/js/main.js?v={{ app_version }}"></script>
     <script src="/static/js/visitor.js?v={{ app_version }}"></script>
 </body>

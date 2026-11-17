@@ -83,6 +83,12 @@ def destination_index():
         matches = {p for n, city, _, _, p in numbers[key.split()[0]] if n == key and city == town}
         if len(matches) == 1:
             places.append((normalize_street_name(venue), venue, address, town, matches.pop(), "Venue"))
+    verified = {(key, city, point): address for key, _, address, city, point, kind in places if kind == "Venue"}
+    for name, address, lat, lon in data.get("somerville_restaurants", {}).get("entries", []):
+        key = normalize_street_name(name)
+        point = (lat, lon)
+        address = verified.get((key, "Somerville", point), address)
+        places.append((key, name, address, "Somerville", point, "Restaurant"))
     square_stations = {
         "place-davis": "Davis Square",
         "place-portr": "Porter Square",
@@ -155,15 +161,21 @@ def search_destinations(query, facilities):
         for candidate, name, address, town, point, kind in places + facility_names:
             if city and town != city:
                 continue
-            if candidate in {key, full_key}:
+            term = key
+            if kind == "Restaurant":
+                term = re.sub(r"\s+RESTAURANT$", "", key)
+            if candidate in {term, full_key}:
                 rank = 0
-            elif all(word in candidate.split() for word in key.split()):
+            elif all(word in candidate.split() for word in term.split()):
                 rank = 1
             else:
                 continue
             results.append((rank, name, address, town, point, kind))
     unique = {}
-    for _, name, address, town, point, kind in sorted(results):
+    best_rank = min((row[0] for row in results), default=None)
+    for rank, name, address, town, point, kind in sorted(results):
+        if rank != best_rank:
+            break
         unique.setdefault(
             (name, address, town, point),
             dict(name=name, city=town, address=address, point=point, kind=kind),

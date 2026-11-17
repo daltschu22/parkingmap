@@ -499,6 +499,19 @@
       "refresh_command": "python3 scripts/build_destinations.py"
     },
     {
+      "id": "somerville_restaurant_licenses",
+      "municipality": "somerville",
+      "title": "Applications for Permits and Licenses",
+      "url": "https://data.somervillema.gov/resource/nneb-s3f7.json",
+      "destination": "data/processed/destinations.json.gz",
+      "type": "json",
+      "category": "destinations",
+      "enabled": false,
+      "ingestion_status": "implemented",
+      "managed_by": "scripts/build_destinations.py",
+      "notes": "Issued, currently active, unexpired restaurant and common victualer licenses with a public name, address and coordinates."
+    },
+    {
       "id": "mbta_destination_stations",
       "municipality": "regional",
       "title": "MBTA station locations",

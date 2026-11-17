@@ -1102,6 +1102,8 @@ a:focus-visible {
 .visitor-tag.meter { background: #075985; }
 .visitor-tag.free { background: #116444; }
 .visitor-tag.limited { background: #087454; }
+.visitor-tag.sunday { background: #475569; }
+.visitor-pin.sunday { --spot-color: #475569; }
 .visitor-tag.lot { background: #62449b; }
 .parking-finder[hidden] { display: none; }
 #parking-list-status { margin: 0 0 0.55rem; color: var(--muted); font-size: 0.78rem; }
@@ -1210,4 +1212,18 @@ a:focus-visible {
     .map-container { bottom: var(--sheet-height, 8rem); height: auto; }
     .leaflet-bottom { bottom: 0; }
     .map-panel-button { bottom: 0.9rem; }
+}
+#arrival-editor { margin-top: 0.5rem; }
+#arrival-editor summary { width: fit-content; cursor: pointer; font-size: .8rem; color: var(--muted); }
+#arrival-label { margin-left: .3rem; color: var(--ink); }
+#arrival-form { display: grid; gap: .45rem; border: 1px solid var(--line); border-radius: .5rem; margin-top: .4rem; padding: .65rem; font-size: .82rem; }
+#arrival-form input, #arrival-form button {
+    font: inherit; min-height: 36px; padding: .3rem .55rem; color: var(--ink);
+    background: var(--surface-hover); border: 1px solid var(--line); border-radius: .4rem;
+}
+#arrival-form input { width: 100%; color-scheme: dark; }
+#arrival-form button { cursor: pointer; }
+#arrival-form [type=submit] { background: #075985; color: white; }
+@media (max-width: 860px) {
+    .sidebar.sheet-collapsed { max-height: 11.5rem; }
 }

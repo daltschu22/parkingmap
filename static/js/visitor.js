@@ -1,5 +1,5 @@
 // Visitor choices are attached to spaces, facilities, reference intersections or addresses.
-const visitorLabels = { meter: 'Meter', limited: 'Time limit', free: '3h free', lot: 'Lot / garage' };
+const visitorLabels = { meter: 'Meter', limited: 'Time limit', free: '3h free', lot: 'Lot / garage', sunday: 'Sunday permit exception' };
 let visitorFilter = 'all';
 let visitorChoices = [];
 let visitorListSize = 5;
@@ -9,10 +9,15 @@ let destinationPin = null;
 let radiusMiles = 1;
 let searchMode = 'destination';
 const visitorPins = L.layerGroup().addTo(map);
-const parkingColors = {meter: '#0369a1', limited: '#087454', free: '#087454', lot: '#6944a3'};
+const parkingColors = {meter: '#0369a1', limited: '#087454', free: '#087454', lot: '#6944a3', sunday: '#475569'};
 const visitorRenderer = L.canvas({padding: 0.25, tolerance: 4});
 
 function clearDestination() {
+    if (destination) {
+        const url = new URL(location.href);
+        url.searchParams.delete('destination');
+        history.replaceState(null, '', url);
+    }
     destination = null;
     radiusMiles = 1;
     if (destinationPin) destinationPin.remove();
@@ -27,6 +32,9 @@ function focusDestination(result) {
     clearStreetSelection();
     clearDestination();
     destination = result;
+    const url = new URL(location.href);
+    url.searchParams.set('destination', result.name + ', ' + result.city);
+    history.replaceState(null, '', url);
     document.getElementById('search-results').hidden = true;
     document.getElementById('search-input').value = result.name + ', ' + result.city;
     document.getElementById('clear-search-btn').hidden = false;
@@ -105,35 +113,58 @@ function visitorLayerVisible(key) {
     return key === 'public-facilities' && visitorFilter === 'lot';
 }
 
-function visitorMatches(option) {
-    return visitorFilter === 'all' || option.kind === visitorFilter ||
-        (visitorFilter === 'lot' && Boolean(option.facility));
+function noSundayMeterFee(option, local) {
+    return local.day === 0 && option.kind === 'meter' &&
+        (option.city === 'Cambridge' || option.sunday_permit_exception);
 }
 
-function openParkingOption(option) {
+function noMeterFee(option, local) {
+    return noSundayMeterFee(option, local) || (option.kind === 'meter' && option.meter_schedule &&
+        !option.meter_schedule.some(period => period.days.includes(local.day) && inWindow(local.minute, period.window)));
+}
+
+function visitorMatches(option, local) {
+    return visitorFilter === 'all' || option.kind === visitorFilter ||
+        (visitorFilter === 'lot' && Boolean(option.facility)) || (visitorFilter === 'free' && noMeterFee(option, local));
+}
+
+function parkingLocationName(option) {
+    return option.anchor_type === 'address' ? 'Near ' + option.anchor : option.name;
+}
+
+function parkingLocationNote(option) {
+    if (option.kind === 'sunday' && option.anchor_type === 'address') return 'The Sunday exception applies in front of the listed address. Follow signs for other curb restrictions.';
+    if (option.anchor_type === 'address') return 'The pin marks the address. The city gives no start or end for this zone. Use the posted signs to identify the spaces it covers.';
+    if (option.anchor_type === 'street') return 'This point locates the street. The Sunday exception covers its resident-permit requirement. Use the signs to identify a legal space.';
+    if (option.section_traces) return 'The line shows the approximate signed stretch on the listed side. Check its boundaries on the posted signs.';
+    if (option.anchor) return 'The pin marks the reference intersection. Follow the listed curb description and signs to locate the spaces.';
+    return option.facility ? 'Use the signed public spaces in this facility.' : 'The marker identifies a mapped meter space. Check its posted terms.';
+}
+
+function openParkingOption(option, recenter = true) {
     ++detailRequestVersion;
     ++searchRequestVersion;
     searchResultStreetKeys.clear();
     selectStreet(null);
     document.getElementById('search-results').hidden = true;
     setAppStatus('');
-    map.setView(mapPoint(option), Math.max(map.getZoom(), 17), { animate: false });
+    if (recenter) map.setView(mapPoint(option), Math.max(map.getZoom(), 17), { animate: false });
     const parkingPoint = encodeURIComponent(option.point.join(','));
     const walkTo = destination ? encodeURIComponent(destination.point.join(',')) : '';
-    const reference = option.anchor_type === 'address' ? 'address' : 'intersection';
+    const reference = option.anchor_type || 'intersection';
+    const local = arrivalClock();
     const source = safeExternalUrl(option.source);
-    const qualifier = option.section_traces ? 'Approximate signed stretch based on city limits and street geometry' : option.anchor ? `Reference ${reference} · check the marked curb and posted limits` :
-        (option.facility ? 'Public-access facility' : 'Mapped meter space');
-    const rate = option.rate ? formatMeterRate(option.rate) : '';
+    const rate = option.rate && !noMeterFee(option, local) ? formatMeterRate(option.rate) : '';
     document.getElementById('street-details').innerHTML = `
         <article class="parking-answer">
-            <p class="answer-eyebrow">${visitorLabel(option)} · ${escapeHtml(option.city)}</p>
-            <h3 class="answer-title">${escapeHtml(option.name)}</h3>
+            <p class="answer-eyebrow">${escapeHtml(mapRule(option, local))} · ${escapeHtml(option.city)}</p>
+            <h3 class="answer-title">${escapeHtml(parkingLocationName(option))}</h3>
             <p class="answer-location">${escapeHtml(option.where)}</p>
-            <p class="answer-summary">${escapeHtml([rate, option.rule].filter(Boolean).join(' · '))}</p>
+            ${sundayNote(option, local) ? `<p class="answer-summary">${escapeHtml(sundayNote(option, local))}</p>` : ''}
+            <p class="answer-summary">${sundayNote(option, local) && (local.day === 0 || noMeterFee(option, local)) && option.kind !== 'sunday' ? 'Regular schedule · ' : ''}${escapeHtml([rate, option.rule].filter(Boolean).join(' · '))}</p>
             ${option.access ? `<p class="answer-summary">${escapeHtml(option.access)}</p>` : ''}
             ${option.restrictions ? `<p class="answer-summary">${escapeHtml(option.restrictions)}</p>` : ''}
-            <p class="answer-freshness">${qualifier}. Check signs on arrival. Occupancy is not live.</p>
+            <p class="answer-freshness">${escapeHtml(parkingLocationNote(option))}</p>
             <div class="answer-actions">
                 <a class="answer-action answer-action--primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=${parkingPoint}" target="_blank" rel="noopener noreferrer">${option.anchor ? `Directions to ${reference}` : 'Directions to parking'}</a>
                 ${walkTo ? `<a class="answer-action" href="https://www.google.com/maps/dir/?api=1&amp;travelmode=walking&amp;origin=${parkingPoint}&amp;destination=${walkTo}" target="_blank" rel="noopener noreferrer">Walk to destination</a>` : ''}
@@ -141,6 +172,13 @@ function openParkingOption(option) {
             </div>
         </article>`;
     showSelectionPanel();
+    refreshTimedDetail = () => {
+        if (visitorEligible(option, arrivalClock())) openParkingOption(option, false);
+        else {
+            clearStreetSelection();
+            setAppStatus(option.name + ' falls outside the documented visitor options for this arrival.');
+        }
+    };
 }
 
 function mapPoint(option) {
@@ -152,21 +190,26 @@ function mapPoint(option) {
     return [(first[0] + next[0]) / 2, (first[1] + next[1]) / 2];
 }
 
-function mapRule(option) {
+function sundayNote(option, local) {
+    if (noSundayMeterFee(option, local)) return 'No meter payment on Sunday. Check the other posted curb rules.';
+    if (noMeterFee(option, local)) return 'Arrival is outside the published meter payment hours. Other curb rules still apply.';
+    if (option.kind === 'sunday' || (local.day === 0 && option.sunday_permit_exception)) {
+        return 'Sunday resident-permit enforcement is suspended here. Other posted limits still apply.';
+    }
+    if (option.sunday_permit_exception) return 'Somerville suspends resident-permit enforcement on Sundays.';
+    return '';
+}
+
+function mapRule(option, local) {
+    if (noSundayMeterFee(option, local)) return 'No Sunday meter fee';
+    if (noMeterFee(option, local)) return 'Outside meter hours';
+    if (option.kind === 'sunday') return 'Sunday permit exception';
+    if (local.day === 0 && option.sunday_permit_exception && option.visitor_window &&
+        !inWindow(local.minute, option.visitor_window)) return 'Sunday permit exception';
     if (option.kind === 'meter' && option.rate) return 'Meter · ' + formatMeterRate(option.rate).replace('/hour', '/hr');
     if (option.kind === 'free') return 'First 3 hours free';
     if (option.kind === 'lot') return /metered/i.test(option.rule) ? 'Metered lot' : 'Public lot / garage';
     return visitorLabel(option);
-}
-
-const cityClock = new Intl.DateTimeFormat('en-US', {timeZone: 'America/New_York',
-    weekday: 'short', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'});
-
-function localParkingTime(date) {
-    const parts = Object.fromEntries(cityClock.formatToParts(date).map(p => [p.type, p.value]));
-    return {minute: Number(parts.hour) * 60 + Number(parts.minute),
-        day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday),
-        month: Number(parts.month), week: Math.ceil(Number(parts.day) / 7)};
 }
 
 function inWindow(minute, [start, end]) {
@@ -175,8 +218,12 @@ function inWindow(minute, [start, end]) {
 
 function visitorEligible(option, local) {
     if (/customer parking|park facility visitor parking only/i.test([option.access, option.rule].join(' '))) return false;
-    if (option.permit_window && inWindow(local.minute, option.permit_window)) return false;
-    if (option.anchor && option.visitor_window && !inWindow(local.minute, option.visitor_window)) return false;
+    if (option.kind === 'sunday') return local.day === 0;
+    if (option.visitor_days && !option.visitor_days.includes(local.day)) return false;
+    const sundayExemption = local.day === 0 && option.sunday_permit_exception;
+    if (!sundayExemption && option.permit_window && inWindow(local.minute, option.permit_window)) return false;
+    if (option.anchor && option.visitor_window && !inWindow(local.minute, option.visitor_window) &&
+        !(sundayExemption && (option.kind === 'meter' || /permit|rpp/i.test(option.rule)))) return false;
     const closed = option.closure;
     return !(closed && local.day === closed.day && inWindow(local.minute, closed.window) &&
         (!closed.months.length || local.month >= closed.months[0] && local.month <= closed.months[1]) &&
@@ -189,7 +236,7 @@ function shortTime(minutes) {
     return (hour % 12 || 12) + (remainder ? ':' + String(remainder).padStart(2, '0') : '') + (hour < 12 ? 'am' : 'pm');
 }
 
-function drawVisitorMap(inView) {
+function drawVisitorMap(inView, local) {
     visitorPins.clearLayers();
     const placed = [];
     const named = new Set();
@@ -236,9 +283,10 @@ function drawVisitorMap(inView) {
         const side = option.where.match(/^(North|South|West|East|NW|NE|SW|SE|Both) side/i)?.[1];
         const evidence = option.section_traces ? (side === 'Both' ? 'both sides' : side + ' side') :
             (option.anchor ? 'near ' + option.anchor : '');
-        const label = mapRule(option);
-        const extra = option.visitor_window?.map(shortTime).join('–') || evidence;
-        const streetName = option.name.replace(/^Massachusetts Ave(nue)?$/i, 'Mass Ave');
+        const label = mapRule(option, local);
+        const extra = label === 'Sunday permit exception' || noSundayMeterFee(option, local) ? evidence :
+            option.visitor_window?.map(shortTime).join('–') || evidence;
+        const streetName = parkingLocationName(option).replace(/^Massachusetts Ave(nue)?$/i, 'Mass Ave');
         L.marker(point, {
             icon: L.divIcon({
                 className: 'visitor-pin ' + option.kind + (top > p.y ? ' pin-below' : ''),
@@ -257,8 +305,8 @@ function renderVisitorChoices() {
     if (!visitorLoaded) return;
     const bounds = map.getBounds();
     const center = destination ? L.latLng(destination.point) : selectedStreetLayer?.getBounds().getCenter() || map.getCenter();
-    const local = localParkingTime(new Date());
-    const options = visitorChoices.filter(visitorMatches)
+    const local = arrivalClock();
+    const options = visitorChoices.filter(option => visitorMatches(option, local))
         .filter(option => visitorEligible(option, local))
         .map(option => ({option, distance: center.distanceTo(mapPoint(option))}))
         .sort((a, b) => a.distance - b.distance);
@@ -266,7 +314,7 @@ function renderVisitorChoices() {
     const inView = nearby.filter(option => bounds.contains(mapPoint(option)) ||
         option.section_traces?.some(line => bounds.intersects(L.latLngBounds(line))));
     const rows = destination ? nearby : inView;
-    drawVisitorMap(inView);
+    drawVisitorMap(inView, local);
     const nearest = !destination && !inView.length && nearby[0];
     document.getElementById('map-no-options').hidden = inView.length > 0;
     for (const id of ['nearest-parking', 'map-nearest-parking']) {
@@ -278,15 +326,18 @@ function renderVisitorChoices() {
         } : null;
     }
     const status = document.getElementById('parking-list-status');
-    status.textContent = inView.length ? (selectedStreetLayer ? 'Closest to this block · posted hours apply' : 'Closest to map center · known time restrictions applied') :
+    status.textContent = inView.length ? (selectedStreetLayer ? 'Closest to this block · posted hours apply' : 'Closest to map center · for your arrival') :
         'No documented visitor options in this view. Zoom out or search another destination.';
     if (destination) {
-        status.textContent = rows.length ? `Nearest options within ${radiusMiles} mi · straight-line distance · check posted hours` :
+        status.textContent = rows.length ? `Nearest options within ${radiusMiles} mi · straight-line distance for your arrival` :
             `No documented ${visitorFilter === 'all' ? 'visitor parking' : visitorLabels[visitorFilter]} options within ${radiusMiles} mi of this destination.`;
     }
     document.getElementById('expand-distance').hidden = !destination || radiusMiles >= 3 || rows.length >= visitorListSize;
+    if (local.day === 0 && (destination?.city === 'Somerville' || inView.some(o => o.sunday_permit_exception))) {
+        status.textContent += ' · Somerville suspends resident-permit enforcement on Sundays.';
+    }
     if (visitorFilter === 'free' && rows.length) {
-        status.textContent += ' · Verified free periods at garages only';
+        status.textContent += ' · Free garage periods and meters outside payment hours';
     }
     const list = document.getElementById('parking-options');
     list.replaceChildren();
@@ -296,9 +347,9 @@ function renderVisitorChoices() {
         button.className = 'parking-option';
         const miles = center.distanceTo(mapPoint(option)) / 1609.344;
         const distance = miles < 0.1 ? 'Under 0.1 mi' : miles.toFixed(1) + ' mi';
-        const rule = option.kind === 'free' ? 'First 3 hours free · daily reset at 5 a.m.' :
-            [option.rate ? formatMeterRate(option.rate) : '', option.rule].filter(Boolean).join(' · ');
-        button.innerHTML = `<span class="option-line"><strong>${escapeHtml(option.name)}</strong><span class="visitor-tag ${option.kind}">${escapeHtml(mapRule(option))}</span></span>
+        const rule = (local.day === 0 || noMeterFee(option, local)) && sundayNote(option, local) ? sundayNote(option, local) : option.kind === 'free' ? 'First 3 hours free · daily reset at 5 a.m.' :
+            [option.rate && !noMeterFee(option, local) ? formatMeterRate(option.rate) : '', option.rule].filter(Boolean).join(' · ');
+        button.innerHTML = `<span class="option-line"><strong>${escapeHtml(parkingLocationName(option))}</strong><span class="visitor-tag ${option.kind}">${escapeHtml(mapRule(option, local))}</span></span>
             <span class="option-place">${distance} · ${escapeHtml(option.city)} · ${escapeHtml(option.where)}</span>
             <span class="option-rule">${escapeHtml(rule)}</span>
             ${destination && option.restrictions ? `<span class="option-rule">${escapeHtml(option.restrictions)}</span>` : ''}`;
@@ -361,21 +412,23 @@ document.addEventListener('DOMContentLoaded', async () => {
         void searchForDestination(requested);
     }
     try {
-        visitorChoices = await fetchJson(map.getContainer().dataset.visitorOptionsUrl);
+        visitorChoices = await fetchJson('/api/visitor-parking');
         visitorLoaded = true;
         renderVisitorChoices();
         map.on('moveend resize', renderVisitorChoices);
         // Update at time boundaries without replacing the focused result every minute.
         function eligibleFlags() {
-            const local = localParkingTime(new Date());
-            return visitorChoices.map(o => visitorEligible(o, local) ? '1' : '0').join('');
+            const local = arrivalClock();
+            return local.day + ':' + visitorChoices.map(o => visitorEligible(o, local) ? (noMeterFee(o, local) ? '2' : '1') : '0').join('');
         }
         let lastEligible = eligibleFlags();
         function refreshHours() {
             const next = eligibleFlags();
             if (next !== lastEligible) {
                 lastEligible = next;
+                refreshSelectionStyles();
                 renderVisitorChoices();
+                refreshTimedDetail?.();
             }
         }
         window.setInterval(refreshHours, 30000);

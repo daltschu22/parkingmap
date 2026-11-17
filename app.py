@@ -2,12 +2,14 @@
 Parking Map - Interactive street parking-rule visualization.
 """
 
+import hashlib
 import json
 import os
 import re
 from functools import lru_cache
 from pathlib import Path
-from fastapi import FastAPI, Query, Request
+from typing import Literal
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from starlette.middleware.gzip import GZipMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -15,7 +17,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-07-22-driver-ui-v8"
+APP_VERSION = "2026-11-17-segment-map-v1"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -240,6 +242,10 @@ def _classify_medford_parking_access(properties: dict, rules: dict) -> tuple[str
             "No Medford resident-permit row matched this street in the current seed data; other posted rules may apply.",
         )
 
+    rows = [row for row in rows if row.get("permit_type") and row.get("scope") != "unresolved"]
+    if not rows:
+        return "unknown", "The source row has no confirmed permit type. Check the posted signs."
+
     partial_rows = [
         row for row in rows if row.get("scope") == "partial_or_segment_specific"
     ]
@@ -287,8 +293,8 @@ def _classify_cambridge_parking_access(
             "Private street; parking rules are set by owner/signage.",
         )
 
-    street_key = _normalize_street_name(properties.get("STNAME"))
-    rule = rules.get(street_key, {})
+    segment_key = properties.get("CAMBRIDGE_SEGMENT_ID") or _normalize_street_name(properties.get("STNAME"))
+    rule = rules.get(segment_key, {})
     active_meter_count = int(rule.get("active_meter_count_estimate") or 0)
     total_meter_count = int(rule.get("meter_count_estimate") or 0)
     accessible_count = int(rule.get("accessible_space_count") or 0)
@@ -298,7 +304,7 @@ def _classify_cambridge_parking_access(
             "unknown",
             (
                 "Curb-level parking rules are not mapped for this street. Cambridge GIS "
-                f"shows {active_meter_count} active meter space(s) nearby; use the exact "
+                f"shows {active_meter_count} active meter space(s) matched to this segment; use the exact "
                 "meter-space overlay and posted signs rather than treating the whole street as metered."
             ),
         )
@@ -574,18 +580,14 @@ def load_medford_segment_rules():
 
 
 def load_cambridge_rules():
-    """Load and cache Cambridge parking summaries keyed by normalized street name."""
+    """Load segment evidence only. Older street totals cannot locate a space."""
     global _cambridge_rules_cache
     if _cambridge_rules_cache is None:
         if not CAMBRIDGE_RULES_PATH.exists():
             _cambridge_rules_cache = {}
         else:
             content = json.loads(CAMBRIDGE_RULES_PATH.read_text())
-            _cambridge_rules_cache = {
-                _normalize_street_name(key): value
-                for key, value in content.get("streets", {}).items()
-                if _normalize_street_name(key)
-            }
+            _cambridge_rules_cache = content.get("segments", {})
     return _cambridge_rules_cache
 
 
@@ -700,8 +702,8 @@ def get_enriched_streets():
             if segment_evidence
             else 0
         )
-        props["PARKING_MEDFORD_RULE_SUMMARY"] = " | ".join(
-            row.get("restriction_text") or row.get("permit_type") or "Resident"
+        props["PARKING_MEDFORD_RULE_SUMMARY"] = (segment_evidence or {}).get("rule_summary") or " | ".join(
+            row.get("restriction_text") or row.get("permit_type") or "Permit type missing"
             for row in rows[:3]
         )
         updated_feature = dict(feature)
@@ -712,8 +714,7 @@ def get_enriched_streets():
     cambridge_streets = load_cambridge_streets()
     for feature in cambridge_streets.get("features", []):
         props = dict(feature.get("properties", {}))
-        street_key = _normalize_street_name(props.get("STNAME"))
-        rule = cambridge_rules.get(street_key, {})
+        rule = cambridge_rules.get(props.get("CAMBRIDGE_SEGMENT_ID"), {})
         category, note = _classify_cambridge_parking_access(props, cambridge_rules)
         meter_count = rule.get("meter_count_estimate", 0)
         active_meter_count = rule.get("active_meter_count_estimate", 0)
@@ -721,7 +722,7 @@ def get_enriched_streets():
         if meter_count:
             match_level = rule.get("meter_match_confidence", "nearest_street_approx")
         elif accessible_count:
-            match_level = "street_name_accessible_space"
+            match_level = "nearest_segment_approx"
         else:
             match_level = "none"
         props["PARKING_ACCESS"] = category
@@ -769,13 +770,101 @@ def get_enriched_streets():
 
 
 @lru_cache(maxsize=1)
+def street_segments() -> dict:
+    segments = {}
+    for feature in get_enriched_streets()["features"]:
+        props = feature["properties"]
+        city = props["MUNICIPALITY"].lower()
+        source_id = props.get("CAMBRIDGE_SEGMENT_ID") or props.get("MASSDOT_OBJECTID")
+        if source_id is None:
+            # Somerville publishes no segment ID. Keep links stable across row reordering.
+            source_id = hashlib.sha256(
+                _encode_json([props.get("STNAME"), feature["geometry"]])
+            ).hexdigest()[:20]
+        key = f"{city}:{source_id}"
+        if key in segments:
+            raise ValueError(f"Duplicate mapped segment: {key}")
+        segments[key] = feature
+    return segments
+
+
+@lru_cache(maxsize=1)
+def _encoded_map_streets() -> bytes:
+    fields = ("MUNICIPALITY", "STNAME", "PARKING_ACCESS", "PARKING_DISPLAY_STATUS")
+    features = [
+        {
+            "type": "Feature",
+            "id": key,
+            "geometry": feature["geometry"],
+            "properties": {field: feature["properties"].get(field) for field in fields},
+        }
+        for key, feature in street_segments().items()
+    ]
+    return _encode_json({"type": "FeatureCollection", "features": features})
+
+
+@lru_cache(maxsize=1)
+def street_search_groups() -> dict:
+    groups = {}
+    for key, feature in street_segments().items():
+        props = feature["properties"]
+        name = props.get("STNAME")
+        if not name:
+            continue
+        city = props["MUNICIPALITY"]
+        geometry = feature["geometry"]
+        lines = (
+            geometry["coordinates"]
+            if geometry["type"] == "MultiLineString"
+            else [geometry["coordinates"]]
+        )
+        points = [point for line in lines for point in line]
+        if not points:
+            continue
+        xs, ys = zip(*((point[0], point[1]) for point in points))
+        west, south, east, north = min(xs), min(ys), max(xs), max(ys)
+        group = groups.setdefault(
+            (city, name),
+            {
+                "municipality": city,
+                "name": name,
+                "segment_ids": [],
+                "mixed": False,
+                "common_access": props["PARKING_ACCESS"],
+                "bounds": [west, south, east, north],
+            },
+        )
+        if group["common_access"] != props["PARKING_ACCESS"]:
+            group["mixed"] = True
+            group["common_access"] = None
+        group["segment_ids"].append(key)
+        bbox = group["bounds"]
+        group["bounds"] = [
+            min(west, bbox[0]),
+            min(south, bbox[1]),
+            max(east, bbox[2]),
+            max(north, bbox[3]),
+        ]
+    return groups
+
+
+@lru_cache(maxsize=1)
 def _encoded_enriched_streets() -> bytes:
     return _encode_json(get_enriched_streets())
 
 
-@lru_cache(maxsize=1)
-def _encoded_cambridge_meter_spaces() -> bytes:
-    return _encode_json(load_cambridge_meter_spaces())
+def _in_service(feature: dict) -> bool:
+    return str(feature["properties"].get("STATUS") or "").strip().casefold() == "in service"
+
+
+@lru_cache(maxsize=2)
+def _encoded_cambridge_meter_spaces(active_only: bool) -> bytes:
+    collection = load_cambridge_meter_spaces()
+    if active_only:
+        features = [feature for feature in collection["features"] if _in_service(feature)]
+        metadata = {**collection.get("properties", {}), "feature_count": len(features)}
+        collection = {**collection, "properties": metadata, "features": features}
+    return _encode_json(collection)
 
 
 @lru_cache(maxsize=1)
@@ -806,15 +895,17 @@ async def get_health():
 
 
 @app.get("/api/streets")
-async def get_streets():
-    """Return all streets as GeoJSON."""
+async def get_streets(view: Literal["full", "map"] = "full"):
+    """Return GeoJSON with either complete details or just the map styling fields."""
+    if view == "map":
+        return _encoded_json_response(_encoded_map_streets())
     return _encoded_json_response(_encoded_enriched_streets())
 
 
 @app.get("/api/parking-evidence/cambridge/meters")
-async def get_cambridge_meter_spaces():
+async def get_cambridge_meter_spaces(active_only: bool = False):
     """Return Cambridge metered-space evidence geometry as GeoJSON."""
-    return _encoded_json_response(_encoded_cambridge_meter_spaces())
+    return _encoded_json_response(_encoded_cambridge_meter_spaces(active_only))
 
 
 @app.get("/api/parking-evidence/cambridge/accessible")
@@ -853,20 +944,40 @@ async def get_imagery_reference_matches():
     return _json_response(load_imagery_reference_matches())
 
 
+@app.get("/api/streets/segments/{segment_id}")
+async def get_street_details(segment_id: str):
+    feature = street_segments().get(segment_id)
+    if feature is None:
+        raise HTTPException(status_code=404, detail="Unknown street segment")
+    props = dict(feature["properties"])
+    if (
+        props["MUNICIPALITY"] == "Somerville"
+        and str(props.get("OWNERSHIP")).casefold() == "public"
+    ):
+        rule = load_parking_rules().get(_normalize_street_name(props.get("STNAME")), {})
+        props["SCHEDULE_ROWS"] = [
+            {"schedule": schedule, **row}
+            for schedule in ("D", "F")
+            for row in rule.get(f"schedule_{schedule.lower()}_rows", [])
+            if isinstance(row, dict)
+        ]
+    return _json_response(props)
+
+
 @app.get("/api/streets/search")
-async def search_streets(q: str = Query(default="", max_length=100)):
+async def search_streets(
+    q: str = Query(default="", max_length=100),
+    view: Literal["full", "summary"] = "full",
+):
     """Search streets by street name, municipality, or both."""
     streets = get_enriched_streets()
-    if not q:
-        return _json_response(streets)
 
     features = streets.get("features", [])
     query = q.casefold().strip()
     municipality_matches = [
         f
         for f in features
-        if str(f.get("properties", {}).get("MUNICIPALITY") or "").casefold()
-        == query
+        if str(f.get("properties", {}).get("MUNICIPALITY") or "").casefold() == query
     ]
     street_matches = [
         f
@@ -895,6 +1006,15 @@ async def search_streets(q: str = Query(default="", max_length=100)):
             )
         ]
 
+    if view == "summary":
+        groups = street_search_groups()
+        keys = dict.fromkeys(
+            (f["properties"]["MUNICIPALITY"], f["properties"].get("STNAME"))
+            for f in filtered_features
+        )
+        return _json_response(
+            {"results": [groups[key] for key in keys if key in groups]}
+        )
     return _json_response({"type": "FeatureCollection", "features": filtered_features})
 
 
@@ -945,12 +1065,7 @@ async def get_stats():
     public_facilities = load_public_parking_facilities().get("features", [])
     parking_evidence_counts = {
         "cambridge_meter_spaces": len(cambridge_meters),
-        "cambridge_active_meter_spaces": sum(
-            1
-            for feature in cambridge_meters
-            if str(feature.get("properties", {}).get("STATUS") or "").strip().casefold()
-            == "in service"
-        ),
+        "cambridge_active_meter_spaces": sum(_in_service(feature) for feature in cambridge_meters),
         "cambridge_accessible_spaces": len(cambridge_accessible),
         "public_parking_facilities": len(public_facilities),
         "cambridge_public_parking_facilities": sum(

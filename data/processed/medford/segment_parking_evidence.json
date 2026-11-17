@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-21T21:14:08.133139+00:00",
+  "generated_at_utc": "2026-11-17T18:29:35.625738+00:00",
   "municipality": "medford",
   "source_files": [
     "data/processed/medford/streets.geojson",
@@ -8,14 +8,14 @@
   "parser_note": "Segment evidence matches partial resident-permit rows to MassDOT centerline FROM_STREET/TO_STREET values. Unmatched partial rows are intentionally not applied to every segment on the street.",
   "segment_count": 2145,
   "parking_access_counts": {
-    "unknown": 1596,
-    "resident_permit_segment_rules_known": 309,
+    "unknown": 1587,
+    "resident_permit_segment_rules_known": 318,
     "resident_permit_required": 136,
     "resident_permit_time_restricted": 104
   },
   "unique_street_counts": {
-    "resident_permit_required": 90,
-    "resident_permit_segment_rules_known": 54,
+    "resident_permit_required": 89,
+    "resident_permit_segment_rules_known": 55,
     "resident_permit_time_restricted": 32,
     "unknown": 528
   },
@@ -2709,15 +2709,15 @@
       "matched_rows": []
     },
     "67580": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "67633": {
@@ -4305,15 +4305,15 @@
       "matched_rows": []
     },
     "88624": {
-      "parking_access": "resident_permit_segment_rules_known",
-      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
-      "confidence": "low",
-      "match_level": "street_name_partial_rows_unmatched",
+      "parking_access": "resident_permit_required",
+      "parking_note": "Medford resident-permit source has a street-level row for this street. Confirm posted signs.",
+      "confidence": "medium",
+      "match_level": "street_name_full_row",
       "street_key": "TROUT AVE",
       "rule_count": 1,
-      "partial_rule_count": 1,
+      "partial_rule_count": 0,
       "matched_partial_rule_count": 0,
-      "rule_summary": "Traincroft Private Way from NW from 118 Traincroft to Badger RD",
+      "rule_summary": "Resident",
       "matched_rows": []
     },
     "88625": {
@@ -4485,39 +4485,39 @@
       "matched_rows": []
     },
     "90676": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "90677": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "90678": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "90730": {
@@ -5649,15 +5649,15 @@
       "matched_rows": []
     },
     "108788": {
-      "parking_access": "resident_permit_required",
-      "parking_note": "Medford resident-permit source has a street-level row for this street. Confirm posted signs.",
-      "confidence": "medium",
-      "match_level": "street_name_full_row",
+      "parking_access": "unknown",
+      "parking_note": "The permit list has an incomplete row for this street. Check the posted signs.",
+      "confidence": "none",
+      "match_level": "unresolved_source_row",
       "street_key": "PIGGOTT RD",
       "rule_count": 1,
       "partial_rule_count": 0,
       "matched_partial_rule_count": 0,
-      "rule_summary": "Resident",
+      "rule_summary": "Permit type missing",
       "matched_rows": []
     },
     "108839": {
@@ -6417,15 +6417,15 @@
       "matched_rows": []
     },
     "121319": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "121669": {
@@ -6657,39 +6657,39 @@
       "matched_rows": []
     },
     "126256": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "126257": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "126258": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "126276": {
@@ -7185,27 +7185,27 @@
       "matched_rows": []
     },
     "134283": {
-      "parking_access": "resident_permit_time_restricted",
-      "parking_note": "Medford documents a resident-permit restriction with scheduled hours for this street. Check the source detail and posted signs for when it applies.",
-      "confidence": "medium",
-      "match_level": "street_name_time_window",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "BOYNTON RD",
       "rule_count": 1,
-      "partial_rule_count": 0,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
       "rule_summary": "Lower End Monday - Friday",
       "matched_rows": []
     },
     "134355": {
-      "parking_access": "resident_permit_segment_rules_known",
-      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
-      "confidence": "low",
-      "match_level": "street_name_partial_rows_unmatched",
+      "parking_access": "resident_permit_required",
+      "parking_note": "Medford resident-permit source has a street-level row for this street. Confirm posted signs.",
+      "confidence": "medium",
+      "match_level": "street_name_full_row",
       "street_key": "TROUT AVE",
       "rule_count": 1,
-      "partial_rule_count": 1,
+      "partial_rule_count": 0,
       "matched_partial_rule_count": 0,
-      "rule_summary": "Traincroft Private Way from NW from 118 Traincroft to Badger RD",
+      "rule_summary": "Resident",
       "matched_rows": []
     },
     "134442": {
@@ -7281,15 +7281,15 @@
       "matched_rows": []
     },
     "135314": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "135696": {
@@ -9484,6 +9484,8 @@
           "has_segment_clues": true,
           "has_time_clues": false,
           "scope": "partial_or_segment_specific",
+          "page": 1,
+          "row": 30,
           "source_id": "medford_resident_permit_streets_pdf",
           "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
         }
@@ -9778,10 +9780,10 @@
       "matched_rows": []
     },
     "174041": {
-      "parking_access": "resident_permit_required",
-      "parking_note": "Medford resident-permit source has a street-level row for this street. Confirm posted signs.",
+      "parking_access": "resident_permit_time_restricted",
+      "parking_note": "Medford documents a resident-permit restriction with scheduled hours for this street. Check the source detail and posted signs for when it applies.",
       "confidence": "medium",
-      "match_level": "street_name_full_row",
+      "match_level": "street_name_time_window",
       "street_key": "ROSS ST",
       "rule_count": 1,
       "partial_rule_count": 0,
@@ -10325,6 +10327,8 @@
           "has_segment_clues": true,
           "has_time_clues": false,
           "scope": "partial_or_segment_specific",
+          "page": 1,
+          "row": 3,
           "source_id": "medford_resident_permit_streets_pdf",
           "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
         }
@@ -10362,6 +10366,8 @@
           "has_segment_clues": true,
           "has_time_clues": false,
           "scope": "partial_or_segment_specific",
+          "page": 1,
+          "row": 3,
           "source_id": "medford_resident_permit_streets_pdf",
           "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
         }
@@ -10387,6 +10393,8 @@
           "has_segment_clues": true,
           "has_time_clues": false,
           "scope": "partial_or_segment_specific",
+          "page": 1,
+          "row": 3,
           "source_id": "medford_resident_permit_streets_pdf",
           "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
         }
@@ -10412,6 +10420,8 @@
           "has_segment_clues": true,
           "has_time_clues": false,
           "scope": "partial_or_segment_specific",
+          "page": 1,
+          "row": 3,
           "source_id": "medford_resident_permit_streets_pdf",
           "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
         }
@@ -23570,15 +23580,15 @@
       "matched_rows": []
     },
     "376863": {
-      "parking_access": "unknown",
-      "parking_note": "No Medford resident-permit row matched this street in the current source data.",
-      "confidence": "none",
-      "match_level": "none",
+      "parking_access": "resident_permit_segment_rules_known",
+      "parking_note": "Medford has segment-specific permit row(s) for this street, but this centerline segment did not match the row endpoints.",
+      "confidence": "low",
+      "match_level": "street_name_partial_rows_unmatched",
       "street_key": "TRAINCROFT",
-      "rule_count": 0,
-      "partial_rule_count": 0,
+      "rule_count": 1,
+      "partial_rule_count": 1,
       "matched_partial_rule_count": 0,
-      "rule_summary": "",
+      "rule_summary": "Private Way from NW from 118 Traincroft to Badger RD",
       "matched_rows": []
     },
     "377076": {

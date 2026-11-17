@@ -18,7 +18,7 @@ This repo currently implements a Somerville, Medford, and Cambridge prototype:
 - Public parking facilities include 13 Somerville municipal lots, 6 operator-published Assembly Row visitor garages, the Assembly Marketplace customer lot, and 9 Cambridge municipal lots plus 2 municipal garages.
 - Cambridge streets render as a neutral network because curb-level rules are not yet mapped. Official active-meter polygons and accessible-space points are enabled as separate evidence layers by default and nearest-matched only for sidebar context, never whole-street status. Inactive, removed, and proposed meter records remain available to the data pipeline but are not drawn as default map dots.
 - Street lines are red only where localized permit/private/restricted evidence safely applies to that segment, and gray where the exact curb remains unresolved. Somerville's citywide resident-permit baseline appears in click/search answers instead of recoloring every public centerline; partial metered or time-limited exceptions never recolor an entire street. Exact active meter polygons remain blue.
-- Matching is street-name based, not exact block-segment based.
+- Search zooms to the matching street. For streets with multiple blocks, select a block to see its details. Mixed restrictions are identified in the search answer.
 - Boston and other surrounding communities are target future coverage areas.
 
 ## Features
@@ -63,7 +63,7 @@ To rebuild Cambridge GIS-derived data:
 python3 build_cambridge_data.py
 ```
 
-The Cambridge output keeps meter polygons as their own evidence layer plus approximate nearest-street summaries. Each meter feature retains its nearest-centerline distance and threshold for review. A street with one matched meter is not treated as fully metered.
+To rematch the saved Cambridge geometry offline, run `python3 build_cambridge_data.py --from-snapshot`. Both modes retain the source metadata, the matched segment ID and the centerline distance. The sidebar shows the selected segment’s counts. Hours, rates and maximum stays come from its in-service meters. The meter polygons and accessible-space points load at zoom 15.
 
 To rebuild the current public lot and garage layer:
 
@@ -127,10 +127,10 @@ The UI does not promote a citywide policy or street-name-only exception into an 
 
 - `build_parking_rules.py` parses Schedule D/F from the city PDF and writes `data/parking_rules_by_street.json`.
 - `scripts/fetch_public_sources.py` validates declared PDFs/JSON before replacement and records resolved URL, HTTP validators, byte count, and SHA-256 metadata.
-- `build_parking_coverage.py` combines loaded city sources into evidence-backed coverage summaries and Medford segment-level matches.
+- `build_parking_coverage.py` writes Medford segment matches and a three-city coverage report. The `segment_rule_coverage` counts distinguish matched block rules, street-level evidence and unresolved segments. Cambridge point and polygon evidence counts separately.
 - `build_public_parking_facilities.py` normalizes municipal Somerville/Cambridge sources and operator-published Assembly Row facilities into one point layer while retaining ownership and operator labels.
 - Somerville public streets retain the **Resident Permit Required** citywide baseline from the regulations, but render neutrally until curb-level exceptions are mapped.
-- If a public street has Schedule F rows, it is labeled **Permit Street with Metered Segments**.
+- An explicit meter listing or installation in Schedule F can establish a metered exception. Removals and seasonal changes remain source evidence. The block details link to the PDF page for each street-level regulation row.
 - If a public street has Schedule D time-limited rows, it is labeled **Permit Street with Time-Limited Segments**.
 - Private streets are labeled **Private Street Rules Apply**.
 - Medford sources are tracked in `data/source_manifest.json`; `build_medford_rules_seed.py` emits row-level resident-permit records under `data/processed/medford/`.
@@ -187,7 +187,8 @@ parkingmap/
 - `GET /` - Main map page
 - `GET /api/version` - Running application version
 - `GET /api/health` - Lightweight deployment health check
-- `GET /api/streets` - All streets as GeoJSON
+- `GET /api/streets` - All streets as GeoJSON. Add `?view=map` for geometry, stable segment IDs and styling fields.
+- `GET /api/streets/segments/{segment_id}` - Details for one selected block.
 - `GET /api/parking-evidence/cambridge/meters` - Cambridge metered-space evidence GeoJSON
 - `GET /api/parking-evidence/cambridge/accessible` - Cambridge public accessible-space evidence GeoJSON
 - `GET /api/parking-evidence/public-facilities` - Source-backed Somerville/Cambridge public-access lots and garages
@@ -195,7 +196,7 @@ parkingmap/
 - `GET /api/parking-evidence/imagery/detections` - Image-derived parking evidence GeoJSON
 - `GET /api/parking-evidence/imagery/reference-signs` - Experimental Mapillary parking-sign references (research API; not shown in the driver UI)
 - `GET /api/parking-evidence/imagery/reference-matches` - Experimental image/reference matches (research API; not shown in the driver UI)
-- `GET /api/streets/search?q=<query>` - Search streets by name
+- `GET /api/streets/search?q=<query>` - Search streets by name. Add `&view=summary` for grouped segment IDs, bounds and mixed-rule status.
 - `GET /api/stats` - Street statistics
 
 ## Future Enhancements

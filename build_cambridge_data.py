@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import math
@@ -267,49 +268,59 @@ def distance_point_to_segment(point, start, end) -> float:
     return math.hypot(px - closest_x, py - closest_y)
 
 
-def build_street_index(features: list[dict]) -> list[dict]:
-    all_points = [
-        tuple(point)
-        for feature in features
-        for point in coordinates_for_feature(feature)
-        if len(point) >= 2
-    ]
-    origin_lat = sum(point[1] for point in all_points) / len(all_points)
+def build_street_index(features: list[dict], origin_lat: float) -> list[dict]:
     index = []
+    seen_ids = set()
     for feature in features:
-        coords = coordinates_for_feature(feature)
-        if len(coords) < 2:
-            continue
-        local_coords = [
-            to_local_meters((point[0], point[1]), origin_lat) for point in coords
-        ]
-        index.append(
-            {
-                "street_name": feature["properties"].get("STNAME"),
-                "street_key": normalize_street_name(
-                    feature["properties"].get("STNAME")
-                ),
-                "segments": list(zip(local_coords, local_coords[1:])),
-            }
-        )
+        props = feature["properties"]
+        segment_id = props["CAMBRIDGE_SEGMENT_ID"]
+        if not segment_id or segment_id in seen_ids:
+            raise SourceValidationError(
+                "Cambridge segment IDs must be present and unique"
+            )
+        seen_ids.add(segment_id)
+        geometry = feature["geometry"]
+        parts = geometry["coordinates"]
+        if geometry["type"] == "LineString":
+            parts = [parts]
+        edges = []
+        for part in parts:
+            points = [to_local_meters(point, origin_lat) for point in part]
+            edges.extend(zip(points, points[1:]))
+        if edges:
+            xs, ys = zip(*(point for edge in edges for point in edge))
+            index.append(
+                {
+                    "segment_id": segment_id,
+                    "street_name": props["STNAME"],
+                    "street_key": normalize_street_name(props["STNAME"]),
+                    "bounds": (min(xs), min(ys), max(xs), max(ys)),
+                    "edges": edges,
+                }
+            )
     return index
 
 
-def nearest_street(
-    point: tuple[float, float], street_index: list[dict], origin_lat: float
-) -> tuple[str, str, float]:
+def nearest_street(point, street_index, origin_lat):
     local_point = to_local_meters(point, origin_lat)
-    best_key = ""
-    best_name = ""
-    best_distance = float("inf")
+    x, y = local_point
+    best = None
+    distance = float("inf")
     for street in street_index:
-        for start, end in street["segments"]:
-            distance = distance_point_to_segment(local_point, start, end)
-            if distance < best_distance:
-                best_distance = distance
-                best_key = street["street_key"]
-                best_name = street["street_name"]
-    return best_key, best_name, best_distance
+        left, bottom, right, top = street["bounds"]
+        if (
+            x < left - distance
+            or x > right + distance
+            or y < bottom - distance
+            or y > top + distance
+        ):
+            continue
+        candidate = min(
+            distance_point_to_segment(local_point, a, b) for a, b in street["edges"]
+        )
+        if candidate < distance:
+            best, distance = street, candidate
+    return best, distance
 
 
 def summarize_distances(distances: list[float]) -> dict | None:
@@ -332,10 +343,7 @@ def summarize_distances(distances: list[float]) -> dict | None:
     }
 
 
-def summarize_metered_spaces(
-    meter_features: list[dict], street_features: list[dict]
-) -> dict:
-    street_index = build_street_index(street_features)
+def summarize_spaces(meter_features, street_features, accessible_features) -> dict:
     all_points = [
         tuple(point)
         for feature in street_features
@@ -343,6 +351,7 @@ def summarize_metered_spaces(
         if len(point) >= 2
     ]
     origin_lat = sum(point[1] for point in all_points) / len(all_points)
+    street_index = build_street_index(street_features, origin_lat)
     summaries = defaultdict(
         lambda: {
             "meter_count_estimate": 0,
@@ -354,6 +363,7 @@ def summarize_metered_spaces(
             "match_distances": [],
         }
     )
+    by_segment = defaultdict(summaries.default_factory)
     unmatched = 0
     all_match_distances = []
     for feature in meter_features:
@@ -363,9 +373,9 @@ def summarize_metered_spaces(
             props["MATCH_CONFIDENCE"] = "unmatched_no_geometry"
             unmatched += 1
             continue
-        street_key, street_name, distance = nearest_street(
-            point, street_index, origin_lat
-        )
+        street, distance = nearest_street(point, street_index, origin_lat)
+        street_name = street["street_name"]
+        street_key = street["street_key"]
         props["NEAREST_STREET"] = street_name
         props["NEAREST_STREET_KEY"] = street_key
         props["MATCH_DISTANCE_METERS"] = round(distance, 2)
@@ -377,30 +387,41 @@ def summarize_metered_spaces(
         props["MATCHED_STREET"] = street_name
         props["MATCHED_STREET_KEY"] = street_key
         props["MATCH_CONFIDENCE"] = "nearest_street_approx"
-        summary = summaries[street_key]
-        summary["meter_count_estimate"] += 1
-        if is_active_meter_status(props.get("STATUS")):
-            summary["active_meter_count_estimate"] += 1
-        summary["meter_operation_hours"][clean_text(props.get("OPERATION_HOURS"))] += 1
-        summary["meter_max_times"][clean_text(props.get("MAX_TIME"))] += 1
-        summary["meter_rates"][clean_text(props.get("RATE"))] += 1
-        summary["match_distances"].append(distance)
+        segment_id = street["segment_id"]
+        props["MATCHED_SEGMENT_ID"] = segment_id
+        for summary in (summaries[street_key], by_segment[segment_id]):
+            summary["meter_count_estimate"] += 1
+            if is_active_meter_status(props.get("STATUS")):
+                summary["active_meter_count_estimate"] += 1
+                summary["meter_operation_hours"][
+                    clean_text(props.get("OPERATION_HOURS"))
+                ] += 1
+                summary["meter_max_times"][clean_text(props.get("MAX_TIME"))] += 1
+                summary["meter_rates"][clean_text(props.get("RATE"))] += 1
+            summary["match_distances"].append(distance)
         all_match_distances.append(distance)
+    streets_by_name = defaultdict(list)
+    for street in street_index:
+        streets_by_name[street["street_key"]].append(street)
+    for feature in accessible_features:
+        props = feature["properties"]
+        point = point_coordinates(feature["geometry"])
+        candidates = streets_by_name.get(normalize_street_name(props["STNAME"]))
+        if point and candidates:
+            street, distance = nearest_street(point, candidates, origin_lat)
+            if distance <= METER_MATCH_THRESHOLD_METERS:
+                props["MATCHED_SEGMENT_ID"] = street["segment_id"]
+                props["MATCH_DISTANCE_METERS"] = round(distance, 2)
+                summary = by_segment[street["segment_id"]]
+                summary["accessible_space_count"] = (
+                    summary.get("accessible_space_count", 0) + 1
+                )
     return {
         "streets": summaries,
+        "segments": by_segment,
         "unmatched_meter_spaces": unmatched,
         "match_distance_meters": summarize_distances(all_match_distances),
     }
-
-
-def summarize_accessible_spaces(accessible: dict) -> dict:
-    counts = Counter()
-    for feature in accessible.get("features", []):
-        props = feature.get("properties") or {}
-        key = normalize_street_name(clean_text(props.get("StreetName")))
-        if key:
-            counts[key] += 1
-    return counts
 
 
 def counter_to_list(counter: Counter) -> list[dict]:
@@ -466,8 +487,30 @@ def build() -> tuple[dict, dict, dict, dict]:
         for feature in raw_accessible.get("features", [])
         if feature.get("geometry")
     ]
-    meter_summary = summarize_metered_spaces(meter_features, street_features)
-    accessible_counts = summarize_accessible_spaces(raw_accessible)
+    return assemble_layers(
+        street_features,
+        meter_features,
+        accessible_features,
+        street_source,
+        meter_source,
+        accessible_source,
+    )
+
+
+def assemble_layers(
+    street_features,
+    meter_features,
+    accessible_features,
+    street_source,
+    meter_source,
+    accessible_source,
+):
+    meter_summary = summarize_spaces(
+        meter_features, street_features, accessible_features
+    )
+    accessible_counts = Counter(
+        normalize_street_name(f["properties"]["STNAME"]) for f in accessible_features
+    )
 
     rules = {}
     for feature in street_features:
@@ -485,25 +528,26 @@ def build() -> tuple[dict, dict, dict, dict]:
                 "accessible_space_count": accessible_counts.get(key, 0),
             }
 
-    for key, summary in meter_summary["streets"].items():
-        record = rules.setdefault(
-            key,
-            {
-                "street_name": key,
-                "accessible_space_count": accessible_counts.get(key, 0),
-            },
-        )
-        record["meter_count_estimate"] = summary["meter_count_estimate"]
-        record["active_meter_count_estimate"] = summary["active_meter_count_estimate"]
-        record["meter_match_confidence"] = summary["meter_match_confidence"]
-        record["meter_operation_hours"] = counter_to_list(
-            summary["meter_operation_hours"]
-        )
-        record["meter_max_times"] = counter_to_list(summary["meter_max_times"])
-        record["meter_rates"] = counter_to_list(summary["meter_rates"])
-        record["meter_match_distance_meters"] = summarize_distances(
-            summary["match_distances"]
-        )
+    segments = {}
+    for scope, records in (("streets", rules), ("segments", segments)):
+        for key, summary in meter_summary[scope].items():
+            record = records.setdefault(key, {})
+            for field in ("meter_count_estimate", "active_meter_count_estimate"):
+                record[field] = summary[field]
+            if scope == "segments":
+                record["accessible_space_count"] = summary.get(
+                    "accessible_space_count", 0
+                )
+            record["meter_match_confidence"] = (
+                "nearest_segment_approx"
+                if scope == "segments"
+                else "nearest_street_approx"
+            )
+            for field in ("meter_operation_hours", "meter_max_times", "meter_rates"):
+                record[field] = counter_to_list(summary[field])
+            record["meter_match_distance_meters"] = summarize_distances(
+                summary["match_distances"]
+            )
 
     now = datetime.now(timezone.utc).isoformat()
     streets_geojson = {
@@ -531,8 +575,8 @@ def build() -> tuple[dict, dict, dict, dict]:
             "accessible_spaces": accessible_source,
         },
         "parser_note": (
-            "Meter polygons are matched to nearest street centerline; this is a street-level "
-            "summary and must not be treated as exact curb geometry. Match distance is "
+            "Meter polygons are matched to the nearest centerline segment. An approximate "
+            "association does not establish curb rules. Match distance is "
             "retained on each meter feature for quality review."
         ),
         "meter_match_threshold_meters": METER_MATCH_THRESHOLD_METERS,
@@ -543,6 +587,7 @@ def build() -> tuple[dict, dict, dict, dict]:
         ),
         "unmatched_meter_spaces": meter_summary["unmatched_meter_spaces"],
         "streets": rules,
+        "segments": segments,
     }
     meters_geojson = {
         "type": "FeatureCollection",
@@ -573,12 +618,42 @@ def build() -> tuple[dict, dict, dict, dict]:
 
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    streets_geojson, rules_json, meters_geojson, accessible_geojson = build()
-    STREETS_OUTPUT_PATH.write_text(json.dumps(streets_geojson, indent=2) + "\n")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--from-snapshot",
+        action="store_true",
+        help="Rematch the saved Cambridge geometry using its original source metadata.",
+    )
+    from_snapshot = parser.parse_args().from_snapshot
+    if from_snapshot:
+        layers = [
+            json.loads(path.read_text())
+            for path in (
+                STREETS_OUTPUT_PATH,
+                METERS_OUTPUT_PATH,
+                ACCESSIBLE_OUTPUT_PATH,
+            )
+        ]
+        # Clear previously derived associations before running the matcher again.
+        for feature in layers[1]["features"] + layers[2]["features"]:
+            props = feature["properties"]
+            for key in list(props):
+                if key.startswith(("NEAREST_", "MATCHED_", "MATCH_")):
+                    del props[key]
+        streets_geojson, rules_json, meters_geojson, accessible_geojson = (
+            assemble_layers(
+                *(layer["features"] for layer in layers),
+                *(layer["properties"]["source"] for layer in layers),
+            )
+        )
+    else:
+        streets_geojson, rules_json, meters_geojson, accessible_geojson = build()
+        STREETS_OUTPUT_PATH.write_text(json.dumps(streets_geojson, indent=2) + "\n")
     RULES_OUTPUT_PATH.write_text(json.dumps(rules_json, indent=2) + "\n")
     METERS_OUTPUT_PATH.write_text(json.dumps(meters_geojson, indent=2) + "\n")
     ACCESSIBLE_OUTPUT_PATH.write_text(json.dumps(accessible_geojson, indent=2) + "\n")
-    print(f"Wrote {STREETS_OUTPUT_PATH}")
+    if not from_snapshot:
+        print(f"Wrote {STREETS_OUTPUT_PATH}")
     print(f"Wrote {RULES_OUTPUT_PATH}")
     print(f"Wrote {METERS_OUTPUT_PATH}")
     print(f"Wrote {ACCESSIBLE_OUTPUT_PATH}")

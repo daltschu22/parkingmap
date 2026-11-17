@@ -1,12 +1,43 @@
 {
-  "generated_at_utc": "2026-07-21T21:14:08.172498+00:00",
-  "note": "Coverage counts summarize current evidence-backed classification. Unknown means the loaded sources do not determine a rule; it does not mean parking is unrestricted.",
+  "generated_at_utc": "2026-11-17T18:29:36.416234+00:00",
+  "note": "Each mapped centerline is counted once. A block-specific rule has matched endpoints. Street-level evidence includes citywide baselines and ownership. Unresolved segments may have individual mapped parking spaces or incomplete source rows.",
   "municipalities": {
+    "somerville": {
+      "resident_permit_required": 1058,
+      "permit_with_time_limited_segments": 464,
+      "private_rules_apply": 253,
+      "unknown": 127,
+      "permit_with_metered_segments": 397
+    },
     "medford": {
-      "unknown": 1596,
-      "resident_permit_segment_rules_known": 309,
+      "unknown": 1587,
+      "resident_permit_segment_rules_known": 318,
       "resident_permit_required": 136,
       "resident_permit_time_restricted": 104
+    },
+    "cambridge": {
+      "unknown": 2643
     }
-  }
+  },
+  "segment_rule_coverage": {
+    "somerville": {
+      "block_specific_rule": 0,
+      "street_level_evidence_only": 2172,
+      "unresolved": 127,
+      "total_segments": 2299
+    },
+    "medford": {
+      "block_specific_rule": 5,
+      "street_level_evidence_only": 553,
+      "unresolved": 1587,
+      "total_segments": 2145
+    },
+    "cambridge": {
+      "block_specific_rule": 0,
+      "street_level_evidence_only": 0,
+      "unresolved": 2643,
+      "total_segments": 2643
+    }
+  },
+  "cambridge_segments_with_active_meter_evidence": 343
 }

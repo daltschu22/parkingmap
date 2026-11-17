@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-21T21:14:07.995424+00:00",
+  "generated_at_utc": "2026-11-17T18:29:35.457785+00:00",
   "municipality": "medford",
   "source_id": "medford_resident_permit_streets_pdf",
   "source_file": "data/raw/medford/resident-permit-parking-streets.pdf",
@@ -13,9 +13,9 @@
     "bytes": 104463,
     "sha256": "d15dfa588df1f25015a0be6423176ecf4adc610c2a47771ded0e61f244eec63e"
   },
-  "parser_note": "First-pass text extraction from the Medford resident-permit PDF. Rows with partial_or_segment_specific scope must not be applied to an entire street.",
-  "row_count": 191,
-  "street_count": 181,
+  "parser_note": "Rows extracted from the four columns of the Medford resident-permit PDF. Rows with partial_or_segment_specific scope must not be applied to an entire street.",
+  "row_count": 192,
+  "street_count": 182,
   "rows": [
     {
       "street_name": "Abbott Street",
@@ -26,6 +26,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 2,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -38,6 +40,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 3,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -50,6 +54,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 4,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -62,6 +68,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 5,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -74,6 +82,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 6,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -86,6 +96,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 7,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -98,6 +110,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 8,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -110,6 +124,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 9,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -122,6 +138,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 10,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -134,6 +152,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 11,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -146,6 +166,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 12,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -158,6 +180,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 13,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -170,6 +194,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 14,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -182,6 +208,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 15,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -194,6 +222,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 16,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -206,6 +236,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 17,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -218,6 +250,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 18,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -230,6 +264,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 19,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -242,6 +278,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 20,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -254,6 +292,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 21,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -266,6 +306,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 22,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -278,6 +320,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 23,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -290,6 +334,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 24,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -302,6 +348,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 25,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -314,6 +362,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 26,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -326,6 +376,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 27,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -338,6 +390,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 28,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -350,6 +404,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 29,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -362,6 +418,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 30,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -374,6 +432,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 1,
+      "row": 31,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -383,9 +443,11 @@
       "restriction_text": "Lower End Monday - Friday",
       "permit_type": "Resident",
       "zone": null,
-      "has_segment_clues": false,
+      "has_segment_clues": true,
       "has_time_clues": true,
-      "scope": "street_level_time_window",
+      "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 32,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -398,6 +460,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 33,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -410,6 +474,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 34,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -422,6 +488,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 35,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -434,6 +502,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 36,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -446,6 +516,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 37,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -458,6 +530,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 38,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -470,6 +544,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 39,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -482,6 +558,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 40,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -494,6 +572,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 1,
+      "row": 41,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -506,6 +586,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 42,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -518,6 +600,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 1,
+      "row": 43,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -530,6 +614,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 1,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -542,6 +628,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 2,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -554,6 +642,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 3,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -566,6 +656,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 4,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -578,6 +670,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 5,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -590,6 +684,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 6,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -602,6 +698,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 7,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -614,6 +712,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 8,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -626,6 +726,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 9,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -638,6 +740,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 10,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -650,6 +754,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 11,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -662,6 +768,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 12,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -674,6 +782,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 13,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -686,6 +796,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 14,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -698,6 +810,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 15,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -710,6 +824,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 16,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -722,6 +838,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 17,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -734,6 +852,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 18,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -746,6 +866,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 19,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -758,6 +880,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 20,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -770,6 +894,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 21,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -782,6 +908,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 22,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -794,6 +922,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 23,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -806,6 +936,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 24,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -818,6 +950,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 25,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -830,6 +964,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 26,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -842,6 +978,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 27,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -854,6 +992,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 28,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -866,6 +1006,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 29,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -878,6 +1020,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 30,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -890,6 +1034,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 2,
+      "row": 31,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -902,6 +1048,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 32,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -914,6 +1062,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 33,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -926,6 +1076,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 34,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -938,6 +1090,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 35,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -950,6 +1104,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 36,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -962,6 +1118,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 37,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -974,6 +1132,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 38,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -986,6 +1146,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 39,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -998,6 +1160,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 40,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1010,6 +1174,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 41,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1022,6 +1188,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 42,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1034,6 +1202,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 43,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1046,6 +1216,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 2,
+      "row": 44,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1058,6 +1230,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 2,
+      "row": 45,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1070,6 +1244,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 1,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1082,6 +1258,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 2,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1094,6 +1272,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 3,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1106,6 +1286,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 4,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1118,6 +1300,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 5,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1130,6 +1314,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 6,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1142,6 +1328,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 7,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1154,6 +1342,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 8,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1166,6 +1356,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 9,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1178,6 +1370,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 10,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1190,6 +1384,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 11,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1202,6 +1398,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 12,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1214,6 +1412,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 13,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1226,6 +1426,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 14,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1238,6 +1440,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 15,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1250,6 +1454,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 16,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1262,6 +1468,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 17,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1274,6 +1482,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 18,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1286,6 +1496,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 19,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1298,6 +1510,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 20,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1310,6 +1524,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 21,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1322,6 +1538,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 22,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1334,6 +1552,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 23,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1346,6 +1566,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 24,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1358,6 +1580,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 25,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1370,6 +1594,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 26,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1382,6 +1608,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 27,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1394,6 +1622,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 28,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1406,6 +1636,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 29,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1418,6 +1650,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 30,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1430,6 +1664,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 31,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1442,6 +1678,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 32,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1454,6 +1692,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 33,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1466,6 +1706,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 34,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1478,6 +1720,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 35,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1490,6 +1734,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 36,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1502,6 +1748,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 37,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1514,6 +1762,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 3,
+      "row": 38,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1526,6 +1776,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 3,
+      "row": 39,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1538,6 +1790,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 40,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1550,6 +1804,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 41,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1561,7 +1817,9 @@
       "zone": null,
       "has_segment_clues": false,
       "has_time_clues": false,
-      "scope": "likely_full_street",
+      "scope": "unresolved",
+      "page": 3,
+      "row": 42,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1574,6 +1832,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 3,
+      "row": 43,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1586,6 +1846,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 1,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1598,6 +1860,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 2,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1610,6 +1874,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 3,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1622,6 +1888,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 4,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1634,6 +1902,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 5,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1646,6 +1916,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 6,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1658,6 +1930,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 7,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1670,6 +1944,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 8,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1682,6 +1958,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 9,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1694,6 +1972,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 10,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1706,6 +1986,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 11,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1716,8 +1998,10 @@
       "permit_type": "Resident",
       "zone": null,
       "has_segment_clues": false,
-      "has_time_clues": false,
-      "scope": "likely_full_street",
+      "has_time_clues": true,
+      "scope": "street_level_time_window",
+      "page": 4,
+      "row": 12,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1730,6 +2014,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 13,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1742,6 +2028,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 14,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1754,6 +2042,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 15,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1766,6 +2056,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 16,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1778,6 +2070,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 17,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1790,6 +2084,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 18,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1802,6 +2098,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 19,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1814,6 +2112,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 20,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1823,9 +2123,11 @@
       "restriction_text": "Both sides enforced and permitted by Medford",
       "permit_type": "Resident",
       "zone": null,
-      "has_segment_clues": false,
+      "has_segment_clues": true,
       "has_time_clues": false,
-      "scope": "likely_full_street",
+      "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 21,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1838,6 +2140,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 22,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1850,6 +2154,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 23,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1862,6 +2168,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 24,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1874,6 +2182,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 25,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1886,6 +2196,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 26,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1898,6 +2210,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 27,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1910,6 +2224,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 28,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1922,6 +2238,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 29,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1934,6 +2252,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 30,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1946,6 +2266,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 31,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1958,6 +2280,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 32,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1970,6 +2294,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 33,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -1982,18 +2308,36 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 34,
+      "source_id": "medford_resident_permit_streets_pdf",
+      "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+    },
+    {
+      "street_name": "Traincroft",
+      "raw_text": "Traincroft Private Way from NW from 118 Traincroft to Badger RD Resident",
+      "restriction_text": "Private Way from NW from 118 Traincroft to Badger RD",
+      "permit_type": "Resident",
+      "zone": null,
+      "has_segment_clues": true,
+      "has_time_clues": false,
+      "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 35,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
     {
       "street_name": "Trout Avenue",
-      "raw_text": "Trout Avenue Traincroft Private Way from NW from 118 Traincroft to Badger RD Resident Resident",
-      "restriction_text": "Traincroft Private Way from NW from 118 Traincroft to Badger RD",
-      "permit_type": "Resident Resident",
+      "raw_text": "Trout Avenue Resident",
+      "restriction_text": "",
+      "permit_type": "Resident",
       "zone": null,
-      "has_segment_clues": true,
+      "has_segment_clues": false,
       "has_time_clues": false,
-      "scope": "partial_or_segment_specific",
+      "scope": "likely_full_street",
+      "page": 4,
+      "row": 36,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2006,6 +2350,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 37,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2018,6 +2364,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 38,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2030,6 +2378,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 39,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2042,6 +2392,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 40,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2054,6 +2406,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 41,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2066,6 +2420,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 42,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2078,6 +2434,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 43,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2090,6 +2448,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 4,
+      "row": 44,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2102,6 +2462,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 4,
+      "row": 45,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2114,6 +2476,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 46,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2126,6 +2490,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 4,
+      "row": 47,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2138,6 +2504,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 5,
+      "row": 1,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2150,6 +2518,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 5,
+      "row": 2,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2162,6 +2532,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 5,
+      "row": 3,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2174,6 +2546,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 5,
+      "row": 4,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2186,6 +2560,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 5,
+      "row": 5,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2198,6 +2574,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 5,
+      "row": 6,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2210,6 +2588,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 5,
+      "row": 7,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2222,6 +2602,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 5,
+      "row": 8,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2234,6 +2616,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 5,
+      "row": 9,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2246,6 +2630,8 @@
       "has_segment_clues": true,
       "has_time_clues": false,
       "scope": "partial_or_segment_specific",
+      "page": 5,
+      "row": 10,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2258,6 +2644,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 5,
+      "row": 11,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2270,6 +2658,8 @@
       "has_segment_clues": false,
       "has_time_clues": true,
       "scope": "street_level_time_window",
+      "page": 5,
+      "row": 12,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2282,6 +2672,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 5,
+      "row": 13,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2294,6 +2686,8 @@
       "has_segment_clues": false,
       "has_time_clues": false,
       "scope": "likely_full_street",
+      "page": 5,
+      "row": 14,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     },
@@ -2306,6 +2700,8 @@
       "has_segment_clues": true,
       "has_time_clues": true,
       "scope": "partial_or_segment_specific",
+      "page": 5,
+      "row": 15,
       "source_id": "medford_resident_permit_streets_pdf",
       "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
     }
@@ -2321,6 +2717,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 2,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2335,6 +2733,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 3,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2349,6 +2749,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 4,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2361,6 +2763,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 5,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2373,6 +2777,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 6,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2387,6 +2793,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 7,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2399,6 +2807,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 8,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2411,6 +2821,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 9,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2425,6 +2837,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 10,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2439,6 +2853,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 11,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2453,6 +2869,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 12,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2467,6 +2885,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 13,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2481,6 +2901,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 14,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2495,6 +2917,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 15,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2509,6 +2933,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 16,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2523,6 +2949,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 17,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2537,6 +2965,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 18,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2551,6 +2981,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 19,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2565,6 +2997,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 20,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2579,6 +3013,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 21,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2593,6 +3029,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 22,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2605,6 +3043,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 23,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2617,6 +3057,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 24,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2631,6 +3073,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 25,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2643,6 +3087,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 26,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -2655,6 +3101,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 27,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2669,6 +3117,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 28,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2683,6 +3133,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 29,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2697,6 +3149,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 30,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2711,6 +3165,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 1,
+        "row": 31,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2722,9 +3178,11 @@
         "restriction_text": "Lower End Monday - Friday",
         "permit_type": "Resident",
         "zone": null,
-        "has_segment_clues": false,
+        "has_segment_clues": true,
         "has_time_clues": true,
-        "scope": "street_level_time_window",
+        "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 32,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2739,6 +3197,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 33,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2753,6 +3213,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 34,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2767,6 +3229,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 35,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2781,6 +3245,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 36,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2795,6 +3261,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 37,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2809,6 +3277,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 38,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2823,6 +3293,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 39,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2837,6 +3309,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 40,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2851,6 +3325,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 1,
+        "row": 41,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2865,6 +3341,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 42,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2879,6 +3357,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 1,
+        "row": 43,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2893,6 +3373,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 1,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2907,6 +3389,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 2,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2921,6 +3405,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 3,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2935,6 +3421,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 4,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2949,6 +3437,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 5,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2963,6 +3453,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 6,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2977,6 +3469,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 7,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -2991,6 +3485,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 8,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3005,6 +3501,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 9,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3019,6 +3517,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 10,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3033,6 +3533,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 11,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3047,6 +3549,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 12,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3061,6 +3565,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 13,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3075,6 +3581,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 14,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3089,6 +3597,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 15,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3103,6 +3613,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 16,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3117,6 +3629,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 17,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3131,6 +3645,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 18,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3145,6 +3661,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 19,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3159,6 +3677,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 20,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3173,6 +3693,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 21,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3187,6 +3709,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 22,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3201,6 +3725,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 23,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3215,6 +3741,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 24,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3229,6 +3757,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 25,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3243,6 +3773,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 26,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -3255,6 +3787,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 27,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3269,6 +3803,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 28,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3283,6 +3819,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 29,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3297,6 +3835,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 30,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3311,6 +3851,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 2,
+        "row": 31,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3325,6 +3867,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 32,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3339,6 +3883,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 33,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3353,6 +3899,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 34,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3367,6 +3915,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 35,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3381,6 +3931,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 36,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3395,6 +3947,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 37,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3409,6 +3963,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 38,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3423,6 +3979,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 39,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3437,6 +3995,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 40,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3451,6 +4011,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 41,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3465,6 +4027,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 42,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3479,6 +4043,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 43,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3493,6 +4059,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 2,
+        "row": 44,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3507,6 +4075,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 2,
+        "row": 45,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3521,6 +4091,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 1,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3535,6 +4107,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 2,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3549,6 +4123,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 3,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3563,6 +4139,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 4,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3577,6 +4155,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 5,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3591,6 +4171,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 6,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3605,6 +4187,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 7,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       },
@@ -3617,6 +4201,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 8,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3631,6 +4217,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 9,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3645,6 +4233,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 10,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3659,6 +4249,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 11,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3673,6 +4265,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 12,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3687,6 +4281,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 13,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3701,6 +4297,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 14,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3715,6 +4313,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 15,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3729,6 +4329,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 16,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3743,6 +4345,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 17,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3757,6 +4361,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 18,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3771,6 +4377,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 19,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3785,6 +4393,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 20,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3799,6 +4409,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 21,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3813,6 +4425,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 22,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3827,6 +4441,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 23,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3841,6 +4457,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 24,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3855,6 +4473,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 25,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3869,6 +4489,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 26,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3883,6 +4505,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 27,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3897,6 +4521,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 28,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3911,6 +4537,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 29,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3925,6 +4553,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 30,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3939,6 +4569,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 31,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3953,6 +4585,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 32,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3967,6 +4601,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 33,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3981,6 +4617,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 34,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -3995,6 +4633,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 35,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4009,6 +4649,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 36,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4023,6 +4665,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 37,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4037,6 +4681,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 3,
+        "row": 38,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4051,6 +4697,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 3,
+        "row": 39,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4065,6 +4713,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 40,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4079,6 +4729,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 41,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4092,7 +4744,9 @@
         "zone": null,
         "has_segment_clues": false,
         "has_time_clues": false,
-        "scope": "likely_full_street",
+        "scope": "unresolved",
+        "page": 3,
+        "row": 42,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4107,6 +4761,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 3,
+        "row": 43,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4121,6 +4777,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 1,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4135,6 +4793,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 2,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4149,6 +4809,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 3,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4163,6 +4825,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 4,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4177,6 +4841,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 5,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4191,6 +4857,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 6,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4205,6 +4873,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 7,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4219,6 +4889,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 8,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4233,6 +4905,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 9,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4247,6 +4921,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 10,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4261,6 +4937,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 11,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4273,8 +4951,10 @@
         "permit_type": "Resident",
         "zone": null,
         "has_segment_clues": false,
-        "has_time_clues": false,
-        "scope": "likely_full_street",
+        "has_time_clues": true,
+        "scope": "street_level_time_window",
+        "page": 4,
+        "row": 12,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4289,6 +4969,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 13,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4303,6 +4985,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 14,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4317,6 +5001,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 15,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4331,6 +5017,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 16,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4345,6 +5033,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 17,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4359,6 +5049,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 18,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4373,6 +5065,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 19,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4387,6 +5081,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 20,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4398,9 +5094,11 @@
         "restriction_text": "Both sides enforced and permitted by Medford",
         "permit_type": "Resident",
         "zone": null,
-        "has_segment_clues": false,
+        "has_segment_clues": true,
         "has_time_clues": false,
-        "scope": "likely_full_street",
+        "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 21,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4415,6 +5113,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 22,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4429,6 +5129,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 23,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4443,6 +5145,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 24,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4457,6 +5161,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 25,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4471,6 +5177,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 26,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4485,6 +5193,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 27,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4499,6 +5209,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 28,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4513,6 +5225,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 29,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4527,6 +5241,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 30,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4541,6 +5257,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 31,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4555,6 +5273,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 32,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4569,6 +5289,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 33,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4583,6 +5305,24 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 34,
+        "source_id": "medford_resident_permit_streets_pdf",
+        "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
+      }
+    ],
+    "TRAINCROFT": [
+      {
+        "street_name": "Traincroft",
+        "raw_text": "Traincroft Private Way from NW from 118 Traincroft to Badger RD Resident",
+        "restriction_text": "Private Way from NW from 118 Traincroft to Badger RD",
+        "permit_type": "Resident",
+        "zone": null,
+        "has_segment_clues": true,
+        "has_time_clues": false,
+        "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 35,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4590,13 +5330,15 @@
     "TROUT AVENUE": [
       {
         "street_name": "Trout Avenue",
-        "raw_text": "Trout Avenue Traincroft Private Way from NW from 118 Traincroft to Badger RD Resident Resident",
-        "restriction_text": "Traincroft Private Way from NW from 118 Traincroft to Badger RD",
-        "permit_type": "Resident Resident",
+        "raw_text": "Trout Avenue Resident",
+        "restriction_text": "",
+        "permit_type": "Resident",
         "zone": null,
-        "has_segment_clues": true,
+        "has_segment_clues": false,
         "has_time_clues": false,
-        "scope": "partial_or_segment_specific",
+        "scope": "likely_full_street",
+        "page": 4,
+        "row": 36,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4611,6 +5353,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 37,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4625,6 +5369,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 38,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4639,6 +5385,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 39,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4653,6 +5401,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 40,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4667,6 +5417,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 41,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4681,6 +5433,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 42,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4695,6 +5449,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 43,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4709,6 +5465,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 4,
+        "row": 44,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4723,6 +5481,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 4,
+        "row": 45,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4737,6 +5497,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 46,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4751,6 +5513,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 4,
+        "row": 47,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4765,6 +5529,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 5,
+        "row": 1,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4779,6 +5545,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 5,
+        "row": 2,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4793,6 +5561,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 5,
+        "row": 3,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4807,6 +5577,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 5,
+        "row": 4,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4821,6 +5593,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 5,
+        "row": 5,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4835,6 +5609,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 5,
+        "row": 6,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4849,6 +5625,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 5,
+        "row": 7,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4863,6 +5641,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 5,
+        "row": 8,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4877,6 +5657,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 5,
+        "row": 9,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4891,6 +5673,8 @@
         "has_segment_clues": true,
         "has_time_clues": false,
         "scope": "partial_or_segment_specific",
+        "page": 5,
+        "row": 10,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4905,6 +5689,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 5,
+        "row": 11,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4919,6 +5705,8 @@
         "has_segment_clues": false,
         "has_time_clues": true,
         "scope": "street_level_time_window",
+        "page": 5,
+        "row": 12,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4933,6 +5721,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 5,
+        "row": 13,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4947,6 +5737,8 @@
         "has_segment_clues": false,
         "has_time_clues": false,
         "scope": "likely_full_street",
+        "page": 5,
+        "row": 14,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }
@@ -4961,6 +5753,8 @@
         "has_segment_clues": true,
         "has_time_clues": true,
         "scope": "partial_or_segment_specific",
+        "page": 5,
+        "row": 15,
         "source_id": "medford_resident_permit_streets_pdf",
         "source_file": "data/raw/medford/resident-permit-parking-streets.pdf"
       }

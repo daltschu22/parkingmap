@@ -81,65 +81,22 @@ def endpoint_aliases(value: object) -> set[str]:
     return {alias for alias in aliases if alias}
 
 
-def endpoint_matches_text(endpoint: object, text_key: str) -> bool:
-    return any(alias and alias in text_key for alias in endpoint_aliases(endpoint))
-
-
-def is_simple_endpoint_rule(row: dict) -> bool:
-    """Return whether a partial rule can safely map to one whole centerline segment.
-
-    Complex rows with multiple ranges, ownership changes, address ranges, sides,
-    or distance clauses need curb geometry and must remain unresolved.
-    """
-    raw_text = str(row.get("restriction_text") or row.get("raw_text") or "")
-    normalized = normalize_street_name(raw_text)
-    if len(re.findall(r"\bTO\b", normalized)) != 1:
-        return False
-
-    complex_scope_patterns = (
-        r"#\s*\d",
-        r"\b(?:NORTH|SOUTH|EAST|WEST|ODD|EVEN) SIDE\b",
-        r"\bBOTH SIDES\b",
-        r"\bIN FRONT OF\b",
-        r"\bPUBLIC\b",
-        r"\bPRIVATE(?: WAY)?\b",
-        r"\b(?:RESIDENTIAL|NON RESIDENTIAL) USES\b",
-        r"\b(?:FEET|FOOT|FT)\b",
-        r"\bONLY\b",
-    )
-    return not any(re.search(pattern, normalized) for pattern in complex_scope_patterns)
-
-
 def row_matches_segment(row: dict, props: dict) -> bool:
-    """Return True when a partial rule row appears to match this centerline segment.
-
-    Most Medford partial rows are phrased as "A to B" while MassDOT centerlines
-    expose `FROM_STREET` and `TO_STREET`. We require both segment endpoints to
-    appear in the row text to avoid broad street-level overmatching.
-    """
-    if not is_simple_endpoint_rule(row):
+    """Only promote an unqualified pair of matching cross streets."""
+    endpoints = normalize_street_name(row.get("restriction_text")).split(" TO ")
+    if len(endpoints) != 2:
         return False
-
-    row_text = normalize_street_name(
-        " ".join(
-            str(row.get(field) or "") for field in ("restriction_text", "raw_text")
-        )
-    )
-    from_street = props.get("FROM_STREET")
-    to_street = props.get("TO_STREET")
-    if not row_text or not from_street or not to_street:
-        return False
-
-    from_match = endpoint_matches_text(from_street, row_text)
-    to_match = endpoint_matches_text(to_street, row_text)
-    return from_match and to_match
+    start, end = endpoints
+    from_names = endpoint_aliases(props.get("FROM_STREET"))
+    to_names = endpoint_aliases(props.get("TO_STREET"))
+    return (start in from_names and end in to_names) or (end in from_names and start in to_names)
 
 
 def summarize_rows(rows: list[dict], limit: int = 3) -> str:
     parts = []
     for row in rows[:limit]:
         parts.append(
-            row.get("restriction_text") or row.get("permit_type") or "Resident"
+            row.get("restriction_text") or row.get("permit_type") or "Permit type missing"
         )
     return " | ".join(part for part in parts if part)
 
@@ -208,6 +165,11 @@ def build_medford_segment_evidence() -> dict:
                 "Medford has segment-specific permit row(s) for this street, but this centerline "
                 "segment did not match the row endpoints."
             )
+        elif rows:
+            category = "unknown"
+            confidence = "none"
+            match_level = "unresolved_source_row"
+            note = "The permit list has an incomplete row for this street. Check the posted signs."
         else:
             category = "unknown"
             confidence = "none"
@@ -256,15 +218,45 @@ def build_medford_segment_evidence() -> dict:
     }
 
 
-def build_coverage_report(medford_evidence: dict) -> dict:
-    counts = {"medford": medford_evidence["parking_access_counts"]}
+def build_coverage_report(features: list[dict]) -> dict:
+    coverage = {}
+    access_counts = defaultdict(Counter)
+    active_meter_segments = 0
+    for feature in features:
+        props = feature["properties"]
+        city = props["MUNICIPALITY"].lower()
+        counts = coverage.setdefault(
+            city,
+            {
+                "block_specific_rule": 0,
+                "street_level_evidence_only": 0,
+                "unresolved": 0,
+            },
+        )
+        access = props["PARKING_ACCESS"]
+        access_counts[city][access] += 1
+        if props["PARKING_RULE_MATCH_LEVEL"] == "segment_endpoint_match":
+            counts["block_specific_rule"] += 1
+        elif access == "unknown":
+            counts["unresolved"] += 1
+        else:
+            counts["street_level_evidence_only"] += 1
+        if props.get("PARKING_CAMBRIDGE_ACTIVE_METER_COUNT_ESTIMATE", 0) > 0:
+            active_meter_segments += 1
+    if not {"somerville", "medford", "cambridge"}.issubset(coverage):
+        raise ValueError("Missing municipality in the mapped street network")
+    for counts in coverage.values():
+        counts["total_segments"] = sum(counts.values())
     return {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "note": (
-            "Coverage counts summarize current evidence-backed classification. Unknown means "
-            "the loaded sources do not determine a rule; it does not mean parking is unrestricted."
+            "Each mapped centerline is counted once. A block-specific rule has matched endpoints. "
+            "Street-level evidence includes citywide baselines and ownership. Unresolved segments "
+            "may have individual mapped parking spaces or incomplete source rows."
         ),
-        "municipalities": counts,
+        "municipalities": dict(access_counts),
+        "segment_rule_coverage": coverage,
+        "cambridge_segments_with_active_meter_evidence": active_meter_segments,
     }
 
 
@@ -275,7 +267,9 @@ def main() -> None:
     MEDFORD_SEGMENT_OUTPUT_PATH.write_text(
         json.dumps(medford_evidence, indent=2) + "\n"
     )
-    coverage_report = build_coverage_report(medford_evidence)
+    from app import get_enriched_streets
+
+    coverage_report = build_coverage_report(get_enriched_streets()["features"])
     COVERAGE_OUTPUT_PATH.write_text(json.dumps(coverage_report, indent=2) + "\n")
 
     print(f"Wrote {MEDFORD_SEGMENT_OUTPUT_PATH}")

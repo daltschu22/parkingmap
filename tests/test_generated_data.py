@@ -195,8 +195,8 @@ def test_medford_rules_match_the_fetched_official_source_and_keep_row_volume():
     )
     source_pdf = BASE_DIR / rules["source"]["file"]
 
-    assert rules["row_count"] == 191
-    assert rules["street_count"] == 181
+    assert rules["row_count"] == 192
+    assert rules["street_count"] == 182
     assert rules["source"]["sha256"] == hashlib.sha256(source_pdf.read_bytes()).hexdigest()
     assert rules["source"]["sha256"] == metadata["sha256"]
     assert rules["source"]["url"] == metadata["final_url"]

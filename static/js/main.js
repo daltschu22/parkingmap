@@ -46,6 +46,8 @@ let selectedStreetName = null;
 let hoveredStreetName = null;
 let hoverResetTimer = null;
 let searchRequestVersion = 0;
+let detailRequestVersion = 0;
+const streetLayersById = new Map();
 let userLocationLayer = null;
 const searchResultStreetKeys = new Set();
 const evidenceLoadPromises = new Map();
@@ -61,6 +63,7 @@ function escapeHtml(value) {
 }
 
 function safeExternalUrl(value) {
+    if (!value) return '';
     try {
         const url = new URL(String(value || ''), window.location.origin);
         return url.protocol === 'https:' ? url.href : '';
@@ -99,6 +102,7 @@ function showSelectionPanel() {
 }
 
 function showEmptyState() {
+    detailRequestVersion++;
     const empty = document.getElementById('empty-state');
     const close = document.getElementById('clear-selection-btn');
     const details = document.getElementById('street-details');
@@ -281,7 +285,7 @@ function getAtGlanceAnswer(properties = {}) {
     if (municipality === 'somerville' && access === 'permit_with_metered_segments') {
         return {
             tone: 'caution', title: 'Permit or marked meter',
-            summary: 'A resident permit is the baseline on City streets. Metered exceptions exist, but their exact curb locations are not in the source.'
+            summary: 'A resident permit is the baseline on City streets. Check the marked meter and its hours. The regulation rows below describe locations along this street.'
         };
     }
     if (municipality === 'somerville' && access === 'permit_with_time_limited_segments') {
@@ -401,9 +405,10 @@ function streetFacts(properties, answer) {
     const payment = evidence === 'active_meter_spaces_nearby' || access.includes('metered')
         ? 'At marked meter'
         : (answer.tone === 'allowed' ? 'See signs' : 'Not confirmed');
-    const certainty = properties.PARKING_RULE_MATCH_LEVEL === 'segment'
-        ? 'Segment matched'
-        : 'Street-level only';
+    const match = properties.PARKING_RULE_MATCH_LEVEL;
+    let certainty = 'Street-level only';
+    if (match === 'segment_endpoint_match') certainty = 'Block matched';
+    if (!match || match === 'none' || match === 'unresolved_source_row') certainty = 'Unresolved';
     return [['Permit', permit], ['Payment', payment], ['Curb certainty', certainty]];
 }
 
@@ -425,12 +430,18 @@ function showStreetDetails(properties = {}) {
         ['From / to', [properties.FROM_STREET, properties.TO_STREET].filter(Boolean).join(' to ')],
         ['Ownership', properties.OWNERSHIP],
         ['One way', formatOneway(properties.ONEWAY)],
-        ['Documented meter spaces', properties.PARKING_CAMBRIDGE_ACTIVE_METER_COUNT_ESTIMATE],
+        ['Active meters matched to this block', properties.PARKING_CAMBRIDGE_ACTIVE_METER_COUNT_ESTIMATE],
+        ['Distance to centerline', properties.PARKING_CAMBRIDGE_MATCH_DISTANCE],
         ['Meter hours', properties.PARKING_CAMBRIDGE_METER_HOURS],
         ['Meter maximum', properties.PARKING_CAMBRIDGE_METER_MAX_TIMES],
         ['Meter rates', properties.PARKING_CAMBRIDGE_METER_RATES],
         ['Medford rule summary', properties.PARKING_MEDFORD_RULE_SUMMARY]
     ];
+    const sourceRows = (properties.SCHEDULE_ROWS || []).map((row) => [
+        `Schedule ${row.schedule} · p. ${row.page}`,
+        [row.location, row.side, row.from, row.to, row.restriction].filter(Boolean).join(' · '),
+        `${sourceUrl}#page=${row.page}`
+    ]);
     container.innerHTML = `
         <article class="parking-answer parking-answer--${escapeHtml(answer.tone)}">
             <p class="answer-eyebrow">Can I park here?</p>
@@ -443,6 +454,7 @@ function showStreetDetails(properties = {}) {
         <details class="answer-details">
             <summary>Why this answer?</summary>
             <div class="answer-detail-body">${renderDetailRows(rows)}</div>
+            ${sourceRows.length ? `<details><summary>Regulation rows for this street (${sourceRows.length})</summary>${renderDetailRows(sourceRows)}</details>` : ''}
         </details>`;
     showSelectionPanel();
 }
@@ -454,6 +466,7 @@ function formatMeterRate(value) {
 }
 
 function showMeterDetails(properties = {}) {
+    detailRequestVersion++;
     const container = document.getElementById('street-details');
     if (!container) return;
     const status = properties.STATUS || 'Unknown';
@@ -482,6 +495,7 @@ function showMeterDetails(properties = {}) {
 }
 
 function showAccessibleDetails(properties = {}) {
+    detailRequestVersion++;
     const container = document.getElementById('street-details');
     if (!container) return;
     const address = `${properties.STREET_NUMBER ? `${properties.STREET_NUMBER} ` : ''}${properties.STNAME || 'Unknown street'}`;
@@ -501,6 +515,7 @@ function showAccessibleDetails(properties = {}) {
 }
 
 function showFacilityDetails(feature = {}) {
+    detailRequestVersion++;
     const properties = feature.properties || {};
     const container = document.getElementById('street-details');
     if (!container) return;
@@ -543,18 +558,32 @@ function showFacilityDetails(feature = {}) {
     showSelectionPanel();
 }
 
+async function openSegment(id, key) {
+    const version = ++detailRequestVersion;
+    selectStreet(key, streetLayersById.get(id));
+    const container = document.getElementById('street-details');
+    container.textContent = 'Loading block details…';
+    showSelectionPanel();
+    try {
+        const properties = await fetchJson(`/api/streets/segments/${encodeURIComponent(id)}`);
+        if (version === detailRequestVersion) showStreetDetails(properties);
+    } catch (error) {
+        if (version === detailRequestVersion) container.textContent = 'Block details could not be loaded. Tap the block to retry.';
+    }
+}
+
 function onEachStreet(feature, layer) {
+    streetLayersById.set(feature.id, layer);
     const properties = feature.properties || {};
     const label = `${properties.STNAME || 'Unknown street'} · ${properties.MUNICIPALITY || 'Unknown city'}`;
     layer.bindTooltip(escapeHtml(label), { sticky: true, className: 'street-tooltip', direction: 'top' });
     layer.on({
         mouseover: (event) => applyHoverStreet(getStreetKey(event.target.feature)),
         mouseout: (event) => scheduleHoverReset(getStreetKey(event.target.feature)),
-        click: (event) => {
-            selectStreet(getStreetKey(feature), event.target);
-            showStreetDetails(properties);
-            resetHover();
-            applyLayerRestStyle(event.target);
+        click: () => {
+            searchRequestVersion++;
+            setAppStatus('');
+            void openSegment(feature.id, getStreetKey(feature));
         }
     });
 }
@@ -562,7 +591,7 @@ function onEachStreet(feature, layer) {
 async function loadStreets() {
     try {
         setAppStatus('Loading streets…');
-        const data = await fetchJson('/api/streets');
+        const data = await fetchJson('/api/streets?view=map');
         if (allStreetsLayer) map.removeLayer(allStreetsLayer);
         allStreetsLayer = L.geoJSON(data, {
             style: getStreetStyle,
@@ -570,7 +599,7 @@ async function loadStreets() {
             onEachFeature: onEachStreet
         }).addTo(map);
         refreshSelectionStyles();
-        setAppStatus('');
+        if (!searchRequestVersion) setAppStatus('');
     } catch (error) {
         console.error('Error loading streets:', error);
         setAppStatus('Street data could not be loaded. Please retry.', true);
@@ -579,19 +608,6 @@ async function loadStreets() {
 
 function isActiveMeter(properties = {}) {
     return String(properties.STATUS || '').trim().toLowerCase() === 'in service';
-}
-
-function meterEvidenceStyle(properties = {}) {
-    const color = isActiveMeter(properties) ? COLORS.metered : COLORS.inactiveMeterEvidence;
-    const detailed = map.getZoom() >= 15;
-    return {
-        color,
-        weight: detailed ? 1 : 0,
-        opacity: detailed ? 0.9 : 0,
-        fillColor: color,
-        fillOpacity: detailed ? 0.52 : 0,
-        interactive: detailed
-    };
 }
 
 function createFacilityCluster() {
@@ -609,13 +625,13 @@ function makeEvidenceDefinitions() {
     return [
         {
             key: 'meters',
+            minZoom: 15,
             label: 'Cambridge meter spaces',
-            url: '/api/parking-evidence/cambridge/meters',
+            url: '/api/parking-evidence/cambridge/meters?active_only=true',
             group: meterEvidenceLayer,
             options: {
                 renderer: hitRenderer,
-                filter: (feature) => isActiveMeter(feature.properties || {}),
-                style: (feature) => meterEvidenceStyle(feature.properties || {}),
+                style: { color: COLORS.metered, weight: 1, opacity: 0.9, fillOpacity: 0.52 },
                 onEachFeature: (feature, layer) => layer.on('click', () => showMeterDetails(feature.properties || {}))
             }
         },
@@ -640,6 +656,7 @@ function makeEvidenceDefinitions() {
         },
         {
             key: 'accessible',
+            minZoom: 15,
             label: 'Cambridge accessible spaces',
             url: '/api/parking-evidence/cambridge/accessible',
             group: accessibleEvidenceLayer,
@@ -672,7 +689,6 @@ async function ensureEvidenceLayer(definition) {
                 definition.group.addLayer(geoJsonLayer);
             }
             loadedEvidenceLayers.add(definition.key);
-            updateEvidenceRendering();
         })
         .catch((error) => {
             console.error(`Error loading ${definition.label}:`, error);
@@ -721,24 +737,15 @@ function setupMapEvidenceKey() {
 }
 
 function updateEvidenceRendering() {
-    const detailed = map.getZoom() >= 15;
-    meterEvidenceLayer?.eachLayer((layer) => {
-        if (typeof layer.eachLayer !== 'function') return;
-        layer.eachLayer((shape) => {
-            if (shape.feature && typeof shape.setStyle === 'function') {
-                const style = meterEvidenceStyle(shape.feature.properties || {});
-                shape.setStyle(style);
-                shape.options.interactive = style.interactive;
-            }
-        });
-    });
-    accessibleEvidenceLayer?.eachLayer((layer) => {
-        if (typeof layer.eachLayer !== 'function') return;
-        layer.eachLayer((marker) => {
-            if (typeof marker.setOpacity === 'function') marker.setOpacity(detailed ? 1 : 0);
-            if (marker.getElement()) marker.getElement().style.pointerEvents = detailed ? '' : 'none';
-        });
-    });
+    for (const definition of evidenceDefinitions) {
+        const input = document.querySelector(`[data-evidence-layer="${definition.key}"]`);
+        if (input?.checked && map.getZoom() >= (definition.minZoom || 0)) {
+            if (!map.hasLayer(definition.group)) definition.group.addTo(map);
+            void ensureEvidenceLayer(definition);
+        } else if (map.hasLayer(definition.group)) {
+            map.removeLayer(definition.group);
+        }
+    }
 }
 
 function setupParkingEvidence() {
@@ -750,55 +757,42 @@ function setupParkingEvidence() {
 
     document.querySelectorAll('[data-evidence-layer]').forEach((input) => {
         input.addEventListener('change', () => {
-            const definition = evidenceDefinitions.find((item) => item.key === input.dataset.evidenceLayer);
-            if (!definition) return;
-            if (input.checked) {
-                definition.group.addTo(map);
-                void ensureEvidenceLayer(definition);
-            } else {
-                map.removeLayer(definition.group);
-            }
+            updateEvidenceRendering();
             updateMapEvidenceKey();
         });
     });
 
-    evidenceDefinitions.forEach((definition) => {
-        const input = document.querySelector(`[data-evidence-layer="${definition.key}"]`);
-        if (input?.checked) {
-            definition.group.addTo(map);
-            void ensureEvidenceLayer(definition);
-        }
-    });
+    updateEvidenceRendering();
 }
 
-function groupSearchResults(features = []) {
-    const grouped = new Map();
-    features.forEach((feature) => {
-        const key = getStreetKey(feature);
-        if (!key) return;
-        if (!grouped.has(key)) grouped.set(key, { key, feature, count: 0, layers: [] });
-        grouped.get(key).count += 1;
-    });
-    forEachStreetLayer((layer) => {
-        const result = grouped.get(getStreetKey(layer.feature));
-        if (result) result.layers.push(layer);
-    });
-    return [...grouped.values()].sort((a, b) => {
-        const city = String(a.feature.properties?.MUNICIPALITY || '').localeCompare(String(b.feature.properties?.MUNICIPALITY || ''));
-        return city || String(a.feature.properties?.STNAME || '').localeCompare(String(b.feature.properties?.STNAME || ''));
-    });
+function searchBounds(result) {
+    const [west, south, east, north] = result.bounds;
+    return L.latLngBounds([south, west], [north, east]);
 }
 
 function focusSearchResult(result) {
-    if (!result) return;
-    const bounds = L.latLngBounds([]);
-    result.layers.forEach((layer) => {
-        if (typeof layer.getBounds === 'function') bounds.extend(layer.getBounds());
-    });
-    if (bounds.isValid()) map.fitBounds(bounds, { padding: [55, 55], maxZoom: 17 });
-    const selectedLayer = result.layers[0] || null;
-    selectStreet(result.key, selectedLayer);
-    showStreetDetails(result.feature.properties || {});
+    map.fitBounds(searchBounds(result), { padding: [55, 55], maxZoom: 17 });
+    const key = `${result.municipality}:${result.name}`.toUpperCase();
+    searchResultStreetKeys.clear();
+    searchResultStreetKeys.add(key);
+    if (result.segment_ids.length === 1) {
+        void openSegment(result.segment_ids[0], key);
+    } else {
+        detailRequestVersion++;
+        selectStreet(key);
+        const title = result.mixed ? 'Rules vary by block' : 'Choose your block';
+        const context = result.common_access && result.municipality === 'Somerville'
+            ? getAtGlanceAnswer({ MUNICIPALITY: result.municipality, PARKING_ACCESS: result.common_access }).title
+            : '';
+        document.getElementById('street-details').innerHTML = `
+            <article class="parking-answer parking-answer--caution">
+                <p class="answer-location">${escapeHtml(result.name)} · ${escapeHtml(result.municipality)}</p>
+                <h3 class="answer-title">${title}</h3>
+                ${context ? `<p class="answer-summary">${escapeHtml(context)}</p>` : ''}
+                <p class="answer-summary">Tap your block on the map to see its parking rules and sources.</p>
+            </article>`;
+        showSelectionPanel();
+    }
     const searchResults = document.getElementById('search-results');
     if (searchResults) searchResults.hidden = true;
 }
@@ -812,10 +806,9 @@ function renderSearchResults(results) {
         return;
     }
     container.innerHTML = results.slice(0, 8).map((result, index) => {
-        const properties = result.feature.properties || {};
         return `<button type="button" class="search-result-button" data-result-index="${index}">
-            <span><span class="search-result-name">${escapeHtml(properties.STNAME || 'Unknown street')}</span><span class="search-result-city">${escapeHtml(properties.MUNICIPALITY || '')}</span></span>
-            <span class="search-result-count">${result.count} segment${result.count === 1 ? '' : 's'}</span>
+            <span><span class="search-result-name">${escapeHtml(result.name)}</span><span class="search-result-city">${escapeHtml(result.municipality)}</span></span>
+            <span class="search-result-count">${result.segment_ids.length} segment${result.segment_ids.length === 1 ? '' : 's'}</span>
         </button>`;
     }).join('');
     container.hidden = false;
@@ -833,31 +826,31 @@ async function searchStreets(query) {
         selectedStreetLayer = null;
         selectedStreetName = null;
         showEmptyState();
-        const data = await fetchJson(`/api/streets/search?q=${encodeURIComponent(query)}`);
+        const data = await fetchJson(`/api/streets/search?view=summary&q=${encodeURIComponent(query)}`);
         if (requestVersion !== searchRequestVersion) return;
-        const features = data.features || [];
-        if (!features.length) {
+        const results = data.results.sort((a, b) => a.municipality.localeCompare(b.municipality) || a.name.localeCompare(b.name));
+        if (!results.length) {
             refreshSelectionStyles();
             renderSearchResults([]);
             setAppStatus(`No streets found matching “${query}”.`, true);
             if (isMobile()) setPanelExpanded(true);
             return;
         }
-        features.forEach((feature) => {
-            const key = getStreetKey(feature);
-            if (key) searchResultStreetKeys.add(key);
-        });
+        for (const result of results) {
+            searchResultStreetKeys.add(`${result.municipality}:${result.name}`.toUpperCase());
+        }
         refreshSelectionStyles();
-        const results = groupSearchResults(features);
         renderSearchResults(results);
-        const allBounds = L.latLngBounds([]);
-        results.flatMap((result) => result.layers).forEach((layer) => {
-            if (typeof layer.getBounds === 'function') allBounds.extend(layer.getBounds());
-        });
-        if (allBounds.isValid()) map.fitBounds(allBounds, { padding: [55, 55], maxZoom: 17 });
-        if (results.length === 1) focusSearchResult(results[0]);
-        else if (isMobile()) setPanelExpanded(true);
-        setAppStatus(`${results.length} matching street${results.length === 1 ? '' : 's'} · ${features.length} mapped segments`);
+        if (results.length === 1) {
+            focusSearchResult(results[0]);
+        } else {
+            const bounds = L.latLngBounds([]);
+            results.forEach((result) => bounds.extend(searchBounds(result)));
+            map.fitBounds(bounds, { padding: [55, 55], maxZoom: 17 });
+            if (isMobile()) setPanelExpanded(true);
+        }
+        const count = results.reduce((total, result) => total + result.segment_ids.length, 0);
+        setAppStatus(`${results.length} matching street${results.length === 1 ? '' : 's'} · ${count} mapped segments`);
     } catch (error) {
         if (requestVersion !== searchRequestVersion) return;
         console.error('Error searching streets:', error);

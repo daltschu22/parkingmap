@@ -3,12 +3,15 @@ Build a structured per-street parking rules dataset from Somerville traffic regu
 """
 from __future__ import annotations
 
+from bisect import bisect_right
+from collections import Counter
 import hashlib
 import json
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 
+import pdfplumber
 from pypdf import PdfReader
 
 BASE_DIR = Path(__file__).parent
@@ -17,7 +20,7 @@ PDF_PATH = DATA_DIR / "traffic-regulations.pdf"
 STREETS_PATH = DATA_DIR / "streets.geojson"
 OUTPUT_PATH = DATA_DIR / "parking_rules_by_street.json"
 SOURCE_METADATA_PATH = PDF_PATH.with_suffix(PDF_PATH.suffix + ".metadata.json")
-PARSER_VERSION = 2
+PARSER_VERSION = 3
 
 
 class SourceValidationError(ValueError):
@@ -85,108 +88,118 @@ def load_street_candidates() -> tuple[list[str], dict[str, str]]:
     return candidates, names
 
 
-def split_lines(page_text: str) -> list[str]:
-    return [line.strip() for line in page_text.splitlines() if line.strip()]
+def schedule_pages(reader: PdfReader) -> dict[str, int]:
+    pages = {}
+    for index, page in enumerate(reader.pages):
+        for letter in re.findall(
+            r"^\s*SCHEDULE\s+([DEFG])\s*$", page.extract_text() or "", re.I | re.M
+        ):
+            pages[letter.upper()] = index
+    if sorted(pages) != list("DEFG") or [pages[k] for k in "DEFG"] != sorted(
+        pages.values()
+    ):
+        raise SourceValidationError(
+            "Expected Somerville schedules D, E, F and G in order"
+        )
+    return pages
 
 
-def find_schedule_page(reader: PdfReader, schedule_letter: str) -> int:
-    pattern = re.compile(rf"^SCHEDULE\s+{schedule_letter}\s*$", re.IGNORECASE)
-    matches = []
-    for page_index, page in enumerate(reader.pages):
-        text = page.extract_text() or ""
-        lines = split_lines(text)
-        if any(pattern.match(line) for line in lines):
-            matches.append(page_index)
-    if not matches:
-        return -1
-    # The final occurrence is the actual schedule section, not the table of contents.
-    return matches[-1]
-
-
-def extract_schedule_lines(reader: PdfReader, start_page: int, end_page: int) -> list[str]:
-    if start_page == -1:
-        return []
-    if end_page == -1 or end_page <= start_page:
-        end_page = len(reader.pages)
-
-    out = []
-    for page_index in range(start_page, end_page):
-        text = reader.pages[page_index].extract_text() or ""
-        out.extend(split_lines(text))
-    return out
-
-
-def find_street_prefix(line: str, candidates: list[str]) -> str | None:
-    normalized_line = normalize_street_name(line)
-    if not normalized_line:
-        return None
-    for name in candidates:
-        if normalized_line == name or normalized_line.startswith(f"{name} "):
-            return name
-    return None
-
-
-def rows_from_schedule(lines: list[str], candidates: list[str]) -> dict[str, list[str]]:
-    rows: dict[str, list[str]] = {}
-    current_street = None
-    current_tokens: list[str] = []
-
-    def flush_row():
-        nonlocal current_street, current_tokens
-        if current_street and current_tokens:
-            merged = " ".join(current_tokens).strip()
-            if merged:
-                rows.setdefault(current_street, []).append(merged)
-        current_street = None
-        current_tokens = []
-
-    for raw_line in lines:
-        line = raw_line.strip()
-        if not line:
-            continue
-        if line.upper().startswith("SCHEDULE "):
-            flush_row()
-            continue
-        if line.upper().startswith("LOCATION SIDE FROM TO"):
-            continue
-        if line.upper() == "RESTRICTIONS":
-            continue
-
-        street = find_street_prefix(line, candidates)
-        if street:
-            flush_row()
-            current_street = street
-            current_tokens = [line]
-            continue
-
-        if current_street:
-            current_tokens.append(line)
-
-    flush_row()
+def schedule_rows(document, start: int, end: int) -> list[dict]:
+    rows = []
+    location = ""
+    for index in range(start, end):
+        table = document.pages[index].find_table()
+        if table is None:
+            raise SourceValidationError(
+                f"Missing regulation table on PDF page {index + 1}"
+            )
+        # Some header cells contain extra borders. The ordinary five-column
+        # rows establish column positions even where an individual cell is merged.
+        layouts = Counter(
+            tuple(round(c[0]) for c in row.cells if c) for row in table.rows
+        )
+        columns = next(
+            (layout for layout, _ in layouts.most_common() if len(layout) == 5), None
+        )
+        if columns is None:
+            raise SourceValidationError(
+                f"Unexpected table columns on PDF page {index + 1}"
+            )
+        for row_number, (row, values) in enumerate(zip(table.rows, table.extract()), 1):
+            fields = [""] * 5
+            for box, value in zip(row.cells, values):
+                if box and value:
+                    column = bisect_right(columns, round(box[0])) - 1
+                    fields[column] = (
+                        fields[column] + " " + " ".join(value.split())
+                    ).strip()
+            name, side, start_at, end_at, restriction = fields
+            if name.lower() == "location" or restriction.lower() == "restrictions":
+                continue
+            if not any(fields):
+                continue
+            if row_number == 1 and rows and not any(fields[:4]):
+                previous = rows[-1]
+                previous["restriction"] += " " + restriction
+                previous["raw_text"] += "\n" + restriction
+                previous["end_page"] = index + 1
+                continue
+            if name:
+                location = name
+            rows.append(
+                {
+                    "page": index + 1,
+                    "row": row_number,
+                    "location": location,
+                    "side": side,
+                    "from": start_at,
+                    "to": end_at,
+                    "restriction": restriction,
+                    "raw_text": " | ".join(fields),
+                }
+            )
     return rows
 
 
-def parse_meter_counts(row_text: str) -> tuple[int, bool]:
-    text = row_text.upper()
-    counts = 0
-    saw_meter_word = "METER" in text
+def meter_action(restriction: str) -> str:
+    text = restriction.casefold()
+    if re.search(r"\b(remov\w*|rescind\w*)\b", text):
+        return "seasonal_removal" if "seasonal" in text else "removal"
+    if re.search(r"\b(?:proposed|pending)\b", text):
+        return "proposed"
+    if "seasonal" in text:
+        return "seasonal"
+    if re.search(r"\bmeters?\b|\bmetered\b", text):
+        return "installation" if re.search(r"\binstall\w*\b", text) else "meter_listed"
+    return "other"
 
-    for value in re.findall(r"(?<!#)(\d+)\s*(?:METER|METERS|METERED(?:\s+SPACES?)?)\b", text):
-        counts += int(value)
-    for value in re.findall(r"\((\d+)\)\s*\d+\s*MINUTE\s*METERS?\b", text):
-        counts += int(value)
 
-    return counts, saw_meter_word
+def meter_count(restriction: str) -> int | None:
+    words = {"one": 1, "two": 2, "three": 3, "four": 4, "five": 5}
+    match = re.search(
+        r"(?<![#\w])\(?(\d+|one|two|three|four|five)\)?\s+"
+        r"(?:\d+[- ]*(?:minute|hour|hr)s?\s+)?(?:parking\s+)?meter(?:s|ed\s+spaces?)?\b",
+        restriction.casefold(),
+    )
+    if match:
+        count = match.group(1)
+        return int(count) if count.isdigit() else words[count]
+    spaces = re.search(
+        r"(\d+)\s+(?:parking\s+spaces?\s+metered|spaces?\))", restriction.casefold()
+    )
+    return int(spaces.group(1)) if spaces else None
 
 
-def line_has_time_limit(row_text: str) -> bool:
-    text = row_text.upper()
-    patterns = [
-        r"\b\d+\s*(?:HR|HRS|HOUR|HOURS)\b",
-        r"\b\d+\s*(?:MIN|MINS|MINUTE|MINUTES)\b",
-        r"\b\d{1,2}:\d{2}\s*(?:AM|PM)\s*-\s*\d{1,2}:\d{2}\s*(?:AM|PM)\b",
-    ]
-    return any(re.search(pattern, text) for pattern in patterns)
+def public_time_limit(restriction: str) -> bool:
+    text = restriction.casefold()
+    if re.search(
+        r"no parking|no stopping|tow zone|rescind|remov|proposed|seasonal|pick.?up|drop.?off|loading|charging|police|school|handicap|accessible",
+        text,
+    ):
+        return False
+    return bool(
+        re.search(r"(?:\d+|½)\s*[- ]?\s*(?:hours?|hrs?|h|minutes?|mins?)\b", text)
+    )
 
 
 def source_metadata(reader: PdfReader, first_page_text: str) -> dict:
@@ -237,32 +250,20 @@ def build_rules() -> dict:
     reader = PdfReader(PDF_PATH)
     first_page_text = reader.pages[0].extract_text() or ""
     first_page_identity = first_page_text.casefold()
-    if "somerville" not in first_page_identity or "traffic regulations" not in first_page_identity:
+    if (
+        "somerville" not in first_page_identity
+        or "traffic regulations" not in first_page_identity
+    ):
         raise SourceValidationError(
             "Source PDF does not identify itself as Somerville Traffic Regulations."
         )
 
-    page_d = find_schedule_page(reader, "D")
-    page_e = find_schedule_page(reader, "E")
-    page_f = find_schedule_page(reader, "F")
-    page_g = find_schedule_page(reader, "G")
-    pages = {"D": page_d, "E": page_e, "F": page_f, "G": page_g}
-    missing_schedules = [letter for letter, page in pages.items() if page < 0]
-    if missing_schedules:
-        raise SourceValidationError(
-            "Source PDF is missing expected schedule headings: "
-            + ", ".join(missing_schedules)
-        )
-
-    schedule_d_lines = extract_schedule_lines(reader, page_d, page_e)
-    schedule_f_lines = extract_schedule_lines(reader, page_f, page_g)
-    schedule_d_rows = rows_from_schedule(schedule_d_lines, candidates)
-    schedule_f_rows = rows_from_schedule(schedule_f_lines, candidates)
-    if not schedule_d_rows or not schedule_f_rows:
-        raise SourceValidationError(
-            "Direct PDF extraction produced no Schedule D or Schedule F rows; refusing "
-            "to reuse an unverified text fallback."
-        )
+    pages = schedule_pages(reader)
+    with pdfplumber.open(PDF_PATH) as document:
+        schedules = {
+            "D": schedule_rows(document, pages["D"], pages["E"]),
+            "F": schedule_rows(document, pages["F"], pages["G"]),
+        }
 
     streets: dict[str, dict] = {}
     for street in candidates:
@@ -276,36 +277,40 @@ def build_rules() -> dict:
             "schedule_d_rows": [],
         }
 
-    for street, rows in schedule_f_rows.items():
-        record = streets[street]
-        record["has_metered_segment"] = True
-        record["schedule_f_rows"] = rows[:30]
-
-        explicit_total = 0
-        saw_implicit_meter = False
+    unmatched = []
+    for schedule, rows in schedules.items():
         for row in rows:
-            row_count, saw_meter_word = parse_meter_counts(row)
-            explicit_total += row_count
-            if saw_meter_word and row_count == 0:
-                saw_implicit_meter = True
+            key = normalize_street_name(row["location"])
+            if schedule == "F":
+                row["action"] = meter_action(row["restriction"])
+            if key not in streets:
+                unmatched.append({"schedule": schedule, **row})
+                continue
+            streets[key][f"schedule_{schedule.lower()}_rows"].append(row)
 
-        if explicit_total > 0 and not saw_implicit_meter:
-            record["meter_count_estimate"] = explicit_total
-            record["meter_count_confidence"] = "exact"
-        elif explicit_total > 0:
-            record["meter_count_estimate"] = explicit_total
-            record["meter_count_confidence"] = "approx"
-        else:
-            record["meter_count_estimate"] = None
-            record["meter_count_confidence"] = "unknown"
-
-    for street, rows in schedule_d_rows.items():
-        limited_rows = [row for row in rows if line_has_time_limit(row)]
-        if not limited_rows:
-            continue
-        record = streets[street]
-        record["has_time_limited_segment"] = True
-        record["schedule_d_rows"] = limited_rows[:30]
+    for record in streets.values():
+        listed = [
+            row
+            for row in record["schedule_f_rows"]
+            if row["action"] in {"meter_listed", "installation"}
+        ]
+        record["has_metered_segment"] = bool(listed)
+        if listed:
+            counts = [meter_count(row["restriction"]) for row in listed]
+            record["meter_count_estimate"] = (
+                sum(n for n in counts if n is not None) or None
+            )
+            # A regulation lists changes and quantities, not a current inventory.
+            record["meter_count_confidence"] = (
+                "approx" if record["meter_count_estimate"] else "unknown"
+            )
+        record["has_time_limited_segment"] = any(
+            public_time_limit(row["restriction"]) for row in record["schedule_d_rows"]
+        )
+    if not any(r["has_metered_segment"] for r in streets.values()) or not any(
+        r["has_time_limited_segment"] for r in streets.values()
+    ):
+        raise SourceValidationError("No usable Somerville meter or time-limit records")
 
     return {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
@@ -313,11 +318,10 @@ def build_rules() -> dict:
         "source_pdf": PDF_PATH.name,
         "source": source_metadata(reader, first_page_text),
         "page_index": {
-            "schedule_d_start_page": page_d + 1 if page_d >= 0 else None,
-            "schedule_e_start_page": page_e + 1 if page_e >= 0 else None,
-            "schedule_f_start_page": page_f + 1 if page_f >= 0 else None,
-            "schedule_g_start_page": page_g + 1 if page_g >= 0 else None,
+            f"schedule_{letter.lower()}_start_page": page + 1
+            for letter, page in pages.items()
         },
+        "unmatched_schedule_rows": unmatched,
         "streets": streets,
     }
 

@@ -14,7 +14,7 @@
       "bytes": 61717,
       "sha256": "a96f426af2b2e4279699e8bc86cd4e52cd714c7ab53dd7242bdec2145fed399e"
     },
-    "generated_at_utc": "2026-07-21T21:17:24.895485+00:00",
+    "generated_at_utc": "2026-11-17T18:25:44.426682+00:00",
     "feature_count": 154
   },
   "features": [
@@ -37,7 +37,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "332' N of Erie St",
         "TO_STREET": "350' N of Erie St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Albany_St_1",
+        "MATCH_DISTANCE_METERS": 39.73
       }
     },
     {
@@ -59,7 +61,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "140' S of Mass Ave",
         "TO_STREET": "160' S of Mass Ave",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Albany_St_2",
+        "MATCH_DISTANCE_METERS": 8.6
       }
     },
     {
@@ -81,7 +85,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "140' S of Pacific St.",
         "TO_STREET": "158' S of Pacific St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Albany_St_1",
+        "MATCH_DISTANCE_METERS": 15.43
       }
     },
     {
@@ -147,7 +153,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "25' S of Broadway",
         "TO_STREET": "46' S of Broadway",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Ames_St_3",
+        "MATCH_DISTANCE_METERS": 25.24
       }
     },
     {
@@ -169,7 +177,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "600' N of Amherest St.",
         "TO_STREET": "670' N of Amherest St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Ames_St_3",
+        "MATCH_DISTANCE_METERS": 9.12
       }
     },
     {
@@ -191,7 +201,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "68' W of Wadsworth St.",
         "TO_STREET": "128' W of Wadsworth St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Amherst_St_4",
+        "MATCH_DISTANCE_METERS": 9.04
       }
     },
     {
@@ -235,7 +247,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "353' W of Mass Ave.",
         "TO_STREET": "378' W of Mass Ave.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Arrow_St_1",
+        "MATCH_DISTANCE_METERS": 8.27
       }
     },
     {
@@ -257,7 +271,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "70' N of Memorial Dr",
         "TO_STREET": "90' N of Memorial Dr",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Ash_St_1",
+        "MATCH_DISTANCE_METERS": 7.23
       }
     },
     {
@@ -323,7 +339,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "",
         "TO_STREET": "30' W of Holworthy",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Belmont_St_3",
+        "MATCH_DISTANCE_METERS": 14.29
       }
     },
     {
@@ -345,7 +363,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "16' N of Hilliard St.",
         "TO_STREET": "42' North of Brattle St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Brattle_St_7",
+        "MATCH_DISTANCE_METERS": 11.46
       }
     },
     {
@@ -367,7 +387,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "206' N of Brattle St.",
         "TO_STREET": "250' N of Brattle Sq.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Brattle_St_1",
+        "MATCH_DISTANCE_METERS": 18.47
       }
     },
     {
@@ -411,7 +433,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "60' W of Inman St.",
         "TO_STREET": "80' W of Inman St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Broadwa_23",
+        "MATCH_DISTANCE_METERS": 16.37
       }
     },
     {
@@ -433,7 +457,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "20' W of Inman St.",
         "TO_STREET": "60' W of Inman St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Broadwa_23",
+        "MATCH_DISTANCE_METERS": 16.37
       }
     },
     {
@@ -455,7 +481,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "63' E of Third St",
         "TO_STREET": "84' E of Third St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Broadwa_1",
+        "MATCH_DISTANCE_METERS": 22.69
       }
     },
     {
@@ -477,7 +505,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "22' E of Prescott St.",
         "TO_STREET": "44' E of Prescott St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Broadwa_44",
+        "MATCH_DISTANCE_METERS": 17.43
       }
     },
     {
@@ -499,7 +529,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "160' W of Wood St.",
         "TO_STREET": "184' W of Wood St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cadbury_Rd_1",
+        "MATCH_DISTANCE_METERS": 22.49
       }
     },
     {
@@ -521,7 +553,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "16' E of Tremont St.",
         "TO_STREET": "38' E of Tremont St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_24",
+        "MATCH_DISTANCE_METERS": 11.37
       }
     },
     {
@@ -543,7 +577,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "169' W of Sumner Rd.",
         "TO_STREET": "199' W of Sumner Rd.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_27",
+        "MATCH_DISTANCE_METERS": 9.47
       }
     },
     {
@@ -565,7 +601,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "16' E of Oak St.",
         "TO_STREET": "44' E of Oak St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_28",
+        "MATCH_DISTANCE_METERS": 10.05
       }
     },
     {
@@ -587,7 +625,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "276' W of Third St.",
         "TO_STREET": "246' W of Third St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_4",
+        "MATCH_DISTANCE_METERS": 10.76
       }
     },
     {
@@ -609,7 +649,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "32' W of Columbia St.",
         "TO_STREET": "58' W of Columbia St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_22",
+        "MATCH_DISTANCE_METERS": 11.0
       }
     },
     {
@@ -631,7 +673,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "38' E of E curb line Ext-Oak St.",
         "TO_STREET": "to 58' E of curbline ext Oak",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_29",
+        "MATCH_DISTANCE_METERS": 10.48
       }
     },
     {
@@ -653,7 +697,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "82' W of Berkshire St.",
         "TO_STREET": "120' W of Berkshire St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_16",
+        "MATCH_DISTANCE_METERS": 18.66
       }
     },
     {
@@ -675,7 +721,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "136' W of Line St.",
         "TO_STREET": "200' W of Line St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cambrid_St_35",
+        "MATCH_DISTANCE_METERS": 24.34
       }
     },
     {
@@ -741,7 +789,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "22' W of First St.",
         "TO_STREET": "49' W of First St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Charles_St_1",
+        "MATCH_DISTANCE_METERS": 10.4
       }
     },
     {
@@ -785,7 +835,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "95' W of Palmer St.",
         "TO_STREET": "134' W of Palmer St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Church_St_1",
+        "MATCH_DISTANCE_METERS": 7.75
       }
     },
     {
@@ -807,7 +859,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "21' N of Palmer St",
         "TO_STREET": "21' N of Palmer St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Church_St_2",
+        "MATCH_DISTANCE_METERS": 8.39
       }
     },
     {
@@ -829,7 +883,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "57' S of Palmer St",
         "TO_STREET": "97' S of Palmer St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Church_St_1",
+        "MATCH_DISTANCE_METERS": 7.75
       }
     },
     {
@@ -851,7 +907,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "118' E of ECL Muller",
         "TO_STREET": "138' E of ECL Muller Ave.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Churchi_Ave_2",
+        "MATCH_DISTANCE_METERS": 16.86
       }
     },
     {
@@ -873,7 +931,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "78' E of Huron Ave.",
         "TO_STREET": "98' E of Huron Ave.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Concord_Ave_9",
+        "MATCH_DISTANCE_METERS": 7.49
       }
     },
     {
@@ -917,7 +977,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "43' N of Locust St",
         "TO_STREET": "23' N of Locust St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Cushing_St_7",
+        "MATCH_DISTANCE_METERS": 22.34
       }
     },
     {
@@ -939,7 +1001,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "142' S of Mass Ave.",
         "TO_STREET": "184' S of Mass Ave.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Dunster_St_4",
+        "MATCH_DISTANCE_METERS": 8.73
       }
     },
     {
@@ -961,7 +1025,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "198' S of North Point Blvd",
         "TO_STREET": "238' S of North Point Blvd",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Educati_St_1",
+        "MATCH_DISTANCE_METERS": 31.52
       }
     },
     {
@@ -983,7 +1049,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "396' W of Oxford St.",
         "TO_STREET": "416' W of Oxford St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Everett_St_1",
+        "MATCH_DISTANCE_METERS": 12.3
       }
     },
     {
@@ -1027,7 +1095,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "86' N of Concord Ave",
         "TO_STREET": "126' N of Concord Ave",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Fawcett_St_1",
+        "MATCH_DISTANCE_METERS": 22.42
       }
     },
     {
@@ -1049,7 +1119,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "100' S of Cambridge St.",
         "TO_STREET": "120' S of Cambridge St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Felton_St_1",
+        "MATCH_DISTANCE_METERS": 9.17
       }
     },
     {
@@ -1093,7 +1165,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "40'N of Cambridgeside Pl",
         "TO_STREET": "57'N of Cambridgeside Pl",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "First_St_3",
+        "MATCH_DISTANCE_METERS": 7.32
       }
     },
     {
@@ -1115,7 +1189,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "40' E of Curve",
         "TO_STREET": "60'E of Curve",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Francis_Ave_2",
+        "MATCH_DISTANCE_METERS": 21.41
       }
     },
     {
@@ -1137,7 +1213,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "40' E of Curve",
         "TO_STREET": "60'E of Curve",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Francis_Ave_2",
+        "MATCH_DISTANCE_METERS": 25.68
       }
     },
     {
@@ -1203,7 +1281,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "137' W of Mason St",
         "TO_STREET": "159' W of Mason St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Garden_St_3",
+        "MATCH_DISTANCE_METERS": 41.86
       }
     },
     {
@@ -1225,7 +1305,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "91' W of Mason St",
         "TO_STREET": "131' W of Mason St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Garden_St_4",
+        "MATCH_DISTANCE_METERS": 24.58
       }
     },
     {
@@ -1247,7 +1329,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "94' N of Berkeley St.",
         "TO_STREET": "124' N of Berkeley St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Garden_St_6",
+        "MATCH_DISTANCE_METERS": 10.45
       }
     },
     {
@@ -1357,7 +1441,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "58' W of Western Ave",
         "TO_STREET": "78' W of Western Ave",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Green_St_9",
+        "MATCH_DISTANCE_METERS": 7.0
       }
     },
     {
@@ -1423,7 +1509,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "73' N of Norfolk St.",
         "TO_STREET": "93' N of Norfolk St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Hampshi_St_11",
+        "MATCH_DISTANCE_METERS": 13.1
       }
     },
     {
@@ -1445,7 +1533,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "16' E of Prescott St",
         "TO_STREET": "35' E of Prescott St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Harvard_St_18",
+        "MATCH_DISTANCE_METERS": 12.78
       }
     },
     {
@@ -1511,7 +1601,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "26' W of Chilton St.",
         "TO_STREET": "46' W of Chilton St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Huron_Ave_16",
+        "MATCH_DISTANCE_METERS": 11.42
       }
     },
     {
@@ -1533,7 +1625,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "526' W of Cushing St.",
         "TO_STREET": "562' W of Cushing St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Huron_Ave_12",
+        "MATCH_DISTANCE_METERS": 44.19
       }
     },
     {
@@ -1577,7 +1671,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "44' S of Inman Pl.",
         "TO_STREET": "84' S of Inman St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Inman_St_5",
+        "MATCH_DISTANCE_METERS": 5.92
       }
     },
     {
@@ -1621,7 +1717,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "68' S of Winthrop St",
         "TO_STREET": "22' S of Winthrop St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "JFK_St_3",
+        "MATCH_DISTANCE_METERS": 9.79
       }
     },
     {
@@ -1687,7 +1785,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "38' E of Hayward St",
         "TO_STREET": "58' E of Hayward St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Main_St_4",
+        "MATCH_DISTANCE_METERS": 12.26
       }
     },
     {
@@ -1731,7 +1831,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "295' S of Linnaen St.",
         "TO_STREET": "334' S of Linnaean St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_61",
+        "MATCH_DISTANCE_METERS": 15.62
       }
     },
     {
@@ -1753,7 +1855,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "50' W of Village St.",
         "TO_STREET": "72' W of Village St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_9",
+        "MATCH_DISTANCE_METERS": 16.5
       }
     },
     {
@@ -1775,7 +1879,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "170' E of Douglass St.",
         "TO_STREET": "190' E of Douglass St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_11",
+        "MATCH_DISTANCE_METERS": 20.97
       }
     },
     {
@@ -1797,7 +1903,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "113' E of Brookline St.",
         "TO_STREET": "134' E of Brookline St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_14",
+        "MATCH_DISTANCE_METERS": 16.49
       }
     },
     {
@@ -1819,7 +1927,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "20' W of Temple St.",
         "TO_STREET": "40' W of Temple St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_20",
+        "MATCH_DISTANCE_METERS": 16.26
       }
     },
     {
@@ -1841,7 +1951,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "271' W of Pleasant St.",
         "TO_STREET": "295' W of Pleasant St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_22",
+        "MATCH_DISTANCE_METERS": 15.05
       }
     },
     {
@@ -1863,7 +1975,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "106' W of Sellers St.",
         "TO_STREET": "58' E of Sellers St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_24",
+        "MATCH_DISTANCE_METERS": 10.68
       }
     },
     {
@@ -1885,7 +1999,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "100' W of Inman St.",
         "TO_STREET": "121' W of Inman St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_22",
+        "MATCH_DISTANCE_METERS": 34.4
       }
     },
     {
@@ -1907,7 +2023,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "160' W of Albany St",
         "TO_STREET": "180' W of Albany St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_11",
+        "MATCH_DISTANCE_METERS": 16.17
       }
     },
     {
@@ -1929,7 +2047,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "172' W of Dana St.",
         "TO_STREET": "192' W of Dana St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_30",
+        "MATCH_DISTANCE_METERS": 9.95
       }
     },
     {
@@ -1951,7 +2071,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "174' E of Hancock St.",
         "TO_STREET": "194' of Hancock St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_26",
+        "MATCH_DISTANCE_METERS": 10.34
       }
     },
     {
@@ -1973,7 +2095,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "20' N of Allen St.",
         "TO_STREET": "36' N of Allen St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_77",
+        "MATCH_DISTANCE_METERS": 15.37
       }
     },
     {
@@ -1995,7 +2119,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "20' S of Allen St.",
         "TO_STREET": "42' S of Allen St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_76",
+        "MATCH_DISTANCE_METERS": 16.99
       }
     },
     {
@@ -2017,7 +2143,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "20' S of Russell St.",
         "TO_STREET": "44' S of Russell St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_84",
+        "MATCH_DISTANCE_METERS": 14.39
       }
     },
     {
@@ -2039,7 +2167,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "233' E of Blanche St.",
         "TO_STREET": "252' E of Blanche St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_9",
+        "MATCH_DISTANCE_METERS": 13.91
       }
     },
     {
@@ -2061,7 +2191,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "24' E of Sellers St.",
         "TO_STREET": "44' E of Sellers St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_23",
+        "MATCH_DISTANCE_METERS": 13.74
       }
     },
     {
@@ -2083,7 +2215,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "29' N of Rice St.",
         "TO_STREET": "47' N of Rice St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_95",
+        "MATCH_DISTANCE_METERS": 15.55
       }
     },
     {
@@ -2105,7 +2239,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "30' N of Rice St",
         "TO_STREET": "50' N of Rice St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_95",
+        "MATCH_DISTANCE_METERS": 15.55
       }
     },
     {
@@ -2127,7 +2263,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "37' S of Day St",
         "TO_STREET": "56' S of Day St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_11",
+        "MATCH_DISTANCE_METERS": 15.52
       }
     },
     {
@@ -2149,7 +2287,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "37' W of Bigelow St.",
         "TO_STREET": "54' W of Bigelow St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_23",
+        "MATCH_DISTANCE_METERS": 11.99
       }
     },
     {
@@ -2171,7 +2311,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "388' E of Vassar St",
         "TO_STREET": "388' E of Vassar St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_2",
+        "MATCH_DISTANCE_METERS": 21.75
       }
     },
     {
@@ -2193,7 +2335,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "40' W of Plympton St.",
         "TO_STREET": "86' W of Plympton St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_39",
+        "MATCH_DISTANCE_METERS": 11.58
       }
     },
     {
@@ -2215,7 +2359,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "44' E of Arrow St.",
         "TO_STREET": "62' E of Arrow St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_34",
+        "MATCH_DISTANCE_METERS": 9.44
       }
     },
     {
@@ -2237,7 +2383,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "470' W of Memorial Dr.",
         "TO_STREET": "512' W of Memorial Dr.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_2",
+        "MATCH_DISTANCE_METERS": 21.75
       }
     },
     {
@@ -2259,7 +2407,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "61' N of Hudson St.",
         "TO_STREET": "85' N of Hudson St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_57",
+        "MATCH_DISTANCE_METERS": 14.74
       }
     },
     {
@@ -2281,7 +2431,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "82' S of Walden St.",
         "TO_STREET": "124' S of Walden St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Massach_Ave_83",
+        "MATCH_DISTANCE_METERS": 15.85
       }
     },
     {
@@ -2347,7 +2499,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "25' E of University Rd",
         "TO_STREET": "65' E of University Rd.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Mt-A_St_14",
+        "MATCH_DISTANCE_METERS": 12.14
       }
     },
     {
@@ -2369,7 +2523,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "36' W of Dunster St.",
         "TO_STREET": "77' W of Dunster St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Mt-A_St_10",
+        "MATCH_DISTANCE_METERS": 8.05
       }
     },
     {
@@ -2413,7 +2569,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "24' S of Hampshire St.",
         "TO_STREET": "44' S of Hampshire St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Norfolk_St_9",
+        "MATCH_DISTANCE_METERS": 6.19
       }
     },
     {
@@ -2457,7 +2615,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "60' W of Sciarappa St",
         "TO_STREET": "80' W of Sciarappa St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Otis_St_5",
+        "MATCH_DISTANCE_METERS": 9.03
       }
     },
     {
@@ -2501,7 +2661,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "82' W of Sidney St",
         "TO_STREET": "102' W of Sidney St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Pacific_St_3",
+        "MATCH_DISTANCE_METERS": 9.6
       }
     },
     {
@@ -2545,7 +2707,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "20' S of Green St.",
         "TO_STREET": "40' S of Green St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Pleasan_St_16",
+        "MATCH_DISTANCE_METERS": 7.8
       }
     },
     {
@@ -2567,7 +2731,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "40' N of Pleasant Place",
         "TO_STREET": "60' N of Pleasant St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Pleasan_St_13",
+        "MATCH_DISTANCE_METERS": 8.09
       }
     },
     {
@@ -2677,7 +2843,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "338' S of Cambridge St.",
         "TO_STREET": "357' S of Cambridge St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Second_St_9",
+        "MATCH_DISTANCE_METERS": 29.84
       }
     },
     {
@@ -2721,7 +2889,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "14' N of Cadbury Rd.",
         "TO_STREET": "34' N of Cadbury Rd.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Sherman_St_6",
+        "MATCH_DISTANCE_METERS": 24.28
       }
     },
     {
@@ -2743,7 +2913,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "inside the lot for",
         "TO_STREET": "Danehy Park",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Sherman_St_6",
+        "MATCH_DISTANCE_METERS": 8.29
       }
     },
     {
@@ -2765,7 +2937,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "20' N of Bent St",
         "TO_STREET": "40' N of Bent St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Sixth_St_2",
+        "MATCH_DISTANCE_METERS": 12.21
       }
     },
     {
@@ -2787,7 +2961,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "103' N of Fawcett St",
         "TO_STREET": "124' N of Fawcett St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Smith_Pl_4",
+        "MATCH_DISTANCE_METERS": 6.98
       }
     },
     {
@@ -2809,7 +2985,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "55' S of Fawcett St",
         "TO_STREET": "75' S of Fawcett St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Smith_Pl_3",
+        "MATCH_DISTANCE_METERS": 7.62
       }
     },
     {
@@ -2853,7 +3031,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "73' S of Linsky Way",
         "TO_STREET": "28' S of Linsky Way",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Third_St_7",
+        "MATCH_DISTANCE_METERS": 12.34
       }
     },
     {
@@ -2875,7 +3055,9 @@
         "SIDE_OF_STREET": "E",
         "FROM_STREET": "40' N of Broadway",
         "TO_STREET": "90' N of Broadway",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Third_St_5",
+        "MATCH_DISTANCE_METERS": 11.98
       }
     },
     {
@@ -2897,7 +3079,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "73' S of Linsky Way",
         "TO_STREET": "28' S of Linsky Way",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Third_St_5",
+        "MATCH_DISTANCE_METERS": 12.56
       }
     },
     {
@@ -2941,7 +3125,9 @@
         "SIDE_OF_STREET": "S",
         "FROM_STREET": "20' E of Third St.",
         "TO_STREET": "40' E of Third St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Thorndi_St_2",
+        "MATCH_DISTANCE_METERS": 10.07
       }
     },
     {
@@ -2963,7 +3149,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "22' W of Amesbury St",
         "TO_STREET": "43' W of Amesbury St",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Vassar_St_1",
+        "MATCH_DISTANCE_METERS": 9.89
       }
     },
     {
@@ -2985,7 +3173,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "68' W of exit of Parking Lot",
         "TO_STREET": "90' W of exit of parking Lot",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Vassar_St_4",
+        "MATCH_DISTANCE_METERS": 9.93
       }
     },
     {
@@ -3073,7 +3263,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "20' E of Howard St.",
         "TO_STREET": "40' E of Howard St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Western_Ave_7",
+        "MATCH_DISTANCE_METERS": 10.17
       }
     },
     {
@@ -3095,7 +3287,9 @@
         "SIDE_OF_STREET": "W",
         "FROM_STREET": "171' N of Memorial Dr.",
         "TO_STREET": "209' N of Memorial Dr.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Amesbur_St_1",
+        "MATCH_DISTANCE_METERS": 4.32
       }
     },
     {
@@ -3117,7 +3311,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "50' W of MBTA Busway",
         "TO_STREET": "74' W of MBTA Busway",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Bennett_St_1",
+        "MATCH_DISTANCE_METERS": 5.96
       }
     },
     {
@@ -3183,7 +3379,9 @@
         "SIDE_OF_STREET": "N",
         "FROM_STREET": "11' W of Warren St.",
         "TO_STREET": "32' W of Warren St.",
-        "LAST_EDITED_DATE": "2024-03-14"
+        "LAST_EDITED_DATE": "2024-03-14",
+        "MATCHED_SEGMENT_ID": "Macarel_Way_1",
+        "MATCH_DISTANCE_METERS": 3.58
       }
     },
     {

@@ -14,6 +14,8 @@ from pathlib import Path
 import pdfplumber
 from pypdf import PdfReader
 
+from visitor_parking import public_time_limit
+
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
 PDF_PATH = DATA_DIR / "traffic-regulations.pdf"
@@ -188,18 +190,6 @@ def meter_count(restriction: str) -> int | None:
         r"(\d+)\s+(?:parking\s+spaces?\s+metered|spaces?\))", restriction.casefold()
     )
     return int(spaces.group(1)) if spaces else None
-
-
-def public_time_limit(restriction: str) -> bool:
-    text = restriction.casefold()
-    if re.search(
-        r"no parking|no stopping|tow zone|rescind|remov|proposed|seasonal|pick.?up|drop.?off|loading|charging|police|school|handicap|accessible",
-        text,
-    ):
-        return False
-    return bool(
-        re.search(r"(?:\d+|½)\s*[- ]?\s*(?:hours?|hrs?|h|minutes?|mins?)\b", text)
-    )
 
 
 def source_metadata(reader: PdfReader, first_page_text: str) -> dict:

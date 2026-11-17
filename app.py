@@ -9,6 +9,8 @@ import re
 from functools import lru_cache
 from pathlib import Path
 from typing import Literal
+from visitor_parking import cambridge_options, facility_options, somerville_options
+
 from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.responses import HTMLResponse, JSONResponse, Response
 from starlette.middleware.gzip import GZipMiddleware
@@ -17,7 +19,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-11-17-segment-map-v2"
+APP_VERSION = "2026-11-17-visitor-map-v1"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"
@@ -900,6 +902,21 @@ async def get_streets(view: Literal["full", "map"] = "full"):
     if view == "map":
         return _encoded_json_response(_encoded_map_streets())
     return _encoded_json_response(_encoded_enriched_streets())
+
+
+@lru_cache(maxsize=1)
+def _visitor_options() -> bytes:
+    return _encode_json([
+        *somerville_options(load_streets()["features"], load_parking_rules(),
+                            _normalize_street_name, SOMERVILLE_RULE_SOURCE_URL),
+        *cambridge_options(load_cambridge_meter_spaces()["features"], CAMBRIDGE_PARKING_SOURCE_URL),
+        *facility_options(load_public_parking_facilities()["features"]),
+    ])
+
+
+@app.get("/api/visitor-parking")
+async def get_visitor_parking():
+    return _encoded_json_response(_visitor_options())
 
 
 @app.get("/api/parking-evidence/cambridge/meters")

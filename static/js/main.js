@@ -12,7 +12,7 @@ const streetTileOptions = {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>',
     maxZoom: 19
 };
-const lightBaseLayer = L.tileLayer(streetTileUrl, streetTileOptions);
+const lightBaseLayer = L.tileLayer(streetTileUrl, { ...streetTileOptions, className: 'light-street-tiles' });
 const darkBaseLayer = L.tileLayer(streetTileUrl, {
     ...streetTileOptions,
     className: 'dark-street-tiles'
@@ -93,15 +93,20 @@ function setPanelExpanded(expanded) {
     window.setTimeout(() => map.invalidateSize({ pan: false }), 220);
 }
 
-function showSelectionPanel() {
+function showSelectionPanel(withNearby = false) {
+    document.getElementById('parking-heading').textContent = 'Parking details';
     const empty = document.getElementById('empty-state');
     const close = document.getElementById('clear-selection-btn');
-    if (empty) empty.hidden = true;
+    if (empty) empty.hidden = !withNearby;
+    document.getElementById('nearby-heading').hidden = !withNearby;
+    if (withNearby) renderVisitorChoices();
     if (close) close.hidden = false;
     if (isMobile()) setPanelExpanded(true);
 }
 
 function showEmptyState() {
+    document.getElementById('nearby-heading').hidden = true;
+    document.getElementById('parking-heading').textContent = 'Visitor parking nearby';
     detailRequestVersion++;
     const empty = document.getElementById('empty-state');
     const close = document.getElementById('clear-selection-btn');
@@ -155,7 +160,7 @@ function getStreetStyle(feature) {
     const weight = detailed ? 2.1 : 1.15;
 
     // Somerville's permit rule is a citywide baseline, not proof about both curbs
-    // on every rendered centerline. Keep those lines neutral and explain on selection.
+    // on every rendered centerline. The dashed line denotes the baseline only.
     const somervilleBaseline = municipality === 'somerville' && [
         'permit_with_metered_segments',
         'permit_with_time_limited_segments',
@@ -163,7 +168,7 @@ function getStreetStyle(feature) {
         'resident_permit_segment_rules_known'
     ].includes(access);
     if (somervilleBaseline) {
-        return { color: COLORS.unknown, weight: detailed ? 1.6 : 0.8, opacity: 0.48, dashArray: null };
+        return { color: '#a16207', weight: detailed ? 2.2 : 1.25, opacity: 0.7, dashArray: '3 4' };
     }
     if (displayStatus === 'metered') {
         return { color: COLORS.metered, weight, opacity: 0.88, dashArray: null };
@@ -456,7 +461,7 @@ function showStreetDetails(properties = {}) {
             <div class="answer-detail-body">${renderDetailRows(rows)}</div>
             ${sourceRows.length ? `<details><summary>Regulation rows for this street (${sourceRows.length})</summary>${renderDetailRows(sourceRows)}</details>` : ''}
         </details>`;
-    showSelectionPanel();
+    showSelectionPanel(true);
 }
 
 function formatMeterRate(value) {
@@ -637,6 +642,7 @@ function makeEvidenceDefinitions() {
         },
         {
             key: 'public-facilities',
+            minZoom: 16,
             label: 'Public lots and garages',
             url: '/api/parking-evidence/public-facilities',
             group: publicParkingFacilityLayer,
@@ -713,13 +719,9 @@ function updateMapEvidenceKey() {
     const container = document.getElementById('map-evidence-key-items');
     const control = document.querySelector('.map-evidence-key');
     if (!container || !control) return;
-    const items = [
-        ['public-facilities', '<i class="map-evidence-key-swatch map-evidence-key-swatch--facility"></i>', 'Public parking'],
-        ['meters', '<i class="map-evidence-key-swatch map-evidence-key-swatch--meter"></i>', 'Meters · zoom in'],
-        ['accessible', '<span aria-hidden="true">♿</span>', 'Accessible · zoom in']
-    ].filter(([key]) => document.querySelector(`[data-evidence-layer="${key}"]`)?.checked);
-    control.hidden = items.length === 0;
-    container.innerHTML = items.map(([, symbol, label]) => `<span class="map-evidence-key-row">${symbol}<span>${escapeHtml(label)}</span></span>`).join('');
+    container.innerHTML = '<span class="map-evidence-key-row"><i class="permit-line"></i>Permit by default · Somerville</span>' +
+        '<span class="map-evidence-key-row"><i class="restricted-line"></i>Private or posted restriction</span>' +
+        '<span class="map-evidence-key-row"><i class="unknown-line"></i>Curb rule unknown</span>';
     updateActiveLayerCount();
 }
 
@@ -728,7 +730,7 @@ function setupMapEvidenceKey() {
     control.onAdd = () => {
         const container = L.DomUtil.create('div', 'map-evidence-key');
         container.setAttribute('role', 'note');
-        container.innerHTML = '<strong>Visible parking locations</strong><span id="map-evidence-key-items"></span>';
+        container.innerHTML = '<strong>Street lines</strong><span id="map-evidence-key-items"></span>';
         L.DomEvent.disableClickPropagation(container);
         return container;
     };
@@ -739,7 +741,7 @@ function setupMapEvidenceKey() {
 function updateEvidenceRendering() {
     for (const definition of evidenceDefinitions) {
         const input = document.querySelector(`[data-evidence-layer="${definition.key}"]`);
-        if (input?.checked && map.getZoom() >= (definition.minZoom || 0)) {
+        if (input?.checked && visitorLayerVisible(definition.key) && map.getZoom() >= (definition.minZoom || 0)) {
             if (!map.hasLayer(definition.group)) definition.group.addTo(map);
             void ensureEvidenceLayer(definition);
         } else if (map.hasLayer(definition.group)) {
@@ -791,7 +793,7 @@ function focusSearchResult(result) {
                 ${context ? `<p class="answer-summary">${escapeHtml(context)}</p>` : ''}
                 <p class="answer-summary">Tap your block on the map to see its parking rules and sources.</p>
             </article>`;
-        showSelectionPanel();
+        showSelectionPanel(true);
     }
     const searchResults = document.getElementById('search-results');
     if (searchResults) searchResults.hidden = true;

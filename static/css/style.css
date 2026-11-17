@@ -956,11 +956,23 @@ a:focus-visible {
     .sheet-toggle {
         display: grid;
         width: 100%;
-        height: 1.3rem;
-        cursor: pointer;
+        min-height: 44px;
+        flex: none;
+        align-content: center;
+        gap: 3px;
+        cursor: grab;
+        touch-action: none;
+        user-select: none;
         place-items: center;
         border: 0;
         background: transparent;
+        color: var(--muted);
+        font-size: 0.75rem;
+        font-weight: 650;
+    }
+
+    .sheet-toggle:active {
+        cursor: grabbing;
     }
 
     .sheet-handle {
@@ -968,7 +980,7 @@ a:focus-visible {
         width: 2.6rem;
         height: 0.25rem;
         border-radius: 999px;
-        background: #52647d;
+        background: var(--muted);
     }
 
     .search-section {

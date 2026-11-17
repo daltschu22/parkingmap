@@ -92,12 +92,63 @@ function setPanelExpanded(expanded) {
     const panel = document.getElementById('app-panel');
     const toggle = document.getElementById('sheet-toggle');
     if (!panel) return;
+    if (!expanded && isMobile()) {
+        const editor = document.getElementById('arrival-editor');
+        if (document.activeElement?.closest('#sidebar-body, #arrival-form')) toggle.focus({preventScroll: true});
+        editor.open = false;
+    }
     panel.classList.toggle('sheet-collapsed', !expanded);
     document.body.classList.toggle('panel-expanded', expanded);
     toggle?.setAttribute('aria-expanded', String(expanded));
+    document.getElementById('sheet-toggle-label').textContent = expanded ? 'Show map' : 'Show parking results';
 }
 
-function showSelectionPanel(withNearby = false) {
+function setupSheetToggle() {
+    const toggle = document.getElementById('sheet-toggle');
+    const results = document.getElementById('sidebar-body');
+    let start = null;
+    let dragged = false;
+    toggle.addEventListener('pointerdown', event => {
+        if (!event.isPrimary || event.button !== 0) return;
+        start = {id: event.pointerId, x: event.clientX, y: event.clientY};
+        dragged = false;
+        toggle.setPointerCapture(event.pointerId);
+    });
+    toggle.addEventListener('pointerup', event => {
+        if (start?.id !== event.pointerId) return;
+        const dx = Math.abs(event.clientX - start.x);
+        const dy = event.clientY - start.y;
+        dragged = Math.max(dx, Math.abs(dy)) > 10;
+        if (Math.abs(dy) >= 28 && Math.abs(dy) > dx) setPanelExpanded(dy < 0);
+        start = null;
+    });
+    toggle.addEventListener('lostpointercapture', () => { start = null; });
+    toggle.addEventListener('click', event => {
+        if (!dragged || event.detail === 0) setPanelExpanded(toggle.getAttribute('aria-expanded') !== 'true');
+        dragged = false;
+    });
+
+    // Pulling down from the top of the list also dismisses the sheet. A swipe
+    // that started partway down the list remains an ordinary scroll.
+    let pull = null;
+    results.addEventListener('touchstart', event => {
+        pull = isMobile() && results.scrollTop <= 0 && event.touches.length === 1 ? event.touches[0] : null;
+    }, {passive: true});
+    results.addEventListener('touchcancel', () => { pull = null; }, {passive: true});
+    results.addEventListener('touchend', event => {
+        const end = event.changedTouches[0];
+        if (pull && end.identifier === pull.identifier && results.scrollTop <= 0) {
+            const dy = end.clientY - pull.clientY;
+            if (dy > 55 && dy > Math.abs(end.clientX - pull.clientX)) {
+                if (event.cancelable) event.preventDefault();
+                setPanelExpanded(false);
+            }
+        }
+        pull = null;
+    });
+}
+
+function showSelectionPanel(withNearby = false, expand = true) {
     refreshTimedDetail = null;
     document.getElementById('parking-heading').textContent = 'Parking details';
     const empty = document.getElementById('empty-state');
@@ -106,7 +157,7 @@ function showSelectionPanel(withNearby = false) {
     document.getElementById('nearby-heading').hidden = !withNearby;
     if (withNearby) renderVisitorChoices();
     if (close) close.hidden = false;
-    if (isMobile()) setPanelExpanded(true);
+    if (expand && isMobile()) setPanelExpanded(true);
 }
 
 function showEmptyState() {
@@ -484,7 +535,7 @@ function showStreetDetails(properties = {}) {
             <div class="answer-detail-body">${renderDetailRows(rows)}</div>
             ${sourceRows.length ? `<details><summary>Regulation rows for this street (${sourceRows.length})</summary>${renderDetailRows(sourceRows)}</details>` : ''}
         </details>`;
-    showSelectionPanel(true);
+    showSelectionPanel(true, false);
     refreshTimedDetail = () => showStreetDetails(properties);
 }
 
@@ -494,7 +545,7 @@ function formatMeterRate(value) {
     return raw && Number.isFinite(numeric) ? `$${numeric.toFixed(2)}/hour` : (value || 'Unknown');
 }
 
-function showMeterDetails(properties = {}) {
+function showMeterDetails(properties = {}, expand = true) {
     detailRequestVersion++;
     const container = document.getElementById('street-details');
     if (!container) return;
@@ -521,8 +572,8 @@ function showMeterDetails(properties = {}) {
         <details class="answer-details"><summary>Meter details</summary><div class="answer-detail-body">${renderDetailRows(rows)}</div></details>`;
     selectedStreetLayer = null;
     refreshSelectionStyles();
-    showSelectionPanel();
-    refreshTimedDetail = () => showMeterDetails(properties);
+    showSelectionPanel(false, expand);
+    refreshTimedDetail = () => showMeterDetails(properties, false);
 }
 
 function showAccessibleDetails(properties = {}) {
@@ -819,7 +870,7 @@ function focusSearchResult(result, recenter = true) {
                 ${context ? `<p class="answer-summary">${escapeHtml(context)}</p>` : ''}
                 <p class="answer-summary">Tap your block on the map to see its parking rules and sources.</p>
             </article>`;
-        showSelectionPanel(true);
+        showSelectionPanel(true, recenter);
         refreshTimedDetail = () => focusSearchResult(result, false);
     }
     const searchResults = document.getElementById('search-results');
@@ -992,10 +1043,7 @@ function setupControls() {
     });
     document.getElementById('locate-btn')?.addEventListener('click', locateUser);
     document.getElementById('clear-selection-btn')?.addEventListener('click', () => clearStreetSelection({ collapseMobile: true }));
-    document.getElementById('sheet-toggle')?.addEventListener('click', () => {
-        const collapsed = document.getElementById('app-panel')?.classList.contains('sheet-collapsed');
-        setPanelExpanded(Boolean(collapsed));
-    });
+    setupSheetToggle();
     document.getElementById('map-panel-button')?.addEventListener('click', () => {
         const tools = document.getElementById('map-tools');
         if (tools) tools.open = true;

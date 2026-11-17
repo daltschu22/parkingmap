@@ -49,11 +49,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('arrival-form');
     selectedArrival = parseArrival(new URLSearchParams(location.search).get('arrival'));
     updateArrivalLabel();
+    let openedFromMap = false;
     editor.addEventListener('toggle', () => {
-        if (!editor.open) return;
+        if (!editor.open) {
+            if (openedFromMap && isMobile()) setPanelExpanded(false);
+            openedFromMap = false;
+            return;
+        }
         input.setCustomValidity('');
         input.value = arrivalClock().value;
-        if (isMobile()) setPanelExpanded(true);
+        if (isMobile()) {
+            openedFromMap = document.getElementById('app-panel').classList.contains('sheet-collapsed');
+            setPanelExpanded(true);
+        }
     });
     function apply(clock) {
         selectedArrival = clock;
@@ -66,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
         refreshSelectionStyles();
         renderVisitorChoices();
         refreshTimedDetail?.();
-        editor.querySelector('summary').focus();
+        editor.querySelector('summary').focus({preventScroll: true});
     }
     input.addEventListener('input', () => input.setCustomValidity(''));
     form.addEventListener('submit', event => {

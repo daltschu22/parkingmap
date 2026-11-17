@@ -171,7 +171,7 @@ function openParkingOption(option, recenter = true) {
                 ${source ? `<a class="answer-action" href="${escapeHtml(source)}" target="_blank" rel="noopener noreferrer">${escapeHtml(option.citation)}</a>` : ''}
             </div>
         </article>`;
-    showSelectionPanel();
+    showSelectionPanel(false, recenter);
     refreshTimedDetail = () => {
         if (visitorEligible(option, arrivalClock())) openParkingOption(option, false);
         else {

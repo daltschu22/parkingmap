@@ -115,7 +115,7 @@
         </aside>
 
         <main class="map-container">
-            <div id="map" role="region" aria-label="Interactive parking evidence map"></div>
+            <div id="map" data-visitor-options-url="/api/visitor-parking?v={{ app_version }}" role="region" aria-label="Interactive parking evidence map"></div>
             <div class="parking-filter-bar" role="group" aria-label="Find visitor parking">
                 <button type="button" data-parking-filter="all" aria-pressed="true">All parking</button>
                 <button type="button" data-parking-filter="meter" aria-pressed="false">Meters</button>

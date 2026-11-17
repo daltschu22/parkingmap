@@ -361,7 +361,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         void searchForDestination(requested);
     }
     try {
-        visitorChoices = await fetchJson('/api/visitor-parking');
+        visitorChoices = await fetchJson(map.getContainer().dataset.visitorOptionsUrl);
         visitorLoaded = true;
         renderVisitorChoices();
         map.on('moveend resize', renderVisitorChoices);

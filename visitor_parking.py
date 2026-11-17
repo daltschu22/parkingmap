@@ -1,9 +1,53 @@
 """Compact visitor parking choices backed by a space, facility, or signed rule."""
 
+import calendar
 import re
 from collections import defaultdict
 
+from curb_sections import match_section
 from destinations import exact_address
+
+
+# Only convert explicitly published time spans to daily restrictions.
+CLOCK = r"(1[0-2]|0?[1-9])(?::([0-5]\d))?\s*([ap])m?"
+SPAN = re.compile(rf"(?<![\d:]){CLOCK}\s*(?:-|to)\s*{CLOCK}\b", re.I)
+PERMIT_ONLY = re.compile(r"\b(?:rpp(?: only)?|permit(?: parking)? only)(?: from)?\s*$", re.I)
+
+
+def time_window(match):
+    def minutes(hour, minute, half):
+        return (int(hour) % 12 + (12 if half.lower() == "p" else 0)) * 60 + int(minute or 0)
+    return [minutes(*match.group(1, 2, 3)), minutes(*match.group(4, 5, 6))]
+
+
+def daily_hours(rule):
+    result = {}
+    for match in SPAN.finditer(rule):
+        if PERMIT_ONLY.search(rule[:match.start()]):
+            result["permit_window"] = time_window(match)
+        elif "visitor_window" not in result:
+            result["visitor_window"] = time_window(match)
+    # A day-qualified schedule must keep its weekday qualifier in the original text.
+    if re.search(r"\b(?:mon|tue|wed|thu|fri|sat|sun)", rule, re.I):
+        return {}
+    return result
+
+
+def closure_hours(restrictions):
+    # The city's lot inventory publishes closures as weekday/time and optional seasons.
+    if not restrictions or not restrictions.startswith("No Parking-"):
+        return {}
+    clause = restrictions.split(";")[0]
+    weekdays = ("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday")
+    day = next((i for i, name in enumerate(weekdays) if name + "s" in clause), None)
+    span = SPAN.search(clause)
+    if day is None or not span:
+        return {}
+    months = [i for i, name in enumerate(calendar.month_name) if name and name in clause]
+    if months and len(months) != 2:
+        return {}
+    return {"closure": {"day": day, "months": months, "weeks": [1, 3] if "1st & 3rd" in clause else [],
+                        "window": time_window(span)}}
 
 
 def public_time_limit(restriction: str) -> bool:
@@ -22,6 +66,7 @@ def somerville_options(streets, rules, normalize, source):
     # Only use a reference intersection shared by the named streets in the GIS.
     # An offset in a regulation is not itself an exact mapped curb or routing point.
     nodes = defaultdict(set)
+    outgoing = defaultdict(list)
     for feature in streets:
         name = normalize(feature["properties"].get("STNAME"))
         geom = feature["geometry"]
@@ -33,6 +78,9 @@ def somerville_options(streets, rules, normalize, source):
         for line in lines:
             for x, y, *_ in (line[0], line[-1]):
                 nodes[name].add((round(x, 6), round(y, 6)))
+            for oriented in (line, list(reversed(line))):
+                node = tuple(round(v, 6) for v in oriented[0][:2])
+                outgoing[name, node].append(oriented)
 
     locations = defaultdict(set)
     for street, endpoints in nodes.items():
@@ -81,9 +129,11 @@ def somerville_options(streets, rules, normalize, source):
                         break
                 limits = " → ".join(t for t in (row["from"], row["to"]) if t)
                 anchor_type = "intersection"
+                traces = []
                 if anchor and row["side"]:
                     x, y = next(iter(crossings[anchor]))
                     where = f"{row['side']} side · {limits}"
+                    traces = match_section(row, anchor, outgoing[street, (x, y)], crossings, normalize)
                 elif (
                     number := re.fullmatch(r"#?(\d+[A-Za-z]?)", row["from"].strip())
                 ) and not row["to"]:
@@ -111,6 +161,8 @@ def somerville_options(streets, rules, normalize, source):
                     rule=restriction,
                     anchor=anchor.title(),
                     anchor_type=anchor_type,
+                    **daily_hours(restriction),
+                    **({"section_traces": traces} if traces else {}),
                     source=f"{source}#page={row['page']}",
                     citation=f"Schedule {schedule.upper()} · p. {row['page']}",
                 )
@@ -151,6 +203,7 @@ def cambridge_options(features, source):
                 str(v) for v in (p.get("MAX_TIME"), p.get("OPERATION_HOURS")) if v
             ),
             rate=p.get("RATE"),
+            **daily_hours(str(p.get("OPERATION_HOURS") or "")),
             source=source,
             citation="Cambridge meter inventory",
         )
@@ -175,6 +228,8 @@ def facility_options(features):
             rule=regs or p["PUBLIC_ACCESS"],
             facility=p["FACILITY_ID"],
             restrictions=special,
+            **(daily_hours(regs) if p["MUNICIPALITY"] == "Somerville" else {}),
+            **closure_hours(special),
             access=p["PUBLIC_ACCESS"],
             source=p.get("DETAILS_URL") or p.get("SOURCE_URL"),
             citation="Facility details",

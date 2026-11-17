@@ -20,7 +20,7 @@ from fastapi.templating import Jinja2Templates
 
 app = FastAPI(title="Parking Map")
 app.add_middleware(GZipMiddleware, minimum_size=1_000, compresslevel=6)
-APP_VERSION = "2026-11-17-destinations-v1"
+APP_VERSION = "2026-11-17-visitor-map-v2"
 
 BASE_DIR = Path(__file__).parent
 DATA_DIR = BASE_DIR / "data"

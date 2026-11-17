@@ -1,11 +1,12 @@
 // Driver-first parking map interactions.
 
-const DEFAULT_MAP_VIEW = { center: [42.397, -71.107], zoom: 13 };
+const DEFAULT_MAP_VIEW = { center: [42.3967, -71.1218], zoom: 16 };
 const MOBILE_BREAKPOINT = 860;
 const map = L.map('map', { preferCanvas: true, zoomControl: true })
     .setView(DEFAULT_MAP_VIEW.center, DEFAULT_MAP_VIEW.zoom);
 // A forgiving hit target keeps thin street lines easy to tap without making them look heavy.
-const hitRenderer = L.canvas({ tolerance: 10 });
+map.createPane('streetContext').style.zIndex = 360;
+const hitRenderer = L.canvas({ pane: 'streetContext', tolerance: 10 });
 
 const streetTileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
 const streetTileOptions = {
@@ -37,6 +38,7 @@ const COLORS = {
 };
 
 let allStreetsLayer = null;
+let streetLoad = null;
 let meterEvidenceLayer = null;
 let accessibleEvidenceLayer = null;
 let publicParkingFacilityLayer = null;
@@ -90,7 +92,6 @@ function setPanelExpanded(expanded) {
     panel.classList.toggle('sheet-collapsed', !expanded);
     document.body.classList.toggle('panel-expanded', expanded);
     toggle?.setAttribute('aria-expanded', String(expanded));
-    window.setTimeout(() => map.invalidateSize({ pan: false }), 220);
 }
 
 function showSelectionPanel(withNearby = false) {
@@ -215,6 +216,14 @@ function applyLayerRestStyle(layer) {
 }
 
 function refreshSelectionStyles() {
+    if (!allStreetsLayer) return;
+    const visible = document.getElementById('street-context').checked || searchMode === 'street' ||
+        searchResultStreetKeys.size > 0 || Boolean(selectedStreetLayer);
+    if (!visible) {
+        if (map.hasLayer(allStreetsLayer)) map.removeLayer(allStreetsLayer);
+        return;
+    }
+    if (!map.hasLayer(allStreetsLayer)) allStreetsLayer.addTo(map);
     forEachStreetLayer(applyLayerRestStyle);
 }
 
@@ -593,22 +602,20 @@ function onEachStreet(feature, layer) {
     });
 }
 
-async function loadStreets() {
-    try {
-        setAppStatus('Loading streets…');
-        const data = await fetchJson('/api/streets?view=map');
-        if (allStreetsLayer) map.removeLayer(allStreetsLayer);
+function loadStreets() {
+    if (allStreetsLayer || streetLoad) return streetLoad;
+    streetLoad = fetchJson('/api/streets?view=map').then(data => {
         allStreetsLayer = L.geoJSON(data, {
             style: getStreetStyle,
             renderer: hitRenderer,
             onEachFeature: onEachStreet
-        }).addTo(map);
+        });
         refreshSelectionStyles();
-        if (!searchRequestVersion) setAppStatus('');
-    } catch (error) {
+    }).catch(error => {
         console.error('Error loading streets:', error);
-        setAppStatus('Street data could not be loaded. Please retry.', true);
-    }
+        setAppStatus('Street lines could not load. Try the street layer again.', true);
+    }).finally(() => { streetLoad = null; });
+    return streetLoad;
 }
 
 function isActiveMeter(properties = {}) {
@@ -710,7 +717,7 @@ async function ensureEvidenceLayer(definition) {
 }
 
 function updateActiveLayerCount() {
-    const count = [...document.querySelectorAll('[data-evidence-layer]')].filter((input) => input.checked).length;
+    const count = [...document.querySelectorAll('[data-evidence-layer], #street-context')].filter((input) => input.checked).length;
     const label = document.getElementById('active-layer-count');
     if (label) label.textContent = `${count} on`;
 }
@@ -719,9 +726,9 @@ function updateMapEvidenceKey() {
     const container = document.getElementById('map-evidence-key-items');
     const control = document.querySelector('.map-evidence-key');
     if (!container || !control) return;
-    container.innerHTML = '<span class="map-evidence-key-row"><i class="permit-line"></i>Permit by default · Somerville</span>' +
-        '<span class="map-evidence-key-row"><i class="restricted-line"></i>Private or posted restriction</span>' +
-        '<span class="map-evidence-key-row"><i class="unknown-line"></i>Curb rule unknown</span>';
+    container.innerHTML = '<span class="map-evidence-key-row"><i class="visitor-section-key"></i>Approximate signed stretch</span>' +
+        '<span class="map-evidence-key-row"><i class="visitor-reference-key"></i>Address or intersection reference</span>' +
+        '<span class="map-evidence-key-row"><i class="visitor-space-key"></i>Mapped space or facility</span>';
     updateActiveLayerCount();
 }
 
@@ -730,7 +737,7 @@ function setupMapEvidenceKey() {
     control.onAdd = () => {
         const container = L.DomUtil.create('div', 'map-evidence-key');
         container.setAttribute('role', 'note');
-        container.innerHTML = '<strong>Street lines</strong><span id="map-evidence-key-items"></span>';
+        container.innerHTML = '<strong>Visitor parking</strong><span id="map-evidence-key-items"></span><p id="map-no-options" hidden>No mapped options in this view.</p><button type="button" id="map-nearest-parking" class="nearest-option" hidden>Show nearest mapped parking</button>';
         L.DomEvent.disableClickPropagation(container);
         return container;
     };
@@ -829,7 +836,9 @@ async function searchStreets(query, fromDestination = false) {
         selectedStreetName = null;
         showEmptyState();
         if (fromDestination) document.getElementById('empty-state').hidden = true;
-        const data = await fetchJson(`/api/streets/search?view=summary&q=${encodeURIComponent(query)}`);
+        const [data] = await Promise.all([
+            fetchJson(`/api/streets/search?view=summary&q=${encodeURIComponent(query)}`), loadStreets()
+        ]);
         if (requestVersion !== searchRequestVersion) return;
         const results = data.results.sort((a, b) => a.municipality.localeCompare(b.municipality) || a.name.localeCompare(b.name));
         if (!results.length) {
@@ -921,7 +930,7 @@ map.on('locationfound', (event) => {
     });
     userLocationLayer = L.layerGroup([accuracy, marker]).addTo(map);
     map.setView(event.latlng, Math.max(map.getZoom(), 16));
-    setAppStatus('Location found. Tap the nearest curb segment.');
+    setAppStatus('Showing parking near your location.');
     if (isMobile()) setPanelExpanded(false);
 });
 
@@ -933,6 +942,11 @@ map.on('locationerror', (event) => {
 });
 
 function setupControls() {
+    document.getElementById('street-context').addEventListener('change', event => {
+        if (event.target.checked) void loadStreets();
+        refreshSelectionStyles();
+        updateActiveLayerCount();
+    });
     const input = document.getElementById('search-input');
     const clearButton = document.getElementById('clear-search-btn');
     document.getElementById('search-btn')?.addEventListener('click', () => {
@@ -975,9 +989,12 @@ function setupControls() {
 
 document.addEventListener('DOMContentLoaded', () => {
     setupControls();
-    if (isMobile()) setPanelExpanded(false);
-    else setPanelExpanded(true);
-    void loadStreets();
+    setPanelExpanded(!isMobile());
+    const panel = document.getElementById('app-panel');
+    new ResizeObserver(() => {
+        document.documentElement.style.setProperty('--sheet-height', panel.offsetHeight + 'px');
+        map.invalidateSize({animate: false, debounceMoveend: true});
+    }).observe(panel);
     setupParkingEvidence();
     void loadStats();
 });

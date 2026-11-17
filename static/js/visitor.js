@@ -9,6 +9,8 @@ let destinationPin = null;
 let radiusMiles = 1;
 let searchMode = 'destination';
 const visitorPins = L.layerGroup().addTo(map);
+const parkingColors = {meter: '#0369a1', limited: '#087454', free: '#087454', lot: '#6944a3'};
+const visitorRenderer = L.canvas({padding: 0.25, tolerance: 4});
 
 function clearDestination() {
     destination = null;
@@ -115,12 +117,12 @@ function openParkingOption(option) {
     selectStreet(null);
     document.getElementById('search-results').hidden = true;
     setAppStatus('');
-    map.setView(option.point, Math.max(map.getZoom(), 17), { animate: false });
+    map.setView(mapPoint(option), Math.max(map.getZoom(), 17), { animate: false });
     const parkingPoint = encodeURIComponent(option.point.join(','));
     const walkTo = destination ? encodeURIComponent(destination.point.join(',')) : '';
     const reference = option.anchor_type === 'address' ? 'address' : 'intersection';
     const source = safeExternalUrl(option.source);
-    const qualifier = option.anchor ? `Reference ${reference} · check the marked curb and posted limits` :
+    const qualifier = option.section_traces ? 'Approximate signed stretch based on city limits and street geometry' : option.anchor ? `Reference ${reference} · check the marked curb and posted limits` :
         (option.facility ? 'Public-access facility' : 'Mapped meter space');
     const rate = option.rate ? formatMeterRate(option.rate) : '';
     document.getElementById('street-details').innerHTML = `
@@ -141,43 +143,143 @@ function openParkingOption(option) {
     showSelectionPanel();
 }
 
+function mapPoint(option) {
+    // Place the label on the matched side. Driving directions still use the published reference.
+    const line = option.section_traces?.[0];
+    if (!line) return option.point;
+    const first = line[Math.floor((line.length - 1) / 2)];
+    const next = line[Math.floor(line.length / 2)];
+    return [(first[0] + next[0]) / 2, (first[1] + next[1]) / 2];
+}
+
+function mapRule(option) {
+    if (option.kind === 'meter' && option.rate) return 'Meter · ' + formatMeterRate(option.rate).replace('/hour', '/hr');
+    if (option.kind === 'free') return 'First 3 hours free';
+    if (option.kind === 'lot') return /metered/i.test(option.rule) ? 'Metered lot' : 'Public lot / garage';
+    return visitorLabel(option);
+}
+
+const cityClock = new Intl.DateTimeFormat('en-US', {timeZone: 'America/New_York',
+    weekday: 'short', month: 'numeric', day: 'numeric', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'});
+
+function localParkingTime(date) {
+    const parts = Object.fromEntries(cityClock.formatToParts(date).map(p => [p.type, p.value]));
+    return {minute: Number(parts.hour) * 60 + Number(parts.minute),
+        day: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(parts.weekday),
+        month: Number(parts.month), week: Math.ceil(Number(parts.day) / 7)};
+}
+
+function inWindow(minute, [start, end]) {
+    return start < end ? minute >= start && minute < end : minute >= start || minute < end;
+}
+
+function visitorEligible(option, local) {
+    if (/customer parking|park facility visitor parking only/i.test([option.access, option.rule].join(' '))) return false;
+    if (option.permit_window && inWindow(local.minute, option.permit_window)) return false;
+    if (option.anchor && option.visitor_window && !inWindow(local.minute, option.visitor_window)) return false;
+    const closed = option.closure;
+    return !(closed && local.day === closed.day && inWindow(local.minute, closed.window) &&
+        (!closed.months.length || local.month >= closed.months[0] && local.month <= closed.months[1]) &&
+        (!closed.weeks.length || closed.weeks.includes(local.week)));
+}
+
+function shortTime(minutes) {
+    const hour = Math.floor(minutes / 60);
+    const remainder = minutes % 60;
+    return (hour % 12 || 12) + (remainder ? ':' + String(remainder).padStart(2, '0') : '') + (hour < 12 ? 'am' : 'pm');
+}
+
+function drawVisitorMap(inView) {
+    visitorPins.clearLayers();
+    const placed = [];
+    const named = new Set();
+    const size = map.getSize();
+    const origin = map.getContainer().getBoundingClientRect();
+    const controls = [...document.querySelectorAll('.parking-filter-bar, .leaflet-control-zoom, .map-evidence-key, .map-panel-button')]
+        .map(el => el.getBoundingClientRect()).filter(rect => rect.width && rect.height)
+        .map(rect => ({x: rect.left - origin.left, y: rect.top - origin.top, w: rect.width, h: rect.height}));
+    const detail = map.getZoom() >= 16;
+    for (const option of inView) {
+        const color = parkingColors[option.kind];
+        const point = mapPoint(option);
+        const select = () => openParkingOption(option);
+        for (const trace of option.section_traces || []) {
+            L.polyline(trace, {renderer: visitorRenderer, color, weight: detail ? 6 : 4,
+                opacity: 0.95, lineCap: 'butt'}).on('click', select).addTo(visitorPins);
+        }
+        const reference = Boolean(option.anchor && !option.section_traces);
+        if (!option.section_traces || !detail) {
+            L.circleMarker(point, {renderer: visitorRenderer, radius: detail ? 6 : 4,
+                color: reference ? color : '#fff', weight: reference ? 3 : 1.5,
+                fillColor: reference ? '#fff' : color, fillOpacity: 1
+            }).on('click', select).addTo(visitorPins);
+        }
+    }
+    // Give different street names space first. Keep a point or trace for every result.
+    const firstPerName = inView.filter(option => {
+        const key = option.city + '|' + option.name;
+        if (named.has(key)) return false;
+        named.add(key);
+        return true;
+    });
+    const labelWidth = 142, labelHeight = 49;
+    for (const option of new Set([...firstPerName, ...inView])) {
+        const point = mapPoint(option);
+        const p = map.latLngToContainerPoint(point);
+        const left = p.x - labelWidth / 2;
+        const top = [p.y - labelHeight - 6, p.y + 6].find(y =>
+            left >= 0 && left + labelWidth <= size.x && y >= 0 && y + labelHeight <= size.y &&
+            ![...controls, ...placed].some(box => left < box.x + box.w + 2 && left + labelWidth + 2 > box.x &&
+                y < box.y + box.h + 2 && y + labelHeight + 2 > box.y));
+        if (top === undefined) continue;
+        placed.push({x: left, y: top, w: labelWidth, h: labelHeight});
+        const side = option.where.match(/^(North|South|West|East|NW|NE|SW|SE|Both) side/i)?.[1];
+        const evidence = option.section_traces ? (side === 'Both' ? 'both sides' : side + ' side') :
+            (option.anchor ? 'near ' + option.anchor : '');
+        const label = mapRule(option);
+        const extra = option.visitor_window?.map(shortTime).join('–') || evidence;
+        const streetName = option.name.replace(/^Massachusetts Ave(nue)?$/i, 'Mass Ave');
+        L.marker(point, {
+            icon: L.divIcon({
+                className: 'visitor-pin ' + option.kind + (top > p.y ? ' pin-below' : ''),
+                html: `<span class="pin-card"><strong>${escapeHtml(streetName)}</strong>
+                    <span>${escapeHtml(label)}</span>${extra ? `<small>${escapeHtml(extra)}</small>` : ''}</span>`,
+                iconSize: [labelWidth, labelHeight], iconAnchor: [labelWidth / 2, p.y - top]
+            }),
+            title: [option.name, label, option.where, option.rule].join(' · '),
+            alt: option.name + ' · ' + label,
+            zIndexOffset: 150
+        }).on('click', () => openParkingOption(option)).addTo(visitorPins);
+    }
+}
+
 function renderVisitorChoices() {
     if (!visitorLoaded) return;
     const bounds = map.getBounds();
     const center = destination ? L.latLng(destination.point) : selectedStreetLayer?.getBounds().getCenter() || map.getCenter();
+    const local = localParkingTime(new Date());
     const options = visitorChoices.filter(visitorMatches)
-        .map(option => ({ option, distance: center.distanceTo(option.point) }))
-        .sort((a, b) => a.distance - b.distance).map(item => item.option);
-    const nearby = destination ? options.filter(option =>
-        center.distanceTo(option.point) <= radiusMiles * 1609.344 &&
-        !/customer parking|park facility visitor parking only/i.test([option.access, option.rule].join(' '))) : options;
-    const inView = nearby.filter(option => bounds.contains(option.point));
-    const rows = destination ? nearby : (inView.length ? inView : options);
-    visitorPins.clearLayers();
-    const placed = [];
-    // Reserve one label for each available kind before filling the remaining map.
-    const representatives = [...new Set(inView.map(option => option.kind))]
-        .map(kind => inView.find(option => option.kind === kind));
-    for (const option of [...new Set([...representatives, ...inView])]) {
-        const p = map.latLngToContainerPoint(option.point);
-        if (placed.some(q => Math.abs(p.x - q.x) < 128 && Math.abs(p.y - q.y) < 48)) continue;
-        placed.push(p);
-        const label = visitorLabel(option);
-        L.marker(option.point, {
-            icon: L.divIcon({
-                className: 'visitor-pin',
-                html: `<span class="visitor-tag ${option.kind}">${label}<small>${escapeHtml(option.name)}</small></span>`,
-                iconSize: [120, 38],
-                iconAnchor: [60, 19]
-            }),
-            title: `${label} · ${option.name} · ${option.where}`,
-            alt: `${label} · ${option.name}`,
-            zIndexOffset: 150
-        }).on('click', () => openParkingOption(option)).addTo(visitorPins);
+        .filter(option => visitorEligible(option, local))
+        .map(option => ({option, distance: center.distanceTo(mapPoint(option))}))
+        .sort((a, b) => a.distance - b.distance);
+    const nearby = options.filter(item => !destination || item.distance <= radiusMiles * 1609.344).map(item => item.option);
+    const inView = nearby.filter(option => bounds.contains(mapPoint(option)) ||
+        option.section_traces?.some(line => bounds.intersects(L.latLngBounds(line))));
+    const rows = destination ? nearby : inView;
+    drawVisitorMap(inView);
+    const nearest = !destination && !inView.length && nearby[0];
+    document.getElementById('map-no-options').hidden = inView.length > 0;
+    for (const id of ['nearest-parking', 'map-nearest-parking']) {
+        const button = document.getElementById(id);
+        button.hidden = !nearest;
+        button.onclick = nearest ? () => {
+            map.setView(mapPoint(nearest), 17);
+            if (isMobile()) setPanelExpanded(false);
+        } : null;
     }
     const status = document.getElementById('parking-list-status');
-    status.textContent = inView.length ? (selectedStreetLayer ? 'Closest to this block · posted hours apply' : 'Closest to the map center · posted hours apply') :
-        (rows.length ? 'No matches in view. Nearest mapped options:' : 'No documented options in this category.');
+    status.textContent = inView.length ? (selectedStreetLayer ? 'Closest to this block · posted hours apply' : 'Closest to map center · known time restrictions applied') :
+        'No documented visitor options in this view. Zoom out or search another destination.';
     if (destination) {
         status.textContent = rows.length ? `Nearest options within ${radiusMiles} mi · straight-line distance · check posted hours` :
             `No documented ${visitorFilter === 'all' ? 'visitor parking' : visitorLabels[visitorFilter]} options within ${radiusMiles} mi of this destination.`;
@@ -192,11 +294,11 @@ function renderVisitorChoices() {
         const button = document.createElement('button');
         button.type = 'button';
         button.className = 'parking-option';
-        const miles = center.distanceTo(option.point) / 1609.344;
+        const miles = center.distanceTo(mapPoint(option)) / 1609.344;
         const distance = miles < 0.1 ? 'Under 0.1 mi' : miles.toFixed(1) + ' mi';
         const rule = option.kind === 'free' ? 'First 3 hours free · daily reset at 5 a.m.' :
             [option.rate ? formatMeterRate(option.rate) : '', option.rule].filter(Boolean).join(' · ');
-        button.innerHTML = `<span class="option-line"><span class="visitor-tag ${option.kind}">${visitorLabel(option)}</span><strong>${escapeHtml(option.name)}</strong></span>
+        button.innerHTML = `<span class="option-line"><strong>${escapeHtml(option.name)}</strong><span class="visitor-tag ${option.kind}">${escapeHtml(mapRule(option))}</span></span>
             <span class="option-place">${distance} · ${escapeHtml(option.city)} · ${escapeHtml(option.where)}</span>
             <span class="option-rule">${escapeHtml(rule)}</span>
             ${destination && option.restrictions ? `<span class="option-rule">${escapeHtml(option.restrictions)}</span>` : ''}`;
@@ -211,6 +313,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         button.addEventListener('click', () => {
             if (button.dataset.searchMode === searchMode) return;
             searchMode = button.dataset.searchMode;
+            if (searchMode === 'street') void loadStreets();
             clearSearch({resetView: false});
             document.querySelectorAll('[data-search-mode]').forEach(item =>
                 item.setAttribute('aria-pressed', String(item === button)));
@@ -262,6 +365,21 @@ document.addEventListener('DOMContentLoaded', async () => {
         visitorLoaded = true;
         renderVisitorChoices();
         map.on('moveend resize', renderVisitorChoices);
+        // Update at time boundaries without replacing the focused result every minute.
+        function eligibleFlags() {
+            const local = localParkingTime(new Date());
+            return visitorChoices.map(o => visitorEligible(o, local) ? '1' : '0').join('');
+        }
+        let lastEligible = eligibleFlags();
+        function refreshHours() {
+            const next = eligibleFlags();
+            if (next !== lastEligible) {
+                lastEligible = next;
+                renderVisitorChoices();
+            }
+        }
+        window.setInterval(refreshHours, 30000);
+        document.addEventListener('visibilitychange', () => { if (!document.hidden) refreshHours(); });
     } catch (error) {
         document.getElementById('parking-list-status').textContent = 'Visitor parking could not be loaded. Reload to retry.';
     }

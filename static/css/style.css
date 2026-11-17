@@ -1093,15 +1093,15 @@ a:focus-visible {
 }
 .parking-filter-bar button[aria-pressed="true"] { color: white; background: #172e47; }
 .parking-filter-bar button:focus-visible, .parking-option:focus-visible { outline: 3px solid #e89410; }
-.visitor-pin { display: grid !important; place-items: center; }
+
 .visitor-tag {
     display: inline-block; width: max-content; border-radius: 6px; padding: 3px 7px;
     color: white; font: 700 12px/1.2 system-ui, sans-serif; white-space: nowrap;
 }
-.visitor-pin .visitor-tag { border: 1.5px solid white; box-shadow: 0 1px 5px #10182866; }
+
 .visitor-tag.meter { background: #075985; }
 .visitor-tag.free { background: #116444; }
-.visitor-tag.limited { background: #85500a; }
+.visitor-tag.limited { background: #087454; }
 .visitor-tag.lot { background: #62449b; }
 .parking-finder[hidden] { display: none; }
 #parking-list-status { margin: 0 0 0.55rem; color: var(--muted); font-size: 0.78rem; }
@@ -1127,16 +1127,44 @@ a:focus-visible {
     body.panel-expanded .map-panel-button { display: none; }
 }
 
-.light-street-tiles { filter: saturate(0.5); }
+.light-street-tiles { filter: saturate(0.35) contrast(0.8) brightness(1.12); }
 #nearby-heading { margin: 1rem 0 0.45rem; font-size: 0.92rem; }
 
-.visitor-pin .visitor-tag {
-    max-width: 120px; text-align: center; padding: 3px 6px;
+.visitor-pin { display: flex !important; align-items: end; justify-content: center; }
+.visitor-pin, [data-parking-filter=meter] { --spot-color: #0369a1; }
+.visitor-pin.limited, .visitor-pin.free, [data-parking-filter=limited], [data-parking-filter=free] { --spot-color: #087454; }
+.visitor-pin.lot, [data-parking-filter=lot] { --spot-color: #6944a3; }
+.pin-card {
+    position: relative; display: grid; justify-items: start; width: max-content; max-width: 100%;
+    padding: 4px 8px 5px; background: #fff; color: #132637;
+    border: 1px solid #9aa8af; border-left: 4px solid var(--spot-color); border-radius: 6px;
+    box-shadow: 0 2px 5px #1f34422e; line-height: 1.15; font-family: system-ui, sans-serif;
 }
-.visitor-pin small {
-    display: block; overflow: hidden; text-overflow: ellipsis;
-    font-size: 10px; line-height: 1.25; font-weight: 500;
+.pin-card::after {
+    content: ''; position: absolute; bottom: -5px; left: calc(50% - 4px);
+    width: 7px; height: 7px; transform: rotate(45deg); background: white;
+    border-right: 1px solid #9aa8af; border-bottom: 1px solid #9aa8af;
 }
+.pin-card strong, .pin-card small {
+    display: block; max-width: 100%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.pin-card strong { font-size: 12px; }
+.pin-card span { color: var(--spot-color); font-size: 11px; font-weight: 750; }
+.pin-card small { color: #455564; font-size: 10px; }
+.visitor-section-key { border-top: 4px solid #087454; }
+.map-evidence-key-row i.visitor-reference-key, .map-evidence-key-row i.visitor-space-key {
+    box-sizing: border-box; width: 9px; height: 9px; margin: 0 7px; border-radius: 50%;
+    border: 2px solid #364c60; background: white;
+}
+.map-evidence-key-row i.visitor-space-key { background: #364c60; }
+.parking-filter-bar button:not([data-parking-filter=all])::before {
+    content: ''; display: inline-block; width: 7px; height: 7px; margin-right: 4px;
+    border-radius: 50%; background: var(--spot-color);
+}
+.parking-filter-bar button[aria-pressed=true]::before { outline: 1px solid white; }
+#map-no-options { max-width: 18em; margin: 3px 0; }
+.nearest-option { border: 0; padding: 3px 0; background: transparent; color: #075985; font: inherit; font-weight: 700; cursor: pointer; }
+#nearest-parking { color: var(--accent); }
 @media (max-width: 420px) {
     .leaflet-top.leaflet-left { top: max(3.1rem, calc(env(safe-area-inset-top) + 3rem)); }
     .parking-filter-bar { right: auto; left: 50%; transform: translateX(-50%); }
@@ -1160,4 +1188,26 @@ a:focus-visible {
     .sidebar.sheet-collapsed #destination-context { display: none; }
     .leaflet-bottom { bottom: 9rem; }
     .map-panel-button { bottom: 9.6rem; }
+}
+
+@media (max-width: 560px) {
+    .parking-filter-bar {
+        left: 6px; right: 6px; top: max(6px, env(safe-area-inset-top)); transform: none;
+        justify-content: center; gap: 0; padding: 3px;
+    }
+    .parking-filter-bar button { min-width: 0; flex: 1 1 auto; padding: 9px 3px; font-size: 11px; }
+    .leaflet-top.leaflet-left { top: max(3rem, calc(env(safe-area-inset-top) + 3rem)); }
+    .map-evidence-key { padding: 5px 8px; }
+}
+@media (max-width: 355px) {
+    .parking-filter-bar button::before { display: none !important; }
+}
+.visitor-pin.pin-below { align-items: start; }
+.pin-below .pin-card::after {
+    bottom: auto; top: -5px; transform: rotate(225deg);
+}
+@media (max-width: 860px) {
+    .map-container { bottom: var(--sheet-height, 8rem); height: auto; }
+    .leaflet-bottom { bottom: 0; }
+    .map-panel-button { bottom: 0.9rem; }
 }

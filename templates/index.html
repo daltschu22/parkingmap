@@ -68,6 +68,7 @@
                         <h3 id="nearby-heading" hidden>Nearby visitor options</h3>
                         <p id="parking-list-status" role="status">Finding parking options…</p>
                         <div id="parking-options"></div>
+                        <button type="button" id="nearest-parking" class="nearest-option" hidden>Show nearest mapped parking</button>
                         <button type="button" id="expand-distance" class="text-button" hidden>Search within 3 miles</button>
                         <button type="button" id="more-parking" class="text-button" hidden>Show more options</button>
                     </div>
@@ -76,7 +77,7 @@
                 <details class="tool-panel" id="map-tools">
                     <summary>
                         <span>Map layers and style</span>
-                        <span class="summary-note" id="active-layer-count">3 on</span>
+                        <span class="summary-note" id="active-layer-count">1 on</span>
                     </summary>
                     <div class="tool-panel-body">
                         <div class="map-mode" aria-label="Map style">
@@ -87,9 +88,10 @@
 
                         <fieldset class="evidence-controls">
                             <legend>Close-up map layers</legend>
-                            <label><input type="checkbox" data-evidence-layer="public-facilities" checked><span class="evidence-control-symbol evidence-control-symbol--facility" aria-hidden="true">P</span><span>Public-access lots and garages</span></label>
+                            <label><input type="checkbox" data-evidence-layer="public-facilities"><span class="evidence-control-symbol evidence-control-symbol--facility" aria-hidden="true">P</span><span>Public-access lots and garages <small>(all facility pins)</small></span></label>
                             <label><input type="checkbox" data-evidence-layer="meters" checked><span class="evidence-control-symbol evidence-control-symbol--meter" aria-hidden="true"></span><span>Active Cambridge meter spaces</span></label>
-                            <label><input type="checkbox" data-evidence-layer="accessible" checked><span class="evidence-control-symbol evidence-control-symbol--accessible" aria-hidden="true">♿</span><span>Cambridge accessible spaces</span></label>
+                            <label><input type="checkbox" data-evidence-layer="accessible"><span class="evidence-control-symbol evidence-control-symbol--accessible" aria-hidden="true">♿</span><span>Cambridge accessible spaces</span></label>
+                            <label><input type="checkbox" id="street-context"><span>Show permit, restricted and unconfirmed streets</span></label>
                             <p class="evidence-help">Individual spaces and facility pins appear at street zoom. Availability is not live.</p>
                         </fieldset>
 
@@ -115,10 +117,10 @@
         <main class="map-container">
             <div id="map" role="region" aria-label="Interactive parking evidence map"></div>
             <div class="parking-filter-bar" role="group" aria-label="Find visitor parking">
-                <button type="button" data-parking-filter="all" aria-pressed="true">All options</button>
+                <button type="button" data-parking-filter="all" aria-pressed="true">All parking</button>
                 <button type="button" data-parking-filter="meter" aria-pressed="false">Meters</button>
-                <button type="button" data-parking-filter="free" aria-pressed="false">Free</button>
-                <button type="button" data-parking-filter="limited" aria-pressed="false">Time limits</button>
+                <button type="button" data-parking-filter="free" aria-pressed="false">Free period</button>
+                <button type="button" data-parking-filter="limited" aria-pressed="false">Time-limited</button>
                 <button type="button" data-parking-filter="lot" aria-pressed="false">Lots</button>
             </div>
             <button type="button" class="map-panel-button" id="map-panel-button" aria-label="Open map layers">
